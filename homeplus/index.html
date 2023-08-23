@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 헤더부분 상단 */
+        .header-top{
+            margin: 25px auto;
+            width: 1200px;
+            /* text-align: justify; */
+            display: flexs;
+        }
+        .header-top .homeplus-logo, .search-bar, .customer-icon{
+            display: inline-block;
+        }
+        /* 헤더부분- 검색창 */
+        .search-bar input{
+            position: relative;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            width: 500px;
+            height: 20px;
+            font-size: 15px;
+            color: #979595;
+            padding: 10px;
+            top: -17px;
+            /* text-align: center; */
+        }
+        /* 헤더부분 GNB메뉴 */
+        .customer-icon{
+            height: 100px;
+        }
+        .customer-icon button{
+            height: 36px;
+            width: 36px;
+            border: none;
+            background-color: #fff;
+            background: url(./images/icons.png) no-repeat;
+        }
+        /* GNB메뉴 */
+        .customer-icon button:first-child{
+            background-position: 0 0;
+        }
+        .customer-icon button:nth-child(2){
+            background-position: 0 -36px;
+        }
+        .customer-icon button:last-child{
+            background-position: 0 -72px;
+        }
+        /* GNB메뉴 호버시 */
+        .customer-icon button:first-child:hover{
+            background-position: -36px 0;
+        }
+        .customer-icon button:nth-child(2):hover{
+            background-position: -36px -36px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <div class="header">
+        <div class="header-top">
+            <!-- 로고 -->
+            <div class="homeplus-logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <!-- 검색창 -->
+            <div class="search-bar">
+                <input type="text" name="" id="" placeholder="검색어를 입력하세요 ">
+                
+                <!-- <img src="./images/search-bar.jpg" alt=""> -->
+                <button>
+
+                </button>
+            </div>
+            <!-- GNB메뉴 -->
+            <div class="customer-icon">
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>   
+        <!-- 메뉴 -->
+        <div class="header-menu">
+            <nav>
+                <ul>
+                    <li>카테고리</li>
+                    <div>
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </div>
+                    <li>추석</li>
+                    <li>신상품</li>
+                    <li>베스트</li>
+                    <li>택배배송</li>
+                    <li>단독특가</li>
+                    <li>기획전</li>
+                    <li>전단행사</li>
+                    <li>자주구매</li>
+                </ul>
+            </nav>
+        </div>
+        
+    </div>
+    <!-- 메인 -->
+    <div class="main">
+        <!-- 기획전 이동 -->
+        <div class="move-to-exhibition">
+
+        </div>
+        <!-- 메인 퀵 메뉴 -->
+        <div class="main-quick-menu">
+
+        </div>
+        <!-- 배너 광고 -->
+        <div class="banner-ad">
+
+        </div>
+        <!-- 사자 이벤트 -->
+        <div class="purchase-event">
+
+        </div>
+        <!-- 행사 이벤트 -->
+        <div class="promotion-event">
+
+        </div>
+    </div>
+    <!-- 하단 -->
+    <div class="footer">
+
+    </div>
+</body>
+</html>
