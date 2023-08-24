@@ -23,20 +23,29 @@
         .header{
             width: 100%;
             border-bottom: 3px solid #f00;
+            /* width: 1368px; */
+            height: 145px;
         }
         /* 헤더부분 상단 */
         .header-wrap{
+            /* width: 1200px; */
+            width: 1368px;
+            padding-top: 29px;
             margin: 0 auto;
-            margin-top: 30px;
-            width: 1200px;
-            height: 8vh;
+            /* margin: 0 84px; */
         }
         .header-top{
             display: flex;
+            height: 79px;
             justify-content: space-between;
         }
         .header-top .homeplus-logo, .search-bar, .customer-icon{
             /* display: inline-block; */
+        }
+        /* 헤더부분 - 홈플러스 로고 */
+        .homeplus-logo img{
+            width: 220px;
+            height: 50px;
         }
         /* 헤더부분- 검색창 */
         .search-bar input{
@@ -86,8 +95,24 @@
         }
 
         /* 헤더 메뉴부분 */
-        .header-menu nav ul li{
+        .header-menu nav li{
             font-size: 15px;
+            padding: 0 5px;
+        }
+
+        /* 메인부분 */
+        .main{
+            width: 100%;
+            height: 450px;
+            padding: 20px 0;
+        }
+        .main-wrap{
+            height: 450px;
+            background-color: yellow;
+        }
+        /* 메인부분 - 기획전 이동 */
+        .move-to-exhibition nav{
+
         }
     </style>
 </head>
@@ -120,24 +145,22 @@
             <div class="header-menu">
                 <nav>
                     <ul>
-                        <li>카테고리
-                            <a href="#">
-                                <i class="fa-solid fa-grip" style="color: #fff;"></i>
-                            </a>
+                        <li>
+                            <a href="#">카테고리</a>
                         </li>
                         <div>
                             <ol>
                                 <li></li>
                             </ol>
                         </div>
-                        <li>추석</li>
-                        <li>신상품</li>
-                        <li>베스트</li>
-                        <li>택배배송</li>
-                        <li>단독특가</li>
-                        <li>기획전</li>
-                        <li>전단행사</li>
-                        <li>자주구매</li>
+                        <li><a href="#">추석</a></li>
+                        <li><a href="#">신상품</a></li>
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">택배배송</a></li>
+                        <li><a href="#">단독특가</a></li>
+                        <li><a href="#">기획전</a></li>
+                        <li><a href="#">전단행사</a></li>
+                        <li><a href="">자주구매</a></li>
                     </ul>
                 </nav>
             </div>
@@ -146,26 +169,58 @@
     
     <!-- 메인 -->
     <div class="main">
-        <!-- 기획전 이동 -->
-        <div class="move-to-exhibition">
+        <div class="main-wrap">
+            <!-- 기획전 이동 -->
+            <div class="move-to-exhibition">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#"><img src="./images/move-to-exhibition1.png" alt="">즉시배송</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="">등급혜택</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="">이벤트/쿠폰</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="">모바일교환권</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="">하나더</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="">물가안정365</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="">홈플식탁</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="">홈플러스 시그니처</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="" alt="">산지직</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- 메인 퀵 메뉴 -->
+            <div class="main-quick-menu">
 
-        </div>
-        <!-- 메인 퀵 메뉴 -->
-        <div class="main-quick-menu">
+            </div>
+            <!-- 배너 광고 -->
+            <div class="banner-ad">
 
-        </div>
-        <!-- 배너 광고 -->
-        <div class="banner-ad">
+            </div>
+            <!-- 사자 이벤트 -->
+            <div class="purchase-event">
 
-        </div>
-        <!-- 사자 이벤트 -->
-        <div class="purchase-event">
+            </div>
+            <!-- 행사 이벤트 -->
+            <div class="promotion-event">
 
-        </div>
-        <!-- 행사 이벤트 -->
-        <div class="promotion-event">
-
-        </div>
+            </div>
+        </div> 
     </div>
     <!-- 하단 -->
     <div class="footer">
