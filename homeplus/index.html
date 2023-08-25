@@ -6,42 +6,48 @@
     <title>Document</title>
     <!-- 폰트어썸 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
     <style>
         body *{
             outline: 2px dashed gray;
         }
 
-        html, body, h1, h2, h3, h4, h5, ol, ul{
-            padding: 0;
-            margin: 0;
-        }
+        
 
-        ol, ul{
-            list-style: none;
+/*         
+        공통 wrap-box
+        .wrap-box{
         }
-
+         */
+        /* 공통 inbox */
+        .header-inbox{
+            width: 1200px;
+        }
+        .main-inbox{
+            width: 1230px;
+        }
+        
         .header{
             width: 100%;
             border-bottom: 3px solid #f00;
             /* width: 1368px; */
             height: 145px;
         }
+
         /* 헤더부분 상단 */
         .header-wrap{
             /* width: 1200px; */
             width: 1368px;
             padding-top: 29px;
-            margin: 0 auto;
             /* margin: 0 84px; */
+            margin: 0 auto;
         }
         .header-top{
             display: flex;
             height: 79px;
             justify-content: space-between;
         }
-        .header-top .homeplus-logo, .search-bar, .customer-icon{
-            /* display: inline-block; */
-        }
+
         /* 헤더부분 - 홈플러스 로고 */
         .homeplus-logo img{
             width: 220px;
@@ -109,6 +115,8 @@
         .main-wrap{
             height: 450px;
             background-color: yellow;
+            margin: 0 auto;
+            width: 1230px;
         }
         /* 메인부분 - 기획전 이동 */
         .move-to-exhibition nav{
@@ -120,7 +128,7 @@
     <!-- 헤더 -->
     <div class="header">
         <div class="header-wrap">
-            <div class="header-top">
+            <div class="header-top header-inbox">
                 <!-- 로고 -->
                 <div class="homeplus-logo">
                     <img src="./images/logo.png" alt="">
@@ -142,7 +150,7 @@
                 </div>
             </div>   
             <!-- 메뉴 -->
-            <div class="header-menu">
+            <div class="header-menu header-inbox">
                 <nav>
                     <ul>
                         <li>
@@ -169,9 +177,12 @@
     
     <!-- 메인 -->
     <div class="main">
+        <div class="main-visual">
+            <!-- 광고배너 -->
+        </div>
         <div class="main-wrap">
             <!-- 기획전 이동 -->
-            <div class="move-to-exhibition">
+            <div class="move-to-exhibition main-inbox">
                 <nav>
                     <ul>
                         <li>
@@ -205,7 +216,7 @@
                 </nav>
             </div>
             <!-- 메인 퀵 메뉴 -->
-            <div class="main-quick-menu">
+            <div class="main-quick-menu main-inbox">
 
             </div>
             <!-- 배너 광고 -->
