@@ -26,7 +26,7 @@
             width: 1200px;
             margin: 0 auto;
         }
-        .main-inbox{
+        .section-inbox{
             width: 1230px;
         }
         
@@ -110,22 +110,70 @@
         }
 
         /* 메인부분 */
-        .main{
+        .section{
             width: 100%;
             height: 450px;
             padding: 20px 0;
         }
-        .main-wrap{
+        .section-wrap{
             height: 450px;
             background-color: yellow;
             margin: 0 auto;
             width: 1230px;
         }
+
+        /* 섹션부분 - 광고배너 */
+        .section-ad-banner{
+            position: relative;
+        }
+        .section-ad-banner img{
+            display: inline-block;
+            position: absolute;
+            width: 1200px;
+            height: 450px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .section-ad-banner.banner-button{
+            /* display: inline-block; */
+            position: absolute;
+            width: 42.9px;
+            height: 73.9px;
+            background: url(./images/slide_button.png) no-repeat;
+        }
+
+        .section-ad-banner button:first-child {
+            background-position: 0 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .section-ad-banner button:last-child {
+            background-position: -42.9px 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         /* 메인부분 - 기획전 이동 */
-        .move-to-exhibition nav{
+        .main-wrap{
+            width: 1230px;
+            margin: 0 auto;
+        }
+        .move-to-exhibition{
+            width: 1198px;
+            height: 146.84px;
+            padding: 59px 16px 50px;
+            margin: 0 auto;
 
         }
-    </style>
+        .move-to-exhibition nav ul{
+            display: flex;
+        }
+        .move-to-exhibition nav ul li img{
+            width: 99.984px;
+            height: 99.984px;
+        }
+        </style>
 </head>
 <body>
     <!-- 헤더 -->
@@ -141,9 +189,7 @@
                     <input type="text" name="" id="" placeholder="검색어를 입력하세요 ">
                     
                     <!-- <img src="./images/search-bar.jpg" alt=""> -->
-                        <button>
-    
-                        </button>
+                        <button></button>
                 </div>
                 <!-- GNB메뉴 -->
                 <div class="customer-icon">
@@ -177,17 +223,25 @@
             </div>
         </div>     
     </div>
-    
+
+    <!-- section -->
+    <div class="section">
+        <div class="section-wrap">
+            <!-- 메인 대표 광고 배너 -->
+            <div class="section-ad-banner">
+                <img src="./images/ad1.png" alt="">
+                <!-- 슬라이드 버튼 -->
+                <div class="banner-button">
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
     <!-- 메인 -->
     <div class="main">
         <div class="main-wrap">
-            <!-- 메인 대표 광고 배너 -->
-            <div class="main-visual">
-                <!-- 광고배너 -->
-                <div class="main-ad-banner">
-                    
-                </div>
-            </div>
             <!-- 기획전 이동 -->
             <div class="move-to-exhibition main-inbox">
                 <nav>
