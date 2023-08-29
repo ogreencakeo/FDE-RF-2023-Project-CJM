@@ -1,38 +1,27 @@
-var move_to_exhibition = document.querySelector('.move-to-exhibition nav');
 
-var move_to_exhibition_hcode = '';
+window.addEventListener('load', exhibitionFn);
 
-for(var i=0; i<9; i++){
-    move_to_exhibition_hcode += `
-        <ul>
-            <li>
-                <a href="#"><img src="./images/move-to-exhibition${i+1}.png" alt="">즉시배송</a>
-            </li>
-        </ul>
-    `;
+function exhibitionFn(){
+
+    const move_to_exhibition = document.querySelectorAll('.move-to-exhibition nav ul li');
+    
+    const exhibition_arr = [
+        즉시배송,
+        등급혜택,
+        이벤트/쿠폰,
+        모바일교환권,
+        하나더,
+        물가안정365,
+        홈플식탁,
+        홈플러스시그니처,
+        산지직
+    ];
+    
+    for(let i=0; i<exhibition_arr.length; i++){
+        console.log(move_to_exhibition[i]);
+        move_to_exhibition[i].innerHTML = `
+                <a href="#"><img src="./images/move-to-exhibition${i+1}.png" alt="기획전 이미지"> ${exhibition_arr[i]}</a>
+        `;
+    }
+    
 }
-                // </li>
-                // <li>
-                //     <a href="#"><img src="" alt="">등급혜택</a>
-                // </li>
-                // <li>
-                //     <a href="#"><img src="" alt="">이벤트/쿠폰</a>
-                // </li>
-                // <li>
-                //     <a href="#"><img src="" alt="">모바일교환권</a>
-                // </li>
-                // <li>
-                //     <a href="#"><img src="" alt="">하나더</a>
-                // </li>
-                // <li>
-                //     <a href="#"><img src="" alt="">물가안정365</a>
-                // </li>
-                // <li>
-                //     <a href="#"><img src="" alt="">홈플식탁</a>
-                // </li>
-                // <li>
-                //     <a href="#"><img src="" alt="">홈플러스 시그니처</a>
-                // </li>
-                // <li>
-                //     <a href="#"><img src="" alt="">산지직</a>
-                // </li>
