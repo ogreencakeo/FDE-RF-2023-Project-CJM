@@ -266,6 +266,38 @@
         }
         
         </style>
+        <script>
+            
+        const exhibition_arr = [
+            '즉시배송',
+            '등급혜택',
+            '이벤트/쿠폰',
+            '모바일교환권',
+            '하나더',
+            '물가안정365',
+            '홈플식탁',
+            '홈플러스시그니처',
+            '산지직'
+        ];
+
+        window.addEventListener('load', function(){
+            const move_to_exhibition1 = document.querySelector('.move-to-exhibition');
+            let hcode = '';
+
+            hcode += '<nav><ul>';
+            for(let i=0; i<exhibition_arr.length; i++){
+                hcode += `
+                    <li>
+                        <a href = "#"></a>
+                    </li>
+                `;
+            }
+            hcode += '</ul></nav>';
+            move_to_exhibition1.innerHTML = hcode;
+
+        });
+
+        </script>
 </head>
 <body>
     <!-- 헤더 -->
@@ -333,37 +365,37 @@
         <div class="main-wrap">
             <!-- 기획전 이동 -->
             <div class="move-to-exhibition main-inbox">
-                <nav>
-                    <ul>
+                <!-- <nav> -->
+                    <!-- <ul>
                         <li>
-                            <!-- <a href="#"><img src="./images/move-to-exhibition1.png" alt="">즉시배송</a> -->
+                            <a href="#"><img src="./images/move-to-exhibition1.png" alt="">즉시배송</a>
                         </li>
                         <li>
-                            <!-- <a href="#"><img src="" alt="">등급혜택</a> -->
+                            <a href="#"><img src="" alt="">등급혜택</a>
                         </li>
                         <li>
-                            <!-- <a href="#"><img src="" alt="">이벤트/쿠폰</a> -->
+                            <a href="#"><img src="" alt="">이벤트/쿠폰</a>
                         </li>
                         <li>
-                            <!-- <a href="#"><img src="" alt="">모바일교환권</a> -->
+                            <a href="#"><img src="" alt="">모바일교환권</a>
                         </li>
                         <li>
-                            <!-- <a href="#"><img src="" alt="">하나더</a> -->
+                            <a href="#"><img src="" alt="">하나더</a>
                         </li>
                         <li>
-                            <!-- <a href="#"><img src="" alt="">물가안정365</a> -->
+                            <a href="#"><img src="" alt="">물가안정365</a>
                         </li>
                         <li>
-                            <!-- <a href="#"><img src="" alt="">홈플식탁</a> -->
+                            <a href="#"><img src="" alt="">홈플식탁</a>
                         </li>
                         <li>
-                            <!-- <a href="#"><img src="" alt="">홈플러스 시그니처</a> -->
+                            <a href="#"><img src="" alt="">홈플러스 시그니처</a>
                         </li>
                         <li>
-                            <!-- <a href="#"><img src="" alt="">산지직</a> -->
+                            <a href="#"><img src="" alt="">산지직</a>
                         </li>
-                    </ul>
-                </nav>
+                    </ul> -->
+                <!-- </nav> -->
             </div>
             <!-- 배너 광고 -->
             <div class="banner-ad main-inbox">
