@@ -12,69 +12,69 @@ const exhibition_arr = [
 
 // 사자 아이템
 const saja_items = {
-    아이템1: {
+    샤인머스캣: {
         이미지 : "saja-item1",
         추천상품문구 : "",
         이름: "신선농장 15Brix 샤인머스캣 1KG(박스)",
         정가가격: "19,990 원 ",
         할인율 : "15%",
         정가 : "16,990 원",
-        가격100g : "100G 당 1,699원",
+        가격그램 : "100G 당 1,699원",
         리뷰 : "평점4.2(3,333건)",
         월구매수: "월 53,410개 구매"
     },
-    아이템2: {
+    대란: {
         이미지 : "saja-item2",
         추천상품문구 : "",
         이름: "신선농장 15Brix 샤인머스캣 1KG(박스)",
         정가가격: "19,990 원 ",
         할인율 : "15%",
         정가 : "16,990 원",
-        가격100g : "100G 당 1,699원",
+        가격그램 : "100G 당 1,699원",
         리뷰 : "평점4.2(3,333건)",
         월구매수: "월 53,410개 구매"
     },
-    아이템3: {
+    소고기: {
         이미지 : "saja-item3",
         추천상품문구 : "",
         이름: "신선농장 15Brix 샤인머스캣 1KG(박스)",
         정가가격: "19,990 원 ",
         할인율 : "15%",
         정가 : "16,990 원",
-        가격100g : "100G 당 1,699원",
+        가격그램 : "100G 당 1,699원",
         리뷰 : "평점4.2(3,333건)",
         월구매수: "월 53,410개 구매"
     },
-    아이템4: {
+    락토핏: {
         이미지 : "saja-item4",
         추천상품문구 : "",
         이름: "신선농장 15Brix 샤인머스캣 1KG(박스)",
         정가가격: "19,990 원 ",
         할인율 : "15%",
         정가 : "16,990 원",
-        가격100g : "100G 당 1,699원",
+        가격그램 : "100G 당 1,699원",
         리뷰 : "평점4.2(3,333건)",
         월구매수: "월 53,410개 구매"
     },
-    아이템5: {
+    점보리빙박스: {
         이미지 : "saja-item5",
         추천상품문구 : "",
         이름: "신선농장 15Brix 샤인머스캣 1KG(박스)",
         정가가격: "19,990 원 ",
         할인율 : "15%",
         정가 : "16,990 원",
-        가격100g : "100G 당 1,699원",
+        가격그램 : "100G 당 1,699원",
         리뷰 : "평점4.2(3,333건)",
         월구매수: "월 53,410개 구매"
     },
-    아이템6: {
+    깐마늘: {
         이미지 : "saja-item6",
         추천상품문구 : "",
         이름: "신선농장 15Brix 샤인머스캣 1KG(박스)",
         정가가격: "19,990 원 ",
         할인율 : "15%",
         정가 : "16,990 원",
-        가격100g : "100G 당 1,699원",
+        가격그램 : "100G 당 1,699원",
         리뷰 : "평점4.2(3,333건)",
         월구매수: "월 53,410개 구매"
     }
@@ -102,22 +102,26 @@ window.addEventListener("load", function () {
     
     // 사자 
     let saja_hcode = "";
-    const saja_itmes_div = document.querySelectorAll('.saja-itmes-div');
-    console.log(saja_item_box);
+    const saja_items_div = document.querySelector('.saja-items-div');
+    console.log(saja_items_div);
+
+    // saja_hcode += '<div class="saja-item-box"><div></div></div>';
 
     // <img src="./images/saja-item1.jpg" alt=""></img>
-    for(let x in saja_items){
+
+    console.log(saja_items);
+    for(let x of saja_items){
         console.log("x =", x);
-        console.log("saja_items[x]['이미지'] : ", saja_items[x]["이미지"]);
-        saja_hcode += `
-            <div class="saja-item-box">
-                <div>
-                    <img src="../images/${saja_items[x]["이미지"]}.jpg" alt="사자이미지${x}"></img>
-                </div>
-            </div>
-        `;
+        // console.log("saja_items[x]['이미지'] : ", saja_items[x]["이미지"]);
+        // saja_hcode += `
+        //     <div class="saja-item-box">
+        //         <div>
+        //             <img src="../images/${saja_items[x]["이미지"]}.jpg" alt="사자이미지${x}"></img>
+        //         </div>
+        //     </div>
+        // `;
     }
 
-    saja_itmes_div.innerHTML = saja_hcode;
+    // saja_items_div.innerHTML = saja_hcode;
 });
 
