@@ -10,7 +10,8 @@
     <script src="./js/index.js" defer></script>
     <style>
         body *{
-            outline: 2px dashed gray;
+            outline: 2px dashed rgb(195, 236, 141);
+            /* box-sizing: border-box; */
         }
         a{
             text-decoration: none;
@@ -34,9 +35,9 @@
         
         .header{
             width: 100%;
-            border-bottom: 3px solid #f00;
+            /* border-bottom: 3px solid #f00; */
             /* width: 1368px; */
-            height: 145px;
+            height: 148.945px;
         }
 
         /* 헤더부분 상단 */
@@ -103,14 +104,29 @@
         /* 헤더부분 - nav 메뉴 */
         .header-menu ul{
             display: flex;
+            height: 40.984px;
+            justify-content: space-evenly;
         }
 
         /* 헤더 메뉴부분 */
         .header-menu nav li{
             font-size: 15px;
             padding: 0 5px;
+            line-height: 43px;
         }
-
+        .header-menu nav li{
+            font-size: 15px;
+            padding: 0 5px;
+            line-height: 43px;
+        }
+        /* 헤더부분 - 카테고리 버튼 */
+        .header-menu nav li button{
+            width: 123.992px;
+            height: 40.984px;
+            padding: 2px 0 0 25px;
+        }
+        
+        
         /* 메인부분 */
         .section{
             width: 100%;
@@ -235,8 +251,8 @@
         .purchase-event{
             padding: 60px 0;
             width: 1230px;
-            height: 1000px;
-            
+            height: 1526.870px;
+            padding: 60px 0 70px; 
         }
         
         .purchase-event-wrap{
@@ -252,7 +268,7 @@
         .saja-content-img img{
             display: block;
             width: 669px;
-            height: 114.984px;
+            height: 120.061px;
             margin: 0 auto;
         }
         
@@ -264,8 +280,40 @@
         }
         .saja-event-nav-wrap nav ul{
             display: flex;
+            border-bottom: 1px solid rgb(235, 235, 235);
         }
-        
+        .saja-event-nav-wrap nav ul li{
+            font-size: 16px;
+            margin: 0 auto;
+        }
+        .saja-event-nav-wrap nav ul li button{
+            width: 199.992px; 
+            height: 79.992px;
+            background-color: #fff;
+            border: 0px;
+        }
+        .saja-event-nav-wrap nav ul li button:hover{
+            border-bottom: 1px solid red;
+        }
+        /* 메인부분 - 사자 물품박스 전체 */
+        .saja-itmes-wrappbox{
+            width: 1230px;
+            height: 1145.920px;
+            padding: 40px 0 70px;
+            border-bottom: 1px solid rgb(235, 235, 235);
+        }
+        .saja-itmes-div{
+            width: 1230px; 
+            height: 1145.950px;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        /* 메인부분 - 사자 물품박스 아이템 각각 */
+        .saja-item-box{
+            width: 373.992px;
+            height: 542.997px;
+        }
         </style>
 
 </head>
@@ -297,7 +345,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#">카테고리</a>
+                            <button>카테고리</button>
                         </li>
                         <div>
                             <ol>
@@ -335,37 +383,6 @@
         <div class="main-wrap">
             <!-- 기획전 이동 -->
             <div class="move-to-exhibition main-inbox">
-                <!-- <nav> -->
-                    <!-- <ul>
-                        <li>
-                            <a href="#"><img src="./images/move-to-exhibition1.png" alt="">즉시배송</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="" alt="">등급혜택</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="" alt="">이벤트/쿠폰</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="" alt="">모바일교환권</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="" alt="">하나더</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="" alt="">물가안정365</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="" alt="">홈플식탁</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="" alt="">홈플러스 시그니처</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="" alt="">산지직</a>
-                        </li>
-                    </ul> -->
-                <!-- </nav> -->
             </div>
             <!-- 배너 광고 -->
             <div class="banner-ad main-inbox">
@@ -389,25 +406,43 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <a href="">MD추천</a>
+                                    <button>MD추천</button>
                                 </li>
                                 <li>
-                                    <a href="">신선한</a>
+                                    <button>신선한</button>
                                 </li>
                                 <li>
-                                    <a href="">식품</a>
+                                    <button>식품</button>
                                 </li>
                                 <li>
-                                    <a href="">간편한</a>
+                                    <button>간편한</button>
                                 </li>
                                 <li>
-                                    <a href="">가공필템</a>
+                                    <button>가공필템</button>
                                 </li>
                                 <li>
-                                    <a href="">생활용품</a>
+                                    <button>생활용품</button>
                                 </li>
                             </ul>
                         </nav>
+                    </div>
+                    <!-- 물품 div -->
+                    <div class="saja-itmes-wrappbox">
+                        <div class="saja-itmes-div">
+                            <!-- <div class="saja-item-box">
+                                
+                            </div>
+                            <div class="saja-item-box">
+                            </div>
+                            <div class="saja-item-box">
+                            </div>
+                            <div class="saja-item-box">
+                            </div>
+                            <div class="saja-item-box">
+                            </div>
+                            <div class="saja-item-box">
+                            </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
