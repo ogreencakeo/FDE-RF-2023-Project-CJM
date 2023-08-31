@@ -1,7 +1,7 @@
 @import "utf-8";
 
 
-html, body, h1, h2, h3, h4, h5, ol, ul{
+html, body, h1, h2, h3, h4, h5, ol, ul, p, span{
     padding: 0;
     margin: 0;
 }
