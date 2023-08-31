@@ -127,7 +127,7 @@
         }
         
         
-        /* 메인부분 */
+        /* 섹션부분 */
         .section{
             width: 100%;
             height: 450px;
@@ -167,6 +167,24 @@
             background-position: -42.9px 0;
             top: calc(50% - 73.9px/2);
             right: 0;
+        }
+        /* 메인부분 */
+        /* 메인부분 - 메인베너 박스 */
+        .main-inner-adbox{
+            width: 250px;
+            height: 910px;
+        }
+        .main-inner-adbox img:first-child{
+            width: 250px;
+            height: 300px;
+        }
+        .main-inner-adbox img:nth-child(2){
+            width: 250px;
+            height: 270px;
+        }
+        .main-inner-adbox img:last-child{
+            width: 250px;
+            height: 300px;
         }
         /* 메인부분 - 기획전 이동 */
         .main-wrap{
@@ -321,11 +339,25 @@
         }
         .saja-item-explanation{
             width : 374px;
-            height : 543.042px;
+            height : 151.042px;
         }
         .saja-item-img{
+            position: relative;
             width: 374px;
             height: 374px;
+        }
+        .saja-item-img section img{
+            width: 56px;
+            height: 56px;
+        }
+        .saja-item-img section img:first-child{
+            position: absolute;
+            top: 0;
+        }
+        .saja-item-img section img:last-child{
+            position: absolute;
+            right: 0;
+            top: 0;
         }
         .saja-item-box section{
             width: 374px;
@@ -385,6 +417,10 @@
         .saja-item-exp-review span:first-child{
             padding-left: 5px;
             margin-left: 5px;
+            font-size: 12px;
+            color: rgb(153, 153, 153);
+        }
+        .saja-item-exp-review span:last-child{
             font-size: 12px;
             color: rgb(153, 153, 153);
         }
@@ -454,6 +490,7 @@
         
     <!-- 메인 -->
     <div class="main">
+        
         <div class="main-wrap">
             <!-- 기획전 이동 -->
             <div class="move-to-exhibition main-inbox">
@@ -467,8 +504,7 @@
                         <button></button>
                     </div>
                 </div>
-            </div>
-            
+            </div> 
             <!-- 사자 이벤트 -->
             <div class="purchase-event">
                 <div class="purchase-event-wrap">
@@ -517,14 +553,19 @@
                             <div class="saja-item-box">
                             </div> -->
                         </div>
+                        <div class="saja-itmes-btnBx"></div>
                     </div>
                 </div>
             </div>
             <!-- 행사 이벤트 -->
             <div class="promotion-event">
-
             </div>
-        </div> 
+        </div>
+        <!-- <div class="main-inner-adbox">
+            <img src="./images/main-inner-ad1.jpg" alt="">
+            <img src="./images/main-inner-ad2.jpg" alt="">
+            <img src="./images/main-inner-ad3.jpg" alt="">
+        </div> -->
     </div>
     <!-- 하단 -->
     <div class="footer">

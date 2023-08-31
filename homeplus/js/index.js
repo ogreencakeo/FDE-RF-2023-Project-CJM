@@ -118,6 +118,10 @@ window.addEventListener("load", function () {
             <div class="saja-item-box">
                 <div class = "saja-item-img">
                     <img src="./images/${saja_items[x]["이미지"]}.jpg" alt="사자이미지${x}"></img>
+                    <section>
+                        <img src="./images/saja-icon1.png" alt=""></img>
+                        <img src="./images/saja-icon2.png" alt=""></img>
+                    </section>
                 </div>
                 <section>
                     <div class="saja-item-explanation">
