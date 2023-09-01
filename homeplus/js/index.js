@@ -120,7 +120,7 @@ window.addEventListener("load", function () {
                 <div class = "saja-item-img">
                     <img src="./images/${saja_items[x]["이미지"]}.jpg" alt="사자이미지${x}"></img>
                     <section>
-                        ${(x == '깐마늘')? '' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
+                        ${(x == '깐마늘')? '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
                         <span><img src="./images/saja-icon2.png" alt=""></span>
                     </section>
                 </div>
@@ -149,14 +149,28 @@ window.addEventListener("load", function () {
     // 사자물품 버튼에 따른 nav 갯수 구하기
     const saja_total = document.querySelector('.saja-total-btn');
     const saja_nav_btn = this.document.querySelector('.saja-event-nav-wrap').querySelectorAll('button');
+    console.log('saja_nav_btn >',saja_nav_btn);
 
     for(let i of saja_nav_btn){
         let btxt = i.innerText;
-        console.log("i>", i);
+        // console.log("i>", i);
         console.log("btxt>", btxt);
-        switch(btxt){
-            case 
+        console.log("btxt[0]>", btxt);
+        i.onclick = () => {
+            console.log('i >', i.innerText);
+            let color_change = '';
+
+            color_change.innerHTML +
+            
+            color_change.style.color = 'red';
+            console.log('color_change >', color_change );
+            switch(btxt){
+                case "MD추천":
+                    console.log("red");
+                    color_change.style.color = 'red';
+            }
         }
+        // saja_nav_btn.style.color = 'red';
     }
 
 
