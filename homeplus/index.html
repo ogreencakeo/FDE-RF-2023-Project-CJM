@@ -170,7 +170,10 @@
         }
         /* 메인부분 */
         /* 메인부분 - 메인베너 박스 */
-        .main-inner-adbox{
+        .main-inner-adbox{            
+            position: absolute;
+            top: 50px;
+            left: -250px;
             width: 250px;
             height: 910px;
         }
@@ -188,6 +191,7 @@
         }
         /* 메인부분 - 기획전 이동 */
         .main-wrap{
+            position: relative;
             width: 1230px;
             margin: 0 auto;
         }
@@ -247,12 +251,13 @@
         .side-content-box button{
             /* display: inline-block; */
             position: absolute;
-            width: 30px;
-            height: 45.98px;
+            width: 43px;
+            height: 74px;
             /* top: calc(50% - 46px/2);
             left: calc(50% - 30px/2); */
             background: url(./images/slide_button.png) no-repeat;
             top: calc(50% - 45.98px/2);
+            transform: scale(.6);
         }
 
         .side-content-box button:first-of-type{
@@ -350,20 +355,26 @@
             width: 56px;
             height: 56px;
         }
-        .saja-item-img:hover .saja-item-img section img{
+        .saja-item-img:hover section span{
             opacity: 0;
         }
-        .saja-item-img section img:first-child{
+        .saja-item-img section span:first-child{
             position: absolute;
             top: 0;
         }
-        .saja-item-img section img:first-child::after{
+        .saja-item-img section span:first-child::after{
             content: '행사상품';
+            position: absolute;
+            top: 0;
+            line-height: 56px;
+            width: 100%;
             display: block;
             z-index: 1;
+            font-size: 10px;
+            text-align: center;
         }
 
-        .saja-item-img section img:last-child{
+        .saja-item-img section span:last-child{
             position: absolute;
             right: 0;
             top: 0;
@@ -604,12 +615,12 @@
             <!-- 행사 이벤트 -->
             <div class="promotion-event">
             </div>
+            <div class="main-inner-adbox">
+                <img src="./images/main-inner-ad1.jpg" alt="">
+                <img src="./images/main-inner-ad2.jpg" alt="">
+                <img src="./images/main-inner-ad3.jpg" alt="">
+            </div>
         </div>
-        <!-- <div class="main-inner-adbox">
-            <img src="./images/main-inner-ad1.jpg" alt="">
-            <img src="./images/main-inner-ad2.jpg" alt="">
-            <img src="./images/main-inner-ad3.jpg" alt="">
-        </div> -->
     </div>
     <!-- 하단 -->
     <div class="footer">
