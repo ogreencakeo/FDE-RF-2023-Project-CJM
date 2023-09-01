@@ -120,8 +120,8 @@ window.addEventListener("load", function () {
                 <div class = "saja-item-img">
                     <img src="./images/${saja_items[x]["이미지"]}.jpg" alt="사자이미지${x}"></img>
                     <section>
-                        ${(x == '깐마늘')? '' : '<img src="./images/saja-icon1.png" alt=""></img>'}
-                        <img src="./images/saja-icon2.png" alt=""></img>
+                        ${(x == '깐마늘')? '' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
+                        <span><img src="./images/saja-icon2.png" alt=""></span>
                     </section>
                 </div>
                 <section>
