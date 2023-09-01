@@ -146,6 +146,9 @@ window.addEventListener("load", function () {
         `;
     }
 
+    // saja-total-btn
+    const saja_total = document.querySelector('.saja-total-btn');
+
 
     saja_items_div.innerHTML = saja_hcode;
 });
