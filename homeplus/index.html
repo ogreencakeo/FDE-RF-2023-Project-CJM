@@ -350,10 +350,19 @@
             width: 56px;
             height: 56px;
         }
+        .saja-item-img:hover .saja-item-img section img{
+            opacity: 0;
+        }
         .saja-item-img section img:first-child{
             position: absolute;
             top: 0;
         }
+        .saja-item-img section img:first-child::after{
+            content: '행사상품';
+            display: block;
+            z-index: 1;
+        }
+
         .saja-item-img section img:last-child{
             position: absolute;
             right: 0;
@@ -423,6 +432,17 @@
         .saja-item-exp-review span:last-child{
             font-size: 12px;
             color: rgb(153, 153, 153);
+        }
+        /* 사자이벤트 버튼박스 */
+        .saja-itmes-btnBx{
+            width: 100%;
+            height: 70px;
+        }
+        .saja-itmes-btnBx button{
+            width: 837.333px;
+            height: 67.333px;
+            border : 1.333px;
+            margin : 0 195px;
         }
         </style>
 
@@ -553,7 +573,14 @@
                             <div class="saja-item-box">
                             </div> -->
                         </div>
-                        <div class="saja-itmes-btnBx"></div>
+                        <!-- 사자 하단 버튼박스 -->
+                        <div class="saja-itmes-btnBx">
+                            <button>
+                                <img src="" alt="">
+                                <strong>다음상품</strong>
+                                새로보기 1<span></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
