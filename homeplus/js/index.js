@@ -145,10 +145,17 @@ window.addEventListener("load", function () {
             </div>
         `;
     }
+    // 
 
-    // saja-total-btn
+    // 사자물품 버튼에 따른 nav 갯수 구하기
     const saja_total = document.querySelector('.saja-total-btn');
+    const saja_nav_btn = this.document.querySelector('.saja-event-nav-wrap').querySelectorAll('button');
 
+    console.log('saja_nav_btn', saja_nav_btn);
+    let saja_hcode2 = '';
+    saja_total.innerHTML = `
+        <span>/ ${saja_nav_btn.length}</span>
+    `;
 
     saja_items_div.innerHTML = saja_hcode;
 });
