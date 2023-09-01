@@ -103,7 +103,7 @@ window.addEventListener("load", function () {
     // 사자 
     let saja_hcode = "";
     const saja_items_div = document.querySelector('.saja-items-div');
-    console.log(saja_items_div);
+    // console.log(saja_items_div);
 
     // saja_hcode += '<div class="saja-item-box"><div></div></div>';
 
@@ -111,9 +111,9 @@ window.addEventListener("load", function () {
 
     console.log(saja_items);
     for(let x in saja_items){
-        console.log("x =>>>>>>>", x);
-        console.log("saja_items[x]['이미지'] : ", saja_items[x]["이미지"]);
-        console.log('saja_items[x] :', saja_items[x]);
+        // console.log("x =>>>>>>>", x);
+        // console.log("saja_items[x]['이미지'] : ", saja_items[x]["이미지"]);
+        // console.log('saja_items[x] :', saja_items[x]);
 
         saja_hcode += `
             <div class="saja-item-box">
@@ -145,11 +145,20 @@ window.addEventListener("load", function () {
             </div>
         `;
     }
-    // 
 
     // 사자물품 버튼에 따른 nav 갯수 구하기
     const saja_total = document.querySelector('.saja-total-btn');
     const saja_nav_btn = this.document.querySelector('.saja-event-nav-wrap').querySelectorAll('button');
+
+    for(let i of saja_nav_btn){
+        let btxt = i.innerText;
+        console.log("i>", i);
+        console.log("btxt>", btxt);
+        switch(btxt){
+            case 
+        }
+    }
+
 
     console.log('saja_nav_btn', saja_nav_btn);
     let saja_hcode2 = '';
@@ -158,5 +167,13 @@ window.addEventListener("load", function () {
     `;
 
     saja_items_div.innerHTML = saja_hcode;
+
+    //
+    
+
+    for(let i=0; i<saja_nav_btn.length; i++){
+
+    }
+    
 });
 
