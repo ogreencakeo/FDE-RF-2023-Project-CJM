@@ -145,49 +145,90 @@ window.addEventListener("load", function () {
             </div>
         `;
     }
+    saja_items_div.innerHTML = saja_hcode;
+
+
+    ////////////////////////////
 
     // 사자물품 버튼에 따른 nav 갯수 구하기
     const saja_total = document.querySelector('.saja-total-btn');
     const saja_nav_btn = this.document.querySelector('.saja-event-nav-wrap').querySelectorAll('button');
+    const saja_nav_blength = saja_nav_btn.length;
+    let saja_hcode2 = "";
+    let saja_length_btn = document.querySelector('.saja-itmes-btnBx').querySelector('strong');
     console.log('saja_nav_btn >',saja_nav_btn);
 
-    for(let i of saja_nav_btn){
-        let btxt = i.innerText;
-        // console.log("i>", i);
-        console.log("btxt>", btxt);
-        console.log("btxt[0]>", btxt);
-        i.onclick = () => {
-            console.log('i >', i.innerText);
-            let color_change = '';
 
-            color_change.innerHTML +
-            
-            color_change.style.color = 'red';
-            console.log('color_change >', color_change );
+    for(let x of saja_nav_btn){
+        x.onclick = () => {
+            let btxt = x.innerHTML;
+            console.log('btxt :', btxt);
+            let saja_length;
+            console.log(saja_nav_blength); // 6
             switch(btxt){
-                case "MD추천":
-                    console.log("red");
-                    color_change.style.color = 'red';
+                case 'MD추천' : 
+                    saja_length = 1;
+                    break;
+                case '신선한' : 
+                    saja_length = 2;
+                    break;
+                case '식품' : 
+                    saja_length = 3;
+                    break;
+                case '간편한' : 
+                    saja_length = 4;
+                    break;
+                case '가공필템' : 
+                    saja_length = 5;
+                    break;
+                case '생활용품' : 
+                    saja_length = 6;
+                    break;
             }
+            saja_length_btn.innerHTML = `다음상품 ${saja_length} / ${saja_nav_blength}`;
         }
-        // saja_nav_btn.style.color = 'red';
+
+
+
     }
 
+    // for(let i of saja_nav_btn){
+    //     let btxt = i.innerText;
+    //     // console.log("i>", i);
+    //     console.log("btxt>", btxt);
+    //     console.log("btxt[0]>", btxt);
+    //     i.onclick = () => {
+    //         console.log('i >', i.innerText);
+    //         let color_change = '';
 
-    console.log('saja_nav_btn', saja_nav_btn);
-    let saja_hcode2 = '';
-    saja_total.innerHTML = `
-        <span>/ ${saja_nav_btn.length}</span>
-    `;
+    //         color_change.innerHTML +
+            
+    //         color_change.style.color = 'red';
+    //         console.log('color_change >', color_change );
+    //         switch(btxt){
+    //             case "MD추천":
+    //                 console.log("red");
+    //                 color_change.style.color = 'red';
+    //         }
+    //     }
+    //     // saja_nav_btn.style.color = 'red';
+    // }
 
-    saja_items_div.innerHTML = saja_hcode;
 
-    //
+    // console.log('saja_nav_btn', saja_nav_btn);
+    // let saja_hcode2 = '';
+    // saja_total.innerHTML = `
+    //     <span>/ ${saja_nav_btn.length}</span>
+    // `;
+
     
 
-    for(let i=0; i<saja_nav_btn.length; i++){
+    // //
+    
 
-    }
+    // for(let i=0; i<saja_nav_btn.length; i++){
+
+    // }
     
 });
 
