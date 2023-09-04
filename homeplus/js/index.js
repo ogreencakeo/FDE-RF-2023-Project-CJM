@@ -208,7 +208,7 @@ window.addEventListener("load", function () {
                         </a>
                         <a>
                             <span>
-                                <img src="./images/saja-hover-btn1.png" alt="">
+                                <img src="./images/saja-hover-btn2.png" alt="">
                             </span>
                         </a>
                     </div>
