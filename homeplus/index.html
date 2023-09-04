@@ -368,21 +368,25 @@
         .saja-item-img:hover section span{
             opacity: 0;
         }
+        .saja-item-img section span{
+            transition: .3s ease-in-out;
+        }
         .saja-item-img section span:first-child{
             position: absolute;
             top: 0;
         }
         .saja-item-img section span:first-child::after{
-            content: '행사상품';
+            content: '행사\A상품';
+            white-space:pre;
             position: absolute;
             top: 0;
-            line-height: 56px;
+            padding-top: 7px;
             width: 100%;
             display: block;
             z-index: 1;
-            font-size: 10px;
             text-align: center;
             font-size: 16px;
+            color: rgb(236, 68, 68);
         }
 
         .saja-item-img section span:last-child{
@@ -397,15 +401,18 @@
         }
         .saja-hover-btn{
             text-align: center;
+            opacity: 0;
         }
         .saja-item-img:hover .saja-hover-btn{
             /* 부모요소 : saja-item-img */
+            opacity: 1;
             position: absolute;
             bottom: 0;
             width: 100%;
             height: 50px;
             position: absolute;
             background-color: rgba(0, 0, 0, 0.7);
+            transition: .3s ease-in-out;
         }
         .saja-hover-btn img{
             width: 30px;

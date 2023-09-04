@@ -102,7 +102,7 @@ const saja_items2 = {
         리뷰 : "평점4.7(24,639건)",
         월구매수: "월 65,999개 구매"
     },
-    소고기: {
+    소고기2: {
         이미지 : "saja-item3",
         추천상품문구 : "",
         이름: "USDA 프라임 척아이롤(미국산 목심+등심) 100G/소고기",
@@ -113,7 +113,7 @@ const saja_items2 = {
         리뷰 : "평점4.6(18,726건)",
         월구매수: "월 99,999+개 구매"
     },
-    락토핏: {
+    락토핏2: {
         이미지 : "saja-item4",
         추천상품문구 : "건강 3만↑1만 상품권",
         이름: "종근당건강 락토핏 생유산균 코어 2G*60포",
@@ -124,7 +124,7 @@ const saja_items2 = {
         리뷰 : "평점4.7(518건)",
         월구매수: "월 3,039개 구매"
     },
-    점보리빙박스: {
+    점보리빙박스2: {
         이미지 : "saja-item5",
         추천상품문구 : "▷픽업전용",
         이름: "홈플러스시그니처 점보리빙박스 75L(크림)",
@@ -135,7 +135,7 @@ const saja_items2 = {
         리뷰 : "",
         월구매수: "월 102개 구매"
     },
-    깐마늘: {
+    깐마늘2: {
         이미지 : "saja-item6",
         추천상품문구 : "",
         이름: "깐마늘 1kg(봉)",
@@ -148,17 +148,20 @@ const saja_items2 = {
     }
 };
 
-const saja_item_arr = [saja_items, saja_items2];
-console.log(saja_item_arr);
 
 
-for(let i in saja_item_arr){
-    console.log('saja_item_arr i >>', saja_item_arr);
-    console.log('saja_item_arr [i] >>', saja_item_arr[i]);
-    
-}
+// console.log('saja_item_arr [1] >>', saja_item_arr[1]);
 
 window.addEventListener("load", function () {
+    const saja_item_arr = [saja_items, saja_items2];
+    // console.log(saja_item_arr);
+    const saja_total = document.querySelector('.saja-total-btn');
+    let saja_nav_btn = document.querySelector('.saja-event-nav-wrap').querySelectorAll('button');
+    console.log('saja_nav_btn :', saja_nav_btn);
+    console.log('saja_nav_btn[0] :', saja_nav_btn[0]);
+    const saja_nav_blength = saja_nav_btn.length;
+    let saja_hcode2 = "";
+    let saja_length_btn = document.querySelector('.saja-itmes-btnBx').querySelector('strong');
     const move_to_exhibition = document.querySelector(".move-to-exhibition");
     let hcode = "";
 
@@ -186,74 +189,130 @@ window.addEventListener("load", function () {
 
     // <img src="./images/saja-item1.jpg" alt=""></img>
 
-    console.log(saja_items);
-    for(let x in saja_items){
-        // console.log("x =>>>>>>>", x);
-        // console.log("saja_items[x]['이미지'] : ", saja_items[x]["이미지"]);
-        // console.log('saja_items[x] :', saja_items[x]);
-
-        saja_hcode += `
-            <div class="saja-item-box">
-                <div class = "saja-item-img">
-                    <img src="./images/${saja_items[x]["이미지"]}.jpg" alt="사자이미지${x}"></img>
-                    <section>
-                        ${(x == '깐마늘')? '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
-                        <span><img src="./images/saja-icon2.png" alt=""></span>
-                    </section>
-                    <div class="saja-hover-btn">
-                        <a href="#">
-                            <span>
-                                <img src="./images/saja-hover-btn1.png" alt="">
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span>
-                                <img src="./images/saja-hover-btn2.png" alt="">
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <section>
-                    <div class="saja-item-explanation">
-                        <div class="saja-item-exp-name">
-                            <p>${saja_items[x]["추천상품문구"]}</p>
-                            <p>${saja_items[x]["이름"]}
-                        </div>
-                        <div class="saja-item-exp-price">
-                            <p>${saja_items[x]["정가가격"]}</p>
-                            <span>${saja_items[x]["할인율"]}</span>
-                            <span>${saja_items[x]["정가"]}</span>
-                            <span>${saja_items[x]["가격그램"]}</span>
-                        </div>
-                        <div class="saja-item-exp-review">
-                            <span>${saja_items[x]["리뷰"]}</span>
-                            <span>${saja_items[x]["월구매수"]}</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        `;
+    //////////////////////////////
+    let seq = 0;
+    console.log(saja_nav_btn);
+    for(let i of saja_nav_btn){
+        console.log('i', i);
+        i.onclick = () => {
+            console.log('i2', i);
+        }
     }
+
+    
+        // console.log("saja_item_arr[x] =>>>>>>>", saja_item_arr[x]);
+        // console.log("saja_item_arr[x] =>>>>>>>", saja_item_arr[x]);
+        // console.log("saja_item_arr[seq] =>>>>>>>", saja_item_arr[seq]);
+        // console.log("saja_item_arr[seq] =>>>>>>>", saja_item_arr[seq]);
+
+        // switch(saja_nav_btn.innerText)
+        // saja_hcode += `
+        //     <div class="saja-item-box">
+        //         <div class = "saja-item-img">
+        //             <img src="./images/${saja_item_arr[seq]["이미지"]}.jpg" alt="사자이미지${x}"></img>
+        //             <section>
+        //                 ${(x == '깐마늘')? '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
+        //                 <span><img src="./images/saja-icon2.png" alt=""></span>
+        //             </section>
+        //             <div class="saja-hover-btn">
+        //                 <a href="#">
+        //                     <span>
+        //                         <img src="./images/saja-hover-btn1.png" alt="">
+        //                     </span>
+        //                 </a>
+        //                 <a href="#">
+        //                     <span>
+        //                         <img src="./images/saja-hover-btn2.png" alt="">
+        //                     </span>
+        //                 </a>
+        //             </div>
+        //         </div>
+        //         <section>
+        //             <div class="saja-item-explanation">
+        //                 <div class="saja-item-exp-name">
+        //                     <p>${saja_items[x]["추천상품문구"]}</p>
+        //                     <p>${saja_items[x]["이름"]}
+        //                 </div>
+        //                 <div class="saja-item-exp-price">
+        //                     <p>${saja_items[x]["정가가격"]}</p>
+        //                     <span>${saja_items[x]["할인율"]}</span>
+        //                     <span>${saja_items[x]["정가"]}</span>
+        //                     <span>${saja_items[x]["가격그램"]}</span>
+        //                 </div>
+        //                 <div class="saja-item-exp-review">
+        //                     <span>${saja_items[x]["리뷰"]}</span>
+        //                     <span>${saja_items[x]["월구매수"]}</span>
+        //                 </div>
+        //             </div>
+        //         </section>
+        //     </div>
+        // `;
+        // seq++;
+
+    // }
+    // for(let x in saja_items){
+    //     console.log("x =>>>>>>>", x);
+    //     // console.log("saja_items[x]['이미지'] : ", saja_items[x]["이미지"]);
+    //     // console.log('saja_items[x] :', saja_items[x]);
+
+    //     saja_hcode += `
+    //         <div class="saja-item-box">
+    //             <div class = "saja-item-img">
+    //                 <img src="./images/${saja_items[x]["이미지"]}.jpg" alt="사자이미지${x}"></img>
+    //                 <section>
+    //                     ${(x == '깐마늘')? '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
+    //                     <span><img src="./images/saja-icon2.png" alt=""></span>
+    //                 </section>
+    //                 <div class="saja-hover-btn">
+    //                     <a href="#">
+    //                         <span>
+    //                             <img src="./images/saja-hover-btn1.png" alt="">
+    //                         </span>
+    //                     </a>
+    //                     <a href="#">
+    //                         <span>
+    //                             <img src="./images/saja-hover-btn2.png" alt="">
+    //                         </span>
+    //                     </a>
+    //                 </div>
+    //             </div>
+    //             <section>
+    //                 <div class="saja-item-explanation">
+    //                     <div class="saja-item-exp-name">
+    //                         <p>${saja_items[x]["추천상품문구"]}</p>
+    //                         <p>${saja_items[x]["이름"]}
+    //                     </div>
+    //                     <div class="saja-item-exp-price">
+    //                         <p>${saja_items[x]["정가가격"]}</p>
+    //                         <span>${saja_items[x]["할인율"]}</span>
+    //                         <span>${saja_items[x]["정가"]}</span>
+    //                         <span>${saja_items[x]["가격그램"]}</span>
+    //                     </div>
+    //                     <div class="saja-item-exp-review">
+    //                         <span>${saja_items[x]["리뷰"]}</span>
+    //                         <span>${saja_items[x]["월구매수"]}</span>
+    //                     </div>
+    //                 </div>
+    //             </section>
+    //         </div>
+    //     `;
+    // }
     saja_items_div.innerHTML = saja_hcode;
 
 
     ////////////////////////////
 
     // 사자물품 버튼에 따른 nav 갯수 구하기
-    const saja_total = document.querySelector('.saja-total-btn');
-    const saja_nav_btn = this.document.querySelector('.saja-event-nav-wrap').querySelectorAll('button');
-    const saja_nav_blength = saja_nav_btn.length;
-    let saja_hcode2 = "";
-    let saja_length_btn = document.querySelector('.saja-itmes-btnBx').querySelector('strong');
-    console.log('saja_nav_btn >',saja_nav_btn);
+    
+    // console.log('saja_nav_btn >',saja_nav_btn);
 
 
     for(let x of saja_nav_btn){
         x.onclick = () => {
             let btxt = x.innerHTML;
-            console.log('btxt :', btxt);
+            // console.log('btxt :', btxt);
             let saja_length;
-            console.log(saja_nav_blength); // 6
+            // console.log(saja_nav_blength); // 6
             switch(btxt){
                 case 'MD추천' : 
                     saja_length = 1;
