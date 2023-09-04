@@ -179,7 +179,6 @@ function loadFn() {
     move_to_exhibition.innerHTML = hcode;
 
     // 사자
-    let saja_hcode = "";
     const saja_items_div = document.querySelector(".saja-items-div");
     for (let x of saja_nav_btn) {
         x.onclick = () => {
