@@ -201,12 +201,12 @@ window.addEventListener("load", function () {
                         <span><img src="./images/saja-icon2.png" alt=""></span>
                     </section>
                     <div class="saja-hover-btn">
-                        <a>
+                        <a href="#">
                             <span>
                                 <img src="./images/saja-hover-btn1.png" alt="">
                             </span>
                         </a>
-                        <a>
+                        <a href="#">
                             <span>
                                 <img src="./images/saja-hover-btn2.png" alt="">
                             </span>
