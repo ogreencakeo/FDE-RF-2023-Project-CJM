@@ -200,6 +200,18 @@ window.addEventListener("load", function () {
                         ${(x == '깐마늘')? '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
                         <span><img src="./images/saja-icon2.png" alt=""></span>
                     </section>
+                    <div class="saja-hover-btn">
+                        <a>
+                            <span>
+                                <img src="./images/saja-hover-btn1.png" alt="">
+                            </span>
+                        </a>
+                        <a>
+                            <span>
+                                <img src="./images/saja-hover-btn1.png" alt="">
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <section>
                     <div class="saja-item-explanation">
