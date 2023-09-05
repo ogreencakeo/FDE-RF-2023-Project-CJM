@@ -287,6 +287,10 @@ const saja_items4 = {
     },
 }
 
+const saja_items6 = {
+    
+}
+
 // console.log('saja_item_arr [1] >>', saja_item_arr[1]);
 
 window.addEventListener("load", loadFn());
