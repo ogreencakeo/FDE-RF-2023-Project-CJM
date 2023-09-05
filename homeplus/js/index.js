@@ -86,7 +86,7 @@ const saja_items2 = {
         추천상품문구: "",
         이름: "제주 하우스밀감 900G(팩)",
         정가가격: "10,990 원",
-        할인율: "1000원",
+        할인율: "",
         판매가: "9,990 원",
         가격그램: "(100G 당 1,110원)",
         리뷰: "평점4.5(707건)",
@@ -501,7 +501,7 @@ function loadFn() {
                         <div class = "saja-item-img">
                             <img src="./images/saja-item/${saja_key[x]["이미지"]}.jpg" alt="사자이미지"></img>
                             <section>
-                                ${(x == '깐마늘') ? '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
+                                ${(x == '깐마늘' || x == '감자') ? '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
                                 <span><img src="./images/saja-icon2.png" alt=""></span>
                             </section>
                             <div class="saja-hover-btn">
