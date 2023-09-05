@@ -456,7 +456,7 @@ function loadFn() {
     move_to_exhibition.innerHTML = hcode;
 
     // 사자
-    const saja_items_div = document.querySelector(".saja-items-div");
+    let saja_items_div = document.querySelector(".saja-items-div");
     for (let x of saja_nav_btn) {
         x.onclick = () => {
             let btxt = x.innerHTML;
@@ -540,10 +540,12 @@ function loadFn() {
                 // console.log(saja_hcode);
             }
             saja_items_div.innerHTML = saja_hcode;
-
+            
         }
         console.log('saja_items_div.innerHTML ', saja_items_div.innerHTML );
     };
+    saja_items_div.innerHTML = saja_hcode;
+    console.log('saja_items_div.innerHTML2 ', saja_items_div.innerHTML );
 };
 
 
