@@ -425,21 +425,70 @@ const saja_items6 = {
     },
 };
 
+const curation_items1 = {
+    두유: {
+        이미지 : "shopping-curation1-1",
+        추천상품문구 : "",
+        이름 : "삼육 플러스 두유 950ML",
+        정가가격 : "2,600 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(100ML 당 273.7원)",
+        리뷰 : "평점4.8(17,045건)",
+        월구매수 : "월 50,682개 구매"
+    },
+    꼬깔콘: {
+        이미지 : "hopping-curation1-2",
+        추천상품문구 : "",
+        이름 : "롯데 꼬깔콘 매콤한맛 67G",
+        정가가격 : "1,360 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(10G 당 203원)",
+        리뷰 : "평점4.8(9,127건)",
+        월구매수 : "월 5,552개 구매"
+    },
+    크래커: {
+        이미지 : "hopping-curation1-3",
+        추천상품문구 : "",
+        이름 : "리츠 크래커 80G",
+        정가가격 : "1,500 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(10G 당 187.5원)",
+        리뷰 : "평점4.8(6,788건)",
+        월구매수 : "월 3,614개 구매"
+    },
+    오래오화이트크림: {
+        이미지 : "hopping-curation1-4",
+        추천상품문구 : "",
+        이름 : "오레오 화이트크림 100G",
+        정가가격 : "1,400 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(10G 당 140원)",
+        리뷰 : "평점4.8(23,219건)",
+        월구매수 : "월 21,420개 구매"
+    },
+}
+
 // console.log('saja_item_arr [1] >>', saja_item_arr[1]);
 
 window.addEventListener("load", loadFn());
 function loadFn() {
-    let saja_nav_btn = document.querySelectorAll('.nav-btngo');
-    let saja_item_arr = [saja_items, saja_items2, saja_items3, saja_items4, saja_items5, saja_items6];
-    const saja_total = document.querySelector(".saja-total-btn");
-    let saja_length_btn = document.querySelector(".saja-itmes-btnBx").querySelector("strong");
     const move_to_exhibition = document.querySelector(".move-to-exhibition");
+    // 사자
+    let saja_nav_btn = document.querySelectorAll('.nav-btngo');
+    let saja_nbtn_length = saja_nav_btn.length; // 6
+    let saja_item_arr = [saja_items, saja_items2, saja_items3, saja_items4, saja_items5, saja_items6];
+    let saja_btn_next = document.querySelector('.saja-btn-next');
+    let saja_length_btn = document.querySelector(".saja-itmes-btnBx").querySelector("strong");
     const saja_nav_blength = saja_nav_btn.length;
-    // console.log(saja_item_arr);
-    // console.log('saja_nav_btn :', saja_nav_btn);
-    // console.log('saja_nav_btn[0] :', saja_nav_btn[0]);
-    let saja_hcode2 = "";
+    // 큐레이션
+    let curation_box = document.querySelector('.shopping-curation-box');
     let hcode = "";
+    let saja_hcode='';
+    let curation_hcode = '';
 
     // nav
     hcode += "<nav><ul>";
@@ -454,6 +503,8 @@ function loadFn() {
     }
     hcode += "</ul></nav>";
     move_to_exhibition.innerHTML = hcode;
+
+    // 큐레이션
 
     // 사자
     let saja_items_div = document.querySelector(".saja-items-div");
@@ -489,9 +540,9 @@ function loadFn() {
                     saja_key = saja_item_arr[5];
                     break;
             }
-            saja_length_btn.innerHTML = `다음상품 ${saja_length} / ${saja_nav_blength}`;
+            saja_length_btn.innerHTML = `다음상품 ${saja_length} / ${saja_nav_blength}`;   
             console.log('saja_key:',saja_key);
-            let saja_hcode='';
+            
             for (let x in saja_key) {
                 console.log('x :', x);
                 console.log('saja_key[x]:', saja_key[x]);
@@ -501,7 +552,9 @@ function loadFn() {
                         <div class = "saja-item-img">
                             <img src="./images/saja-item/${saja_key[x]["이미지"]}.jpg" alt="사자이미지"></img>
                             <section>
-                                ${(x == '깐마늘' || x == '감자') ? '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
+                                ${(x == '깐마늘' || x == '감자' || x == '고구마스틱' || x == '사과' || x=='강낭콩' || x =='피자치즈' || x=='마열라면' 
+                                    || x== '오렌지망고' || x=='오감자그라탕' || x =='지퍼락' || x == '그린박스') ? 
+                                    '<span style="display:none"></span>' : '<span><img src="./images/saja-icon1.png" alt=""></span>'}
                                 <span><img src="./images/saja-icon2.png" alt=""></span>
                             </section>
                             <div class="saja-hover-btn">
@@ -544,8 +597,7 @@ function loadFn() {
         }
         console.log('saja_items_div.innerHTML ', saja_items_div.innerHTML );
     };
-    saja_items_div.innerHTML = saja_hcode;
-    console.log('saja_items_div.innerHTML2 ', saja_items_div.innerHTML );
+    
 };
 
 
