@@ -357,71 +357,71 @@ const saja_items5 = {
 };
 
 const saja_items6 = {
-    : {
-        이미지 : "",
+    프라이팬 : {
+        이미지 : "saja-item6-1",
         추천상품문구 : "",
-        이름 : "",
-        정가가격 : "",
-        할인율 : "",
-        판매가 : "",
+        이름 : "락앤락 더블랙 IH 프라이팬 28CM",
+        정가가격 : "33,900 원",
+        할인율 : "50%",
+        판매가 : "16,900 원",
         가격그램 : "",
-        리뷰 : "",
-        월구매수 : ""
+        리뷰 : "평점4.6(63건)",
+        월구매수 : "월 156개 구매"
     },
-    : {
-        이미지 : "",
-        추천상품문구 : "",
-        이름 : "",
-        정가가격 : "",
+    그린박스: {
+        이미지 : "saja-item6-2",
+        추천상품문구 : "2개↑50% 할인",
+        이름 : "데비마이어 그린박스 1.8L 2p",
+        정가가격 : "17,800 원",
         할인율 : "",
         판매가 : "",
         가격그램 : "",
-        리뷰 : "",
-        월구매수 : ""
+        리뷰 : "평점4.6(364건)",
+        월구매수 : "월 240개 구매"
     },
-    : {
-        이미지 : "",
+    볼빅홀인: {
+        이미지 : "saja-item6-3",
         추천상품문구 : "",
-        이름 : "",
-        정가가격 : "",
-        할인율 : "",
-        판매가 : "",
+        이름 : "볼빅 홀인 24구 화이트 2피스",
+        정가가격 : "37,400 원",
+        할인율 : "20%",
+        판매가 : "29,900 원",
         가격그램 : "",
-        리뷰 : "",
-        월구매수 : ""
+        리뷰 : "평점4(1건)",
+        월구매수 : "월 74개 구매"
     },
-    : {
-        이미지 : "",
+    LED스탠드: {
+        이미지 : "saja-item6-4",
         추천상품문구 : "",
-        이름 : "",
-        정가가격 : "",
-        할인율 : "",
-        판매가 : "",
+        이름 : "프리즘 LED 스탠드 PL-2700WH",
+        정가가격 : "49,900 원",
+        할인율 : "40%",
+        판매가 : "29,940 원",
         가격그램 : "",
-        리뷰 : "",
-        월구매수 : ""
+        리뷰 : "평점4.7(62건)",
+        월구매수 : "월 55개 구매"
     },
-    : {
-        이미지 : "",
+    아로마디퓨저: {
+        이미지 : "saja-item6-5",
         추천상품문구 : "",
-        이름 : "",
-        정가가격 : "",
-        할인율 : "",
-        판매가 : "",
+        이름 : "베르도 오닉스 아로마 디퓨저 500ML 블랙체리",
+        정가가격 : "19,900 원 ",
+        할인율 : "50%",
+        판매가 : "9,950 원",
         가격그램 : "",
-        리뷰 : "",
-        월구매수 : ""
+        리뷰 : "평점4.7(207건)",
+        월구매수 : "월 471개 구매"
     },
-    : {
-        이미지 : "",
+    멀티쿠커: {
+        이미지 : "saja-item6-6",
         추천상품문구 : "",
-        이름 : "",
-        정가가격 : "",
-        할인율 : "",
-        판매가 : "",
+        이름 : "오엘라 마스터 멀티쿠커 MC-01",
+        정가가격 : "179,000 원",
+        할인율 : "50%",
+        판매가 : "89,000 원",
         가격그램 : "",
-        리뷰 : "",
-        월구매수 : ""
+        리뷰 : "평점4.7(17건)",
+        월구매수 : "월 39개 구매"
     },
 };
 
@@ -430,7 +430,7 @@ const saja_items6 = {
 window.addEventListener("load", loadFn());
 function loadFn() {
     let saja_nav_btn = document.querySelectorAll('.nav-btngo');
-    let saja_item_arr = [saja_items, saja_items2, saja_items3, saja_items4];
+    let saja_item_arr = [saja_items, saja_items2, saja_items3, saja_items4, saja_items5, saja_items6];
     const saja_total = document.querySelector(".saja-total-btn");
     let saja_length_btn = document.querySelector(".saja-itmes-btnBx").querySelector("strong");
     const move_to_exhibition = document.querySelector(".move-to-exhibition");
@@ -482,9 +482,11 @@ function loadFn() {
                     break;
                 case "가공필템":
                     saja_length = 5;
+                    saja_key = saja_item_arr[4];
                     break;
                 case "생활용품":
                     saja_length = 6;
+                    saja_key = saja_item_arr[5];
                     break;
             }
             saja_length_btn.innerHTML = `다음상품 ${saja_length} / ${saja_nav_blength}`;
