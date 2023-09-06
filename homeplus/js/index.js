@@ -13,7 +13,7 @@ const exhibition_arr = [
 // 사자 아이템
 const saja_items = {
     샤인머스캣: {
-        이미지: "saja-item1",
+        이미지: "saja-item1.jpg",
         추천상품문구: "",
         이름: "신선농장 15Brix 샤인머스캣 1KG(박스)",
         정가가격: "19,990 원 ",
@@ -24,7 +24,7 @@ const saja_items = {
         월구매수: "월 53,410개 구매",
     },
     대란: {
-        이미지: "saja-item2",
+        이미지: "saja-item2.jpg",
         추천상품문구: "온라인만 할인",
         이름: "행복대란 30개입",
         정가가격: "7,890 원 ",
@@ -35,7 +35,7 @@ const saja_items = {
         월구매수: "월 65,999개 구매",
     },
     소고기: {
-        이미지: "saja-item3",
+        이미지: "saja-item3.jpg",
         추천상품문구: "",
         이름: "USDA 프라임 척아이롤(미국산 목심+등심) 100G/소고기",
         정가가격: "3,200 원 ",
@@ -46,7 +46,7 @@ const saja_items = {
         월구매수: "월 99,999+개 구매",
     },
     락토핏: {
-        이미지: "saja-item4",
+        이미지: "saja-item4.jpg",
         추천상품문구: "건강 3만↑1만 상품권",
         이름: "종근당건강 락토핏 생유산균 코어 2G*60포",
         정가가격: "19,900 원 ",
@@ -57,7 +57,7 @@ const saja_items = {
         월구매수: "월 3,039개 구매",
     },
     점보리빙박스: {
-        이미지: "saja-item5",
+        이미지: "saja-item5.jpg",
         추천상품문구: "▷픽업전용",
         이름: "홈플러스시그니처 점보리빙박스 75L(크림)",
         정가가격: "19,900 원 ",
@@ -68,7 +68,7 @@ const saja_items = {
         월구매수: "월 102개 구매",
     },
     깐마늘: {
-        이미지: "saja-item6",
+        이미지: "saja-item6.jpg",
         추천상품문구: "",
         이름: "깐마늘 1kg(봉)",
         정가가격: "9,990 원",
@@ -82,7 +82,7 @@ const saja_items = {
 
 const saja_items2 = {
     밀감: {
-        이미지: "saja-item2-1",
+        이미지: "saja-item2-1.jpg",
         추천상품문구: "",
         이름: "제주 하우스밀감 900G(팩)",
         정가가격: "10,990 원",
@@ -93,7 +93,7 @@ const saja_items2 = {
         월구매수: "월 27,556개 구매",
     },
     감자: {
-        이미지: "saja-item2-2",
+        이미지: "saja-item2-2.jpg",
         추천상품문구: "",
         이름: "상주 두백 감자 2KG(봉)",
         정가가격: "5,990 원",
@@ -104,7 +104,7 @@ const saja_items2 = {
         월구매수: "월 4,381개 구매",
     },
     오징어: {
-        이미지: "saja-item2-3",
+        이미지: "saja-item2-3.jpg",
         추천상품문구: "",
         이름: "손질 오징어(원양산_대서양/대/해동) 마리",
         정가가격: "5,400 원 ",
@@ -115,7 +115,7 @@ const saja_items2 = {
         월구매수: "월 4,257개 구매",
     },
     닭목살양념구이: {
-        이미지: "saja-item2-4",
+        이미지: "saja-item2-4.jpg",
         추천상품문구: "",
         이름: "닭목살 양념구이 500G",
         정가가격: "9,990 원 ",
@@ -126,7 +126,7 @@ const saja_items2 = {
         월구매수: "월 10,232개 구매",
     },
     로스트치킨: {
-        이미지: "saja-item2-5",
+        이미지: "saja-item2-5.jpg",
         추천상품문구: "",
         이름: "홈플식탁 로스트 치킨",
         정가가격: "7,990 원",
@@ -137,7 +137,7 @@ const saja_items2 = {
         월구매수: "월 6,348개 구매",
     },
     고구마스틱: {
-        이미지: "saja-item2-6",
+        이미지: "saja-item2-6.jpg",
         추천상품문구: "",
         이름: "바삭한 고구마스틱 330G(봉)",
         정가가격: "9,990 원",
@@ -151,7 +151,7 @@ const saja_items2 = {
 
 const saja_items3 = {
     사과: {
-        이미지: "saja-item3-1",
+        이미지: "saja-item3-1.jpg",
         추천상품문구: "농할쿠폰적용시20%추가할인",
         이름: "유명산지 햇홍로사과 4-7입(봉)",
         정가가격: "15,990 원",
@@ -162,7 +162,7 @@ const saja_items3 = {
         월구매수: "월 41,829개 구매",
     },
     깐마늘: {
-        이미지: "saja-item3-2",
+        이미지: "saja-item3-2.jpg",
         추천상품문구: "",
         이름: "깐마늘 1kg(봉)",
         정가가격: "7,990 원",
@@ -173,7 +173,7 @@ const saja_items3 = {
         월구매수: "월 12,689개 구매",
     },
     갈치: {
-        이미지: "saja-item3-3",
+        이미지: "saja-item3-3.jpg",
         추천상품문구: "",
         이름: "제주 생물 갈치 마리 (대)",
         정가가격: "11,000 원",
@@ -184,7 +184,7 @@ const saja_items3 = {
         월구매수: "월 13,320개 구매",
     },
     부채살양념구이: {
-        이미지: "saja-item3-4",
+        이미지: "saja-item3-4.jpg",
         추천상품문구: "",
         이름: "부채살 양념구이 600G/소고기",
         정가가격: "15,990 원 ",
@@ -195,7 +195,7 @@ const saja_items3 = {
         월구매수: "월 7,302개 구매",
     },
     티라미수: {
-        이미지: "saja-item3-5",
+        이미지: "saja-item3-5.jpg",
         추천상품문구: "",
         이름: "[몽블랑제]콜드브루 티라미수 (1입)",
         정가가격: "6,500 원 ",
@@ -206,7 +206,7 @@ const saja_items3 = {
         월구매수: "월 5,196개 구매",
     },
     강낭콩: {
-        이미지: "saja-item3-6",
+        이미지: "saja-item3-6.jpg",
         추천상품문구: "",
         이름: "매화 강낭콩 1.8KG(통)",
         정가가격: "8,990 원",
@@ -220,7 +220,7 @@ const saja_items3 = {
 
 const saja_items4 = {
     쌀국수: {
-        이미지: "saja-item4-1",
+        이미지: "saja-item4-1.jpg",
         추천상품문구: "",
         이름: "생어거스틴 고기듬뿍 쌀국수 700G",
         정가가격: "6,990 원",
@@ -231,7 +231,7 @@ const saja_items4 = {
         월구매수: "월 685개 구매",
     },
     피자치즈: {
-        이미지: "saja-item4-2",
+        이미지: "saja-item4-2.jpg",
         추천상품문구: "",
         이름: "남양 드빈치 자연방목 피자 치즈 1KG",
         정가가격: "12,980 원",
@@ -242,7 +242,7 @@ const saja_items4 = {
         월구매수: "월 8,074개 구매",
     },
     츄러스: {
-        이미지: "saja-item4-3",
+        이미지: "saja-item4-3.jpg",
         추천상품문구: "",
         이름: "미니 츄러스 270G",
         정가가격: "7,990 원 ",
@@ -253,7 +253,7 @@ const saja_items4 = {
         월구매수: "월 585개 구매",
     },
     마열라면: {
-        이미지: "saja-item4-4",
+        이미지: "saja-item4-4.jpg",
         추천상품문구: "2개↑20% 할인",
         이름: "오뚜기 마열라면 120G*4",
         정가가격: "4,980 원",
@@ -264,7 +264,7 @@ const saja_items4 = {
         월구매수: "월 4,468개 구매",
     },
     사양벌꿀: {
-        이미지: "saja-item4-5",
+        이미지: "saja-item4-5.jpg",
         추천상품문구: "",
         이름: "녹차원 사양벌꿀 800G*2",
         정가가격: "18,990 원 ",
@@ -275,7 +275,7 @@ const saja_items4 = {
         월구매수: "월 1,136개 구매",
     },
     오렌지망고: {
-        이미지: "saja-item4-6",
+        이미지: "saja-item4-6.jpg",
         추천상품문구: "2개 구매시 9,900원",
         이름: "농심 카프리썬 오렌지망고 200ML*10",
         정가가격: "6,980 원",
@@ -289,7 +289,7 @@ const saja_items4 = {
 
 const saja_items5 = {
     후랑크: {
-        이미지: "saja-item5-1",
+        이미지: "saja-item5-1.jpg",
         추천상품문구: "",
         이름: "씨제이 육공육 더블에이징 후랑크 460G",
         정가가격: "9,490 원 ",
@@ -300,7 +300,7 @@ const saja_items5 = {
         월구매수: "월 261개 구매",
     },
     오감자그라탕: {
-        이미지: "saja-item5-2",
+        이미지: "saja-item5-2.jpg",
         추천상품문구: "2개↑30% 할인",
         이름: "오리온 오감자그라탕 115G",
         정가가격: "2,390 원",
@@ -311,7 +311,7 @@ const saja_items5 = {
         월구매수: "월 2,482개 구매",
     },
     농심그래놀라: {
-        이미지: "saja-item5-3",
+        이미지: "saja-item5-3.jpg",
         추천상품문구: "",
         이름: "농심 켈로그 블루베리 아몬드 그래놀라 450G",
         정가가격: "9,290 원",
@@ -322,7 +322,7 @@ const saja_items5 = {
         월구매수: "월 2,366개 구매",
     },
     클렌징앤쿨링샴푸: {
-        이미지: "saja-item5-4",
+        이미지: "saja-item5-4.jpg",
         추천상품문구: "",
         이름: "아모레 려청아 딥 클렌징앤쿨링 샴푸 550ML",
         정가가격: "15,000 원 ",
@@ -333,7 +333,7 @@ const saja_items5 = {
         월구매수: "월 1,900개 구매",
     },
     욕실청소스프레이: {
-        이미지: "saja-item5-5",
+        이미지: "saja-item5-5.jpg",
         추천상품문구: "",
         이름: "유한양행 유한락스 욕실 청소용 스프레이 715ML*2입",
         정가가격: "8,900 원 ",
@@ -344,7 +344,7 @@ const saja_items5 = {
         월구매수: "월 7,576개 구매",
     },
     지퍼락: {
-        이미지: "saja-item5-6",
+        이미지: "saja-item5-6.jpg",
         추천상품문구: "개 구매시 9,900원",
         이름: "지퍼락 슬라이더냉장(대)26.8CM*24.1CM 12매",
         정가가격: "7,300 원",
@@ -358,7 +358,7 @@ const saja_items5 = {
 
 const saja_items6 = {
     프라이팬: {
-        이미지: "saja-item6-1",
+        이미지: "saja-item6-1.jpg",
         추천상품문구: "",
         이름: "락앤락 더블랙 IH 프라이팬 28CM",
         정가가격: "33,900 원",
@@ -369,7 +369,7 @@ const saja_items6 = {
         월구매수: "월 156개 구매",
     },
     그린박스: {
-        이미지: "saja-item6-2",
+        이미지: "saja-item6-2.jpg",
         추천상품문구: "2개↑50% 할인",
         이름: "데비마이어 그린박스 1.8L 2p",
         정가가격: "17,800 원",
@@ -380,7 +380,7 @@ const saja_items6 = {
         월구매수: "월 240개 구매",
     },
     볼빅홀인: {
-        이미지: "saja-item6-3",
+        이미지: "saja-item6-3.jpg",
         추천상품문구: "",
         이름: "볼빅 홀인 24구 화이트 2피스",
         정가가격: "37,400 원",
@@ -391,7 +391,7 @@ const saja_items6 = {
         월구매수: "월 74개 구매",
     },
     LED스탠드: {
-        이미지: "saja-item6-4",
+        이미지: "saja-item6-4.jpg",
         추천상품문구: "",
         이름: "프리즘 LED 스탠드 PL-2700WH",
         정가가격: "49,900 원",
@@ -402,7 +402,7 @@ const saja_items6 = {
         월구매수: "월 55개 구매",
     },
     아로마디퓨저: {
-        이미지: "saja-item6-5",
+        이미지: "saja-item6-5.jpg",
         추천상품문구: "",
         이름: "베르도 오닉스 아로마 디퓨저 500ML 블랙체리",
         정가가격: "19,900 원 ",
@@ -413,7 +413,7 @@ const saja_items6 = {
         월구매수: "월 471개 구매",
     },
     멀티쿠커: {
-        이미지: "saja-item6-6",
+        이미지: "saja-item6-6.jpg",
         추천상품문구: "",
         이름: "오엘라 마스터 멀티쿠커 MC-01",
         정가가격: "179,000 원",
@@ -427,7 +427,7 @@ const saja_items6 = {
 
 const curation_items1 = {
     두유: {
-        이미지: "shopping-curation1-1",
+        이미지: "shopping-curation1-1.jpg",
         추천상품문구: "",
         이름: "삼육 플러스 두유 950ML",
         정가가격: "2,600 원",
@@ -438,7 +438,7 @@ const curation_items1 = {
         월구매수: "월 50,682개 구매",
     },
     꼬깔콘: {
-        이미지: "shopping-curation1-2",
+        이미지: "shopping-curation1-2.jpg",
         추천상품문구: "",
         이름: "롯데 꼬깔콘 매콤한맛 67G",
         정가가격: "1,360 원",
@@ -449,7 +449,7 @@ const curation_items1 = {
         월구매수: "월 5,552개 구매",
     },
     크래커: {
-        이미지: "shopping-curation1-3",
+        이미지: "shopping-curation1-3.jpg",
         추천상품문구: "",
         이름: "리츠 크래커 80G",
         정가가격: "1,500 원",
@@ -460,7 +460,7 @@ const curation_items1 = {
         월구매수: "월 3,614개 구매",
     },
     오래오화이트크림: {
-        이미지: "shopping-curation1-4",
+        이미지: "shopping-curation1-4.jpg",
         추천상품문구: "",
         이름: "오레오 화이트크림 100G",
         정가가격: "1,400 원",
@@ -474,7 +474,7 @@ const curation_items1 = {
 
 const curation_items2 = {
     참깨흑임자드레싱: {
-        이미지 : "shopping-curation2-1",
+        이미지 : "shopping-curation2-1.jpg",
         추천상품문구 : "",
         이름 : "풀무원 참깨흑임자 드레싱 495G",
         정가가격 : "6,880 원",
@@ -485,7 +485,7 @@ const curation_items2 = {
         월구매수 : "월 386개 구매"
     },
     더블팩샐러드: {
-        이미지 : "shopping-curation2-2",
+        이미지 : "shopping-curation2-2.jpg",
         추천상품문구 : "",
         이름 : "더블팩 샐러드 500G(팩)",
         정가가격 : "5,990 원",
@@ -496,7 +496,7 @@ const curation_items2 = {
         월구매수 : "월 19,183개 구매"
     },
     클래식양배추샐러드300g: {
-        이미지 : "shopping-curation2-3",
+        이미지 : "shopping-curation2-3.jpg",
         추천상품문구 : "",
         이름 : "클래식 양배추 샐러드 300G(팩)",
         정가가격 : "2,490 원",
@@ -507,7 +507,7 @@ const curation_items2 = {
         월구매수 : "월 2,636개 구매"
     },
     어린잎샐러드: {
-        이미지 : "shopping-curation2-4",
+        이미지 : "shopping-curation2-4.jpg",
         추천상품문구 : "",
         이름 : "어린잎 샐러드 80G(팩)",
         정가가격 : "1,990 원",
@@ -518,7 +518,7 @@ const curation_items2 = {
         월구매수 : "월 4,165개 구매"
     },
     // 양배추샐러드100g: {
-    //     이미지 : "shopping-curation2-5",
+    //     이미지 : "shopping-curation2-5.jpg",
     //     추천상품문구 : "",
     //     이름 : "양배추 샐러드 100G(팩)",
     //     정가가격 : "1,990 원",
@@ -531,7 +531,7 @@ const curation_items2 = {
 };
 const curation_items3 = {
     클렌징폼: {
-        이미지 : "shopping-curation3-1",
+        이미지 : "shopping-curation3-1.jpg",
         추천상품문구 : "",
         이름 : "LG 히말라야 핑크솔트 클렌징폼 200ML",
         정가가격 : "9,900 원",
@@ -542,7 +542,7 @@ const curation_items3 = {
         월구매수 : "월 1,399개 구매"
     },
     수딩마스크팩: {
-        이미지 : "shopping-curation3-2",
+        이미지 : "shopping-curation3-2.jpg",
         추천상품문구 : "",
         이름 : "메디힐 하이드라 수딩 마스크팩 20ML 10EA",
         정가가격 : "9,900 원",
@@ -553,7 +553,7 @@ const curation_items3 = {
         월구매수 : "월 505개 구매"
     },
     히알루론산마스크팩: {
-        이미지 : "shopping-curation3-3",
+        이미지 : "shopping-curation3-3.jpg",
         추천상품문구 : "",
         이름 : "SNP 펩타이드 히알루론산 마스크팩 20매",
         정가가격 : "10,900 원",
@@ -564,7 +564,7 @@ const curation_items3 = {
         월구매수 : "월 512개 구매"
     },
     미백마스크팩: {
-        이미지 : "shopping-curation3-4",
+        이미지 : "shopping-curation3-4.jpg",
         추천상품문구 : "",
         이름 : "SNP 할로아시스 미백 마스크팩 10매",
         정가가격 : "9,900 원",
@@ -577,7 +577,7 @@ const curation_items3 = {
 }
 const curation_items4 = {
     도넛튜브: {
-        이미지 : "shopping-curation4-1",
+        이미지 : "shopping-curation4-1.jpg",
         추천상품문구 : "",
         이름 : "직수입 성인 도넛 튜브 107CM (색상 랜덤발송)",
         정가가격 : "12,900 원 ",
@@ -588,7 +588,7 @@ const curation_items4 = {
         월구매수 : "월 1,484개 구매"
     },
     블루투스랜턴스피커: {
-        이미지 : "shopping-curation4-2",
+        이미지 : "shopping-curation4-2.jpg",
         추천상품문구 : "",
         이름 : "인사이디 LED 블루투스 랜턴 스피커 Sunrise",
         정가가격 : "49,900 원",
@@ -599,7 +599,7 @@ const curation_items4 = {
         월구매수 : ""
     },
     그리들: {
-        이미지 : "shopping-curation4-3",
+        이미지 : "shopping-curation4-3.jpg",
         추천상품문구 : "",
         이름 : "코베아 프라임 라운드 그리들 36CM",
         정가가격 : "46,000 원",
@@ -610,7 +610,7 @@ const curation_items4 = {
         월구매수 : ""
     },
     해먹매쉬라운지튜브: {
-        이미지 : "shopping-curation4-4",
+        이미지 : "shopping-curation4-4.jpg",
         추천상품문구 : "",
         이름 : "직수입 해먹매쉬라운지 튜브 176CM (색상 랜덤발송)",
         정가가격 : "19,900 원 ",
@@ -621,7 +621,7 @@ const curation_items4 = {
         월구매수 : "월 187개 구매"
     },
     보조배터리: {
-        이미지 : "shopping-curation4-5",
+        이미지 : "shopping-curation4-5.jpg",
         추천상품문구 : "",
         이름 : "팬톤 3in1 보조배터리 10000mAh",
         정가가격 : "27,900 원 ",
@@ -632,7 +632,7 @@ const curation_items4 = {
         월구매수 : "월 15개 구매"
     },
     콜맨레이체어: {
-        이미지 : "shopping-curation4-6",
+        이미지 : "shopping-curation4-6.jpg",
         추천상품문구 : "",
         이름 : "콜맨 레이체어 (그린)",
         정가가격 : "140,000 원",
@@ -643,7 +643,7 @@ const curation_items4 = {
         월구매수 : "월 35개 구매"
     },
     춘천닭갈비: {
-        이미지 : "shopping-curation4-7",
+        이미지 : "shopping-curation4-7.jpg",
         추천상품문구 : "",
         이름 : "[밀키트] 애슐리 원조 춘천닭갈비 820G",
         정가가격 : "14,990 원",
@@ -654,7 +654,7 @@ const curation_items4 = {
         월구매수 : "월 620개 구매"
     },
     제주흑돼지묵은지찜: {
-        이미지 : "shopping-curation4-8",
+        이미지 : "shopping-curation4-8.png",
         추천상품문구 : "",
         이름 : "[밀키트] 홈플러스시그니처 홈밀 흑돈가 제주 흑돼지 묵은지찜460G",
         정가가격 : "13,990 원",
@@ -665,11 +665,12 @@ const curation_items4 = {
         월구매수 : "월 243개 구매"
     },
     버섯전골: {
-        이미지 : "shopping-curation4-9",
+        이미지 : "shopping-curation4-9.jpg",
         추천상품문구 : "",
         이름 : "[밀키트] 홈플러스시그니처 홈밀 소불고기 버섯전골 490G",
+        정가가격 : "9,990 원",
         할인율 : "",
-        판매가 : "9,990 원",
+        판매가 : "",
         가격그램 : "(100G 당 2,038.8원)",
         리뷰 : "평점4.5(1,840건)",
         월구매수 : "월 2,461개 구매"
@@ -691,8 +692,8 @@ function loadFn() {
     // 큐레이션
     let curation_box = document.querySelector(".shopping-curation-box");
     const curation_items_arr = [curation_items1, curation_items2, curation_items3, curation_items4];
+    let shopping_curation_btn = document.querySelectorAll('.shopping-curation ul li button');
     let hcode = "";
-    let saja_hcode = "";
     let curation_hcode = "";
 
     // nav
@@ -733,12 +734,12 @@ function loadFn() {
     for (let x of curation_items_arr) {
         for(let y in x){
             for(let i=0; i<4; i++){
-                console.log('y :', y);
-                console.log('x[y] :', x[y]);
+                // console.log('y :', y);
+                // console.log('x[y] :', x[y]);
                 curation_hcode += `
-                    <div class = "curation-item-img">
+                    <div class = "curation-item-img}">
                         <div class = "curation-img-wrap">
-                            <img src="./images/shopping-curation/${x[y]["이미지"]}.jpg" alt="큐레이션이미지"></img>
+                            <img src="./images/shopping-curation/${x[y]["이미지"]}" alt="큐레이션이미지"></img>
                             <div class="saja-hover-btn">
                                 <a href="#">
                                     <span>
@@ -812,16 +813,17 @@ function loadFn() {
                     break;
             }
             saja_length_btn.innerHTML = `다음상품 ${saja_length} / ${saja_nav_blength}`;
-            console.log("saja_key:", saja_key);
+            // console.log("saja_key:", saja_key);
 
+            let saja_hcode = "";
             for (let x in saja_key) {
-                console.log("x :", x);
-                console.log("saja_key[x]:", saja_key[x]);
-                console.log('saja_key[x]["이미지"] :', saja_key[x]["이미지"]);
+                // console.log("x :", x);
+                // console.log("saja_key[x]:", saja_key[x]);
+                // console.log('saja_key[x]["이미지"] :', saja_key[x]["이미지"]);
                 saja_hcode += `
                     <div class="saja-item-box">
                         <div class = "saja-item-img">
-                            <img src="./images/saja-item/${saja_key[x]["이미지"]}.jpg" alt="사자이미지"></img>
+                            <img src="./images/saja-item/${saja_key[x]["이미지"]}" alt="사자이미지"></img>
                             <section>
                                 ${
                                     x == "깐마늘" ||
@@ -877,7 +879,20 @@ function loadFn() {
             }
             saja_items_div.innerHTML = saja_hcode;
         };
-        console.log("saja_items_div.innerHTML ", saja_items_div.innerHTML);
+        // console.log("saja_items_div.innerHTML ", saja_items_div.innerHTML);
+    }
+
+    for(let x of shopping_curation_btn){
+        let shopping_curation_btxt = shopping_curation_btn.innerText;
+        
+        x.onclick = () => {
+            console.log('shopping_curation_btn x >>>', x);
+            switch(shopping_curation_btxt){
+                case "간식타임":
+                    curation_box.scrollIntoView({behavior:'smooth'});
+            }
+            console.log('curation_box.scrollTo(500,0) :', x.scrollTo(500,0));
+        }
     }
 }
 
