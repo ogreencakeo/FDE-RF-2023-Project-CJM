@@ -737,10 +737,10 @@ function loadFn() {
                 // console.log('y :', y);
                 // console.log('x[y] :', x[y]);
                 curation_hcode += `
-                    <div class = "curation-item-img}">
+                    <div class = "curation-item-img">
                         <div class = "curation-img-wrap">
                             <img src="./images/shopping-curation/${x[y]["이미지"]}" alt="큐레이션이미지"></img>
-                            <div class="saja-hover-btn">
+                            <div class="curation-hover-btn">
                                 <a href="#">
                                     <span>
                                         <img src="./images/saja-hover-btn1.png" alt="">

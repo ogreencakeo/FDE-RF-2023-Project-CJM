@@ -550,6 +550,7 @@
                 position: sticky;
                 top: 0;
                 background-color: white;
+                z-index: 2;
             }
 
             .shopping-curation nav {
@@ -572,6 +573,25 @@
                 color: rgb(102, 102, 102);
                 background-color: #fff;
                 cursor: pointer;
+            }
+
+            .curation-hover-btn{
+                width: 270px;
+                height: 50px;
+                position: absolute;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.7);
+                display: flex;  
+                justify-content: center;
+            }
+            .curation-hover-btn>a{
+                height: 50px;
+                width: 50px;
+                display: block;
+            }
+            .curation-hover-btn>a>span>img{
+                top: calc(50% - 30px/2);
+                left: calc(50% - 30px/2);
             }
             .shopping-curation-wrap {
                 width: 1230px;
@@ -606,6 +626,7 @@
             .curation-img-wrap {
                 width: 270px;
                 height: 270px;
+                position: relative;
             }
             .curation-item-explanation {
                 width: 270px;
