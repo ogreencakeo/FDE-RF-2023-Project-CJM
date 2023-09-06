@@ -472,6 +472,20 @@ const curation_items1 = {
     },
 };
 
+const curation_items2 = {
+    : {
+        이미지 : "",
+        추천상품문구 : "",
+        이름 : "",
+        정가가격 : "",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "",
+        리뷰 : "",
+        월구매수 : ""
+    },
+};
+
 // console.log('saja_item_arr [1] >>', saja_item_arr[1]);
 
 window.addEventListener("load", loadFn());
@@ -525,6 +539,7 @@ function loadFn() {
             </section> */
     }
     // 큐레이션
+    curation_hcode 
     for (let x in curation_items1) {
         for(let i=0; i<4; i++){
             curation_hcode += `
