@@ -473,8 +473,87 @@ const curation_items1 = {
 };
 
 const curation_items2 = {
+    참깨흑임자드레싱: {
+        이미지 : "shopping-curation2-1",
+        추천상품문구 : "",
+        이름 : "풀무원 참깨흑임자 드레싱 495G",
+        정가가격 : "6,880 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(100G 당 1,389.9원)",
+        리뷰 : "평점4.8(534건)",
+        월구매수 : "월 386개 구매"
+    },
+    더블팩샐러드: {
+        이미지 : "shopping-curation2-2",
+        추천상품문구 : "",
+        이름 : "더블팩 샐러드 500G(팩)",
+        정가가격 : "5,990 원",
+        할인율 : "",
+        판매가 : "4,990 원",
+        가격그램 : "(100G 당 998원)",
+        리뷰 : "평점4.7(7,392건)",
+        월구매수 : "월 19,183개 구매"
+    },
+    클래식양배추샐러드300g: {
+        이미지 : "shopping-curation2-3",
+        추천상품문구 : "",
+        이름 : "클래식 양배추 샐러드 300G(팩)",
+        정가가격 : "2,490 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(100G 당 830원)",
+        리뷰 : "평점4.7(1,161건)",
+        월구매수 : "월 2,636개 구매"
+    },
+    어린잎샐러드: {
+        이미지 : "shopping-curation2-4",
+        추천상품문구 : "",
+        이름 : "어린잎 샐러드 80G(팩)",
+        정가가격 : "1,990 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(10G 당 248.8원)",
+        리뷰 : "평점4.7(2,188건)",
+        월구매수 : "월 4,165개 구매"
+    },
+    // 양배추샐러드100g: {
+    //     이미지 : "shopping-curation2-5",
+    //     추천상품문구 : "",
+    //     이름 : "양배추 샐러드 100G(팩)",
+    //     정가가격 : "1,990 원",
+    //     할인율 : "",
+    //     판매가 : "",
+    //     가격그램 : "(100G 당 1,990원)",
+    //     리뷰 : "평점4.7(2,139건)",
+    //     월구매수 : "월 9,397개 구매"
+    // },
+};
+const curation_items3 = {
+    클렌징폼: {
+        이미지 : "shopping-curation3-1",
+        추천상품문구 : "",
+        이름 : "LG 히말라야 핑크솔트 클렌징폼 200ML",
+        정가가격 : "9,900 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(100ML 당 4,950원)",
+        리뷰 : "평점4.7(514건)",
+        월구매수 : "월 1,399개 구매"
+    },
+    수딩마스크팩: {
+        이미지 : "shopping-curation3-2",
+        추천상품문구 : "",
+        이름 : "메디힐 하이드라 수딩 마스크팩 20ML 10EA",
+        정가가격 : "9,900 원",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "(1매 당 990원)",
+        리뷰 : "평점4.8(65건)",
+        월구매수 : "월 505개 구매"
+    },
     : {
-        이미지 : "",
+        이미지 : "shopping-curation3-3",
         추천상품문구 : "",
         이름 : "",
         정가가격 : "",
@@ -484,8 +563,19 @@ const curation_items2 = {
         리뷰 : "",
         월구매수 : ""
     },
-};
+    : {
+        이미지 : "shopping-curation3-4",
+        추천상품문구 : "",
+        이름 : "",
+        정가가격 : "",
+        할인율 : "",
+        판매가 : "",
+        가격그램 : "",
+        리뷰 : "",
+        월구매수 : ""
+    },
 
+}
 // console.log('saja_item_arr [1] >>', saja_item_arr[1]);
 
 window.addEventListener("load", loadFn());
@@ -501,6 +591,7 @@ function loadFn() {
     const saja_nav_blength = saja_nav_btn.length;
     // 큐레이션
     let curation_box = document.querySelector(".shopping-curation-box");
+    const curation_items_arr = [curation_items1, curation_items2];
     let hcode = "";
     let saja_hcode = "";
     let curation_hcode = "";
@@ -540,46 +631,51 @@ function loadFn() {
     }
     // 큐레이션
     curation_hcode 
-    for (let x in curation_items1) {
-        for(let i=0; i<4; i++){
-            curation_hcode += `
-                <div class = "curation-item-img">
-                    <div class = "curation-img-wrap">
-                        <img src="./images/shopping-curation/${curation_items1[x]["이미지"]}.jpg" alt="큐레이션이미지"></img>
-                        <div class="saja-hover-btn">
-                            <a href="#">
-                                <span>
-                                    <img src="./images/saja-hover-btn1.png" alt="">
-                                </span>
-                            </a>
-                            <a href="#">
-                                <span>
-                                    <img src="./images/saja-hover-btn2.png" alt="">
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <section>
-                        <div class="curation-item-explanation">
-                            <div class="curation-item-exp-name">
-                                <p>${curation_items1[x]["추천상품문구"]}</p>
-                                <p>${curation_items1[x]["이름"]}
-                            </div>
-                            <div class="curation-item-exp-price">
-                                <p>${curation_items1[x]["정가가격"]}</p>
-                                <span>${curation_items1[x]["할인율"]}</span>
-                                <span>${curation_items1[x]["판매가"]}</span>
-                                <span>${curation_items1[x]["가격그램"]}</span>
-                            </div>
-                            <div class="curation-item-exp-review">
-                                <span>${curation_items1[x]["리뷰"]}</span>
-                                <span>${curation_items1[x]["월구매수"]}</span>
+    for (let x of curation_items_arr) {
+        for(let y in x){
+            for(let i=0; i<4; i++){
+                console.log('y :', y);
+                console.log('x[y] :', x[y]);
+                curation_hcode += `
+                    <div class = "curation-item-img">
+                        <div class = "curation-img-wrap">
+                            <img src="./images/shopping-curation/${x[y]["이미지"]}.jpg" alt="큐레이션이미지"></img>
+                            <div class="saja-hover-btn">
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/saja-hover-btn2.png" alt="">
+                                    </span>
+                                </a>
                             </div>
                         </div>
-                    </section>
-                </div> 
-            `;
+                        <section>
+                            <div class="curation-item-explanation">
+                                <div class="curation-item-exp-name">
+                                    <p>${x[y]["추천상품문구"]}</p>
+                                    <p>${x[y]["이름"]}
+                                </div>
+                                <div class="curation-item-exp-price">
+                                    <p>${x[y]["정가가격"]}</p>
+                                    <span>${x[y]["할인율"]}</span>
+                                    <span>${x[y]["판매가"]}</span>
+                                    <span>${x[y]["가격그램"]}</span>
+                                </div>
+                                <div class="curation-item-exp-review">
+                                    <span>${x[y]["리뷰"]}</span>
+                                    <span>${x[y]["월구매수"]}</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div> 
+                `;
+            }
         }
+        
     }
     curation_box.innerHTML = curation_hcode;
     // 사자
