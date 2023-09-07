@@ -11,7 +11,7 @@
         <script src="./js/index2.js" defer></script>
         <style>
             body * {
-                /* outline: 2px dashed rgb(195, 236, 141); */
+                outline: 2px dashed rgb(195, 236, 141);
                 /* box-sizing: border-box; */
             }
             a {
@@ -728,30 +728,46 @@
                 height: 57px;
                 margin: 0 auto;
             }
+            /* footer- 회사소개 */
             .company-introduce-wrap {
                 margin: 0 auto;
                 width: 1200px;
                 display: flex;
                 justify-content: space-between;
             }
-            .introduce-gide-left ul{
+            /* 회사소개 왼쪽 가이드 */
+            .introduce-gide-left ul {
                 display: flex;
             }
-            .introduce-gide-left ul li{
+            .introduce-gide-left ul li {
                 line-height: 16px;
                 margin-right: 20px;
                 font-size: 12px;
                 padding: 20px 0;
-                
             }
-            .introduce-gide-left ul li a{
+            .introduce-gide-left ul li a {
                 color: rgb(102, 102, 102);
             }
-            .introduce-gide-right ul{
+            /* 회사소개 오른쪽 가이드 */
+            .introduce-gide-right {
+                width: 267px;
+                height: 57px;
+            }
+            .introduce-gide-right ul {
                 display: flex;
                 justify-content: right;
             }
-            </style>
+            .introduce-gide-right > ul > li {
+                line-height: 16px;
+                margin-right: 50px;
+                font-size: 12px;
+                padding: 20px 0;
+            }
+            .introduce-gide-right::after {
+                content: url(./images/company-introduce-icon1.png);
+                position: absolute;
+            }
+        </style>
     </head>
     <body>
         <!-- 헤더 -->
