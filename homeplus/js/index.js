@@ -701,6 +701,9 @@ function loadFn() {
     let curation_hcode = "";
 
     // nav
+    let stsWheel = 0;
+
+    // nav
     hcode += "<nav><ul>";
     for (let i = 0; i < exhibition_arr.length; i++) {
         hcode += `
@@ -736,37 +739,40 @@ function loadFn() {
     // banner 슬라이드
     const banner_slide = document.querySelector('.side-content-box ul');
     const banner_btn = document.querySelectorAll('.side-content-box button');
-    console.log('banner_btn :', banner_btn);
+    // console.log('banner_btn :', banner_btn);
 
-    banner_btn.forEach(ele => addEvt(ele, 'click', go_slide));
+    banner_btn.forEach(ele => addEvt(ele, 'click', goSlide));
 
-    function go_slide(){
-        console.log('this',this);
-        let right_btn = this.classList.contains('rightbtn'); 
-        let eachOne = banner_slide.querySelectorAll('li');
-        console.log(right_btn, eachOne);
+    function goSlide(){
+        if(stsWheel) return;
+        stsWheel = 1;
+        setTimeout(()=> stsWheel = 0 ,400);
         
-        if(right_btn){
+        let isRight = this.classList.contains('rightbtn');
+        let eachOne = banner_slide.querySelectorAll('li');
+
+        if(isRight){
             banner_slide.style.left = '-100%';
-            banner_slide.style.transition  = '.5s ease-in-out';
-            setTimeout(()=>{
+            banner_slide.style.transition = '.4s ease-in-out';
+            setTimeout(() => {
                 banner_slide.appendChild(eachOne[0]);
-                banner_slide.style.left = '0';
-                banner_slide.style.transition = 'none'
+                banner_slide.style.left = '0%';
+                banner_slide.style.transition = 'none';
             }, 400);
         }else{
             banner_slide.insertBefore(eachOne[eachOne.length-1], eachOne[0]);
             banner_slide.style.left = '-100%';
             banner_slide.style.transition = 'none';
-            setTimeout(()=>{
-                banner_slide.style.left = '0';
-                banner_slide.transition = '.5s ease-in-out';
-            },0)
+            setTimeout(() => {
+                banner_slide.style.left = '0%';
+                banner_slide.style.transition = '.4s ease-in-out';
+            }, 0);
         }
     }
 
+    
     // 큐레이션
-    curation_hcode 
+    // curation_hcode 
     for (let x of curation_items_arr) {
         for(let y in x){
             for(let i=0; i<4; i++){
