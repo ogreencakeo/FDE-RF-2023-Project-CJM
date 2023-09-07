@@ -678,6 +678,10 @@ const curation_items4 = {
 }
 // console.log('saja_item_arr [1] >>', saja_item_arr[1]);
 
+const addEvt = (ele, evt, fn) => {
+    ele.addEventListener(evt, fn);
+}
+
 window.addEventListener("load", loadFn());
 function loadFn() {
     const move_to_exhibition = document.querySelector(".move-to-exhibition");
@@ -729,6 +733,10 @@ function loadFn() {
                 <span><img src="./images/saja-icon2.png" alt=""></span>
             </section> */
     }
+    // banner 슬라이드
+    const banner_slide = document.querySelector('side-content-box ul');
+    addEvt
+
     // 큐레이션
     curation_hcode 
     for (let x of curation_items_arr) {
