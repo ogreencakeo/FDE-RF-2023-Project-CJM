@@ -779,6 +779,7 @@ function loadFn() {
     }
     curation_box.innerHTML = curation_hcode;
     // 사자
+    
 
     for (let x of saja_nav_btn) {
         x.onclick = () => {
