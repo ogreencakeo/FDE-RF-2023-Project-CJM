@@ -747,7 +747,7 @@ function loadFn() {
         if(stsWheel) return;
         stsWheel = 1;
         setTimeout(()=> stsWheel = 0 ,400);
-        
+
         let isRight = this.classList.contains('rightbtn');
         let eachOne = banner_slide.querySelectorAll('li');
 
@@ -756,7 +756,7 @@ function loadFn() {
             banner_slide.style.transition = '.4s ease-in-out';
             setTimeout(() => {
                 banner_slide.appendChild(eachOne[0]);
-                banner_slide.style.left = '0%';
+                banner_slide.style.left = '0';
                 banner_slide.style.transition = 'none';
             }, 400);
         }else{
@@ -764,7 +764,7 @@ function loadFn() {
             banner_slide.style.left = '-100%';
             banner_slide.style.transition = 'none';
             setTimeout(() => {
-                banner_slide.style.left = '0%';
+                banner_slide.style.left = '0';
                 banner_slide.style.transition = '.4s ease-in-out';
             }, 0);
         }
