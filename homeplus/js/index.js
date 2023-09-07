@@ -734,20 +734,63 @@ function loadFn() {
             </section> */
     }
     // banner 슬라이드
-    const banner_slide = document.querySelector('side-content-box ul');
-    addEvt
+    const banner_slide = document.querySelector('.side-content-box ul');
+    const banner_btn = document.querySelectorAll('.side-content-box button');
+    console.log('banner_btn :', banner_btn);
+
+    banner_btn.forEach(ele => addEvt(ele, 'click', go_slide));
+
+    function go_slide(){
+        console.log('this',this);
+        let right_btn = this.classList.contains('rightbtn'); 
+        let eachOne = banner_slide.querySelectorAll('li');
+        console.log(right_btn, eachOne);
+        
+        if(right_btn){
+            banner_slide.style.left = '-100%';
+            banner_slide.style.transition  = '.5s ease-in-out';
+            setTimeout(()=>{
+                banner_slide.appendChild(eachOne[0]);
+                banner_slide.style.left = '0';
+                banner_slide.style.transition = 'none'
+            }, 400);
+        }else{
+            banner_slide.insertBefore(eachOne[eachOne.length-1], eachOne[0]);
+            banner_slide.style.left = '-100%';
+            banner_slide.style.transition = 'none';
+            setTimeout(()=>{
+                banner_slide.style.left = '0';
+                banner_slide.transition = '.5s ease-in-out';
+            },0)
+        }
+    }
 
     // 큐레이션
     curation_hcode 
     for (let x of curation_items_arr) {
         for(let y in x){
             for(let i=0; i<4; i++){
-                // console.log('y :', y);
+                console.log('y :', y);
                 // console.log('x[y] :', x[y]);
                 curation_hcode += `
                     <div class = "curation-item-img">
                         <div class = "curation-img-wrap">
                             <img src="./images/shopping-curation/${x[y]["이미지"]}" alt="큐레이션이미지"></img>
+                            <section>
+                                ${
+                                    y == '더블팩샐러드' ||
+                                    y == '히알루론산마스크팩' ||
+                                    y == '도넛튜브' ||
+                                    y == '해먹매쉬라운지튜브' ||
+                                    y == '보조배터리' ||
+                                    y == '콜맨레이체어' ||
+                                    y == '춘천닭갈비' ||
+                                    y == '춘천닭갈비'
+                                        ? '<span style="display:none"></span>'
+                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
+                                }
+                                <span><img src="./images/delivery-market.png" alt=""></span>
+                            </section>
                             <div class="curation-hover-btn">
                                 <a href="#">
                                     <span>
@@ -849,7 +892,9 @@ function loadFn() {
                                         ? '<span style="display:none"></span>'
                                         : '<span><img src="./images/saja-icon1.png" alt=""></span>'
                                 }
-                                <span><img src="./images/saja-icon2.png" alt=""></span>
+                                <span>
+                                    <img src="./images/delivery-market.png" alt="">
+                                </span>
                             </section>
                             <div class="saja-hover-btn">
                                 <a href="#">

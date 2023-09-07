@@ -11,7 +11,7 @@
         <script src="./js/index2.js" defer></script>
         <style>
             body * {
-                outline: 2px dashed rgb(195, 236, 141);
+                /* outline: 2px dashed rgb(195, 236, 141); */
                 /* box-sizing: border-box; */
             }
             a {
@@ -362,10 +362,17 @@
                 height: 374px;
                 overflow: hidden;
             }
-            .saja-item-img>img{
+            .saja-item-img > img {
                 width: 374px;
                 height: 374px;
             }
+            /* .saja-item-img-event img{
+                width: 56px;
+                height: 56px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            } */
             .saja-item-img section img {
                 width: 56px;
                 height: 56px;
@@ -373,17 +380,17 @@
             .saja-item-img:hover section span {
                 opacity: 0;
             }
-            .saja-item-img>img:hover {
-                transform: scale(1.1);
-                transition: .4s ease-in-out;
-                
+            .saja-item-img > img:hover {
+                transform: scale(1.05);
+                transition: 0.4s ease-in-out;
             }
             .saja-item-img section span {
                 transition: 0.3s ease-in-out;
             }
             .saja-item-img section span:first-child {
                 position: absolute;
-                top: 0;
+                top: 10px;
+                left: 10px;
             }
             .saja-item-img section span:first-child::after {
                 content: "행사\A상품";
@@ -401,8 +408,8 @@
 
             .saja-item-img section span:last-child {
                 position: absolute;
-                right: 0;
-                top: 0;
+                right: 10px;
+                top: 10px;
             }
             .saja-item-box section {
                 width: 374px;
@@ -576,31 +583,36 @@
                 cursor: pointer;
             }
 
-            .curation-hover-btn{
+            .curation-hover-btn {
                 width: 270px;
                 height: 50px;
                 position: absolute;
                 bottom: 0;
                 background: rgba(0, 0, 0, 0.7);
-                display: flex;  
+                display: flex;
                 justify-content: center;
+                opacity: 0;
+                transition: 0.4s ease-in-out;
             }
-            .curation-hover-btn>a{
+            .curation-img-wrap:hover .curation-hover-btn {
+                opacity: 1;
+                transition: 0.4s ease-in-out;
+            }
+            .curation-hover-btn > a {
                 height: 50px;
                 width: 50px;
                 display: block;
             }
-            .curation-hover-btn a span{
+            .curation-hover-btn a span {
                 width: 50px;
                 height: 50px;
                 display: inline-block;
                 position: absolute;
-                
             }
-            .curation-hover-btn a span img{
+            .curation-hover-btn a span img {
                 position: absolute;
-                top: calc(50% - 30px/2);
-                left: calc(50% - 30px/2);
+                top: calc(50% - 30px / 2);
+                left: calc(50% - 30px / 2);
             }
             .shopping-curation-wrap {
                 width: 1230px;
@@ -633,9 +645,50 @@
             margin-top: 70px;
         } */
             .curation-img-wrap {
+                position: relative;
                 width: 270px;
                 height: 270px;
-                position: relative;
+                overflow: hidden;
+            }
+
+            .curation-img-wrap > section > span > img {
+                position: absolute;
+                width: 56px;
+                height: 56px;
+                top: 0;
+            }
+            .curation-img-wrap > section > span:first-child img {
+                left: 0;
+            }
+            .curation-img-wrap > section > span:first-child::after {
+                content: "행사\A상품";
+                white-space: pre;
+                position: absolute;
+                top: 0;
+                padding-top: 7px;
+                width: 100%;
+                display: block;
+                z-index: 1;
+                margin-left: 12px;
+                /* text-align: center; */
+                font-size: 16px;
+                color: rgb(236, 68, 68);
+            }
+            .curation-img-wrap > section > span:last-child img {
+                right: 0;
+            }
+            /* curation-img-wrap 호버시 */
+            .curation-img-wrap:hover > img {
+                transform: scale(1.05);
+                transition: 0.4s ease-in-out;
+            }
+            .curation-img-wrap:hover section > span > img {
+                opacity: 0;
+                transition: 0.4s ease-in-out;
+            }
+            .curation-img-wrap:hover section > span:first-child::after {
+                opacity: 0;
+                transition: 0.4s ease-in-out;
             }
             .curation-item-explanation {
                 width: 270px;
@@ -664,11 +717,41 @@
             }
 
             /* footer부분 */
-            .footer{
+            .footer {
                 width: 100%;
                 height: 370px;
             }
-        </style>
+
+            .footer-wrap {
+                border-top: 1px solid rgb(238, 238, 238);
+                border-bottom: 1px solid rgb(238, 238, 238);
+                height: 57px;
+                margin: 0 auto;
+            }
+            .company-introduce-wrap {
+                margin: 0 auto;
+                width: 1200px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .introduce-gide-left ul{
+                display: flex;
+            }
+            .introduce-gide-left ul li{
+                line-height: 16px;
+                margin-right: 20px;
+                font-size: 12px;
+                padding: 20px 0;
+                
+            }
+            .introduce-gide-left ul li a{
+                color: rgb(102, 102, 102);
+            }
+            .introduce-gide-right ul{
+                display: flex;
+                justify-content: right;
+            }
+            </style>
     </head>
     <body>
         <!-- 헤더 -->
@@ -741,12 +824,12 @@
                     <div class="banner-ad-slider">
                         <section class="side-content-box">
                             <ul>
-                                <li><img src="./images/banner-ad1.jpg" alt=""/></li>
-                                <li><img src="./images/banner-ad2.jpg" alt=""/></li>
-                                <li><img src="./images/banner-ad3.jpg" alt=""/></li>
+                                <li><img src="./images/banner-ad1.jpg" alt="" /></li>
+                                <li><img src="./images/banner-ad2.jpg" alt="" /></li>
+                                <li><img src="./images/banner-ad3.jpg" alt="" /></li>
                             </ul>
-                            <button></button>
-                            <button></button>
+                            <button class="leftbtn"></button>
+                            <button class="rightbtn"></button>
                         </section>
                     </div>
                 </div>
@@ -837,54 +920,27 @@
         <!-- 하단 -->
         <div class="footer">
             <div class="footer-wrap">
-                <footer-wrap-inner>
-                    <div class="company-introduce-wrap">
-                        <div class="company-introduce">
-                            <ul>
-                                <li>
-                                    <a href="">회사소개</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="">공지사항</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="">이용약관</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="">개인정보처리방침</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="">청소년보호정책</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="">입점·제휴문의</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="">고객의견함</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <a href="">인재채용</a>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="company-introduce-wrap">
+                    <div class="introduce-gide-left">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
 
-                        
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">청소년보호정책</a></li>
+                            <li><a href="#">입점·제휴문의</a></li>
+                            <li><a href="#">고객의견함</a></li>
+                            <li><a href="#">인재채용</a></li>
+                        </ul>
                     </div>
-                </footer-wrap-inner>
+                    <div class="introduce-gide-right">
+                        <ul>
+                            <li><a href="#"></a>매장찾기</li>
+                            <li><a href="#"></a>Family Site</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
