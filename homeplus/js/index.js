@@ -696,7 +696,7 @@ function loadFn() {
     // 큐레이션
     let curation_box = document.querySelector(".shopping-curation-box");
     const curation_items_arr = [curation_items1, curation_items2, curation_items3, curation_items4];
-    let = document.querySelectorAll('.nav-btngo2');
+    let shopping_curation_btn = document.querySelectorAll('.nav-btngo2');
     let hcode = "";
     let curation_hcode = "";
 
@@ -716,26 +716,7 @@ function loadFn() {
     }
     hcode += "</ul></nav>";
     move_to_exhibition.innerHTML = hcode;
-    {
-        /* <section>
-                ${
-                    x == "깐마늘" ||
-                    x == "감자" ||
-                    x == "고구마스틱" ||
-                    x == "사과" ||
-                    x == "강낭콩" ||
-                    x == "피자치즈" ||
-                    x == "마열라면" ||
-                    x == "오렌지망고" ||
-                    x == "오감자그라탕" ||
-                    x == "지퍼락" ||
-                    x == "그린박스"
-                        ? '<span style="display:none"></span>'
-                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
-                }
-                <span><img src="./images/saja-icon2.png" alt=""></span>
-            </section> */
-    }
+    
     // banner 슬라이드
     const banner_slide = document.querySelector('.side-content-box ul');
     const banner_btn = document.querySelectorAll('.side-content-box button');
@@ -950,16 +931,12 @@ function loadFn() {
         console.log('shopping_curation_btn x>>', x);
         
         x.onclick = () => {
+            console.log(x.classList.contains('nav-check-red'));
             shopping_curation_btn.forEach(x=> x.classList.remove('nav-check-red'));
             x.classList.add('nav-check-red');
-            console.log('shopping_curation_btn x >>>', x);
+            console.log(x.classList.contains('nav-check-red'))
+            // console.log('shopping_curation_btn x >>>', x);
             
-            
-            switch(shopping_curation_btxt){
-                case "간식타임":
-                    curation_box.scrollIntoView({behavior:'smooth'});
-            }
-            console.log('curation_box.scrollTo(500,0) :', x.scrollTo(500,0));
         }
     }
 }
