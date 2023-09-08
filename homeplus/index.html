@@ -7,8 +7,10 @@
         <!-- 폰트어썸 CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
         <link rel="stylesheet" href="./css/main.css" />
+        <!-- JS -->
         <script src="./js/index.js" defer></script>
-        <script src="./js/index2.js" defer></script>
+        <!-- 데이터 -->
+        <script src="./js/data.js" defer></script>
         <style>
             body * {
                 outline: 2px dashed rgb(195, 236, 141);
@@ -300,14 +302,10 @@
                 margin: 0 auto;
             }
 
-            /* 메인부분 - 사자 nav */
+            /* 메인부분 - 사자 nav, 큐레이션 nav 색변화 */
             .nav-check-red {
                 color: red;
             }
-            .nav-check-black {
-                color: black;
-            }
-
             .saja-event-nav-wrap {
                 margin-top: 30px;
                 width: 1230px;
@@ -773,15 +771,24 @@
                 position: absolute;
             }
             /* footer - 하단 content 소개 */
-            .footer-contnent{
+            .footer-content{
+                width: 1200px;
+                /* left: calc(50% - ((872px + 328px) / 2)); */
+                /* padding-right:328px; */
+                display: flex;
+                margin: 0 auto;
+                justify-content: start;
+            }
+            .footer-content-left{
                 width: 872px; 
                 height: 231.583px;
-                position: absolute;
-                left: calc(50% - ((872px + 328px) / 2));
-                padding-right:328px;
-                margin : 0 65.333px;
-                display: flex;
-                justify-content: center;
+                margin-right : 65.333px;
+            }
+            .footer-r-content1{
+
+            }
+            .footer-content-right{
+
             }
         </style>
     </head>
@@ -923,16 +930,16 @@
                             <nav>
                                 <ul>
                                     <li>
-                                        <button>간식타임</button>
+                                        <button class="nav-btngo2">간식타임</button>
                                     </li>
                                     <li>
-                                        <button>아삭아삭</button>
+                                        <button class="nav-btngo2">아삭아삭</button>
                                     </li>
                                     <li>
-                                        <button>맑은피부</button>
+                                        <button class="nav-btngo2">맑은피부</button>
                                     </li>
                                     <li>
-                                        <button>캠핑가자</button>
+                                        <button class="nav-btngo2">캠핑가자</button>
                                     </li>
                                 </ul>
                             </nav>
@@ -973,33 +980,33 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footer-contnent">
+                <div class="footer-content">
                     <div class="footer-content-left">
                         <h1>홈플러스 주식회사</h1>
-                        <div class="footer-r-contnent1">
+                        <div class="footer-r-content1">
                             <span>대표이사: 이제훈</span>
                             <span>주소: 서울특별시 강서구 화곡로 398(등촌동)</span>
                             <span>사업자등록번호: 220-81-60348</span>
                         </div>
-                        <div class="footer-r-contnent2">
+                        <div class="footer-r-content2">
                             <span>통신판매신고번호: 2016-서울강서-0451호</span>
                             <span>사업자 정보확인</span>
                             <span>청소년 보호책임자: 조혜영</span>
                         </div>
-                        <div class="footer-r-contnent3">
+                        <div class="footer-r-content3">
                             <span>
                                 사이트 내에는 홈플러스㈜에 입점한 개별판매자가 판매하는 상품이 포함되어 있습니다.<br/>
                                 해당 상품의 경우 홈플러스㈜는 통신판매중개자로서 판매 당사자가 아니며, 상품정보 및 거래 등에 대한 책임을 지지 않습니다.
                             </span>
                         </div>
-                        <div class="footer-r-contnent4">
+                        <div class="footer-r-content4">
                             <span>소비자피해보상보험서비스</span>
                             <span>가입사실 확인</span>
                         </div>
-                        <div class="footer-r-contnent5">
+                        <div class="footer-r-content5">
                             <span>고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스 소비자 피해보상보험 서비스를 이용하실 수 있습니다.</span>
                         </div>
-                        <div class="footer-r-contnent6">
+                        <div class="footer-r-content6">
                             <span>Copyright © Homeplus Co., LTD. All Rights Reserved.</span>
                         </div>
                     </div>
