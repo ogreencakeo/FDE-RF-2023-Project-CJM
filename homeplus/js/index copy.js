@@ -1,25 +1,30 @@
 
-// console.log('saja_item_arr [1] >>', saja_item_arr[1]);
-
-const addEvt = (ele, evt, fn) => {
-    ele.addEventListener(evt, fn);
+const domFn = {
+    qs : (x) => document.querySelector(x),
+    qsa : (x) => document.querySelectorAll(x),
+    qsEl : (el, x) => el.querySelector(x),
+    qsaEl : (el, x) => el.querySelectorAll(x),
+    addEvt : (ele, evt, fn) => ele.addEventListener(evt, fn)
 }
 
-window.addEventListener("load", loadFn());
+
+domFn.addEvt(window, 'load', loadFn);
+
 function loadFn() {
-    const move_to_exhibition = document.querySelector(".move-to-exhibition");
+    console.log('로딩완료');
+    const move_to_exhibition = domFn.qs(".move-to-exhibition");
     // 사자
-    let saja_items_div = document.querySelector(".saja-items-div");
-    let saja_nav_btn = document.querySelectorAll(".nav-btngo");
+    let saja_items_div = domFn.qs(".saja-items-div");
+    let saja_nav_btn = domFn.qsa(".nav-btngo");
     let saja_nbtn_length = saja_nav_btn.length; // 6
     let saja_item_arr = [saja_items, saja_items2, saja_items3, saja_items4, saja_items5, saja_items6];
-    let saja_btn_next = document.querySelector(".saja-btn-next");
-    let saja_length_btn = document.querySelector(".saja-itmes-btnBx").querySelector("strong");
+    let saja_btn_next = domFn.qs(".saja-btn-next");
+    let saja_length_btn = domFn.qs(".saja-itmes-btnBx strong")
     const saja_nav_blength = saja_nav_btn.length;
     // 큐레이션
-    let curation_box = document.querySelector(".shopping-curation-box");
+    let curation_box = domFn.qs(".shopping-curation-box");
     const curation_items_arr = [curation_items1, curation_items2, curation_items3, curation_items4];
-    let shopping_curation_btn = document.querySelectorAll('.nav-btngo2');
+    let shopping_curation_btn = domFn.qsa('.nav-btngo2');
     let hcode = "";
     let curation_hcode = "";
 
@@ -41,19 +46,21 @@ function loadFn() {
     move_to_exhibition.innerHTML = hcode;
     
     // banner 슬라이드
-    const banner_slide = document.querySelector('.side-content-box ul');
-    const banner_btn = document.querySelectorAll('.side-content-box button');
+    const banner_slide = domFn.qs('.side-content-box ul');
+    const banner_btn = domFn.qsa('.side-content-box button');
     // console.log('banner_btn :', banner_btn);
 
-    banner_btn.forEach(ele => addEvt(ele, 'click', goSlide));
+    banner_btn.forEach(ele => domFn.addEvt(ele, 'click', goSlide));
 
     function goSlide(){
+        console.log(' banner_slide 로딩완료');
         if(stsWheel) return;
         stsWheel = 1;
         setTimeout(()=> stsWheel = 0 ,400);
 
         let isRight = this.classList.contains('rightbtn');
-        let eachOne = banner_slide.querySelectorAll('li');
+        domFn.qsaEl(banner_slide, 'li')
+        let eachOne = domFn.qsaEl(banner_slide, 'li');
 
         if(isRight){
             banner_slide.style.left = '-100%';
@@ -142,11 +149,11 @@ function loadFn() {
     // 사자
     
 
-    for (let x of saja_nav_btn) {
-        x.onclick = () => {
+    saja_nav_btn.forEach(ele=>{
+        domFn.addEvt(ele, 'click', ()=>{
             saja_nav_btn.forEach(x => x.classList.remove('nav-check-red'));
-            x.classList.add('nav-check-red');
-            let btxt = x.innerHTML;
+            ele.classList.add('nav-check-red');
+            let btxt = ele.innerHTML;
             // console.log('btxt :', btxt);
             let saja_length;
             // console.log(saja_nav_blength); // 6
@@ -244,9 +251,8 @@ function loadFn() {
                 // console.log(saja_hcode);
             }
             saja_items_div.innerHTML = saja_hcode;
-        };
-        // console.log("saja_items_div.innerHTML ", saja_items_div.innerHTML);
-    }
+        });
+    })
 
     for(let x of shopping_curation_btn){
         
@@ -262,5 +268,13 @@ function loadFn() {
             
         }
     }
+
+    shopping_curation_btn.forEach(ele => {
+        domFn.addEvt(ele, 'click', (e) =>{
+            console.log('shopping_curation_btn 로딩완료');
+            shopping_curation_btn.forEach((x)=> x.classList.remove('nav-check-red'));
+            ele.classList.add('nav-check-red');
+        })
+    });
 }
 
