@@ -187,7 +187,8 @@ function loadFn() {
                 saja_hcode += `
                     <div class="saja-item-box">
                         <div class = "saja-item-img">
-                            <img src="./images/saja-item/${saja_key[x]["이미지"]}" alt="사자이미지"></img>
+                            <img src="./images/saja-item/${saja_key[x]["이미지"]}" alt="사자이미지">
+                            </img>
                             <section>
                                 ${
                                     x == "깐마늘" ||
@@ -247,6 +248,12 @@ function loadFn() {
         };
         // console.log("saja_items_div.innerHTML ", saja_items_div.innerHTML);
     }
+    // const sub_change = domFn.qs('.saja-item-img img');
+    // console.log('sub_change :', sub_change);
+    // domFn.addEvt(sub_change, 'click', (ele)=>{
+    //     ele.location.href = "./sub.html";
+    // });
+
 
     for(let x of shopping_curation_btn){
         
