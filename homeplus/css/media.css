@@ -1,4 +1,6 @@
 @import "utf-8";
-@media screen and (max-width : 1200px) {
-    
+@media screen and (max-width : 1665px) {
+    .main-inner-adbox{
+        display: none;
+    }
 }
