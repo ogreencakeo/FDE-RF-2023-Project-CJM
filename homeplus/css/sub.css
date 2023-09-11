@@ -15,8 +15,12 @@ body * {
 .sub-content-nav nav ul{
     display: flex;
 }
+.sub-content-nav nav ul li:first-child{
+    padding: 0 15px 0 0;
+}
 .sub-content-nav nav ul li{
     color: rgb(153, 153, 153);
+    padding: 8px 11px;
 }
 .sub-content-box{
     width: 1200px;
