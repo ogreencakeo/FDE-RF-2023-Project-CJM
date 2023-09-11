@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body * {
     outline: 2px dashed rgb(195, 236, 141);
     /* box-sizing: border-box; */
@@ -264,6 +267,7 @@ a {
 .side-content-box ul {
     display: flex;
     position: absolute;
+    left: 0;
 }
 
 .side-content-box img {
