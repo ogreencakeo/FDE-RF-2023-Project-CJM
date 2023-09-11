@@ -1,5 +1,5 @@
 @import "utf-8";
-@media screen and (max-width : 1665px) {
+/* @media screen and (max-width : 1665px) {
     .main-inner-adbox{
         display: none;
     }
@@ -12,13 +12,7 @@
         max-width: 80%;
         transform: translateX(-62px);
     }
-}
+} */
 @media screen and (max-width : 1250px) {
-    .header-top, .header-inbox{
-        max-width: 1000px;
-        margin-left: 180px;
-    }
-    .section{
-        
-    }
+
 }

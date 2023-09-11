@@ -18,12 +18,12 @@ a {
  */
 /* 공통 inbox */
 .header-inbox {
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
 }
 
 .section-inbox {
-    max-width: 1230px;
+    width: 1230px;
 }
 
 .header {
@@ -36,7 +36,7 @@ a {
 /* 헤더부분 상단 */
 .header-wrap {
     /* width: 1200px; */
-    max-width: 1368px;
+    width: 1368px;
     padding-top: 29px;
     /* margin: 0 84px; */
     margin: 0 auto;
@@ -146,14 +146,14 @@ a {
 .section-ad-banner {
     position: relative;
     height: 450px;
-    max-width: 1230px;
+    width: 1230px;
     margin: 0 auto;
 }
 
 .section-ad-banner img {
     display: inline-block;
     position: absolute;
-    /* max-width: 1200px; */
+    /* width: 1200px; */
     aspect-ratio: 2.67/1;
     height: 450px;
     left: calc(50% - (1200px / 2));
@@ -209,12 +209,12 @@ a {
 /* 메인부분 - 기획전 이동 */
 .main-wrap {
     position: relative;
-    max-width: 1230px;
+    width: 1230px;
     margin: 0 auto;
 }
 
 .move-to-exhibition {
-    max-width: 1198px;
+    width: 1198px;
     height: 146.84px;
     padding: 59px 16px 50px;
     margin: 0 auto;
@@ -224,7 +224,7 @@ a {
 
 .move-to-exhibition nav ul {
     display: flex;
-    max-width: 1198.03px;
+    width: 1198.03px;
     height: 146.859px;
     /* 간격 일정하게 */
     justify-content: space-evenly;
@@ -232,7 +232,7 @@ a {
 
 .move-to-exhibition nav ul li a {
     display: block;
-    max-width: 99.984px;
+    width: 99.984px;
     height: 129.914px;
     text-align: center;
     font-size: 15px;
@@ -241,7 +241,7 @@ a {
 
 /* 메인부분 - 기획전 이미지 */
 .move-to-exhibition nav ul li img {
-    max-width: 99.984px;
+    width: 99.984px;
     height: 99.984px;
     margin-bottom: 9.5px;
 }
@@ -253,12 +253,12 @@ a {
 
 .banner-ad-slider {
     position: relative;
-    max-width: 1230px;
+    width: 1230px;
     height: 129.984px;
 }
 
 .side-content-box {
-    max-width: 1200px;
+    width: 1200px;
     height: 129.984px;
     margin: 0 auto;
     overflow: hidden;
@@ -272,7 +272,7 @@ a {
 }
 
 .side-content-box img {
-    max-width: 1200px;
+    width: 1200px;
     height: 129.984px;
 }
 
