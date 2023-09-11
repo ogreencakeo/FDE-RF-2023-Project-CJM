@@ -76,7 +76,7 @@ a {
     margin: 0 10px;
     border: none;
     background-color: #fff;
-    background: url(./images/icons.png) no-repeat;
+    background: url(../images/icons.png) no-repeat;
 }
 
 /* 헤더부분 - GNB메뉴 자식요소 위치 설정 */
