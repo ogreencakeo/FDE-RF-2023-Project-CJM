@@ -4,11 +4,21 @@
         display: none;
     }
 }
-@media screen and (max-width : 1260px) {
+@media screen and (max-width : 1312px) {
     .main-inner-adbox{
         display: none;
     }
-    .header-top{
-        aspect-ratio: 1/4;
+    .header-top, .header-inbox{
+        max-width: 80%;
+        transform: translateX(-62px);
+    }
+}
+@media screen and (max-width : 1250px) {
+    .header-top, .header-inbox{
+        max-width: 1000px;
+        margin-left: 180px;
+    }
+    .section{
+        
     }
 }
