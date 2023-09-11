@@ -1,0 +1,59 @@
+@import "utf-8";
+body * {
+    outline: 2px dashed gray;
+}
+.sub-content-top{
+    width: 1200px;
+    margin: 0 auto;
+}
+.sub-content-nav{
+    padding: 24px 0px 20px;
+    width: 1200px;
+    height: 29.477px;
+}
+.sub-content-box{
+    width: 1200px;
+    height: 922.711px;
+}
+
+.sub-popular-item{
+    width: 1200px;
+    height: 316.477px;
+    margin-top: 100px;
+}
+/* sub메뉴 상세 설명 하단 */
+.sub-content-lower{
+    margin-top: 100px;
+    padding-top: 70px;
+    height: 12414.5px;
+}
+.sub-product-nav-wrap{
+    width: 100%;
+    height: 69.984px;
+}
+.sub-product-nav-box{
+    width: 1200px;
+}
+.sub-Product-details{
+    width: 1200px;
+    height: 12214.6px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+.Product-details-innerbox{
+    width: 840px;
+    height: 12214.6px;
+    /* margin-top: 100px; */
+}
+
+.sub-ad-img{
+    width: 840px;
+    height: 240px;
+    margin-bottom: 60px;
+}
+
+.sub-ad-img>img{
+    width: 840px;
+    height: 240px;
+    
+}
