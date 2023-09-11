@@ -81,16 +81,18 @@ function loadFn() {
         }
     }
 
+    const idName = {"두유":"du","참깨흑임자드레싱":"cham","클렌징폼":"cl","도넛튜브":"do",};
     
     // 큐레이션
     // curation_hcode 
+let alm = 0;
     for (let x of curation_items_arr) {
         for(let y in x){
             for(let i=0; i<4; i++){
                 console.log('y :', y);
                 // console.log('x[y] :', x[y]);
                 curation_hcode += `
-                    <div class = "curation-item-img">
+                    <div class = "curation-item-img" ${(y=='두유'||y=='참깨흑임자드레싱'||y=='클렌징폼'||y=='도넛튜브')&&i==0?'id='+idName[y]:''}>
                         <div class = "curation-img-wrap">
                             <img src="./images/shopping-curation/${x[y]["이미지"]}" alt="큐레이션이미지"></img>
                             <section>
@@ -143,6 +145,11 @@ function loadFn() {
                 `;
             }
         }
+
+
+        
+        console.log(alm+'나야나');
+        alm++
         
     }
     curation_box.innerHTML = curation_hcode;
@@ -282,5 +289,21 @@ function loadFn() {
             ele.classList.add('nav-check-red');
         })
     });
+
+
+    saja_nav_btn[0].click();
+
+
+    const btnShop = domFn.qsa('.nav-btngo2');
+    
+    const targetId = {"간식타임":"du","아삭아삭":"cham","맑은피부":"cl","캠핑가자":"do",};
+
+    btnShop.forEach(ele=>{
+        domFn.addEvt(ele,'click',()=>{
+            console.log(ele.innerText);
+            location.href = 'index.html#'+targetId[ele.innerText];
+
+        })
+    })
 }
 
