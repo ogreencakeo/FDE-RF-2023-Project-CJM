@@ -6,10 +6,14 @@ body * {
     width: 1200px;
     margin: 0 auto;
 }
+/* 서브 상단 네비 */
 .sub-content-nav{
     padding: 24px 0px 20px;
     width: 1200px;
     height: 29.477px;
+}
+.sub-content-nav nav ul{
+    display: flex;
 }
 .sub-content-box{
     width: 1200px;
