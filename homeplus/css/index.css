@@ -2,7 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 body * {
-    outline: 2px dashed rgb(195, 236, 141);
+    /* outline: 2px dashed rgb(195, 236, 141); */
     /* box-sizing: border-box; */
 }
 

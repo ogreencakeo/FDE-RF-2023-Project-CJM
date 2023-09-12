@@ -1,7 +1,4 @@
 @import "utf-8";
-body * {
-    outline: 2px dashed gray;
-}
 .sub-content-top{
     width: 1200px;
     margin: 0 auto;
@@ -52,14 +49,33 @@ body * {
     display: flex;
     justify-content: space-around;
 }
+.detail-see-more-img{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
 .product-see-more-wrap button{
     width: 24px;
     height: 24px;
     position: absolute;
     top: calc(50% - 24px/2);
+    display: inline-block;
 }
-.product-see-more-wrap>img{
+.see-more-left{
+    left: 0;
+}
+.see-more-right{
+    right : 0;
+}
+.detail-see-more-img>img{
+    /* gap: 50px; */
 
+}
+.product-review{
+    height: 94.477px;
+    padding-top: 30px;
+    margin-top: 30px;
+    1px solid rgb(238, 238, 238);
 }
 
 .see-more-left
