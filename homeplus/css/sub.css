@@ -45,13 +45,21 @@ body * {
     border-radius: 6px;
 }
 .product-see-more-wrap{
+    position: relative;
     width: 560px;
     height: 97.333px;
     margin-top: 29px;
+    display: flex;
+    justify-content: space-around;
 }
 .product-see-more-wrap button{
     width: 24px;
     height: 24px;
+    position: absolute;
+    top: calc(50% - 24px/2);
+}
+.product-see-more-wrap>img{
+
 }
 
 .see-more-left
