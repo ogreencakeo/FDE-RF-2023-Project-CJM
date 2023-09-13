@@ -247,7 +247,14 @@ body * {
     color: rgb(51, 51, 51);
 }
 .sub-product-discount-price>button{
-
+    width: 17.5px;
+    height: 17.7px;
+    background: url(../images/spritesheet.png);
+    background-position: -734px -5.2px;
+    border: 0px;
+}
+.sub-product-discount-price>button:hover{
+    
 }
 .get-couppon>button{
     width: 145.5px;
