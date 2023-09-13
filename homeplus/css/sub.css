@@ -220,7 +220,7 @@ body * {
     display: flex;
 }
 .sub-product-price>span{
-    display: block;
+    display: inline-block;
     font-size: 12px;
     color: rgb(153, 153, 153);
 }
@@ -252,7 +252,7 @@ body * {
     font-size: 12px;
     color: rgb(153, 153, 153);
 }
-.sub-product-discount-price>button{
+.sub-product-discount-price>button:first-child{
     width: 17.5px;
     height: 17.7px;
     background: url(../images/spritesheet.png);
@@ -282,15 +282,23 @@ body * {
     background-color: black;
     border: 2px solid #000;
 }
-/* .discount-price-btn-hover, .discount-price-btn-hover::before :hover{
+.sub-product-discount-price>button:first-child {
     opacity: 1;
-}    */
-.get-couppon>button{
+}   
+.get-couppon{
     width: 145.5px;
     height: 42px;
     background: url(../images/spritesheet.png);
+    position: relative;
     background-position: -422.5px -3.5px;
     border: 0px;
+}
+.get-couppon::after{
+    content: '쿠폰받기';
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
 }
 .see-more-left
 /* sub메뉴 하단 - 상품 상세 설명 */
