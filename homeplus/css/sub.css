@@ -252,7 +252,7 @@ body * {
     font-size: 12px;
     color: rgb(153, 153, 153);
 }
-.sub-product-discount-price>button:first-child{
+.sub-product-discount-price>button:first-of-type{
     width: 17.5px;
     height: 17.7px;
     background: url(../images/spritesheet.png);
@@ -282,7 +282,7 @@ body * {
     background-color: black;
     border: 2px solid #000;
 }
-.sub-product-discount-price>button:first-child {
+.sub-product-discount-price>button:first-of-type:hover .discount-price-btn-hover {
     opacity: 1;
 }   
 .get-couppon{
@@ -292,6 +292,7 @@ body * {
     position: relative;
     background-position: -422.5px -3.5px;
     border: 0px;
+    float: right;
 }
 .get-couppon::after{
     content: '쿠폰받기';
