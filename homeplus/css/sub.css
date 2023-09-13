@@ -229,6 +229,7 @@ body * {
 }
 .sub-product-discount-price{
     margin-top: 15px;
+    position: relative;
 }
 .sub-product-discount-price>span{
     /* display: block; */
@@ -246,6 +247,11 @@ body * {
     font-weight: 600;
     color: rgb(51, 51, 51);
 }
+.sub-product-discount-price>span:nth-child(3){
+    margin-left: 10px;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+}
 .sub-product-discount-price>button{
     width: 17.5px;
     height: 17.7px;
@@ -253,9 +259,32 @@ body * {
     background-position: -734px -5.2px;
     border: 0px;
 }
-.sub-product-discount-price>button:hover{
-    
+.discount-price-btn-hover{
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    font-size: 11px;
+    color: rgb(51, 51, 51);
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 15px;
 }
+.discount-price-btn-hover::before{
+    opacity: 0;
+    position: absolute;
+    top: -10px;
+    left: 70%;
+    content: '';
+    width: 10px;
+    height: 7px;
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    background-color: black;
+    border: 2px solid #000;
+}
+/* .discount-price-btn-hover, .discount-price-btn-hover::before :hover{
+    opacity: 1;
+}    */
 .get-couppon>button{
     width: 145.5px;
     height: 42px;
