@@ -301,6 +301,46 @@ body * {
     left: 40%;
     transform: translate(-50%, -50%);
 }
+/* 카드혜택 */
+.sub-product-benefits,
+.sub-product-purchase,
+.sub-shipping-information{
+    padding: 21px 0px 19px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+.sub-product-benefits{
+    margin-top: 4.5%;
+}
+
+.sub-product-benefits>span:nth-child(2), 
+.sub-product-benefits>span:nth-child(4),
+.sub-product-purchase>span:nth-child(2),
+.sub-shipping-information>span:nth-child(2){
+    /* padding-right: 25px; */
+    font-size: 15px;
+    color: rgb(102, 102, 102);
+    display: inline-block;
+}
+.sub-shipping-information>span:nth-child(2){
+    float: right;
+}
+.sub-product-benefits>span:nth-child(3), .sub-product-benefits>span:nth-child(5){
+    background: url(../images/spritesheet.png);
+    margin-right: 4%;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-position: -185px -5px;
+}
+.sub-product-benefits>span:first-child, 
+.sub-product-purchase>span:first-child, 
+.sub-shipping-information>span:first-child{
+    width: 150px;
+    font-size: 15px;
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    display: inline-block;
+}
 .see-more-left
 /* sub메뉴 하단 - 상품 상세 설명 */
 .sub-content-lower{
