@@ -807,7 +807,7 @@ a {
 /* footer부분 */
 .footer {
     width: 100%;
-    height: 370px;
+    height: 374px;
 }
 
 .footer-wrap {
@@ -1136,8 +1136,14 @@ oter-r-content1>span:last-child {
 .footer-logo-wrap{
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 .footer-logo-wrap ul{
     margin-top: 2%;
     display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    column-gap: 12%;
+    
 }
