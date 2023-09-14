@@ -1130,3 +1130,14 @@ oter-r-content1>span:last-child {
     font-size: 12px;
     color: rgb(153, 153, 153);
 }
+.footer-logo{
+    width: 100%;
+}
+.footer-logo-wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer-logo-wrap ul{
+    margin-top: 2%;
+    display: flex;
+}
