@@ -1143,7 +1143,9 @@ oter-r-content1>span:last-child {
 .footer-logo-wrap ul{
     margin-top: 2%;
     display: flex;
+
 }
 .footer-logo-wrap ul>li{
     padding-right: 5%;
+    
 }
