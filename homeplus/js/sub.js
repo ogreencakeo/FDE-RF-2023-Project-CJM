@@ -36,3 +36,9 @@ function loadFn(){
         `;
     }
 }
+
+const precautions_content = [
+    [product-detail-icon1,],
+    [product-detail-icon1,],
+    [product-detail-icon1,],
+];
