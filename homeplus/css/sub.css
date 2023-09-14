@@ -321,9 +321,7 @@ body * {
     color: rgb(102, 102, 102);
     display: inline-block;
 }
-.sub-shipping-information>span:nth-child(2){
-    float: right;
-}
+
 .sub-product-benefits>span:nth-child(3), .sub-product-benefits>span:nth-child(5){
     background: url(../images/spritesheet.png);
     margin-right: 4%;
@@ -340,6 +338,13 @@ body * {
     color: rgb(51, 51, 51);
     font-weight: 600;
     display: inline-block;
+}
+.sub-shipping-information>span>i{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(0, 145, 255);
+    text-decoration: underline;
+    font-style: normal;
 }
 .see-more-left
 /* sub메뉴 하단 - 상품 상세 설명 */
