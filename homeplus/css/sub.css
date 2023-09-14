@@ -301,7 +301,7 @@ body * {
     left: 40%;
     transform: translate(-50%, -50%);
 }
-/* 카드혜택 */
+/* 카드혜택, 적립혜택, 배송정보 */
 .sub-product-benefits,
 .sub-product-purchase,
 .sub-shipping-information{
@@ -345,6 +345,51 @@ body * {
     color: rgb(0, 145, 255);
     text-decoration: underline;
     font-style: normal;
+}
+/* 구매버튼 */
+.sub-product-purchase-btn{
+    margin-top: 38px;
+    padding: 17px 20px 15px;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(249, 250, 251);
+    border-radius: 3px;
+}
+.sub-product-purchase-btn>span:first-child{
+    font-size: 15px;
+    color: rgb(102, 102, 102);
+}
+.purchase-btn{
+    margin-top: 16px;
+    width: 123px;
+    height: 40px;
+    
+}
+.purchase-btn > *{
+    border: 1px solid rgb(224, 224, 224);
+    background: rgb(255, 255, 255);
+}
+.purchase-btn >button{
+    width: 27%;
+    height: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+.purchase-btn-l{
+    float: left;
+}
+.purchase-btn-r{
+    float: right;
+}
+.purchase-quantity{
+    display: inline-block;
+    height: 100%;
+    width: 46%;
+    box-sizing: border-box;
+}
+.sub-product-explanation>span:last-of-type{
+    margin-top: 9px;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
 }
 .see-more-left
 /* sub메뉴 하단 - 상품 상세 설명 */
