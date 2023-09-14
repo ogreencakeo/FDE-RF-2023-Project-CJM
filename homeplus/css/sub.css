@@ -451,18 +451,26 @@ body * {
     left: 57%;
 }
 /* sub메뉴 하단 - 상품 상세 설명 */
+/* 서브 상품 nav박스 */
+.sub-product-nav-wrap{
+    width: 100%;
+    background: rgb(249, 250, 251);
+    height: 70px;
+    margin-bottom: 100px;
+}
+.sub-product-nav-box{
+    width: 1200px;
+    margin: 0 auto;
+}
+.sub-product-nav-box>ul{
+    display: flex;
+}
 .sub-content-lower{
     margin-top: 100px;
     padding-top: 70px;
     height: 12414.5px;
 }
-.sub-product-nav-wrap{
-    width: 100%;
-    height: 69.984px;
-}
-.sub-product-nav-box{
-    width: 1200px;
-}
+/* 상품상세정보 */
 .sub-Product-details{
     width: 1200px;
     height: 12214.6px;
