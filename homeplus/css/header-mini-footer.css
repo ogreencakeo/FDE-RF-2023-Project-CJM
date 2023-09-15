@@ -158,7 +158,7 @@
 /* footer부분 */
 .footer {
     width: 100%;
-    height: 374px;
+    /* height: 374px; */
 }
 
 .footer-wrap {
@@ -219,11 +219,10 @@
 /* footer - 하단 content 소개 */
 .footer-content {
     width: 1200px;
-    /* left: calc(50% - ((872px + 328px) / 2)); */
-    /* padding-right:328px; */
     display: flex;
     margin: 0 auto;
     justify-content: start;
+    margin-bottom: 30px;
 }
 
 .footer-content-left {
@@ -483,6 +482,8 @@ oter-r-content1>span:last-child {
 }
 .footer-logo{
     width: 100%;
+    background-color: #f9fafb;
+    height: 100%;
 }
 .footer-logo-wrap{
     width: 1200px;
@@ -490,7 +491,7 @@ oter-r-content1>span:last-child {
     position: relative;
 }
 .footer-logo-wrap ul{
-    margin-top: 2%;
+    margin-top: 2.5%;
     display: flex;
     position: absolute;
     top: 50%;
@@ -500,4 +501,5 @@ oter-r-content1>span:last-child {
 }
 .footer-logo-wrap ul li{
     cursor: pointer;
+    padding: 10px 0;
 }
