@@ -13,6 +13,8 @@ body * {
     height: 29.477px;
 }
 .sub-content-nav nav ul{
+
+    
     display: flex;
 }
 .sub-content-nav nav ul li:first-child{
