@@ -642,3 +642,11 @@ body * {
     position: sticky;
     top: 10%;
 }
+
+.pay_aside_info>span{
+    font-size: 15px;
+    display: inline-block;
+    color: rgb(102, 102, 102);
+    margin-bottom: 2%;
+    margin-bottom: 2%;
+}
