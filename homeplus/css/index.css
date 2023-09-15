@@ -1151,6 +1151,8 @@ oter-r-content1>span:last-child {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    column-gap: 12%;
-    
+    column-gap: 12%; 
+}
+.footer-logo-wrap ul li{
+    cursor: pointer;
 }

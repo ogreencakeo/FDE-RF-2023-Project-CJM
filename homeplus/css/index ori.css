@@ -1147,3 +1147,6 @@ oter-r-content1>span:last-child {
     column-gap: 12%;
     
 }
+.footer-logo-wrap ul li{
+    cursor: pointer;
+}
