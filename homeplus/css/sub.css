@@ -437,6 +437,8 @@ body * {
     border: 1px solid rgb(221, 221, 221);
     background-color: #fff;
     box-sizing: border-box;
+    background: url(../images/spritesheet.png);
+    background-position: -1258px -6px;
 }
 /* 바로구매 버튼 */
 .buy-now-button{

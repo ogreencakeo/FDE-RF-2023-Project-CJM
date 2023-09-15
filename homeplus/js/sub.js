@@ -7,10 +7,24 @@ const domFn = {
 }
 domFn.addEvt(window, 'load', loadFn);
 
+// 좋아요 버튼
+const like_btn = domFn.qs('.like-btn');
+
+// 상품고시정보
 const notice_info = domFn.qs('.notice-information table');
+// 상품주의사항
 const precautions_box = domFn.qs('.product-precautions');
 
 function loadFn(){
+
+    // 좋아요 버튼
+    domFn.addEvt(like_btn, 'click', showLike);
+
+    function showLike(){
+        this.style.background = 'url(./images/spritesheet.png)';
+        // this.style.background-position = '-248px 0';
+    }
+
     // 상품고시정보
     for(let x of notice_value){
         console.log('notice_value x>>', x);
