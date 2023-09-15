@@ -25,7 +25,8 @@ let cost_to_pay = domFn.qs('.cost-to-pay');
 let pay_num = 8900;
 
 // 서브 nav박스 ( 상품상세, 상품리뷰, 배송/교환/반품 )
-const sub_nav_color = domFn.qsa('sub-product-nav-box li');
+const sub_nav_color = domFn.qsa('sub-product-nav-box>ul>li>button');
+console.log(sub_nav_color);
 
 // 상품고시정보
 const notice_info = domFn.qs('.notice-information table');
@@ -71,6 +72,10 @@ function loadFn(){
         cost_to_pay.innerText = `${total_num}`;
     }
 
+    // sub_nav_color
+    sub_nav_color.forEach(ele =>{
+        console.log('sub_nav_color ele>', ele);
+    });
 
     // 상품고시정보
     for(let x of notice_value){
