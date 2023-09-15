@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 body * {
-    outline: 2px dashed rgb(195, 236, 141);
+    /* outline: 2px dashed rgb(195, 236, 141); */
 }
 /* 서브 상단 네비 */
 .sub-content-nav{
