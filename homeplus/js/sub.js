@@ -15,8 +15,8 @@ const like_btn = domFn.qs('.like-btn>span');
 
 // 상품 수량 버튼 (-, +)
 const purchase_btn = domFn.qsa('.purchase-btn>button');
-// 상품 수량
-const purchase_quantity = domFn.qs('.purchase-quantity');
+// // 상품 수량
+// const purchase_quantity = domFn.qs('.purchase-quantity');
 // 상품 수량 숫자 초기값
 let purchase_num = 1;
 
@@ -47,6 +47,10 @@ function loadFn(){
 
     // 상품수량 버튼
     function showPurchaseNum(){
+        // 상품 수량
+        let purchase_quantity = domFn.qs('.purchase-quantity');
+        let purchase_quantity2 = this.parentElement.querySelector('.purchase-quantity');
+
         let purchase_btn_r = this.classList.contains('purchase-btn-r');
         // console.log('purchase_btn :', ele);
         // console.log('purchase_btn_r :', purchase_btn_r);
@@ -69,6 +73,7 @@ function loadFn(){
             }
         }
         purchase_quantity.innerText = `${purchase_num}`;
+        // purchase_quantity2.innerText = `${purchase_num}`;
         cost_to_pay.innerText = `${total_num}`;
     }
 
