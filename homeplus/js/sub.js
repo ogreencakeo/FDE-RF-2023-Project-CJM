@@ -23,6 +23,14 @@ const notice_value = [
     ['A/S 책임자 및 소비자상담 관련 전화번호	','02-3459-8000'], 
 ];
 
+
+const precautions_content = [
+    [product-detail-icon1, '원하는 시간 당일배송', '필요한 상품을 장바구니에 담고 오후 2시까지 주문하면 오늘 도착! 전국에 있는 대형마트에서 깐깐하게 체크하고 안심하고 먹을 수 있는 상품을 보내드립니다.'],
+    [product-detail-icon2, '특수차량 신선배송', '냉장/냉동 분리된 특수차량을 통한 배송으로 근처 마트에서 집 앞까지 신선함 그대로 받아보실 수 있습니다.'],
+    [product-detail-icon3, '환경을 생각하는 포장', '배송 시 스티로폼 사용 및 박스포장을 최소화하고, 물 아이스팩 등을 사용하며 지속적으로 환경을 생각합니다.'],
+    [product-detail-icon4, '대한민국최초 신선A/S센터', '1%라도 신선하지 않으면 100% 교환/환불해 드립니다. 우리가족이 먹는다는 생각으로 신중하고 깐깐하게 골라 신선함 그대로 집 앞까지 배송해 드립니다.'],
+];
+
 function loadFn(){
     for(let x of notice_value){
         console.log('notice_value x>>', x);
@@ -36,9 +44,3 @@ function loadFn(){
         `;
     }
 }
-
-const precautions_content = [
-    [product-detail-icon1,],
-    [product-detail-icon1,],
-    [product-detail-icon1,],
-];
