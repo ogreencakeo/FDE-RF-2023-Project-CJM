@@ -417,11 +417,13 @@ body * {
     width: 100%;
     height: 70px;
     position: relative;
+    overflow: hidden;
 }
 .expected-integrated-button>button{
     border-radius: 3px;
     height: 70px;
     position: absolute;
+    
 }
 .expected-integrated-button>button:nth-child(2),
 .expected-integrated-button>button:last-child{
@@ -439,6 +441,8 @@ body * {
     box-sizing: border-box;
     background: url(../images/spritesheet.png);
     background-position: -1258px -6px;
+    
+    transform: scale(2);
 }
 /* 바로구매 버튼 */
 .buy-now-button{
