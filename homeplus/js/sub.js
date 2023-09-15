@@ -18,12 +18,9 @@ const precautions_box = domFn.qs('.product-precautions');
 function loadFn(){
 
     // 좋아요 버튼
-    domFn.addEvt(like_btn, 'click', showLike);
-
-    function showLike(){
-        this.style.background = 'url(./images/spritesheet.png)';
-        // this.style.background-position = '-248px 0';
-    }
+    domFn.addEvt(like_btn, 'click', ()=>{
+        this.classList.toggle('on');
+    });
 
     // 상품고시정보
     for(let x of notice_value){
