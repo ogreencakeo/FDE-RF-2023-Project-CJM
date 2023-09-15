@@ -499,10 +499,12 @@ body * {
     background: rgb(249, 250, 251);
     border: 0px;
 }
-.sub-product-nav-box>ul>li>button:hover{
+
+.sub-product-nav-box>ul>li>button.color_red{
     color: rgb(223, 0, 17);
     border-bottom: 3px solid rgb(223, 0, 17);
     font-weight: 600;
+
 }
 
 .sub-content-lower{

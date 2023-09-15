@@ -6,6 +6,7 @@ const domFn = {
     addEvt : (ele, evt, fn) => ele.addEventListener(evt, fn)
 }
 domFn.addEvt(window, 'load', loadFn);
+domFn.addEvt(window, 'onclick', );
 
 
 
@@ -25,8 +26,7 @@ let cost_to_pay = domFn.qs('.cost-to-pay');
 let pay_num = 8900;
 
 // 서브 nav박스 ( 상품상세, 상품리뷰, 배송/교환/반품 )
-const sub_nav_color = domFn.qsa('sub-product-nav-box>ul>li>button');
-console.log(sub_nav_color);
+const sub_nav_color = domFn.qsa('.sub-product-nav-box button');
 
 // 상품고시정보
 const notice_info = domFn.qs('.notice-information table');
@@ -72,10 +72,20 @@ function loadFn(){
         cost_to_pay.innerText = `${total_num}`;
     }
 
-    // sub_nav_color
+    // 서브 nav버튼 클릭시 버튼 색상 빨간색으로 변경
     sub_nav_color.forEach(ele =>{
         console.log('sub_nav_color ele>', ele);
+        domFn.addEvt(ele, 'click', ()=>{
+            sub_nav_color.forEach(ele=> ele.classList.remove('color_red'));
+            ele.classList.add('color_red');
+        });
     });
+
+    // 클릭시 버튼 색상 빨간색으로 변경
+    // function colorRed(){
+    //     sub_nav_color.forEach(ele=> ele.classList.remove('color_red'));
+    //     ele.classList.add('color_red');
+    // }
 
     // 상품고시정보
     for(let x of notice_value){
