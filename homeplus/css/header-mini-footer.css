@@ -18,15 +18,15 @@
     /* border-bottom: 3px solid #f00; */
     /* width: 1368px; */
     height: 148.945px;
+    border-bottom: 2px solid #df0011;
 }
 
 /* 헤더부분 상단 */
 .header-wrap {
-    /* width: 1200px; */
     max-width: 1368px;
     padding-top: 29px;
-    /* margin: 0 84px; */
     margin: 0 auto;
+    
 }
 
 .header-top {
@@ -92,10 +92,12 @@
 }
 
 /* 헤더부분 - nav 메뉴 */
+ 
 .header-menu ul {
     display: flex;
     height: 40.984px;
     justify-content: space-evenly;
+    
 }
 
 /* 헤더 메뉴부분 */
@@ -103,6 +105,7 @@
     font-size: 15px;
     padding: 0 5px;
     line-height: 43px;
+    flex-basis: calc(100%/9);
 }
 
 .header-menu nav li {
