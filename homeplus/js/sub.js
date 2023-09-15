@@ -7,8 +7,7 @@ const domFn = {
 }
 domFn.addEvt(window, 'load', loadFn);
 
-// 좋아요 버튼
-const like_btn = domFn.qs('.like-btn');
+
 
 // 상품고시정보
 const notice_info = domFn.qs('.notice-information table');
@@ -16,10 +15,12 @@ const notice_info = domFn.qs('.notice-information table');
 const precautions_box = domFn.qs('.product-precautions');
 
 function loadFn(){
+    // 좋아요 버튼
+    const like_btn = domFn.qs('.like-btn>span');
 
     // 좋아요 버튼
     domFn.addEvt(like_btn, 'click', ()=>{
-        this.classList.toggle('on');
+        like_btn.classList.toggle('on');
     });
 
     // 상품고시정보
