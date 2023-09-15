@@ -112,10 +112,17 @@
 }
 
 /* 헤더부분 - 카테고리 버튼 */
-.header-menu nav li button {
-    width: 123.992px;
+.catagory-icon {
+    width: 153.992px;
     height: 40.984px;
     padding: 2px 0 0 25px;
+    background: url(../images/spritesheet.png);
+    background-position: -1520px 0;
+    border: 0px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: left;
 }
 
 /* 미니마이페이지 부분 */
