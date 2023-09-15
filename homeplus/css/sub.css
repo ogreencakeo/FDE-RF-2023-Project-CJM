@@ -362,17 +362,18 @@ body * {
     margin-top: 16px;
     width: 123px;
     height: 40px;
-    
 }
 .purchase-btn > *{
     border: 1px solid rgb(224, 224, 224);
     background: rgb(255, 255, 255);
 }
-.purchase-btn >button{
+.purchase-btn>button{
     width: 27%;
     height: 100%;
     cursor: pointer;
     font-weight: bold;
+    border-left-color: rgb(221, 221, 221);
+    font-size: 20px;
 }
 .purchase-btn-l{
     float: left;
@@ -385,6 +386,9 @@ body * {
     height: 100%;
     width: 46%;
     box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
 }
 .sub-product-explanation>span:last-of-type{
     margin-top: 9px;
