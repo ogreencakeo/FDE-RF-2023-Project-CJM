@@ -32,7 +32,7 @@ const sub_nav_color = domFn.qsa('.sub-product-nav-box button');
 // 상세정보 버튼
 const detail_btn = domFn.qs('.sub-detail-btn');
 // 상세정보 접기
-const detail_fold = domFn.qs('.sub-detail-btn>div');
+const detail_fold = domFn.qs('.expand-on');
 // 상품고시정보
 const notice_info = domFn.qs('.notice-information table');
 // 상품주의사항
@@ -93,7 +93,7 @@ function loadFn(){
 
     // 상세정보 버튼
     domFn.addEvt(detail_btn, 'click', ()=>{
-        detail_fold.classList.toggle('fold-on');
+        detail_fold.classList.toggle('expand-on');
     });
 
     // 상품고시정보
