@@ -450,16 +450,20 @@ body * {
     cursor: pointer;
 }
 .on{
-    background-position: -242px 12.5px !important;
+    background-position: -244px 4.5px !important;
     cursor: pointer;
 }
 .like-btn>span{
     background: url(../images/spritesheet.png);
-    background-position: -1254px 12.5px;
-    transform: scale(1.3);
+    background-position: -1255.5px 3.5px;
+    transform: scale(1.2);
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /* 바로구매 버튼 */
@@ -552,7 +556,17 @@ body * {
     width: 799.992px;
     margin: 0 auto;
     display: block;
-    
+}
+
+.detail-fold{
+    height: 10%;
+    width: 100%;
+    /* overflow: hidden; *//
+}
+
+.fold-on{
+    height: 1000px;
+    width: 100%;
 }
 
 .sub-detail-btn{

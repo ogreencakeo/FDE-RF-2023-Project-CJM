@@ -11,7 +11,8 @@ domFn.addEvt(window, 'onclick', );
 
 
 // 좋아요 버튼
-const like_btn = domFn.qs('.like-btn>span');
+const like_btn = domFn.qs('.like-btn');
+const like_btn_target = domFn.qs('.like-btn>span');
 
 // 상품 수량 버튼 (-, +)
 const purchase_btn = domFn.qsa('.purchase-btn>button');
@@ -28,6 +29,10 @@ let pay_num = 8900;
 // 서브 nav박스 ( 상품상세, 상품리뷰, 배송/교환/반품 )
 const sub_nav_color = domFn.qsa('.sub-product-nav-box button');
 
+// 상세정보 버튼
+const detail_btn = domFn.qs('.sub-detail-btn');
+// 상세정보 접기
+const detail_fold = domFn.qs('.sub-detail-btn>div');
 // 상품고시정보
 const notice_info = domFn.qs('.notice-information table');
 // 상품주의사항
@@ -37,7 +42,7 @@ function loadFn(){
 
     // 좋아요 버튼
     domFn.addEvt(like_btn, 'click', ()=>{
-        like_btn.classList.toggle('on');
+        like_btn_target.classList.toggle('on');
     });
 
     // 상품수량및 지불비용
@@ -86,11 +91,10 @@ function loadFn(){
         });
     });
 
-    // 클릭시 버튼 색상 빨간색으로 변경
-    // function colorRed(){
-    //     sub_nav_color.forEach(ele=> ele.classList.remove('color_red'));
-    //     ele.classList.add('color_red');
-    // }
+    // 상세정보 버튼
+    domFn.addEvt(detail_btn, 'click', ()=>{
+        detail_fold.classList.toggle('fold-on');
+    });
 
     // 상품고시정보
     for(let x of notice_value){
