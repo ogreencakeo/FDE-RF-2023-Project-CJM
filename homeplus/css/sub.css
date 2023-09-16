@@ -174,18 +174,20 @@ body * {
     justify-content: end;
     column-gap: 3.5%;
 }
+
 .sns-icons>a>button{
     background: url(../images/spritesheet.png);
     width: 24px;
     height: 24px;
     border: 0px;
     display: block;
+    cursor: pointer;
 }
 .sns-icons>a:first-child button{
     background-position: -841px -6px;
 }
 .sns-icons>a:nth-child(2) button{
-    background-position: -980px -6px;
+    background-position: -983px -6px;
 }
 .sns-icons>a:last-child button{
     background-position: -949px -5px;
@@ -513,6 +515,7 @@ body * {
     font-size: 18px;
     background: rgb(249, 250, 251);
     border: 0px;
+    cursor: pointer;
 }
 
 .sub-product-nav-box>ul>li>button.color_red{
@@ -558,7 +561,7 @@ body * {
     display: block;
 }
 
-.expand-on{
+.p-expand-on{
     height: 1100px;
     width: 100%;
     overflow: hidden;
@@ -575,13 +578,14 @@ body * {
     margin-bottom: 100px;
     margin-top: 20px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 /* 고시정보 */
 .notice-information{
     margin-top: 98px;
     width: 840px;
-    height: 866.125px;
+    /* height: 866.125px; */
 }
 .notice-information>p{
     font-size: 24px;
@@ -608,6 +612,10 @@ body * {
     background: rgb(255, 255, 255);
     cursor: pointer;
     border-radius: 3px;
+}
+.n-expand-on{
+    height: 300px;
+    overflow: hidden;
 }
 
 /* 상품 주의사항 */

@@ -39,6 +39,7 @@
 .homeplus-logo img {
     width: 220px;
     height: 50px;
+    cursor: pointer;
 }
 
 /* 헤더부분- 검색창 */
@@ -136,6 +137,7 @@
     background-color: rgb(244 246 249);
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
+    z-index: 10;
 }
 .mini-mypage-wrap>button{
     margin-top: 30px;

@@ -161,17 +161,18 @@ a {
     position: absolute;
     width: 43px;
     height: 74px;
-    background: url(./images/slide_button.png) no-repeat;
+    background: url(./images/slide_button.png);
     top: calc(50% - 74px / 2);
     transform: scale(0.6);
+    cursor: pointer;
 }
 
-.side-content-box button:first-of-type {
+.leftbtn {
     background-position: 0 0;
     left: 0;
 }
 
-.side-content-box button:last-of-type {
+.rightbtn {
     background-position: -42.9px 0;
     right: 0;
 }
@@ -233,6 +234,7 @@ a {
     background-color: #fff;
     border: 0px;
     /* box-sizing: border-box; */
+    cursor: pointer;
 }
 
 /* .saja-event-nav-wrap nav ul li button:hover{
@@ -275,6 +277,7 @@ a {
     width: 374px;
     height: 374px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .saja-item-img>img {
@@ -608,6 +611,7 @@ a {
     width: 270px;
     height: 270px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .curation-img-wrap>section>span>img {
@@ -615,6 +619,7 @@ a {
     width: 56px;
     height: 56px;
     top: 0;
+    
 }
 
 .curation-img-wrap>section>span:first-child img {

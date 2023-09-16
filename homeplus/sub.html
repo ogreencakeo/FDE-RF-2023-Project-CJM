@@ -22,7 +22,7 @@
         <div class="header-wrap">
             <div class="header-top header-inbox">
                 <!-- 로고 -->
-                <div class="homeplus-logo" >
+                <div class="homeplus-logo"  onClick="location.href='index.html'">
                     <img src="./images/logo.png" alt="" />
                 </div>
                 <!-- 검색창 -->
@@ -134,8 +134,8 @@
                     <div class="sub-product-explanation">
                         <!-- sns -->
                         <div class="sns-icons">
-                            <a href="https://www.facebook.com/?locale=ko_KR"><button></button></a>
-                            <a href="https://twitter.com/?lang=ko"><button></button></a>
+                            <a href="https://www.facebook.com/?locale=ko_KR" target="_blank" title="페이스북 바로가기"><button></button></a>
+                            <a href="https://twitter.com/?lang=ko" target="_blank" title="트위터 바로가기"><button></button></a>
                             <a href="#"><button></button></a>
                         </div>
                         <!-- 타이틀 -->
@@ -244,7 +244,7 @@
                         </div>
                         <!-- 상세정보 이미지 -->
                         <div class="product-detail-img">
-                            <div class="expand-on">
+                            <div class="p-expand-on">
                                 <img src="./images/product-detail/product-detail1.jpg" alt="">
                             </div>
                             <button class="sub-detail-btn">상세정보 접기</button>
@@ -253,10 +253,12 @@
                         <!-- 상품고시정보 -->
                         <div class="notice-information">
                             <p>상품고시정보</p>
-                            <table class="notice-information-table">
-                            <!-- JS처리 -->
-                            </table>
-                            <button>상품고시정보</button>
+                            <div class="n-expand-on">
+                                <table class="notice-information-table">
+                                    <!-- JS처리 -->
+                                </table>
+                            </div>
+                            <button class="notice-info-btn">상품고시정보</button>
                         </div>
                         <!-- 상품 주의사항 -->
                         <div class="product-precautions">

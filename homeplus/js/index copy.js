@@ -94,7 +94,7 @@ let alm = 0;
                 curation_hcode += `
                     <div class = "curation-item-img" ${(y=='두유'||y=='참깨흑임자드레싱'||y=='클렌징폼'||y=='도넛튜브')&&i==0?'id='+idName[y]:''}>
                         <div class = "curation-img-wrap">
-                            <img src="./images/shopping-curation/${x[y]["이미지"]}" alt="큐레이션이미지"></img>
+                            <img src="./images/shopping-curation/${x[y]["이미지"]}" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
                             <section>
                                 ${
                                     y == '더블팩샐러드' ||
