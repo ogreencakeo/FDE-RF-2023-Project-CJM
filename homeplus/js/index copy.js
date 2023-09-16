@@ -27,6 +27,7 @@ function loadFn() {
     let shopping_curation_btn = domFn.qsa('.nav-btngo2');
     let hcode = "";
     let curation_hcode = "";
+    
 
     // nav
     let stsWheel = 0;
@@ -305,5 +306,23 @@ let alm = 0;
 
         })
     })
+
+    // 최근본 상품
+    let viewed_img = domFn.qs('.recentley-viewed-img');
+    let view_item = domFn.qsa('.saja-item-img>img');
+    console.log(saja_item_arr[1]['감자']['이미지']);
+    console.log(view_item);
+
+    // 최근본 상품
+    view_item.forEach(ele =>{
+        console.log('ele',ele);
+        domFn.addEvt(ele, 'click', showViewed);
+    });
+
+    function showViewed(){
+        console.log('this',this);
+    }
+
+
 }
 
