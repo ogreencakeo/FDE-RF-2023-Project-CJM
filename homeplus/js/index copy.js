@@ -31,6 +31,7 @@ function loadFn() {
     // 카테고리 nav
     let catagory_btn = domFn.qs('.catagory-icon');
     let catagory_wrap = domFn.qs('.catagory-wrap');
+    let catagory_wrap2 = domFn.qs('.catagory-wrap2');
     let nav_code = '';
 
     domFn.addEvt(catagory_btn, "click", showCatagory);
@@ -54,7 +55,6 @@ function loadFn() {
                     </li>
                 </ul>
             `;
-            // console.log(catagory[x]);
         }
     }
     
@@ -69,14 +69,10 @@ function loadFn() {
                 </dl>
             `; 
         }
-        // catagory_wrap.innerHTML = nav_code;
         return nav_code;
     }
+    catagory_wrap2.innerHTML = nav_code;
     
-    
-    catagory_wrap.innerHTML = nav_code;
-    
-
     // nav
     let stsWheel = 0;
 
