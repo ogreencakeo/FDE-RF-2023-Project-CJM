@@ -58,13 +58,12 @@ const category = {
 
 let catagory_btn = domFn.qs('.catagory-icon');
 let catagory_wrap = domFn.qs('.catagory-wrap');
+let nav_code = '';
 
 domFn.addEvt(window, "load", loadFn);
 
-function loadFn() {
-
+// function loadFn() {
     domFn.addEvt(catagory_btn, "click", showCatagory);
-    let nav_code = '<div class="fruit_wrap">';
     // 카테고리
     function showCatagory(){
         catagory_wrap.classList.toggle('catagory-wrap');
@@ -72,42 +71,38 @@ function loadFn() {
         for(let x in category){
             nav_code += `
                     <ul>
-                        <a href="#">
-                            ${x}
-                            <div>
-                                <li>${makeCatagory(category[x])}</li>
-                            </div>
-                        </a>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    ${x}
+                                    <div>
+                                        ${makeCatagory(category[x])}
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
             `;
-            console.log('catagory[x]', category[x]);
         }
-        nav_code += '</div>';
-        catagory_wrap.innerHTML = nav_code;
-        console.log(catagory_wrap.innerHTML);
+        // nav_code += '</div>';
+        // catagory_wrap.innerHTML = nav_code;
+        console.log("catagory_wrap.innerHTML :",catagory_wrap.innerHTML);
     }
 
     function makeCatagory(obj){
         for(let x in obj){
             console.log(x);
             nav_code += `
-                ${x}
+                <dl>
+                    <dt>${x}</dt>
+                    ${obj[x].map((val) => `<dd><a href="#">${val}</a></dd>`).join("")}
+                </dl>
             `; 
         }
-        
+        // catagory_wrap.innerHTML = nav_code;
+        return nav_code;
     }
 
-    for (let x in category) {
-        console.log(x);
-        makeCode(category[x]);
-    }
 
-    function makeCode(obj) {
-        for (let x in obj) {
-            console.log("obj x>>>>>>>>>>", x);
-            // console.log("obj[x] >>>>>>>>>>", obj[x]);
-            obj[x].map(val=>console.log('val :', val));
-        }
-    }
-
-}
+    catagory_wrap.innerHTML = nav_code;
+// }

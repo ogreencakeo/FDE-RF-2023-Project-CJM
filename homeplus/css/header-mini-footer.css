@@ -530,13 +530,13 @@ oter-r-content1>span:last-child {
 }
 
 /* nav 첫번째 > fruit_wrap */
-.fruit_wrap{
+.catagory-wrap-on>ul{
     overflow: auto;
     height: 100%;
 }
-.fruit_wrap>ul{
+/* .fruit_wrap>ul{
     display: flex;
 }
 .fruit_wrap>ul>li>a{
 
-}
+} */
