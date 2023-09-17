@@ -29,49 +29,54 @@ function loadFn() {
     let curation_hcode = "";
 
     // 카테고리 nav
-    let catagory_btn = domFn.qs('.catagory-icon');
-    let catagory_wrap = domFn.qs('.catagory-wrap');
-    let catagory_wrap2 = domFn.qs('.catagory-wrap2');
-    let nav_code = '';
-
-    domFn.addEvt(catagory_btn, "click", showCatagory);
+    // let catagory_btn = domFn.qs('.catagory-icon');
+    
+    // let catagory_wrap = domFn.qs('.catagory-wrap');
+    // let nav_code = '';
+    // let catagory_btn2 = domFn.qs('.cata-wrap-nav1');
 
     // 카테고리
-    function showCatagory(){
-        catagory_wrap.classList.toggle('catagory-wrap');
-        catagory_wrap.classList.toggle('catagory-wrap-on');
-        for(let x in catagory){
-            nav_code += `
-                <ul>
-                    <li>
-                        <a href="#">
-                            <div>
-                                ${x}
-                                <div>
-                                    ${makeCatagory(catagory[x])}
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            `;
-        }
-    }
+    // for(let x in catagory){
+    //     nav_code += `
+    //         <ul>
+    //             <li>
+    //                 <a href="#">
+    //                     <div class="cata-wrap-nav1">
+    //                         ${x}
+    //                         <div class="cata-wrap-nav2">
+    //                             ${domFn.addEvt(catagory_btn2, 'mouseover', showCata(catagory[x]))}
+    //                         </div>
+    //                     </div>
+    //                 </a>
+    //             </li>
+    //         </ul>
+    //     `;
+    // }
+
+    // // domFn.addEvt(catagory_btn, 'mouseover', showCata(catagory[x]));
     
-    function makeCatagory(obj){
-        let nav_code='';
-        for(let x in obj){
-            // console.log(x);
-            nav_code += `
-                <dl>
-                    <dt>${x}</dt>
-                    ${obj[x].map((val) => `<dd><a href="#">${val}</a></dd>`).join("")}
-                </dl>
-            `; 
-        }
-        return nav_code;
-    }
-    catagory_wrap2.innerHTML = nav_code;
+    // function showCata(obj){
+    //     console.log('로딩');
+    //     for(let x in obj){
+    //         console.log(x);
+    //     }
+    // }
+    
+    // function makeCatagory(obj){
+    //     console.log('obj',obj);
+    //     let nav_code='';
+    //     for(let x in obj){
+    //         // console.log(x);
+    //         nav_code += `
+    //             <dl>
+    //                 <dt>${x}</dt>
+    //                 ${obj[x].map((val) => `<dd><a href="#">${val}</a></dd>`).join("")}
+    //             </dl>
+    //         `; 
+    //     }
+    //     return nav_code;
+    // }
+    // catagory_wrap.innerHTML = nav_code;
     
     // nav
     let stsWheel = 0;

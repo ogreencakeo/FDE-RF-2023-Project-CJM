@@ -19,41 +19,51 @@ a {
 }
 
 .section-wrap {
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 /* 섹션부분 - 광고배너 */
 .section-ad-banner {
-    position: relative;
     height: 450px;
     width: 1230px;
     margin: 0 auto;
+    position: relative;
+}
+
+.main-ad-box{
+    width: 1200px;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    position: relative;
+}
+.main-ad-box ul{
+    display: flex;
+    left: 0;
 }
 
 .section-ad-banner img {
-    display: inline-block;
-    position: absolute;
+    /* display: inline-block; */
+    /* position: absolute; */
     /* width: 1200px; */
     aspect-ratio: 2.67/1;
     height: 450px;
     left: calc(50% - (1200px / 2));
 }
 
-.section-ad-banner button {
+.main-ad-box>button {
     position: absolute;
     width: 42.9px;
     height: 73.9px;
     background: url(./images/slide_button.png) no-repeat;
+    top: calc(50% - 73.9px / 2);
 }
 
-.section-ad-banner button:first-child {
+.m-leftbtn{
     background-position: 0 0;
-    top: calc(50% - 73.9px / 2);
 }
 
-.section-ad-banner button:last-child {
+.m-rightbtn {
     background-position: -42.9px 0;
-    top: calc(50% - 73.9px / 2);
     right: 0;
 }
 

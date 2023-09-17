@@ -512,32 +512,34 @@ oter-r-content1>span:last-child {
 }
 
 /* 카테고리 nav */
-.catagory-bx{
-    float: left;
+/* .catagory-bx{
+    position: relative;
+    width: 1200px;
 }
 .catagory-wrap{
-    display: none;
-}
-
-.catagory-wrap-on{
-    transform: translateY(10px);
-    z-index: 9;
-    position: relative;
-    overflow: hidden;
+    width: 1000px;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    height: 500px;
     background-color: #fff;
-    height: 560px;
-    width: 300px;
-}
-
-/* nav 첫번째 > fruit_wrap */
-.catagory-wrap-on>ul{
-    display: inline-block;
     overflow: auto;
-    height: 100%;
 }
-/* .fruit_wrap>ul{
-    display: flex;
+.catagory-wrap>ul>{
+    
 }
-.fruit_wrap>ul>li>a{
 
+.cata-wrap-nav1{
+    width: 300px;
+    position: absolute;
+    left: 0;
+}
+.cata-wrap-nav2{
+    width: 300px;
+    position: absolute;
+    left: 50%;
+}
+.cata-wrap-nav2 dd{
+    position: absolute;
+    left: 60%;
 } */

@@ -7,11 +7,8 @@
     <title>홈플러스-메인페이지</title>
     <!-- 폰트어썸 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-
-    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="stylesheet" href="./css/main.css" />->
     <!-- JS -->
-    <!-- <script src="./js/index.js" defer></script> -->
     <script src="./js/index copy.js" defer></script>
     <script src="./js/nav-data.js" ></script>
     <!-- 데이터 -->
@@ -45,21 +42,21 @@
             <!-- 메뉴 -->
             <div class="header-menu header-inbox">
                 <div class="catagory-bx">
-                    <button class="catagory-icon">카테고리</button>
-                    <div class="catagory-wrap catagory-wrap2"></div>
+                    <nav>
+                        <ul>
+                            <li><button class="catagory-icon">카테고리</button></li>
+                            <li><a href="#">추석</a></li>
+                            <li><a href="#">신상품</a></li>
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">택배배송</a></li>
+                            <li><a href="#">단독특가</a></li>
+                            <li><a href="#">기획전</a></li>
+                            <li><a href="#">전단행사</a></li>
+                            <li><a href="#">자주구매</a></li>
+                        </ul>
+                    </nav>
+                    <div class="catagory-wrap"></div>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">추석</a></li>
-                        <li><a href="#">신상품</a></li>
-                        <li><a href="#">베스트</a></li>
-                        <li><a href="#">택배배송</a></li>
-                        <li><a href="#">단독특가</a></li>
-                        <li><a href="#">기획전</a></li>
-                        <li><a href="#">전단행사</a></li>
-                        <li><a href="#">자주구매</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
@@ -97,13 +94,18 @@
 
     <!-- section -->
     <div class="section">
-        <div class="section-wrap section-ad-banner">
-            <img src="./images/ad1.png" alt="" />
-            <!-- 슬라이드 버튼 -->
-            <div class="banner-button">
-                <button></button>
-                <button></button>
-            </div>
+        <di class="section-wrap section-ad-banner">
+            <section class="main-ad-box">
+                <ul>
+                    <li><img src="./images/ad1.png" alt="메인광고-1" /></li>
+                    <li><img src="./images/ad2.jpg" alt="메인광고-2" /></li>
+                    <li><img src="./images/ad3.jpg" alt="메인광고-3" /></li>
+                    <li><img src="./images/ad4.png" alt="메인광고-4" /></li>
+                </ul>
+                <!-- 슬라이드 버튼 -->
+                <button class="m-leftbtn"></button>
+                <button  class="m-rightbtn"></button>
+            </section>
         </div>
     </div>
 
@@ -118,9 +120,9 @@
                 <div class="banner-ad-slider">
                     <section class="side-content-box">
                         <ul>
-                            <li><img src="./images/banner-ad1.jpg" alt="" /></li>
-                            <li><img src="./images/banner-ad2.jpg" alt="" /></li>
-                            <li><img src="./images/banner-ad3.jpg" alt="" /></li>
+                            <li><img src="./images/banner-ad1.jpg" alt="광고배너-1" /></li>
+                            <li><img src="./images/banner-ad2.jpg" alt="광고배너-2" /></li>
+                            <li><img src="./images/banner-ad3.jpg" alt="광고배너-3" /></li>
                         </ul>
                         <button class="leftbtn"></button>
                         <button class="rightbtn"></button>
