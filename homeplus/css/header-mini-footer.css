@@ -57,9 +57,9 @@
 }
 
 /* 헤더부분 - GNB메뉴 */
-.customer-icon {
-    /* height: 100px; */
-}
+/* .customer-icon {
+    height: 100px;
+} */
 
 .customer-icon button {
     height: 36px;
@@ -531,6 +531,7 @@ oter-r-content1>span:last-child {
 
 /* nav 첫번째 > fruit_wrap */
 .catagory-wrap-on>ul{
+    display: inline-block;
     overflow: auto;
     height: 100%;
 }

@@ -1,13 +1,5 @@
 
-// const domFn = {
-//     qs: (x) => document.querySelector(x),
-//     qsa: (x) => document.querySelectorAll(x),
-//     qsEl: (el, x) => el.querySelector(x),
-//     qsaEl: (el, x) => el.querySelectorAll(x),
-//     addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn)
-// }
-
-const category = {
+const catagory = {
     "과일": {
         "사과/배": ["배", "사과"],
         "감귤/만감류": ["감귤", "천혜향/한라봉/기타만감류"],
@@ -56,53 +48,56 @@ const category = {
 }
 
 
-let catagory_btn = domFn.qs('.catagory-icon');
-let catagory_wrap = domFn.qs('.catagory-wrap');
-let nav_code = '';
-
-domFn.addEvt(window, "load", loadFn);
-
-// function loadFn() {
-    domFn.addEvt(catagory_btn, "click", showCatagory);
-    // 카테고리
-    function showCatagory(){
-        catagory_wrap.classList.toggle('catagory-wrap');
-        catagory_wrap.classList.toggle('catagory-wrap-on');
-        for(let x in category){
-            nav_code += `
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    ${x}
-                                    <div>
-                                        ${makeCatagory(category[x])}
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-            `;
-        }
-        // nav_code += '</div>';
-        // catagory_wrap.innerHTML = nav_code;
-        console.log("catagory_wrap.innerHTML :",catagory_wrap.innerHTML);
-    }
-
-    function makeCatagory(obj){
-        for(let x in obj){
-            console.log(x);
-            nav_code += `
-                <dl>
-                    <dt>${x}</dt>
-                    ${obj[x].map((val) => `<dd><a href="#">${val}</a></dd>`).join("")}
-                </dl>
-            `; 
-        }
-        // catagory_wrap.innerHTML = nav_code;
-        return nav_code;
-    }
+// domFn.addEvt(window, ' DOMContentLoaded', navFn);
 
 
-    catagory_wrap.innerHTML = nav_code;
+// function navFn(){
+//     let catagory_btn = domFn.qs('.catagory-icon');
+//     let catagory_wrap = domFn.qs('.catagory-wrap');
+//     let nav_code = '';
+//     domFn.addEvt(catagory_btn, "click", showCatagory);
+//     // 카테고리
+//     function showCatagory(){
+//         catagory_wrap.classList.toggle('catagory-wrap');
+//         catagory_wrap.classList.toggle('catagory-wrap-on');
+//         for(let x in catagory){
+//             nav_code += `
+//                 <ul>
+//                     <li>
+//                         <a href="#">
+//                             <div>
+//                                 ${x}
+//                                 <div>
+//                                     ${makeCatagory(catagory[x])}
+//                                 </div>
+//                             </div>
+//                         </a>
+//                     </li>
+//                 </ul>
+//             `;
+//         }
+//         // nav_code += '</div>';
+//         // catagory_wrap.innerHTML = nav_code;
+//         // console.log("catagory_wrap.innerHTML :",catagory_wrap.innerHTML);
+//     }
+    
+//     function makeCatagory(obj){
+//         let nav_code='';
+//         for(let x in obj){
+//             // console.log(x);
+//             nav_code += `
+//                 <dl>
+//                     <dt>${x}</dt>
+//                     ${obj[x].map((val) => `<dd><a href="#">${val}</a></dd>`).join("")}
+//                 </dl>
+//             `; 
+//         }
+//         // catagory_wrap.innerHTML = nav_code;
+//         return nav_code;
+//     }
+    
+    
+//     catagory_wrap.innerHTML = nav_code;
+    
 // }
+

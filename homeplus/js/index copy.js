@@ -27,6 +27,54 @@ function loadFn() {
     let shopping_curation_btn = domFn.qsa('.nav-btngo2');
     let hcode = "";
     let curation_hcode = "";
+
+    // 카테고리 nav
+    let catagory_btn = domFn.qs('.catagory-icon');
+    let catagory_wrap = domFn.qs('.catagory-wrap');
+    let nav_code = '';
+
+    domFn.addEvt(catagory_btn, "click", showCatagory);
+
+    // 카테고리
+    function showCatagory(){
+        catagory_wrap.classList.toggle('catagory-wrap');
+        catagory_wrap.classList.toggle('catagory-wrap-on');
+        for(let x in catagory){
+            nav_code += `
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div>
+                                ${x}
+                                <div>
+                                    ${makeCatagory(catagory[x])}
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            `;
+            // console.log(catagory[x]);
+        }
+    }
+    
+    function makeCatagory(obj){
+        let nav_code='';
+        for(let x in obj){
+            // console.log(x);
+            nav_code += `
+                <dl>
+                    <dt>${x}</dt>
+                    ${obj[x].map((val) => `<dd><a href="#">${val}</a></dd>`).join("")}
+                </dl>
+            `; 
+        }
+        // catagory_wrap.innerHTML = nav_code;
+        return nav_code;
+    }
+    
+    
+    catagory_wrap.innerHTML = nav_code;
     
 
     // nav
