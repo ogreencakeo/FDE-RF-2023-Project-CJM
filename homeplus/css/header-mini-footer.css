@@ -510,3 +510,33 @@ oter-r-content1>span:last-child {
     cursor: pointer;
     padding: 10px 0;
 }
+
+/* 카테고리 nav */
+.catagory-bx{
+    float: left;
+}
+.catagory-wrap{
+    display: none;
+}
+
+.catagory-wrap-on{
+    transform: translateY(10px);
+    z-index: 9;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    height: 560px;
+    width: 300px;
+}
+
+/* nav 첫번째 > fruit_wrap */
+.fruit_wrap{
+    overflow: auto;
+    height: 100%;
+}
+.fruit_wrap>ul{
+    display: flex;
+}
+.fruit_wrap>ul>li>a{
+
+}

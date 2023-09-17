@@ -1,3 +1,12 @@
+
+// const domFn = {
+//     qs: (x) => document.querySelector(x),
+//     qsa: (x) => document.querySelectorAll(x),
+//     qsEl: (el, x) => el.querySelector(x),
+//     qsaEl: (el, x) => el.querySelectorAll(x),
+//     addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn)
+// }
+
 const category = {
     "과일": {
         "사과/배": ["배", "사과"],
@@ -25,22 +34,69 @@ const category = {
     "우유/유제품": {},
     "냉장/냉동/밀키드": {},
     "두부/김치/반찬": {},
-    "커피/차": {}
+    "커피/차": {},
+    "생수/음료" :{},
+    "주류이지픽업" :{},
+    "과자/시리얼" :{},
+    "베이커리/잼" :{},
+    "라면/즉석식품/통조림" :{},
+    "정류/양념/제빵" :{},
+    "세탁/청소/욕실" :{},
+    "제지/위생/뷰티" :{},
+    "건강식품" :{},
+    "반려동물" :{},
+    "유아동/완구" :{},
+    "주방용품" :{},
+    "리빙/인테리어" :{},
+    "패션의류/잡화" :{},
+    "문구/취미용품" :{},
+    "가전/디지털" :{},
+    "자동차/레저" :{},
+    "E쿠폰/여행" :{},
 }
 
 
-const domFn = {
-    qs: (x) => document.querySelector(x),
-    qsa: (x) => document.querySelectorAll(x),
-    qsEl: (el, x) => el.querySelector(x),
-    qsaEl: (el, x) => el.querySelectorAll(x),
-    addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn)
-}
-
+let catagory_btn = domFn.qs('.catagory-icon');
+let catagory_wrap = domFn.qs('.catagory-wrap');
 
 domFn.addEvt(window, "load", loadFn);
 
 function loadFn() {
+
+    domFn.addEvt(catagory_btn, "click", showCatagory);
+    let nav_code = '<div class="fruit_wrap">';
+    // 카테고리
+    function showCatagory(){
+        catagory_wrap.classList.toggle('catagory-wrap');
+        catagory_wrap.classList.toggle('catagory-wrap-on');
+        for(let x in category){
+            nav_code += `
+                    <ul>
+                        <a href="#">
+                            ${x}
+                            <div>
+                                <li>${makeCatagory(category[x])}</li>
+                            </div>
+                        </a>
+                    </ul>
+            `;
+            console.log('catagory[x]', category[x]);
+        }
+        nav_code += '</div>';
+        catagory_wrap.innerHTML = nav_code;
+        console.log(catagory_wrap.innerHTML);
+    }
+
+    function makeCatagory(obj){
+        for(let x in obj){
+            console.log(x);
+            nav_code += `
+                ${x}
+            `; 
+        }
+        
+    }
+
     for (let x in category) {
         console.log(x);
         makeCode(category[x]);
@@ -53,4 +109,5 @@ function loadFn() {
             obj[x].map(val=>console.log('val :', val));
         }
     }
+
 }
