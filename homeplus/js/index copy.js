@@ -1,36 +1,34 @@
-
 const domFn = {
-    qs : (x) => document.querySelector(x),
-    qsa : (x) => document.querySelectorAll(x),
-    qsEl : (el, x) => el.querySelector(x),
-    qsaEl : (el, x) => el.querySelectorAll(x),
-    addEvt : (ele, evt, fn) => ele.addEventListener(evt, fn)
-}
+    qs: (x) => document.querySelector(x),
+    qsa: (x) => document.querySelectorAll(x),
+    qsEl: (el, x) => el.querySelector(x),
+    qsaEl: (el, x) => el.querySelectorAll(x),
+    addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn),
+};
 
-
-domFn.addEvt(window, 'load', loadFn);
+domFn.addEvt(window, "load", loadFn);
 
 function loadFn() {
-    console.log('로딩완료');
+    console.log("로딩완료");
     const move_to_exhibition = domFn.qs(".move-to-exhibition");
     // 사자
     let saja_items_div = domFn.qs(".saja-items-div");
     let saja_nav_btn = domFn.qsa(".nav-btngo");
-    let saja_nbtn_length = saja_nav_btn.length; // 6
     let saja_item_arr = [saja_items, saja_items2, saja_items3, saja_items4, saja_items5, saja_items6];
-    let saja_btn_next = domFn.qs(".saja-btn-next");
-    let saja_length_btn = domFn.qs(".saja-itmes-btnBx strong")
+    let saja_length_btn = domFn.qs(".saja-itmes-btnBx strong");
     const saja_nav_blength = saja_nav_btn.length;
+    
     // 큐레이션
     let curation_box = domFn.qs(".shopping-curation-box");
     const curation_items_arr = [curation_items1, curation_items2, curation_items3, curation_items4];
-    let shopping_curation_btn = domFn.qsa('.nav-btngo2');
+    let shopping_curation_btn = domFn.qsa(".nav-btngo2");
+    
     let hcode = "";
     let curation_hcode = "";
 
     // 카테고리 nav
     // let catagory_btn = domFn.qs('.catagory-icon');
-    
+
     // let catagory_wrap = domFn.qs('.catagory-wrap');
     // let nav_code = '';
     // let catagory_btn2 = domFn.qs('.cata-wrap-nav1');
@@ -54,14 +52,14 @@ function loadFn() {
     // }
 
     // // domFn.addEvt(catagory_btn, 'mouseover', showCata(catagory[x]));
-    
+
     // function showCata(obj){
     //     console.log('로딩');
     //     for(let x in obj){
     //         console.log(x);
     //     }
     // }
-    
+
     // function makeCatagory(obj){
     //     console.log('obj',obj);
     //     let nav_code='';
@@ -72,12 +70,12 @@ function loadFn() {
     //                 <dt>${x}</dt>
     //                 ${obj[x].map((val) => `<dd><a href="#">${val}</a></dd>`).join("")}
     //             </dl>
-    //         `; 
+    //         `;
     //     }
     //     return nav_code;
     // }
     // catagory_wrap.innerHTML = nav_code;
-    
+
     // nav
     let stsWheel = 0;
 
@@ -94,67 +92,73 @@ function loadFn() {
     }
     hcode += "</ul></nav>";
     move_to_exhibition.innerHTML = hcode;
-    
+
     // banner 슬라이드
-    const banner_slide = domFn.qs('.side-content-box ul');
-    const banner_btn = domFn.qsa('.side-content-box button');
+    const banner_slide = domFn.qs(".side-content-box ul");
+    const banner_btn = domFn.qsa(".side-content-box button");
     // console.log('banner_btn :', banner_btn);
 
-    banner_btn.forEach(ele => domFn.addEvt(ele, 'click', goSlide));
+    banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goSlide));
 
-    function goSlide(){
-        console.log(' banner_slide 로딩완료');
-        if(stsWheel) return;
+    function goSlide() {
+        console.log(" banner_slide 로딩완료");
+        if (stsWheel) return;
         stsWheel = 1;
-        setTimeout(()=> stsWheel = 0 ,400);
+        setTimeout(() => (stsWheel = 0), 400);
 
-        let isRight = this.classList.contains('rightbtn');
-        domFn.qsaEl(banner_slide, 'li')
-        let eachOne = domFn.qsaEl(banner_slide, 'li');
+        let isRight = this.classList.contains("rightbtn");
+        domFn.qsaEl(banner_slide, "li");
+        let eachOne = domFn.qsaEl(banner_slide, "li");
 
-        if(isRight){
-            banner_slide.style.left = '-100%';
-            banner_slide.style.transition = '.4s ease-in-out';
+        if (isRight) {
+            banner_slide.style.left = "-100%";
+            banner_slide.style.transition = ".4s ease-in-out";
             setTimeout(() => {
                 banner_slide.appendChild(eachOne[0]);
-                banner_slide.style.left = '0';
-                banner_slide.style.transition = 'none';
+                banner_slide.style.left = "0";
+                banner_slide.style.transition = "none";
             }, 400);
-        }else{
-            banner_slide.insertBefore(eachOne[eachOne.length-1], eachOne[0]);
-            banner_slide.style.left = '-100%';
-            banner_slide.style.transition = 'none';
+        } else {
+            banner_slide.insertBefore(eachOne[eachOne.length - 1], eachOne[0]);
+            banner_slide.style.left = "-100%";
+            banner_slide.style.transition = "none";
             setTimeout(() => {
-                banner_slide.style.left = '0';
-                banner_slide.style.transition = '.4s ease-in-out';
+                banner_slide.style.left = "0";
+                banner_slide.style.transition = ".4s ease-in-out";
             }, 0);
         }
     }
 
-    const idName = {"두유":"du","참깨흑임자드레싱":"cham","클렌징폼":"cl","도넛튜브":"do",};
-    
+    const idName = { 두유: "du", 참깨흑임자드레싱: "cham", 클렌징폼: "cl", 도넛튜브: "do" };
+
     // 큐레이션
-    // curation_hcode 
-let alm = 0;
+    // curation_hcode
+    let alm = 0;
     for (let x of curation_items_arr) {
-        for(let y in x){
-            for(let i=0; i<4; i++){
-                console.log('y :', y);
+        for (let y in x) {
+            for (let i = 0; i < 4; i++) {
+                console.log("y :", y);
                 // console.log('x[y] :', x[y]);
                 curation_hcode += `
-                    <div class = "curation-item-img" ${(y=='두유'||y=='참깨흑임자드레싱'||y=='클렌징폼'||y=='도넛튜브')&&i==0?'id='+idName[y]:''}>
+                    <div class = "curation-item-img" ${
+                        (y == "두유" || y == "참깨흑임자드레싱" || y == "클렌징폼" || y == "도넛튜브") && i == 0
+                            ? "id=" + idName[y]
+                            : ""
+                    }>
                         <div class = "curation-img-wrap">
-                            <img src="./images/shopping-curation/${x[y]["이미지"]}" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
+                            <img src="./images/shopping-curation/${
+                                x[y]["이미지"]
+                            }" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
                             <section>
                                 ${
-                                    y == '더블팩샐러드' ||
-                                    y == '히알루론산마스크팩' ||
-                                    y == '도넛튜브' ||
-                                    y == '해먹매쉬라운지튜브' ||
-                                    y == '보조배터리' ||
-                                    y == '콜맨레이체어' ||
-                                    y == '춘천닭갈비' ||
-                                    y == '춘천닭갈비'
+                                    y == "더블팩샐러드" ||
+                                    y == "히알루론산마스크팩" ||
+                                    y == "도넛튜브" ||
+                                    y == "해먹매쉬라운지튜브" ||
+                                    y == "보조배터리" ||
+                                    y == "콜맨레이체어" ||
+                                    y == "춘천닭갈비" ||
+                                    y == "춘천닭갈비"
                                         ? '<span style="display:none"></span>'
                                         : '<span><img src="./images/saja-icon1.png" alt=""></span>'
                                 }
@@ -196,20 +200,16 @@ let alm = 0;
             }
         }
 
-
-        
-        console.log(alm+'나야나');
-        alm++
-        
+        console.log(alm + "나야나");
+        alm++;
     }
     curation_box.innerHTML = curation_hcode;
     // 사자
-    
 
-    saja_nav_btn.forEach(ele=>{
-        domFn.addEvt(ele, 'click', ()=>{
-            saja_nav_btn.forEach(x => x.classList.remove('nav-check-red'));
-            ele.classList.add('nav-check-red');
+    saja_nav_btn.forEach((ele) => {
+        domFn.addEvt(ele, "click", () => {
+            saja_nav_btn.forEach((x) => x.classList.remove("nav-check-red"));
+            ele.classList.add("nav-check-red");
             let btxt = ele.innerHTML;
             // console.log('btxt :', btxt);
             let saja_length;
@@ -251,7 +251,9 @@ let alm = 0;
                 saja_hcode += `
                     <div class="saja-item-box">
                         <div class = "saja-item-img">
-                            <img src="./images/saja-item/${saja_key[x]["이미지"]}" alt="사자이미지" onClick="location.href='./sub.html'"></img>
+                            <img src="./images/saja-item/${
+                                saja_key[x]["이미지"]
+                            }" alt="사자이미지" onClick="location.href='./sub.html'"></img>
                             <section>
                                 ${
                                     x == "깐마늘" ||
@@ -310,68 +312,49 @@ let alm = 0;
             saja_items_div.innerHTML = saja_hcode;
         });
     });
-    const sub_change = domFn.qsa('.saja-item-img');
-    console.log('sub_change :', sub_change);
+    const sub_change = domFn.qsa(".saja-item-img");
+    console.log("sub_change :", sub_change);
     // domFn.addEvt(sub_change, 'click', (ele)=>{
     //     ele.location.href = "./sub.html";
     // });
 
-
-    for(let x of shopping_curation_btn){
-        
-        let shopping_curation_btxt = shopping_curation_btn.innerText;
-        console.log('shopping_curation_btn x>>', x);
-        
-        x.onclick = () => {
-            console.log(x.classList.contains('nav-check-red'));
-            shopping_curation_btn.forEach(x=> x.classList.remove('nav-check-red'));
-            x.classList.add('nav-check-red');
-            console.log(x.classList.contains('nav-check-red'))
-            // console.log('shopping_curation_btn x >>>', x);
-            
-        }
-    }
-
-    shopping_curation_btn.forEach(ele => {
-        domFn.addEvt(ele, 'click', (e) =>{
-            console.log('shopping_curation_btn 로딩완료');
-            shopping_curation_btn.forEach((x)=> x.classList.remove('nav-check-red'));
-            ele.classList.add('nav-check-red');
-        })
+    // 큐레이션 색상
+    shopping_curation_btn.forEach((ele) => {
+        domFn.addEvt(ele, "click", (e) => {
+            console.log("shopping_curation_btn 로딩완료");
+            shopping_curation_btn.forEach((x) => x.classList.remove("nav-check-red"));
+            ele.classList.add("nav-check-red");
+        });
     });
-
 
     saja_nav_btn[0].click();
 
+    // zbfpdltu
+    const btnShop = domFn.qsa(".nav-btngo2");
+    const targetId = { 간식타임: "du", 아삭아삭: "cham", 맑은피부: "cl", 캠핑가자: "do" };
 
-    const btnShop = domFn.qsa('.nav-btngo2');
-    
-    const targetId = {"간식타임":"du","아삭아삭":"cham","맑은피부":"cl","캠핑가자":"do",};
-
-    btnShop.forEach(ele=>{
-        domFn.addEvt(ele,'click',()=>{
+    btnShop.forEach((ele) => {
+        domFn.addEvt(ele, "click", () => {
             console.log(ele.innerText);
-            location.href = 'index.html#'+targetId[ele.innerText];
+            location.href = "index.html#" + targetId[ele.innerText];
+        });
+    });
 
-        })
-    })
 
     // 최근본 상품
-    let viewed_img = domFn.qs('.recentley-viewed-img');
-    let view_item = domFn.qsa('.saja-item-img>img');
-    console.log(saja_item_arr[1]['감자']['이미지']);
+    let viewed_img = domFn.qs(".recentley-viewed-img");
+    let view_item = domFn.qsa(".saja-item-img>img");
+    console.log(saja_item_arr[1]["감자"]["이미지"]);
     console.log(view_item);
 
     // 최근본 상품
-    view_item.forEach(ele =>{
-        console.log('ele',ele);
-        domFn.addEvt(ele, 'click', showViewed);
+    view_item.forEach((ele) => {
+        console.log("ele", ele);
+        domFn.addEvt(ele, "click", showViewed);
     });
 
-    function showViewed(){
-        console.log('this',this);
+    function showViewed() {
+        console.log("this", this);
     }
 
-
 }
-
