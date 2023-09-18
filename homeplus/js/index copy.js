@@ -344,32 +344,32 @@ function loadFn() {
     // console.log('snack_time', snack_time);
     function goCuration(){
         // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
-        if(window.scrollY>=snack_time){
+        if(window.scrollY>snack_time){
             shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[0].classList.add('nav-check-red');
         }
-        if(window.scrollY>=crunchy){
+        if(window.scrollY>crunchy){
             shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[1].classList.add('nav-check-red');
         }
-        if(window.scrollY>=clear_skin){
+        if(window.scrollY>clear_skin){
             shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[2].classList.add('nav-check-red');
         }
-        if(window.scrollY>=go_camping){
+        if(window.scrollY>go_camping){
             shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[3].classList.add('nav-check-red');
         }
     }
 
     // 큐레이션 색상
-    shopping_curation_btn.forEach((ele) => {
-        domFn.addEvt(ele, "click", (e) => {
-            console.log("shopping_curation_btn 로딩완료");
-            shopping_curation_btn.forEach((x) => x.classList.remove("nav-check-red"));
-            ele.classList.add("nav-check-red");
-        });
-    });
+    // shopping_curation_btn.forEach((ele) => {
+    //     domFn.addEvt(ele, "click", (e) => {
+    //         console.log("shopping_curation_btn 로딩완료");
+    //         shopping_curation_btn.forEach((x) => x.classList.remove("nav-check-red"));
+    //         ele.classList.add("nav-check-red");
+    //     });
+    // });
 
     // 큐레이션 버튼 이동
     const btnShop = domFn.qsa(".nav-btngo2");
