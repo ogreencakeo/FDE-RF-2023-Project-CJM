@@ -24,8 +24,8 @@
     background-size: 18px;
     border: 0px;
 }
-.header-ad-btn-on{
-    animation: header-ad-ani .4s ease-in-out forwards;
+.header-ad-close{
+    animation: header-ad-ani .5s linear forwards;
 }
 @keyframes header-ad-ani {
     to{

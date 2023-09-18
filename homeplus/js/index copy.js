@@ -12,7 +12,7 @@ function loadFn() {
     console.log("로딩완료");
 
     // header 광고버튼
-    const header_ad = domFn.qs('body');
+    const header_ad_close = domFn.qs('body');
     const header_ad_btn = domFn.qs('.header-ad-btn');
 
     const move_to_exhibition = domFn.qs(".move-to-exhibition");
@@ -34,7 +34,7 @@ function loadFn() {
 
     // header 광고버튼
     domFn.addEvt(header_ad_btn, 'click', ()=>{
-        header_ad.classList.add('header-ad-btn-on');
+        header_ad_close.classList.add('header-ad-close');
     });
 
     // 카테고리 nav
