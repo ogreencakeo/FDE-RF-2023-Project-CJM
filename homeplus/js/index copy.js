@@ -129,83 +129,8 @@ function loadFn() {
         }
     }
 
-    const idName = { 두유: "du", 참깨흑임자드레싱: "cham", 클렌징폼: "cl", 도넛튜브: "do" };
-
-    // 큐레이션
-    // curation_hcode
-    let alm = 0;
-    for (let x of curation_items_arr) {
-        for (let y in x) {
-            for (let i = 0; i < 4; i++) {
-                console.log("y :", y);
-                // console.log('x[y] :', x[y]);
-                curation_hcode += `
-                    <div class = "curation-item-img" ${
-                        (y == "두유" || y == "참깨흑임자드레싱" || y == "클렌징폼" || y == "도넛튜브") && i == 0
-                            ? "id=" + idName[y]
-                            : ""
-                    }>
-                        <div class = "curation-img-wrap">
-                            <img src="./images/shopping-curation/${
-                                x[y]["이미지"]
-                            }" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
-                            <section>
-                                ${
-                                    y == "더블팩샐러드" ||
-                                    y == "히알루론산마스크팩" ||
-                                    y == "도넛튜브" ||
-                                    y == "해먹매쉬라운지튜브" ||
-                                    y == "보조배터리" ||
-                                    y == "콜맨레이체어" ||
-                                    y == "춘천닭갈비" ||
-                                    y == "춘천닭갈비"
-                                        ? '<span style="display:none"></span>'
-                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
-                                }
-                                <span><img src="./images/delivery-market.png" alt=""></span>
-                            </section>
-                            <div class="curation-hover-btn">
-                                <a href="#">
-                                    <span>
-                                        <img src="./images/saja-hover-btn1.png" alt="">
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <span>
-                                        <img src="./images/saja-hover-btn2.png" alt="">
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        <section>
-                            <div class="curation-item-explanation">
-                                <div class="curation-item-exp-name">
-                                    <p>${x[y]["추천상품문구"]}</p>
-                                    <p>${x[y]["이름"]}
-                                </div>
-                                <div class="curation-item-exp-price">
-                                    <p>${x[y]["정가가격"]}</p>
-                                    <span>${x[y]["할인율"]}</span>
-                                    <span>${x[y]["판매가"]}</span>
-                                    <span>${x[y]["가격그램"]}</span>
-                                </div>
-                                <div class="curation-item-exp-review">
-                                    <span>${x[y]["리뷰"]}</span>
-                                    <span>${x[y]["월구매수"]}</span>
-                                </div>
-                            </div>
-                        </section>
-                    </div> 
-                `;
-            }
-        }
-
-        console.log(alm + "나야나");
-        alm++;
-    }
-    curation_box.innerHTML = curation_hcode;
+    
     // 사자
-
     saja_nav_btn.forEach((ele) => {
         domFn.addEvt(ele, "click", () => {
             saja_nav_btn.forEach((x) => x.classList.remove("nav-check-red"));
@@ -318,6 +243,82 @@ function loadFn() {
     //     ele.location.href = "./sub.html";
     // });
 
+    const idName = { 두유: "du", 참깨흑임자드레싱: "cham", 클렌징폼: "cl", 도넛튜브: "do" };
+
+    // 큐레이션
+    // curation_hcode
+    let alm = 0;
+    for (let x of curation_items_arr) {
+        for (let y in x) {
+            for (let i = 0; i < 4; i++) {
+                console.log("y :", y);
+                // console.log('x[y] :', x[y]);
+                curation_hcode += `
+                    <div class = "curation-item-img" ${
+                        (y == "두유" || y == "참깨흑임자드레싱" || y == "클렌징폼" || y == "도넛튜브") && i == 0
+                            ? "id=" + idName[y]
+                            : ""
+                    }>
+                        <div class = "curation-img-wrap">
+                            <img src="./images/shopping-curation/${
+                                x[y]["이미지"]
+                            }" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
+                            <section>
+                                ${
+                                    y == "더블팩샐러드" ||
+                                    y == "히알루론산마스크팩" ||
+                                    y == "도넛튜브" ||
+                                    y == "해먹매쉬라운지튜브" ||
+                                    y == "보조배터리" ||
+                                    y == "콜맨레이체어" ||
+                                    y == "춘천닭갈비" ||
+                                    y == "춘천닭갈비"
+                                        ? '<span style="display:none"></span>'
+                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
+                                }
+                                <span><img src="./images/delivery-market.png" alt=""></span>
+                            </section>
+                            <div class="curation-hover-btn">
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span>
+                                        <img src="./images/saja-hover-btn2.png" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <section>
+                            <div class="curation-item-explanation">
+                                <div class="curation-item-exp-name">
+                                    <p>${x[y]["추천상품문구"]}</p>
+                                    <p>${x[y]["이름"]}
+                                </div>
+                                <div class="curation-item-exp-price">
+                                    <p>${x[y]["정가가격"]}</p>
+                                    <span>${x[y]["할인율"]}</span>
+                                    <span>${x[y]["판매가"]}</span>
+                                    <span>${x[y]["가격그램"]}</span>
+                                </div>
+                                <div class="curation-item-exp-review">
+                                    <span>${x[y]["리뷰"]}</span>
+                                    <span>${x[y]["월구매수"]}</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div> 
+                `;
+            }
+        }
+
+        console.log(alm + "나야나");
+        alm++;
+    }
+    curation_box.innerHTML = curation_hcode;
+
     // 큐레이션 색상
     shopping_curation_btn.forEach((ele) => {
         domFn.addEvt(ele, "click", (e) => {
@@ -329,7 +330,7 @@ function loadFn() {
 
     saja_nav_btn[0].click();
 
-    // zbfpdltu
+    // 큐레이션 버튼 이동
     const btnShop = domFn.qsa(".nav-btngo2");
     const targetId = { 간식타임: "du", 아삭아삭: "cham", 맑은피부: "cl", 캠핑가자: "do" };
 
@@ -339,6 +340,33 @@ function loadFn() {
             location.href = "index.html#" + targetId[ele.innerText];
         });
     });
+
+    const snack_time = domFn.qs('#du').getBoundingClientRect(); // 간식타임
+    const crunchy = domFn.qs('#cham').getBoundingClientRect().height; // 아삭아삭
+    const clear_skin = domFn.qs('#cl').getBoundingClientRect().height; // 맑은피부
+    const go_camping = domFn.qs('#do').getBoundingClientRect().height; // 캠핑가자
+    
+    domFn.addEvt(window, 'scroll', goCuration);
+
+    console.log('snack_time', snack_time);
+    function goCuration(){
+        if(window.scrollY>snack_time){
+            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
+            shopping_curation_btn[0].classList.add('nav-check-red');
+        }
+        if(window.scrollY>crunchy){
+            shopping_curation_btn[1].classList.add('nav-check-red');
+            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
+        }
+        if(window.scrollY>clear_skin){
+            shopping_curation_btn[2].classList.add('nav-check-red');
+            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
+        }
+        if(window.scrollY>go_camping){
+            shopping_curation_btn[3].classList.add('nav-check-red');
+            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
+        }
+    }
 
 
     // 최근본 상품
