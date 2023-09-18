@@ -580,8 +580,16 @@ body * {
     width: 840px;
     margin: 20px auto 100px;
     display: block;
+    
 }
-
+.sub-detail-btn>span:last-child,
+.notice-info-btn>span:last-child{
+    background: url(../images/icon_btn.png) no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-size: 15px;
+}
 /* 고시정보 */
 .notice-information{
     margin-top: 98px;

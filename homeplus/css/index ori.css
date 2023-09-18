@@ -54,12 +54,13 @@ a {
     position: absolute;
     width: 42.9px;
     height: 73.9px;
-    background: url(./images/slide_button.png) no-repeat;
+    background: url(../images/slide_button.png) no-repeat;
     top: calc(50% - 73.9px / 2);
 }
 
 .m-leftbtn{
     background-position: 0 0;
+    
 }
 
 .m-rightbtn {
@@ -171,7 +172,7 @@ a {
     position: absolute;
     width: 43px;
     height: 74px;
-    background: url(./images/slide_button.png);
+    background: url(../images/slide_button.png);
     top: calc(50% - 74px / 2);
     transform: scale(0.6);
     cursor: pointer;

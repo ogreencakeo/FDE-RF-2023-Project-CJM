@@ -31,8 +31,13 @@ const sub_nav_color = domFn.qsa('.sub-product-nav-box button');
 
 // 상세정보 버튼
 const detail_btn = domFn.qs('.sub-detail-btn');
+const detail_btn_check = domFn.qs('.sub-detail-btn>span:first-child');
+const detail_btn_img = domFn.qs('.detail_btn_img');
+console.log('detail_btn_img', detail_btn_img);
 // 고시정보 버튼
 const notice_info_btn = domFn.qs('.notice-info-btn');
+const notice_info_check = domFn.qs('.notice-info-btn>span:first-child');
+const notice_info_img = domFn.qs('.notice_btn_img');
 // 상세정보, 고시정보 접기
 const detail_fold = domFn.qs('.p-expand-on');
 const notice_fold = domFn.qs('.n-expand-on');
@@ -97,11 +102,25 @@ function loadFn(){
     // 상세정보 버튼
     domFn.addEvt(detail_btn, 'click', ()=>{
         detail_fold.classList.toggle('p-expand-on');
+        if(detail_fold.classList.contains('p-expand-on')){
+            detail_btn_check.innerText = '상세정보 더보기';
+            detail_btn_img.style.transform = 'rotateX(0deg)';
+        }else{
+            detail_btn_check.innerText = '상세정보 접기';
+            detail_btn_img.style.transform = 'rotateX(180deg)';
+        }
     });
     
     // 고시정보 버튼
     domFn.addEvt(notice_info_btn, 'click', ()=>{
         notice_fold.classList.toggle('n-expand-on');
+        if(notice_fold.classList.contains('n-expand-on')){
+            notice_info_check.innerText = '상품고시정보';
+            notice_info_img.style.transform = 'rotateX(0deg)';
+        }else{
+            notice_info_check.innerText = '상품고시정보 접기';
+            notice_info_img.style.transform = 'rotateX(180deg)';
+        }
     });
     
     // 상품고시정보
