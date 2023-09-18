@@ -688,6 +688,7 @@ body * {
 }
 .buy-now-button2{
     width: 30%;
+    right: 0;
 }
 .shopping-cart-button2{
     display: block;
