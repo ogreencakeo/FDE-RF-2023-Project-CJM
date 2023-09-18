@@ -3,6 +3,27 @@
 .wrap-box{
 }
  */
+
+ /* 광고 */
+.header-ad{
+    width: 100%;
+    background-color: #ededed;
+    position: relative;
+}
+.ad-box{
+    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+}
+.ad-box>button{
+    position: absolute;
+    top: 0;
+    height: 38px;
+    width: 38px;
+    background:  rgba(0, 0, 0, 0.5) url(../images/close-window.png) no-repeat center/cover;
+    background-size: 18px;
+    border: 0px;
+}
 /* 공통 inbox */
 .header-inbox {
     width: 1200px;

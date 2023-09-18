@@ -7,11 +7,14 @@ const domFn = {
 }
 domFn.addEvt(window, 'load', loadFn);
 
-
+// 사진
+const see_more_btn = domFn.qsa('.product-see-more-wrap button');
+// const see_more_right = domFn.qs('.see-more-right');
 
 // 좋아요 버튼
 const like_btn = domFn.qs('.like-btn');
 const like_btn_target = domFn.qs('.like-btn>span');
+const see_more_slide = domFn.qs('.detail-see-more-img');
 
 // 상품 수량 버튼 (-, +)
 const purchase_btn = domFn.qsa('.purchase-btn>button');
@@ -46,6 +49,21 @@ const notice_info = domFn.qs('.notice-information table');
 const precautions_box = domFn.qs('.product-precautions');
 
 function loadFn(){
+
+    // 사진
+    console.log(see_more_btn);
+    see_more_btn.forEach(ele=>{
+        domFn.addEvt(ele, 'click', nextShow);
+    })
+
+    function nextShow(){
+        let see_more_right = this.classList.contains('see-more-right');
+        console.log(see_more_right)
+        if(see_more_right){
+            see_more_slide.left = '-200px';
+            see_more_slide.transform = '.4s ease-in-out';
+        }
+    }
 
     // 좋아요 버튼
     domFn.addEvt(like_btn, 'click', ()=>{
