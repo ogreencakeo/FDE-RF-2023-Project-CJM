@@ -668,7 +668,6 @@ body * {
 .pay_aside_info{
     padding: 20px 30px 20px;
 }
-
 .pay_aside_info>span{
     font-size: 15px;
     display: inline-block;
@@ -676,4 +675,22 @@ body * {
     margin-bottom: 2%;
     margin-bottom: 2%;
 }
-
+.pay_aside_btn{
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+}
+.expected-integrated-button2{
+    width: 100%;
+}
+.like-btn2{
+    width: 20%;
+    display: block;
+}
+.buy-now-button2{
+    width: 80%;
+    display: block;
+}
+.shopping-cart-button2{
+    display: block;
+}
