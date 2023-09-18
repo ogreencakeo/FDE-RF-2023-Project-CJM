@@ -209,6 +209,10 @@
     background-color: whitesmoke;
     border-radius: 50%;
 }
+.top-bx>span:last-child{
+    position: absolute;
+    bottom: 0;
+}
 
 /* footer부분 */
 .footer {
