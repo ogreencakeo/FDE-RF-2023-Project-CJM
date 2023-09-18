@@ -186,6 +186,30 @@
     margin: 0px auto 6px;
 }
 
+.top-bx{
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(102, 102, 102) !important;
+    display: block;
+    padding: 10px 0;
+    position: relative;
+}
+
+.top-bx>span:first-child{
+    background: url(../images/spritesheet.png);
+    background-position: -1712px -6px;
+    display: block;
+    width: 16px;
+    height: 18px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
 /* footer부분 */
 .footer {
     width: 100%;
