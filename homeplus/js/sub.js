@@ -6,7 +6,6 @@ const domFn = {
     addEvt : (ele, evt, fn) => ele.addEventListener(evt, fn)
 }
 domFn.addEvt(window, 'load', loadFn);
-domFn.addEvt(window, 'onclick', );
 
 
 
@@ -86,8 +85,7 @@ function loadFn(){
             }
         }
         purchase_quantity.innerText = `${purchase_num}`;
-        // purchase_quantity2.innerText = `${purchase_num}`;
-        cost_to_pay.innerText = `${total_num}`;
+        cost_to_pay.innerText = `${total_num.toLocaleString()}`;
     }
 
     // 서브 nav버튼 클릭시 버튼 색상 빨간색으로 변경
