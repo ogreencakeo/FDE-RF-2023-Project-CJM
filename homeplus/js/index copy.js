@@ -341,30 +341,31 @@ function loadFn() {
         });
     });
 
-    const snack_time = domFn.qs('#du').getBoundingClientRect(); // 간식타임
-    const crunchy = domFn.qs('#cham').getBoundingClientRect().height; // 아삭아삭
-    const clear_skin = domFn.qs('#cl').getBoundingClientRect().height; // 맑은피부
-    const go_camping = domFn.qs('#do').getBoundingClientRect().height; // 캠핑가자
+    const snack_time = domFn.qs('#du').getBoundingClientRect().top // 간식타임
+    const crunchy = domFn.qs('#cham').getBoundingClientRect().top; // 아삭아삭
+    const clear_skin = domFn.qs('#cl').getBoundingClientRect().top; // 맑은피부
+    const go_camping = domFn.qs('#do').getBoundingClientRect().top; // 캠핑가자
     
     domFn.addEvt(window, 'scroll', goCuration);
 
     console.log('snack_time', snack_time);
     function goCuration(){
+        shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
         if(window.scrollY>snack_time){
-            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
+            // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[0].classList.add('nav-check-red');
         }
         if(window.scrollY>crunchy){
+            // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[1].classList.add('nav-check-red');
-            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
         }
         if(window.scrollY>clear_skin){
+            // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[2].classList.add('nav-check-red');
-            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
         }
         if(window.scrollY>go_camping){
+            // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[3].classList.add('nav-check-red');
-            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
         }
     }
 
