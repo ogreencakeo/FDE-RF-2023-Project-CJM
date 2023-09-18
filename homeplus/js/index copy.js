@@ -44,27 +44,30 @@ function loadFn() {
     let cata_nav1 = domFn.qs('.cata-nav-section1');
     let catagory_btn2 = domFn.qs('.cata-wrap-nav1');
 
-    domFn.addEvt(catagory_btn, 'click', ()=>{
-        // 카테고리
-        for(let x in catagory){
-            console.log('x', x);
-            console.log('catagory[x]', catagory[x]);
-            catagory_wrap.innerHTML += `
-                <div>
-                    <ol>
-                        <span>${x}</span>
-                        <div>
-                            <ul>
-                                <span>${catagory[x]}</span>
-                                <li><div><span>${catagory[x].map() = ele => ele.val}</span></div></li>
-                            </ul>
-                        </div>
-                        
-                    </ol>
-                </div>
-            `;
-        }
-    });
+    // domFn.addEvt(catagory_btn, 'click', ()=>{
+    //     // 카테고리
+    //     for(let x in catagory){
+    //         console.log('x', x);
+    //         console.log('catagory[x]', catagory[x]);
+    //         catagory_wrap.innerHTML += `
+    //             <div>
+    //                 <ol>
+    //                     <span>${x}</span>
+    //                     <div>
+    //                         <ul>
+    //                             <span>${catagory[x]}</span>
+    //                             ${showCode(catagory[x])}
+    //                         </ul>
+    //                     </div>
+    //                 </ol>
+    //             </div>
+    //         `;
+    //     }
+
+    //     function showCode(){
+    //         for(let j in obj){obj[j].map((val) => `<li><div><span>${val}</span></div></li>`).join("")}
+    //     }
+    // });
     // <div class="cata-nav1"></div>
     //                     <div class="cata-nav2"></div>
     //                     <div class="cata-nav3"></div>
