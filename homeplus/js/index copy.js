@@ -10,7 +10,13 @@ domFn.addEvt(window, "load", loadFn);
 
 function loadFn() {
     console.log("로딩완료");
+
+    // header 광고버튼
+    const header_ad = domFn.qs('body');
+    const header_ad_btn = domFn.qs('.header-ad-btn');
+
     const move_to_exhibition = domFn.qs(".move-to-exhibition");
+
     // 사자
     let saja_items_div = domFn.qs(".saja-items-div");
     let saja_nav_btn = domFn.qsa(".nav-btngo");
@@ -25,6 +31,11 @@ function loadFn() {
     
     let hcode = "";
     let curation_hcode = "";
+
+    // header 광고버튼
+    domFn.addEvt(header_ad_btn, 'click', ()=>{
+        header_ad.classList.add('header-ad-btn-on');
+    });
 
     // 카테고리 nav
     // let catagory_btn = domFn.qs('.catagory-icon');

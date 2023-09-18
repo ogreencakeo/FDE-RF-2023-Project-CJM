@@ -15,7 +15,7 @@
     width: 1200px;
     position: relative;
 }
-.ad-box>button{
+.header-ad-btn{
     position: absolute;
     top: 0;
     height: 38px;
@@ -23,6 +23,14 @@
     background:  rgba(0, 0, 0, 0.5) url(../images/close-window.png) no-repeat center/cover;
     background-size: 18px;
     border: 0px;
+}
+.header-ad-btn-on{
+    animation: header-ad-ani .4s ease-in-out forwards;
+}
+@keyframes header-ad-ani {
+    to{
+        transform: translateY(-84.492px);
+    }
 }
 /* 공통 inbox */
 .header-inbox {
