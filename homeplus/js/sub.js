@@ -11,6 +11,10 @@ domFn.addEvt(window, 'load', loadFn);
 const see_more_btn = domFn.qsa('.product-see-more-wrap button');
 // const see_more_right = domFn.qs('.see-more-right');
 
+// 따라다니는 원
+// const following_target = domFn.qs('.following-target');
+// const following_bx = domFn.qs('.following-bx');
+
 // 좋아요 버튼
 const like_btn = domFn.qsa('.like-btn');
 const like_btn_target = domFn.qsa('.like-btn>span');
@@ -49,21 +53,36 @@ const notice_info = domFn.qs('.notice-information table');
 const precautions_box = domFn.qs('.product-precautions');
 
 function loadFn(){
+    // 따라다니는 박스
+    // following_target.onmousemove = (e)=>{
+    //     following_bx.style.top = e.clientY + 'px';
+    //     following_bx.style.left = e.clientX +'px';
+    //     console.log('pageY', e.pageY);
+    //     console.log('pageX', e.pageX);
+    // };
 
-    // 사진
-    console.log(see_more_btn);
-    see_more_btn.forEach(ele=>{
-        domFn.addEvt(ele, 'click', nextShow);
-    })
+    // following_target.onmouseenter = () => {
+    //     following_bx.style.opacity = 1;
+    // };
+    
+    // following_target.onmouseleave = () => {
+    //     following_bx.style.opacity = 0;
+    // }
 
-    function nextShow(){
-        let see_more_right = this.classList.contains('see-more-right');
-        console.log(see_more_right)
-        if(see_more_right){
-            see_more_slide.left = '-200px';
-            see_more_slide.transform = '.4s ease-in-out';
-        }
-    }
+    // // 사진
+    // console.log(see_more_btn);
+    // see_more_btn.forEach(ele=>{
+    //     domFn.addEvt(ele, 'click', nextShow);
+    // })
+
+    // function nextShow(){
+    //     let see_more_right = this.classList.contains('see-more-right');
+    //     console.log(see_more_right)
+    //     if(see_more_right){
+    //         see_more_slide.left = '-200px';
+    //         see_more_slide.transform = '.4s ease-in-out';
+    //     }
+    // }
 
     // 좋아요 버튼
     like_btn.forEach(ele=>{

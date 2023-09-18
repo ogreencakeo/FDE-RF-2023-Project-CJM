@@ -38,54 +38,38 @@ function loadFn() {
     });
 
     // 카테고리 nav
-    // let catagory_btn = domFn.qs('.catagory-icon');
+    let catagory_btn = domFn.qs('.catagory-icon');
 
-    // let catagory_wrap = domFn.qs('.catagory-wrap');
-    // let nav_code = '';
-    // let catagory_btn2 = domFn.qs('.cata-wrap-nav1');
+    let catagory_wrap = domFn.qs('.catagory-wrap');
+    let cata_nav1 = domFn.qs('.cata-nav-section1');
+    let catagory_btn2 = domFn.qs('.cata-wrap-nav1');
 
-    // 카테고리
-    // for(let x in catagory){
-    //     nav_code += `
-    //         <ul>
-    //             <li>
-    //                 <a href="#">
-    //                     <div class="cata-wrap-nav1">
-    //                         ${x}
-    //                         <div class="cata-wrap-nav2">
-    //                             ${domFn.addEvt(catagory_btn2, 'mouseover', showCata(catagory[x]))}
-    //                         </div>
-    //                     </div>
-    //                 </a>
-    //             </li>
-    //         </ul>
-    //     `;
-    // }
+    domFn.addEvt(catagory_btn, 'click', ()=>{
+        // 카테고리
+        for(let x in catagory){
+            console.log('x', x);
+            console.log('catagory[x]', catagory[x]);
+            catagory_wrap.innerHTML += `
+                <div>
+                    <ol>
+                        <span>${x}</span>
+                        <div>
+                            <ul>
+                                <span>${catagory[x]}</span>
+                                <li><div><span>${catagory[x].map() = ele => ele.val}</span></div></li>
+                            </ul>
+                        </div>
+                        
+                    </ol>
+                </div>
+            `;
+        }
+    });
+    // <div class="cata-nav1"></div>
+    //                     <div class="cata-nav2"></div>
+    //                     <div class="cata-nav3"></div>
+    
 
-    // // domFn.addEvt(catagory_btn, 'mouseover', showCata(catagory[x]));
-
-    // function showCata(obj){
-    //     console.log('로딩');
-    //     for(let x in obj){
-    //         console.log(x);
-    //     }
-    // }
-
-    // function makeCatagory(obj){
-    //     console.log('obj',obj);
-    //     let nav_code='';
-    //     for(let x in obj){
-    //         // console.log(x);
-    //         nav_code += `
-    //             <dl>
-    //                 <dt>${x}</dt>
-    //                 ${obj[x].map((val) => `<dd><a href="#">${val}</a></dd>`).join("")}
-    //             </dl>
-    //         `;
-    //     }
-    //     return nav_code;
-    // }
-    // catagory_wrap.innerHTML = nav_code;
 
     // nav
     let stsWheel = 0;

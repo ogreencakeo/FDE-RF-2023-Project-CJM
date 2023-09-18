@@ -570,34 +570,10 @@ oter-r-content1>span:last-child {
 }
 
 /* 카테고리 nav */
-/* .catagory-bx{
-    position: relative;
-    width: 1200px;
-}
 .catagory-wrap{
-    width: 1000px;
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    height: 500px;
     background-color: #fff;
-    overflow: auto;
+    /* display: flex; */
 }
-.catagory-wrap>ul>{
-    
+.catagory-wrap>div{
+    z-index: 999;
 }
-
-.cata-wrap-nav1{
-    width: 300px;
-    position: absolute;
-    left: 0;
-}
-.cata-wrap-nav2{
-    width: 300px;
-    position: absolute;
-    left: 50%;
-}
-.cata-wrap-nav2 dd{
-    position: absolute;
-    left: 60%;
-} */

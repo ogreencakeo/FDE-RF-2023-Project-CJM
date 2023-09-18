@@ -40,11 +40,27 @@ body * {
     height: 841.333px;
     margin-right: 80px;
 }
-.subcontent-img>img{
+.following-target>img{
     width: 560px;
     height: 560px;
     border-radius: 6px;
 }
+
+/* 따라다니는 원 */
+.following-target{
+    /* transition: .2s ease-out;
+    position: relative; */
+}
+.following-bx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    transform: translate(-50%,-50%);
+    background-color: #8c8d8f8c;
+}
+
 .product-see-more-wrap-bx{
     width: 2000px;
 }
