@@ -12,8 +12,8 @@ const see_more_btn = domFn.qsa('.product-see-more-wrap button');
 // const see_more_right = domFn.qs('.see-more-right');
 
 // 좋아요 버튼
-const like_btn = domFn.qs('.like-btn');
-const like_btn_target = domFn.qs('.like-btn>span');
+const like_btn = domFn.qsa('.like-btn');
+const like_btn_target = domFn.qsa('.like-btn>span');
 const see_more_slide = domFn.qs('.detail-see-more-img');
 
 // 상품 수량 버튼 (-, +)
@@ -66,9 +66,15 @@ function loadFn(){
     }
 
     // 좋아요 버튼
-    domFn.addEvt(like_btn, 'click', ()=>{
-        like_btn_target.classList.toggle('on');
-    });
+    like_btn.forEach(ele=>{
+        domFn.addEvt(ele, 'click', ()=>{
+            like_btn_target.forEach(el=>{
+                el.classList.toggle('on');
+            })
+            
+        });
+
+    })
 
     // 상품수량및 지불비용
     purchase_btn.forEach((ele)=>{
@@ -79,7 +85,7 @@ function loadFn(){
     function showPurchaseNum(){
         // 상품 수량
         let purchase_quantity = domFn.qs('.purchase-quantity');
-        let purchase_quantity2 = this.parentElement.querySelector('.purchase-quantity');
+        // let purchase_quantity2 = this.parentElement.querySelector('.purchase-quantity');
 
         let purchase_btn_r = this.classList.contains('purchase-btn-r');
         // console.log('purchase_btn :', ele);
@@ -103,7 +109,9 @@ function loadFn(){
             }
         }
         purchase_quantity.innerText = `${purchase_num}`;
+        domFn.qs('.cost-pay-aside .purchase-quantity').innerText = `${purchase_num}`;
         cost_to_pay.innerText = `${total_num.toLocaleString()}`;
+        domFn.qs('.pay_aside_info_bottom .cost-to-pay').innerText = `${total_num.toLocaleString()}`;
     }
 
     // 서브 nav버튼 클릭시 버튼 색상 빨간색으로 변경
