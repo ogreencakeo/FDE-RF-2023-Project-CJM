@@ -336,7 +336,7 @@ function loadFn() {
 
     btnShop.forEach((ele) => {
         domFn.addEvt(ele, "click", () => {
-            console.log(ele.innerText);
+            // console.log(ele.innerText);
             location.href = "index.html#" + targetId[ele.innerText];
         });
     });
@@ -348,7 +348,7 @@ function loadFn() {
     
     domFn.addEvt(window, 'scroll', goCuration);
 
-    console.log('snack_time', snack_time);
+    // console.log('snack_time', snack_time);
     function goCuration(){
         shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
         if(window.scrollY>snack_time){

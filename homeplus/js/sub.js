@@ -33,7 +33,7 @@ const sub_nav_color = domFn.qsa('.sub-product-nav-box button');
 const detail_btn = domFn.qs('.sub-detail-btn');
 const detail_btn_check = domFn.qs('.sub-detail-btn>span:first-child');
 const detail_btn_img = domFn.qs('.detail_btn_img');
-console.log('detail_btn_img', detail_btn_img);
+// console.log('detail_btn_img', detail_btn_img);
 // 고시정보 버튼
 const notice_info_btn = domFn.qs('.notice-info-btn');
 const notice_info_check = domFn.qs('.notice-info-btn>span:first-child');
@@ -92,12 +92,14 @@ function loadFn(){
 
     // 서브 nav버튼 클릭시 버튼 색상 빨간색으로 변경
     sub_nav_color.forEach(ele =>{
-        console.log('sub_nav_color ele>', ele);
+        // console.log('sub_nav_color ele>', ele);
         domFn.addEvt(ele, 'click', ()=>{
             sub_nav_color.forEach(ele=> ele.classList.remove('color_red'));
             ele.classList.add('color_red');
         });
     });
+
+    sub_nav_color[0].click();
 
     // 상세정보 버튼
     domFn.addEvt(detail_btn, 'click', ()=>{
