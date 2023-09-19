@@ -352,6 +352,11 @@ function loadFn() {
 
     saja_nav_btn[0].click();
 
+    
+
+    // 큐레이션 버튼 이동
+   
+
     const snack_time = domFn.qs('#du').getBoundingClientRect().top; // 간식타임
     const crunchy = domFn.qs('#cham').getBoundingClientRect().top; // 아삭아삭
     const clear_skin = domFn.qs('#cl').getBoundingClientRect().top; // 맑은피부
@@ -362,23 +367,35 @@ function loadFn() {
     // console.log('snack_time', snack_time);
     function goCuration(){
         // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
-        if(window.scrollY>snack_time){
+        if(window.scrollY>=snack_time){
             shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[0].classList.add('nav-check-red');
         }
-        if(window.scrollY>crunchy){
+        if(window.scrollY>=crunchy){
             shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[1].classList.add('nav-check-red');
         }
-        if(window.scrollY>clear_skin){
+        if(window.scrollY>=clear_skin){
             shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[2].classList.add('nav-check-red');
         }
-        if(window.scrollY>go_camping){
+        if(window.scrollY>=go_camping){
             shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
             shopping_curation_btn[3].classList.add('nav-check-red');
         }
     }
+
+    const btnShop = domFn.qsa(".nav-btngo2");
+    const targetId = { 간식타임: "du", 아삭아삭: "cham", 맑은피부: "cl", 캠핑가자: "do" };
+
+    btnShop.forEach((ele) => {
+        domFn.addEvt(ele, "click", () => {
+            // console.log(ele.innerText);
+            shopping_curation_btn.forEach(x=>x.classList.remove('nav-check-red'));
+            ele.classList.add('nav-check-red');
+            location.href = "index.html#" + targetId[ele.innerText];
+        });
+    });
 
     // 큐레이션 색상
     // shopping_curation_btn.forEach((ele) => {
@@ -389,16 +406,7 @@ function loadFn() {
     //     });
     // });
 
-    // 큐레이션 버튼 이동
-    const btnShop = domFn.qsa(".nav-btngo2");
-    const targetId = { 간식타임: "du", 아삭아삭: "cham", 맑은피부: "cl", 캠핑가자: "do" };
-
-    btnShop.forEach((ele) => {
-        domFn.addEvt(ele, "click", () => {
-            // console.log(ele.innerText);
-            location.href = "index.html#" + targetId[ele.innerText];
-        });
-    });
+    
 
     // 최근본 상품
     let viewed_img = domFn.qs(".recentley-viewed-img");
