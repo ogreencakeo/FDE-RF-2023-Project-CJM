@@ -91,14 +91,22 @@ function loadFn() {
     hcode += "</ul></nav>";
     move_to_exhibition.innerHTML = hcode;
 
+    // main 슬라이드
+    const main_slide = domFn.qs('.main-ad-box ul');
+    const main_btn = domFn.qsa('.main-ad-box button');
+    main_btn.forEach(ele => domFn.addEvt(ele, 'click', showMainSlide));
+    function showMainSlide(){
+        let isRight = this.classList.contains('m-rightbtn');
+    }
+
     // banner 슬라이드
     const banner_slide = domFn.qs(".side-content-box ul");
     const banner_btn = domFn.qsa(".side-content-box button");
     // console.log('banner_btn :', banner_btn);
 
-    banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goSlide));
+    banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goBannerSlide));
 
-    function goSlide() {
+    function goBannerSlide() {
         console.log(" banner_slide 로딩완료");
         if (stsWheel) return;
         stsWheel = 1;

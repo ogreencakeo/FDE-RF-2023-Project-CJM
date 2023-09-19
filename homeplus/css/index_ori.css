@@ -57,6 +57,7 @@ a {
     height: 73.9px;
     background: url(../images/slide_button.png) no-repeat;
     top: calc(50% - 73.9px / 2);
+    border: 0px;
 }
 
 .m-leftbtn{
@@ -65,7 +66,7 @@ a {
 }
 
 .m-rightbtn {
-    background-position: -42.9px 0;
+    background-position: -42.9px 0 !important;
     right: 0;
 }
 
@@ -177,6 +178,7 @@ a {
     top: calc(50% - 74px / 2);
     transform: scale(0.6);
     cursor: pointer;
+    border: 0px;
 }
 
 .leftbtn {
@@ -185,7 +187,7 @@ a {
 }
 
 .rightbtn {
-    background-position: -42.9px 0;
+    background-position: -42.9px 0 !important;
     right: 0;
 }
 
