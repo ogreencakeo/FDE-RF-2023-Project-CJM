@@ -32,6 +32,8 @@ function loadFn() {
     let hcode = "";
     let curation_hcode = "";
 
+    
+
     // header 광고버튼
     domFn.addEvt(header_ad_btn, 'click', ()=>{
         header_ad_close.classList.add('header-ad-close');
@@ -225,13 +227,13 @@ function loadFn() {
                             </section>
                             <div class="saja-hover-btn">
                                 <a href="#">
-                                    <span>
-                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                    <span class="Put-it-in">
+                                        <img  src="./images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/saja-hover-btn2.png" alt="">
+                                        <img  src="./images/saja-hover-btn2.png" alt="">
                                     </span>
                                 </a>
                             </div>
@@ -304,8 +306,8 @@ function loadFn() {
                             </section>
                             <div class="curation-hover-btn">
                                 <a href="#">
-                                    <span>
-                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                    <span class="Put-it-in">
+                                        <img  src="./images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
@@ -410,5 +412,9 @@ function loadFn() {
     function showViewed() {
         console.log("this", this);
     }
+
+    // 장바구니
+    let Put_in_btn = domFn.qsa('.put-it-in');
+    console.log('Put_in_btn :', Put_in_btn);
 
 }
