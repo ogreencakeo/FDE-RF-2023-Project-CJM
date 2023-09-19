@@ -160,7 +160,7 @@
 
 /* 미니마이페이지 부분 */
 .mini-mypage{
-    width: 60px;
+    width: 70px;
     position: fixed;
     top: 35%;
     right: 0;
@@ -174,19 +174,22 @@
     border: 0px;
     cursor: pointer;
     background-color: rgb(244 246 249);
+    height: 56px;
 }
 .mini-mypage-wrap span{
     display: inline-block;
 }
 .mini-mypage-wrap{
-    position: relative;
+    posittop-bion: relative;
 }
 .mini-mypage-wrap>button>img{
     width: 30px;
     height: 30px;
     margin: 0px auto 6px;
 }
-
+.mini-mypage-lbtn{
+    background: url();
+}
 .top-bx{
     width: 100%;
     margin-top: 30px;
@@ -205,14 +208,17 @@
     height: 18px;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%,-50%);
     background-color: whitesmoke;
     border-radius: 50%;
 }
 .top-bx>span:last-child{
     position: absolute;
-    bottom: 0;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
 }
 
 /* footer부분 */

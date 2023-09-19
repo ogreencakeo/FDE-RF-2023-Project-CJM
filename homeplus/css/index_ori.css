@@ -33,7 +33,8 @@ a {
 }
 
 .main-ad-box{
-    width: 1200px;
+    /* width: 1200px; */
+    width: 1235px;
     margin: 0 auto;
     /* overflow: hidden; */
     position: relative;
@@ -526,6 +527,7 @@ a {
     top: 0;
     background-color: white;
     z-index: 2;
+    border-bottom: 1px solid rgb(235, 235, 235);
 }
 
 .shopping-curation nav {
@@ -548,7 +550,8 @@ a {
     height: 100%;
     width: 100%;
     font-size: 16px;
-    /* color: rgb(102, 102, 102); */
+    border: 0;
+    border-bottom: ;
     background-color: #fff;
     cursor: pointer;
 }
@@ -593,6 +596,7 @@ a {
     width: 1230px;
     height: 9250px;
     padding-bottom: 70px;
+    
 }
 
 .shopping-curation-box {

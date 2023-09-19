@@ -9,7 +9,7 @@ const domFn = {
 domFn.addEvt(window, "load", loadFn);
 
 function loadFn() {
-    console.log("로딩완료");
+    // console.log("로딩완료");
 
     // header 광고버튼
     const header_ad_close = domFn.qs('body');
@@ -130,7 +130,7 @@ function loadFn() {
     banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goBannerSlide));
 
     function goBannerSlide() {
-        console.log(" banner_slide 로딩완료");
+        // console.log(" banner_slide 로딩완료");
         if (stsWheel) return;
         stsWheel = 1;
         setTimeout(() => (stsWheel = 0), 400);
@@ -267,7 +267,7 @@ function loadFn() {
         });
     });
     const sub_change = domFn.qsa(".saja-item-img");
-    console.log("sub_change :", sub_change);
+    // console.log("sub_change :", sub_change);
     // domFn.addEvt(sub_change, 'click', (ele)=>{
     //     ele.location.href = "./sub.html";
     // });
@@ -280,7 +280,7 @@ function loadFn() {
     for (let x of curation_items_arr) {
         for (let y in x) {
             for (let i = 0; i < 4; i++) {
-                console.log("y :", y);
+                // console.log("y :", y);
                 // console.log('x[y] :', x[y]);
                 curation_hcode += `
                     <div class = "curation-item-img" ${
@@ -310,7 +310,7 @@ function loadFn() {
                             <div class="curation-hover-btn">
                                 <a href="#">
                                     <span class="Put-it-in">
-                                        <img  src="./images/saja-hover-btn1.png" alt="">
+                                        <img src="./images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
@@ -343,7 +343,7 @@ function loadFn() {
             }
         }
 
-        console.log(alm + "나야나");
+        // console.log(alm + "나야나");
         alm++;
     }
     curation_box.innerHTML = curation_hcode;
@@ -355,8 +355,6 @@ function loadFn() {
     
 
     // 큐레이션 버튼 이동
-   
-
     const snack_time = domFn.qs('#du').getBoundingClientRect().top; // 간식타임
     const crunchy = domFn.qs('#cham').getBoundingClientRect().top; // 아삭아삭
     const clear_skin = domFn.qs('#cl').getBoundingClientRect().top; // 맑은피부
@@ -385,10 +383,9 @@ function loadFn() {
         }
     }
 
-    const btnShop = domFn.qsa(".nav-btngo2");
     const targetId = { 간식타임: "du", 아삭아삭: "cham", 맑은피부: "cl", 캠핑가자: "do" };
 
-    btnShop.forEach((ele) => {
+    shopping_curation_btn.forEach((ele) => {
         domFn.addEvt(ele, "click", () => {
             // console.log(ele.innerText);
             shopping_curation_btn.forEach(x=>x.classList.remove('nav-check-red'));
@@ -409,23 +406,31 @@ function loadFn() {
     
 
     // 최근본 상품
-    let viewed_img = domFn.qs(".recentley-viewed-img");
-    let view_item = domFn.qsa(".saja-item-img>img");
-    console.log(saja_item_arr[1]["감자"]["이미지"]);
-    console.log(view_item);
+    // let viewed_img = domFn.qs(".recentley-viewed-img");
+    // let view_item = domFn.qsa(".saja-item-img>img");
+    // console.log(saja_item_arr[1]["감자"]["이미지"]);
+    // console.log(view_item);
 
     // 최근본 상품
-    view_item.forEach((ele) => {
-        console.log("ele", ele);
-        domFn.addEvt(ele, "click", showViewed);
-    });
+    // view_item.forEach((ele) => {
+    //     console.log("ele", ele);
+    //     domFn.addEvt(ele, "click", showViewed);
+    // });
 
-    function showViewed() {
-        console.log("this", this);
-    }
+    // function showViewed() {
+    //     console.log("this", this);
+    // }
 
     // 장바구니
-    let Put_in_btn = domFn.qsa('.put-it-in img');
-    console.log('Put_in_btn :', Put_in_btn);
+    const put_it_in = domFn.qsa(".Put-it-in");
+    console.log('put_it_in :', put_it_in);
 
+    put_it_in.forEach(ele=>{
+        domFn.addEvt(ele, 'click', showPutIn);
+    });
+
+    function showPutIn(){
+        console.log('로딩완료');
+        
+    }
 }
