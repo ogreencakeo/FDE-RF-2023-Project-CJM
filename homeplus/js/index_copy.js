@@ -36,7 +36,10 @@ function loadFn() {
 
     // header 광고버튼
     domFn.addEvt(header_ad_btn, 'click', ()=>{
-        header_ad_close.classList.add('header-ad-close');
+        let target = event.currentTarget.parentElement;
+        target.style.marginTop = '-82px';
+        target.style.transition = '.4s';
+        // header_ad_close.classList.add('header-ad-close');
     });
 
     // 카테고리 nav
@@ -101,19 +104,19 @@ function loadFn() {
         let isRight = this.classList.contains('m-rightbtn');
         let eachOne = domFn.qsaEl(main_slide, 'li');
         if(isRight){
-            main_slide.style.left = '-100%';
+            main_slide.style.left = 'calc(-200% - 50px)';
             main_slide.style.transition = ".4s ease-in-out";
             setTimeout(() => {
                 main_slide.appendChild(eachOne[0]);
-                main_slide.style.left = '0';
+                main_slide.style.left = '-100%';
                 main_slide.style.transition = 'none';
             }, 400);
         }else{
             main_slide.insertBefore(eachOne[eachOne.length-1], eachOne[0]);
-            main_slide.style.left = '-100%';
+            main_slide.style.left = '-200%';
             main_slide.style.transition = 'none';
             setTimeout(()=>{
-                main_slide.style.left = '0';
+                main_slide.style.left = '-100%';
                 main_slide.style.transition = '.4s ease-in-out';
             });
         }
