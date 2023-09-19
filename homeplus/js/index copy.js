@@ -414,7 +414,7 @@ function loadFn() {
     }
 
     // 장바구니
-    let Put_in_btn = domFn.qsa('.put-it-in');
+    let Put_in_btn = domFn.qsa('.put-it-in img');
     console.log('Put_in_btn :', Put_in_btn);
 
 }
