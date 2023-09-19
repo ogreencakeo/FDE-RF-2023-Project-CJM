@@ -228,12 +228,12 @@ function loadFn() {
                             <div class="saja-hover-btn">
                                 <a href="#">
                                     <span class="Put-it-in">
-                                        <img  src="./images/saja-hover-btn1.png" alt="">
+                                        <img src="./images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
                                     <span>
-                                        <img  src="./images/saja-hover-btn2.png" alt="">
+                                        <img src="./images/saja-hover-btn2.png" alt="">
                                     </span>
                                 </a>
                             </div>
