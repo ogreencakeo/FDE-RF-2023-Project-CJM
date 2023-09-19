@@ -97,6 +97,24 @@ function loadFn() {
     main_btn.forEach(ele => domFn.addEvt(ele, 'click', showMainSlide));
     function showMainSlide(){
         let isRight = this.classList.contains('m-rightbtn');
+        let eachOne = domFn.qsaEl(main_slide, 'li');
+        if(isRight){
+            main_slide.style.left = '-100%';
+            main_slide.style.transition = ".4s ease-in-out";
+            setTimeout(() => {
+                main_slide.appendChild(eachOne[0]);
+                main_slide.style.left = '0';
+                main_slide.style.transition = 'none';
+            }, 400);
+        }else{
+            main_slide.insertBefore(eachOne[eachOne.length-1], eachOne[0]);
+            main_slide.style.left = '-100%';
+            main_slide.style.transition = 'none';
+            setTimeout(()=>{
+                main_slide.style.left = '0';
+                main_slide.style.transition = '.4s ease-in-out';
+            });
+        }
     }
 
     // banner 슬라이드
