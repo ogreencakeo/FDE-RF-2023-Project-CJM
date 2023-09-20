@@ -1,27 +1,43 @@
+const domFn = {
+    qs: (x) => document.querySelector(x),
+    qsa: (x) => document.querySelectorAll(x),
+    qsEl: (el, x) => el.querySelector(x),
+    qsaEl: (el, x) => el.querySelectorAll(x),
+    addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn),
+};
 
-// console.log('saja_item_arr [1] >>', saja_item_arr[1]);
+domFn.addEvt(window, "load", loadFn);
 
-const addEvt = (ele, evt, fn) => {
-    ele.addEventListener(evt, fn);
-}
-
-window.addEventListener("load", loadFn());
 function loadFn() {
-    const move_to_exhibition = document.querySelector(".move-to-exhibition");
+    // console.log("로딩완료");
+
+    // header 광고버튼
+    const header_ad_btn = domFn.qs(".header-ad-btn");
+
+    const move_to_exhibition = domFn.qs(".move-to-exhibition");
+
     // 사자
-    let saja_items_div = document.querySelector(".saja-items-div");
-    let saja_nav_btn = document.querySelectorAll(".nav-btngo");
-    let saja_nbtn_length = saja_nav_btn.length; // 6
+    let saja_items_div = domFn.qs(".saja-items-div");
+    let saja_nav_btn = domFn.qsa(".nav-btngo");
     let saja_item_arr = [saja_items, saja_items2, saja_items3, saja_items4, saja_items5, saja_items6];
-    let saja_btn_next = document.querySelector(".saja-btn-next");
-    let saja_length_btn = document.querySelector(".saja-itmes-btnBx").querySelector("strong");
+    let saja_length_btn = domFn.qs(".saja-itmes-btnBx strong");
     const saja_nav_blength = saja_nav_btn.length;
+
     // 큐레이션
-    let curation_box = document.querySelector(".shopping-curation-box");
+    let curation_box = domFn.qs(".shopping-curation-box");
     const curation_items_arr = [curation_items1, curation_items2, curation_items3, curation_items4];
-    let shopping_curation_btn = document.querySelectorAll('.nav-btngo2');
+    let shopping_curation_btn = domFn.qsa(".nav-btngo2");
+
     let hcode = "";
     let curation_hcode = "";
+
+    // header 광고버튼
+    domFn.addEvt(header_ad_btn, "click", () => {
+        let target = event.currentTarget.parentElement;
+        target.style.marginTop = "-82px";
+        target.style.transition = ".4s";
+        // header_ad_close.classList.add('header-ad-close');
+    });
 
     // nav
     let stsWheel = 0;
@@ -32,121 +48,82 @@ function loadFn() {
         hcode += `
             <li>
                 <a href = "#">
-                    <img src="./images/move-to-exhibition${i + 1}.png" alt="">${exhibition_arr[i]}
+                    <img src="../images/move-to-exhibition${i + 1}.png" alt="">${exhibition_arr[i]}
                 </a>
             </li>
         `;
     }
     hcode += "</ul></nav>";
     move_to_exhibition.innerHTML = hcode;
-    
+
+    // main 슬라이드
+    const main_slide = domFn.qs(".main-ad-box ul");
+    const main_btn = domFn.qsa(".main-ad-box button");
+    main_btn.forEach((ele) => domFn.addEvt(ele, "click", showMainSlide));
+    function showMainSlide() {
+        let isRight = this.classList.contains("m-rightbtn");
+        let eachOne = domFn.qsaEl(main_slide, "li");
+        if (isRight) {
+            main_slide.style.left = "calc(-200% - 50px)";
+            main_slide.style.transition = ".4s ease-in-out";
+            setTimeout(() => {
+                main_slide.appendChild(eachOne[0]);
+                main_slide.style.left = "-100%";
+                main_slide.style.transition = "none";
+            }, 400);
+        } else {
+            main_slide.insertBefore(eachOne[eachOne.length - 1], eachOne[0]);
+            main_slide.style.left = "-200%";
+            main_slide.style.transition = "none";
+            setTimeout(() => {
+                main_slide.style.left = "-100%";
+                main_slide.style.transition = ".4s ease-in-out";
+            });
+        }
+    }
+
     // banner 슬라이드
-    const banner_slide = document.querySelector('.side-content-box ul');
-    const banner_btn = document.querySelectorAll('.side-content-box button');
+    const banner_slide = domFn.qs(".side-content-box ul");
+    const banner_btn = domFn.qsa(".side-content-box button");
     // console.log('banner_btn :', banner_btn);
 
-    banner_btn.forEach(ele => addEvt(ele, 'click', goSlide));
+    banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goBannerSlide));
 
-    function goSlide(){
-        if(stsWheel) return;
+    function goBannerSlide() {
+        // console.log(" banner_slide 로딩완료");
+        if (stsWheel) return;
         stsWheel = 1;
-        setTimeout(()=> stsWheel = 0 ,400);
+        setTimeout(() => (stsWheel = 0), 400);
 
-        let isRight = this.classList.contains('rightbtn');
-        let eachOne = banner_slide.querySelectorAll('li');
+        let isRight = this.classList.contains("rightbtn");
+        domFn.qsaEl(banner_slide, "li");
+        let eachOne = domFn.qsaEl(banner_slide, "li");
 
-        if(isRight){
-            banner_slide.style.left = '-100%';
-            banner_slide.style.transition = '.4s ease-in-out';
+        if (isRight) {
+            banner_slide.style.left = "-100%";
+            banner_slide.style.transition = ".4s ease-in-out";
             setTimeout(() => {
                 banner_slide.appendChild(eachOne[0]);
-                banner_slide.style.left = '0';
-                banner_slide.style.transition = 'none';
+                banner_slide.style.left = "0";
+                banner_slide.style.transition = "none";
             }, 400);
-        }else{
-            banner_slide.insertBefore(eachOne[eachOne.length-1], eachOne[0]);
-            banner_slide.style.left = '-100%';
-            banner_slide.style.transition = 'none';
+        } else {
+            banner_slide.insertBefore(eachOne[eachOne.length - 1], eachOne[0]);
+            banner_slide.style.left = "-100%";
+            banner_slide.style.transition = "none";
             setTimeout(() => {
-                banner_slide.style.left = '0';
-                banner_slide.style.transition = '.4s ease-in-out';
+                banner_slide.style.left = "0";
+                banner_slide.style.transition = ".4s ease-in-out";
             }, 0);
         }
     }
 
-    
-    // 큐레이션
-    // curation_hcode 
-    for (let x of curation_items_arr) {
-        for(let y in x){
-            for(let i=0; i<4; i++){
-                console.log('y :', y);
-                // console.log('x[y] :', x[y]);
-                curation_hcode += `
-                    <div class = "curation-item-img">
-                        <div class = "curation-img-wrap">
-                            <img src="./images/shopping-curation/${x[y]["이미지"]}" alt="큐레이션이미지"></img>
-                            <section>
-                                ${
-                                    y == '더블팩샐러드' ||
-                                    y == '히알루론산마스크팩' ||
-                                    y == '도넛튜브' ||
-                                    y == '해먹매쉬라운지튜브' ||
-                                    y == '보조배터리' ||
-                                    y == '콜맨레이체어' ||
-                                    y == '춘천닭갈비' ||
-                                    y == '춘천닭갈비'
-                                        ? '<span style="display:none"></span>'
-                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
-                                }
-                                <span><img src="./images/delivery-market.png" alt=""></span>
-                            </section>
-                            <div class="curation-hover-btn">
-                                <a href="#">
-                                    <span>
-                                        <img src="./images/saja-hover-btn1.png" alt="">
-                                    </span>
-                                </a>
-                                <a href="#">
-                                    <span>
-                                        <img src="./images/saja-hover-btn2.png" alt="">
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                        <section>
-                            <div class="curation-item-explanation">
-                                <div class="curation-item-exp-name">
-                                    <p>${x[y]["추천상품문구"]}</p>
-                                    <p>${x[y]["이름"]}
-                                </div>
-                                <div class="curation-item-exp-price">
-                                    <p>${x[y]["정가가격"]}</p>
-                                    <span>${x[y]["할인율"]}</span>
-                                    <span>${x[y]["판매가"]}</span>
-                                    <span>${x[y]["가격그램"]}</span>
-                                </div>
-                                <div class="curation-item-exp-review">
-                                    <span>${x[y]["리뷰"]}</span>
-                                    <span>${x[y]["월구매수"]}</span>
-                                </div>
-                            </div>
-                        </section>
-                    </div> 
-                `;
-            }
-        }
-        
-    }
-    curation_box.innerHTML = curation_hcode;
     // 사자
-    
-
-    for (let x of saja_nav_btn) {
-        x.onclick = () => {
-            saja_nav_btn.forEach(x => x.classList.remove('nav-check-red'));
-            x.classList.add('nav-check-red');
-            let btxt = x.innerHTML;
+    saja_nav_btn.forEach((ele) => {
+        domFn.addEvt(ele, "click", () => {
+            saja_nav_btn.forEach((x) => x.classList.remove("nav-check-red"));
+            ele.classList.add("nav-check-red");
+            let btxt = ele.innerHTML;
             // console.log('btxt :', btxt);
             let saja_length;
             // console.log(saja_nav_blength); // 6
@@ -187,8 +164,9 @@ function loadFn() {
                 saja_hcode += `
                     <div class="saja-item-box">
                         <div class = "saja-item-img">
-                            <img src="./images/saja-item/${saja_key[x]["이미지"]}" alt="사자이미지">
-                            </img>
+                            <img src="../images/saja-item/${
+                                saja_key[x]["이미지"]
+                            }" alt="사자이미지" onClick="location.href='./sub.html'"></img>
                             <section>
                                 ${
                                     x == "깐마늘" ||
@@ -203,21 +181,21 @@ function loadFn() {
                                     x == "지퍼락" ||
                                     x == "그린박스"
                                         ? '<span style="display:none"></span>'
-                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
+                                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
                                 }
                                 <span>
-                                    <img src="./images/delivery-market.png" alt="">
+                                    <img src="../images/delivery-market.png" alt="">
                                 </span>
                             </section>
                             <div class="saja-hover-btn">
                                 <a href="#">
-                                    <span>
-                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                    <span class="Put-it-in">
+                                        <img src="../images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/saja-hover-btn2.png" alt="">
+                                        <img src="../images/saja-hover-btn2.png" alt="">
                                     </span>
                                 </a>
                             </div>
@@ -245,29 +223,178 @@ function loadFn() {
                 // console.log(saja_hcode);
             }
             saja_items_div.innerHTML = saja_hcode;
-        };
-        // console.log("saja_items_div.innerHTML ", saja_items_div.innerHTML);
-    }
-    // const sub_change = domFn.qs('.saja-item-img img');
-    // console.log('sub_change :', sub_change);
+        });
+    });
+
+    // console.log("sub_change :", sub_change);
     // domFn.addEvt(sub_change, 'click', (ele)=>{
     //     ele.location.href = "./sub.html";
     // });
 
+    const idName = { 두유: "du", 참깨흑임자드레싱: "cham", 클렌징폼: "cl", 도넛튜브: "do" };
 
-    for(let x of shopping_curation_btn){
-        
-        let shopping_curation_btxt = shopping_curation_btn.innerText;
-        console.log('shopping_curation_btn x>>', x);
-        
-        x.onclick = () => {
-            console.log(x.classList.contains('nav-check-red'));
-            shopping_curation_btn.forEach(x=> x.classList.remove('nav-check-red'));
-            x.classList.add('nav-check-red');
-            console.log(x.classList.contains('nav-check-red'))
-            // console.log('shopping_curation_btn x >>>', x);
-            
+    // 큐레이션
+    // curation_hcode
+    let alm = 0;
+    for (let x of curation_items_arr) {
+        for (let y in x) {
+            for (let i = 0; i < 4; i++) {
+                // console.log("y :", y);
+                // console.log('x[y] :', x[y]);
+                curation_hcode += `
+                    <div class = "curation-item-img" ${
+                        (y == "두유" || y == "참깨흑임자드레싱" || y == "클렌징폼" || y == "도넛튜브") && i == 0
+                            ? "id=" + idName[y]
+                            : ""
+                    }>
+                        <div class = "curation-img-wrap">
+                            <img src="../images/shopping-curation/${
+                                x[y]["이미지"]
+                            }" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
+                            <section>
+                                ${
+                                    y == "더블팩샐러드" ||
+                                    y == "히알루론산마스크팩" ||
+                                    y == "도넛튜브" ||
+                                    y == "해먹매쉬라운지튜브" ||
+                                    y == "보조배터리" ||
+                                    y == "콜맨레이체어" ||
+                                    y == "춘천닭갈비" ||
+                                    y == "춘천닭갈비"
+                                        ? '<span style="display:none"></span>'
+                                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
+                                }
+                                <span><img src="../images/delivery-market.png" alt=""></span>
+                            </section>
+                            <div class="curation-hover-btn">
+                                <a href="#">
+                                    <span class="Put-it-in">
+                                        <img src="../images/saja-hover-btn1.png" alt="">
+                                    </span>
+                                </a>
+                                <a href="#">
+                                    <span>
+                                        <img src="../images/saja-hover-btn2.png" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <section>
+                            <div class="curation-item-explanation">
+                                <div class="curation-item-exp-name">
+                                    <p>${x[y]["추천상품문구"]}</p>
+                                    <p>${x[y]["이름"]}
+                                </div>
+                                <div class="curation-item-exp-price">
+                                    <p>${x[y]["정가가격"]}</p>
+                                    <span>${x[y]["할인율"]}</span>
+                                    <span>${x[y]["판매가"]}</span>
+                                    <span>${x[y]["가격그램"]}</span>
+                                </div>
+                                <div class="curation-item-exp-review">
+                                    <span>${x[y]["리뷰"]}</span>
+                                    <span>${x[y]["월구매수"]}</span>
+                                </div>
+                            </div>
+                        </section>
+                    </div> 
+                `;
+            }
+        }
+
+        // console.log(alm + "나야나");
+        alm++;
+    }
+    curation_box.innerHTML = curation_hcode;
+
+    saja_nav_btn[0].click();
+
+    // 큐레이션 버튼 이동
+    const snack_time = domFn.qs("#du").getBoundingClientRect().top; // 간식타임
+    const crunchy = domFn.qs("#cham").getBoundingClientRect().top; // 아삭아삭
+    const clear_skin = domFn.qs("#cl").getBoundingClientRect().top; // 맑은피부
+    const go_camping = domFn.qs("#do").getBoundingClientRect().top; // 캠핑가자
+
+    domFn.addEvt(window, "scroll", goCuration);
+    domFn.addEvt(window, "wheel", () => {
+        stsClick = 0;
+    });
+
+    // console.log('snack_time', snack_time);
+    // 현재클릭상태 여부(0-사용안함,1-사용함)
+    let stsClick = 0;
+    let scY;
+    // console.log('snack_time', snack_time);
+    function goCuration() {
+        if (stsClick) return;
+
+        scY = window.scrollY;
+        console.log(scY);
+
+        // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
+        if (scY >= snack_time && scY < crunchy) {
+            shopping_curation_btn.forEach((ele) => ele.classList.remove("nav-check-red"));
+            shopping_curation_btn[0].classList.add("nav-check-red");
+        }
+        if (scY >= crunchy && scY < clear_skin) {
+            shopping_curation_btn.forEach((ele) => ele.classList.remove("nav-check-red"));
+            shopping_curation_btn[1].classList.add("nav-check-red");
+        }
+        if (scY >= clear_skin && scY < go_camping) {
+            shopping_curation_btn.forEach((ele) => ele.classList.remove("nav-check-red"));
+            shopping_curation_btn[2].classList.add("nav-check-red");
+        }
+        if (scY >= go_camping) {
+            shopping_curation_btn.forEach((ele) => ele.classList.remove("nav-check-red"));
+            shopping_curation_btn[3].classList.add("nav-check-red");
         }
     }
-}
 
+    const targetId = {
+        간식타임: "du",
+        아삭아삭: "cham",
+        맑은피부: "cl",
+        캠핑가자: "do",
+    };
+
+    shopping_curation_btn.forEach((ele) => {
+        domFn.addEvt(ele, "click", () => {
+            stsClick = 1;
+            shopping_curation_btn.forEach((x) => {
+                console.log(x.isSameNode(ele));
+                if (!x.isSameNode(ele)) x.classList.remove("nav-check-red");
+            });
+            // console.log(ele.innerText);
+            ele.classList.add("nav-check-red");
+            location.href = "index.html#" + targetId[ele.innerText];
+        });
+    });
+
+    // 장바구니
+    const put_it_in = domFn.qsa(".Put-it-in");
+    // 장바구니 숫자 확인
+    const basket_check_num1 = domFn.qs(".basket-check-num1");
+    const basket_check_num2 = domFn.qs(".basket-check-num2");
+    let basket_num = 0;
+    // 장바구니 버튼
+
+    // console.log('put_it_in :', put_it_in);
+
+    put_it_in.forEach((ele) => {
+        domFn.addEvt(ele, "click", (e) => {
+            e.preventDefault();
+            // console.log('로딩완료');
+            basket_num++;
+            // console.log(basket_num);
+            if (basket_num > 10) {
+                alert("장바구니는 담을 수 있는 물품은 10개까지입니다.");
+                return;
+            }
+            basket_check_num1.innerHTML = `${basket_num}`;
+            basket_check_num2.innerHTML = `${basket_num}`;
+        });
+    });
+
+    const top_click = domFn.qs(".top-bx");
+    domFn.addEvt(top_click, "click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+}
