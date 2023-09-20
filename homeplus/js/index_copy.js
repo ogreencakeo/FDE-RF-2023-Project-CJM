@@ -266,7 +266,7 @@ function loadFn() {
             saja_items_div.innerHTML = saja_hcode;
         });
     });
-    const sub_change = domFn.qsa(".saja-item-img");
+
     // console.log("sub_change :", sub_change);
     // domFn.addEvt(sub_change, 'click', (ele)=>{
     //     ele.location.href = "./sub.html";
@@ -428,9 +428,6 @@ function loadFn() {
     let basket_num = 0;
     // 장바구니 버튼
 
-    // 큐레이션 
-    const curation_item = domFn.qsa('.curation-item-img');
-    console.log('curation_item :', curation_item);
     console.log('put_it_in :', put_it_in);
 
     put_it_in.forEach(ele=>{
@@ -445,8 +442,13 @@ function loadFn() {
             }
             basket_check_num.innerHTML = `${basket_num}`;
         });
-        
     });
+
+    // 최근본 상품
+    const saja_item = domFn.qsa('.saja-item-img>img');
+    const curation_item = domFn.qsa('.curation-img-wrap>img');
+    console.log('saja_item', saja_item);
+    console.log('curation_item', curation_item);
     
     
 }
