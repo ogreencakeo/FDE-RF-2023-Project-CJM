@@ -446,8 +446,7 @@ function loadFn() {
             basket_check_num.innerHTML = `${basket_num}`;
             let target = e.currentTarget;
             curation_item.forEach(ele=>{
-                let result = ele.isSameNode(target);
-                console.log(result);
+                console.log(ele);
             })
         });
         
