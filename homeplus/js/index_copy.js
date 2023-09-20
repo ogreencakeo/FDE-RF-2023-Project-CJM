@@ -444,10 +444,6 @@ function loadFn() {
                 return;
             }
             basket_check_num.innerHTML = `${basket_num}`;
-            let target = e.currentTarget;
-            curation_item.forEach(ele=>{
-                console.log(ele);
-            })
         });
         
     });
