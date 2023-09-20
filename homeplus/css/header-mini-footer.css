@@ -73,8 +73,11 @@
 }
 
 /* 헤더부분- 검색창 */
-.search-bar input {
+.search-bar{
     position: relative;
+}
+.search-bar input {
+    /* position: relative; */
     border: 1px solid #ccc;
     border-radius: 20px;
     width: 500px;
@@ -84,6 +87,17 @@
     padding: 10px;
     /* top: -17px; */
     /* text-align: center; */
+}
+.search-bar button{
+    position: absolute;
+    right: 3%;
+    top: 15%;
+    background: url(../images/spritesheet.png) no-repeat;
+    background-position: -1423px -6px;
+    width: 24px;
+    height: 24px;
+    border: 0px;
+    cursor: pointer;
 }
 
 /* 헤더부분 - GNB메뉴 */
