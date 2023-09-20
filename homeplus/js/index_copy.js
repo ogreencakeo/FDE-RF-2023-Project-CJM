@@ -1,211 +1,252 @@
 const domFn = {
-    qs: (x) => document.querySelector(x),
-    qsa: (x) => document.querySelectorAll(x),
-    qsEl: (el, x) => el.querySelector(x),
-    qsaEl: (el, x) => el.querySelectorAll(x),
-    addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn),
+  qs: (x) => document.querySelector(x),
+  qsa: (x) => document.querySelectorAll(x),
+  qsEl: (el, x) => el.querySelector(x),
+  qsaEl: (el, x) => el.querySelectorAll(x),
+  addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn),
 };
 
 domFn.addEvt(window, "load", loadFn);
 
 function loadFn() {
-    // console.log("로딩완료");
+  // console.log("로딩완료");
 
+<<<<<<< HEAD
+  // header 광고버튼
+  const header_ad_close = domFn.qs("body");
+  const header_ad_btn = domFn.qs(".header-ad-btn");
+=======
     // header 광고버튼
-    const header_ad_close = domFn.qs('body');
     const header_ad_btn = domFn.qs('.header-ad-btn');
+>>>>>>> bc9aa6e6192558efb35cbe4b07770a1b1b3bbda1
 
-    const move_to_exhibition = domFn.qs(".move-to-exhibition");
+  const move_to_exhibition = domFn.qs(".move-to-exhibition");
 
-    // 사자
-    let saja_items_div = domFn.qs(".saja-items-div");
-    let saja_nav_btn = domFn.qsa(".nav-btngo");
-    let saja_item_arr = [saja_items, saja_items2, saja_items3, saja_items4, saja_items5, saja_items6];
-    let saja_length_btn = domFn.qs(".saja-itmes-btnBx strong");
-    const saja_nav_blength = saja_nav_btn.length;
-    
-    // 큐레이션
-    let curation_box = domFn.qs(".shopping-curation-box");
-    const curation_items_arr = [curation_items1, curation_items2, curation_items3, curation_items4];
-    let shopping_curation_btn = domFn.qsa(".nav-btngo2");
-    
-    let hcode = "";
-    let curation_hcode = "";
+  // 사자
+  let saja_items_div = domFn.qs(".saja-items-div");
+  let saja_nav_btn = domFn.qsa(".nav-btngo");
+  let saja_item_arr = [
+    saja_items,
+    saja_items2,
+    saja_items3,
+    saja_items4,
+    saja_items5,
+    saja_items6,
+  ];
+  let saja_length_btn = domFn.qs(".saja-itmes-btnBx strong");
+  const saja_nav_blength = saja_nav_btn.length;
 
-    
+  // 큐레이션
+  let curation_box = domFn.qs(".shopping-curation-box");
+  const curation_items_arr = [
+    curation_items1,
+    curation_items2,
+    curation_items3,
+    curation_items4,
+  ];
+  let shopping_curation_btn = domFn.qsa(".nav-btngo2");
 
-    // header 광고버튼
-    domFn.addEvt(header_ad_btn, 'click', ()=>{
-        let target = event.currentTarget.parentElement;
-        target.style.marginTop = '-82px';
-        target.style.transition = '.4s';
-        // header_ad_close.classList.add('header-ad-close');
-    });
+  let hcode = "";
+  let curation_hcode = "";
 
-    // 카테고리 nav
-    let catagory_btn = domFn.qs('.catagory-icon');
+<<<<<<< HEAD
+  // header 광고버튼
+  domFn.addEvt(header_ad_btn, "click", () => {
+    let target = event.currentTarget.parentElement;
+    target.style.marginTop = "-82px";
+    target.style.transition = ".4s";
+    // header_ad_close.classList.add('header-ad-close');
+  });
 
-    let catagory_wrap = domFn.qs('.catagory-wrap');
-    let cata_nav1 = domFn.qs('.cata-nav-section1');
-    let catagory_btn2 = domFn.qs('.cata-wrap-nav1');
+  // 카테고리 nav
+  let catagory_btn = domFn.qs(".catagory-icon");
 
-    // domFn.addEvt(catagory_btn, 'click', ()=>{
-    //     // 카테고리
-    //     for(let x in catagory){
-    //         console.log('x', x);
-    //         console.log('catagory[x]', catagory[x]);
-    //         catagory_wrap.innerHTML += `
-    //             <div>
-    //                 <ol>
-    //                     <span>${x}</span>
-    //                     <div>
-    //                         <ul>
-    //                             <span>${catagory[x]}</span>
-    //                             ${showCode(catagory[x])}
-    //                         </ul>
-    //                     </div>
-    //                 </ol>
-    //             </div>
-    //         `;
-    //     }
+  let catagory_wrap = domFn.qs(".catagory-wrap");
+  let cata_nav1 = domFn.qs(".cata-nav-section1");
+  let catagory_btn2 = domFn.qs(".cata-wrap-nav1");
 
-    //     function showCode(){
-    //         for(let j in obj){obj[j].map((val) => `<li><div><span>${val}</span></div></li>`).join("")}
-    //     }
-    // });
-    // <div class="cata-nav1"></div>
-    //                     <div class="cata-nav2"></div>
-    //                     <div class="cata-nav3"></div>
-    
+  // domFn.addEvt(catagory_btn, 'click', ()=>{
+  //     // 카테고리
+  //     for(let x in catagory){
+  //         console.log('x', x);
+  //         console.log('catagory[x]', catagory[x]);
+  //         catagory_wrap.innerHTML += `
+  //             <div>
+  //                 <ol>
+  //                     <span>${x}</span>
+  //                     <div>
+  //                         <ul>
+  //                             <span>${catagory[x]}</span>
+  //                             ${showCode(catagory[x])}
+  //                         </ul>
+  //                     </div>
+  //                 </ol>
+  //             </div>
+  //         `;
+  //     }
 
+  //     function showCode(){
+  //         for(let j in obj){obj[j].map((val) => `<li><div><span>${val}</span></div></li>`).join("")}
+  //     }
+  // });
+  // <div class="cata-nav1"></div>
+  //                     <div class="cata-nav2"></div>
+  //                     <div class="cata-nav3"></div>
+=======
+>>>>>>> bc9aa6e6192558efb35cbe4b07770a1b1b3bbda1
 
-    // nav
-    let stsWheel = 0;
+  // nav
+  let stsWheel = 0;
 
-    // nav
-    hcode += "<nav><ul>";
-    for (let i = 0; i < exhibition_arr.length; i++) {
-        hcode += `
+  // nav
+  hcode += "<nav><ul>";
+  for (let i = 0; i < exhibition_arr.length; i++) {
+    hcode += `
             <li>
                 <a href = "#">
-                    <img src="./images/move-to-exhibition${i + 1}.png" alt="">${exhibition_arr[i]}
+<<<<<<< HEAD
+                    <img src="./images/move-to-exhibition${i + 1}.png" alt="">${
+      exhibition_arr[i]
+    }
+=======
+                    <img src="../images/move-to-exhibition${i + 1}.png" alt="">${exhibition_arr[i]}
+>>>>>>> bc9aa6e6192558efb35cbe4b07770a1b1b3bbda1
                 </a>
             </li>
         `;
+  }
+  hcode += "</ul></nav>";
+  move_to_exhibition.innerHTML = hcode;
+
+  // main 슬라이드
+  const main_slide = domFn.qs(".main-ad-box ul");
+  const main_btn = domFn.qsa(".main-ad-box button");
+  main_btn.forEach((ele) => domFn.addEvt(ele, "click", showMainSlide));
+  function showMainSlide() {
+    let isRight = this.classList.contains("m-rightbtn");
+    let eachOne = domFn.qsaEl(main_slide, "li");
+    if (isRight) {
+      main_slide.style.left = "calc(-200% - 50px)";
+      main_slide.style.transition = ".4s ease-in-out";
+      setTimeout(() => {
+        main_slide.appendChild(eachOne[0]);
+        main_slide.style.left = "-100%";
+        main_slide.style.transition = "none";
+      }, 400);
+    } else {
+      main_slide.insertBefore(eachOne[eachOne.length - 1], eachOne[0]);
+      main_slide.style.left = "-200%";
+      main_slide.style.transition = "none";
+      setTimeout(() => {
+        main_slide.style.left = "-100%";
+        main_slide.style.transition = ".4s ease-in-out";
+      });
     }
-    hcode += "</ul></nav>";
-    move_to_exhibition.innerHTML = hcode;
+  }
 
-    // main 슬라이드
-    const main_slide = domFn.qs('.main-ad-box ul');
-    const main_btn = domFn.qsa('.main-ad-box button');
-    main_btn.forEach(ele => domFn.addEvt(ele, 'click', showMainSlide));
-    function showMainSlide(){
-        let isRight = this.classList.contains('m-rightbtn');
-        let eachOne = domFn.qsaEl(main_slide, 'li');
-        if(isRight){
-            main_slide.style.left = 'calc(-200% - 50px)';
-            main_slide.style.transition = ".4s ease-in-out";
-            setTimeout(() => {
-                main_slide.appendChild(eachOne[0]);
-                main_slide.style.left = '-100%';
-                main_slide.style.transition = 'none';
-            }, 400);
-        }else{
-            main_slide.insertBefore(eachOne[eachOne.length-1], eachOne[0]);
-            main_slide.style.left = '-200%';
-            main_slide.style.transition = 'none';
-            setTimeout(()=>{
-                main_slide.style.left = '-100%';
-                main_slide.style.transition = '.4s ease-in-out';
-            });
-        }
+  // banner 슬라이드
+  const banner_slide = domFn.qs(".side-content-box ul");
+  const banner_btn = domFn.qsa(".side-content-box button");
+  // console.log('banner_btn :', banner_btn);
+
+  banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goBannerSlide));
+
+  function goBannerSlide() {
+    // console.log(" banner_slide 로딩완료");
+    if (stsWheel) return;
+    stsWheel = 1;
+    setTimeout(() => (stsWheel = 0), 400);
+
+    let isRight = this.classList.contains("rightbtn");
+    domFn.qsaEl(banner_slide, "li");
+    let eachOne = domFn.qsaEl(banner_slide, "li");
+
+    if (isRight) {
+      banner_slide.style.left = "-100%";
+      banner_slide.style.transition = ".4s ease-in-out";
+      setTimeout(() => {
+        banner_slide.appendChild(eachOne[0]);
+        banner_slide.style.left = "0";
+        banner_slide.style.transition = "none";
+      }, 400);
+    } else {
+      banner_slide.insertBefore(eachOne[eachOne.length - 1], eachOne[0]);
+      banner_slide.style.left = "-100%";
+      banner_slide.style.transition = "none";
+      setTimeout(() => {
+        banner_slide.style.left = "0";
+        banner_slide.style.transition = ".4s ease-in-out";
+      }, 0);
     }
+  }
 
-    // banner 슬라이드
-    const banner_slide = domFn.qs(".side-content-box ul");
-    const banner_btn = domFn.qsa(".side-content-box button");
-    // console.log('banner_btn :', banner_btn);
+  // 사자
+  saja_nav_btn.forEach((ele) => {
+    domFn.addEvt(ele, "click", () => {
+      saja_nav_btn.forEach((x) => x.classList.remove("nav-check-red"));
+      ele.classList.add("nav-check-red");
+      let btxt = ele.innerHTML;
+      // console.log('btxt :', btxt);
+      let saja_length;
+      // console.log(saja_nav_blength); // 6
+      switch (btxt) {
+        case "MD추천":
+          saja_length = 1;
+          saja_key = saja_item_arr[0];
+          break;
+        case "신선한":
+          saja_length = 2;
+          saja_key = saja_item_arr[1];
+          break;
+        case "식품":
+          saja_length = 3;
+          saja_key = saja_item_arr[2];
+          break;
+        case "간편한":
+          saja_length = 4;
+          saja_key = saja_item_arr[3];
+          break;
+        case "가공필템":
+          saja_length = 5;
+          saja_key = saja_item_arr[4];
+          break;
+        case "생활용품":
+          saja_length = 6;
+          saja_key = saja_item_arr[5];
+          break;
+      }
+      saja_length_btn.innerHTML = `다음상품 ${saja_length} / ${saja_nav_blength}`;
+      // console.log("saja_key:", saja_key);
 
-    banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goBannerSlide));
-
-    function goBannerSlide() {
-        // console.log(" banner_slide 로딩완료");
-        if (stsWheel) return;
-        stsWheel = 1;
-        setTimeout(() => (stsWheel = 0), 400);
-
-        let isRight = this.classList.contains("rightbtn");
-        domFn.qsaEl(banner_slide, "li");
-        let eachOne = domFn.qsaEl(banner_slide, "li");
-
-        if (isRight) {
-            banner_slide.style.left = "-100%";
-            banner_slide.style.transition = ".4s ease-in-out";
-            setTimeout(() => {
-                banner_slide.appendChild(eachOne[0]);
-                banner_slide.style.left = "0";
-                banner_slide.style.transition = "none";
-            }, 400);
-        } else {
-            banner_slide.insertBefore(eachOne[eachOne.length - 1], eachOne[0]);
-            banner_slide.style.left = "-100%";
-            banner_slide.style.transition = "none";
-            setTimeout(() => {
-                banner_slide.style.left = "0";
-                banner_slide.style.transition = ".4s ease-in-out";
-            }, 0);
-        }
-    }
-
-    
-    // 사자
-    saja_nav_btn.forEach((ele) => {
-        domFn.addEvt(ele, "click", () => {
-            saja_nav_btn.forEach((x) => x.classList.remove("nav-check-red"));
-            ele.classList.add("nav-check-red");
-            let btxt = ele.innerHTML;
-            // console.log('btxt :', btxt);
-            let saja_length;
-            // console.log(saja_nav_blength); // 6
-            switch (btxt) {
-                case "MD추천":
-                    saja_length = 1;
-                    saja_key = saja_item_arr[0];
-                    break;
-                case "신선한":
-                    saja_length = 2;
-                    saja_key = saja_item_arr[1];
-                    break;
-                case "식품":
-                    saja_length = 3;
-                    saja_key = saja_item_arr[2];
-                    break;
-                case "간편한":
-                    saja_length = 4;
-                    saja_key = saja_item_arr[3];
-                    break;
-                case "가공필템":
-                    saja_length = 5;
-                    saja_key = saja_item_arr[4];
-                    break;
-                case "생활용품":
-                    saja_length = 6;
-                    saja_key = saja_item_arr[5];
-                    break;
-            }
-            saja_length_btn.innerHTML = `다음상품 ${saja_length} / ${saja_nav_blength}`;
-            // console.log("saja_key:", saja_key);
-
-            let saja_hcode = "";
-            for (let x in saja_key) {
-                // console.log("x :", x);
-                // console.log("saja_key[x]:", saja_key[x]);
-                // console.log('saja_key[x]["이미지"] :', saja_key[x]["이미지"]);
-                saja_hcode += `
+      let saja_hcode = "";
+      for (let x in saja_key) {
+        // console.log("x :", x);
+        // console.log("saja_key[x]:", saja_key[x]);
+        // console.log('saja_key[x]["이미지"] :', saja_key[x]["이미지"]);
+        saja_hcode += `
                     <div class="saja-item-box">
                         <div class = "saja-item-img">
+<<<<<<< HEAD
                             <img src="./images/saja-item/${
+                              saja_key[x]["이미지"]
+                            }" alt="사자이미지" onClick="location.href='./sub.html'"></img>
+                            <section>
+                                ${
+                                  x == "깐마늘" ||
+                                  x == "감자" ||
+                                  x == "고구마스틱" ||
+                                  x == "사과" ||
+                                  x == "강낭콩" ||
+                                  x == "피자치즈" ||
+                                  x == "마열라면" ||
+                                  x == "오렌지망고" ||
+                                  x == "오감자그라탕" ||
+                                  x == "지퍼락" ||
+                                  x == "그린박스"
+                                    ? '<span style="display:none"></span>'
+                                    : '<span><img src="./images/saja-icon1.png" alt=""></span>'
+=======
+                            <img src="../images/saja-item/${
                                 saja_key[x]["이미지"]
                             }" alt="사자이미지" onClick="location.href='./sub.html'"></img>
                             <section>
@@ -222,21 +263,22 @@ function loadFn() {
                                     x == "지퍼락" ||
                                     x == "그린박스"
                                         ? '<span style="display:none"></span>'
-                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
+                                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
+>>>>>>> bc9aa6e6192558efb35cbe4b07770a1b1b3bbda1
                                 }
                                 <span>
-                                    <img src="./images/delivery-market.png" alt="">
+                                    <img src="../images/delivery-market.png" alt="">
                                 </span>
                             </section>
                             <div class="saja-hover-btn">
                                 <a href="#">
                                     <span class="Put-it-in">
-                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                        <img src="../images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/saja-hover-btn2.png" alt="">
+                                        <img src="../images/saja-hover-btn2.png" alt="">
                                     </span>
                                 </a>
                             </div>
@@ -261,61 +303,70 @@ function loadFn() {
                         </section>
                     </div>
                 `;
-                // console.log(saja_hcode);
-            }
-            saja_items_div.innerHTML = saja_hcode;
-        });
+        // console.log(saja_hcode);
+      }
+      saja_items_div.innerHTML = saja_hcode;
     });
+  });
 
-    // console.log("sub_change :", sub_change);
-    // domFn.addEvt(sub_change, 'click', (ele)=>{
-    //     ele.location.href = "./sub.html";
-    // });
+  // console.log("sub_change :", sub_change);
+  // domFn.addEvt(sub_change, 'click', (ele)=>{
+  //     ele.location.href = "./sub.html";
+  // });
 
-    const idName = { 두유: "du", 참깨흑임자드레싱: "cham", 클렌징폼: "cl", 도넛튜브: "do" };
+  const idName = {
+    두유: "du",
+    참깨흑임자드레싱: "cham",
+    클렌징폼: "cl",
+    도넛튜브: "do",
+  };
 
-    // 큐레이션
-    // curation_hcode
-    let alm = 0;
-    for (let x of curation_items_arr) {
-        for (let y in x) {
-            for (let i = 0; i < 4; i++) {
-                // console.log("y :", y);
-                // console.log('x[y] :', x[y]);
-                curation_hcode += `
+  // 큐레이션
+  // curation_hcode
+  let alm = 0;
+  for (let x of curation_items_arr) {
+    for (let y in x) {
+      for (let i = 0; i < 4; i++) {
+        // console.log("y :", y);
+        // console.log('x[y] :', x[y]);
+        curation_hcode += `
                     <div class = "curation-item-img" ${
-                        (y == "두유" || y == "참깨흑임자드레싱" || y == "클렌징폼" || y == "도넛튜브") && i == 0
-                            ? "id=" + idName[y]
-                            : ""
+                      (y == "두유" ||
+                        y == "참깨흑임자드레싱" ||
+                        y == "클렌징폼" ||
+                        y == "도넛튜브") &&
+                      i == 0
+                        ? "id=" + idName[y]
+                        : ""
                     }>
                         <div class = "curation-img-wrap">
                             <img src="./images/shopping-curation/${
-                                x[y]["이미지"]
+                              x[y]["이미지"]
                             }" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
                             <section>
                                 ${
-                                    y == "더블팩샐러드" ||
-                                    y == "히알루론산마스크팩" ||
-                                    y == "도넛튜브" ||
-                                    y == "해먹매쉬라운지튜브" ||
-                                    y == "보조배터리" ||
-                                    y == "콜맨레이체어" ||
-                                    y == "춘천닭갈비" ||
-                                    y == "춘천닭갈비"
-                                        ? '<span style="display:none"></span>'
-                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
+                                  y == "더블팩샐러드" ||
+                                  y == "히알루론산마스크팩" ||
+                                  y == "도넛튜브" ||
+                                  y == "해먹매쉬라운지튜브" ||
+                                  y == "보조배터리" ||
+                                  y == "콜맨레이체어" ||
+                                  y == "춘천닭갈비" ||
+                                  y == "춘천닭갈비"
+                                    ? '<span style="display:none"></span>'
+                                    : '<span><img src="./images/saja-icon1.png" alt=""></span>'
                                 }
-                                <span><img src="./images/delivery-market.png" alt=""></span>
+                                <span><img src="../images/delivery-market.png" alt=""></span>
                             </section>
                             <div class="curation-hover-btn">
                                 <a href="#">
                                     <span class="Put-it-in">
-                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                        <img src="../images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/saja-hover-btn2.png" alt="">
+                                        <img src="../images/saja-hover-btn2.png" alt="">
                                     </span>
                                 </a>
                             </div>
@@ -340,87 +391,137 @@ function loadFn() {
                         </section>
                     </div> 
                 `;
-            }
-        }
-
-        // console.log(alm + "나야나");
-        alm++;
-    }
-    curation_box.innerHTML = curation_hcode;
-
-    
-
-    saja_nav_btn[0].click();
-
-    
-
-    // 큐레이션 버튼 이동
-    const snack_time = domFn.qs('#du').getBoundingClientRect().top; // 간식타임
-    const crunchy = domFn.qs('#cham').getBoundingClientRect().top; // 아삭아삭
-    const clear_skin = domFn.qs('#cl').getBoundingClientRect().top; // 맑은피부
-    const go_camping = domFn.qs('#do').getBoundingClientRect().top; // 캠핑가자
-    
-    domFn.addEvt(window, 'scroll', goCuration);
-
-    // console.log('snack_time', snack_time);
-    function goCuration(){
-        // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
-        if(window.scrollY>=snack_time){
-            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
-            shopping_curation_btn[0].classList.add('nav-check-red');
-        }
-        if(window.scrollY>=crunchy){
-            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
-            shopping_curation_btn[1].classList.add('nav-check-red');
-        }
-        if(window.scrollY>=clear_skin){
-            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
-            shopping_curation_btn[2].classList.add('nav-check-red');
-        }
-        if(window.scrollY>=go_camping){
-            shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
-            shopping_curation_btn[3].classList.add('nav-check-red');
-        }
+      }
     }
 
-    const targetId = { 간식타임: "du", 아삭아삭: "cham", 맑은피부: "cl", 캠핑가자: "do" };
+    // console.log(alm + "나야나");
+    alm++;
+  }
+  curation_box.innerHTML = curation_hcode;
 
-    shopping_curation_btn.forEach((ele) => {
-        domFn.addEvt(ele, "click", () => {
-            // console.log(ele.innerText);
-            shopping_curation_btn.forEach(x=>x.classList.remove('nav-check-red'));
-            ele.classList.add('nav-check-red');
-            location.href = "index.html#" + targetId[ele.innerText];
-        });
+  saja_nav_btn[0].click();
+
+  // 큐레이션 버튼 이동
+  const snack_time = domFn.qs("#du").getBoundingClientRect().top; // 간식타임
+  const crunchy = domFn.qs("#cham").getBoundingClientRect().top; // 아삭아삭
+  const clear_skin = domFn.qs("#cl").getBoundingClientRect().top; // 맑은피부
+  const go_camping = domFn.qs("#do").getBoundingClientRect().top; // 캠핑가자
+
+  domFn.addEvt(window, "scroll", goCuration);
+  domFn.addEvt(window, "wheel", () => {stsClick = 0});
+
+  // 현재클릭상태 여부(0-사용안함,1-사용함)
+  let stsClick = 0;
+  let scY;
+  // console.log('snack_time', snack_time);
+  function goCuration() {
+    if (stsClick) return;
+
+    scY = window.scrollY; 
+    console.log(scY);
+
+    // shopping_curation_btn.forEach(ele=>ele.classList.remove('nav-check-red'));
+    if (scY >= snack_time && scY < crunchy) {
+      shopping_curation_btn.forEach((ele) =>
+        ele.classList.remove("nav-check-red")
+      );
+      shopping_curation_btn[0].classList.add("nav-check-red");
+    }
+    if (scY >= crunchy && scY < clear_skin) {
+      shopping_curation_btn.forEach((ele) =>
+        ele.classList.remove("nav-check-red")
+      );
+      shopping_curation_btn[1].classList.add("nav-check-red");
+    }
+    if (scY >= clear_skin && scY < go_camping) {
+      shopping_curation_btn.forEach((ele) =>
+        ele.classList.remove("nav-check-red")
+      );
+      shopping_curation_btn[2].classList.add("nav-check-red");
+    }
+    if (scY >= go_camping) {
+      shopping_curation_btn.forEach((ele) =>
+        ele.classList.remove("nav-check-red")
+      );
+      shopping_curation_btn[3].classList.add("nav-check-red");
+    }
+  }
+
+  const targetId = {
+    간식타임: "du",
+    아삭아삭: "cham",
+    맑은피부: "cl",
+    캠핑가자: "do",
+  };
+
+  shopping_curation_btn.forEach((ele) => {
+    domFn.addEvt(ele, "click", () => {
+      stsClick = 1;
+      shopping_curation_btn.forEach((x) => {
+        console.log(x.isSameNode(ele));
+        if (!x.isSameNode(ele)) x.classList.remove("nav-check-red");
+      });
+      // console.log(ele.innerText);
+      ele.classList.add("nav-check-red");
+      location.href = "index.html#" + targetId[ele.innerText];
     });
+  });
 
-    // 큐레이션 색상
-    // shopping_curation_btn.forEach((ele) => {
-    //     domFn.addEvt(ele, "click", (e) => {
-    //         console.log("shopping_curation_btn 로딩완료");
-    //         shopping_curation_btn.forEach((x) => x.classList.remove("nav-check-red"));
-    //         ele.classList.add("nav-check-red");
-    //     });
-    // });
+<<<<<<< HEAD
+  // 큐레이션 색상
+  // shopping_curation_btn.forEach((ele) => {
+  //     domFn.addEvt(ele, "click", (e) => {
+  //         console.log("shopping_curation_btn 로딩완료");
+  //         shopping_curation_btn.forEach((x) => x.classList.remove("nav-check-red"));
+  //         ele.classList.add("nav-check-red");
+  //     });
+  // });
 
-    
+  // 최근본 상품
+  // let viewed_img = domFn.qs(".recentley-viewed-img");
+  // let view_item = domFn.qsa(".saja-item-img>img");
+  // console.log(saja_item_arr[1]["감자"]["이미지"]);
+  // console.log(view_item);
 
-    // 최근본 상품
-    // let viewed_img = domFn.qs(".recentley-viewed-img");
-    // let view_item = domFn.qsa(".saja-item-img>img");
-    // console.log(saja_item_arr[1]["감자"]["이미지"]);
-    // console.log(view_item);
+  // 최근본 상품
+  // view_item.forEach((ele) => {
+  //     console.log("ele", ele);
+  //     domFn.addEvt(ele, "click", showViewed);
+  // });
 
-    // 최근본 상품
-    // view_item.forEach((ele) => {
-    //     console.log("ele", ele);
-    //     domFn.addEvt(ele, "click", showViewed);
-    // });
+  // function showViewed() {
+  //     console.log("this", this);
+  // }
 
-    // function showViewed() {
-    //     console.log("this", this);
-    // }
+  // 장바구니
+  const put_it_in = domFn.qsa(".Put-it-in");
+  // 장바구니 숫자 확인
+  const basket_check_num = domFn.qs(".basket-check-num");
+  let basket_num = 0;
+  // 장바구니 버튼
 
+  console.log("put_it_in :", put_it_in);
+
+  put_it_in.forEach((ele) => {
+    domFn.addEvt(ele, "click", (e) => {
+      e.preventDefault();
+      console.log("로딩완료");
+      basket_num++;
+      console.log(basket_num);
+      if (basket_num > 10) {
+        alert("장바구니는 담을 수 있는 물품은 10개까지입니다.");
+        return;
+      }
+      basket_check_num.innerHTML = `${basket_num}`;
+    });
+  });
+
+  // 최근본 상품
+  const saja_item = domFn.qsa(".saja-item-img>img");
+  const curation_item = domFn.qsa(".curation-img-wrap>img");
+  console.log("saja_item", saja_item);
+  console.log("curation_item", curation_item);
+=======
     // 장바구니
     const put_it_in = domFn.qsa(".Put-it-in");
     // 장바구니 숫자 확인
@@ -428,14 +529,14 @@ function loadFn() {
     let basket_num = 0;
     // 장바구니 버튼
 
-    console.log('put_it_in :', put_it_in);
+    // console.log('put_it_in :', put_it_in);
 
     put_it_in.forEach(ele=>{
         domFn.addEvt(ele, 'click', (e)=>{
             e.preventDefault();
-            console.log('로딩완료');
+            // console.log('로딩완료');
             basket_num++;
-            console.log(basket_num);
+            // console.log(basket_num);
             if(basket_num>10){
                 alert('장바구니는 담을 수 있는 물품은 10개까지입니다.');
                 return;
@@ -443,12 +544,8 @@ function loadFn() {
             basket_check_num.innerHTML = `${basket_num}`;
         });
     });
-
-    // 최근본 상품
-    const saja_item = domFn.qsa('.saja-item-img>img');
-    const curation_item = domFn.qsa('.curation-img-wrap>img');
-    console.log('saja_item', saja_item);
-    console.log('curation_item', curation_item);
     
-    
+    const top_click = domFn.qs('.top-bx');
+    domFn.addEvt(top_click, 'click', ()=> window.scrollTo({top : 0, behavior:'smooth'}));
+>>>>>>> bc9aa6e6192558efb35cbe4b07770a1b1b3bbda1
 }

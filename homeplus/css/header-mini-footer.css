@@ -300,7 +300,7 @@
 }
 
 .introduce-gide-right::after {
-    content: url(./images/company-introduce-icon1.png);
+    content: url(../images/company-introduce-icon1.png);
     position: absolute;
     transform: translate(-16px, -38px);
 }
