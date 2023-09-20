@@ -423,14 +423,25 @@ function loadFn() {
 
     // 장바구니
     const put_it_in = domFn.qsa(".Put-it-in");
+    // 장바구니 숫자 확인
+    const basket_check_num = domFn.qs('.basket-check-num');
+    let basket_num = 0;
     console.log('put_it_in :', put_it_in);
 
     put_it_in.forEach(ele=>{
-        domFn.addEvt(ele, 'click', showPutIn);
+        domFn.addEvt(ele, 'click', (e)=>{
+            e.preventDefault();
+            console.log('로딩완료');
+            basket_num++;
+            console.log(basket_num);
+            if(basket_num>10){
+                alert('장바구니는 담을 수 있는 물품은 10개까지입니다.');
+                return;
+            }
+            basket_check_num.innerHTML = `${basket_num}`;
+            e.currentTarget
+            console.log(e.currentTarget);
+        });
     });
 
-    function showPutIn(){
-        console.log('로딩완료');
-        
-    }
 }

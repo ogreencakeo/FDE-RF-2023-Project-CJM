@@ -221,6 +221,25 @@
     color: #fff;
 }
 
+/* 미니마이페이지 - 장바구니 */
+.shopping-basket-bx{
+    position: relative;
+}
+
+.basket-check-num{
+    border: 1px solid #000;
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-color: #df0011;
+    border-radius: 50%;
+    position: absolute;
+    color: #fff;
+    right: 3%;
+    top: -10%;
+
+}
+
 /* footer부분 */
 .footer {
     width: 100%;
