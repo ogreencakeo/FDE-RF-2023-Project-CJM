@@ -19,6 +19,7 @@
         height: 300px;
     }
 
+    /* 메인광고 */
     .main-ad-box{
         max-width: 800px;
     }
@@ -26,6 +27,7 @@
         max-width: 800px;
         height: auto;
     }
+    /* nav */
     .move-to-exhibition{
         max-width: 700px;
     }
@@ -42,5 +44,35 @@
     .move-to-exhibition ul li img{
         transform: scale(1.25);
     }
+
+    /* 사자버튼 */
+    .saja-event-nav-wrap nav ul li button{
+        font-size: 1.5vw;
+    }
+    .saja-items-div{
+        flex-wrap: wrap;
+        max-width: 970px;
+        /* outline: 1px solid red; */
+    }
+
+    .saja-item-box{
+        margin: 0;
+    }
+
+    .saja-item-exp-name p{
+        font-size: 1.2vw;
+    }
+
+    /* 쇼핑큐레이션 */
+    .shopping-curation nav ul li button{
+        font-size: 1.5vw;
+    }
+
+    
+
+
+}
+
+@media screen and (max-width : 975px) {
 
 }
