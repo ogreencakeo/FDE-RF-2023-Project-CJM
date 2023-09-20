@@ -373,7 +373,8 @@ function loadFn() {
     // 장바구니
     const put_it_in = domFn.qsa(".Put-it-in");
     // 장바구니 숫자 확인
-    const basket_check_num = domFn.qs(".basket-check-num");
+    const basket_check_num1 = domFn.qs(".basket-check-num1");
+    const basket_check_num2 = domFn.qs(".basket-check-num2");
     let basket_num = 0;
     // 장바구니 버튼
 
@@ -389,7 +390,8 @@ function loadFn() {
                 alert("장바구니는 담을 수 있는 물품은 10개까지입니다.");
                 return;
             }
-            basket_check_num.innerHTML = `${basket_num}`;
+            basket_check_num1.innerHTML = `${basket_num}`;
+            basket_check_num2.innerHTML = `${basket_num}`;
         });
     });
 

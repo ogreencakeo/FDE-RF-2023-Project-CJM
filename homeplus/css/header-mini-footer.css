@@ -101,18 +101,31 @@
 }
 
 /* 헤더부분 - GNB메뉴 자식요소 위치 설정 */
-.customer-icon button:first-child {
+.customer-icon button:first-of-type {
     background-position: 0 0;
 }
 
-.customer-icon button:nth-child(2) {
+.customer-icon button:nth-last-of-type(2) {
     background-position: 0 -36px;
 }
 
-.customer-icon button:last-child {
+.customer-icon button:last-of-type {
     background-position: 0 -72px;
 }
 
+/* 헤더부분 - 장바구니 아이콘 */
+.basket-check-num1{
+    border: 1px solid #000;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #df0011;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    transform: translate(-10px,-25px);
+}
 /* 헤더부분 - GNB메뉴 호버시 색상변경 */
 .customer-icon button:first-child:hover {
     background-position: -36px 0;
@@ -121,6 +134,7 @@
 .customer-icon button:nth-child(2):hover {
     background-position: -36px -36px;
 }
+
 
 /* 헤더부분 - nav 메뉴 */
 .header-menu ul {
@@ -226,7 +240,7 @@
     position: relative;
 }
 
-.basket-check-num{
+.basket-check-num2{
     border: 1px solid #000;
     width: 15px;
     height: 15px;
@@ -237,7 +251,6 @@
     color: #fff;
     right: 3%;
     top: -10%;
-
 }
 
 /* footer부분 */
@@ -300,7 +313,7 @@
 }
 
 .introduce-gide-right::after {
-    content: url(../images/company-introduce-icon1.png);
+    content: url(./images/company-introduce-icon1.png);
     position: absolute;
     transform: translate(-16px, -38px);
 }

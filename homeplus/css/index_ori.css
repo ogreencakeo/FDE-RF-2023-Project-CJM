@@ -62,6 +62,7 @@ a {
     background: url(../images/slide_button.png) no-repeat;
     top: calc(50% - 73.9px / 2);
     border: 0px;
+    cursor: pointer;
 }
 
 .m-leftbtn{
