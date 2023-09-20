@@ -90,6 +90,8 @@ body * {
     position: absolute;
     top: calc(50% - 24px/2);
     display: inline-block;
+    border: 0;
+    background-color: white;
 }
 .see-more-left{
     left: 0;

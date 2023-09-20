@@ -9,16 +9,11 @@ domFn.addEvt(window, 'load', loadFn);
 
 // 사진
 const see_more_btn = domFn.qsa('.product-see-more-wrap button');
-// const see_more_right = domFn.qs('.see-more-right');
-
-// 따라다니는 원
-// const following_target = domFn.qs('.following-target');
-// const following_bx = domFn.qs('.following-bx');
 
 // 좋아요 버튼
 const like_btn = domFn.qsa('.like-btn');
 const like_btn_target = domFn.qsa('.like-btn>span');
-const see_more_slide = domFn.qs('.detail-see-more-img');
+
 
 // 상품 수량 버튼 (-, +)
 const purchase_btn = domFn.qsa('.purchase-btn>button');
@@ -52,38 +47,45 @@ const notice_info = domFn.qs('.notice-information table');
 // 상품주의사항
 const precautions_box = domFn.qs('.product-precautions');
 
+// 사진버튼
+const see_more_images = domFn.qsa('.detail-see-more-img img');
+const follow_target = domFn.qs('.following-target');
+console.log('see_more_images, ', see_more_images);
+console.log('followubf', follow_target);
+const more_images_arr = [
+    '../images/product-detail/product-detail-see-more1.jpg',
+    '../images/product-detail/product-detail-see-more2.jpg',
+    '../images/product-detail/product-detail-see-more3.jpg',
+    '../images/product-detail/product-detail-see-more4.jpg',
+    '../images/product-detail/product-detail-see-more5.jpg',
+];
+
 function loadFn(){
-    // 따라다니는 박스
-    // following_target.onmousemove = (e)=>{
-    //     following_bx.style.top = e.clientY + 'px';
-    //     following_bx.style.left = e.clientX +'px';
-    //     console.log('pageY', e.pageY);
-    //     console.log('pageX', e.pageX);
-    // };
 
-    // following_target.onmouseenter = () => {
-    //     following_bx.style.opacity = 1;
-    // };
-    
-    // following_target.onmouseleave = () => {
-    //     following_bx.style.opacity = 0;
-    // }
+    see_more_images.forEach(ele=>{
+        domFn.addEvt(ele, 'click', (e, idx)=>{
+            console.log('로딩완료');
+            let e = ele[idx];
+            console.log(e);
+        });
+        
+    });
 
-    // // 사진
-    // console.log(see_more_btn);
-    // see_more_btn.forEach(ele=>{
-    //     domFn.addEvt(ele, 'click', nextShow);
-    // })
-
-    // function nextShow(){
-    //     let see_more_right = this.classList.contains('see-more-right');
-    //     console.log(see_more_right)
-    //     if(see_more_right){
-    //         see_more_slide.left = '-200px';
-    //         see_more_slide.transform = '.4s ease-in-out';
+    // let seq = 0;
+    // function showImages(){
+    //     console.log('this',this);
+    //     if(this = more_images_arr[seq]){
+    //         follow_target.innerHTML = `
+    //             <img src="${more_images_arr[seq]}" alt="">
+    //         `;
     //     }
-    // }
+    //     seq++;
+    //     this.tagName('SRC')
+    //     console.log(more_images_arr[seq]);
 
+        
+    // }
+    
     // 좋아요 버튼
     like_btn.forEach(ele=>{
         domFn.addEvt(ele, 'click', ()=>{
