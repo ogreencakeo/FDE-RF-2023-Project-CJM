@@ -12,7 +12,6 @@ function loadFn() {
     // console.log("로딩완료");
 
     // header 광고버튼
-    const header_ad_close = domFn.qs('body');
     const header_ad_btn = domFn.qs('.header-ad-btn');
 
     const move_to_exhibition = domFn.qs(".move-to-exhibition");
@@ -42,42 +41,6 @@ function loadFn() {
         // header_ad_close.classList.add('header-ad-close');
     });
 
-    // 카테고리 nav
-    let catagory_btn = domFn.qs('.catagory-icon');
-
-    let catagory_wrap = domFn.qs('.catagory-wrap');
-    let cata_nav1 = domFn.qs('.cata-nav-section1');
-    let catagory_btn2 = domFn.qs('.cata-wrap-nav1');
-
-    // domFn.addEvt(catagory_btn, 'click', ()=>{
-    //     // 카테고리
-    //     for(let x in catagory){
-    //         console.log('x', x);
-    //         console.log('catagory[x]', catagory[x]);
-    //         catagory_wrap.innerHTML += `
-    //             <div>
-    //                 <ol>
-    //                     <span>${x}</span>
-    //                     <div>
-    //                         <ul>
-    //                             <span>${catagory[x]}</span>
-    //                             ${showCode(catagory[x])}
-    //                         </ul>
-    //                     </div>
-    //                 </ol>
-    //             </div>
-    //         `;
-    //     }
-
-    //     function showCode(){
-    //         for(let j in obj){obj[j].map((val) => `<li><div><span>${val}</span></div></li>`).join("")}
-    //     }
-    // });
-    // <div class="cata-nav1"></div>
-    //                     <div class="cata-nav2"></div>
-    //                     <div class="cata-nav3"></div>
-    
-
 
     // nav
     let stsWheel = 0;
@@ -88,7 +51,7 @@ function loadFn() {
         hcode += `
             <li>
                 <a href = "#">
-                    <img src="./images/move-to-exhibition${i + 1}.png" alt="">${exhibition_arr[i]}
+                    <img src="../images/move-to-exhibition${i + 1}.png" alt="">${exhibition_arr[i]}
                 </a>
             </li>
         `;
@@ -205,7 +168,7 @@ function loadFn() {
                 saja_hcode += `
                     <div class="saja-item-box">
                         <div class = "saja-item-img">
-                            <img src="./images/saja-item/${
+                            <img src="../images/saja-item/${
                                 saja_key[x]["이미지"]
                             }" alt="사자이미지" onClick="location.href='./sub.html'"></img>
                             <section>
@@ -222,21 +185,21 @@ function loadFn() {
                                     x == "지퍼락" ||
                                     x == "그린박스"
                                         ? '<span style="display:none"></span>'
-                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
+                                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
                                 }
                                 <span>
-                                    <img src="./images/delivery-market.png" alt="">
+                                    <img src="../images/delivery-market.png" alt="">
                                 </span>
                             </section>
                             <div class="saja-hover-btn">
                                 <a href="#">
                                     <span class="Put-it-in">
-                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                        <img src="../images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/saja-hover-btn2.png" alt="">
+                                        <img src="../images/saja-hover-btn2.png" alt="">
                                     </span>
                                 </a>
                             </div>
@@ -289,7 +252,7 @@ function loadFn() {
                             : ""
                     }>
                         <div class = "curation-img-wrap">
-                            <img src="./images/shopping-curation/${
+                            <img src="../images/shopping-curation/${
                                 x[y]["이미지"]
                             }" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
                             <section>
@@ -303,19 +266,19 @@ function loadFn() {
                                     y == "춘천닭갈비" ||
                                     y == "춘천닭갈비"
                                         ? '<span style="display:none"></span>'
-                                        : '<span><img src="./images/saja-icon1.png" alt=""></span>'
+                                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
                                 }
-                                <span><img src="./images/delivery-market.png" alt=""></span>
+                                <span><img src="../images/delivery-market.png" alt=""></span>
                             </section>
                             <div class="curation-hover-btn">
                                 <a href="#">
                                     <span class="Put-it-in">
-                                        <img src="./images/saja-hover-btn1.png" alt="">
+                                        <img src="../images/saja-hover-btn1.png" alt="">
                                     </span>
                                 </a>
                                 <a href="#">
                                     <span>
-                                        <img src="./images/saja-hover-btn2.png" alt="">
+                                        <img src="../images/saja-hover-btn2.png" alt="">
                                     </span>
                                 </a>
                             </div>
@@ -394,33 +357,6 @@ function loadFn() {
         });
     });
 
-    // 큐레이션 색상
-    // shopping_curation_btn.forEach((ele) => {
-    //     domFn.addEvt(ele, "click", (e) => {
-    //         console.log("shopping_curation_btn 로딩완료");
-    //         shopping_curation_btn.forEach((x) => x.classList.remove("nav-check-red"));
-    //         ele.classList.add("nav-check-red");
-    //     });
-    // });
-
-    
-
-    // 최근본 상품
-    // let viewed_img = domFn.qs(".recentley-viewed-img");
-    // let view_item = domFn.qsa(".saja-item-img>img");
-    // console.log(saja_item_arr[1]["감자"]["이미지"]);
-    // console.log(view_item);
-
-    // 최근본 상품
-    // view_item.forEach((ele) => {
-    //     console.log("ele", ele);
-    //     domFn.addEvt(ele, "click", showViewed);
-    // });
-
-    // function showViewed() {
-    //     console.log("this", this);
-    // }
-
     // 장바구니
     const put_it_in = domFn.qsa(".Put-it-in");
     // 장바구니 숫자 확인
@@ -428,14 +364,14 @@ function loadFn() {
     let basket_num = 0;
     // 장바구니 버튼
 
-    console.log('put_it_in :', put_it_in);
+    // console.log('put_it_in :', put_it_in);
 
     put_it_in.forEach(ele=>{
         domFn.addEvt(ele, 'click', (e)=>{
             e.preventDefault();
-            console.log('로딩완료');
+            // console.log('로딩완료');
             basket_num++;
-            console.log(basket_num);
+            // console.log(basket_num);
             if(basket_num>10){
                 alert('장바구니는 담을 수 있는 물품은 10개까지입니다.');
                 return;
@@ -443,12 +379,7 @@ function loadFn() {
             basket_check_num.innerHTML = `${basket_num}`;
         });
     });
-
-    // 최근본 상품
-    const saja_item = domFn.qsa('.saja-item-img>img');
-    const curation_item = domFn.qsa('.curation-img-wrap>img');
-    console.log('saja_item', saja_item);
-    console.log('curation_item', curation_item);
     
-    
+    const top_click = domFn.qs('.top-bx');
+    domFn.addEvt(top_click, 'click', ()=> window.scrollTo({top : 0, behavior:'smooth'}));
 }

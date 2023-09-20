@@ -186,7 +186,7 @@ function loadFn(){
         // console.log(x);
         precautions_box.innerHTML += `
             <div class="product-precautions-box">
-                <img src="./images/product-detail/${x[0]}.jpg" alt="">
+                <img src="../images/product-detail/${x[0]}.jpg" alt="">
                 <div class="product-precautions-content">
                     <span>${x[1]}</span>
                     <span>
