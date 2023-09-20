@@ -428,6 +428,9 @@ function loadFn() {
     let basket_num = 0;
     // 장바구니 버튼
 
+    // 큐레이션 
+    const curation_item = domFn.qsa('.curation-item-img');
+    console.log('curation_item :', curation_item);
     console.log('put_it_in :', put_it_in);
 
     put_it_in.forEach(ele=>{
@@ -441,9 +444,14 @@ function loadFn() {
                 return;
             }
             basket_check_num.innerHTML = `${basket_num}`;
-            e.currentTarget
-            console.log(e.currentTarget.parentNode.parentNode);
+            let target = e.currentTarget;
+            curation_item.forEach(ele=>{
+                let result = ele.isSameNode(target);
+                console.log(result);
+            })
         });
+        
     });
-
+    
+    
 }
