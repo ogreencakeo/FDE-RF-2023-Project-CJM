@@ -586,26 +586,20 @@ a {
 
 .shopping-curation-wrap {
     max-width: 1230px;
-    height: 9250px;
+    /* height: 9250px; */
     padding-bottom: 70px;
     
 }
 
 .shopping-curation-box {
     display: flex;
-    width: 1200px;
-    /* height: 6000px; */
-    height: 9250px;
+    max-width: 1200px;
+    /* height: 9250px; */
     margin: 0 auto;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-/* .shopping-curation-box{
-    width: 270px;
-    height: 392px;
-    margin-top: 70px;
-} */
 .curation-item-img {
     width: 270px;
     height: 392px;
