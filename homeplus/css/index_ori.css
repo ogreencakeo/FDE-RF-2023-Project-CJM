@@ -2,10 +2,6 @@
 html{
     scroll-behavior: smooth;
 }
-body * {
-    /* outline: 2px dashed rgb(195, 236, 141); */
-
-}
 
 a {
     text-decoration: none;
@@ -20,9 +16,6 @@ a {
     overflow: hidden;
 }
 
-.section-wrap {
-    /* background-color: yellow; */
-}
 
 /* 섹션부분 - 광고배너 */
 .section-ad-banner {
@@ -107,13 +100,13 @@ a {
 /* 메인부분 - 기획전 이동 */
 .main-wrap {
     position: relative;
-    width: 1230px;
+    max-width: 1230px;
     margin: 0 auto;
 }
 
 .move-to-exhibition {
     width: 1198px;
-    height: 146.84px;
+    /* height: 146.84px; */
     padding: 59px 16px 50px;
     margin: 0 auto;
     border-bottom: 1px solid red;
@@ -123,7 +116,7 @@ a {
 .move-to-exhibition nav ul {
     display: flex;
     width: 1198.03px;
-    height: 146.859px;
+    /* height: 146.859px; */
     /* 간격 일정하게 */
     justify-content: space-evenly;
 }
@@ -131,7 +124,7 @@ a {
 .move-to-exhibition nav ul li a {
     display: block;
     width: 99.984px;
-    height: 129.914px;
+    /* height: 129.914px; */
     text-align: center;
     font-size: 15px;
     white-space: normal;
@@ -140,7 +133,7 @@ a {
 /* 메인부분 - 기획전 이미지 */
 .move-to-exhibition nav ul li img {
     width: 99.984px;
-    height: 99.984px;
+    /* height: 99.984px; */
     margin-bottom: 9.5px;
 }
 
@@ -199,7 +192,7 @@ a {
 /* 메인부분 -사자 */
 .purchase-event {
     padding: 60px 0;
-    width: 1230px;
+    max-width: 1230px;
     height: 1526.87px;
     padding: 60px 0 70px;
 }
@@ -421,8 +414,6 @@ a {
     font-size: 12px;
 }
 
-.saja-item-exp-price span {}
-
 .saja-item-exp-price span:first-of-type {
     margin: 7px 5px 10px 0;
     font-size: 27px;
@@ -552,7 +543,6 @@ a {
     width: 100%;
     font-size: 16px;
     border: 0;
-    border-bottom: ;
     background-color: #fff;
     cursor: pointer;
 }

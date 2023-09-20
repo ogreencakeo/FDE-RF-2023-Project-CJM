@@ -87,9 +87,9 @@
 }
 
 /* 헤더부분 - GNB메뉴 */
-/* .customer-icon {
-    height: 100px;
-} */
+.customer-icon {
+    display: flex;
+}
 
 .customer-icon button {
     height: 36px;
@@ -98,19 +98,21 @@
     border: none;
     background-color: #fff;
     background: url(../images/icons.png) no-repeat;
+    display: block;
 }
 
 /* 헤더부분 - GNB메뉴 자식요소 위치 설정 */
-.customer-icon button:first-of-type {
+.customer-icon button:first-child {
     background-position: 0 0;
 }
 
-.customer-icon button:nth-last-of-type(2) {
+.customer-icon button:nth-child(2) {
     background-position: 0 -36px;
 }
 
-.customer-icon button:last-of-type {
+.customer-icon button:last-child {
     background-position: 0 -72px;
+    position: relative;
 }
 
 /* 헤더부분 - 장바구니 아이콘 */
@@ -124,7 +126,9 @@
     color: #fff;
     line-height: 15px;
     text-align: center;
-    transform: translate(-10px,-25px);
+    position: absolute;
+    top: -35%;
+    right: -35%;
 }
 /* 헤더부분 - GNB메뉴 호버시 색상변경 */
 .customer-icon button:first-child:hover {
@@ -193,9 +197,7 @@
 .mini-mypage-wrap span{
     display: inline-block;
 }
-.mini-mypage-wrap{
-    posittop-bion: relative;
-}
+
 .mini-mypage-wrap>button>img{
     width: 30px;
     height: 30px;
