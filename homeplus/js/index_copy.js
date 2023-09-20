@@ -426,6 +426,8 @@ function loadFn() {
     // 장바구니 숫자 확인
     const basket_check_num = domFn.qs('.basket-check-num');
     let basket_num = 0;
+    // 장바구니 버튼
+
     console.log('put_it_in :', put_it_in);
 
     put_it_in.forEach(ele=>{
@@ -440,7 +442,7 @@ function loadFn() {
             }
             basket_check_num.innerHTML = `${basket_num}`;
             e.currentTarget
-            console.log(e.currentTarget);
+            console.log(e.currentTarget.parentNode.parentNode);
         });
     });
 
