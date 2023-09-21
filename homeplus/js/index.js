@@ -59,6 +59,8 @@ function loadFn() {
     // main 슬라이드
     const main_slide = domFn.qs(".main-ad-box ul");
     const main_btn = domFn.qsa(".main-ad-box button");
+   
+
     main_btn.forEach((ele) => domFn.addEvt(ele, "click", showMainSlide));
     function showMainSlide() {
         let isRight = this.classList.contains("m-rightbtn");
@@ -82,12 +84,15 @@ function loadFn() {
         }
     }
 
+   
     // banner 슬라이드
     const banner_slide = domFn.qs(".side-content-box ul");
     const banner_btn = domFn.qsa(".side-content-box button");
+    const indic = domFn.qsa('.indic li');
     // console.log('banner_btn :', banner_btn);
 
     banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goBannerSlide));
+    domFn.qsaEl(banner_slide, 'li').forEach((ele, idx) => {ele.setAttribute('data-seq', idx)});
 
     function goBannerSlide() {
         // console.log(" banner_slide 로딩완료");
@@ -116,6 +121,16 @@ function loadFn() {
                 banner_slide.style.transition = ".4s ease-in-out";
             }, 0);
         }
+        domFn.qsaEl(main_slide, 'li').forEach(
+            (ele, idx) => ele.setAttribute('data-seq', idx)
+        );
+    
+        let nowSeq = banner_slide[isRight? 1:0].getAttribute('data-seq');
+        indic.forEach((ele, idx)=>{
+            if(idx==nowSeq) ele.classList.add('on');
+            else ele.classList.remove('on');
+        });
+    
     }
 
     // 사자
