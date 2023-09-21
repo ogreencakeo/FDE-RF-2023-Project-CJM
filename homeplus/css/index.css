@@ -2,6 +2,10 @@
 html{
     scroll-behavior: smooth;
 }
+html, body, h1, h2, h3, h4, h5, h6, div, p, header, main, video, audio, footer, nav, aside, article, span, em, strong, i, ol, ul, li, a, legend, fieldset, label, input, select, textarea, button, time, abbr, address, area, b, br, table, caption, summary, tbody, thead, tfoot, tr, th, td, dl, dt, dd, figcaption, figure, form, iframe, mark, pre, hr{
+    font-family: "Apple SD Gothic Neo", AppleGothic, globalWebFont, Malgun-gothic, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
 
 a {
     text-decoration: none;
