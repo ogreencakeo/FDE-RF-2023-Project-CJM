@@ -48,42 +48,20 @@ const notice_info = domFn.qs('.notice-information table');
 const precautions_box = domFn.qs('.product-precautions');
 
 // 사진버튼
-// const see_more_images = domFn.qsa('.detail-see-more-img img');
-// const follow_target = domFn.qs('.following-target');
-// console.log('see_more_images, ', see_more_images);
-// console.log('followubf', follow_target);
-// const more_images_arr = [
-//     '../images/product-detail/product-detail-see-more1.jpg',
-//     '../images/product-detail/product-detail-see-more2.jpg',
-//     '../images/product-detail/product-detail-see-more3.jpg',
-//     '../images/product-detail/product-detail-see-more4.jpg',
-//     '../images/product-detail/product-detail-see-more5.jpg',
-// ];
+const see_more_images = domFn.qsa('.detail-see-more-img img');
+const follow_target = domFn.qs('.following-target img');
 
 function loadFn(){
 
-//     see_more_images.forEach(ele=>{
-//         domFn.addEvt(ele, 'click', (e, idx)=>{
-//             console.log('로딩완료');
-//             more_images_arr[idx].forEach(val => console.log(val));
-//         });
-        
-//     });
+    // 사진 버튼
+    see_more_images.forEach(ele=> domFn.addEvt(ele, 'click', showImages) );
 
-    // let seq = 0;
-    // function showImages(){
-    //     console.log('this',this);
-    //     if(this = more_images_arr[seq]){
-    //         follow_target.innerHTML = `
-    //             <img src="${more_images_arr[seq]}" alt="">
-    //         `;
-    //     }
-    //     seq++;
-    //     this.tagName('SRC')
-    //     console.log(more_images_arr[seq]);
-
-        
-    // }
+    function showImages(){
+        console.log(this);
+        let see_images_arr = this.getAttribute('src');
+        console.log(see_images_arr);
+        follow_target.setAttribute('src', see_images_arr);
+    }
     
     // 좋아요 버튼
     like_btn.forEach(ele=>{
