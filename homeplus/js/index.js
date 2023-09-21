@@ -386,8 +386,8 @@ function loadFn() {
             // console.log('로딩완료');
             basket_num++;
             // console.log(basket_num);
-            if (basket_num > 10) {
-                alert("장바구니는 담을 수 있는 물품은 10개까지입니다.");
+            if (basket_num > 30) {
+                alert("장바구니는 담을 수 있는 물품은 30개까지입니다.");
                 return;
             }
             basket_check_num1.innerHTML = `${basket_num}`;
