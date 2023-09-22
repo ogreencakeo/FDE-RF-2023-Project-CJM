@@ -127,10 +127,17 @@ function loadFn() {
     const banner_slide = domFn.qs(".side-content-box ul");
     const banner_btn = domFn.qsa(".side-content-box button");
     const indic = domFn.qsa('.indic li');
+
     // console.log('banner_btn :', banner_btn);
 
     banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goBannerSlide));
     domFn.qsaEl(banner_slide, 'li').forEach((ele, idx) => { ele.setAttribute('data-seq', idx) });
+
+
+    indic.forEach(ele=>{
+        ele.classList.remove('on');
+        indic[0].classList.add('on');
+    });
 
     function goBannerSlide() {
         // console.log(" banner_slide 로딩완료");
@@ -274,10 +281,8 @@ function loadFn() {
         });
     });
 
-    // console.log("sub_change :", sub_change);
-    // domFn.addEvt(sub_change, 'click', (ele)=>{
-    //     ele.location.href = "./sub.html";
-    // });
+
+    saja_nav_btn[0].click();
 
     const idName = { 두유: "du", 참깨흑임자드레싱: "cham", 클렌징폼: "cl", 도넛튜브: "do" };
 
@@ -352,7 +357,7 @@ function loadFn() {
     }
     curation_box.innerHTML = curation_hcode;
 
-    saja_nav_btn[0].click();
+    
 
     // 큐레이션 버튼 이동
     const snack_time = domFn.qs("#du").getBoundingClientRect().top; // 간식타임
