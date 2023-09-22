@@ -87,6 +87,7 @@ function loadFn() {
         }
     }
 
+<<<<<<< Updated upstream
 
     // 자동넘김용 호출함수
     const goRight = () => {
@@ -122,6 +123,16 @@ function loadFn() {
 
     // 버튼 클릭시 clearAuto함수 호출하기
     main_btn.forEach(ele => domFn.addEvt(ele, 'click', clearAuto));
+=======
+    // main_slide.querySelectorAll('li').forEach(
+    //     (ele, idx) => ele.setAttribute('data-seq', idx)
+    // );
+    // let nowSeq = main_slide.querySelectorAll('li')[isRight? 1:0].getAttribute('data-seq');
+    // indic.forEach((ele, idx)=>{
+    //     if(idx==nowSeq) ele.classList.add('on');
+    //     else ele.classList.remove('on');
+    // });
+>>>>>>> Stashed changes
 
     // banner 슬라이드
     const banner_slide = domFn.qs(".side-content-box ul");
