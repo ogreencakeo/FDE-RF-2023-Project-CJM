@@ -43,6 +43,48 @@ a {
     left: -100%;
 }
 
+/* indic */
+.indic{
+    display: flex;
+    /* 플렉스박스 */
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+.indic li{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.indic span{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    padding: 0px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+
+.indic li img {
+    position: absolute;
+    /*이미지 겹치게*/
+}
+
+.indic li img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 0;
+}
+
+/*회색블릿이미지가 보이게하는 class*/
+.indic li.on img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 1;
+    /*우선적용!*/
+}
+
 .section-ad-banner img {
     /* display: inline-block; */
     /* position: absolute; */
