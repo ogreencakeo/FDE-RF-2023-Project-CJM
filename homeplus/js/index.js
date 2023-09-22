@@ -420,12 +420,25 @@ function loadFn() {
         });
     });
 
+
     // 장바구니
     const put_it_in = domFn.qsa(".Put-it-in");
     // 장바구니 숫자 확인
     const basket_check_num1 = domFn.qs(".basket-check-num1");
     const basket_check_num2 = domFn.qs(".basket-check-num2");
     let basket_num = 0;
+
+    // const items_arr = [saja_item_arr, curation_items_arr];
+    // console.log('items_arr :', items_arr);
+
+    // for(let x of items_arr){
+    //     console.log(x);
+    //     for(let j of x){
+    //         console.log(j);
+    //     }
+
+        // (ele,idx)=>{ele.setAttribute('data-seq'), idx}
+    // }
     // 장바구니 버튼
 
     // console.log('put_it_in :', put_it_in);
@@ -447,4 +460,5 @@ function loadFn() {
 
     const top_click = domFn.qs(".top-bx");
     domFn.addEvt(top_click, "click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
 }
