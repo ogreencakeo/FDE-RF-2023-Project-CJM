@@ -21,50 +21,33 @@ a{
     color: #000;
 }
 
-/* 스튜디오 설명박스 */
-/* .studio-explanation-wrap{
-    width: 30%;
-    height: 100vh;
-    position: relative;
-    background-color: #000;
-}
-.studio-explanation-wrap>p{
-    font-size: 7vw;
-    z-index: 1;
-    position: absolute;
-    top: 15%;
-    flood-color: #43494b;
-    left: 2%;
-    width: 800px;
-    color: #fff;
-}
-.studio-explanation span{
-    position: absolute;
-    z-index: 1;
-    font-size: 1.5vw;
-}
-.studio-explanation span:first-child{
-    display: block;
-    bottom: 20%;
-    right: 0;
-}
-
-.studio-explanation span:last-child{
-    position: absolute;
-    margin-top: 5%;
-    bottom: 5%;
-    padding: 20px;
-    border-radius: 50%;
-    background-color: #d3d7db;
-    right: 10%;
-}  */
 
 /* 헤더 nav */
-.header-img nav{
+.main-logo{
+    width: 13vw;
+    height: 8vw;
     position: absolute;
     top: 2%;
+    left: 2%;
+}
+.main-logo img{
+    width: 100%;
+    height: 100%;
+    animation: logo-ani .8s linear infinite alternate;
+}
+@keyframes logo-ani {
+    from{
+        transform: rotate(15deg);
+    }
+    to{
+        transform: rotate(-15deg);
+    }
+}
+.header-img nav{
+    position: absolute;
+    top: 5%;
     right: 0;
-    width: 90%;
+    width: 80%;
     height: 10vh;
     margin: 0 auto;
 }
@@ -73,14 +56,14 @@ a{
     background-color: #fff;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding: 20px 0;
+    padding: 25px 0;
 }
 .header-img nav ul li{
     flex: 1;
     text-align: center;
 }
 .header-img nav ul li a{
-    font-size: 1.8em;
+    font-size: 1.5vw;
 }
 
 /* 헤더 이미지 랩핑 */
@@ -91,7 +74,7 @@ a{
     /* right: 0; */
     /* top: 50%; */
     /* transform: translateY(-50%); */
-    background-color: #193175;
+    background-color: #000000e7;
 }
 .header-main-img-wrap{
     height: 100%;
