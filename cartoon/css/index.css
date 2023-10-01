@@ -62,7 +62,25 @@ a{
 /* 헤더 nav */
 .header-img nav{
     position: absolute;
-    top: 0;
+    top: 2%;
+    right: 0;
+    width: 90%;
+    height: 10vh;
+    margin: 0 auto;
+}
+.header-img nav ul{
+    display: flex;
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px 0;
+}
+.header-img nav ul li{
+    flex: 1;
+    text-align: center;
+}
+.header-img nav ul li a{
+    font-size: 1.8em;
 }
 
 /* 헤더 이미지 랩핑 */
