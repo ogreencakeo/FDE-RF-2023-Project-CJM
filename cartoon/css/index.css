@@ -168,21 +168,26 @@ a{
 /* 헤더 - sns계정 */
 .universal_sns{
     position: absolute;
-    top: 50%;
+    top: 70%;
     transform: translateY(-50%);
     right: 1%;
-    width: 7vw;
-    height: 45vh;
+    width: 4vw;
+    height: 35vh;
     background-color: #ebe3de;
     border-radius: 30px;
+    border: 8px solid #fff;
+}
+.universal_sns:hover{
+    border: 8px solid #000;
 }
 .universal_sns>div{
     height: calc(100%/4);
 }
 .universal_sns .fa-brands{
-    font-size: 5vw;
+    font-size: 3vw;
     display: block;
     text-align: center;
+    line-height: 1.5;
     
 }
 .fa-square-instagram:hover{
