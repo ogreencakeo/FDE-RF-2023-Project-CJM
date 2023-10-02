@@ -63,7 +63,9 @@ a{
     text-align: center;
 }
 .header-img nav ul li a{
-    font-size: 1.5vw;
+    font-size: 1.9vw;
+    font-family:'Jua', sans-serif;
+    line-height: 1;
 }
 
 /* 헤더 이미지 랩핑 */
@@ -104,6 +106,7 @@ a{
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
+    font-family:'Jua', sans-serif;
 }
 /* .header-content::before{
     content: '';
@@ -152,6 +155,8 @@ a{
     width: 100%;
     height: 100%;
     display: block;
+    font-family: 'Gowun Batang', serif;
+    font-weight: 600;
 }
 .universal_link:hover{
     background-color: #193175;
