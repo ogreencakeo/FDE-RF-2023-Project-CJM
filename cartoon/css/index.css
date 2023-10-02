@@ -3,7 +3,7 @@ body{
     /* background-color: #F2F2F2;; */
 }
 body *{
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 /* 헤더 */
 .header{
@@ -202,19 +202,41 @@ a{
 .utility-panel{
     width: 100%;
     display: flex;
+    border-top: 1px solid #2b4584;
+    border-bottom: 3px solid #2b4584;
+    margin-bottom: 5px;
 }
-.utility-panel>div{
+.utility-panel>a{
     flex: 1;
-    padding: 20px;
     text-align: center;
-}
-.utility-panel>div>span{
+    overflow: hidden;
     display: block;
 }
-.utility-panel>div>span:first-child{
+.utility-panel>a>div>span{
+    display: block;
+    color: #2b4584;
+}
+.utility-panel>a>div>span:first-child{
     font-size: 5em;
     padding-bottom: 10px;
 }
+.utility-panel>a>div>span:last-child{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+.utility-panel>a>div{
+    padding: 20px;
+    transition: .4s ease-out;
+}
+.utility-panel>a>div:hover{
+    transform: scale(1.1);
+    background-color: #2b4584;
+}
+.utility-panel>a>div:hover span{
+    color: #fff;
+}
+
 /* 메인1 - 움직이는 로고  */
 .main1{
     width: 100%;
@@ -238,112 +260,4 @@ a{
         left: -100%;
     }
 }
-/* 메인 */
-.main2{
-    width: 100%;
-}
 
-.main2 section{
-    max-width: 1300px;
-    margin: 0 auto;
-}
-.main-visual-img::before{
-    content: '';
-    display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    background-color:  #ccc;
-    position: absolute;
-    top: -7%;
-    left: -3%;
-}
-.main-visual-img{
-    position: relative;
-    max-width: 1450px;
-    margin: 0 auto;
-    height: 550px;
-    /* background-image: linear-gradient(to top, #d2e1b6,#e3e3c4); */
-}
-.main-visual-img>img{
-    width: 6vw;
-    height: 11vh;
-    position: absolute;
-    left: 28%;
-    bottom: 40%;
-    display: block;
-}
-.main-visual-img>p{
-    position: absolute;
-    width: 30%;
-    left: 3%;
-    bottom: 15%;
-    padding-top: 15px;
-    border-top: 2px solid #d4d3ce;;
-}
-
-.main-visual-img>img::before{
-    content: '';
-    display: block;
-    /* 앱솔루트 사방채우기 */
-    background-color: #000;
-    opacity: 0.5;
-    /* 트랜지션: 속시이지 */
-    transition: all .4s ease-out;
-}
-
-
-.main-img{
-    position: absolute;
-    right: 2%;
-    width: 60%;
-    display: block;
-    height: 500px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    display: flex;
-    column-gap: 4%;
-    
-}
-.main-img>img{
-    width: 50%;
-    height: 100%;
-    background-color: #000;
-    /* filter: grayscale(100%); */
-    transition: all .4s ease-in-out;
-    display: block;
-    border-radius: 35px;
-    overflow: hidden;
-
-}
-.main-img>img:hover{
-    transform: scale(1.05);
-    filter: none;
-    opacity: 0.8;
-}
-.main-visual-img:hover{
-    /* background-color: #d2eceec9; */
-    /* background-color: #ccc; */
-}
-.ghibli-explanation{
-    position: relative;
-    left: 2%;
-    color: #655a5a;
-    font-size: 3vw;
-    font-weight: 400;
-    top: 25%;
-    transform: translateY(-30%);
-    max-width: 45%;
-    /* background-color: #ccc; */
-}
-.ghibli-explanation::after, .ghibli-explanation::before{
-    content: '';
-    display: block;
-    width: 70%;
-    height: 3vh;
-    border-radius: 5px;
-    background-color:  #eedfd2;
-    /* background-color: aliceblue; */
-    margin: 15px;
-}
