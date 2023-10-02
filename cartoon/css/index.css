@@ -80,7 +80,7 @@ a{
     height: 100%;
     transform: translate(0%, -50%);
     opacity: 0;
-    transition: .8s ease-out;
+    transition: .4s ease-out;
 }
 .header-main-img-wrap.on{
     transform: translate(0,0);
