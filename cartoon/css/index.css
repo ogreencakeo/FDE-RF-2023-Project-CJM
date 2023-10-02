@@ -201,8 +201,8 @@ a{
 /* 메인1 - 유틸리티 패널*/
 .utility-panel{
     display: flex;
-    border-top: 3px solid #2b4584;
-    border-bottom: 3px solid #2b4584;
+    border-top: 5px solid #2b4584;
+    border-bottom: 5px solid #2b4584;
     margin: 0.8% 0;
 }
 .utility-panel>a>div{
