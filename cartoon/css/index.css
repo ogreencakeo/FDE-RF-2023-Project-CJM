@@ -251,7 +251,7 @@ a{
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 29.2vh;
+    height: 43vh;
 }
 .move-img-logo1{
     background: url(../images/universal_logo.webp) repeat-x;
@@ -260,6 +260,7 @@ a{
     animation: move-img-logo1 7s linear infinite;
     position: absolute;
     left: 0;
+    margin: 3%;
 }
 @keyframes move-img-logo1 {
     to{
@@ -267,3 +268,36 @@ a{
     }
 }
 
+/* 메인2 */
+/* 유니버셜 스튜디오 소개 개요 */
+.main2{
+    width: 100%;
+    background:url(../images/Rectbleu.png);
+}
+.main2>h2{
+    text-align: center;
+    font-size: 3vw;
+    padding: 20px;
+    font-family: 'Gugi', cursive;
+    background-color: #ebe3de;
+}
+.universal_explanation_index{
+    max-width: 1200px;
+    /* display: flex; */
+    margin: 0 auto;
+    border: 10px solid #fff;
+    
+}
+.universal_explanation_wrap{
+    display: flex;
+    justify-content: space-around;
+}
+.universal_explanation_wrap>img, .universal_explanation_wrap>span{
+    display: block;
+    width: 50%;
+    height: 430px;
+}
+.universal_explanation_wrap>span{
+    /* padding: 0 20px; */
+    background-color: #fff;
+}
