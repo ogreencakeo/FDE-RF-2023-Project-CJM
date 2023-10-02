@@ -200,11 +200,14 @@ a{
 /* 메인1 */
 /* 메인1 - 유틸리티 패널*/
 .utility-panel{
-    width: 100%;
     display: flex;
-    border-top: 1px solid #2b4584;
+    border-top: 3px solid #2b4584;
     border-bottom: 3px solid #2b4584;
-    margin-bottom: 5px;
+    margin: 0.8% 0;
+}
+.utility-panel>a>div{
+    padding: 20px;
+    transition: .4s ease-out;
 }
 .utility-panel>a{
     flex: 1;
@@ -223,12 +226,9 @@ a{
 .utility-panel>a>div>span:last-child{
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
-.utility-panel>a>div{
-    padding: 20px;
-    transition: .4s ease-out;
-}
+
 .utility-panel>a>div:hover{
     transform: scale(1.1);
     background-color: #2b4584;
