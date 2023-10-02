@@ -29,6 +29,7 @@ a{
     position: absolute;
     top: 2%;
     left: 2%;
+    cursor: pointer;
 }
 .main-logo img{
     width: 100%;
