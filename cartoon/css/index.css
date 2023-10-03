@@ -301,7 +301,7 @@ a{
     width: 100%;
     height: 43vh;
     /* background-color: #fff; */
-    background: linear-gradient(to bottom,#fff, rgba(203, 221, 235, 0.382), #fff);
+    background: linear-gradient(to bottom,#fff, rgba(203, 221, 235, 0.382), #fff, rgba(203, 221, 235, 0.382), #fff);
     /* background-color: #cadceb; */
     /* background:url(https://cdn.pixabay.com/photo/2015/01/26/17/29/wall-612926_1280.jpg) repeat; */
 }
