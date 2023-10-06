@@ -87,16 +87,15 @@ function loadFn() {
         }
     }
 
-
     // 자동넘김용 호출함수
     const goRight = () => {
         main_slide.style.left = "calc(-200% - 50px)";
         main_slide.style.transition = ".4s ease-in-out";
         setTimeout(() => {
-            main_slide.appendChild(domFn.qsaEl(main_slide, 'li')[0]);
+            main_slide.appendChild(domFn.qsaEl(main_slide, "li")[0]);
             main_slide.style.left = "-100%";
             main_slide.style.transition = "none";
-        },400);
+        }, 400);
     };
 
     // 자동넘김용 변수 (인터발용 : autoI, 타임아웃용 : autoT)
@@ -104,8 +103,8 @@ function loadFn() {
 
     // 인터발호출함수
     const autoSlide = () => {
-        autoI = setInterval(goRight, 3000)
-    }
+        autoI = setInterval(goRight, 3000);
+    };
 
     // 인터발함수 최초호출
     autoSlide();
@@ -121,22 +120,23 @@ function loadFn() {
     };
 
     // 버튼 클릭시 clearAuto함수 호출하기
-    main_btn.forEach(ele => domFn.addEvt(ele, 'click', clearAuto));
+    main_btn.forEach((ele) => domFn.addEvt(ele, "click", clearAuto));
 
     // banner 슬라이드
     const banner_slide = domFn.qs(".side-content-box ul");
     const banner_btn = domFn.qsa(".side-content-box button");
-    const indic = domFn.qsa('.indic li');
+    const indic = domFn.qsa(".indic li");
 
     // console.log('banner_btn :', banner_btn);
 
     banner_btn.forEach((ele) => domFn.addEvt(ele, "click", goBannerSlide));
-    domFn.qsaEl(banner_slide, 'li').forEach((ele, idx) => { ele.setAttribute('data-seq', idx) });
+    domFn.qsaEl(banner_slide, "li").forEach((ele, idx) => {
+        ele.setAttribute("data-seq", idx);
+    });
 
-
-    indic.forEach(ele=>{
-        ele.classList.remove('on');
-        indic[0].classList.add('on');
+    indic.forEach((ele) => {
+        ele.classList.remove("on");
+        indic[0].classList.add("on");
     });
 
     function goBannerSlide() {
@@ -167,12 +167,11 @@ function loadFn() {
             }, 0);
         }
 
-        let nowSeq = domFn.qsaEl(banner_slide, 'li')[isRight ? 1 : 0].getAttribute('data-seq');
+        let nowSeq = domFn.qsaEl(banner_slide, "li")[isRight ? 1 : 0].getAttribute("data-seq");
         indic.forEach((ele, idx) => {
-            if (idx == nowSeq) ele.classList.add('on');
-            else ele.classList.remove('on');
+            if (idx == nowSeq) ele.classList.add("on");
+            else ele.classList.remove("on");
         });
-
     }
 
     // 사자
@@ -221,23 +220,25 @@ function loadFn() {
                 saja_hcode += `
                     <div class="saja-item-box">
                         <div class = "saja-item-img">
-                            <img src="../images/saja-item/${saja_key[x]["이미지"]
-                    }" alt="사자이미지" onClick="location.href='./sub.html'"></img>
+                            <img src="../images/saja-item/${
+                                saja_key[x]["이미지"]
+                            }" alt="사자이미지" onClick="location.href='./sub.html'"></img>
                             <section>
-                                ${x == "깐마늘" ||
-                        x == "감자" ||
-                        x == "고구마스틱" ||
-                        x == "사과" ||
-                        x == "강낭콩" ||
-                        x == "피자치즈" ||
-                        x == "마열라면" ||
-                        x == "오렌지망고" ||
-                        x == "오감자그라탕" ||
-                        x == "지퍼락" ||
-                        x == "그린박스"
-                        ? '<span style="display:none"></span>'
-                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
-                    }
+                                ${
+                                    x == "깐마늘" ||
+                                    x == "감자" ||
+                                    x == "고구마스틱" ||
+                                    x == "사과" ||
+                                    x == "강낭콩" ||
+                                    x == "피자치즈" ||
+                                    x == "마열라면" ||
+                                    x == "오렌지망고" ||
+                                    x == "오감자그라탕" ||
+                                    x == "지퍼락" ||
+                                    x == "그린박스"
+                                        ? '<span style="display:none"></span>'
+                                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
+                                }
                                 <span>
                                     <img src="../images/delivery-market.png" alt="">
                                 </span>
@@ -281,7 +282,6 @@ function loadFn() {
         });
     });
 
-
     saja_nav_btn[0].click();
 
     const idName = { 두유: "du", 참깨흑임자드레싱: "cham", 클렌징폼: "cl", 도넛튜브: "do" };
@@ -295,25 +295,27 @@ function loadFn() {
                 // console.log("y :", y);
                 // console.log('x[y] :', x[y]);
                 curation_hcode += `
-                    <div class = "curation-item-img" ${(y == "두유" || y == "참깨흑임자드레싱" || y == "클렌징폼" || y == "도넛튜브") && i == 0
-                        ? "id=" + idName[y]
-                        : ""
-                    }>
+                    <div class = "curation-item-img" ${
+                        (y == "두유" || y == "참깨흑임자드레싱" || y == "클렌징폼" || y == "도넛튜브") && i == 0
+                            ? "id=" + idName[y]
+                            : ""}>
                         <div class = "curation-img-wrap">
-                            <img src="../images/shopping-curation/${x[y]["이미지"]
-                    }" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
+                            <img src="../images/shopping-curation/${
+                                x[y]["이미지"]
+                            }" alt="큐레이션이미지"  onClick="location.href='./sub.html'"></img>
                             <section>
-                                ${y == "더블팩샐러드" ||
-                        y == "히알루론산마스크팩" ||
-                        y == "도넛튜브" ||
-                        y == "해먹매쉬라운지튜브" ||
-                        y == "보조배터리" ||
-                        y == "콜맨레이체어" ||
-                        y == "춘천닭갈비" ||
-                        y == "춘천닭갈비"
-                        ? '<span style="display:none"></span>'
-                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
-                    }
+                                ${
+                                    y == "더블팩샐러드" ||
+                                    y == "히알루론산마스크팩" ||
+                                    y == "도넛튜브" ||
+                                    y == "해먹매쉬라운지튜브" ||
+                                    y == "보조배터리" ||
+                                    y == "콜맨레이체어" ||
+                                    y == "춘천닭갈비" ||
+                                    y == "춘천닭갈비"
+                                        ? '<span style="display:none"></span>'
+                                        : '<span><img src="../images/saja-icon1.png" alt=""></span>'
+                                }
                                 <span><img src="../images/delivery-market.png" alt=""></span>
                             </section>
                             <div class="curation-hover-btn">
@@ -356,8 +358,6 @@ function loadFn() {
         alm++;
     }
     curation_box.innerHTML = curation_hcode;
-
-    
 
     // 큐레이션 버튼 이동
     const snack_time = domFn.qs("#du").getBoundingClientRect().top; // 간식타임
@@ -436,9 +436,9 @@ function loadFn() {
     //         console.log(j);
     //     }
 
-        // (ele,idx)=>{ele.setAttribute('data-seq'), idx}
+    // (ele,idx)=>{ele.setAttribute('data-seq'), idx}
     // }
-    
+
     // 장바구니 버튼
 
     // console.log('put_it_in :', put_it_in);
