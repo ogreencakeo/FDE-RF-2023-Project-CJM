@@ -25,11 +25,13 @@
 
     /* 메인광고 */
     .main-ad-box{
-        max-width: 800px;
+        /* max-width: 800px; */
+        margin: 0 auto;
     }
     .section-ad-banner img{
-        max-width: 800px;
-        height: auto;
+        /* max-width: 800px; */
+        /* height: auto; */
+        margin: 0 auto;
     }
     /* nav */
     .move-to-exhibition{

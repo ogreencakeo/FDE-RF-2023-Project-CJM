@@ -27,15 +27,16 @@ a {
 
 /* 섹션부분 - 광고배너 */
 .section-ad-banner {
-    height: 450px;
-    width: 1230px;
+    max-height: 450px;
+    max-width: 1230px;
+    /* aspect-ratio: 450/1230; */
     margin: 0 auto;
     position: relative;
 }
 
 .main-ad-box{
     /* width: 1200px; */
-    width: 1235px;
+    max-width: 1235px;
     margin: 0 auto;
     /* overflow: hidden; */
     position: relative;
@@ -46,7 +47,15 @@ a {
     gap: 0 50px;
     left: -100%;
 }
+.main-ad-box ul li{
+    margin: 0 auto;
+}
 
+.main-ad-box ul li img{
+    margin: 0 auto;
+    display: block;
+    aspect-ratio: 2.66/1;
+}
 /* indic */
 .indic{
     display: flex;
@@ -159,8 +168,8 @@ a {
     /* height: 146.84px; */
     padding: 59px 16px 50px;
     margin: 0 auto;
-    border-bottom: 1px solid red;
-    border-top: 1px solid red;
+    /* border-bottom: 1px solid red; */
+    /* border-top: 1px solid red; */
 }
 
 .move-to-exhibition nav ul {
@@ -720,20 +729,20 @@ a {
 
 .curation-item-explanation {
     width: 270px;
-    height: 128px;
+    /* height: 128px; */
     margin-top: 18px;
 }
 
 .curation-item-exp-name {
     width: 270px;
-    height: 44px;
+    /* height: 44px; */
     font-size: 15px;
     color: rgb(51, 51, 51);
 }
 
 .uration-item-exp-price {
     width: 270px;
-    height: 50px;
+    /* height: 50px; */
 }
 
 .curation-item-exp-price p {
@@ -743,7 +752,7 @@ a {
 
 .curation-item-exp-review {
     width: 270px;
-    height: 18px;
+    /* height: 18px; */
     font-size: 12px;
     color: rgb(153, 153, 153);
 }

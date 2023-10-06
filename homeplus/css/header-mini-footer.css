@@ -47,8 +47,9 @@
     width: 100%;
     /* border-bottom: 3px solid #f00; */
     /* width: 1368px; */
-    height: 148.945px;
+    /* height: 148.945px; */
     border-bottom: 2px solid #df0011;
+    max-height: 165px;
 }
 
 /* 헤더부분 상단 */
@@ -56,12 +57,12 @@
     max-width: 1368px;
     padding-top: 29px;
     margin: 0 auto;
-    
+    /* border: 1px solid red; */
 }
 
 .header-top {
     display: flex;
-    height: 79px;
+    min-height: 79px;
     justify-content: space-between;
 }
 
@@ -157,7 +158,7 @@
 /* 헤더부분 - nav 메뉴 */
 .header-menu ul {
     display: flex;
-    height: 40.984px;
+    /* height: 40.984px; */
     justify-content: space-evenly;
     
 }
