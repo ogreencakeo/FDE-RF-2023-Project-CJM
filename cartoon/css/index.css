@@ -57,7 +57,7 @@ a{
 }
 .header-img nav ul{
     display: flex;
-    background-color: #fff;
+    background-color: #ebe3de;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 25px 0;
@@ -70,6 +70,25 @@ a{
     font-size: 1.9vw;
     font-family:'Jua', sans-serif;
     line-height: 1;
+    display: inline-block;
+    /* background-color: yellow; */
+    overflow: hidden;
+}
+.header-img nav ul li a span{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    transition: transform .4s;
+    color: #555;
+}
+.header-img nav ul li a span::before{
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    color: #000;
+}
+.header-img nav ul li a:hover span{
+    transform: translateY(-100%);
 }
 
 /* 헤더 이미지 랩핑 */
@@ -247,6 +266,10 @@ a{
     color: #fff;
 }
 
+.utility-panel2{
+    margin: 0;
+    border: 0px;    
+}
 /* 메인1 - 움직이는 로고  */
 .main1{
     width: 100%;
