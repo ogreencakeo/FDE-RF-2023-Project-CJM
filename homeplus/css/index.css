@@ -27,34 +27,37 @@ a {
 
 /* 섹션부분 - 광고배너 */
 .section-ad-banner {
-    max-height: 450px;
     max-width: 1230px;
-    /* aspect-ratio: 450/1230; */
     margin: 0 auto;
     position: relative;
 }
 
 .main-ad-box{
     /* width: 1200px; */
-    max-width: 1235px;
+    max-width: 1200px;
     margin: 0 auto;
     /* overflow: hidden; */
     position: relative;
+    /* aspect-ratio: 1200 / 450; */
 }
 .main-ad-box ul{
     position: relative;
     display: flex;
     gap: 0 50px;
     left: -100%;
+    /* aspect-ratio: 1200 / 450; */
 }
 .main-ad-box ul li{
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 .main-ad-box ul li img{
     margin: 0 auto;
-    display: block;
-    aspect-ratio: 2.66/1;
+    /* display: inline-block; */
+    max-width: 1200px;
+    aspect-ratio: 1200/450;
+    margin: 0 auto;
 }
 /* indic */
 .indic{
@@ -119,7 +122,7 @@ a {
 
 .m-leftbtn{
     background-position: 0 0;
-    
+    left: 11%;
 }
 
 .m-rightbtn {

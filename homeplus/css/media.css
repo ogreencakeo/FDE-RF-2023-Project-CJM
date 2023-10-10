@@ -16,7 +16,7 @@
         display: none;
     }
     .header-top, .header-inbox{
-        max-width: 80%;
+        /* max-width: 80%; */
         transform: translateX(-62px);
     }
     .section{

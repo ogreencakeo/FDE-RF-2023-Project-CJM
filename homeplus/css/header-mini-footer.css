@@ -35,16 +35,15 @@
 }
 /* 공통 inbox */
 .header-inbox {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .section-inbox {
-    width: 1230px;
 }
 
 .header {
-    width: 100%;
+    max-width: 100%;
     /* border-bottom: 3px solid #f00; */
     /* width: 1368px; */
     /* height: 148.945px; */
@@ -54,7 +53,7 @@
 
 /* 헤더부분 상단 */
 .header-wrap {
-    max-width: 1368px;
+    max-width: 1200px;
     padding-top: 29px;
     margin: 0 auto;
     /* border: 1px solid red; */
