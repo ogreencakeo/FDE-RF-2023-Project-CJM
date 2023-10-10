@@ -15,10 +15,6 @@
     .header-ad{
         display: none;
     }
-    .header-top, .header-inbox{
-        /* max-width: 80%; */
-        /* transform: translateX(100px); */
-    }
     .section{
         height: 300px;
     }
