@@ -69,7 +69,7 @@ function loadFn() {
         let isRight = this.classList.contains("m-rightbtn");
         let eachOne = domFn.qsaEl(main_slide, "li");
         if (isRight) {
-            main_slide.style.left = "calc(-200% - 50px)";
+            main_slide.style.left = "calc(-200% - 100px)";
             main_slide.style.transition = ".4s ease-in-out";
             setTimeout(() => {
                 main_slide.appendChild(eachOne[0]);

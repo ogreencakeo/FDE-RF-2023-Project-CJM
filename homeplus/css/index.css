@@ -19,7 +19,6 @@ a {
 /* 섹션부분 */
 .section {
     width: 100%;
-    height: 450px;
     padding: 20px 0;
     overflow: hidden;
 }
@@ -27,25 +26,27 @@ a {
 
 /* 섹션부분 - 광고배너 */
 .section-ad-banner {
-    max-width: 1230px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    height: 480px;
+    overflow: hidden;
 }
 
 .main-ad-box{
-    /* width: 1200px; */
     max-width: 1200px;
     margin: 0 auto;
-    /* overflow: hidden; */
     position: relative;
     /* aspect-ratio: 1200 / 450; */
 }
 .main-ad-box ul{
     position: relative;
     display: flex;
-    gap: 0 50px;
+    margin: 0 auto;
+    /* gap: 0 50px; */
     left: -100%;
     /* aspect-ratio: 1200 / 450; */
+    /* overflow: hidden; */
 }
 .main-ad-box ul li{
     margin: 0 auto;
@@ -54,9 +55,9 @@ a {
 
 .main-ad-box ul li img{
     margin: 0 auto;
-    /* display: inline-block; */
+    display: block;
     max-width: 1200px;
-    aspect-ratio: 1200/450;
+    /* aspect-ratio: 1200/450; */
     margin: 0 auto;
 }
 /* indic */
