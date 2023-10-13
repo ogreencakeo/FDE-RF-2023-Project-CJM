@@ -6,9 +6,17 @@ setTimeout(()=>{
 },400);
 
 // universal 글자 물결
-const universal_span_mave = 'Universal Studios';
-const wave_span_code = dFn.qs('.universal-span-move');
+const wave_text = 'Universal Studios';
+const span_wave = dFn.qs('.span_wave');
+let wave_span_code = ''
 
-universal_span_mave.forEach((ele)=>{
-    wave_span_code.innerHTML += `${this}`;
-})
+let seqNum = 0;
+
+for(let x of wave_text){
+    console.log(x);
+    if(x == ' ') wave_span_code += '&nbsp;&nbsp';
+    else wave_span_code += `<span style="animation-delay : ${seqNum*0.1}s;">${x}</span>`
+    seqNum ++;
+}
+
+span_wave.innerHTML = wave_span_code;
