@@ -115,7 +115,7 @@ a{
     display: block;
     background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), 
                         linear-gradient(rgba(0, 18, 70, .7), rgba(0, 18, 70, .7)),  
-                        url(../images/universal_main3.webp);
+                        url(../images/slide-main1.webp);
     position: relative;
     background-size: cover;
     width: 100%;
@@ -123,13 +123,26 @@ a{
     margin: 0 auto;
 }
 
-.header-content>span{
+/* in japn universal studio 문구 */
+.header-content{
     position: absolute;
-    display: block;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
+}
+.header-content>span,
+.span_wave{
+    /* position: absolute; */
+    display: block;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     color: #fff;
     font-family:'Jua', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+.span_wave{
+    
 }
 /* .header-content::before{
     content: '';
@@ -144,11 +157,31 @@ a{
     top: 25%;
     text-align: center;
 }
-.header-content>span:last-of-type{
+.span_wave>span{
     font-size: 5vw; 
-    top: 35%;
+    /* top: 35%; */
     text-align: center;
+    /* top: 0; */
 }
+.span_wave>span{
+    /* position: absolute; */
+    /* display: block; */
+    display: inline-block;
+    position: relative;
+    animation: wave_textup 1.5s infinite;
+}
+
+@keyframes wave_textup {
+    0% { top: 0; } 
+    15% {top : 0}
+    30% { top: -0.35rem; } 
+    45% {top : 0}
+    60% {top : 0}
+    75% {top : 0}
+    90% {top : 0}
+    100% {top : 0}
+}
+
 .header-content>span:last-of-type::after{
     content: '';
     display: block;
@@ -236,17 +269,21 @@ a{
 }
 .utility-panel>a>div{
     padding: 20px;
-    transition: .4s ease-out;
+    transition: .4s;
+    position: relative;
 }
 .utility-panel>a{
     flex: 1;
     text-align: center;
     overflow: hidden;
     display: block;
+    position: relative;
+    /* transition: .4s; */
 }
 .utility-panel>a>div>span{
     display: block;
     color: #2b4584;
+    transition: .4s;
 }
 .utility-panel>a>div>span:first-child{
     font-size: 5em;
@@ -258,12 +295,22 @@ a{
     font-size: 1.2em;
 }
 
-.utility-panel>a>div:hover{
-    transform: scale(1.1);
+.utility-panel>a:hover div{
+    /* transform: scale(1.1); */
     background-color: #2b4584;
+    animation: utility-panel-ani .65s ease;
 }
 .utility-panel>a>div:hover span{
     color: #fff;
+    animation: utility-panel-ani .35s ease;
+}
+@keyframes utility-panel-ani {
+    from{
+        transform: translateY(200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 
 .utility-panel2{
@@ -285,7 +332,7 @@ a{
     /* background:url(https://cdn.pixabay.com/photo/2015/01/26/17/29/wall-612926_1280.jpg) repeat; */
     /* background:url(https://cdn.pixabay.com/photo/2017/02/13/21/13/background-2063830_1280.jpg) repeat; */
     /* background:url(https://cdn.pixabay.com/photo/2017/09/01/09/48/background-2703579_1280.jpg) repeat; */
-    background-color: #17295d;
+    /* background-color: #17295d; */
 }
 
 .main2>h2{
