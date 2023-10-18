@@ -170,7 +170,6 @@ a{
     position: relative;
     animation: wave_textup 1.5s infinite;
 }
-
 @keyframes wave_textup {
     0% { top: 0; } 
     15% {top : 0}
@@ -415,6 +414,10 @@ a{
 }
 .logo-span-ani2{
     animation: text-span-ani2 20s linear infinite;
+}
+.logo-span-ani:hover,
+.logo-span-ani2:hover{
+    animation-play-state: paused;
 }
 
 @keyframes text-span-ani {
