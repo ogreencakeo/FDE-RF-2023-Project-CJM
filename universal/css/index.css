@@ -324,14 +324,8 @@ a{
 
 /* 메인2 */
 /* 유니버셜 스튜디오 소개 개요 */
-.main2{
+/* .main2{
     width: 100%;
-    /* background:url(../images/Rectbleu.png); */
-    /* background:url(https://cdn.pixabay.com/photo/2017/07/08/11/36/cube-background-2484131_1280.jpg) repeat; */
-    /* background:url(https://cdn.pixabay.com/photo/2015/01/26/17/29/wall-612926_1280.jpg) repeat; */
-    /* background:url(https://cdn.pixabay.com/photo/2017/02/13/21/13/background-2063830_1280.jpg) repeat; */
-    /* background:url(https://cdn.pixabay.com/photo/2017/09/01/09/48/background-2703579_1280.jpg) repeat; */
-    /* background-color: #17295d; */
 }
 
 .main2>h2{
@@ -343,7 +337,6 @@ a{
 }
 .universal_explanation_index{
     max-width: 1200px;
-    /* display: flex; */
     margin: 0 auto;
     border: 8px solid #fff;
     
@@ -356,10 +349,66 @@ a{
     display: block;
     width: 50%;
     height: 430px;
-}
-.universal_explanation_wrap>span{
-    /* padding: 0 20px; */
+} */
+/* .universal_explanation_wrap>span{
     background-color: #fff;
+} */
+
+/* //////////////////////////////////////// */
+/* 픽업 */
+.pick-up{
+    width: 100%;
+    background:url(../images/gingham-2227349_1920.jpg);
+}
+.pick-up-wrap{
+    max-width: 100rem;
+    margin: 0 auto;
+    outline: 1px solid red;
+}
+
+.pick-up-box-wrap{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+.pick-up-box{
+    width: 22%;
+    border-radius: 20px;
+    height: 500px;
+    border: 3px solid lab(29 27.77 -49.03);
+    position: relative;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.pick-up-img img{
+    display: block;
+    width: 90%;
+    height: 18rem;
+    margin: 15px auto;
+}
+
+.pick-up-name{
+
+}
+.pick-up-name h2{
+    display: block;
+    width: 100%;
+    border-top: 3px solid lab(29 27.77 -49.03);
+    border-bottom: 3px solid lab(29 27.77 -49.03);
+    padding: 15px 0;
+    text-align: center;
+}
+.pick-up-name span{
+    display: block;
+    text-align: center;
+}
+
+.click-pick-up img{
+    height: 55px;
+    width: 55px;
+    right: 2%;
+    position: absolute;
 }
 
 /* 메인3 */
