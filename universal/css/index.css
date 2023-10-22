@@ -95,14 +95,14 @@ a{
 .header-img-wrap{
     width: 100%;
     position: relative;
-    height: 100vh;
+    height: 90vh;
     /* right: 0; */
     /* top: 50%; */
     /* transform: translateY(-50%); */
     background-color: #000000e7;
 }
 .header-main-img-wrap{
-    height: 100%;
+    height: 90vh;
     transform: translate(0%, -50%);
     opacity: 0;
     transition: .4s ease-out;
@@ -113,13 +113,15 @@ a{
 }
 .header-main-img{
     display: block;
-    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), 
-                        linear-gradient(rgba(0, 18, 70, .7), rgba(0, 18, 70, .7)),  
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), 
+                        linear-gradient(rgba(0, 18, 70, .5), rgba(0, 18, 70, .5)),  
                         url(../images/slide-main1.webp);
     position: relative;
     background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 100%;
+    height: 90vh;
     margin: 0 auto;
 }
 
@@ -129,6 +131,8 @@ a{
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
+    /* background: #00000069; */
+    padding: 22px;
 }
 .header-content>span,
 .span_wave{
@@ -358,7 +362,8 @@ a{
 /* 픽업 */
 .pick-up{
     width: 100%;
-    background:url(../images/gingham-2227349_1920.jpg);
+    /* background:url(../images/gingham-2227349_1920.jpg); */
+    background-color:rgb(251 249 246); 
 }
 .pick-up-wrap{
     max-width: 100rem;
@@ -375,7 +380,7 @@ a{
     width: 22%;
     border-radius: 20px;
     height: 500px;
-    border: 3px solid lab(29 27.77 -49.03);
+    border: 3px solid #dfbf9f;;
     position: relative;
     justify-content: space-between;
     background-color: white;
@@ -394,8 +399,8 @@ a{
 .pick-up-name h2{
     display: block;
     width: 100%;
-    border-top: 3px solid lab(29 27.77 -49.03);
-    border-bottom: 3px solid lab(29 27.77 -49.03);
+    border-top: 3px solid #dfbf9f;;
+    border-bottom: 3px solid #dfbf9f;;
     padding: 15px 0;
     text-align: center;
 }
@@ -411,6 +416,30 @@ a{
     position: absolute;
 }
 
+/* ////////////////////////////////////// */
+/* 메인박스 */
+.img-div{
+    /* width: 1200px; */
+    height: 400px;
+    width: 90vw;
+    margin: 0 auto;
+}
+.img-div div{
+    background: 
+    linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), 
+                        linear-gradient(rgba(0, 18, 70, .2), rgba(0, 18, 70, .2)), 
+                        url(../images/slide-main3.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* margin: 0 auto; */
+}
+.page{
+    height: 100vh;
+}
 /* 메인3 */
 .main3{
     width: 100%;
