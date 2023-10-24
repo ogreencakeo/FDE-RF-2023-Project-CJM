@@ -515,3 +515,44 @@ a{
     }
 }
 
+/* 하단 footer */
+.footer{
+    max-width: 100%;
+    background-color: #232025;
+    height: 400px;
+}
+.footer-wrap{
+    color: #d5cdc4;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.footer-wrap-top{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.footer-left{
+    font-size: min(56px,5rem);
+}
+.footer-right{
+    transform: rotate(5deg);
+}
+.footer-right>img{
+    width: 15vw;
+    display: block;
+    animation: footer-ani 5s linear infinite alternate;
+}
+
+@keyframes footer-ani {
+    0%{
+        transform: translateY(0);
+    }
+    60%{
+        transform: translateY(35px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
