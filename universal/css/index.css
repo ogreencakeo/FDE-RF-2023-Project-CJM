@@ -364,6 +364,7 @@ a{
     width: 100%;
     /* background:url(../images/gingham-2227349_1920.jpg); */
     background-color:rgb(251 249 246); 
+    /* background-color: ; */
 }
 .pick-up-wrap{
     max-width: 100%;
@@ -375,10 +376,10 @@ a{
 }
 /* 180회전 박스 */
 .pick-up-img-box{
-    width: 300px;
-    height: 320px;
+    width: 390px;
+    height: 265px;
     position: relative;
-    perspective: 1100px;
+    perspective: 1500px;
     margin: 1.5%;
 }
 .pick-up-img{
@@ -386,7 +387,7 @@ a{
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform .4s;
+    transition: transform .8s;
 }
 .pick1, .pick2{
     position: absolute;
@@ -395,8 +396,10 @@ a{
     border-radius: 20px;
     backface-visibility: hidden;
     display: block;
-    border: 5px solid #193175;
+    /* border: 5px solid #193175; */
+    border: 5px solid #2b4584;
 }
+
 .pick2{
     transform: rotateY(180deg);
     /* filter: blur(2px); */
@@ -405,20 +408,18 @@ a{
     background-position: center;
     background-size: cover; */
     /* border: 5px solid #193175; */
-    background-color: #2b4584;
+    /* background-color: #2b4584; */
+
 }
 .pick-up-img-box:hover .pick-up-img{
     transform: rotateY(180deg);
 }
 
-.pick2-box{
-    width: 280px;
-    height: 300px;
-    background-color: hwb(0 100% 0% / 0.71);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.pick2>img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 20px;
 }
 
 /* ////////////////////////////////////// */
@@ -489,7 +490,7 @@ a{
     display: block;
 }
 .logo-span-wrap li:nth-child(2n){
-    color: rgb(43 69 132);;
+    color: rgb(43 69 132);
 }
 
 .logo-span-ani{
