@@ -1,0 +1,11 @@
+"seasonalMenu1" : {
+    "location" : "",
+    "service_type" : "",
+    "payment_method" : "",
+    "menu_provided" : ``,
+    "englisgh_page" : ``,
+    "englisgh_page" : ``,
+    "seasonal_img" : [],
+    "seasonal_logo" : ,
+    "seasonal_main_img" : 
+},
