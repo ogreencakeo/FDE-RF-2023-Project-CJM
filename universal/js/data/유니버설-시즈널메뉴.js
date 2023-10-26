@@ -14,7 +14,8 @@
     sub_title : 서브 제목
 */
 const seasonalMenu = {
-    "seasonalMenu1" : {
+     {
+        "idx" : "1",
         "location" : "스튜디오 스타즈 레스토랑",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
@@ -36,6 +37,7 @@ const seasonalMenu = {
         "sub_title" : "아빠와 아이는 물론 가족 모두가 만족할 수 있는 다양한 메뉴, 그리고 유아식 판매와 좌석 안내 등 엄마에게 편리한 서비스까지 한가득!"
     },
     "seasonalMenu2" : {
+        "idx" 
         "location" : "피네간즈 바&그릴",
         "service_type" : "풀 서비스",
         "payment_method" : "신용카드 사용 가능",
