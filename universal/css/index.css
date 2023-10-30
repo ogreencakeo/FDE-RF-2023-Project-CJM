@@ -519,7 +519,8 @@ a{
 .footer{
     max-width: 100%;
     background-color: #232025;
-    height: 400px;
+    height: 350px;
+    position: relative;
 }
 .footer-wrap{
     color: #d5cdc4;
@@ -534,16 +535,47 @@ a{
 }
 .footer-left{
     font-size: min(56px,5rem);
+    color: #fff;
+    text-shadow: 2px 2px #2b4584;
 }
 .footer-right{
     transform: rotate(5deg);
 }
 .footer-right>img{
+    position: absolute;
+    right: 5%;
+    top: 10%;
     width: 15vw;
     display: block;
     animation: footer-ani 5s linear infinite alternate;
 }
-
+.footer-right>img:last-child{
+    width: 5vw;
+}
+.footer-wrap-bottom div ul{
+    display: flex;
+    position: absolute;
+}
+.footer-wrap-bottom div:first-child ul{
+    top: 30%;
+}
+.footer-wrap-bottom div:nth-child(2) ul{
+    top: 45%;
+}
+.footer-wrap-bottom div:last-child{
+    position: absolute;
+    bottom: 8%;
+    border-top: 2px solid #fff;
+    padding-top: 10px;
+}
+.footer-wrap-bottom div ul a{
+    color: #d5cdc4;
+    margin-right: 20px;
+    font-size: 1.3rem;
+}
+.footer-wrap-bottom div:nth-child(2) ul a{
+    font-size: 1.2rem;
+}
 @keyframes footer-ani {
     0%{
         transform: translateY(0);
