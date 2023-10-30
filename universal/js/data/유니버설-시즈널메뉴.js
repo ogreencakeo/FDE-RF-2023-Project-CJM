@@ -276,6 +276,94 @@ const seasonalMenu = [
         "tite" : "영화 ‘청춘 낙서’ 속 세계를 만끽하세요!",
         "sub_title" : `50년대풍 분위기가 매력적인 햄버거 레스토랑.<br/><br/>협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.`
     },
+    {
+        "idx" : "5",
+        "location" : "스리 브룸스틱스™",
+        "service_type" : "퀵서비스",
+        "payment_method" : "신용카드 사용 가능",
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 베지테리언(영어 페이지 한정)`,
+        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
+        "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
+        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "pickup_menu" : [
+            {
+                "idx" : "5-1",
+                "image" : "seasonal5-1.jpg",
+                "menu" : "할로윈 플레이트",
+                "price" : "￥2,700",
+                "menu_description" : "포크립, 로티세리 스모크 치킨, 통옥수수, 익힌 채소, 고기 파이, 잭 오 랜턴 파이, 롤리팝 캔디",
+            },
+            {
+                "idx" : "5-2",
+                "image" : "seasonal5-2.jpg",
+                "menu" : "비프스튜 ~흑맥주 조림~",
+                "price" : "￥2,600",
+                "menu_description" : "로스트 포테이토와 익힌 채소, 빵",
+            },
+            {
+                "idx" : "5-3",
+                "image" : "seasonal5-3.jpg",
+                "menu" : "그레이트 피스트™",
+                "price" : "￥8,000",
+                "menu_description" : "가든 샐러드, 로티세리 스모크 치킨, 포크립 모둠, 통옥수수와 로스트 포테이토(4인분)",
+            },
+            {
+                "idx" : "5-4",
+                "image" : "seasonal5-4.jpg",
+                "menu" : "로티세리 스모크 치킨&셰퍼드 파이",
+                "price" : "￥2,500",
+                "menu_description" : "구운 통옥수수, 익힌 채소",
+            },
+            {
+                "idx" : "5-5",
+                "image" : "seasonal5-4.jpg",
+                "menu" : "로스트비프",
+                "price" : "￥2,500",
+                "menu_description" : "구운 통옥수수, 익힌 채소",
+            },
+            {
+                "idx" : "5-6",
+                "image" : "seasonal5-4.jpg",
+                "menu" : "로티세리 스모크 치킨&셰퍼드 파이",
+                "price" : "￥2,500",
+                "menu_description" : "구운 통옥수수, 익힌 채소",
+            },
+            {
+                "idx" : "5-7",
+                "image" : "seasonal5-4.jpg",
+                "menu" : "로티세리 스모크 치킨&셰퍼드 파이",
+                "price" : "￥2,500",
+                "menu_description" : "구운 통옥수수, 익힌 채소",
+            },
+            {
+                "idx" : "5-8",
+                "image" : "seasonal5-4.jpg",
+                "menu" : "로티세리 스모크 치킨&셰퍼드 파이",
+                "price" : "￥2,500",
+                "menu_description" : "구운 통옥수수, 익힌 채소",
+            },
+        ],
+        "recommended_menu" : [
+            {
+                "idx" : "4-5",
+                "image" : "seasonal4-5.jpg",
+                "menu" : "키즈 햄버거 세트",
+                "price" : "￥1,100",
+                "menu_description" : `햄버거, 프라이드 포테이토, 스낵, 오렌지 음료<br/><br/>※ 만 11세 이하의 어린이 메뉴`
+            },
+            {
+                "idx" : "4-6",
+                "image" : "seasonal4-6.jpg",
+                "menu" : "아메리칸 초콜릿 브라우니",
+                "price" : "￥500",
+                "menu_description" : "",
+            },
+        ],
+        "seasonal_logo" : "seasonal5.jpg",
+        "seasonal_main_img" : "seasonal5-main.jpg",
+        "tite" : "호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 호그스미드™의 ‘오래된 술집 겸 여관’",
+        "sub_title" : `호그스미드™에 있는 스리 브룸스틱스™는 호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 ‘오래된 술집 겸 여관’입니다.<br/><br/>놀라울 정도로 높은 천장을 올려다보면, 목제 계단과 발코니가 무질서하게 배치된 신비로운 공간에 누구나 압도되어 버립니다.<br/><br/>마법계의 음료 ‘버터 맥주™’는 여기서도 즐기실 수 있습니다. 무알코올의 달콤한 음료이므로, 어린이도 안심하고 주문해 주세요.<br/><br/>이 술집에서는 이 밖에도 피시 앤 칩스와 고기파이 등 영국 전통의 맛과 디저트도 있습니다.`
+    },
     
         
 ]
