@@ -378,6 +378,66 @@ const seasonalMenu = [
         "tite" : "호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 호그스미드™의 ‘오래된 술집 겸 여관’",
         "sub_title" : `호그스미드™에 있는 스리 브룸스틱스™는 호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 ‘오래된 술집 겸 여관’입니다.<br/><br/>놀라울 정도로 높은 천장을 올려다보면, 목제 계단과 발코니가 무질서하게 배치된 신비로운 공간에 누구나 압도되어 버립니다.<br/><br/>마법계의 음료 ‘버터 맥주™’는 여기서도 즐기실 수 있습니다. 무알코올의 달콤한 음료이므로, 어린이도 안심하고 주문해 주세요.<br/><br/>이 술집에서는 이 밖에도 피시 앤 칩스와 고기파이 등 영국 전통의 맛과 디저트도 있습니다.`
     },
+    {
+        "idx" : "6",
+        "location" : "스누피™ 백롯 카페",
+        "service_type" : "퀵서비스",
+        "payment_method" : "신용카드 사용 가능",
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 디저트, 면류, 파스타, 샌드위치, 햄버거, 이유식 있음`,
+        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
+        "englisgh_page" : "",
+        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "pickup_menu" : [
+            {
+                "idx" : "6-1",
+                "image" : "seasonal6-1.jpg",
+                "menu" : "할로윈 토마토 크림 스파게티 세트",
+                "price" : "￥1,650",
+                "menu_description" : "할로윈 토마토 크림 스파게티, 프라이드 포테이토, 소프트드링크(R)",
+            },
+            {
+                "idx" : "6-2",
+                "image" : "seasonal6-2.jpg",
+                "menu" : "미트 스파게티 세트",
+                "price" : "￥1,550",
+                "menu_description" : "미트 스파게티, 프라이드 포테이토, 소프트드링크(R)",
+            },
+            {
+                "idx" : "6-3",
+                "image" : "seasonal6-3.jpg",
+                "menu" : "데리야키 비프버거 세트",
+                "price" : "￥1,450",
+                "menu_description" : "데리야키 비프버거, 프라이드 포테이토, 소프트드링크(R)",
+            },
+            {
+                "idx" : "6-4",
+                "image" : "seasonal6-4.jpg",
+                "menu" : "새우 커틀릿 버거 세트",
+                "price" : "￥1,450",
+                "menu_description" : "새우 커틀릿 버거, 프라이드 포테이토, 소프트드링크(R)",
+            },
+        ],
+        "recommended_menu" : [
+            {
+                "idx" : "6-5",
+                "image" : "seasonal6-5.jpg",
+                "menu" : "스누피 펌킨 케이크 ~캐러멜&치즈 크림~",
+                "price" : "￥650",
+                "menu_description" : ""
+            },
+            {
+                "idx" : "6-6",
+                "image" : "seasonal6-6.jpg",
+                "menu" : "스누피 키즈 세트",
+                "price" : "각￥1,000",
+                "menu_description" : `A 팬케이크, 치킨 너겟, 프라이드 포테이토, 스낵, 오렌지 음료<br/>B 샌드위치, 치킨 너겟, 프라이드 포테이토, 스낵, 오렌지 음료<br/><br/>※ 만 11세 이하의 어린이 메뉴<br/>※ 사진은 B 샌드위치`,
+            },
+        ],
+        "seasonal_logo" : "seasonal4.jpg",
+        "seasonal_main_img" : "seasonal4-main.jpg",
+        "tite" : "영화 ‘청춘 낙서’ 속 세계를 만끽하세요!",
+        "sub_title" : `50년대풍 분위기가 매력적인 햄버거 레스토랑.<br/><br/>협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.`
+    },
     
         
 ]
