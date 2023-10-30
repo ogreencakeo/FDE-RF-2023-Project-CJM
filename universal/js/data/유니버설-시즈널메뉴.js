@@ -433,10 +433,123 @@ const seasonalMenu = [
                 "menu_description" : `A 팬케이크, 치킨 너겟, 프라이드 포테이토, 스낵, 오렌지 음료<br/>B 샌드위치, 치킨 너겟, 프라이드 포테이토, 스낵, 오렌지 음료<br/><br/>※ 만 11세 이하의 어린이 메뉴<br/>※ 사진은 B 샌드위치`,
             },
         ],
-        "seasonal_logo" : "seasonal4.jpg",
-        "seasonal_main_img" : "seasonal4-main.jpg",
-        "tite" : "영화 ‘청춘 낙서’ 속 세계를 만끽하세요!",
-        "sub_title" : `50년대풍 분위기가 매력적인 햄버거 레스토랑.<br/><br/>협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.`
+        "seasonal_logo" : "seasonal6.jpg",
+        "seasonal_main_img" : "seasonal6-main.jpg",
+        "tite" : "스누피 친구들의 단골 카페",
+        "sub_title" : "",
+    },
+    {
+        "idx" : "7",
+        "location" : "해피니스 카페®",
+        "service_type" : "퀵서비스",
+        "payment_method" : "신용카드 사용 가능",
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 양식, 식사류, 미니언 푸드 있음`,
+        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
+        "englisgh_page" : "",
+        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "pickup_menu" : [
+            {
+                "idx" : "7-1",
+                "image" : "seasonal7-1.jpg",
+                "menu" : "미니언 버거 플레이트",
+                "price" : "￥2,100",
+                "menu_description" : "미니언 민스 커틀릿 버거, 프라이드 포테이토, 어니언링, 샐러드, 드링크 바",
+            },
+            {
+                "idx" : "7-2",
+                "image" : "seasonal7-2.jpg",
+                "menu" : "미니언 프라이드치킨 플레이트",
+                "price" : "￥2,100",
+                "menu_description" : "프라이드치킨, 호박과 파프리카 마리네, 밥, 샐러드, 콘 차우더, 드링크 바",
+            },
+            {
+                "idx" : "7-3",
+                "image" : "seasonal7-3.jpg",
+                "menu" : "키마카레 플레이트",
+                "price" : "￥2,000",
+                "menu_description" : "키마카레, 라이스, 샐러드, 드링크바",
+            },
+        ],
+        "recommended_menu" : [
+            {
+                "idx" : "7-4",
+                "image" : "seasonal7-4.jpg",
+                "menu" : "미니언 키즈 카레 플레이트",
+                "price" : "￥1,100",
+                "menu_description" : `카레라이스, 새우튀김, 치킨 너겟, 프라이드 포테이토, 호박 샐러드, 푸딩, 드링크바<br/><br/>※ 만 11세 이하의 어린이 메뉴`
+            },
+            {
+                "idx" : "7-5",
+                "image" : "seasonal7-5.jpg",
+                "menu" : "디저트&드링크바 세트",
+                "price" : "￥1,050",
+                "menu_description" : "할로윈 미니언 슈크림 ~초코 바나나~"
+            },
+        ],
+        "seasonal_logo" : "seasonal7.jpg",
+        "seasonal_main_img" : "seasonal7-main.jpg",
+        "tite" : "샌프란시스코의 창고를 개조한 행복이 가득한 카페",
+        "sub_title" : "협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.",
+    },
+    {
+        "idx" : "8",
+        "location" : "파크 사이드 그릴",
+        "service_type" : "풀 서비스",
+        "payment_method" : "신용카드 사용 가능",
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 양식, 바・주류, 베지테리언(영어 페이지 한정)`,
+        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
+        "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
+        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "pickup_menu" : [
+            {
+                "idx" : "8-1",
+                "image" : "seasonal8-1.jpg",
+                "menu" : "갈릭 라이스를 곁들인 앵거스 비프와 아와오도리(치킨)의 그릴 플레이트",
+                "price" : "￥3,800",
+                "menu_description" : "앵거스 에이징 스테이크(숙성육), 아와오도리(치킨), 새우, 채소 그릴, 갈릭 라이스",
+            },
+            {
+                "idx" : "8-2",
+                "image" : "seasonal8-2.jpg",
+                "menu" : "앵거스 에이징 스테이크 400g/250g",
+                "price" : "￥5,300/￥4,100",
+                "menu_description" : `그릴 설로인 스테이크<br/>그릴 립 아이 스테이크<br/>매시드 포테이토, 빵 포함`
+            },
+            {
+                "idx" : "8-3",
+                "image" : "seasonal8-3.jpg",
+                "menu" : "뉴질랜드산 램 촙 ∼허브 풍미∼",
+                "price" : "￥2,750",
+                "menu_description" : "매시드 포테이토, 빵 포함",
+            },
+            {
+                "idx" : "8-4",
+                "image" : "seasonal8-4.jpg",
+                "menu" : "도쿠시마현산 아와오도리 닭고기 머스터드 소스",
+                "price" : "￥2,450",
+                "menu_description" : "매시드 포테이토, 빵 포함",
+            },
+        ],
+        "recommended_menu" : [
+            {
+                "idx" : "8-5",
+                "image" : "seasonal8-5.jpg",
+                "menu" : "키즈 샌드위치 플레이트",
+                "price" : "￥1,400",
+                "menu_description" : `치킨과 달걀 샌드위치, 프라이드 포테이토, 디저트, 오렌지 음료<br/><br/>※ 만 11세 이하의 어린이 메뉴`
+            },
+            {
+                "idx" : "8-6",
+                "image" : "seasonal8-6.jpg",
+                "menu" : `왼쪽) 그릴 파르페 ~바나나 카라멜리제&스파이시 파인~<br/>(오른쪽) 딸기 초콜릿 파르페`,
+                "price" : `(왼쪽) ¥1,800<br/>(오른쪽) ¥1,500`,
+                "menu_description" : `※14:00 ~ 17:00 한정 판매<br/>(레스토랑 영업시간에 따릅니다.)`
+            },
+        ],
+        "seasonal_logo" : "seasonal8.jpg",
+        "seasonal_main_img" : "seasonal8-main.jpg",
+        "tite" : "전망 좋은 점포 내에서 맛보는 본격 에이징 비프(숙성 쇠고기)와 맥주로 호사로운 시간을.",
+        "sub_title" : "협찬: Suntory Spirits Ltd."
     },
     
         
