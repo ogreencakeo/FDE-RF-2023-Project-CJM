@@ -875,19 +875,27 @@ const height_restrictions = {
 
     ],
     "신장 제한 122cm 이상" : [
-
+        "attraction_idx3", "attraction_idx5", "attraction_idx8", "attraction_idx11", "attraction_idx17", "attraction_idx24",
+        "attraction_idx30", "attraction_idx31", "attraction_idx33", "attraction_idx36", "attraction_idx42", "attraction_idx44",
+        "attraction_idx52", "attraction_idx58", "attraction_idx60"
     ],
     "신장 제한 122cm 이상 및 195cm 이하" : [
-
+        "attraction_idx53"
     ],
     "신장 제한 132cm 이상" : [
-
+        "attraction_idx56", "attraction_idx57"
     ],
     "신장 제한 132cm 이상 및 198cm 이하" : [
-
+        "attraction_idx4"
     ],
     "신장 제한 없음" : [
-
+        "attraction_idx1", "attraction_idx2", "attraction_idx7", "attraction_idx9", "attraction_idx10", "attraction_idx12",
+        "attraction_idx13", "attraction_idx14", "attraction_idx15", "attraction_idx16", "attraction_idx18", "attraction_idx19",
+        "attraction_idx20", "attraction_idx21", "attraction_idx22", "attraction_idx23", "attraction_idx25", "attraction_idx26",
+        "attraction_idx27", "attraction_idx28", "attraction_idx29", "attraction_idx32", "attraction_idx34", "attraction_idx35",
+        "attraction_idx37", "attraction_idx38", "attraction_idx39", "attraction_idx40", "attraction_idx41", "attraction_idx43",
+        "attraction_idx45", "attraction_idx46", "attraction_idx47", "attraction_idx49", "attraction_idx50", "attraction_idx51",
+        "attraction_idx54", "attraction_idx55", "attraction_idx59"
     ]
 };
 
