@@ -935,7 +935,10 @@ const support = {
         "attraction_idx38", "attraction_idx39", "attraction_idx40", "attraction_idx54", "attraction_idx59"
     ],
     "가발 착용 가능" : [
-
+        "attraction_idx1", "attraction_idx3", "attraction_idx5", "attraction_idx8", "attraction_idx11", "attraction_idx17",
+        "attraction_idx19", "attraction_idx20", "attraction_idx21", "attraction_idx25", "attraction_idx30", "attraction_idx31",
+        "attraction_idx32", "attraction_idx33", "attraction_idx34", "attraction_idx36", "attraction_idx38", "attraction_idx39",
+        "attraction_idx40", "attraction_idx42", "attraction_idx44", "attraction_idx59", "attraction_idx60"
     ], 
     "싱글 라이더 사용 가능" : [
 
