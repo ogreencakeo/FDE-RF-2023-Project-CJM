@@ -916,10 +916,11 @@ const attraction_type = {
         "attraction_idx43", "attraction_idx47", "attraction_idx49", "attraction_idx51", "attraction_idx55"
     ],
     "플레이랜드·기타" : [
-
+        "attraction_idx2", "attraction_idx7", "attraction_idx15", "attraction_idx18", "attraction_idx22", "attraction_idx27",
+        "attraction_idx28", "attraction_idx29", "attraction_idx37", "attraction_idx46", "attraction_idx48", "attraction_idx59"
     ],
     "게임" : [
-
+        "attraction_idx10", "attraction_idx13", "attraction_idx16", "attraction_idx23", "attraction_idx26", "attraction_idx50"
     ]
 
 } ;
@@ -930,7 +931,8 @@ const support = {
 
     ],
     "안내견 동반 가능" : [
-
+        "attraction_idx1", "attraction_idx17", "attraction_idx20", "attraction_idx21", "attraction_idx25", "attraction_idx34",
+        "attraction_idx38", "attraction_idx39", "attraction_idx40", "attraction_idx54", "attraction_idx59"
     ],
     "가발 착용 가능" : [
 
