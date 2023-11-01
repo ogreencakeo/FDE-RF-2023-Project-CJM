@@ -902,7 +902,10 @@ const height_restrictions = {
 // 어트랙션 타입
 const attraction_type = {
     "라이드 어트랙션" : [
-
+        "attraction_idx3", "attraction_idx4", "attraction_idx5", "attraction_idx8", "attraction_idx11", "attraction_idx17",
+        "attraction_idx19", "attraction_idx24", "attraction_idx30", "attraction_idx31", "attraction_idx32", "attraction_idx33",
+        "attraction_idx36", "attraction_idx42", "attraction_idx44", "attraction_idx52", "attraction_idx53", "attraction_idx56",
+        "attraction_idx57", "attraction_idx58", "attraction_idx60"
     ],
     "쇼 어트랙션" : [
 
