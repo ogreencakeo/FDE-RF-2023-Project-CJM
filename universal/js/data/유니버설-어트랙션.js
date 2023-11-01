@@ -908,10 +908,12 @@ const attraction_type = {
         "attraction_idx57", "attraction_idx58", "attraction_idx60"
     ],
     "쇼 어트랙션" : [
-
+        "attraction_idx1", "attraction_idx20", "attraction_idx21", "attraction_idx25", "attraction_idx34", "attraction_idx38",
+        "attraction_idx39", "attraction_idx40", "attraction_idx45", "attraction_idx54"
     ],
     "스테이지 쇼 &  스트리트 쇼" : [
-
+        "attraction_idx6", "attraction_idx9", "attraction_idx12", "attraction_idx14", "attraction_idx35", "attraction_idx41",
+        "attraction_idx43", "attraction_idx47", "attraction_idx49", "attraction_idx51", "attraction_idx55"
     ],
     "플레이랜드·기타" : [
 
