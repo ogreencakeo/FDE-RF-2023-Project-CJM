@@ -941,18 +941,28 @@ const support = {
         "attraction_idx40", "attraction_idx42", "attraction_idx44", "attraction_idx59", "attraction_idx60"
     ], 
     "싱글 라이더 사용 가능" : [
-
+        "attraction_idx4", "attraction_idx5", "attraction_idx11", "attraction_idx24", "attraction_idx30", "attraction_idx31",
+        "attraction_idx42", "attraction_idx44", "attraction_idx56", "attraction_idx58"
     ],
     "차일드 스위치 사용 가능" : [
-
+        "attraction_idx3", "attraction_idx4", "attraction_idx5", "attraction_idx8", "attraction_idx11", "attraction_idx17",
+        "attraction_idx20", "attraction_idx21", "attraction_idx24", "attraction_idx30", "attraction_idx31", "attraction_idx33",
+        "attraction_idx36", "attraction_idx42", "attraction_idx44", "attraction_idx52", "attraction_idx53", "attraction_idx56",
+        "attraction_idx57", "attraction_idx58", "attraction_idx60"
     ],
     "임산부 가능" : [
-
+        "attraction_idx1", "attraction_idx25", "attraction_idx34", "attraction_idx38", "attraction_idx39", "attraction_idx40",
+        "attraction_idx54", "attraction_idx59"
     ],
     "휠체어 가능" : [
-
+        "attraction_idx1", "attraction_idx3", "attraction_idx4", "attraction_idx5", "attraction_idx8", "attraction_idx11",
+        "attraction_idx17", "attraction_idx19", "attraction_idx20", "attraction_idx21", "attraction_idx24", "attraction_idx25",
+        "attraction_idx30", "attraction_idx31", "attraction_idx32", "attraction_idx33", "attraction_idx34", "attraction_idx36",
+        "attraction_idx38", "attraction_idx39", "attraction_idx40", "attraction_idx42", "attraction_idx44", "attraction_idx52",
+        "attraction_idx53", "attraction_idx54", "attraction_idx56", "attraction_idx57", "attraction_idx58", "attraction_idx59",
+        "attraction_idx60"
     ],
     "자막 표시 안경 이용 가능(일본어)" : [
-
+        "attraction_idx20", "attraction_idx21"
     ]
 };
