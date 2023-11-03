@@ -2,6 +2,7 @@
 @import url(./index.css);
 @import url(./reset.css);
 @import url(./seasonal_restaurant.css);
+@import url(./seasonal_menu.css);
 
 body::-webkit-scrollbar{
     width: 15px;

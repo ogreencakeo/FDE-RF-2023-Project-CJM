@@ -6,23 +6,29 @@
 .restaurant_img_wrap{
     width: 100%;
 }
-.restaurant_img{
-    /* aspect-ratio: 9/2; */
-    /* object-fit: contain; */
-    /* background-size: contain; */
-   
+
+.restaurant_logo1{
+    background:url(../images/seasonal/seasonal1.jpg) no-repeat center/cover;
 }
+.restaurant_logo{
+    width: 20vw;
+    height: 20vw;
+}
+
 .restaurant_img1{
     background: url(../images/seasonal/seasonal1-main.jpg);
+}
+
+.restaurant_img{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     display: block;
     width: 100%;
-    height: 30vh;
-    
+    height: 35vh;
 }
+
 
 .seasonal_restaurant_bx{
     height: 300vh;

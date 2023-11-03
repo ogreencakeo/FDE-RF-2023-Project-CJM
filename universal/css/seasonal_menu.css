@@ -1,6 +1,6 @@
 .seasonal_menu_wrap{
     width: 100%;
-    background-color: #232025;
+    background-color: #03192c;
 }
 
 p, span, i{
@@ -60,7 +60,7 @@ p, span, i{
 
 /* 추천 시즈널 메뉴 특집 */
 .seasonal_overline_wrap{
-    background-color: #e2c7d6;
+    background-color: whitesmoke;
     width: 100%;
     padding: 20px;
 }
@@ -79,7 +79,7 @@ p, span, i{
     font-size: 4em;
     font-weight: 500;
     text-align: center;
-    background-color: #7a65a4;
+    background-color: slategray;
     display:inline-block;
     padding: 5px 20px;
     color: whitesmoke;
@@ -107,7 +107,7 @@ p, span, i{
     margin: 0 auto;
     border-radius: 50%;
     border: 5px solid whitesmoke;
-    background-color: black;
+    background-color: steelblue;
     font-size: 5.5em;
     margin: 0 auto;
     text-align: center;
@@ -118,14 +118,17 @@ p, span, i{
     font-size: 2em;
     text-align: center;
     padding: 15px;
-    color: #412f59;
+    color: slategray;
 }
 .seasonal_overline span:nth-of-type(2){
     font-size: 1.2em;
     text-align: center;
-    padding: 10px;
+    padding: 25px;
     line-height: 35px;
     color: black;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: #fff;
 }
 .seasonal_overline>div{
     text-align: center;
@@ -142,10 +145,21 @@ p, span, i{
     top: 5%;
     width: 20vw;
     transform: rotate(35deg);
+    animation: seasonal_img_move 1s linear alternate infinite;
 }
 .bat-img{
     position: absolute;
     right: 2%;
     width: 33vw;
     transform: rotate(-10deg);
+    animation: seasonal_img_move 1s linear alternate infinite;
+}
+
+@keyframes seasonal_img_move {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(50px);
+    }
 }
