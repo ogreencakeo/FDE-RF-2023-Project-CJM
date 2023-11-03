@@ -4,22 +4,31 @@
     max-width: 100%;
 }
 .seasonal_restaurant_bx{
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    margin: 30px auto;
 }
-.seasonal_restaurant_bx>div{
-    /* flex: 1; */
-    height: 300px;
-}
-
 .restaurant_total_main_img{
-    background: url(../images/seasonal/food1.png) no-repeat center/cover;
-    display: block;
-    aspect-ratio: 2/1;
-    border-radius: 35px;
-    border: 2px solid skyblue;
+    /* max-width: 50vw; */
+    /* max-width: 50%; */
+    position: relative;
+    overflow: hidden;
+}
+.restaurant_total_main_img>.main3{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    /* transform: rotate(5deg); */
+}
+.restaurant_total_main_img .logo-span-wrap li{
+    font-size: 8vw;
+}
+.restaurant_total_main_img>img{
+    border-radius: 70px;
     box-sizing: border-box;
+    aspect-ratio: 2/1.2;
+    max-width: 70vw;
+    margin: 0 auto;
+    display: block;
 }
 
 /* 레스토랑 로고 */
@@ -47,9 +56,23 @@
 
 
 .seasonal_restaurant_bx{
-    height: 300vh;
+    /* height: 300vh; */
 }
 
 .restaurant_img_wrap{
     width: 100%;
+}
+
+
+@media (max-width : 600px) {
+    body>* {
+        overflow-x: hidden;
+    }
+    .seasonal_restaurant_bx>div{
+        height: auto;
+    }
+    .restaurant_total_main_img>img{
+        /* width: 100vw; */
+        height: auto;
+    }
 }

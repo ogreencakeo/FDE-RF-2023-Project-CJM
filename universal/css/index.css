@@ -402,7 +402,7 @@ a{
 
 .pick2{
     transform: rotateY(180deg);
-    /* filter: blur(2px); */
+    /* filter: blur(2px);-span-wrap */
     /* background-image: url(.././images/blue-pattern.webp);
     background-repeat: no-repeat;
     background-position: center;
@@ -480,24 +480,26 @@ a{
 .logo-span-wrap li{
     flex: 1;
     text-align: center;
-    color: skyblue;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(43 69 132);
     text-shadow: 2px 2px 3px #fff;
     font-size: 4vw;
-    font-family: 'Gowun Batang', serif;
-    font-weight: 600;
+    font-family: 'Jua', sans-serif;
+    font-weight: 900;
 }
 .logo-span-wrap li span{
     display: block;
 }
 .logo-span-wrap li:nth-child(2n){
-    color: rgb(43 69 132);
+    -webkit-text-stroke-color: orangered;
 }
 
 .logo-span-ani{
-    animation: text-span-ani 20s linear infinite;
+    animation: text-span-ani 30s linear infinite;
 }
 .logo-span-ani2{
-    animation: text-span-ani2 20s linear infinite;
+    animation: text-span-ani2 30s linear infinite;
 }
 .logo-span-ani:hover,
 .logo-span-ani2:hover{
