@@ -1,8 +1,9 @@
-@import 'utf-8';
-@import url(./index.css);
-@import url(./reset.css);
-@import url(./seasonal_restaurant.css);
-@import url(./seasonal_menu.css);
+@charset "utf-8";
+@import url('./index.css');
+@import url('./reset.css');
+@import url('./seasonal_restaurant.css');
+@import url('./seasonal_menu.css');
+@import url('./core.css');
 
 body::-webkit-scrollbar{
     width: 15px;
