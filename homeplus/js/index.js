@@ -69,19 +69,23 @@ function loadFn() {
         let isRight = this.classList.contains("m-rightbtn");
         let eachOne = domFn.qsaEl(main_slide, "li");
         if (isRight) {
-            main_slide.style.left = "calc(-200% - 100px)";
+            // main_slide.style.left = "calc(-200% - 100px)";
+            main_slide.style.left = "-330$";
             main_slide.style.transition = ".4s ease-in-out";
             setTimeout(() => {
                 main_slide.appendChild(eachOne[0]);
-                main_slide.style.left = "-100%";
+                // main_slide.style.left = "-100%";
+                main_slide.style.left = "-220%";
                 main_slide.style.transition = "none";
             }, 400);
         } else {
             main_slide.insertBefore(eachOne[eachOne.length - 1], eachOne[0]);
-            main_slide.style.left = "-200%";
+            // main_slide.style.left = "-200%";
+            main_slide.style.left = "-330%";
             main_slide.style.transition = "none";
             setTimeout(() => {
-                main_slide.style.left = "-100%";
+                // main_slide.style.left = "-100%";
+                main_slide.style.left = "-220%";
                 main_slide.style.transition = ".4s ease-in-out";
             });
         }
@@ -89,11 +93,13 @@ function loadFn() {
 
     // 자동넘김용 호출함수
     const goRight = () => {
-        main_slide.style.left = "calc(-200% - 50px)";
+        // main_slide.style.left = "calc(-200% - 50px)";
+        main_slide.style.left = "-330%";
         main_slide.style.transition = ".4s ease-in-out";
         setTimeout(() => {
             main_slide.appendChild(domFn.qsaEl(main_slide, "li")[0]);
-            main_slide.style.left = "-100%";
+            // main_slide.style.left = "-100%";
+            main_slide.style.left = "-220%";
             main_slide.style.transition = "none";
         }, 400);
     };

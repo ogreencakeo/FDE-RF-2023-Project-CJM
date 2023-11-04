@@ -1,5 +1,8 @@
 @charset "utf-8";
 @media screen and (max-width : 1665px) {
+    body{
+        overflow-x: hidden;
+    }
     body > *{
         margin: 0;
         padding: 0;
@@ -31,20 +34,22 @@
     }
     /* nav */
     .move-to-exhibition{
-        max-width: 700px;
+        /* max-width: 700px; */
     }
     .move-to-exhibition ul{
         flex-wrap: wrap;
-        max-width: 800px;
+        justify-content: start !important;
+        /* max-width: 800px; */
         /* outline: 1px solid red; */
         
     }
     .move-to-exhibition ul li{
-        flex-basis: calc(100% / 3 - 30px * 2);
+        /* flex-basis: calc(100% / 3 - 30px * 2); */
+        /* width: 20%; */
         font-size: min(15vh,40px);
     }
     .move-to-exhibition ul li img{
-        transform: scale(1.25);
+        /* transform: scale(1.25); */
     }
 
     /* 사자버튼 */
@@ -59,6 +64,7 @@
 
     .saja-item-box{
         margin: 0;
+        width: 45%;
     }
 
     .saja-item-exp-name p{
@@ -89,10 +95,30 @@
     .footer-logo{
         display: none;
     }
+    .mini-mypage{
+        display: none;
+    }
 
 }
 
-@media screen and (max-width : 975px) {
-    
+@media screen and (max-width : 880px) {
+    .saja-item-box{
+        /* width: 90%; */
+        /* margin: 0 auto; */
+    }
+}
+
+@media screen and (max-width : 650px) {
+    .move-to-exhibition{
+        padding: 0;
+    }
+    .saja-item-img section img{
+        width: 40px;
+        height: 40px;
+    }
+    .saja-item-box{
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
