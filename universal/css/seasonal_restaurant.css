@@ -64,12 +64,15 @@
 }
 
 
-@media (max-width : 600px) {
+@media screen and (max-width : 600px) {
     body>* {
         overflow-x: hidden;
     }
     .seasonal_restaurant_bx>div{
         height: auto;
+    }
+    .restaurant_img{
+        aspect-ratio: 2/1;
     }
     .restaurant_total_main_img>img{
         /* width: 100vw; */
