@@ -24,6 +24,15 @@ a{
     color: #000;
 }
 
+/* 헤더 환영박스 */
+.heder-top{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+    background-color: #ebe3de;
+    border-top: 3px solid #b69f8f;
+    border-bottom: 3px solid #b69f8f;
+}
 
 /* 헤더 nav */
 .main-logo{
@@ -515,6 +524,34 @@ a{
     to{
         left: 0%;
     }
+}
+
+/* 여행사 */
+.travel_agency_wrap{
+    max-width: 100%;
+    background-color:#232025;
+    color: whitesmoke;
+    padding-top: 30px;
+}
+
+.tarvel_agency{
+    width: 90%;
+    margin: 0 auto;
+    background-color: slategray;
+    border-radius: 40px;
+}
+
+.travel_agency_wrap ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.travel_agency_wrap ul li{
+    flex: 1;
+}
+.travel_agency_wrap ul li img{
+    width: 15vw;
+    height: 13vh;
+    display: block;
 }
 
 /* 하단 footer */
