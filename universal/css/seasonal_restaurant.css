@@ -31,15 +31,53 @@
     display: block;
 }
 
+/* 레스토랑 로그 + 컨텍츠 박스 wrap */
+.restaurant_explanation{
+    display: flex;
+    /* padding: 2%; */
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 65px;
+}
+.restaurant_explanation>div{
+    /* flex: 1; */
+}
+.restaurant_content_wrap{
+}
+/* restaurant_content_wrap - 컨텐츠 내용들*/
+.restaurant_content_wrap>span:nth-of-type(1){
+    background-color: #f08400;
+    display: inline-block;
+    padding: 4px 7px;
+    border-radius: 20px;
+    color: #fff;
+}
+.restaurant_content_wrap>h1{
+    font-size: 2.5em;
+    font-weight: 800;
+}
+.restaurant_content_wrap>div>span{
+    display: block;
+}
 /* 레스토랑 로고 */
 .restaurant_logo1{
     background:url(../images/seasonal/seasonal1.jpg) no-repeat center/cover;
 }
 .restaurant_logo{
-    width: 20vw;
-    height: 20vw;
+    position: absolute;
+    top: -30%;
+    left: 5%;
+    width: 153px;
+    height: 153px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+/* 레스토랑 빌딩 이미지 */
+.restaurant_building_img{
+    outline: 1px solid black;
+    margin-top: 30px;
+}
 .restaurant_img1{
     background: url(../images/seasonal/seasonal1-main.jpg);
 }
@@ -54,6 +92,11 @@
     height: 35vh;
 }
 
+/* 레스토랑 주의사항 */
+.restaurant_caution{
+    padding: 20px;
+    font-size: 15px;
+}
 
 .seasonal_restaurant_bx{
     /* height: 300vh; */
