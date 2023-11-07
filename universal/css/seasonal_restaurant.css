@@ -127,16 +127,36 @@
 }
 
 .seasonal_restaurant_product{
-    padding: 65px;
+    padding: 45px;
 }
-.product_detail>h1{
-    padding: 10px;
-}
-
 .product_detail{
-    padding: 10px;
+    padding: 10px 0 50px 0;
     text-align: center;
 }
+.product_detail>h1{
+    padding: 15px;
+}
+
+/* 레스토랑 메인 - 컨텐츠 (픽업 메뉴 정보) */
+.restaurant_pickup_info{
+    padding: 20px;
+    text-align: center;
+}
+
+.restaurant_pickup_info>h2{
+    padding: 5px 0 30px 0;
+}
+
+.menu_pickup_info_wrap{
+    max-width: 100%;
+    outline: 1px solid red;
+    display: flex;
+}
+
+.menu_pickup_info{
+    
+}
+
 
 @media screen and (max-width : 600px) {
     body>* {
