@@ -25,8 +25,9 @@
 .restaurant_total_main_img>img{
     border-radius: 70px;
     box-sizing: border-box;
-    aspect-ratio: 2/1.2;
-    max-width: 70vw;
+    aspect-ratio: 2/1.15;
+    max-width: 100%;
+    height: 50vh;
     margin: 0 auto;
     display: block;
 }
@@ -97,15 +98,45 @@
     padding: 20px;
     font-size: 15px;
 }
-
+.restaurant_method{
+    padding: 10px 0;
+}
+.restaurant_method>div{
+    padding: 5px 0;
+}
+/* .restaurant_method>div>i{
+    color: midnightblue;
+}
+.restaurant_method>div>span:first-of-type{
+    background-color: aliceblue;
+    padding: 5px;
+    color: #f9f9f9;
+    border-radius: 20px;
+} */
+/* .restaurant_method>div>span:last-of-type{
+    color: grey;
+} */
 .seasonal_restaurant_bx{
     /* height: 300vh; */
 }
 
-.restaurant_img_wrap{
-    width: 100%;
+
+/* 레스토랑 메인 - 컨텐츠 */
+.restaurant_main_content_wrap{
+    max-width: 100%;
 }
 
+.seasonal_restaurant_product{
+    padding: 65px;
+}
+.product_detail>h1{
+    padding: 10px;
+}
+
+.product_detail{
+    padding: 10px;
+    text-align: center;
+}
 
 @media screen and (max-width : 600px) {
     body>* {
