@@ -66,7 +66,8 @@
 }
 .restaurant_logo{
     position: absolute;
-    top: -30%;
+    top: -50%;
+    transform: translateY(50%);
     left: 5%;
     width: 153px;
     height: 153px;
@@ -139,7 +140,7 @@
 
 /* 레스토랑 메인 - 컨텐츠 (픽업 메뉴 정보) */
 .restaurant_pickup_info{
-    padding: 20px;
+    padding: 20px;                                
     text-align: center;
 }
 
