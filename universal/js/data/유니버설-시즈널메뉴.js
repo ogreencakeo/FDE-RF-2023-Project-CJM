@@ -23,6 +23,8 @@ const seasonalMenu = [
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "restaurant_bg" : "restaurant_bg1.jpg",
+        "restaurant_map" : "restaurant_map1.jpg",
         // "seasonal_img" : ["seasonal1-1.jpg", "seasonal1-2.jpg", "seasonal1-3.jpg", "seasonal1-4.jpg", "seasonal1-5.jpg", "seasonal1-6.jpg"],
         "pickup_menu" : [
             {
@@ -84,6 +86,8 @@ const seasonalMenu = [
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "restaurant_bg" : "restaurant_bg2.jpg",
+        "restaurant_map" : "restaurant_map2.jpg",
         "pickup_menu" : [
             {
                 "idx" : "2-1",
@@ -165,6 +169,8 @@ const seasonalMenu = [
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "",
+        "restaurant_bg" : "restaurant_bg3.jpg",
+        "restaurant_map" : "restaurant_map3.jpg",
         "pickup_menu" : [
             {
                 "idx" : "3-1",
@@ -225,6 +231,8 @@ const seasonalMenu = [
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "restaurant_bg" : "restaurant_bg4.jpg",
+        "restaurant_map" : "restaurant_map4.jpg",
         "pickup_menu" : [
             {
                 "idx" : "4-1",
@@ -285,6 +293,8 @@ const seasonalMenu = [
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "restaurant_bg" : "restaurant_bg5.jpg",
+        "restaurant_map" : "restaurant_map5.jpg",
         "pickup_menu" : [
             {
                 "idx" : "5-1",
@@ -387,6 +397,8 @@ const seasonalMenu = [
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "restaurant_bg" : "restaurant_bg6.jpg",
+        "restaurant_map" : "restaurant_map6.jpg",
         "pickup_menu" : [
             {
                 "idx" : "6-1",
@@ -447,6 +459,8 @@ const seasonalMenu = [
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "restaurant_bg" : "restaurant_bg7.jpg",
+        "restaurant_map" : "restaurant_map7.jpg",
         "pickup_menu" : [
             {
                 "idx" : "7-1",
@@ -500,6 +514,8 @@ const seasonalMenu = [
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "restaurant_bg" : "restaurant_bg8.jpg",
+        "restaurant_map" : "restaurant_map8.jpg",
         "pickup_menu" : [
             {
                 "idx" : "8-1",
