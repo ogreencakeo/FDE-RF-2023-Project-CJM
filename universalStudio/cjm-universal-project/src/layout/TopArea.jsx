@@ -1,6 +1,6 @@
 // 상단영역
 import { Link } from "react-router-dom";
-import { menu } from "../data/menu";
+import { navMenu } from "../data/navMenu";
 
 export function TopArea() {
     return (
@@ -20,7 +20,7 @@ export function TopArea() {
                     <img src="./images/universal_logo.webp" alt="로고" />
                 </div>
                 <ul className="bottom-nav">
-                    {menu.map((v, i) => (
+                    {navMenu.map((v, i) => (
                         <li key={i}>
                             <Link to={v.link}>
                                 <span data-hover={v.txt}>{v.txt}</span>

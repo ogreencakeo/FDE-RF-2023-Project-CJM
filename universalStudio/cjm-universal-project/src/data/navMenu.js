@@ -1,4 +1,4 @@
-export const menu = [
+export const navMenu = [
     {
         txt : '이벤트',
         link : '/event'
