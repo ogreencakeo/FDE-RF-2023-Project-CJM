@@ -17,7 +17,7 @@ export function TopArea() {
                     </ul>
                 </div>
                 <div className="nav-logo">
-                    <img src="./images/universal_logo.webp" alt="" />
+                    <img src="./images/universal_logo.webp" alt="로고" />
                 </div>
                 <ul className="bottom-nav">
                     {menu.map((v, i) => (
