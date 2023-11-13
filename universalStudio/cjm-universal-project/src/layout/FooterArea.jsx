@@ -1,5 +1,6 @@
 // 하단영역
 
+import { Link } from 'react-router-dom';
 import {footerMenu} from '../data/footerMenu';
 
 export function FooterArea() {
@@ -18,15 +19,15 @@ export function FooterArea() {
                 <div className="footer-wrap-bottom">
                     <div>
                         <ul>
-                            <li>
+                            {/* <li>
                                 <a href="https://www.usj.co.jp/web/ja/jp" target="_blank">
                                     日本語
                                 </a>
-                            </li>
+                            </li> */}
                             {
-                                footerMenu.map(v =>
+                                footerMenu.footerMenu1.map(v =>
                                     <li>
-                                        <a href={v.footerMenu1['link']}>{v.footerMenu1['txt']}</a>
+                                        <Link to ={v.link}>{v.txt}</Link>
                                     </li>
                                 )
                             }
