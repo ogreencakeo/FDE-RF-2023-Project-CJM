@@ -24,15 +24,6 @@ a{
     color: #000;
 }
 
-/* 헤더 환영박스 */
-.heder-top{
-    text-align: center;
-    font-size: 1.5em;
-    padding: 10px;
-    background-color: #ebe3de;
-    border-top: 3px solid #b69f8f;
-    border-bottom: 3px solid #b69f8f;
-}
 
 /* 헤더 nav */
 .main-logo{
@@ -56,11 +47,107 @@ a{
         transform: rotate(-15deg);
     }
 }
-.header-img nav{
+
+/* 네비박스 */
+.header-top nav{
+    max-width: 100%;
+    padding: 30px 0 20px 0;
+}
+.header-top nav ul{
+    display: flex;
+    
+    
+}
+/* 상단 nav - 로그인, 회원가입 */
+.top-nav, .bottom-nav{
+    display: flex;
+}
+.top-nav-bx{
+    max-width: 100%;
+    position: relative;
+}
+.top-nav{
+    position: absolute;
+    right: 7%;
+}
+.top-nav li{
+    padding: 0 20px;
+}
+
+.bottom-nav li{
+    flex: 1;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+/* 글자 위로 올라가기 애니메이션 */
+.header-top li a{
+    font-size: 1.5vw;
+    font-family: 'Jua', sans-serif;
+    line-height: 1;
+    display: inline-block;
+    overflow: hidden;
+}
+.header-top li span{
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    transition: .4s;
+    color: #555;
+}
+.header-top span::before{
+    position: absolute;
+    top: 100%;
+    color: #000;
+    content: attr(data-hover);
+}
+.header-top a:hover span{
+    transform: translateY(-100%);
+}
+/*
+.header-img nav ul li a{
+    font-size: 1.9vw;
+    font-family:'Jua', sans-serif;
+    line-height: 1;
+    display: inline-block;
+    overflow: hidden;
+}
+.header-img nav ul li a span{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    transition: transform .4s;
+    color: #555;
+}
+.header-img nav ul li a span::before{
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    color: #000;
+}
+.header-img nav ul li a:hover span{
+    transform: translateY(-100%);
+} */
+
+/* universal nav 로고 */
+.nav-logo{
+    width: 17vw;
+    height: 7vw;
+    margin: 0 auto;
+    padding: 10px;
+}
+.nav-logo>img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+/* .header-img nav{
     position: absolute;
     top: 5%;
     right: 0;
-    width: 80%;
+    width: 100%;
     height: 10vh;
     margin: 0 auto;
 }
@@ -80,7 +167,6 @@ a{
     font-family:'Jua', sans-serif;
     line-height: 1;
     display: inline-block;
-    /* background-color: yellow; */
     overflow: hidden;
 }
 .header-img nav ul li a span{
@@ -98,7 +184,7 @@ a{
 }
 .header-img nav ul li a:hover span{
     transform: translateY(-100%);
-}
+} */
 
 /* 헤더 이미지 랩핑 */
 .header-img-wrap{
