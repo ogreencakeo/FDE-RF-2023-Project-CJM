@@ -1,5 +1,7 @@
 // 하단영역
 
+import {footerMenu} from '../data/footerMenu';
+
 export function FooterArea() {
     return (
         <div className="footer">
@@ -21,26 +23,13 @@ export function FooterArea() {
                                     日本語
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://www.usj.co.jp/web/en/us" target="_blank">
-                                    ENGLISH
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.usj.co.jp/web/zh/cn" target="_blank">
-                                    简体中文
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.usj.co.jp/web/ko/kr" target="_blank">
-                                    한국어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.usj.co.jp/web/zh/tw" target="_blank">
-                                    繁體中文
-                                </a>
-                            </li>
+                            {
+                                footerMenu.map(v =>
+                                    <li>
+                                        <a href={v.footerMenu1['link']}>{v.footerMenu1['txt']}</a>
+                                    </li>
+                                )
+                            }
                         </ul>
                     </div>
                     <div>
