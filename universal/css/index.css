@@ -77,18 +77,24 @@ a{
 .bottom-nav li{
     flex: 1;
     text-align: center;
-    padding-top: 10px;
 }
 
 
 /* 글자 위로 올라가기 애니메이션 */
-.header-top li a{
+.header-top li{
     font-size: 1.5vw;
     font-family: 'Jua', sans-serif;
     line-height: 1;
     display: inline-block;
     overflow: hidden;
 }
+/* .header-top li a{
+    font-size: 1.5vw;
+    font-family: 'Jua', sans-serif;
+    line-height: 1;
+    display: inline-block;
+    overflow: hidden;
+} */
 .header-top li span{
     text-align: center;
     width: 100%;
@@ -103,9 +109,12 @@ a{
     color: #000;
     content: attr(data-hover);
 }
-.header-top a:hover span{
+.header-top li:hover span{
     transform: translateY(-100%);
 }
+/* .header-top a:hover span{
+    transform: translateY(-100%);
+} */
 /*
 .header-img nav ul li a{
     font-size: 1.9vw;

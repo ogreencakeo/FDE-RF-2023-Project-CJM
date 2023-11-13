@@ -62,7 +62,7 @@
 }
 /* 레스토랑 로고 */
 .restaurant_logo1{
-    background:url(../images/seasonal/seasonal1.jpg) no-repeat center/cover;
+    /* background:url(../images/seasonal/seasonal1.jpg) no-repeat center/cover; */
 }
 .restaurant_logo{
     position: absolute;
@@ -80,7 +80,7 @@
     margin-top: 30px;
 }
 .restaurant_img1{
-    background: url(../images/seasonal/seasonal1-main.jpg);
+    /* background: url(../images/seasonal/seasonal1-main.jpg); */
 }
 
 .restaurant_img{
