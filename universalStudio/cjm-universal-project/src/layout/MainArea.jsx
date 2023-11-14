@@ -1,7 +1,11 @@
 // 메인영역
 
+import { Outlet } from "react-router-dom";
+
 export function MainArea(){
     return(
-        <h1>메인컴포넌트</h1>
+        <>
+            <Outlet />
+        </>
     )
 }
