@@ -1,9 +1,12 @@
 // 하단영역
 
-import { Link } from 'react-router-dom';
-import {fmenu} from '../data/footerMenu';
+import { Link } from "react-router-dom";
+import { fmenu } from "../data/footerMenu";
 
 export function FooterArea() {
+    const fmenu1 = fmenu[0].footerMenu1;
+    const fmenu2 = fmenu[1].footerMenu2;
+
     return (
         <div className="footer">
             <div className="footer-wrap">
@@ -19,47 +22,22 @@ export function FooterArea() {
                 <div className="footer-wrap-bottom">
                     <div>
                         <ul>
-                            {/* <li>
-                                <a href="https://www.usj.co.jp/web/ja/jp" target="_blank">
-                                    日本語
-                                </a>
-                            </li> */}
-                            {
-                                fmenu[0].footerMenu1.map((v) =>
-                                    <li>
-                                        <Link to ={v.link} target='_blank'>{v.txt}</Link>
-                                    </li>
-                                )
-                            }
+                            {fmenu1.map((v) => (
+                                <li>
+                                    <Link to={v.link} target="_blank">{v.txt}</Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div>
                         <ul>
-                            <li>
-                                <a href="#" target="_blank">
-                                    저작권과 상표{" "}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    이 사이트에 대하여
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    개인정보 보호정책
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    한국어
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    사이트맵
-                                </a>
-                            </li>
+                            { fmenu2.map(v => (
+                                <li>
+                                    <Link to={v.link} target="_blank">{v.txt}</Link>
+                                </li>
+                            ))
+
+                            }
                         </ul>
                     </div>
                     <div>
