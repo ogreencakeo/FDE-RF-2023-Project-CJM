@@ -248,16 +248,18 @@ export const goods =[
                 "image" : "goods3/goods10.jpg"
             },
             {
-                "store" : "",
-                "itemGoods" : "",
-                "usage" : "",
-                "content" :""
+                "store" : "부엉이 우체국™ & 부엉이 방",
+                "itemGoods" : "위저딩 월드 오브 해리 포터™",
+                "usage" : "케이스에 든 메모지",
+                "content" :"",
+                "image" : "goods3/goods11.jpg"
             },
             {
-                "store" : "",
-                "itemGoods" : "",
-                "usage" : "",
-                "content" :""
+                "store" : "부엉이 우체국™ & 부엉이 방",
+                "itemGoods" : "위저딩 월드 오브 해리 포터™",
+                "usage" : "머리띠",
+                "content" :"",
+                "image" : "goods3/goods12.jpg"
             },
         ]
     },
