@@ -1,4 +1,4 @@
-export const footerMenu = [
+export const fmenu = [
     {
         footerMenu1 : [
             {
@@ -16,11 +16,7 @@ export const footerMenu = [
             {
                 txt : '繁體中文',
                 link : 'https://www.usj.co.jp/web/zh/tw',
-            },
-        ],
-        footerMenu2 : {
-            txt : 'https://www.usj.co.jp/web/en/us',
-
-        }
-    }
+            }
+        ]
+    },
 ];

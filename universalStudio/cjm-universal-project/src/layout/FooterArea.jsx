@@ -1,7 +1,7 @@
 // 하단영역
 
 import { Link } from 'react-router-dom';
-import {footerMenu} from '../data/footerMenu';
+import {fmenu} from '../data/footerMenu';
 
 export function FooterArea() {
     return (
@@ -25,9 +25,9 @@ export function FooterArea() {
                                 </a>
                             </li> */}
                             {
-                                footerMenu.footerMenu1.map(v =>
+                                fmenu[0].footerMenu1.map((v) =>
                                     <li>
-                                        <Link to ={v.link}>{v.txt}</Link>
+                                        <Link to ={v.link} target='_blank'>{v.txt}</Link>
                                     </li>
                                 )
                             }
