@@ -22,8 +22,8 @@ export function FooterArea() {
                 <div className="footer-wrap-bottom">
                     <div>
                         <ul>
-                            {fmenu1.map((v) => (
-                                <li>
+                            {fmenu1.map((v, i) => (
+                                <li key={i}>
                                     <Link to={v.link} target="_blank">{v.txt}</Link>
                                 </li>
                             ))}
@@ -31,8 +31,8 @@ export function FooterArea() {
                     </div>
                     <div>
                         <ul>
-                            { fmenu2.map(v => (
-                                <li>
+                            { fmenu2.map((v, i) => (
+                                <li key={i}>
                                     <Link to={v.link} target="_blank">{v.txt}</Link>
                                 </li>
                             ))

@@ -6,7 +6,7 @@ export const goods =[
                 "itemGoods" : "슈퍼 닌텐도 월드™",
                 "usage" : "파워 업 밴드",
                 "content" :"※ 파워 업 밴드는 슈퍼 닌텐도 월드™ 입구 부근의 카트 등에서 미리 구매하시는 것을 추천합니다.",
-                "image" : "goods1/goods1.jpg"
+                "image" : `goods1/goods1.jpg`
             },
             {
                 "store" : "슈퍼 닌텐도 월드™ 입구 부근 등",

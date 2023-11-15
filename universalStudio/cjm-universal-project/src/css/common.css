@@ -4,7 +4,7 @@
 @import url('./seasonal_restaurant.css');
 @import url('./seasonal_menu.css');
 @import url('./core.css');
-@import url('./goods.css');
+/* @import url('./goods.css'); */
 
 body::-webkit-scrollbar{
     width: 15px;

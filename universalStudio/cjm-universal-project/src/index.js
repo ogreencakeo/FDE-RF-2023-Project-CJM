@@ -21,7 +21,7 @@ export default function App() {
           <Route index element={<Main />} />
           <Route path='event' element={<Event />} />
           <Route path='seasonalMenu' element={<SeasonalMenu />} />
-          <Route path='goods' element={<Goods />} />
+          <Route path='goods/*' element={<Goods />} />
           <Route path='customerCenter' element={<CustomerCenter />} />
         </Route>
       </Routes>
