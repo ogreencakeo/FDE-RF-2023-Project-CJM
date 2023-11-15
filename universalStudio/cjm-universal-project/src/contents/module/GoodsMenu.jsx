@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes } from "react-router-dom"
 import { GoodsItem } from "../GoodsCont/GoodsItem"
 import { useState } from "react"
-import { goods } from "../../data/유니버설-굿즈";
+
 export function GoodsMenu(){
     const [goodscat, setGoodscat] = useState('supermario');
     const goodscatFn = (data) => setGoodscat(goodscat);
@@ -18,7 +18,7 @@ export function GoodsMenu(){
                 </ul>
             </div>
             <div class="goods_bx_wrap">
-                {/* <GoodsItem cat = {()=>goodscat(goods[])}/> */}
+                <GoodsItem cat = {goodscat}/>
             </div>
         </>
     )
