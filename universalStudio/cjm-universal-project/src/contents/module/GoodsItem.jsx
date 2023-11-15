@@ -2,7 +2,7 @@
         console.log('props.cat :', props.cat);
         const categoryGoods = props.cat[props.category] || [];
         return (
-            <div>
+            <>
                 {categoryGoods.map((v, i) => (
                     <div className="goods_bx" key={i}>
                         <div className="goods_img">
@@ -18,6 +18,6 @@
                         </div>
                     </div>
                 ))}
-            </div>
+            </>
         );
     }
