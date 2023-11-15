@@ -25,7 +25,7 @@
 .goods_bx{
     width: calc((1000px - 40px) / 3);
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     border: 1px solid #ccc;
     border-radius: 20px;
     box-shadow: 1px 1px 3px #ccc;
@@ -102,4 +102,15 @@
     font-family: 'Nanum Gothic';
     font-size: 15px;
     line-height: 1.8;
+}
+
+
+/* 클릭시 버튼 색 바꾸기 */
+
+.red-text {
+    color: red !important;
+}
+
+.black-text {
+    color: black !important;
 }

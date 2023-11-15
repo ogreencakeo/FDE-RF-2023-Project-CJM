@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoodsItem } from "../module/GoodsItem";
-import { goods } from "../../data/goodsData";
+import { goods } from "../../data/goods/goodsData";
 
 export function Supermario(){
     return(

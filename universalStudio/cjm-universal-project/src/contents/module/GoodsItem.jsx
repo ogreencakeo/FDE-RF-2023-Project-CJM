@@ -6,7 +6,7 @@
                 {categoryGoods.map((v, i) => (
                     <div className="goods_bx" key={i}>
                         <div className="goods_img">
-                            <img src={`../../public/images/goods/${v.image}`} alt="" />
+                            <img src={`../../../../images/goods/${v.image}`} alt="" />
                         </div>
                         <div className="goods_content">
                             <span className="goods_store">판매 점포: {v.store}</span>
