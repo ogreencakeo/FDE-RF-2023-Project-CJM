@@ -1,6 +1,10 @@
 import { BrowserRouter, Routes } from "react-router-dom"
 import { GoodsItem } from "../GoodsCont/GoodsItem"
+import { useState } from "react"
+import { goods } from "../../data/유니버설-굿즈";
 export function GoodsMenu(){
+    const [goodscat, setGoodscat] = useState('supermario');
+    const goodscatFn = (data) => setGoodscat(goodscat);
     return(
         <>
             <div class="goods_menu">
@@ -12,6 +16,9 @@ export function GoodsMenu(){
                     <li><a href="#">스파이더맨</a></li>
                     <li><a href="#">쥬라기 월드</a></li>
                 </ul>
+            </div>
+            <div class="goods_bx_wrap">
+                {/* <GoodsItem cat = {()=>goodscat(goods[])}/> */}
             </div>
         </>
     )
