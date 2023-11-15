@@ -13,7 +13,6 @@ export function GoodsMenu(){
                     <li><a href="#">쥬라기 월드</a></li>
                 </ul>
             </div>
-            
         </>
     )
 }
