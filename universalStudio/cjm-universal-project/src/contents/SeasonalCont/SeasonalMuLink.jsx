@@ -1,8 +1,9 @@
 import { seasonalMenu } from "../../data/seasonalMenu"
 export function SeasonalMuLink(){
-    const seasonMenu = seasonalMenu;
-    return(
-        <div class="seasonal_menu_wrap">
+    // const seasonMenu = seasonalMenu;
+    console.log(seasonalMenu);
+    return seasonalMenu.map((v, i) =>
+        <div class="seasonal_menu_wrap" key={i}>
             <div class="seasonal_menu_bx">
                 <div class="seasonal_menu_tit">
                     <h1>시즈널 메뉴</h1>
@@ -13,9 +14,9 @@ export function SeasonalMuLink(){
                         <li>
                             <a href="#">
                                 <div class="menu_block">
-                                    <span>01</span>
+                                    <span>{v.idx}</span>
                                     <div>
-                                        <span>스튜디오 스타즈 레스토랑</span>
+                                        <span>{v.location}</span>
                                         {/* <!-- 이미지 --> */}
                                     </div>
                                     <div>
