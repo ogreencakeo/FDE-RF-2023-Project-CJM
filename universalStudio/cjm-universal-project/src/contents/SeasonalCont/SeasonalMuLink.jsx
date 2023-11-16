@@ -1,4 +1,6 @@
+import { seasonalMenu } from "../../data/seasonalMenu"
 export function SeasonalMuLink(){
+    const seasonMenu = seasonalMenu;
     return(
         <div class="seasonal_menu_wrap">
             <div class="seasonal_menu_bx">
@@ -7,32 +9,23 @@ export function SeasonalMuLink(){
                     <div></div>
                 </div>
                 <ul>
-                    <li>
-                        <a href="#">
-                            <div class="menu_block">
-                                <span>01</span>
-                                <div>
-                                    <span>스튜디오 스타즈 레스토랑</span>
-                                    {/* <!-- 이미지 --> */}
+                    {
+                        <li>
+                            <a href="#">
+                                <div class="menu_block">
+                                    <span>01</span>
+                                    <div>
+                                        <span>스튜디오 스타즈 레스토랑</span>
+                                        {/* <!-- 이미지 --> */}
+                                    </div>
+                                    <div>
+                                        <i class="fa-solid fa-square-up-right"></i>
+                                    </div>
                                 </div>
-                                <div>
-                                    <i class="fa-solid fa-square-up-right"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="menu_block">
-                                <span>02</span>
-                                <div>
-                                    <span>피네간즈 바&그릴</span>
-
-                                </div>
-                                <span></span>
-                            </div>
-                        </a>
-                    </li>
+                            </a>
+                        </li>
+                    }
+                    
                     {/* <li><a href="#"><span>피네간즈 바&그릴</span></a></li>
                     <li><a href="#"><span>루이즈 N.Y. 피자 팔러</span></a></li>
                     <li><a href="#"><span>멜즈 드라이브인</span></a></li>
