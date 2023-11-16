@@ -1,3 +1,6 @@
+// 시즈널 메뉴 링크 이동
+import React from "react";
+import { Link } from "react-router-dom";
 import { seasonalMenu } from "../../data/seasonalMenu";
 export function SeasonalMuLink() {
     // const seasonMenu = seasonalMenu;
@@ -7,7 +10,7 @@ export function SeasonalMuLink() {
             <ul>
                 {
                     <li key={i}>
-                        <a href="#">
+                        <Link to={v.link}>
                             <div class="menu_block">
                                 <span>{v.idx}</span>
                                 <div>
@@ -18,7 +21,7 @@ export function SeasonalMuLink() {
                                     <i class="fa-solid fa-square-up-right"></i>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 }
             </ul>

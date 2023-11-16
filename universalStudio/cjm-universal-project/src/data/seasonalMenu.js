@@ -16,6 +16,7 @@
 export const seasonalMenu = [
     {
         "idx" : "01",
+        "link" : "restaurant1",
         "location" : "스튜디오 스타즈 레스토랑",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
@@ -79,6 +80,7 @@ export const seasonalMenu = [
     },
     {
         "idx" : "02",
+        "link" : "restaurant2",
         "location" : "피네간즈 바&그릴",
         "service_type" : "풀 서비스",
         "payment_method" : "신용카드 사용 가능",
@@ -162,6 +164,7 @@ export const seasonalMenu = [
     },
     {
         "idx" : "03",
+        "link" : "restaurant3",
         "location" : "루이즈 N.Y. 피자 팔러",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
@@ -224,6 +227,7 @@ export const seasonalMenu = [
     },
     {
         "idx" : "04",
+        "link" : "restaurant4",
         "location" : "멜즈 드라이브인",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
@@ -286,6 +290,7 @@ export const seasonalMenu = [
     },
     {
         "idx" : "05",
+        "link" : "restaurant5",
         "location" : "스리 브룸스틱스™",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
@@ -390,6 +395,7 @@ export const seasonalMenu = [
     },
     {
         "idx" : "06",
+        "link" : "restaurant6",
         "location" : "스누피™ 백롯 카페",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
@@ -452,6 +458,7 @@ export const seasonalMenu = [
     },
     {
         "idx" : "07",
+        "link" : "restaurant7",
         "location" : "해피니스 카페®",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
@@ -507,6 +514,7 @@ export const seasonalMenu = [
     },
     {
         "idx" : "08",
+        "link" : "restaurant8",
         "location" : "파크 사이드 그릴",
         "service_type" : "풀 서비스",
         "payment_method" : "신용카드 사용 가능",
