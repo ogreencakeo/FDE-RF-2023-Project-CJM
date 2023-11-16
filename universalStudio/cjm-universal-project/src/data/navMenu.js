@@ -1,4 +1,5 @@
 export const navMenu = [
+    
     {
         txt : '이벤트',
         link : '/event'
@@ -44,6 +45,10 @@ export const navMenu = [
     {
         txt : '굿즈',
         link : '/goods'
+    },
+    {
+        txt : '티켓',
+        link : '/ticket'
     },
     {
         txt : '고객센터',

@@ -7,6 +7,7 @@ import {Event} from './contents/Event.jsx'
 import {SeasonalMenu} from './contents/SeasonalMenu.jsx'
 import {Goods} from './contents/Goods.jsx'
 import {CustomerCenter} from './contents/CustomerCenter.jsx'
+import { Ticket } from './contents/TIcket.jsx';
 
 // CSS 불러오기
 import './css/common.css';
@@ -22,6 +23,7 @@ export default function App() {
           <Route path='event' element={<Event />} />
           <Route path='seasonalMenu' element={<SeasonalMenu />} />
           <Route path='goods/*' element={<Goods />} />
+          <Route path='ticket' element={<Ticket />} />
           <Route path='customerCenter' element={<CustomerCenter />} />
         </Route>
       </Routes>
