@@ -102,7 +102,7 @@ p, span, i{
 .seasonal_overline span{
     display: block;
 }
-.seasonal_overline i{
+.seasonal_font{
     display: inline-block;
     text-align: center;
     margin: 0 auto;
@@ -143,7 +143,7 @@ p, span, i{
 .carved-img{
     position: absolute;
     left: 8%;
-    top: 5%;
+    /* top: 5%; */
     width: 20vw;
     transform: rotate(35deg);
     animation: seasonal_img_move 1s linear alternate infinite;

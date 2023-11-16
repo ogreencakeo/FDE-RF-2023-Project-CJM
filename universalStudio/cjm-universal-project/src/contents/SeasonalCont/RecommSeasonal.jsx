@@ -1,3 +1,8 @@
+
+import React from "react";
+import { faUtensils, faListCheck, faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export function RecommSeasonal(){
     return(
         <div class="seasonal_overline_wrap">
@@ -13,7 +18,7 @@ export function RecommSeasonal(){
                 <div class="seasonal_overline_bx_wrap">
                     <div class="seasonal_overline_bx1 seasonal_overline">
                         <div>
-                            <i class="fa-solid fa-utensils"></i>
+                            <FontAwesomeIcon className="seasonal_font" icon={faUtensils} />
                         </div>
                         <span>할로윈 한정&시즈널 이벤트</span>
                         <span>
@@ -23,7 +28,7 @@ export function RecommSeasonal(){
                     </div>
                     <div class="seasonal_overline_bx2 seasonal_overline">
                         <div>
-                            <i class="fa-solid fa-list-check"></i>
+                            <FontAwesomeIcon className="seasonal_font" icon={faListCheck} />
                         </div>
                         <span>메뉴를 CHECK!</span>
                         <span>
@@ -34,6 +39,7 @@ export function RecommSeasonal(){
                     <div class="seasonal_overline_bx3 seasonal_overline">
                         <div>
                             <i class="fa-solid fa-envelope-open-text"></i>
+                            <FontAwesomeIcon className="seasonal_font" icon={faEnvelopeOpenText} />
                         </div>
                         <span>기타 푸드 정보</span>
                         <span>일부 메뉴만 게재하고 있습니다. 자세한 내용은 점포에서 확인해 주십시오.</span>

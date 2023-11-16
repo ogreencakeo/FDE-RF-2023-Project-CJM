@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { seasonalMenu } from "../../data/seasonalMenu";
+
 export function SeasonalMuLink() {
     // const seasonMenu = seasonalMenu;
     console.log(seasonalMenu);

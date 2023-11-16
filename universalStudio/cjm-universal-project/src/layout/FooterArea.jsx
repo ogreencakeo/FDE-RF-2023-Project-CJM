@@ -2,6 +2,8 @@
 
 import { Link } from "react-router-dom";
 import { fmenu } from "../data/footerMenu";
+import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function FooterArea() {
     const fmenu1 = fmenu[0].footerMenu1;
@@ -12,7 +14,8 @@ export function FooterArea() {
             <div className="footer-wrap">
                 <div className="footer-wrap-top">
                     <div className="footer-left">
-                        UNIVERSAL STUDI<i className="fa-regular fa-face-smile"></i>
+                        UNIVERSAL STUDI
+                        <FontAwesomeIcon icon={faFaceSmile} />
                     </div>
                     <div className="footer-right">
                         <img src="./images/character/charactre1.png" alt="슈퍼마리오" />
