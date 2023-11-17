@@ -7,18 +7,21 @@
 // }
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
+
 import { Supermario } from "./GoodsCont/Supermario";
 import { Snoopy } from "./GoodsCont/Snoopy";
 import { HarryPotter } from "./GoodsCont/HarryPotter";
 import { Spiderman } from "./GoodsCont/Spiderman";
 import { Sesame } from "./GoodsCont/Sesame";
 import { JurassicPark } from "./GoodsCont/JurassicPark";
-
-import "../css/goods.css";
 import { GoodsMenu } from "./module/GoodsMenu";
+
+// CSS
+import "../css/goods.css";
 
 // 스와이퍼
 import { GoodsSwiper } from "./pages/plugin/Swiper";
+import { GoodsCaution } from "./GoodsCont/GoodsCaution";
 // import { Banner } from './module/Banner';
 
 export function Goods() {
@@ -43,6 +46,7 @@ export function Goods() {
                         <Route path="jurassicPark" element={<JurassicPark />} />
                     </Routes>
                 </div>
+                <GoodsCaution />
             </div>
         </>
     );
