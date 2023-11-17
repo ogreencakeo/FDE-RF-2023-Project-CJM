@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {MoveSlide} from './MoveSlide'
+import {YourPage} from './YourPage'
 
 export default function App(){
   return(
     <>
-      {/* <MoveSlide /> */}
+      <YourPage />
     </>
   )
 }

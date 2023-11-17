@@ -1,0 +1,55 @@
+/* 흘러가는 글자박스 */
+.fbx {
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+}
+/* 내부 흘러가는 박스
+(움직일박스) */
+.tbx {
+    position: relative;
+    left: 0;
+
+    /* 크기는 부모박스의 2배수 */
+    width: 200vw;
+
+    display: flex;
+    /* 하위ul박스 옆으로 흐름 */
+}
+/* .tbx ul */
+.tbx ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    /* .tbx의 자식으로 등분할 */
+    flex: 1;
+
+    display: flex;
+    /* 하위 li 옆으로 흐름 */
+}
+
+/* 글자를 담고 있는 li 등분할 */
+
+.tbx li {
+    flex: 1;
+    width: 200px;
+}
+.tbx li>img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: block;
+}
+
+/* 흘러가는 텍스트애니 클래스1 */
+.txt-ani1 {
+    /* 애니메이션: 이시이지반방마 */
+    animation: txt-ani1 10s linear infinite;
+}
+
+/* 흘러가는 글자 키프레임1 */
+@keyframes txt-ani1 {
+    to {
+        left: -100%;
+    }
+}

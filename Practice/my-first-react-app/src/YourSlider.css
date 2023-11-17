@@ -1,18 +1,52 @@
 /* YourSlider.css */
-
-.your-slider-container {
-    width: 100vw;
+body, html{
     overflow: hidden;
 }
 
-.your-slider {
-    display: flex;
-    width: 700vw;
-    /* 모든 이미지의 너비를 7배로 설정 (이 부분을 이미지 개수에 맞게 조절하세요) */
-    transition: transform 2s ease-in-out;
-}
+.btn-map{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    /* outline: 2px dashed yellow; */
+    /* 나간배경 숨기기 */
+    overflow: hidden;
 
-.your-slider img {
-    width: 100vw;
-    height: auto;
+    /* 손가락모양 */
+    cursor: pointer;
+}
+/* 맵버튼 가상요소로 무한이동 배경넣기 */
+/* .btn-map::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url(../images/street.jpg) repeat-x 0/50% 100%;
+    animation: bg-ani 2s linear infinite;
+} */
+.btn-map-wrap{
+    position: absolute;
+    left: 0;
+    display: flex;
+    width: 200%;
+    height: 100%;
+    animation: bg-ani 2s linear infinite;
+}
+.spani1{
+    width: calc(200% / 7);
+    height: 100%;
+    /* 애니메이션 */
+}
+.spani1>image{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* 무한반복 배경애니 키프레임 */
+@keyframes bg-ani {
+    to{
+        left: 0%;
+    }
 }
