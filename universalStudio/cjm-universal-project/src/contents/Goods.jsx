@@ -13,19 +13,21 @@ import { HarryPotter } from "./GoodsCont/HarryPotter";
 import { Spiderman } from "./GoodsCont/Spiderman";
 import { Sesame } from "./GoodsCont/Sesame";
 import { JurassicPark } from "./GoodsCont/JurassicPark";
-import { TopArea } from "../layout/TopArea";
-import { FooterArea } from "../layout/FooterArea";
 
 import "../css/goods.css";
 import { GoodsMenu } from "./module/GoodsMenu";
-import { GoodsTopCont } from "./module/GoodsTopCont";
+
+// 스와이퍼
+import { GoodsSwiper } from "./pages/plugin/Swiper";
+// import { Banner } from './module/Banner';
 
 export function Goods() {
     return (
         <>
             <div className="goods_wrap">
-                <div class="goods-top-cont-wrap">
-                    <GoodsTopCont />
+                <div className="goods-top-cont-wrap">
+                    {/* <Banner option='goodsList' /> */}
+                    <GoodsSwiper />
                 </div>
                 <div className="goods_menu">
                     <GoodsMenu />
