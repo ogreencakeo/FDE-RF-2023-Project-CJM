@@ -62,6 +62,9 @@ a{
 .top-nav, .bottom-nav{
     display: flex;
 }
+.bottom-nav{
+    padding: 10px;
+}
 .top-nav-bx{
     max-width: 100%;
     position: relative;
@@ -281,58 +284,67 @@ a{
 }
 /* 메인1 */
 /* 메인1 - 유틸리티 패널*/
-.utility-panel{
+.utility-panel {
     display: flex;
     border-top: 5px solid #2b4584;
     border-bottom: 5px solid #2b4584;
     margin: 0.8% 0;
     background-color: #fff;
 }
-.utility-panel>a>div{
+
+.utility-panel > a > div {
     padding: 20px;
     transition: .4s;
     position: relative;
 }
-.utility-panel>a{
+
+.utility-panel > a {
     flex: 1;
     text-align: center;
     overflow: hidden;
     display: block;
     position: relative;
-    /* transition: .4s; */
 }
-.utility-panel>a>div>span{
+
+.utility-panel > a > div > span,
+.panel-icon {
     display: block;
     color: #2b4584;
     transition: .4s;
 }
-.utility-panel>a>div>span:first-child{
+
+.panel-icon {
     font-size: 5em;
     padding-bottom: 10px;
+    margin: auto;
 }
-.utility-panel>a>div>span:last-child{
+
+.utility-panel > a > div > span:last-of-type {
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 500;
     font-size: 1.2em;
 }
 
-.utility-panel>a:hover div{
-    /* transform: scale(1.1); */
+.utility-panel > a:hover div {
     background-color: #2b4584;
     animation: utility-panel-ani .65s ease;
 }
-.utility-panel>a>div:hover span{
+
+.utility-panel > a:hover span,
+.utility-panel > a:hover .panel-icon {
     color: #fff;
     animation: utility-panel-ani .35s ease;
 }
+
 @keyframes utility-panel-ani {
-    from{
+    from {
         transform: translateY(200%);
     }
-    to{
+    to {
         transform: translateY(0%);
     }
 }
+
 
 .utility-panel2{
     margin: 0;
