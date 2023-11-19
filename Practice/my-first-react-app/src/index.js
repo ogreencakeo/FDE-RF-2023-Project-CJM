@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {YourPage} from './YourPage'
+import {ImageSlider} from './ImageSlider'
 
 export default function App(){
   return(
     <>
-      <YourPage />
+      < ImageSlider/>
     </>
   )
 }

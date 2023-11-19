@@ -1,19 +1,5 @@
-// utils.js (새로운 파일로 생성)
+// Function/indexFn.js
 
 export const getWaveText = () => {
-    const waveText = 'Universal Studios';
-    let waveSpanCode = '';
-
-    let seqNum = 0;
-
-    for (let x of waveText) {
-        if (x === ' ') {
-            waveSpanCode += '\u00a0\u00a0'; // &nbsp;
-        } else {
-            waveSpanCode += x;
-        }
-        seqNum++;
-    }
-
-    return `<span style="animation-delay: ${seqNum * 0.1}s;">${waveSpanCode}</span>`;
+    return 'Universal Studios';  // 또는 필요한 텍스트로 변경
 };

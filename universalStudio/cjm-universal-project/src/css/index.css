@@ -149,7 +149,7 @@ a{
 /* in japn universal studio 문구 */
 .header-content{
     position: absolute;
-    top: 25%;
+    top: 17%;
     left: 50%;
     transform: translateX(-50%);
     /* background: #00000069; */
@@ -216,7 +216,7 @@ a{
 }
 .universal_link{
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     width: 60%;

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { getWaveText } from '../../Function/indexFn';
 
 const WaveText = () => {
     useEffect(() => {
