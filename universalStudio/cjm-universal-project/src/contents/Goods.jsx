@@ -31,7 +31,7 @@ export function Goods() {
             <div className="goods_wrap">
                 {/* <Banner option='goodsList' /> */}
                 <GoodsSwiper />
-                <GoodsMenu />
+                <GoodsMenu/>
                 <div className="goods_bx_wrap">
                     <Routes>
                         <Route index element={<Supermario />} />

@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { seasonalMenu } from "../../data/seasonalMenu";
+import { Restaurant1 } from "./Restaurant1";
+import { Restaurant2 } from "./Restaurant2";
+import { Restaurant3 } from "./Restaurant3";
 
 export function SeasonalMuLink() {
-    console.log(seasonalMenu);
+    console.log('seasonalMenu' , seasonalMenu);
 
     return (
         <>
@@ -15,7 +18,7 @@ export function SeasonalMuLink() {
                             <ul>
                                 {seasonalMenu.map((v, i) => (
                                     <li key={i}>
-                                        <Link to={v.link}>
+                                        <Link to={`/seasonalMenu/${v.link}`}>
                                             <div className="menu_block">
                                                 <span>{v.idx}</span>
                                                 <div>
@@ -35,5 +38,16 @@ export function SeasonalMuLink() {
                 </div>
             </div>
         </>
+
     );
+}
+
+export function SeasonalMenuRoutes() {
+    return (
+        <Routes>
+            <Route path='/seasonalMenu/restaurant1' element={<Restaurant1 />} />
+            <Route path='/seasonalMenu/restaurant2' element={<Restaurant2 />} />
+            <Route path='/seasonalMenu/restaurant3' element={<Restaurant3 />} />
+        </Routes>
+    )
 }
