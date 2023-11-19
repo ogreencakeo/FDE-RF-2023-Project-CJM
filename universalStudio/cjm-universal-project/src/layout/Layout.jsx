@@ -3,6 +3,7 @@ import {MainArea} from './MainArea';
 import {FooterArea} from './FooterArea';
 
 export function Layout(){
+    const 
     return(
         <>
             <TopArea />

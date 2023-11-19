@@ -1,6 +1,7 @@
 // 상단영역
 import { Link } from "react-router-dom";
 import { navMenu } from "../data/navMenu";
+import { Logo } from "../contents/module/Logo";
 
 export function TopArea() {
     return (
@@ -16,9 +17,7 @@ export function TopArea() {
                         </li>
                     </ul>
                 </div>
-                <div className="nav-logo">
-                    <img src="./images/universal_logo.webp" alt="로고" />
-                </div>
+                <Logo />
                 <ul className="bottom-nav">
                     {navMenu.map((v, i) => (
                         <li key={i}>
