@@ -1,9 +1,8 @@
 import { MenuLink } from "./MenuLink";
 import React from 'react';
-import { goodsMenu } from "../../data/goods/menuData";
 
 
-export function GoodsMenu() {
+export function GoodsLink() {
     
     return (
         <MenuLink menu='goodData' />

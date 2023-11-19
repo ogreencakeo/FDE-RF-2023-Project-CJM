@@ -2,7 +2,7 @@ export function GoodsCaution() {
     return (
         <div className="goods_caution_wrap">
             <div className="goods_caution_img">
-                <img src="../../../images/goods/goods_caution.jpg" alt="굿즈 주의사항" />
+                <img src="../../../images/character/character3.png" alt="굿즈 주의사항" />
             </div>
             <div className="goods_caution_content">
                 <p>

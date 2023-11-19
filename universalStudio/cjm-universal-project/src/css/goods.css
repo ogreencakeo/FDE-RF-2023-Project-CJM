@@ -10,21 +10,7 @@
     padding: 30px;
 }
 
-/* 굿즈 메뉴 */
-.goods_menu{
-    max-width: 1300px;
-    margin: 0 auto;
-}
-.goods_menu ul{
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 0;
-    font-family: 'Jua';
-}
-/* 굿즈메뉴 -nav 글자 사이즈 */
-.goods_menu ul li{
-    font-size: 1.5em;
-}
+
 
 /* 굿즈 개별 박스 wrap */
 .goods_bx_wrap{
@@ -89,26 +75,32 @@
 }
 /* 굿즈 - 상품 주의사항 */
 .goods_caution_wrap{
-    max-width: 1300px;
+    max-width: 100%;
+    /* max-width: 100%; */
     margin: 30px auto;
     display: flex;
-    gap: 10px;
+    gap: 50px;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding: 10px;
 
 }
 .goods_caution_img{
-    width: 38%;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
 }
 .goods_caution_img>img{
     width: 100%;
 }
 .goods_caution_content{
-    width:60%;
+    /* width:60%; */
     padding: 10px;
 }
 .goods_caution_content>p{
     font-family: 'Nanum Gothic';
     font-size: 15px;
-    line-height: 1.8;
+    line-height: 2;
 }
 
 

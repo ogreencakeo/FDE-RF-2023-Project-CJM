@@ -13,7 +13,7 @@ import { Sesame } from "./GoodsCont/Sesame";
 import { JurassicPark } from "./GoodsCont/JurassicPark";
 
 // 모듈 가져오기
-import { GoodsMenu } from "./module/GoodsMenu";
+import { GoodsLink} from "./module/GoodsLink";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 
 // CSS
@@ -22,6 +22,7 @@ import "../css/goods.css";
 // 스와이퍼
 import { GoodsSwiper } from "./pages/plugin/Swiper";
 import { GoodsCaution } from "./GoodsCont/GoodsCaution";
+import { VidSection } from "./module/VidSection";
 // import { Banner } from './module/Banner';
 
 export function Goods() {
@@ -31,7 +32,7 @@ export function Goods() {
             <div className="goods_wrap">
                 {/* <Banner option='goodsList' /> */}
                 <GoodsSwiper />
-                <GoodsMenu/>
+                <GoodsLink/>
                 <div className="goods_bx_wrap">
                     <Routes>
                         <Route index element={<Supermario />} />
@@ -43,6 +44,7 @@ export function Goods() {
                         <Route path="jurassicPark" element={<JurassicPark />} />
                     </Routes>
                 </div>
+                {/* <VidSection />  */}
                 <GoodsCaution />
                 <ImgMoveSlide imgMove={goodsmove} />
             </div>
