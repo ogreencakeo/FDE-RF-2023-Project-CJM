@@ -9,6 +9,7 @@ export function GoodsMenu() {
         setRedClassName(idx);
     }       
     return (
+        <div className="goods_menu">
         <ul>
             {
                 goodsMenu.map((v, i)=>
@@ -20,5 +21,6 @@ export function GoodsMenu() {
                     )
             }
         </ul>
+        </div>
     )
 }

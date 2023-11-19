@@ -23,7 +23,7 @@ export function GoodsSwiper() {
     ];
 
     return (
-        <>
+        <div className="goods-top-cont-wrap">
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
@@ -45,6 +45,6 @@ export function GoodsSwiper() {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </>
+        </div>
     );
 }

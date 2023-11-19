@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 
 // 데이터
-import {moveImgData} from '../data/move_img_data'
+import { moveImgData } from '../data/move_img_data'
 
 // GoodsCont
 import { Supermario } from "./GoodsCont/Supermario";
@@ -29,13 +29,9 @@ export function Goods() {
     return (
         <>
             <div className="goods_wrap">
-                <div className="goods-top-cont-wrap">
-                    {/* <Banner option='goodsList' /> */}
-                    <GoodsSwiper />
-                </div>
-                <div className="goods_menu">
-                    <GoodsMenu />
-                </div>
+                {/* <Banner option='goodsList' /> */}
+                <GoodsSwiper />
+                <GoodsMenu />
                 <div className="goods_bx_wrap">
                     <Routes>
                         <Route index element={<Supermario />} />
