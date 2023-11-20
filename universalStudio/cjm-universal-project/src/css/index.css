@@ -48,69 +48,6 @@ a{
     }
 }
 
-/* 네비박스 */
-.header-top nav{
-    max-width: 100%;
-    padding: 30px 0 20px 0;
-}
-.header-top nav ul{
-    display: flex;
-    
-    
-}
-/* 상단 nav - 로그인, 회원가입 */
-.top-nav, .bottom-nav{
-    display: flex;
-}
-.bottom-nav{
-    padding: 10px;
-}
-.top-nav-bx{
-    max-width: 100%;
-    position: relative;
-}
-.top-nav{
-    position: absolute;
-    right: 7%;
-}
-.top-nav li{
-    padding: 0 20px;
-}
-
-.bottom-nav li{
-    flex: 1;
-    text-align: center;
-}
-
-
-/* 글자 위로 올라가기 애니메이션 - 하단 */
-.bottom-nav>li>a{
-    font-size: 1.5vw;
-    font-family: 'Jua', sans-serif;
-    line-height: 1;
-    display: inline-block;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.bottom-nav li span{
-    text-align: center;
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    transition: .4s;
-    color: #555;
-}
-.bottom-nav span::before{
-    position: absolute;
-    top: 100%;
-    color: #000;
-    content: attr(data-hover);
-}
-.bottom-nav a:hover span{
-    transform: translateY(-100%);
-}
-
 
 /* 헤더 이미지 랩핑 */
 .header-img-wrap{

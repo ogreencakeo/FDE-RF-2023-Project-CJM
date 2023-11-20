@@ -79,20 +79,6 @@
 .restaurant_building_img{
     margin-top: 30px;
 }
-.restaurant_img1{
-    /* background: url(../images/seasonal/seasonal1-main.jpg); */
-}
-
-.restaurant_img{
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    display: block;
-    width: 100%;
-    height: 35vh;
-}
-
 /* 레스토랑 주의사항 */
 .restaurant_caution{
     padding: 20px;

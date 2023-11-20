@@ -1,33 +1,50 @@
-// 상단영역
-import { Link } from "react-router-dom";
-import { navMenu } from "../data/navMenu";
-import { Logo } from "../contents/module/Logo";
-
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { navMenu } from '../data/navMenu';
+import { Logo } from '../contents/module/Logo';
+// import '../css/nav.css';
 export function TopArea() {
     return (
-        <div className="header-top">
-            <nav>
-                <div className="top-nav-bx">
-                    <ul className="top-nav">
+        <>
+            <header className="top-area">
+                <nav className="gnb">
+                    <ul>
                         <li>
-                            <a href="#">로그인</a>
+                            <Logo />
+                        </li>
+
+                        {
+                            navMenu.map((v, i) =>
+                                <li key={i}>
+                                    <Link to={v.link}>{v.txt}</Link>
+                                    {
+                                        v.sub && (
+                                            <div className="smenu">
+                                                <ol>
+                                                    {
+                                                    v.sub.map((v, i) =>
+                                                        <li key={i}>
+                                                            <Link to={v.link}>{v.txt}</Link>
+                                                        </li>)
+
+                                                    }
+                                                </ol>
+                                            </div>
+                                        )
+                                    }
+                                </li>
+                            )
+                        }
+                        <li style={{marginLeft: 'auto'}}>
+                            <Link to='/member'>Join US</Link>
                         </li>
                         <li>
-                            <a href="#">회원가입</a>
+                            <Link to='/login'>Login</Link>
                         </li>
                     </ul>
-                </div>
-                <Logo />
-                <ul className="bottom-nav">
-                    {navMenu.map((v, i) => (
-                        <li key={i}>
-                            <Link to={v.link}>
-                                <span data-hover={v.txt}>{v.txt}</span>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        </div>
+                    {/* <button className='bambtn'></button> */}
+                </nav>
+            </header>
+        </>
     );
 }

@@ -13,8 +13,8 @@
     title : 제목
     sub_title : 서브 제목
 */
-export const seasonalMenu = [
-    {
+export const seasonalMenu = {
+    "restaurant1" :{
         "idx" : "01",
         "link" : "restaurant1",
         "location" : "스튜디오 스타즈 레스토랑",
@@ -78,7 +78,7 @@ export const seasonalMenu = [
         "title" : "영화 스튜디오 내의 카페테리아",
         "sub_title" : "아빠와 아이는 물론 가족 모두가 만족할 수 있는 다양한 메뉴, 그리고 유아식 판매와 좌석 안내 등 엄마에게 편리한 서비스까지 한가득!"
     },
-    {
+    "restaurant2" :{
         "idx" : "02",
         "link" : "restaurant2",
         "location" : "피네간즈 바&그릴",
@@ -162,7 +162,7 @@ export const seasonalMenu = [
         "tite" : "브루클린에 있는 아일랜드풍 술집에서 서양 요리를 즐겨 보세요",
         "sub_title" : `제철 과일로 만든 하이볼 칵테일을 맛볼 수 있는 카운터 바도 병설.<br/><br/>협찬: Suntory Spirits Ltd.`
     },
-    {
+    "restaurant3" : {
         "idx" : "03",
         "link" : "restaurant3",
         "location" : "루이즈 N.Y. 피자 팔러",
@@ -225,7 +225,7 @@ export const seasonalMenu = [
         "tite" : "빅 사이즈의 본고장 피자를 맛볼 수 있는 뉴욕 리틀 이태리 피자 팔러.",
         "sub_title" : ""
     },
-    {
+    "restaurant4" : {
         "idx" : "04",
         "link" : "restaurant4",
         "location" : "멜즈 드라이브인",
@@ -288,7 +288,7 @@ export const seasonalMenu = [
         "tite" : "영화 ‘청춘 낙서’ 속 세계를 만끽하세요!",
         "sub_title" : `50년대풍 분위기가 매력적인 햄버거 레스토랑.<br/><br/>협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.`
     },
-    {
+    "restaurant5" : {
         "idx" : "05",
         "link" : "restaurant5",
         "location" : "스리 브룸스틱스™",
@@ -393,7 +393,7 @@ export const seasonalMenu = [
         "tite" : "호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 호그스미드™의 ‘오래된 술집 겸 여관’",
         "sub_title" : `호그스미드™에 있는 스리 브룸스틱스™는 호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 ‘오래된 술집 겸 여관’입니다.<br/><br/>놀라울 정도로 높은 천장을 올려다보면, 목제 계단과 발코니가 무질서하게 배치된 신비로운 공간에 누구나 압도되어 버립니다.<br/><br/>마법계의 음료 ‘버터 맥주™’는 여기서도 즐기실 수 있습니다. 무알코올의 달콤한 음료이므로, 어린이도 안심하고 주문해 주세요.<br/><br/>이 술집에서는 이 밖에도 피시 앤 칩스와 고기파이 등 영국 전통의 맛과 디저트도 있습니다.`
     },
-    {
+    "restaurant6" :{
         "idx" : "06",
         "link" : "restaurant6",
         "location" : "스누피™ 백롯 카페",
@@ -456,7 +456,7 @@ export const seasonalMenu = [
         "tite" : "스누피 친구들의 단골 카페",
         "sub_title" : "",
     },
-    {
+    "restaurant7" : {
         "idx" : "07",
         "link" : "restaurant7",
         "location" : "해피니스 카페®",
@@ -512,7 +512,7 @@ export const seasonalMenu = [
         "tite" : "샌프란시스코의 창고를 개조한 행복이 가득한 카페",
         "sub_title" : "협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.",
     },
-    {
+    "restaurant8" : {
         "idx" : "08",
         "link" : "restaurant8",
         "location" : "파크 사이드 그릴",
@@ -577,4 +577,4 @@ export const seasonalMenu = [
     },
     
         
-]
+}

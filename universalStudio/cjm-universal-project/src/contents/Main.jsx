@@ -30,11 +30,6 @@ export function Main() {
                             <div className="header-main-img-wrap">
                                 <div className="header-main-img"></div>
                             </div>
-                            {/* Main Logo */}
-                            {/* <div className="main-logo">
-                                <img src="../../../images/usj-logo-white.avif" alt="" />
-                            </div> */}
-                            {/* Navigation */}
                             {/* Main Content */}
                             <WaveText /> 
                             <div className="universal_link">
