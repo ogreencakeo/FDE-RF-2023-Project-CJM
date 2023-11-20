@@ -44,16 +44,16 @@ export const goods =[
                 "image" : "goods1/goods6.jpg"
             },
             {
-                "store" : "마리오 모터스™",
+                "store" : "1UP 팩토리™ 등",
                 "itemGoods" : "슈퍼 닌텐도 월드™",
-                "usage" : "머리띠",
+                "usage" : "버섯 리소토 세트(4개)",
                 "content" :"",
                 "image" : "goods1/goods7.jpg"
             },
             {
-                "store" : "마리오 모터스™ 등",
+                "store" : "포토 카운터 (슈퍼 닌텐도 월드™ 내)",
                 "itemGoods" : "슈퍼 닌텐도 월드™",
-                "usage" : "종합 디저트",
+                "usage" : "선택할 수 있는 포토 세트(3장)",
                 "content" :"",
                 "image" : "goods1/goods8.jpg"
             },
@@ -72,9 +72,9 @@ export const goods =[
                 "image" : "goods1/goods10.jpg"
             },
             {
-                "store" : "마리오 모터스™",
+                "store" : "1UP 팩토리™ 등",
                 "itemGoods" : "슈퍼 닌텐도 월드™",
-                "usage" : "펜 케이스",
+                "usage" : "키 체인",
                 "content" :"",
                 "image" : "goods1/goods11.jpg"
             },
