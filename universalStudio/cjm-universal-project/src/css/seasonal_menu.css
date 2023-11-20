@@ -167,11 +167,45 @@ p, span, i{
 
 /* 시즈널 메뉴 콘텐츠 */
 .seasonal-main-content-wrap{
-    min-width: 1300px;
+    background-color: #483591;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .seasonal-main-content-bx{
+    max-width: 1300px;
+    /* clip-path   : polygon(0 0, 0 100%, 100% 100%, 100% 55%, 55% 0); */
+    /* border: 20px solid orangered; */
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.seasonal-title{
+    color: #fdd900;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Gugi';
+    padding: 5px;
+}
+
+.seasonal-sub-title{
+    padding: 25px 5px 5px 5px;
+    font-size: 2.2em;
+    color: #ef8b21;
+    text-align: center;
+    font-family: 'Gugi';
+}
+
+.seasonal-img-bx{
     width: 100%;
-    background-color: orangered;
-    /* paf */
+    display: flex;
+    justify-content: space-around;
+}
+.seasonal-img-bx>div{
+    flex: 1;
+    display: block;
+    width: 20%;
+}
+.seasonal-img-bx>div>img{
+    width: 100%;
 }
