@@ -1,9 +1,11 @@
 import React from "react";
+import { SeasonalInfo } from "../module/SeasonalInfo";
 
 export function Restaurant5(){
     return(
         <>
-            <h2>레스토랑5페이지</h2>
+            <SeasonalInfo  menu='restaurant5'/>
+            {/* <RecommSeasonal/> */}
         </>
     )
 }

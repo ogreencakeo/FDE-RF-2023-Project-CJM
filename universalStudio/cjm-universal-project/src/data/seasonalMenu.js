@@ -20,7 +20,7 @@ export const seasonalMenu = {
         "location" : "스튜디오 스타즈 레스토랑",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 양식, 식사류,이유식 있음,<br/> 돼지고기 미사용·무알코올 메뉴(영어 페이지 한정)`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 식사류,이유식 있음, 돼지고기 미사용·무알코올 메뉴(영어 페이지 한정)`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
@@ -47,7 +47,7 @@ export const seasonalMenu = {
                 "image" : "seasonal1-3.jpg",
                 "menu" : "DJ 피카츄&DJ 팬텀 점핑 할로윈 파티 키즈 세트",
                 "price" : "￥1,400",
-                "menu_description" : `치즈 햄버그스테이크, 거봉 크림 도넛, 새우튀김, 크로켓, 감자튀김, 호박 샐러드, 콘 라이스, 오렌지 음료<br/><br/>※ 만 11세 이하의 어린이 메뉴`
+                "menu_description" : `치즈 햄버그스테이크, 거봉 크림 도넛, 새우튀김, 크로켓, 감자튀김, 호박 샐러드, 콘 라이스, 오렌지 음료※ 만 11세 이하의 어린이 메뉴`
             },
         ],
         "recommended_menu" : [
@@ -84,7 +84,7 @@ export const seasonalMenu = {
         "location" : "피네간즈 바&그릴",
         "service_type" : "풀 서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 양식, 바・주류`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 바・주류`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
@@ -108,8 +108,8 @@ export const seasonalMenu = {
             {
                 "idx" : "2-3",
                 "image" : "seasonal2-3.jpg",
-                "menu" : `(왼쪽) 할로윈 카니발 하이볼 ~블러드 오렌지~<br />(오른쪽) 할로윈 칵테일 ~믹스 베리~ (무알코올 드링크)`,
-                "price" : `(왼쪽) ¥850<br />(오른쪽) ¥700`,
+                "menu" : `(왼쪽) 할로윈 카니발 하이볼 ~블러드 오렌지~^(오른쪽) 할로윈 칵테일 ~믹스 베리~ (무알코올 드링크)`,
+                "price" : `(왼쪽) ¥850^(오른쪽) ¥700`,
                 "menu_description" : "",
             },
             {
@@ -147,7 +147,7 @@ export const seasonalMenu = {
                 "image" : "seasonal2-8.jpg",
                 "menu" : "피네간즈 키즈 세트",
                 "price" : "￥1,400",
-                "menu_description" : `햄버거, 피시 버거, 프라이드 포테이토, 콘버터, 오렌지 음료<br /><br />※ 만 11세 이하의 어린이 메뉴`,
+                "menu_description" : `햄버거, 피시 버거, 프라이드 포테이토, 콘버터, 오렌지 음료^^※ 만 11세 이하의 어린이 메뉴`,
             },
             {
                 "idx" : "2-9",
@@ -160,15 +160,15 @@ export const seasonalMenu = {
         "seasonal_logo" : "seasonal2.png",
         "seasonal_main_img" : "seasonal2-main.jpg",
         "tite" : "브루클린에 있는 아일랜드풍 술집에서 서양 요리를 즐겨 보세요",
-        "sub_title" : `제철 과일로 만든 하이볼 칵테일을 맛볼 수 있는 카운터 바도 병설.<br/><br/>협찬: Suntory Spirits Ltd.`
+        "sub_title" : `제철 과일로 만든 하이볼 칵테일을 맛볼 수 있는 카운터 바도 병설.협찬: Suntory Spirits Ltd.`
     },
     "restaurant3" : {
-        "idx" : "03",
+        "idx" : "3",
         "link" : "restaurant3",
         "location" : "루이즈 N.Y. 피자 팔러",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br /> 피자`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),^ 피자`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "",
@@ -180,35 +180,35 @@ export const seasonalMenu = {
                 "image" : "seasonal3-1.jpg",
                 "menu" : "할로윈 피자 세트",
                 "price" : "",
-                "menu_description" : `제노베제 ~베이컨&블랙 올리브~, 프라이드 포테이토, 소프트드링크(R)<br/>￥1,650<br/>홀 피자<br/>￥5,400`,
+                "menu_description" : `제노베제 ~베이컨&블랙 올리브~, 프라이드 포테이토, 소프트드링크(R)￥1,650홀 피자￥5,400`,
             },
             {
                 "idx" : "3-2",
                 "image" : "seasonal3-2.jpg",
-                "menu" : `피자<br/>콰트로 치즈 ~4가지 종류의 치즈&꿀~`,
+                "menu" : `피자콰트로 치즈 ~4가지 종류의 치즈&꿀~`,
                 "price" : "",
-                "menu_description" : `루이즈 피자 세트(프라이드 포테이토, 소프트드링크 포함)<br/>￥1,550<br />홀 피자<br />￥4,800`
+                "menu_description" : `루이즈 피자 세트(프라이드 포테이토, 소프트드링크 포함)￥1,550^홀 피자^￥4,800`
             },
             {
                 "idx" : "3-3",
                 "image" : "seasonal3-3.jpg",
-                "menu" : `피자<br/>마르게리타 ∼토마토&바질∼`,
+                "menu" : `피자마르게리타 ∼토마토&바질∼`,
                 "price" : "",
-                "menu_description" : `루이즈 피자 세트(프라이드 포테이토, 소프트드링크 포함)<br/>￥1,450<br/>홀 피자<br/>￥4,200`,
+                "menu_description" : `루이즈 피자 세트(프라이드 포테이토, 소프트드링크 포함)￥1,450홀 피자￥4,200`,
             },
             {
                 "idx" : "3-4",
                 "image" : "seasonal3-4.jpg",
-                "menu" : `피자<br/>페퍼로니`,
+                "menu" : `피자페퍼로니`,
                 "price" : "",
-                "menu_description" : `루이즈 피자 세트(프라이드 포테이토, 소프트드링크 포함)<br/>￥1,450<br/>홀 피자<br/>￥4,200`,
+                "menu_description" : `루이즈 피자 세트(프라이드 포테이토, 소프트드링크 포함)￥1,450홀 피자￥4,200`,
             },
         ],
         "recommended_menu" : [
             {
                 "idx" : "3-5",
                 "image" : "seasonal3-5.jpg",
-                "menu" : `각종 사이드 메뉴<br/>(왼쪽) 라이스 크로켓<br/>(오른쪽)슈림프 컵 샐러드`,
+                "menu" : `각종 사이드 메뉴(왼쪽) 라이스 크로켓(오른쪽)슈림프 컵 샐러드`,
                 "price" : "각￥550",
                 "menu_description" : ""
             },
@@ -226,12 +226,12 @@ export const seasonalMenu = {
         "sub_title" : ""
     },
     "restaurant4" : {
-        "idx" : "04",
+        "idx" : "4",
         "link" : "restaurant4",
         "location" : "멜즈 드라이브인",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br /> 어린이 메뉴,<br /> 샌드위치, 햄버거`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),^ 어린이 메뉴,^ 샌드위치, 햄버거`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
@@ -273,7 +273,7 @@ export const seasonalMenu = {
                 "image" : "seasonal4-5.jpg",
                 "menu" : "키즈 햄버거 세트",
                 "price" : "￥1,100",
-                "menu_description" : `햄버거, 프라이드 포테이토, 스낵, 오렌지 음료<br/><br/>※ 만 11세 이하의 어린이 메뉴`
+                "menu_description" : `햄버거, 프라이드 포테이토, 스낵, 오렌지 음료※ 만 11세 이하의 어린이 메뉴`
             },
             {
                 "idx" : "4-6",
@@ -286,15 +286,15 @@ export const seasonalMenu = {
         "seasonal_logo" : "seasonal4.jpg",
         "seasonal_main_img" : "seasonal4-main.jpg",
         "tite" : "영화 ‘청춘 낙서’ 속 세계를 만끽하세요!",
-        "sub_title" : `50년대풍 분위기가 매력적인 햄버거 레스토랑.<br/><br/>협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.`
+        "sub_title" : `50년대풍 분위기가 매력적인 햄버거 레스토랑.협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.`
     },
     "restaurant5" : {
-        "idx" : "05",
+        "idx" : "5",
         "link" : "restaurant5",
         "location" : "스리 브룸스틱스™",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 베지테리언(영어 페이지 한정)`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 베지테리언(영어 페이지 한정)`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
@@ -364,14 +364,14 @@ export const seasonalMenu = {
                 "image" : "seasonal5-9.jpg",
                 "menu" : "가든 샐러드, 구운 통옥수수, 프라이드 포테이토, 믹스 베지터블",
                 "price" : "",
-                "menu_description" : `버터 맥주™∼머그컵 포함∼(무알코올) ¥1,200<br/>버터 맥주™(무알코올) ¥700<br/>버터 맥주™∼프리미엄 머그컵 포함∼(무알코올) ¥4,600<br/><br/>※ 사진은 핫 버터 맥주™ ∼머그컵 포함∼`
+                "menu_description" : `버터 맥주™∼머그컵 포함∼(무알코올) ¥1,200버터 맥주™(무알코올) ¥700버터 맥주™∼프리미엄 머그컵 포함∼(무알코올) ¥4,600※ 사진은 핫 버터 맥주™ ∼머그컵 포함∼`
             },
             {
                 "idx" : "5-10",
                 "image" : "seasonal5-10.jpg",
                 "menu" : "마카로니 치즈",
                 "price" : "￥1,000",
-                "menu_description" : `마카로니 치즈, 소프트 롤, 익힌 채소<br/><br/>※ 만 6세 이하의 어린이 메뉴`,
+                "menu_description" : `마카로니 치즈, 소프트 롤, 익힌 채소※ 만 6세 이하의 어린이 메뉴`,
             },
             {
                 "idx" : "5-11",
@@ -391,7 +391,7 @@ export const seasonalMenu = {
         "seasonal_logo" : "seasonal5.jpg",
         "seasonal_main_img" : "seasonal5-main.jpg",
         "tite" : "호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 호그스미드™의 ‘오래된 술집 겸 여관’",
-        "sub_title" : `호그스미드™에 있는 스리 브룸스틱스™는 호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 ‘오래된 술집 겸 여관’입니다.<br/><br/>놀라울 정도로 높은 천장을 올려다보면, 목제 계단과 발코니가 무질서하게 배치된 신비로운 공간에 누구나 압도되어 버립니다.<br/><br/>마법계의 음료 ‘버터 맥주™’는 여기서도 즐기실 수 있습니다. 무알코올의 달콤한 음료이므로, 어린이도 안심하고 주문해 주세요.<br/><br/>이 술집에서는 이 밖에도 피시 앤 칩스와 고기파이 등 영국 전통의 맛과 디저트도 있습니다.`
+        "sub_title" : `호그스미드™에 있는 스리 브룸스틱스™는 호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 ‘오래된 술집 겸 여관’입니다.놀라울 정도로 높은 천장을 올려다보면, 목제 계단과 발코니가 무질서하게 배치된 신비로운 공간에 누구나 압도되어 버립니다.마법계의 음료 ‘버터 맥주™’는 여기서도 즐기실 수 있습니다. 무알코올의 달콤한 음료이므로, 어린이도 안심하고 주문해 주세요.이 술집에서는 이 밖에도 피시 앤 칩스와 고기파이 등 영국 전통의 맛과 디저트도 있습니다.`
     },
     "restaurant6" :{
         "idx" : "06",
@@ -399,7 +399,7 @@ export const seasonalMenu = {
         "location" : "스누피™ 백롯 카페",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 디저트, 면류, 파스타, 샌드위치, 햄버거, 이유식 있음`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 디저트, 면류, 파스타, 샌드위치, 햄버거, 이유식 있음`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
@@ -448,7 +448,7 @@ export const seasonalMenu = {
                 "image" : "seasonal6-6.jpg",
                 "menu" : "스누피 키즈 세트",
                 "price" : "각￥1,000",
-                "menu_description" : `A 팬케이크, 치킨 너겟, 프라이드 포테이토, 스낵, 오렌지 음료<br/>B 샌드위치, 치킨 너겟, 프라이드 포테이토, 스낵, 오렌지 음료<br/><br/>※ 만 11세 이하의 어린이 메뉴<br/>※ 사진은 B 샌드위치`,
+                "menu_description" : `A 팬케이크, 치킨 너겟, 프라이드 포테이토, 스낵, 오렌지 음료B 샌드위치, 치킨 너겟, 프라이드 포테이토, 스낵, 오렌지 음료※ 만 11세 이하의 어린이 메뉴※ 사진은 B 샌드위치`,
             },
         ],
         "seasonal_logo" : "seasonal6.jpg",
@@ -462,7 +462,7 @@ export const seasonalMenu = {
         "location" : "해피니스 카페®",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 양식, 식사류, 미니언 푸드 있음`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 식사류, 미니언 푸드 있음`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
@@ -497,7 +497,7 @@ export const seasonalMenu = {
                 "image" : "seasonal7-4.jpg",
                 "menu" : "미니언 키즈 카레 플레이트",
                 "price" : "￥1,100",
-                "menu_description" : `카레라이스, 새우튀김, 치킨 너겟, 프라이드 포테이토, 호박 샐러드, 푸딩, 드링크바<br/><br/>※ 만 11세 이하의 어린이 메뉴`
+                "menu_description" : `카레라이스, 새우튀김, 치킨 너겟, 프라이드 포테이토, 호박 샐러드, 푸딩, 드링크바※ 만 11세 이하의 어린이 메뉴`
             },
             {
                 "idx" : "7-5",
@@ -518,7 +518,7 @@ export const seasonalMenu = {
         "location" : "파크 사이드 그릴",
         "service_type" : "풀 서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),<br/> 어린이 메뉴,<br/> 양식, 바・주류, 베지테리언(영어 페이지 한정)`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 바・주류, 베지테리언(영어 페이지 한정)`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
         "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
@@ -537,7 +537,7 @@ export const seasonalMenu = {
                 "image" : "seasonal8-2.jpg",
                 "menu" : "앵거스 에이징 스테이크 400g/250g",
                 "price" : "￥5,300/￥4,100",
-                "menu_description" : `그릴 설로인 스테이크<br/>그릴 립 아이 스테이크<br/>매시드 포테이토, 빵 포함`
+                "menu_description" : `그릴 설로인 스테이크그릴 립 아이 스테이크매시드 포테이토, 빵 포함`
             },
             {
                 "idx" : "8-3",
@@ -560,14 +560,14 @@ export const seasonalMenu = {
                 "image" : "seasonal8-5.jpg",
                 "menu" : "키즈 샌드위치 플레이트",
                 "price" : "￥1,400",
-                "menu_description" : `치킨과 달걀 샌드위치, 프라이드 포테이토, 디저트, 오렌지 음료<br/><br/>※ 만 11세 이하의 어린이 메뉴`
+                "menu_description" : `치킨과 달걀 샌드위치, 프라이드 포테이토, 디저트, 오렌지 음료※ 만 11세 이하의 어린이 메뉴`
             },
             {
                 "idx" : "8-6",
                 "image" : "seasonal8-6.jpg",
-                "menu" : `왼쪽) 그릴 파르페 ~바나나 카라멜리제&스파이시 파인~<br/>(오른쪽) 딸기 초콜릿 파르페`,
-                "price" : `(왼쪽) ¥1,800<br/>(오른쪽) ¥1,500`,
-                "menu_description" : `※14:00 ~ 17:00 한정 판매<br/>(레스토랑 영업시간에 따릅니다.)`
+                "menu" : `왼쪽) 그릴 파르페 ~바나나 카라멜리제&스파이시 파인~(오른쪽) 딸기 초콜릿 파르페`,
+                "price" : `(왼쪽) ¥1,800(오른쪽) ¥1,500`,
+                "menu_description" : `※14:00 ~ 17:00 한정 판매(레스토랑 영업시간에 따릅니다.)`
             },
         ],
         "seasonal_logo" : "seasonal8.jpg",

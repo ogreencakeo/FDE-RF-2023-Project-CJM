@@ -22,7 +22,7 @@ export const navMenu = [
             },
             {
                 txt : '멜즈 드라이브인',
-                link : 'seasonalMenu/restaurant3'
+                link : 'seasonalMenu/restaurant4'
             },
             {
                 txt : '스리 브룸스틱스™',
