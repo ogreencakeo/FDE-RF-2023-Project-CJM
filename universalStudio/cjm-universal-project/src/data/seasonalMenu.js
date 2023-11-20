@@ -15,7 +15,7 @@
 */
 export const seasonalMenu = {
     "restaurant1" :{
-        "idx" : "01",
+        "idx" : "1",
         "link" : "restaurant1",
         "location" : "스튜디오 스타즈 레스토랑",
         "service_type" : "퀵서비스",
@@ -79,7 +79,7 @@ export const seasonalMenu = {
         "sub_title" : "아빠와 아이는 물론 가족 모두가 만족할 수 있는 다양한 메뉴, 그리고 유아식 판매와 좌석 안내 등 엄마에게 편리한 서비스까지 한가득!"
     },
     "restaurant2" :{
-        "idx" : "02",
+        "idx" : "2",
         "link" : "restaurant2",
         "location" : "피네간즈 바&그릴",
         "service_type" : "풀 서비스",

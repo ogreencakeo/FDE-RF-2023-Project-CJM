@@ -2,6 +2,7 @@
 import React from "react";
 import { faUtensils, faListCheck, faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import '../../css/seasonal_menu.css';
 
 export function RecommSeasonal(){
     return(

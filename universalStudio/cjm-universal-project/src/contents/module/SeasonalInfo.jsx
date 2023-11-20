@@ -4,19 +4,18 @@ export function SeasonalInfo(props) {
     const selData = seasonalMenu[props.menu];
     console.log(selData);
     return (
-        <div className="seasonal_restaurant_wrap">
+        <div className="seasonal_restaurant_wrap" key={selData.idx}>
             <div className="seasonal_restaurant_bx">
                 <div className="restaurant_bx">
                     {/* <!-- 레스토랑 건물 사진 이미지 --> */}
-                    {/* <div className="restaurant_building_img"> */}
-                    {/* <div className="restaurant_img1 restaurant_img">
-                        <img src="../../../../images/seasonal/seasonal1/seasonal1-main.jpg" alt="" />
-                    </div> */}
-                    {/* </div> */}
+                    <div className="restaurant_building_img">
+                        <div className={`restaurant_img${selData.idx} restaurant_img`}>
+                        </div>
+                    </div>
                     {/* <!-- 레스토랑 로고 + 컨텐츠박스 wrap --> */}
                     <div className="restaurant_explanation ">
                         {/* <!-- 레스토랑 로고 --> */}
-                        <div className="restaurant_logo1 restaurant_logo"></div>
+                        <div className={`restaurant_logo${selData.idx} restaurant_logo`}></div>
                         <div className="restaurant_caution col-3">
                             <p>에어리어</p>
                             <p>할리우드</p>
@@ -24,8 +23,8 @@ export function SeasonalInfo(props) {
                             <p>파크 정보</p>
                         </div>
                         <div className="restaurant_content_wrap col-8">
-                            <span></span>
-                            <h1>스튜디오 스타즈 레스토랑</h1>
+                            <span>푸드&레스토랑</span>
+                            <h1>{selData.location}</h1>
                             <div className="restaurant_method">
                                 {/* <!-- 서비스 타입 --> */}
                                 <div className="service_type">
@@ -63,8 +62,8 @@ export function SeasonalInfo(props) {
                 {/* <!-- 레스토랑 메뉴 소개 --> */}
                 <div className="seasonal_restaurant_product">
                     <div className="product_detail">
-                        <h1>영화 스튜디오 내의 카페테리아</h1>
-                        <p>아빠와 아이는 물론 가족 모두가 만족할 수 있는 다양한 메뉴, 그리고 유아식 판매와 좌석 안내 등 엄마에게 편리한 서비스까지 한가득!</p>
+                        <h1>{selData.title}</h1>
+                        <p>{selData.sub_title}</p>
                     </div>
                     {/* <!-- 픽업메뉴 정보 --> */}
                     <div className="restaurant_pickup_info">
@@ -73,37 +72,20 @@ export function SeasonalInfo(props) {
                         <div className="menu_pickup_info_wrap">
                             {/* <!-- menu_pickup_info : 픽업메뉴&&추천메뉴 반복! --> */}
                             {/* <!-- 픽업메뉴 --> */}
-                            <div className="menu_pickup_info">
-                                <div className="menu_pick_img">
-                                    <img src="./images/seasonal/seasonal1-1.jpg" alt="" />
-                                </div>
-                                <div className="menu_pickup_detail">
-                                    <h3>DJ 피카츄 업 업♪ 할로윈 파티 플레이트 세트</h3>
-                                    <p className="menu_pickup_price">￥2,400</p>
-                                    <div className="menu_pickup_ingredient">소고기 레드 와인 조림, 감자 그라탱, 콘 라이스, 소프트드링크（R）</div>
-                                </div>
-                            </div>
-                            <div className="menu_pickup_info">
-                                <div className="menu_pick_img">
-                                    <img src="./images/seasonal/seasonal1-1.jpg" alt="" />
-                                </div>
-                                <div className="menu_pickup_detail">
-                                    <h3>DJ 피카츄 업 업♪ 할로윈 파티 플레이트 세트</h3>
-                                    <p className="menu_pickup_price">￥2,400</p>
-                                    <div className="menu_pickup_ingredient">소고기 레드 와인 조림, 감자 그라탱, 콘 라이스, 소프트드링크（R）</div>
-                                </div>
-                            </div>
-                            <div className="menu_pickup_info">
-                                <div className="menu_pick_img">
-                                    <img src="./images/seasonal/seasonal1-1.jpg" alt="" />
-                                </div>
-                                <div className="menu_pickup_detail">
-                                    <h3>DJ 피카츄 업 업♪ 할로윈 파티 플레이트 세트</h3>
-                                    <p className="menu_pickup_price">￥2,400</p>
-                                    <div className="menu_pickup_ingredient">소고기 레드 와인 조림, 감자 그라탱, 콘 라이스, 소프트드링크（R）</div>
-                                </div>
-                            </div>
-
+                            {
+                                selData.pickup_menu.map((v, i) =>
+                                    <div className="menu_pickup_info" key={i}>
+                                        <div className="menu_pick_img">
+                                            <img src={`../images/seasonal/seasonal${selData.idx}/${v.image}`} alt={`픽업메뉴이미지${v.idx}`} />
+                                        </div>
+                                        <div className="menu_pickup_detail">
+                                            <h3>{v.menu}</h3>
+                                            <p className="menu_pickup_price">{v.price}</p>
+                                            <div className="menu_pickup_ingredient">{v.menu_description}</div>
+                                        </div>
+                                    </div>
+                                )
+                            }
                         </div>
                     </div>
 
@@ -112,7 +94,7 @@ export function SeasonalInfo(props) {
                     {/* <!-- 레스토랑 배경 사진 --> */}
                     <div className="restaurant_bg_wrap">
                         <div className="restaurant_bg_img">
-                            <img src="./images/seasonal/restaurant_bg1.jpg" alt="" />
+                            <img src={`../images/seasonal/restaurant_bg/${selData.restaurant_bg}`} alt={`${selData.location} 배경`} />
                         </div>
                     </div>
 
@@ -123,7 +105,7 @@ export function SeasonalInfo(props) {
                             {/* <!-- 레스토랑 지도및 설명 --> */}
                             <div className="restaurant_map">
                                 <div className="restaurant_map_img">
-                                    <img src="./images/seasonal/restaurant_map1.jpg" alt="지도" />
+                                    <img src={`../images/seasonal/restaurant_map/${selData.restaurant_map}`} alt={`${selData.location} 지도`} />
                                 </div>
                                 <div className="restaurant_map_content">
                                     <div className="restaurant_map_logo">

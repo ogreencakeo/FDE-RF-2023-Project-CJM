@@ -54,15 +54,28 @@
     color: #fff;
 }
 .restaurant_content_wrap>h1{
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 800;
+    font-family: 'Gugi';
 }
 .restaurant_content_wrap>div>span{
     display: block;
 }
-/* 레스토랑 로고 */
+/* 레스토랑 로고 1~9 이미지 */
 .restaurant_logo1{
-    /* background:url(../images/seasonal/seasonal1.jpg) no-repeat center/cover; */
+    background:url(../../public/images/seasonal/seasonal1/seasonal1.jpg) no-repeat center/cover;
+}
+.restaurant_logo2{
+    background:url(../../public/images/seasonal/seasonal2/seasonal2.png) no-repeat center/cover;
+}
+.restaurant_logo3{
+    background:url(../../public/images/seasonal/seasonal3/seasonal3.png) no-repeat center/cover;
+}
+.restaurant_logo4{
+    background:url(../../public/images/seasonal/seasonal4/seasonal4.jpg) no-repeat center/cover;
+}
+.restaurant_logo5{
+    background:url(../../public/images/seasonal/seasonal5/seasonal5.jpg) no-repeat center/cover;
 }
 .restaurant_logo{
     position: absolute;
@@ -78,6 +91,39 @@
 /* 레스토랑 빌딩 이미지 */
 .restaurant_building_img{
     margin-top: 30px;
+}
+
+/* 레스토랑 1~9 이미지 */
+.restaurant_img1{
+    background: url(../../public/images/seasonal/seasonal1/seasonal1-main.jpg);
+}
+.restaurant_img2{
+    background: url(../../public/images/seasonal/seasonal2/seasonal2-main.jpg);
+}
+.restaurant_img3{
+    background: url(../../public/images/seasonal/seasonal3/seasonal3-main.jpg);
+}
+.restaurant_img4{
+    background: url(../../public/images/seasonal/seasonal4/seasonal4-main.jpg);
+}
+.restaurant_img5{
+    background: url(../../public/images/seasonal/seasonal5/seasonal5-main.jpg);
+}
+.restaurant_img6{
+    /* background: url(../../public/images/seasonal/seasonal6/seasonal6-main.jpg); */
+}
+.restaurant_img7{
+    /* background: url(../../public/images/seasonal/seasonal7/seasonal7-main.jpg); */
+}
+
+.restaurant_img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: block;
+    width: 100%;
+    height: 45vh;
 }
 /* 레스토랑 주의사항 */
 .restaurant_caution{

@@ -1,5 +1,10 @@
+import { SeasonalInfo } from "../module/SeasonalInfo";
+
 export function Restaurant2(){
     return(
-        <h2>레스토랑2 페이지</h2>
+        <>
+            <SeasonalInfo  menu='restaurant2'/>
+            {/* <RecommSeasonal/> */}
+        </>
     )   
 }
