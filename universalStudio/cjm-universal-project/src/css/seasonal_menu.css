@@ -61,7 +61,7 @@ p, span, i{
 
 /* 추천 시즈널 메뉴 특집 */
 .seasonal_overline_wrap{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     width: 100%;
     padding: 20px;
 }
