@@ -46,7 +46,8 @@ export function Goods() {
                 </div>
                 {/* <VidSection />  */}
                 <GoodsCaution />
-                <ImgMoveSlide imgMove={goodsmove} />
+                <button className="goodsmove">×</button>
+                {/* <ImgMoveSlide imgMove={goodsmove} /> */}
             </div>
         </>
     );
