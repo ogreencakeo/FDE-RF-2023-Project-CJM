@@ -164,3 +164,14 @@ p, span, i{
         transform: translateY(50px);
     }
 }
+
+/* 시즈널 메뉴 콘텐츠 */
+.seasonal-main-content-wrap{
+    min-width: 1300px;
+}
+
+.seasonal-main-content-bx{
+    width: 100%;
+    background-color: orangered;
+    /* paf */
+}

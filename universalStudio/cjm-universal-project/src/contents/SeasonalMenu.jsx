@@ -15,6 +15,7 @@ import { Restaurant4 } from "./SeasonalCont/Restaurant4";
 import { Restaurant3 } from "./SeasonalCont/Restaurant3";
 import { Restaurant5 } from "./SeasonalCont/Restaurant5";
 import { Restaurant6 } from "./SeasonalCont/Restaurant6";
+import { SeasonalMuContent } from "./SeasonalCont/SeasonalMuContent";
 // import { GoodsSwiper } from "./pages/plugin/Swiper";
 export function SeasonalMenu() {
     return (
