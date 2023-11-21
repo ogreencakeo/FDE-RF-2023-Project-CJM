@@ -346,29 +346,29 @@ export const seasonalMenu = {
         ],
         "recommended_menu" : [
             {
-                "idx" : "5-9",
-                "image" : "seasonal5-9.jpg",
-                "menu" : "가든 샐러드, 구운 통옥수수, 프라이드 포테이토, 믹스 베지터블",
+                "idx" : "5-1",
+                "image" : "specialty5-1.jpg",
+                "menu" : "(왼쪽) 핫 버터 맥주™ ∼프리미엄 머그컵 포함∼(무알코올)(오른쪽) 핫 버터 맥주™ ∼머그컵 포함∼(무알코올)",
                 "price" : "",
-                "menu_description" : `버터 맥주™∼머그컵 포함∼(무알코올) ¥1,200버터 맥주™(무알코올) ¥700버터 맥주™∼프리미엄 머그컵 포함∼(무알코올) ¥4,600※ 사진은 핫 버터 맥주™ ∼머그컵 포함∼`
+                "menu_description" : `(왼쪽) ¥4,600 (오른쪽) ¥1,400`
             },
             {
-                "idx" : "5-10",
-                "image" : "seasonal5-10.jpg",
+                "idx" : "5-2",
+                "image" : "specialty5-2.jpg",
                 "menu" : "마카로니 치즈",
                 "price" : "￥1,000",
                 "menu_description" : `마카로니 치즈, 소프트 롤, 익힌 채소※ 만 6세 이하의 어린이 메뉴`,
             },
             {
-                "idx" : "5-11",
-                "image" : "seasonal5-11.jpg",
+                "idx" : "5-3",
+                "image" : "specialty5-3.jpg",
                 "menu" : "버터 맥주™ 푸딩",
                 "price" : "￥700",
                 "menu_description" : "",
             },
             {
-                "idx" : "5-12",
-                "image" : "seasonal5-12.jpg",
+                "idx" : "5-4",
+                "image" : "specialty5-4.jpg",
                 "menu" : "라즈베리&클로티드 크림을 곁들인 당밀 타르트",
                 "price" : "￥700",
                 "menu_description" : "",

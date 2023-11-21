@@ -192,32 +192,38 @@
 }
 
 .menu_pickup_info_wrap{
-    max-width: 100%;
-    height: 268px;
+    max-width: 1200px;
+    /* height: 268px; */
     /* outline: 1px solid red; */
     display: flex;
     flex: 1;
     justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
     
 }
 
 /* 픽업메뉴&&추천메뉴 */
 .menu_pickup_info{
-    max-width: 220px;
-    height: 268px;
-    margin-right: 32px;
-    outline: 1px solid gainsboro;
+    /* max-width: 220px; */
+    width: calc((100% - 60px) / 3);
+    /* height: 268px; */
+    aspect-ratio: 1/1;
+    /* margin-right: 32px; */
+    margin: 20px;
+    outline: 3px solid #483591;
     border-radius: 25px;
 }
 
 /* 픽업메뉴 -이미지 */
 .menu_pick_img{
     width: 100%;
-    height: 8.6875rem;
+    /* height: 8.6875rem; */
 }
 .menu_pick_img>img{
+    outline: 3px solid #483591;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16/12;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
@@ -226,17 +232,30 @@
 .menu_pickup_detail{
     max-width: 100%;
     height: calc(100% -8.6875rem );
-    padding: 20px;
+    /* padding: 20px; */
     /* outline: 1px solid darkblue; */
+
 }
 .menu_pickup_detail>h3{
-    font-size: 0.75rem;
+    font-size: 1rem;
+    border-bottom: 3px solid #483591;
+    padding: 20px;
+    font-family: 'Gugi';
 }
-.menu_pickup_detail>p{
+.menu_pickup_detail>span{
     font-size: 0.9em;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fdd900;
+    border-radius: 20px;
+    display: inline-block;
+    width: 60%;
+    color: #483591;
+    font-family: 'Jua';
 }
 .menu_pickup_ingredient{
     font-size: 0.6em;
+    padding: 10px;
 }
 
 /* 레스토랑 하단 대표 이미지 */
