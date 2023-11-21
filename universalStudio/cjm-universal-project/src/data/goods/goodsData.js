@@ -513,4 +513,85 @@ export const goods =[
             },
         ]
     },
+    {
+        "helloKitty" : [
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "쁘띠 목도리",
+                "content" :"",
+                "image" : "goods7/goods1.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "이어머프 머리띠",
+                "content" :"",
+                "image" : "goods7/goods2.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "버킷햇",
+                "content" :"",
+                "image" : "goods7/goods3.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "이어머프 머리띠",
+                "content" :"",
+                "image" : "goods7/goods4.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "머리띠",
+                "content" :"",
+                "image" : "goods7/goods5.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "머리띠",
+                "content" :"",
+                "image" : "goods7/goods6.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "봉제인형",
+                "content" :"",
+                "image" : "goods7/goods7.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "봉제인형",
+                "content" :"",
+                "image" : "goods7/goods8.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "봉제인형 펜 케이스",
+                "content" :"",
+                "image" : "goods7/goods9.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "메달리온(헬로키티 총 3종)",
+                "content" :"※ 수베니어 메달리온은 모두 구리색입니다.",
+                "image" : "goods7/goods10.jpg"
+            },
+            {
+                "store" : "헬로키티 디자인 스튜디오 등",
+                "itemGoods" : "헬로키티",
+                "usage" : "버블 완드",
+                "content" :"",
+                "image" : "goods7/goods11.jpg"
+            },
+        ]
+    }
 ]

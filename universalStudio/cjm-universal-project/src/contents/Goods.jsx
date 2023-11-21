@@ -24,6 +24,7 @@ import { GoodsSwiper } from "./pages/plugin/Swiper";
 import { Caution } from "./module/Caution";
 import { VidSection } from "./module/VidSection";
 import { GoodsMain } from "./GoodsCont/GoodsMain";
+import { HelloKitty } from "./GoodsCont/HelloKitty.jsx";
 // import { Banner } from './module/Banner';
 
 export function Goods() {
@@ -55,6 +56,7 @@ export function Goods() {
                     <Route path="sesame" element={<Sesame />} />
                     <Route path="spiderman" element={<Spiderman />} />
                     <Route path="jurassicPark" element={<JurassicPark />} />
+                    <Route path="helloKitty" element={<HelloKitty />} />
                 </Routes>
 
                 <ImgMoveSlide imgMove={goodsmove} />

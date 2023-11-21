@@ -70,6 +70,10 @@ export const navMenu = [
                 'txt' : '쥬라기 월드',
                 'link' : 'goods/jurassicPark',
             },
+            {
+                'txt' : '헬로키티',
+                'link' : 'goods/helloKitty',
+            },
         ]
     },
     {
