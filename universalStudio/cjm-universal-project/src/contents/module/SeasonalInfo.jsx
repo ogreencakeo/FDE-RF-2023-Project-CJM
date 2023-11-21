@@ -83,7 +83,7 @@ export function SeasonalInfo(props) {
                                         </div>
                                         <div className="menu_pickup_detail">
                                             <h3>{v.menu}</h3>
-                                            <span className="menu_pickup_price">{v.price}</span>
+                                            {v.price != "" && <span className="menu_pickup_price">{v.price}</span>}
                                             <div className="menu_pickup_ingredient">{v.menu_description}</div>
                                         </div>
                                     </div>
@@ -108,7 +108,7 @@ export function SeasonalInfo(props) {
                                         </div>
                                         <div className="menu_pickup_detail">
                                             <h3>{v.menu}</h3>
-                                            <span className="menu_pickup_price">{v.price}</span>
+                                            {v.price != "" && <span className="menu_pickup_price">{v.price}</span>}
                                             <div className="menu_pickup_ingredient">{v.menu_description}</div>
                                         </div>
                                     </div>

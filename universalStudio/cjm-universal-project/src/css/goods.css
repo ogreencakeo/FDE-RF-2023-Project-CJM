@@ -97,7 +97,8 @@
     /* width:60%; */
     padding: 10px;
 }
-.goods_caution_content>p{
+
+.goods_caution_content p{
     font-family: 'Nanum Gothic';
     font-size: 15px;
     line-height: 2;

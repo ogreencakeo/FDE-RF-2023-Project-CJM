@@ -21,7 +21,7 @@ import "../css/goods.css";
 
 // 스와이퍼
 import { GoodsSwiper } from "./pages/plugin/Swiper";
-import { GoodsCaution } from "./GoodsCont/GoodsCaution";
+import { GoodsCaution } from "../contents/module/GoodsCaution";
 import { VidSection } from "./module/VidSection";
 // import { Banner } from './module/Banner';
 
@@ -45,7 +45,7 @@ export function Goods() {
                     </Routes>
                 </div>
                 {/* <VidSection />  */}
-                <GoodsCaution />
+                <GoodsCaution caution="goodsCaution" />
                 <button className="goodsmove">×</button>
                 <ImgMoveSlide imgMove={goodsmove} />
             </div>
