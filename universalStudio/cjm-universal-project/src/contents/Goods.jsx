@@ -21,7 +21,7 @@ import "../css/goods.css";
 
 // 스와이퍼
 import { GoodsSwiper } from "./pages/plugin/Swiper";
-import { GoodsCaution } from "../contents/module/GoodsCaution";
+import { GoodsCaution } from "./module/Caution";
 import { VidSection } from "./module/VidSection";
 // import { Banner } from './module/Banner';
 
