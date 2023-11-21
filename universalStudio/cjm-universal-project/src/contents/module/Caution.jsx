@@ -1,11 +1,16 @@
 import { cautionData } from "../../data/module_data/caution_data";
 
 export function Caution(props) {
-    const selData = cautionData[props.caution]
+    const selData = cautionData[props.caution];
+    const cautionImg = {
+        "restaurantCaution" : "character4.png",
+        "goodsCaution" : "character5.png",
+        "attractionCaution" : "character3.png",
+    }
     return (
         <div className="goods_caution_wrap">
             <div className="goods_caution_img">
-                <img src="../../../images/character/character3.png" alt="굿즈 주의사항" />
+                <img src={`../../../images/character/${cautionImg[props.caution]}`} alt="굿즈 주의사항" />
             </div>
             <div className="goods_caution_content">
                 {

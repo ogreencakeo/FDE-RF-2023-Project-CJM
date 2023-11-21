@@ -91,6 +91,7 @@
 }
 .goods_caution_img>img{
     width: 100%;
+    aspect-ratio: 1.1/1;
 }
 .goods_caution_content{
     /* width:60%; */

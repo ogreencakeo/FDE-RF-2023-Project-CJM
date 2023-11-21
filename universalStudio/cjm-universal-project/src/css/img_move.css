@@ -26,17 +26,18 @@
 
 .image-move li{
     flex: 1;
-    width: 300px;
+    width: 350px;
 }
 
 .image-move li>img{
     width: 100%;
-    height: auto; 
+    /* height: auto;  */
+    aspect-ratio: 1.1/1;
     display: block;
 }
 
 .img-move-ani{
-    animation: img-move-ani 30s linear infinite;
+    animation: img-move-ani 35s linear infinite;
 }
 
 @keyframes img-move-ani{
