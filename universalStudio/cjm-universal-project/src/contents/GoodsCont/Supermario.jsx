@@ -11,7 +11,7 @@ export function Supermario(){
         <>
             <GoodsSwiper />
             <GoodsItem cat={goods[0]} category="supermario" />
-            <GoodsAd ad='supermario' />
+            <GoodsAd ad='supermario' bg_color = '#ed7777'/>
             <Caution caution="goodsCaution" />
         </>
     )

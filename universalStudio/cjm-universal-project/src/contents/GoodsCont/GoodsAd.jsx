@@ -4,19 +4,24 @@ import '../../css/goods_ad.css';
 
 export function GoodsAd(props){
     const selData = goodsAdData[props.ad];
+    const color = props.bg_color;
     return(
         <>
             <div className="goods_ad_wrap">
                 <div className="goods_ad_bx">
-                    <h1 className='goods_tot'>{selData.tit}</h1>
-                    <div className="goods_ad_cont">
-                        <div className="goods_img">
-                            <img src={`../../images/${selData.logo}`} alt={selData.product} />
-                        </div>
-                        <div className="good_ad">
-                            <p>{selData.location}</p>
-                            <p>캐릭터 상품 : {selData.product} </p>
-                            <h2>{selData.cont}</h2>
+                    <div className="goods_ad">
+                        <h1 className='goods_tit'>{selData.tit}</h1>
+                        <div className="goods_ad_cont">
+                            <div className="goods_img_logo">
+                                <img src={`../../images/${selData.logo}`} alt={selData.product} />
+                            </div>
+                            <div className="good_ad">
+                                <span className='goods_location' style={{backgroundColor : color}}>{selData.location}</span>
+                                <div className="goods_sub_cont">
+                                    <span className='goods_product'>캐릭터 상품 : {selData.product} </span>
+                                    <span className='goods_cont'>{selData.cont}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
