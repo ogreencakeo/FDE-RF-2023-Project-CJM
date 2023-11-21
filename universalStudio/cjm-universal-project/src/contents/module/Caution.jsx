@@ -1,6 +1,6 @@
 import { cautionData } from "../../data/module_data/caution_data";
 
-export function GoodsCaution(props) {
+export function Caution(props) {
     const selData = cautionData[props.caution]
     return (
         <div className="goods_caution_wrap">

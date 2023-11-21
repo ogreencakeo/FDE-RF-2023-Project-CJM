@@ -1,3 +1,4 @@
+import { Caution } from "../module/Caution";
 import { SeasonalInfo } from "../module/SeasonalInfo";
 
 export function Restaurant2(){
@@ -5,6 +6,7 @@ export function Restaurant2(){
         <>
             <SeasonalInfo  menu='restaurant2'/>
             {/* <RecommSeasonal/> */}
+            <Caution caution='restaurantCaution' />
         </>
     )   
 }

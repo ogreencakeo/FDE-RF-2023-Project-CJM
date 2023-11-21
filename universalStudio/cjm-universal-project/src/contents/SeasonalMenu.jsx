@@ -17,6 +17,7 @@ import { Restaurant6 } from "./SeasonalCont/Restaurant6";
 import { Restaurant7 } from "./SeasonalCont/Restaurant7";
 import { Restaurant8 } from "./SeasonalCont/Restaurant8";
 import { SeasonalMuContent } from "./SeasonalCont/SeasonalMuContent";
+import { RestaurantMain } from "./SeasonalCont/RestaurantMain";
 
 // import { GoodsSwiper } from "./pages/plugin/Swiper";
 export function SeasonalMenu() {
@@ -37,7 +38,7 @@ export function SeasonalMenu() {
             {/* <SeasonalMuContent /> */}
             
             <Routes>
-                <Route index element={<Restaurant1 />} />
+                <Route index element={<RestaurantMain />} />
                 <Route path="restaurant1" element={<Restaurant1 />} />
                 <Route path="restaurant2" element={<Restaurant2 />} />
                 <Route path="restaurant3" element={<Restaurant3 />} />
