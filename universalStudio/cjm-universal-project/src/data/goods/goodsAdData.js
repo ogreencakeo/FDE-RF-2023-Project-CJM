@@ -22,5 +22,13 @@ export const goodsAdData = {
         "product" : "위저딩 월드 오브 해리 포터™",
         "cont" : "쌍안경과 돋보기, 컴퍼스 등 각종 마법 도구를 이 와이제이커 마술용품점에서 구매할 수 있습니다. 망토와 넥타이, 머플러 등을 골고루 갖추고 있습니다.",
         "map" : "goods/goods3/map.jpg",
+    },
+    "sesame" : {
+        "tit" : "세서미 스트리트™ 굿즈를 즐기면서 찾아보자!",
+        "logo" : "goods/logo/sesaemeLogo.jpg",
+        "location" : "캐릭터스 포 유",
+        "product" : "세서미 스트리트™",
+        "cont" : "엘모와 친구들의 즐거운 대화를 듣고 있노라면 자신도 모르게 웃음이 터져 나온다! 설렘 가득한 숍 안에는 세서미 스트리트™ 굿즈가 한가득!",
+        "map" : "goods/goods4/map.jpg",
     }
 }
