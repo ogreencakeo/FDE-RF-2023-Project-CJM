@@ -394,7 +394,7 @@ export const seasonalMenu = {
         "sub_title" : `호그스미드™에 있는 스리 브룸스틱스™는 호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 ‘오래된 술집 겸 여관’입니다.놀라울 정도로 높은 천장을 올려다보면, 목제 계단과 발코니가 무질서하게 배치된 신비로운 공간에 누구나 압도되어 버립니다.마법계의 음료 ‘버터 맥주™’는 여기서도 즐기실 수 있습니다. 무알코올의 달콤한 음료이므로, 어린이도 안심하고 주문해 주세요.이 술집에서는 이 밖에도 피시 앤 칩스와 고기파이 등 영국 전통의 맛과 디저트도 있습니다.`
     },
     "restaurant6" :{
-        "idx" : "06",
+        "idx" : "6",
         "link" : "restaurant6",
         "location" : "스누피™ 백롯 카페",
         "service_type" : "퀵서비스",
@@ -457,7 +457,7 @@ export const seasonalMenu = {
         "sub_title" : "",
     },
     "restaurant7" : {
-        "idx" : "07",
+        "idx" : "7",
         "link" : "restaurant7",
         "location" : "해피니스 카페®",
         "service_type" : "퀵서비스",
@@ -513,7 +513,7 @@ export const seasonalMenu = {
         "sub_title" : "협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.",
     },
     "restaurant8" : {
-        "idx" : "08",
+        "idx" : "8",
         "link" : "restaurant8",
         "location" : "파크 사이드 그릴",
         "service_type" : "풀 서비스",
