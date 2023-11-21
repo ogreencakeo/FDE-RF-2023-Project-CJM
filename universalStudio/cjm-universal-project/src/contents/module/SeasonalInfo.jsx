@@ -60,7 +60,7 @@ export function SeasonalInfo(props) {
             </div>
 
             {/* <!-- 레스토랑 중간 컨텐츠 --> */}
-            <div className="restaurant_main_content_wrap">
+            <div className="restaurant_main_content_wrap Recommended_menu_information">
                 {/* <!-- <div className="restaurant_img1 restaurant_img"></div> --> */}
                 {/* <!-- 레스토랑 메뉴 소개 --> */}
                 <div className="seasonal_restaurant_product">
@@ -93,6 +93,29 @@ export function SeasonalInfo(props) {
                     </div>
 
                     {/* <!-- 추천 메뉴 --> */}
+                    <div className="restaurant_pickup_info" style={{marginTop : '80px'}}>
+                        <h2>추천 메뉴 정보</h2>
+                        {/* <!-- 픽업메뉴정보래핑 --> */}
+                        <div className="menu_pickup_info_wrap">
+                            {/* <!-- menu_pickup_info : 픽업메뉴&&추천메뉴 반복! --> */}
+                            {/* <!-- 픽업메뉴 --> */}
+                            {
+
+                                selData.recommended_menu.map((v, i) =>
+                                    <div className="menu_pickup_info" key={i}>
+                                        <div className="menu_pick_img">
+                                            <img src={`../images/seasonal/seasonal${selData.idx}/${v.image}`} alt={`픽업메뉴이미지${v.idx}`} />
+                                        </div>
+                                        <div className="menu_pickup_detail">
+                                            <h3>{v.menu}</h3>
+                                            <span className="menu_pickup_price">{v.price}</span>
+                                            <div className="menu_pickup_ingredient">{v.menu_description}</div>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
 
                     {/* <!-- 레스토랑 배경 사진 --> */}
                     <div className="restaurant_bg_wrap">
