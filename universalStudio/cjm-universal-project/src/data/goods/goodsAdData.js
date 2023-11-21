@@ -14,5 +14,13 @@ export const goodsAdData = {
         "product" : "피너츠(스누피)",
         "cont" : "스누피와 피너츠 친구들의 전문 숍! 인형과 과자, 티셔츠 등 여기서만 만날 수 있는 굿즈가 한가득! 스누피를 좋아하는 게스트를 위한 최고의 숍입니다!",
         "map" : "goods/goods2/map.jpg",
+    },
+    "harryPotter" : {
+        "tit" : "호그와트™ 마법 학교의 학생으로서 필요한 아이템을 이곳에서 찾아보세요.",
+        "logo" : "goods/logo/harrypotterLogo.jpg",
+        "location" : "와이제이커 마술용품점",
+        "product" : "위저딩 월드 오브 해리 포터™",
+        "cont" : "쌍안경과 돋보기, 컴퍼스 등 각종 마법 도구를 이 와이제이커 마술용품점에서 구매할 수 있습니다. 망토와 넥타이, 머플러 등을 골고루 갖추고 있습니다.",
+        "map" : "goods/goods3/map.jpg",
     }
 }
