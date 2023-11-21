@@ -32,25 +32,25 @@ export function SeasonalInfo(props) {
                                 {/* <!-- 서비스 타입 --> */}
                                 <div className="service_type">
                                     <i className="fa-solid fa-bell-concierge"></i>
-                                    <span>서비스 타입</span>
+                                    <span>서비스 타입 : </span>
                                     <span>퀵서비스</span>
                                 </div>
                                 {/* <!-- 결제 방법 --> */}
                                 <div className="pay_method">
                                     <i className="fa-solid fa-money-check-dollar"></i>
-                                    <span>결제방법</span>
+                                    <span>결제방법 : </span>
                                     <span>신용카드 사용 가능</span>
                                 </div>
                                 {/* <!-- 제공 메뉴 --> */}
                                 <div className="provied_menu">
                                     <i className="fa-solid fa-utensils"></i>
-                                    <span>제공 메뉴</span>
-                                    <span>저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 식사류,이유식 있음, 돼지고기 미사용·무알코올 메뉴(영어 페이지 한정)</span>
+                                    <span>제공 메뉴 : </span>
+                                    <span>{selData.menu_provided}</span>
                                 </div>
                                 {/* <!-- 안심·안전한 파크 운영 --> */}
                                 <div className="park_operation">
                                     <i className="fa-solid fa-hand-holding-heart"></i>
-                                    <span>안심·안전한 파크 운영</span>
+                                    <span>안심·안전한 파크 운영 : </span>
                                     <span></span>
                                 </div>
                             </div>
