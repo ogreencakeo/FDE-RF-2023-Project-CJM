@@ -1,5 +1,8 @@
-import '../../css/seasonal_restaurant.css';
+// 시즈널메뉴 데이터 가져오기
 import { seasonalMenu } from '../../data/seasonalMenu';
+// CSS 가져오기
+import '../../css/seasonal_restaurant.css';
+
 export function SeasonalInfo(props) {
     const selData = seasonalMenu[props.menu];
     console.log(selData);
