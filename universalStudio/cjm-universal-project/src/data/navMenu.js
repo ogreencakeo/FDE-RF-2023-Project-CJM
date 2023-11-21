@@ -1,8 +1,8 @@
 export const navMenu = [
     
     {
-        txt : '이벤트',
-        link : '/event'
+        txt : '어트랙션',
+        link : '/attraction'
     },
     {
         txt : '시즈널메뉴',
@@ -44,7 +44,33 @@ export const navMenu = [
     },
     {
         txt : '굿즈',
-        link : '/goods'
+        link : '/goods',
+        sub : [
+            {
+                'txt' : '슈퍼 닌텐도 월드™',
+                'link' : 'goods/supermario',
+            },
+            {
+                'txt' : '스누피',
+                'link' : 'goods/snoopy',
+            },
+            {
+                'txt' : '위저딩 월드 오브 해리 포터™',
+                'link' : 'goods/harryPotter',
+            },
+            {
+                'txt' : '세서미 스트리트™',
+                'link' : 'goods/sesame',
+            },
+            {
+                'txt' : '스파이더맨',
+                'link' : 'goods/spiderman',
+            },
+            {
+                'txt' : '쥬라기 월드',
+                'link' : 'goods/jurassicPark',
+            },
+        ]
     },
     {
         txt : '티켓',

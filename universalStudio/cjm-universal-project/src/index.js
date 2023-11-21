@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import {Main} from './contents/Main.jsx'
-import {Event} from './contents/Event.jsx'
+import {Attraction} from './contents/Attraction.jsx'
 import {SeasonalMenu} from './contents/SeasonalMenu.jsx'
 import {Goods} from './contents/Goods.jsx'
 import {CustomerCenter} from './contents/CustomerCenter.jsx'
@@ -20,7 +20,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Main />} />
-          <Route path='event' element={<Event />} />
+          <Route path='attraction' element={<Attraction />} />
           <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
           <Route path='goods/*' element={<Goods />} />
           <Route path='ticket' element={<Ticket />} />

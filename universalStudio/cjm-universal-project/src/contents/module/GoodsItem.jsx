@@ -7,6 +7,7 @@ export function GoodsItem(props) {
     const categoryGoods = props.cat[props.category] || [];
 
     const showGoodsImg = (img, usage) => {
+        const top_area = $('.top-area');
         const modelwrap = $(".img-model-wrap");
         const cbtn = $(".cbtn");
         const goods_tit = $(".goods-tit");
@@ -16,26 +17,30 @@ export function GoodsItem(props) {
         goods_img.attr("src", `../../../../images/goods/${img}`);
 
         modelwrap.fadeIn(300);
-
+        top_area.fadeOut(300);
+        
         cbtn.click(() => {
             modelwrap.fadeOut(300);
+            top_area.fadeIn(300);
         });
     };
     return (
         <>
-            {categoryGoods.map((v, i) => (
-                <div className="goods_bx" key={i} onClick={() => showGoodsImg(v.image, v.usage)}>
-                    <div className="goods_img">
-                        <img src={`../../../../images/goods/${v.image}`} alt="" />
+            <div className="goods_bx_wrap">
+                {categoryGoods.map((v, i) => (
+                    <div className="goods_bx" key={i} onClick={() => showGoodsImg(v.image, v.usage)}>
+                        <div className="goods_img">
+                            <img src={`../../../../images/goods/${v.image}`} alt="" />
+                        </div>
+                        <div className="goods_content">
+                            <span className="goods_store">판매 점포: {v.store}</span>
+                            <span className="goods_title">{v.itemGoods}</span>
+                            <span className="goods_usage">{v.usage}</span>
+                            <span className="goods_content">{v.content}</span>
+                        </div>
                     </div>
-                    <div className="goods_content">
-                        <span className="goods_store">판매 점포: {v.store}</span>
-                        <span className="goods_title">{v.itemGoods}</span>
-                        <span className="goods_usage">{v.usage}</span>
-                        <span className="goods_content">{v.content}</span>
-                    </div>
-                </div>
-            ))}
+                ))}
+            </div>
             {/* 사진 클릭시 모달창 */}
             <section className="img-model-wrap">
                 <div className="img-model-box">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { MenuLinkData } from "../../data/goods/menuData";
+// import { MenuLinkData } from "../../data/goods/menuData";
 import { useState } from "react";
 import '../../css/menu_link.css'
 
