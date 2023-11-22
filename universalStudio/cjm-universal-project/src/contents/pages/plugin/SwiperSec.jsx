@@ -19,7 +19,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Navigation } from "swiper/modules";
 
+// 데이터 
+import { cartData } from "../../../data/module_data/cart_data";
+
 export function SwiperSec(props) {
+    const selData = props.arry[props.category];
+    console.log('스와이프 selData :', selData);
+    const category_info = cartData[props.cat];
+    const title_info = cartData[props.title];
+    const img_info = cartData[props.img];
     return (
         <>
             <Swiper
@@ -45,27 +53,13 @@ export function SwiperSec(props) {
             >
                 {selData.map((v, i) => (
                     <SwiperSlide key={i}>
-                        {/* 비디오 보이기 함수 호출 ( 비디오 경로, 제목을 보내줌! ) */}
-                        <section className="sw-inbox" onClick={() => showVid(v.vsrc, v.tit)}>
-                            {/* 동영상 이미지 박스 */}
-                            <div className="vid-img">
-                                <img src={v.isrc} alt={v.tit} />
-                                {/* 폰트어썸 아이콘 */}
-                                <FontAwesomeIcon
-                                    icon={faCirclePlay}
-                                    style={{
-                                        position: "absolute",
-                                        bottom: "55%",
-                                        left: "10%",
-                                        color: "#fff",
-                                        fontSize: "50px",
-                                    }}
-                                />
+                        <section>
+                            <div>
+                                <img src={v.img} alt={v.title} />
                             </div>
-                            {/* 동영상 타이틀 박스 */}
-                            <div className="vid-tit">
-                                <h4>{v.cat}</h4>
-                                <h3>{v.tit}</h3>
+                            <div>
+                                <h4>{v.category}</h4>
+                                <h3>{v.title}</h3>
                             </div>
                         </section>
                     </SwiperSlide>
