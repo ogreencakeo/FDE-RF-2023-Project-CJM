@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { faSquareInstagram, faSquareFacebook, faSquareTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
-// import {  } from "@fortawesome/free-regular-svg-icons";
 import { faMapMarkerAlt, faClock, faSquareParking, faCar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { getWaveText } from '../Function/indexFn.js';
+
 
 import { Link } from 'react-router-dom';
 import WaveText from './module/WaveText.jsx';

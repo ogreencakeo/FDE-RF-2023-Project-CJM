@@ -1,6 +1,7 @@
 import React from 'react';
 import {goodsAdData} from '../../data/goods/goodsAdData';
 import '../../css/goods_ad.css';
+import { Map } from '../module/Map';
 
 export function GoodsAd(props){
     const selData = goodsAdData[props.ad];
@@ -26,10 +27,11 @@ export function GoodsAd(props){
                     </div>
                 </div>
                 <div className="goods_shop_map">
-                    <h1>숍의 위치</h1>
+                    {/* <h1>숍의 위치</h1>
                     <div className="shop_map">
                         <img src={`../../images/${selData.map}`} alt={`${selData.location}의 위치`} />
-                    </div>
+                    </div> */}
+                    <Map shop_info={selData.map} shop_location={selData.location} cat='goods' />
                 </div>
             </div>
         </>

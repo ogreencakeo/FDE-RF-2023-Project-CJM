@@ -21,12 +21,8 @@ export const seasonalMenu = {
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
         "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 식사류,이유식 있음, 돼지고기 미사용·무알코올 메뉴(영어 페이지 한정)`,
-        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
-        "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
-        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
         "restaurant_bg" : "restaurant_bg1.jpg",
         "restaurant_map" : "restaurant_map1.jpg",
-        // "seasonal_img" : ["seasonal1-1.jpg", "seasonal1-2.jpg", "seasonal1-3.jpg", "seasonal1-4.jpg", "seasonal1-5.jpg", "seasonal1-6.jpg"],
         "pickup_menu" : [
             {
                 "idx" : "1-1",
@@ -168,7 +164,7 @@ export const seasonalMenu = {
         "location" : "루이즈 N.Y. 피자 팔러",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정),^ 피자`,
+        "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 피자`,
         "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
         "englisgh_page" : "",
         "children_page" : "",
