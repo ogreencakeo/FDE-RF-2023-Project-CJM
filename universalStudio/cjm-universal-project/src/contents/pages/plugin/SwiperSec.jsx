@@ -9,6 +9,7 @@ import $ from "jquery";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import '../../../css/swiper.css';
 
 /* 폰트어썸 임포트 */
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
@@ -19,19 +20,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { Navigation } from "swiper/modules";
 
-// 데이터 
+// 데이터
 import { cartData } from "../../../data/module_data/cart_data";
 
 export function SwiperSec(props) {
-    const selData = props.arry[props.category];
-    console.log('스와이프 selData :', selData);
+    const selData = cartData[props.category];
+    console.log("스와이프 selData :", selData);
     const category_info = cartData[props.cat];
     const title_info = cartData[props.title];
     const img_info = cartData[props.img];
     return (
         <>
             <Swiper
-                slidesPerView={4}
+                slidesPerView={3}
                 spaceBetween={20}
                 navigation={true}
                 modules={[Navigation]}
@@ -51,19 +52,24 @@ export function SwiperSec(props) {
                 }}
                 className="mySwiper"
             >
-                {selData.map((v, i) => (
-                    <SwiperSlide key={i}>
+                    <SwiperSlide>
                         <section>
                             <div>
-                                <img src={v.img} alt={v.title} />
+                                {
+                                    selData.img.map((v, i) =>
+                                    <li key={i}>
+                                        <img src={v} alt={selData.title} />
+                                    </li>
+                                    )
+                                }
                             </div>
                             <div>
-                                <h4>{v.category}</h4>
-                                <h3>{v.title}</h3>
+                                <h4>{selData.category}</h4>
+                                <h3>{selData.title}</h3>
                             </div>
                         </section>
                     </SwiperSlide>
-                ))}
+
             </Swiper>
         </>
     );

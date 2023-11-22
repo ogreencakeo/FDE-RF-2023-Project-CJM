@@ -11,7 +11,7 @@ export function Restaurant1(){
         <>
             {/* <h2>레스토랑1페이지</h2> */}
             <SeasonalInfo  menu='restaurant1' color='#483591'/>
-            <SwiperSec category='restaurant1' arry={cartData[0]} />
+            <SwiperSec category='restaurant1' />
             {/* <RecommSeasonal category='restaurant1'/> */}
         </>
     )
