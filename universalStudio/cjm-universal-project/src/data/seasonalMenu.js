@@ -159,7 +159,7 @@ export const seasonalMenu = {
         ],
         "seasonal_logo" : "seasonal2.png",
         "seasonal_main_img" : "seasonal2-main.jpg",
-        "tite" : "브루클린에 있는 아일랜드풍 술집에서 서양 요리를 즐겨 보세요",
+        "title" : "브루클린에 있는 아일랜드풍 술집에서 서양 요리를 즐겨 보세요",
         "sub_title" : `제철 과일로 만든 하이볼 칵테일을 맛볼 수 있는 카운터 바도 병설.협찬: Suntory Spirits Ltd.`
     },
     "restaurant3" : {
@@ -222,7 +222,7 @@ export const seasonalMenu = {
         ],
         "seasonal_logo" : "seasonal3.png",
         "seasonal_main_img" : "seasonal3-main.jpg",
-        "tite" : "빅 사이즈의 본고장 피자를 맛볼 수 있는 뉴욕 리틀 이태리 피자 팔러.",
+        "title" : "빅 사이즈의 본고장 피자를 맛볼 수 있는 뉴욕 리틀 이태리 피자 팔러.",
         "sub_title" : ""
     },
     "restaurant4" : {
@@ -238,51 +238,58 @@ export const seasonalMenu = {
             {
                 "idx" : "4-1",
                 "image" : "seasonal4-1.jpg",
-                "menu" : "페퍼 데리야키&사워크림 버거 세트",
-                "price" : "￥1,850",
-                "menu_description" : "프라이드 포테이토, 소프트드링크(R)",
+                "menu" : "파스트라미 비프&모차렐라 치즈 핫 샌드위치 세트",
+                "price" : "￥1,600",
+                "menu_description" : "파스트라미 비프&모차렐라 치즈 핫 샌드위치, 컵 샐러드, 소프트드링크(R)",
             },
             {
                 "idx" : "4-2",
                 "image" : "seasonal4-2.jpg",
-                "menu" : "BBQ 베이컨 치즈버거 세트",
-                "price" : "￥1,800",
-                "menu_description" : "프라이드 포테이토, 소프트드링크(R)",
+                "menu" : "크루아상 샌드위치 세트",
+                "price" : "￥1,500",
+                "menu_description" : "훈제 트라우트 연어&아보카도, 컵 샐러드, 소프트드링크(R)",
             },
             {
                 "idx" : "4-3",
                 "image" : "seasonal4-3.jpg",
-                "menu" : "키즈 햄버거 세트",
-                "price" : "￥1,700",
-                "menu_description" : "프라이드 포테이토, 소프트드링크(R)",
+                "menu" : "치킨과 각종 채소의 믹스 샌드위치 세트",
+                "price" : "￥1,500",
+                "menu_description" : "치킨과 각종 채소의 믹스 샌드위치, 컵 샐러드, 소프트드링크(R)",
             },
             {
                 "idx" : "4-4",
                 "image" : "seasonal4-4.jpg",
-                "menu" : "클래식 버거 세트",
-                "price" : "￥1,650",
-                "menu_description" : "프라이드 포테이토, 소프트드링크(R)",
+                "menu" : "믹스 베리 샐러드",
+                "price" : "￥800",
+                "menu_description" : "",
             },
         ],
         "recommended_menu" : [
             {
                 "idx" : "4-5",
-                "image" : "seasonal4-5.jpg",
-                "menu" : "키즈 햄버거 세트",
-                "price" : "￥1,100",
-                "menu_description" : `햄버거, 프라이드 포테이토, 스낵, 오렌지 음료※ 만 11세 이하의 어린이 메뉴`
+                "image" : "specialty4-1.jpg",
+                "menu" : "(왼쪽) 슈톨렌풍 큐브 케이크^(앞) 산타클로스 ~스트로베리 무스~ ^(오른쪽) 크리스마스트리 ~레몬향 화이트초콜릿 케이크~",
+                "price" : "(왼쪽) ¥900^(앞) ¥850^(오른쪽)¥850",
+                "menu_description" : ``
             },
             {
                 "idx" : "4-6",
-                "image" : "seasonal4-6.jpg",
-                "menu" : "아메리칸 초콜릿 브라우니",
-                "price" : "￥500",
+                "image" : "specialty4-2.jpg",
+                "menu" : "(왼쪽) 라즈베리 아몬드 타르트^(가운데) 과일 듬뿍 치즈 케이크^(오른쪽) 더블 푸딩 미니 파르페",
+                "price" : "각￥750",
+                "menu_description" : "",
+            },
+            {
+                "idx" : "4-6",
+                "image" : "specialty4-3.jpg",
+                "menu" : "향긋한 과일티 ~백도와 믹스베리~",
+                "price" : "￥600",
                 "menu_description" : "",
             },
         ],
         "seasonal_logo" : "seasonal4.png",
         "seasonal_main_img" : "seasonal4-main.jpg",
-        "tite" : "영화 ‘청춘 낙서’ 속 세계를 만끽하세요!",
+        "title" : "비버리힐즈의 길목, 프렌치 스타일의 카페에서 샌드위치와 디저트를",
         "sub_title" : `50년대풍 분위기가 매력적인 햄버거 레스토랑.협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.`
     },
     "restaurant5" : {
@@ -391,7 +398,7 @@ export const seasonalMenu = {
         ],
         "seasonal_logo" : "seasonal5.jpg",
         "seasonal_main_img" : "seasonal5-main.jpg",
-        "tite" : "키노피오 하우스가 장난기 가득한 행복 레스토랑으로!",
+        "title" : "키노피오 하우스가 장난기 가득한 행복 레스토랑으로!",
         "sub_title" : `무척 밝고 열심히 일하는 셰프 키노피오가 솜씨를 발휘해 만든 장난기 가득한 식사를 맛보세요! 창문으로 안을 들여다보면 버섯 왕국의 즐거운 한때를 엿볼 수 있어요.^※ 당일 상황에 따라 정리권을 배부합니다. 정리권은 예정 매수에 달하는 대로 배부를 종료합니다.`
     },
     "restaurant6" :{
@@ -454,7 +461,7 @@ export const seasonalMenu = {
         ],
         "seasonal_logo" : "seasonal6.jpg",
         "seasonal_main_img" : "seasonal6-main.jpg",
-        "tite" : "스누피 친구들의 단골 카페",
+        "title" : "스누피 친구들의 단골 카페",
         "sub_title" : "",
     },
     "restaurant7" : {
@@ -510,7 +517,7 @@ export const seasonalMenu = {
         ],
         "seasonal_logo" : "seasonal7.jpg",
         "seasonal_main_img" : "seasonal7-main.jpg",
-        "tite" : "샌프란시스코의 창고를 개조한 행복이 가득한 카페",
+        "title" : "샌프란시스코의 창고를 개조한 행복이 가득한 카페",
         "sub_title" : "협찬: Coca-Cola(Japan)Company, Limited and Coca-Cola Bottlers Japan Inc.",
     },
     "restaurant8" : {
@@ -573,7 +580,7 @@ export const seasonalMenu = {
         ],
         "seasonal_logo" : "seasonal8.jpg",
         "seasonal_main_img" : "seasonal8-main.jpg",
-        "tite" : "전망 좋은 점포 내에서 맛보는 본격 에이징 비프(숙성 쇠고기)와 맥주로 호사로운 시간을.",
+        "title" : "전망 좋은 점포 내에서 맛보는 본격 에이징 비프(숙성 쇠고기)와 맥주로 호사로운 시간을.",
         "sub_title" : "협찬: Suntory Spirits Ltd."
     },
     
