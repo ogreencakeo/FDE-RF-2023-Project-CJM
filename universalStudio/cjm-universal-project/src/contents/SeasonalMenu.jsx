@@ -1,11 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 // import { seasonalMenu } from "../data/seasonalMenu";
-import { RecommSeasonal } from "./SeasonalCont/RecommSeasonal";
-import { SeasonalMuLink, SeasonalMenuRoutes } from "./SeasonalCont/SeasonalMuLink";
-
-import { SeasonalLink } from "./module/SeasonalLink";
-
-import {ImgSlide} from '../contents/pages/plugin/ImgSlide';
 
 // 레스토랑 라우터 
 import { Restaurant1 } from "./SeasonalCont/Restaurant1";
@@ -16,13 +10,12 @@ import { Restaurant5 } from "./SeasonalCont/Restaurant5";
 import { Restaurant6 } from "./SeasonalCont/Restaurant6";
 import { Restaurant7 } from "./SeasonalCont/Restaurant7";
 import { Restaurant8 } from "./SeasonalCont/Restaurant8";
-import { SeasonalMuContent } from "./SeasonalCont/SeasonalMuContent";
-import { RestaurantMain } from "./SeasonalCont/RestaurantMain";
+
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { Caution } from "./module/Caution";
 import { FoodInfo } from "./SeasonalCont/FoodInfo";
 
-// import { GoodsSwiper } from "./pages/plugin/Swiper";
+
 export function SeasonalMenu() {
     return (
         <>

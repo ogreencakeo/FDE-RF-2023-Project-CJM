@@ -25,7 +25,7 @@ export const navMenu = [
                 link : 'seasonalMenu/restaurant4'
             },
             {
-                txt : '스리 브룸스틱스™',
+                txt : '키노피오 카페™',
                 link : 'seasonalMenu/restaurant5'
             },
             {

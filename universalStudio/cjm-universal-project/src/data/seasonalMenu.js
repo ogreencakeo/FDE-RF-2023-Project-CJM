@@ -291,13 +291,10 @@ export const seasonalMenu = {
     "restaurant5" : {
         "idx" : "5",
         "link" : "restaurant5",
-        "location" : "스리 브룸스틱스™",
+        "location" : "키노피오 카페™",
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
-        "menu_provided" : `저알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 베지테리언(영어 페이지 한정)`,
-        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
-        "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
-        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
+        "menu_provided" : `저알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 샌드위치, 햄버거`,
         "restaurant_bg" : "restaurant_bg5.jpg",
         "restaurant_map" : "restaurant_map5.jpg",
         "pickup_menu" : [
@@ -376,8 +373,8 @@ export const seasonalMenu = {
         ],
         "seasonal_logo" : "seasonal5.jpg",
         "seasonal_main_img" : "seasonal5-main.jpg",
-        "tite" : "호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 호그스미드™의 ‘오래된 술집 겸 여관’",
-        "sub_title" : `호그스미드™에 있는 스리 브룸스틱스™는 호그와트™ 마법 학교의 선생님과 학생들도 즐겨 찾는 ‘오래된 술집 겸 여관’입니다.놀라울 정도로 높은 천장을 올려다보면, 목제 계단과 발코니가 무질서하게 배치된 신비로운 공간에 누구나 압도되어 버립니다.마법계의 음료 ‘버터 맥주™’는 여기서도 즐기실 수 있습니다. 무알코올의 달콤한 음료이므로, 어린이도 안심하고 주문해 주세요.이 술집에서는 이 밖에도 피시 앤 칩스와 고기파이 등 영국 전통의 맛과 디저트도 있습니다.`
+        "tite" : "키노피오 하우스가 장난기 가득한 행복 레스토랑으로!",
+        "sub_title" : `무척 밝고 열심히 일하는 셰프 키노피오가 솜씨를 발휘해 만든 장난기 가득한 식사를 맛보세요! 창문으로 안을 들여다보면 버섯 왕국의 즐거운 한때를 엿볼 수 있어요.^※ 당일 상황에 따라 정리권을 배부합니다. 정리권은 예정 매수에 달하는 대로 배부를 종료합니다.`
     },
     "restaurant6" :{
         "idx" : "6",
