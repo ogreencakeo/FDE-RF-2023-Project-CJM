@@ -10,7 +10,6 @@ export function Restaurant1(){
             {/* <h2>레스토랑1페이지</h2> */}
             <SeasonalInfo  menu='restaurant1'/>
             {/* <RecommSeasonal/> */}
-            <Caution caution='restaurantCaution' />
         </>
     )
 }

@@ -7,7 +7,6 @@ export function Restaurant8(){
         <>
             <SeasonalInfo  menu='restaurant8'/>
             {/* <RecommSeasonal/> */}
-            <Caution caution='restaurantCaution' />
         </>
     )
 }
