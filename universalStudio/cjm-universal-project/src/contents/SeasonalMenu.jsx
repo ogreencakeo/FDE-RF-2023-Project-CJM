@@ -39,7 +39,7 @@ export function SeasonalMenu() {
             {/* <SeasonalMuContent /> */}
             
             <Routes>
-                <Route index element={<RestaurantMain />} />
+                <Route element='' />
                 <Route path="restaurant1" element={<Restaurant1 />} />
                 <Route path="restaurant2" element={<Restaurant2 />} />
                 <Route path="restaurant3" element={<Restaurant3 />} />

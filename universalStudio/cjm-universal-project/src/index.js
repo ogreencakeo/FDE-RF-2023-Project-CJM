@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
@@ -15,6 +15,11 @@ import './css/common.css';
 import { Layout } from './layout/Layout';
 
 export default function App() {
+
+  useEffect(()=>{
+    scrollTo(0,0);
+  })
+  
   return(
     <BrowserRouter>
       <Routes>

@@ -16,7 +16,7 @@ export function TopArea() {
                         {
                             navMenu.map((v, i) =>
                                 <li key={i}>
-                                    <Link to={v.link}>{v.txt}</Link>
+                                    <a href='#'>{v.txt}</a>
                                     {
                                         v.sub && (
                                             <div className="smenu">
