@@ -1,0 +1,16 @@
+section{
+    display: flex;
+    width: 700px;
+    flex-wrap: wrap;
+}
+
+section li{
+    width: calc((100% - 20px) /3);
+}
+
+.swiper-sec-img{
+    width: 100%;
+}
+.swiper-sec-img>img{
+    width: 100%;
+}

@@ -54,19 +54,17 @@ export function SwiperSec(props) {
             >
                     <SwiperSlide>
                         <section>
-                            <div>
-                                {
-                                    selData.img.map((v, i) =>
+                            {
+                                selData.map((v, i) =>
                                     <li key={i}>
-                                        <img src={v} alt={selData.title} />
+                                        <div className="swiper-sec-img">
+                                            <img src={v.img} alt={v.title} />
+                                        </div>
+                                        <h2>{v.category}</h2>
+                                        <h2>{v.title}</h2>
                                     </li>
-                                    )
-                                }
-                            </div>
-                            <div>
-                                <h4>{selData.category}</h4>
-                                <h3>{selData.title}</h3>
-                            </div>
+                                )
+                            }
                         </section>
                     </SwiperSlide>
 
