@@ -5,6 +5,7 @@ import '../../css/seasonal_restaurant.css';
 
 export function SeasonalInfo(props) {
     const selData = seasonalMenu[props.menu];
+    const outline_color = props.color;
     console.log(selData);
     return (
         <div className="seasonal_restaurant_wrap" key={selData.idx}>
@@ -69,7 +70,8 @@ export function SeasonalInfo(props) {
                         <p>{selData.sub_title}</p>
                     </div>
                     {/* <!-- 픽업메뉴 정보 --> */}
-                    <div className="restaurant_pickup_info">
+                    <div className="restaurant_pickup_info"
+                    >
                         <h2>픽업 메뉴 정보</h2>
                         {/* <!-- 픽업메뉴정보래핑 --> */}
                         <div className="menu_pickup_info_wrap">
@@ -77,12 +79,12 @@ export function SeasonalInfo(props) {
                             {/* <!-- 픽업메뉴 --> */}
                             {
                                 selData.pickup_menu.map((v, i) =>
-                                    <div className="menu_pickup_info" key={i}>
+                                    <div className="menu_pickup_info" key={i} style={{ outline : `3px solid ${outline_color}`}}>
                                         <div className="menu_pick_img">
                                             <img src={`../images/seasonal/seasonal${selData.idx}/${v.image}`} alt={`픽업메뉴이미지${v.idx}`} />
                                         </div>
                                         <div className="menu_pickup_detail">
-                                            <h3>{v.menu}</h3>
+                                            <h3 style={{ outline : `3px solid ${outline_color}`}}>{v.menu}</h3>
                                             {v.price != "" && <span className="menu_pickup_price">{v.price}</span>}
                                             <div className="menu_pickup_ingredient">{v.menu_description}</div>
                                         </div>
@@ -102,12 +104,12 @@ export function SeasonalInfo(props) {
                             {
 
                                 selData.recommended_menu.map((v, i) =>
-                                    <div className="menu_pickup_info" key={i}>
+                                    <div className="menu_pickup_info" key={i} style={{ outline : `3px solid ${outline_color}`}}>
                                         <div className="menu_pick_img">
                                             <img src={`../images/seasonal/seasonal${selData.idx}/${v.image}`} alt={`픽업메뉴이미지${v.idx}`} />
                                         </div>
                                         <div className="menu_pickup_detail">
-                                            <h3>{v.menu}</h3>
+                                            <h3 style={{ outline : `3px solid ${outline_color}`}}>{v.menu}</h3>
                                             {v.price != "" && <span className="menu_pickup_price">{v.price}</span>}
                                             <div className="menu_pickup_ingredient">{v.menu_description}</div>
                                         </div>

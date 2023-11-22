@@ -5,7 +5,7 @@ import { Caution } from "../module/Caution";
 export function Restaurant5(){
     return(
         <>
-            <SeasonalInfo  menu='restaurant5'/>
+            <SeasonalInfo  menu='restaurant5' color='#f5733b'/>
             {/* <RecommSeasonal/> */}
         </>
     )

@@ -21,7 +21,7 @@ export const navMenu = [
                 link : 'seasonalMenu/restaurant3'
             },
             {
-                txt : '멜즈 드라이브인',
+                txt : '비버리힐즈 블랑제리',
                 link : 'seasonalMenu/restaurant4'
             },
             {

@@ -211,7 +211,7 @@
     aspect-ratio: 1/1;
     /* margin-right: 32px; */
     margin: 20px;
-    outline: 3px solid #483591;
+    /* outline: 3px solid #483591; */
     border-radius: 25px;
     box-shadow: 10px 2px 3px #ccc;
 }
@@ -225,12 +225,12 @@
     border-top-right-radius: 20px;
 }
 .menu_pick_img>img{
-    outline: 3px solid #483591;
+    /* outline: 3px solid #483591; */
     transition: 0.4s ease-out;
     width: 100%;
     aspect-ratio: 16/12;
     display: block;
-    border-bottom: 3px solid #483591;
+    /* border-bottom: 3px solid #483591; */
 }
 .menu_pick_img:hover img{
     transform: scale(1.07);
@@ -246,7 +246,7 @@
 }
 .menu_pickup_detail>h3{
     font-size: 1.15rem;
-    border-bottom: 3px solid #483591;
+    /* border-bottom: 3px solid #483591; */
     padding: 20px;
     font-family: 'Gugi';
     
