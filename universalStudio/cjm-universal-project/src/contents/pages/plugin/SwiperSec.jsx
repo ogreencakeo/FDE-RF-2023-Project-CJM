@@ -9,7 +9,7 @@ import $ from "jquery";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import '../../../css/swiper.css';
+import '../../../css/swiper_sec.css';
 
 /* 폰트어썸 임포트 */
 import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
