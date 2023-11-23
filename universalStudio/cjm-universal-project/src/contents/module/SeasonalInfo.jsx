@@ -51,7 +51,7 @@ export function SeasonalInfo(props) {
                                         <td>{selData.menu_provided}</td>
                                     </tr>
                                     <tr>
-                                        <td><FontAwesomeIcon icon= {faUserShield} /></td>
+                                        <td><FontAwesomeIcon icon={faUserShield} /></td>
                                         <td>안심·안전한 파크 운영</td>
                                     </tr>
                                 </table>
@@ -67,8 +67,16 @@ export function SeasonalInfo(props) {
                 {/* <!-- 레스토랑 메뉴 소개 --> */}
                 <div className="seasonal_restaurant_product">
                     <div className="product_detail">
+                        <div className="detail_img">
+                            <img className="move_sun" src="../images/seasonal/character/character2.png" alt="" />
+                            {/* <div className="product_detail_img"> */}
+                            <img className="product_detail_img" src="../images/seasonal/character/character1.png" alt="sdf" />
+                        </div>
+                        {/* </div> */}
+
                         <h1>{selData.title}</h1>
                         <p>{selData.sub_title}</p>
+
                     </div>
                     {/* <!-- 픽업메뉴 정보 --> */}
                     <div className="restaurant_pickup_info">
@@ -137,51 +145,8 @@ export function SeasonalInfo(props) {
                             />
                         </div>
                     </div>
-
-                    {/* <div className="restaurant_map_wrap">
-                        <div className="restaurant_map_bx">
-                            <h1>레스토랑의 위치</h1>
-                            <div className="restaurant_map">
-                                <div className="restaurant_map_img">
-                                    <img
-                                        src={`../images/seasonal/restaurant_map/${selData.restaurant_map}`}
-                                        alt={`${selData.location} 지도`}
-                                    />
-                                </div>
-                                <div className="restaurant_map_content">
-                                    <div className="restaurant_map_logo">
-                                        <img src="./images/seasonal/map_logo.png" alt="" />
-                                    </div>
-                                    <div className="restaurant_map_area">
-                                        <span>에어리어</span>
-                                        <span>뉴옥</span>
-                                        <span>파크맵</span>
-                                    </div>
-                                    <div className="restaurant_park_info">
-                                        <span>파크정보</span>
-                                        <span>영업시간, 스케줄</span>
-                                        <span>쇼&어트랙션</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                     <Map shop_info={selData.restaurant_map} shop_location={selData.location} cat='food' />
 
-                    {/* <!-- 푸드&레스토랑의 추천 정보--> */}
-                    <div className="restaurant_recommendations_wrap">
-                        <div className="restaurant_recommendations_bx">
-                            <p>푸드&레스토랑의 추천 정보</p>
-                            {/* <!-- 반복 --> */}
-                            <div className="restaurant_recommendations">
-                                <img src="./images/seasonal/recommendations1.jpg" alt="추천정보" />
-                                <span>저알레르기 메뉴</span>
-                                <span>
-                                    일부 레스토랑에서 특정 알레르기에 대응한 ‘저알레르기 메뉴’를 준비하고 있습니다.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

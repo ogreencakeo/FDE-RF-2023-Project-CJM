@@ -15,7 +15,13 @@ export function UniverReInfo(props) {
     const selData = univerRecomData[props.category];
     return (
         <div className="universal_recommend_info">
-            <div className="universal_re_main_tit" style={{ backgroundColor: props.color }}>{props.category == "food" ? "푸드&레스토랑" : ""}</div><br />
+            <div className="universal_re_main_img">
+                {
+                    props.category == 'food' ? 
+                    <img src={`../../images/seasonal/character/character3.png`} alt="" /> : ""
+                }
+            </div>
+            {/* <div className="universal_re_main_tit" style={{ backgroundColor: props.color }}>{props.category == "food" ? "푸드&레스토랑" : ""}</div><br />
             <div className="universal_re_main_tit2" style={{ backgroundColor: props.color }}>UNIVERSAL STUDIO만의 추천정보</div>
             <div className="universal_recommend_info_bx">
                 <table>
@@ -33,14 +39,11 @@ export function UniverReInfo(props) {
                                 </td>
                             </tr>
                         ))}
-                        {/* <tr>
-                        <td>저알레르기 메뉴</td>
-                        <td></td>
-                    </tr> */}
+                        
                     </tbody>
                 </table>
                 <div className="universal_recomm_img"></div>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -170,6 +170,35 @@
     font-size: 2.5rem;
 }
 
+.detail_img{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product_detail_img{
+    max-width: 100%;
+    margin-bottom: 30px;
+    
+}
+
+.move_sun{
+    width: 10vw;
+    display: block;
+    padding: 0 20px;
+    animation: move_sun_ani 8s linear infinite;
+}
+
+@keyframes move_sun_ani {
+    to{
+        transform: rotate(0);
+    }
+    from{
+        transform: rotate(360deg);
+
+    }
+    
+}
+
 /* 레스토랑 메인 - 컨텐츠 (픽업 메뉴 정보) */
 .restaurant_pickup_info{
     padding: 20px;                                
