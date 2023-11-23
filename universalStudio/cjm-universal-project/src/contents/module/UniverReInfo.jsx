@@ -3,6 +3,8 @@ import "../../css/universal_recomm.css";
 
 // 폰트어썸
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
+// import { faEarthAsia } from "@fortawesome/free-light-svg-icons";
+import { faEarthAsia } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function UniverReInfo(props) {
@@ -17,8 +19,9 @@ export function UniverReInfo(props) {
                         {selData.map((v, i) => (
                             <tr key={i}>
                                 <td>
-                                    <span className="faCircleCheck">
-                                        <FontAwesomeIcon icon={faCircleCheck} />
+                                    <span className="faEarthAsia" style={{color : props.color}}>
+                                        {/* <FontAwesomeIcon icon={faCircleCheck} /> */}
+                                        <FontAwesomeIcon icon={faEarthAsia} />
                                     </span>
                                 </td>
                                 <td>

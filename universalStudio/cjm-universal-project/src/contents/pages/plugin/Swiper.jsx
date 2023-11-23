@@ -26,7 +26,7 @@ export function GoodsSwiper() {
         <div className="goods-top-cont-wrap">
             <Swiper
                 slidesPerView={3}
-                spaceBetween={30}
+                spaceBetween={50}
                 pagination={{
                     clickable: true,
                 }}
