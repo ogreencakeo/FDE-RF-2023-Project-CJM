@@ -50,10 +50,10 @@ export function SwiperSec(props) {
                         slidesPerView: 4,
                     },
                 }}
-                className="mySwiper"
+                className="mySwiper2"
             >
                     <SwiperSlide>
-                        <section>
+                        <section className="swiper_sec">
                             {
                                 selData.map((v, i) =>
                                     <li key={i}>

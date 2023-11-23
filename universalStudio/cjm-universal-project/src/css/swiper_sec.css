@@ -1,3 +1,9 @@
+.mySwiper2{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
 /* section{
     display: flex;
     width: 700px;
@@ -14,3 +20,23 @@ section li{
 .swiper-sec-img>img{
     width: 100%;
 } */
+
+.swiper_sec{
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 800px;
+    margin: 0 auto;
+}
+
+.swiper_sec li{
+    /* flex: 1; */
+    width: calc((100% - 20px) /3);
+}
+
+.swiper-sec-img{
+    width: 100%;
+}
+.swiper-sec-img>img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
