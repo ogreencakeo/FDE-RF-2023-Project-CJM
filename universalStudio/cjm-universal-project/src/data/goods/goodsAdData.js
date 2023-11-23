@@ -30,5 +30,29 @@ export const goodsAdData = {
         "product" : "세서미 스트리트™",
         "cont" : "엘모와 친구들의 즐거운 대화를 듣고 있노라면 자신도 모르게 웃음이 터져 나온다! 설렘 가득한 숍 안에는 세서미 스트리트™ 굿즈가 한가득!",
         "map" : "goods/goods4/map.jpg",
+    },
+    "spiderman" : {
+        "tit" : "세서미 스트리트™ 굿즈를 즐기면서 찾아보자!",
+        "logo" : "goods/logo/spidermanLogo.jpg",
+        "location" : "어메이징 스파이더맨 스토어",
+        "product" : "스파이더맨의 인기 굿즈가 한가득!",
+        "cont" : "사악한 조직과의 격렬한 배틀이 끝났다면 흥분이 가시기 전에 어메이징 스파이더맨 스토어로! 비장의 스파이더맨 굿즈가 당신을 기다립니다!",
+        "map" : "goods/goods5/map.jpg",
+    },
+    "jurassicPark" : {
+        "tit" : "쥬라기 아웃피터즈",
+        "logo" : "goods/logo/jurassicParkLogo.jpg",
+        "location" : "쥬라기 월드",
+        "product" : "방심은 금물! 숍에서도 믿을 수 없는 깜짝 놀랄만한 체험이 기다린다!",
+        "cont" : "육식 공룡의 위협이 이곳에도...!? 두근두근 긴장으로 가득한 쇼핑으로 흥분 절정! 쥬라기 월드와 관련된 굿즈가 다채롭게 갖추어진 숍.",
+        "map" : "goods/goods5/map.jpg",
+    },
+    "helloKitty" : {
+        "tit" : "헬로키티 디자인 스튜디오",
+        "logo" : "goods/logo/sesaemeLogo.jpg",
+        "location" : "헬로키티",
+        "product" : "파크 오리지널의 헬로키티 굿즈라면 이곳!",
+        "cont" : "이곳에서만 만날 수 있는 트렌디한 아이템에 심쿵! 다양한 라인업을 갖춘 헬로키티의 파크 내 플래그십 숍.",
+        "map" : "goods/goods6/map.jpg",
     }
 }

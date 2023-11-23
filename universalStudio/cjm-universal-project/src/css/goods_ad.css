@@ -68,7 +68,7 @@
 
 /* 숍의 위치 */
 .goods_shop_map{
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 30px auto 70px;
 }
 .goods_shop_map>h1{
@@ -85,4 +85,10 @@
     border-radius: 20px;
     border: 2px solid #ccc;
     width: 100%;
+}
+
+.faFaceSmileWink{
+    font-size: 7rem;
+    display: block;
+    text-align: center;
 }

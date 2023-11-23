@@ -3,6 +3,10 @@ import {goodsAdData} from '../../data/goods/goodsAdData';
 import '../../css/goods_ad.css';
 import { Map } from '../module/Map';
 
+// 폰트어썸
+import { faFaceSmileWink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export function GoodsAd(props){
     const selData = goodsAdData[props.ad];
     const color = props.bg_color;
@@ -21,6 +25,7 @@ export function GoodsAd(props){
                                 <div className="goods_sub_cont">
                                     <span className='goods_product'>캐릭터 상품 : {selData.product} </span>
                                     <span className='goods_cont'>{selData.cont}</span>
+                                    <span className='faFaceSmileWink' style={{color : color}}><FontAwesomeIcon icon={faFaceSmileWink} /></span>
                                 </div>
                             </div>
                         </div>

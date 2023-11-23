@@ -3,9 +3,11 @@
     max-width: 1000px;
     margin: 80px auto;
     padding: 20px;
+    /* background-color: aliceblue; */
     
 }
 .universal_recommend_info>h1{
+    text-align: center;
     font-size: 2.5em;
     font-family:'Gugi';
     padding: 30px;
@@ -16,7 +18,7 @@
     padding: 10px;
     margin: 20px;
     font-size: 1.2rem;
-    font-family: 'Nanum Gothic';
+    font-family: 'Jua';
 }
 .universal_recommend_info table td{
     text-align: center;
@@ -25,3 +27,19 @@
     width: 250px;
     border-radius: 20px;
 }
+
+.faCircleCheck{
+    font-size: 2.2rem;
+    margin-right: 15px;
+}
+
+/* .universal_recommend_info_bx{
+    display: flex;
+}
+
+.universal_recomm_img{
+    width: 30%;
+}
+.universal_recomm_img>img{
+    width: 100%;
+} */
