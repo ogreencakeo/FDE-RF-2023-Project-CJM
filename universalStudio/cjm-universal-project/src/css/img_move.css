@@ -26,13 +26,13 @@
 
 .image-move li{
     flex: 1;
-    width: 400px;
+    width: 500px;
 }
 
 .image-move li>img{
     width: 100%;
     /* height: auto;  */
-    aspect-ratio: 1.1/1;
+    aspect-ratio: 1.4/1;
     display: block;
 }
 
