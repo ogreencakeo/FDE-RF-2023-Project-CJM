@@ -1,36 +1,24 @@
-.mySwiper2{
-    width: 100%;
-    padding: 10px;
-    margin: 20px 0;
-    box-sizing: border-box;
-}
-/* section{
-    display: flex;
-    width: 700px;
-    flex-wrap: wrap;
-}
-
-section li{
-    width: calc((100% - 20px) /3);
-}
-
-.swiper-sec-img{
-    width: 100%;
-}
-.swiper-sec-img>img{
-    width: 100%;
-} */
-
-.swiper_sec{
-    display: flex;
-    /* flex-wrap: wrap; */
-    width: 800px;
+.swiper-sec-wrap{
+    width: 1200px;
     margin: 0 auto;
 }
+.Swiper .mySwiper2{
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+.mySwiper2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    aspect-ratio: 1 / 1;
 
-.swiper_sec li{
-    /* flex: 1; */
-    width: calc((100% - 20px) /3);
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .swiper-sec-img{
@@ -38,5 +26,32 @@ section li{
 }
 .swiper-sec-img>img{
     width: 100%;
+    display: block;
+    object-fit: cover;
     aspect-ratio: 1/1;
+}
+
+/* 기존 스와이퍼 디자인 변경 */
+
+.mySwiper2 .swiper-button-prev,
+.mySwiper2 .swiper-button-next {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+}
+
+.mySwiper2 .swiper-button-next {
+    transform: scale(0.8) translateX(15px);
+}
+
+.mySwiper2 .swiper-button-prev {
+    transform: scale(0.8) translateX(-15px);
+}
+
+/* 슬라이드 끝에서 버튼 숨김 */
+.mySwiper2 .swiper-button-next.swiper-button-disabled,
+.mySwiper2 .swiper-button-prev.swiper-button-disabled {
+    display: none;
 }

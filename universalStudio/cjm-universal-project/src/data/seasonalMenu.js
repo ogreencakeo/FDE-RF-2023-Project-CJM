@@ -81,9 +81,6 @@ export const seasonalMenu = {
         "service_type" : "풀 서비스",
         "payment_method" : "신용카드 사용 가능",
         "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 바・주류`,
-        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
-        "englisgh_page" : "",
-        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
         "restaurant_bg" : "restaurant_bg2.jpg",
         "restaurant_map" : "restaurant_map2.jpg",
         "pickup_menu" : [

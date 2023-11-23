@@ -1,9 +1,5 @@
 import React from "react";
 import { SeasonalInfo } from "../module/SeasonalInfo";
-import { RecommSeasonal } from "./RecommSeasonal";
-import { cartData } from "../../data/module_data/cart_data"; 
-
-import {Caution} from '../module/Caution';
 import { SwiperSec } from "../pages/plugin/SwiperSec";
 
 export function Restaurant1(){
