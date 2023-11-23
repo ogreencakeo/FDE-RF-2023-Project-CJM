@@ -1,12 +1,12 @@
 import React from "react";
 import { SeasonalInfo } from "../module/SeasonalInfo";
-import { Caution } from "../module/Caution";
+import { SwiperSec } from "../pages/plugin/SwiperSec";
 
 export function Restaurant3(){
     return(
         <>
             <SeasonalInfo  menu='restaurant3' color='#464a47'/>
-            {/* <RecommSeasonal/> */}
+            <SwiperSec category='restaurant3' />
         </>
     )
 }

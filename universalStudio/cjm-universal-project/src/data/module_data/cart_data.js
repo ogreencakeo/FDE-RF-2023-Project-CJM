@@ -46,6 +46,33 @@ export const cartData = {
             "img" : "../images/seasonal/seasonal2/cart4.jpg"
         },
 
+    ],
+    "restaurant3" : [
+        {
+            "idx" : "1",
+            "category" : "푸드&레스토랑",
+            "title" : "사이도",
+            "img" : "../images/seasonal/seasonal2/cart1.jpg"
+        },
+        {
+            "idx" : "2",
+            "category" : "푸드&레스토랑",
+            "title" : "아즈라 디 카프리",
+            "img" : "../images/seasonal/seasonal2/cart2.jpg"
+        },
+        {
+            "idx" : "3",
+            "category" : "푸드&레스토랑",
+            "title" : "파크 사이드 그릴",
+            "img" : "../images/seasonal/seasonal3/cart3.jpg"
+        },
+        {
+            "idx" : "4",
+            "category" : "푸드&레스토랑",
+            "title" : "피네간즈 바&그릴",
+            "img" : "../images/seasonal/seasonal3/cart4.jpg"
+        },
+
     ]
         
     
