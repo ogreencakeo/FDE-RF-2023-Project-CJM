@@ -15,10 +15,13 @@
 .universal_recommend_info table tr{
     padding: 10px;
     margin: 20px;
+    font-size: 1.2rem;
+    font-family: 'Nanum Gothic';
 }
 .universal_recommend_info table td{
     text-align: center;
 }
 .universal_recommend_info table td>img{
     width: 250px;
+    border-radius: 20px;
 }
