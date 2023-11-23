@@ -20,12 +20,11 @@
 /* 굿즈 개별*/
 .goods_bx{
     width: calc((1300px - 60px) / 3);
-    /* margin-right: 10px;
-    margin-bottom: 25px; */
     border: 1px solid #ccc;
     border-radius: 20px;
     box-shadow: 1px 1px 3px #ccc;
     margin: 15px 15px 15px 0;
+    cursor: pointer;
 }
 /* 굿즈 개별 -이미지박스 */
 .goods_img{
@@ -80,7 +79,7 @@
     display: flex;
     gap: 50px;
     justify-content: center;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     padding: 10px;
 
 }

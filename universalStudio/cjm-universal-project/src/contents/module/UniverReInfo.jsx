@@ -7,23 +7,21 @@ import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 import { faEarthAsia } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+{/* <span className="faEarthAsia" style={{ color: props.color }}> */}
+{/* <FontAwesomeIcon icon={faCircleCheck} /> */ }
+{/* <FontAwesomeIcon icon={faEarthAsia} /> */ }
+
 export function UniverReInfo(props) {
     const selData = univerRecomData[props.category];
     return (
         <div className="universal_recommend_info">
-            <h1>{props.category == "food" ? "푸드&레스토랑의 추천 정보" : ""}</h1>
-            {/* <span><FontAwesomeIcon icon={faListOl} /></span> */}
+            <div className="universal_re_main_tit" style={{ backgroundColor: props.color }}>{props.category == "food" ? "푸드&레스토랑" : ""}</div><br />
+            <div className="universal_re_main_tit2" style={{ backgroundColor: props.color }}>UNIVERSAL STUDIO만의 추천정보</div>
             <div className="universal_recommend_info_bx">
                 <table>
                     <tbody>
                         {selData.map((v, i) => (
                             <tr key={i}>
-                                <td>
-                                    <span className="faEarthAsia" style={{color : props.color}}>
-                                        {/* <FontAwesomeIcon icon={faCircleCheck} /> */}
-                                        <FontAwesomeIcon icon={faEarthAsia} />
-                                    </span>
-                                </td>
                                 <td>
                                     <img src={v.img} alt={v.txt} />
                                 </td>

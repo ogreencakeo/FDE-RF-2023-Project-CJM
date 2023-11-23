@@ -89,6 +89,16 @@
 
 .faFaceSmileWink{
     font-size: 7rem;
-    display: block;
+    display: block; 
     text-align: center;
+    animation: faFaceSmileWink-ani 5s linear infinite;
+}
+
+@keyframes faFaceSmileWink-ani{
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
 }
