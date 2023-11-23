@@ -14,6 +14,7 @@ import { Restaurant8 } from "./SeasonalCont/Restaurant8";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { Caution } from "./module/Caution";
 import { FoodInfo } from "./SeasonalCont/FoodInfo";
+import { SwiperSec } from "./pages/plugin/SwiperSec";
 
 
 export function SeasonalMenu() {
@@ -44,6 +45,7 @@ export function SeasonalMenu() {
                 <Route path="restaurant7" element={<Restaurant7 />} />
                 <Route path="restaurant8" element={<Restaurant8 />} />
             </Routes>
+            <SwiperSec category='restaurant' />
             <FoodInfo />
             <Caution caution='restaurantCaution' />
             <ImgMoveSlide imgMove="seasonal" />

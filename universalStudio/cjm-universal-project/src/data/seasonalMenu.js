@@ -401,9 +401,6 @@ export const seasonalMenu = {
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
         "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 디저트, 면류, 파스타, 샌드위치, 햄버거, 이유식 있음`,
-        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
-        "englisgh_page" : "",
-        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
         "restaurant_bg" : "restaurant_bg6.jpg",
         "restaurant_map" : "restaurant_map6.jpg",
         "pickup_menu" : [
@@ -464,9 +461,6 @@ export const seasonalMenu = {
         "service_type" : "퀵서비스",
         "payment_method" : "신용카드 사용 가능",
         "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 식사류, 미니언 푸드 있음`,
-        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
-        "englisgh_page" : "",
-        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
         "restaurant_bg" : "restaurant_bg7.jpg",
         "restaurant_map" : "restaurant_map7.jpg",
         "pickup_menu" : [
@@ -520,9 +514,6 @@ export const seasonalMenu = {
         "service_type" : "풀 서비스",
         "payment_method" : "신용카드 사용 가능",
         "menu_provided" : `저 알레르기 메뉴(일본어 페이지 한정), 어린이 메뉴, 양식, 바・주류, 베지테리언(영어 페이지 한정)`,
-        "japanese_page" : "https://www.usj.co.jp/web/ja/jp/service-guide/barrier-free/food-allergies",
-        "englisgh_page" : "https://www.usj.co.jp/web/en/us/service-guide/barrier-free/dietary-restriction",
-        "children_page" : "https://www.usj.co.jp/web/ko/kr/restaurants/kids-menu",
         "restaurant_bg" : "restaurant_bg8.jpg",
         "restaurant_map" : "restaurant_map8.jpg",
         "pickup_menu" : [
