@@ -3,11 +3,33 @@
     max-width: 100%;
     margin-top: 30px;
 }
+.goods_ad_main_img{
+    max-width: 800px;
+    margin: 250px auto 50px;
+}
+.goods_ch3{
+    max-width: 200px;
+    margin-bottom: 10px;
+    display: block;
+    animation: goods_ch3_ani 2s linear alternate infinite;
+}
+
+@keyframes goods_ch3_ani {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-30px);
+    }
+}
+.goods_ch4{
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
 .goods_ad_bx{
     max-width: 100%;
-    background-color: whitesmoke;
-    /* border-bottom: 5px solid gainsboro;
-    border-top: 5px solid gainsboro; */
 }
 
 .goods_ad{
