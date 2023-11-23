@@ -185,25 +185,18 @@
 
 .menu_pickup_info_wrap{
     max-width: 1200px;
-    /* height: 268px; */
-    /* outline: 1px solid red; */
     display: flex;
     flex: 1;
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
-    
 }
 
 /* 픽업메뉴&&추천메뉴 */
 .menu_pickup_info{
-    /* max-width: 220px; */
     width: calc((100% - 120px) / 3);
-    /* height: 268px; */
     aspect-ratio: 1/1;
-    /* margin-right: 32px; */
     margin: 20px;
-    /* outline: 3px solid #483591; */
     border-radius: 25px;
     box-shadow: 10px 2px 3px #ccc;
 }

@@ -14,7 +14,6 @@ main.cont {
     height: 58px;
     z-index: 9999;
     background-color: #fff;
-    font-family: "Ubuntu Condensed", sans-serif;
 }
 .gnb {
     max-width: 1320px;

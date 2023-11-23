@@ -29,6 +29,28 @@
     display: block;
     object-fit: cover;
     aspect-ratio: 1/1;
+    padding: 5px;
+    margin: 10px;
+}
+
+.swiper-sec-main-tit{
+    font-size: 2.5em;
+    font-family: 'Black Han Sans';
+}
+
+.swipe_sec_cat{
+    font-family: 'Gugi';
+    font-size: 1.2em;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    width: 65%;
+    margin: 10px auto;
+}
+.swipe_sec_tit{
+    font-family: 'Nanum Gothic';
+    font-size: 2em;
+
 }
 
 /* 기존 스와이퍼 디자인 변경 */
@@ -55,3 +77,4 @@
 .mySwiper2 .swiper-button-prev.swiper-button-disabled {
     display: none;
 }
+

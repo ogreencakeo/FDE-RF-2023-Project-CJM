@@ -16,6 +16,7 @@ export function SwiperSec(props) {
 
     return (
         <div className="swiper-sec-wrap">
+            <h1 className="swiper-sec-main-tit">푸드&레스토랑 카트보기</h1>
             <Swiper
                 slidesPerView={3}
                 spaceBetween={20}
@@ -37,8 +38,8 @@ export function SwiperSec(props) {
                             <div className="swiper-sec-img">
                                 <img src={v.img} alt={v.title} />
                             </div>
-                            <h2>{v.category}</h2>
-                            <h2>{v.title}</h2>
+                            <h2 className="swipe_sec_cat">{v.category}</h2>
+                            <h2 className="swipe_sec_tit">{v.title}</h2>
                         </li>
                     </SwiperSlide>
                 ))}

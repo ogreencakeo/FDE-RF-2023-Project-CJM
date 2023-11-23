@@ -19,6 +19,33 @@ export const cartData = {
             "img" : "../images/seasonal/seasonal1/cart3.jpg"
         },
 
+    ],
+    "restaurant2" : [
+        {
+            "idx" : "1",
+            "category" : "푸드&레스토랑",
+            "title" : "사이도",
+            "img" : "../images/seasonal/seasonal2/cart1.jpg"
+        },
+        {
+            "idx" : "2",
+            "category" : "푸드&레스토랑",
+            "title" : "아즈라 디 카프리",
+            "img" : "../images/seasonal/seasonal2/cart2.jpg"
+        },
+        {
+            "idx" : "3",
+            "category" : "푸드&레스토랑",
+            "title" : "루이즈 N.Y. 피자 팔러",
+            "img" : "../images/seasonal/seasonal2/cart3.jpg"
+        },
+        {
+            "idx" : "4",
+            "category" : "푸드&레스토랑",
+            "title" : "멜즈 드라이브인",
+            "img" : "../images/seasonal/seasonal2/cart4.jpg"
+        },
+
     ]
         
     
