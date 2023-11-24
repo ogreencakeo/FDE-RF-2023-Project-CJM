@@ -47,7 +47,7 @@ export function SeasonalMenu() {
                 <Route path="restaurant8" element={<Restaurant8 />} />
             </Routes>
             <SwiperSec category='restaurant' />
-            {/* <UniverReInfo category="food" /> */}
+            <UniverReInfo category="food" />
             <FoodInfo />
             <Caution caution='restaurantCaution' />
             <ImgMoveSlide imgMove="seasonal" />

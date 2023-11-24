@@ -103,17 +103,7 @@ a{
     text-align: center;
     margin-top: 50px;
 }
-.span_wave{
-    
-}
-/* .header-content::before{
-    content: '';
-    display: block;
-    width: 8vw;
-    height: 8vw;
-    border-radius: 50%;
-    background-color: #b69f8f;
-} */
+
 .header-content>span:first-of-type{
     font-size: 2.5vw;
     top: 25%;
@@ -121,13 +111,7 @@ a{
 }
 .span_wave>span{
     font-size: 5vw; 
-    /* top: 35%; */
     text-align: center;
-    /* top: 0; */
-}
-.span_wave>span{
-    /* position: absolute; */
-    /* display: block; */
     display: inline-block;
     position: relative;
     animation: wave_textup 1.5s infinite;
