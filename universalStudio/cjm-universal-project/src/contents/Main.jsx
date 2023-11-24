@@ -3,7 +3,15 @@ import React, { useEffect } from "react";
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareInstagram, faSquareFacebook, faSquareTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faMapMarkerAlt, faClock, faSquareParking, faCar, faGifts, faSpider } from "@fortawesome/free-solid-svg-icons";
+import {
+    faMapMarkerAlt,
+    faClock,
+    faSquareParking,
+    faCar,
+    faGifts,
+    faSpider,
+    faChessKing,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { pickUpData } from "../data/main/pickup.js";
 
@@ -24,22 +32,28 @@ export function Main() {
         }, 400);
     }, []);
 
-    const rotateAni = () => {
-        $(".pick-up-img").toggleClass("on");
+    const rotateAni = (e) => {
+        const target = e.currentTarget;
+        console.log("$(target) :", target);
+        console.log("$(target).find('.pick-up-img')) :", $(target).children('.pick-up-img'));
+        $(target).children('.pick-up-img').toggleClass("on");
     };
 
     const result = {
-        "emtion1" : <FontAwesomeIcon icon={faGifts} />,
-        "emtion2" : <FontAwesomeIcon icon={faSpider} />
+        emtion1: <FontAwesomeIcon icon={faGifts} />,
+        emtion2: <FontAwesomeIcon icon={faSpider} />,
+        emtion3: <FontAwesomeIcon icon={faChessKing} />,
     };
 
-    console.log('Object.keys(result) :', Object.keys(result));
-    console.log('pickUpData', pickUpData);
-    console.log('pickUpData[0]', pickUpData[0]);
-    console.log('pickUpData[0]["name"] :', pickUpData[0]["name"]);
-    console.log(Object.keys(result) == pickUpData.name);
-    // Object.keys(result).find(pickUpData[i][v.name])
-    console.log('Object.keys(result).find(pickUpData[i][v.name]) :', Object.keys(result).indexOf((pickUpData[0]['name'])))
+    // console.log("Object.keys(result) :", Object.keys(result));
+    // console.log("pickUpData", pickUpData);
+    // console.log("pickUpData[0]", pickUpData[0]);
+    // console.log('pickUpData[0]["name"] :', pickUpData[0]["name"]);
+    // console.log(Object.keys(result) == pickUpData.name);
+    // console.log(
+    //     "Object.keys(result).find(pickUpData[i][v.name]) :",
+    //     Object.keys(result).indexOf(pickUpData[0]["name"])
+    // );
 
     return (
         <>
@@ -150,12 +164,10 @@ export function Main() {
                                     <span>
                                         {/* <FontAwesomeIcon icon={v.emotion} /> */}
                                         {/* {Object.keys(result).find(pickUpData[i][v.name]) && result[v.name]} */}
-                                        {
-                                            Object.keys(result).indexOf((pickUpData[i]['name'])) !=-1 && result[v.name]
-                                        }
                                     </span>
                                 </div>
                                 <div className="pick2">
+                                    {Object.keys(result).indexOf(pickUpData[i]["emotion"]) != -1 && result[v.emotion]}
                                     <p>{v.cont}</p>
                                 </div>
                             </div>
