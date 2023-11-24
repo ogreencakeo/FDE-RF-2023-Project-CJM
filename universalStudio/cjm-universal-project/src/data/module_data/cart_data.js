@@ -87,6 +87,12 @@ export const cartData = {
             "title" : "쥬라기 월드",
             "img" : "../images/goods/logo/jurassicParkLogo.jpg"
         },
+        {
+            "idx" : "7",
+            "category" : "굿즈",
+            "title" : "헬로키티",
+            "img" : "../images/goods/logo/sesaemeLogo.jpg"
+        },
     ]
     
 }
