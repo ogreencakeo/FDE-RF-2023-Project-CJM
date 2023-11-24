@@ -11,7 +11,8 @@ import {
     faGifts,
     faSpider,
     faChessKing,
-    faHatWizard
+    faHatWizard,
+    faMountainSun
 } from "@fortawesome/free-solid-svg-icons";
 
 import { pickUpData } from "../data/main/pickup.js";
@@ -45,7 +46,7 @@ export function Main() {
         emtion2: <FontAwesomeIcon icon={faSpider} />,
         emtion3: <FontAwesomeIcon icon={faChessKing} />,
         emtion4: <FontAwesomeIcon icon={faHatWizard} />,
-        emtion4: <FontAwesomeIcon icon={faHatWizard} />,
+        emtion4: <FontAwesomeIcon icon={faMountainSun} />,
     };
 
     // console.log("Object.keys(result) :", Object.keys(result));
