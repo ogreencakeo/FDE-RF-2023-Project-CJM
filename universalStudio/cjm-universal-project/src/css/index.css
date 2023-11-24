@@ -8,6 +8,49 @@ body{
 body *{
     /* outline: 1px solid red; */
 }
+
+/* 로딩 페이지 */
+.loading-page{
+    /* align-items: center;
+    justify-content: center; */
+    height: 100vh;
+    /* font-size: 2.5rem;
+    font-weight: bold; */
+    opacity: 0;
+}
+.loading-page>div{
+    
+}
+
+.load-text{
+    display: flex;
+    font-size: 2.5rem;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.visible{
+    opacity: 1;
+}
+
+.hidden{
+    display: none;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* 글자 나타나는 효과 설정 */
+.loading-page span {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
 /* 헤더 */
 .header{
     width: 100%;
