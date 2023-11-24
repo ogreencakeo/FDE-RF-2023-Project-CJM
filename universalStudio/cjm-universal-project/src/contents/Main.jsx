@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareInstagram, faSquareFacebook, faSquareTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faMapMarkerAlt, faClock, faSquareParking, faCar, faGifts } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt, faClock, faSquareParking, faCar, faGifts, faSpider } from "@fortawesome/free-solid-svg-icons";
 
 import { pickUpData } from "../data/main/pickup.js";
 
@@ -27,6 +27,17 @@ export function Main() {
     const rotateAni = () => {
         $(".pick-up-img").toggleClass("on");
     };
+
+    const result = {
+        "emtion1" : <FontAwesomeIcon icon={faGifts} />,
+        // 2 : <FontAwesomeIcon icon={faSpider} />,
+    };
+
+    console.log(Object.keys(result));
+    console.log('pickUpData', pickUpData);
+    console.log('pickUpData[0]', pickUpData[0]);
+    console.log('pickUpData[0]["name"] :', pickUpData[0]["name"]);
+    console.log(Object.keys(result) == pickUpData.name)
 
     return (
         <>
@@ -128,23 +139,23 @@ export function Main() {
             {/* Pick-up Section */}
             <div className="pick-up">
                 <div className="pick-up-wrap">
-                    <div className="pick-up-img-box" onClick={rotateAni}>
-                        {pickUpData.map((v, i) => (
-                            <div className="pick-up-img" key={i}>
+                    {pickUpData.map((v, i) => (
+                        <div className="pick-up-img-box" onClick={rotateAni} key={i}>
+                            <div className="pick-up-img">
                                 <div className="pick1">
                                     <img src={`./images/main/pickup/${v.img}`} alt={`${v.idx}번째 이미지`} />
                                     <h2>{v.title}</h2>
                                     <span>
-
-                                        <FontAwesomeIcon icon={v.emotion} />
+                                        {/* <FontAwesomeIcon icon={v.emotion} /> */}
+                                        {Object.keys(result) == pickUpData[i][v.name] && result[v.name]}
                                     </span>
                                 </div>
                                 <div className="pick2">
                                     <p>{v.cont}</p>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
