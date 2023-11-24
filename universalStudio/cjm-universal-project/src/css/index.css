@@ -327,16 +327,17 @@ a{
 }
 /* 180회전 박스 */
 .pick-up-img-box{
-    width: 390px;
-    height: 265px;
+    width: 350px;
+    height: 300px;
     position: relative;
     perspective: 1500px;
     margin: 1.5%;
+    background-color: #fff;
+    border: 1px solid #ccc;
 }
 .pick-up-img{
     position: relative;
     width: 100%;
-    height: 100%;
     transform-style: preserve-3d;
     transition: transform .8s;
 }
@@ -352,26 +353,18 @@ a{
 }
 
 .pick2{
-    transform: rotateY(180deg);
-    /* filter: blur(2px);-span-wrap */
-    /* background-image: url(.././images/blue-pattern.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
-    /* border: 5px solid #193175; */
-    /* background-color: #2b4584; */
-
+    transform: rotateY(180deg);    
 }
-.pick-up-img-box:hover .pick-up-img{
-    transform: rotateY(180deg);
-}
-
-.pick2>img{
-    width: 100%;
-    height: 100%;
+.pick1>img, .pick2>img{
     display: block;
+    width: 100%;
+    aspect-ratio: 16/12;
     border-radius: 20px;
 }
+.pick-up-img.on{
+    transform: rotateY(180deg);
+}
+
 
 /* ////////////////////////////////////// */
 .page{
