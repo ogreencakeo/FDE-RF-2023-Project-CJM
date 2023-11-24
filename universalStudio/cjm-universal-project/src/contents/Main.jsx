@@ -30,14 +30,16 @@ export function Main() {
 
     const result = {
         "emtion1" : <FontAwesomeIcon icon={faGifts} />,
-        // 2 : <FontAwesomeIcon icon={faSpider} />,
+        "emtion2" : <FontAwesomeIcon icon={faSpider} />
     };
 
-    console.log(Object.keys(result));
+    console.log('Object.keys(result) :', Object.keys(result));
     console.log('pickUpData', pickUpData);
     console.log('pickUpData[0]', pickUpData[0]);
     console.log('pickUpData[0]["name"] :', pickUpData[0]["name"]);
-    console.log(Object.keys(result) == pickUpData.name)
+    console.log(Object.keys(result) == pickUpData.name);
+    // Object.keys(result).find(pickUpData[i][v.name])
+    console.log('Object.keys(result).find(pickUpData[i][v.name]) :', Object.keys(result).indexOf((pickUpData[0]['name'])))
 
     return (
         <>
@@ -147,7 +149,10 @@ export function Main() {
                                     <h2>{v.title}</h2>
                                     <span>
                                         {/* <FontAwesomeIcon icon={v.emotion} /> */}
-                                        {Object.keys(result) == pickUpData[i][v.name] && result[v.name]}
+                                        {/* {Object.keys(result).find(pickUpData[i][v.name]) && result[v.name]} */}
+                                        {
+                                            Object.keys(result).indexOf((pickUpData[i]['name'])) !=-1 && result[v.name]
+                                        }
                                     </span>
                                 </div>
                                 <div className="pick2">
