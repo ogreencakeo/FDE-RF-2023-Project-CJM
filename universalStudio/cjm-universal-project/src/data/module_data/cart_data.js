@@ -50,6 +50,9 @@ export const cartData = {
         },
 
     ],
+    "goods" : {
+        
+    }
 
     
 }

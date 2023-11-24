@@ -1,11 +1,14 @@
+// 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+// 제이쿼리
 import $ from "jquery";
 
 export function GoodsItem(props) {
     console.log("props.cat :", props.cat);
     const categoryGoods = props.cat[props.category] || [];
 
+    // 이미지 클릭시 모달창
     const showGoodsImg = (img, usage) => {
         const top_area = $('.top-area');
         const modelwrap = $(".img-model-wrap");

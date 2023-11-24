@@ -24,6 +24,7 @@ import { Caution } from "./module/Caution";
 import { VidSection } from "./module/VidSection";
 import { GoodsMain } from "./GoodsCont/GoodsMain";
 import { HelloKitty } from "./GoodsCont/HelloKitty.jsx";
+import { SwiperSec } from "./pages/plugin/SwiperSec";
 // import { Banner } from './module/Banner';
 
 export function Goods() {
@@ -57,7 +58,8 @@ export function Goods() {
                     <Route path="jurassicPark" element={<JurassicPark />} />
                     <Route path="helloKitty" element={<HelloKitty />} />
                 </Routes>
-
+                <SwiperSec category='goods' />
+                <Caution caution="goodsCaution" />
                 <ImgMoveSlide imgMove="goods" />
             </div>
         </>
