@@ -79,98 +79,54 @@ export function Main() {
                                     GO TO SITE
                                 </a>
                             </div>
-                            {/* Social Media */}
-                            {/* <div className="universal_sns">
-                                <div className="universal_instagram">
-                                    <Link
-                                        to="https://www.instagram.com/universal_studios_japan/?ref=badge"
-                                        target="_blank"
-                                        title="인스타그램 바로가기"
-                                    >
-                                        <FontAwesomeIcon
-                                            className="fa-square-instagra fa-brands"
-                                            icon={faSquareInstagram}
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="universal_facebook">
-                                    <Link
-                                        to="https://www.facebook.com/UniversalStudiosJapan"
-                                        target="_blank"
-                                        title="인페이스북 바로가기"
-                                    >
-                                        <FontAwesomeIcon
-                                            className="fa-brands fa-square-facebook"
-                                            icon={faSquareFacebook}
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="universal_twitter">
-                                    <Link to="https://twitter.com/USJ_Official" target="_blank" title="트위터 바로가기">
-                                        <FontAwesomeIcon
-                                            className="fa-brands fa-square-twitter"
-                                            icon={faSquareTwitter}
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="universal_youtube">
-                                    <Link
-                                        to="https://www.youtube.com/user/usjTV"
-                                        target="_blank"
-                                        title="유튜브 바로가기"
-                                    >
-                                        <FontAwesomeIcon className="fa-brands fa-youtube" icon={faYoutube} />
-                                    </Link>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 </div>
-                <div className="universal_sns">
-                                <div className="universal_instagram">
-                                    <Link
-                                        to="https://www.instagram.com/universal_studios_japan/?ref=badge"
-                                        target="_blank"
-                                        title="인스타그램 바로가기"
-                                    >
-                                        <FontAwesomeIcon
-                                            className="fa-square-instagra fa-brands"
-                                            icon={faSquareInstagram}
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="universal_facebook">
-                                    <Link
-                                        to="https://www.facebook.com/UniversalStudiosJapan"
-                                        target="_blank"
-                                        title="인페이스북 바로가기"
-                                    >
-                                        <FontAwesomeIcon
-                                            className="fa-brands fa-square-facebook"
-                                            icon={faSquareFacebook}
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="universal_twitter">
-                                    <Link to="https://twitter.com/USJ_Official" target="_blank" title="트위터 바로가기">
-                                        <FontAwesomeIcon
-                                            className="fa-brands fa-square-twitter"
-                                            icon={faSquareTwitter}
-                                        />
-                                    </Link>
-                                </div>
-                                <div className="universal_youtube">
-                                    <Link
-                                        to="https://www.youtube.com/user/usjTV"
-                                        target="_blank"
-                                        title="유튜브 바로가기"
-                                    >
-                                        <FontAwesomeIcon className="fa-brands fa-youtube" icon={faYoutube} />
-                                    </Link>
-                                </div>
-                            </div>
                 {/* Main Section 1 */}
                 <div className="main1">
+                    <div className="universal_sns">
+                        <div className="universal_instagram">
+                            <Link
+                                to="https://www.instagram.com/universal_studios_japan/?ref=badge"
+                                target="_blank"
+                                title="인스타그램 바로가기"
+                            >
+                                <FontAwesomeIcon
+                                    className="fa-square-instagra fa-brands"
+                                    icon={faSquareInstagram}
+                                />
+                            </Link>
+                        </div>
+                        <div className="universal_facebook">
+                            <Link
+                                to="https://www.facebook.com/UniversalStudiosJapan"
+                                target="_blank"
+                                title="인페이스북 바로가기"
+                            >
+                                <FontAwesomeIcon
+                                    className="fa-brands fa-square-facebook"
+                                    icon={faSquareFacebook}
+                                />
+                            </Link>
+                        </div>
+                        <div className="universal_twitter">
+                            <Link to="https://twitter.com/USJ_Official" target="_blank" title="트위터 바로가기">
+                                <FontAwesomeIcon
+                                    className="fa-brands fa-square-twitter"
+                                    icon={faSquareTwitter}
+                                />
+                            </Link>
+                        </div>
+                        <div className="universal_youtube">
+                            <Link
+                                to="https://www.youtube.com/user/usjTV"
+                                target="_blank"
+                                title="유튜브 바로가기"
+                            >
+                                <FontAwesomeIcon className="fa-brands fa-youtube" icon={faYoutube} />
+                            </Link>
+                        </div>
+                    </div>
                     <div className="utility-panel">
                         <a href="#">
                             <div className="panel-clock">
@@ -197,37 +153,34 @@ export function Main() {
                             </div>
                         </a>
                     </div>
-                </div>
-
-
-                {/* Pick-up Section */}
-                <div className="pick-up">
-                    <div className="pick-up-wrap">
-                        {pickUpData.map((v, i) => (
-                            <div
-                                className={`pick-up-img-box ${boxRotations[i] ? 'on' : ''}`}
-                                onClick={() => rotateAni(i)}
-                                key={i}
-                            >
-                                <div className="pick-up-img">
-                                    <div className="pick1">
-                                        <img src={`./images/main/pickup/${v.img}`} alt={`${v.idx}번째 이미지`} />
-                                        <h2>{v.title}</h2>
-                                    </div>
-                                    <div className="pick2">
-                                        {v.emotion === 'gifts' && <FontAwesomeIcon icon={faGifts} />}
-                                        {v.emotion === 'chessKing' && <FontAwesomeIcon icon={faSpider} />}
-                                        {v.emotion === 'spider' && <FontAwesomeIcon icon={faChessKing} />}
-                                        {v.emotion === 'hatWizard' && <FontAwesomeIcon icon={faHatWizard} />}
-                                        <p>{v.cont}</p>
+                    {/* Pick-up Section */}
+                    <div className="pick-up">
+                        <div className="pick-up-wrap">
+                            {pickUpData.map((v, i) => (
+                                <div
+                                    className={`pick-up-img-box ${boxRotations[i] ? 'on' : ''}`}
+                                    onClick={() => rotateAni(i)}
+                                    key={i}
+                                >
+                                    <div className="pick-up-img">
+                                        <div className="pick1">
+                                            <img src={`./images/main/pickup/${v.img}`} alt={`${v.idx}번째 이미지`} />
+                                            <h2>{v.title}</h2>
+                                        </div>
+                                        <div className="pick2">
+                                            {v.emotion === 'gifts' && <FontAwesomeIcon icon={faGifts} />}
+                                            {v.emotion === 'chessKing' && <FontAwesomeIcon icon={faSpider} />}
+                                            {v.emotion === 'spider' && <FontAwesomeIcon icon={faChessKing} />}
+                                            {v.emotion === 'hatWizard' && <FontAwesomeIcon icon={faHatWizard} />}
+                                            <p>{v.cont}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-
             <div className="page1">
                 <div className="load-text">
                     <span>
@@ -240,9 +193,13 @@ export function Main() {
                 </div>
 
                 <div className="pick-up">
+                    <div className="join-img-bx">
+                        <img src="../images/main/join/join1.jpg" alt="" />
+                    </div>
+                    <div className="join-cont-bx">
 
+                    </div>
                 </div>
-
             </div>
             <div className="page"></div>
             <div className="page"></div>
