@@ -21,21 +21,17 @@ body * {
     opacity: 0;
 }
 
-.loading-page>div {}
-
 .load-text {
     display: flex;
     font-size: 2.5rem;
     font-weight: bold;
     justify-content: center;
+    opacity: 0; /* 초기에는 투명하게 설정 */
+    animation: fadeIn 2s alternate infinite; /* 애니메이션 적용 */
 }
 
 .visible {
-    opacity: 1;
-}
-
-.hidden {
-    display: none;
+    display: flex; /* display 속성 변경 */
 }
 
 @keyframes fadeIn {
@@ -57,6 +53,7 @@ body * {
 .header {
     width: 100%;
     background-color: #fff;
+    height: calc(100vh - 58px );
 }
 
 .page-header {
@@ -85,7 +82,7 @@ a {
 .main-logo img {
     width: 100%;
     height: 100%;
-    animation: logo-ani .8s linear infinite alternate;
+    animation: logo-ani .8s linear infinite;
 }
 
 @keyframes logo-ani {
@@ -103,7 +100,7 @@ a {
 .header-img-wrap {
     width: 100%;
     position: relative;
-    height: 90vh;
+    height: calc(100vh - 58px);
     /* right: 0; */
     /* top: 50%; */
     /* transform: translateY(-50%); */
@@ -111,7 +108,7 @@ a {
 }
 
 .header-main-img-wrap {
-    height: 90vh;
+    height: calc(100vh - 58px);
     transform: translate(0%, -50%);
     opacity: 0;
     transition: .4s ease-out;
@@ -132,7 +129,7 @@ a {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 90vh;
+    height: calc(100vh - 58px);
     margin: 0 auto;
 }
 
