@@ -36,8 +36,12 @@ export function Main() {
     const [isVisible, setIsVisible] = useState(true);
     const [isMainVisible, setIsMainVisible] = useState(false);
 
+    // clickAniFn(setClickAniFn);
+
     // UNIVERSAL STUDIO 글자 로딩 페이지
+    
     useEffect(() => {
+        // 페이지가 처음 마운트될 때만 실행
         const interval = setInterval(() => {
             if (currentIdx < load_text.length) {
                 setCurrentIdx((prevIdx) => prevIdx + 1);
@@ -51,8 +55,7 @@ export function Main() {
                 }, 200);
             }
         }, 200);
-    })
-
+    }, []); // 두 번째 인자로 빈 배열을 전달하여 처음 마운트될 때만 실행
     useEffect(() => {
         const mainImgStage = document.querySelector(".header-main-img-wrap");
         setTimeout(() => {
@@ -60,20 +63,33 @@ export function Main() {
         }, 1500);
     }, []);
 
-    const rotateAni = (e) => {
-        const target = e.currentTarget;
-        console.log("$(target) :", target);
-        console.log("$(target).find('.pick-up-img')) :", $(target).children('.pick-up-img'));
-        $(target).children('.pick-up-img').toggleClass("on");
+    // const rotateAni = (e) => {
+    //     const target = e.currentTarget;
+    //     console.log("$(target) :", target);
+    //     console.log("$(target).find('.pick-up-img')) :", $(target).children('.pick-up-img'));
+    //     $(target).children('.pick-up-img').toggleClass("on");
+    // };
+
+    // 사진 클릭 회전
+    // const [clickAniFn, setClickAniFn] = useState(true);
+    // 박스별 회전 상태를 저장하는 배열
+    const [boxRotations, setBoxRotations] = useState(Array(pickUpData.length).fill(false));
+    // const rotateAni = () => setClickAniFn((prev) => !prev);
+    const rotateAni = (index) => {
+        setBoxRotations((prevRotations) => {
+            const newRotations = [...prevRotations];
+            newRotations[index] = !newRotations[index];
+            return newRotations;
+        });
     };
 
-    const result = {
-        emtion1: <FontAwesomeIcon icon={faGifts} />,
-        emtion2: <FontAwesomeIcon icon={faSpider} />,
-        emtion3: <FontAwesomeIcon icon={faChessKing} />,
-        emtion4: <FontAwesomeIcon icon={faHatWizard} />,
-        emtion4: <FontAwesomeIcon icon={faMountainSun} />,
-    };
+    // const result = {
+    //     emtion1: <FontAwesomeIcon icon={faGifts} />,
+    //     emtion2: <FontAwesomeIcon icon={faSpider} />,
+    //     emtion3: <FontAwesomeIcon icon={faChessKing} />,
+    //     emtion4: <FontAwesomeIcon icon={faHatWizard} />,
+    //     emtion4: <FontAwesomeIcon icon={faMountainSun} />,
+    // };
 
     // console.log("Object.keys(result) :", Object.keys(result));
     // console.log("pickUpData", pickUpData);
@@ -201,18 +217,21 @@ export function Main() {
                 <div className="pick-up">
                     <div className="pick-up-wrap">
                         {pickUpData.map((v, i) => (
-                            <div className="pick-up-img-box" onClick={rotateAni} key={i}>
+                            <div
+                                className={`pick-up-img-box ${boxRotations[i] ? 'on' : ''}`}
+                                onClick={() => rotateAni(i)}
+                                key={i}
+                            >
                                 <div className="pick-up-img">
                                     <div className="pick1">
                                         <img src={`./images/main/pickup/${v.img}`} alt={`${v.idx}번째 이미지`} />
                                         <h2>{v.title}</h2>
-                                        <span>
-                                            {/* <FontAwesomeIcon icon={v.emotion} /> */}
-                                            {/* {Object.keys(result).find(pickUpData[i][v.name]) && result[v.name]} */}
-                                        </span>
                                     </div>
                                     <div className="pick2">
-                                        {Object.keys(result).indexOf(pickUpData[i]["emotion"]) != -1 && result[v.emotion]}
+                                        {v.emotion === 'gifts' && <FontAwesomeIcon icon={faGifts} />}
+                                        {v.emotion === 'chessKing' && <FontAwesomeIcon icon={faSpider} />}
+                                        {v.emotion === 'spider' && <FontAwesomeIcon icon={faChessKing} />}
+                                        {v.emotion === 'hatWizard' && <FontAwesomeIcon icon={faHatWizard} />}
                                         <p>{v.cont}</p>
                                     </div>
                                 </div>
