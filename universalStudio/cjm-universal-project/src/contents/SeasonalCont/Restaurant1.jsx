@@ -6,7 +6,7 @@ export function Restaurant1(){
     return(
         <>
             <SeasonalInfo  menu='restaurant1' color='#483591'/>
-            <UniverReInfo category="food" color='#483591' />
+            {/* <UniverReInfo category="food" color='#483591' /> */}
         </>
     )
 }

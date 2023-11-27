@@ -37,7 +37,7 @@ export function SwiperSec(props) {
             >
                 {selData.map((v, i) => (
                     <SwiperSlide className="swiper_sec" key={i}>
-                        <Link to={`/seasonalMenu/restaurant${i + 1}`}>
+                        <Link to={props.category=='restaurant'? `/seasonalMenu/restaurant${i + 1}` : `/goods/${v.link}` }>
                             <li key={i}>
                                 <div className="swiper-sec-img">
                                     <img src={v.img} alt={v.title} />

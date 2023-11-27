@@ -55,42 +55,49 @@ export const cartData = {
             "idx" : "1",
             "category" : "굿즈",
             "title" : "슈퍼 닌텐도 월드™",
+            "link" : "supermario",
             "img" : "../images/goods/logo/supermarioLogo.jpg"
         },
         {
             "idx" : "2",
             "category" : "굿즈",
             "title" : "스누피",
+            "link" : "snoopy",
             "img" : "../images/goods/logo/snoopyLogo.jpg"
         },
         {
             "idx" : "3",
             "category" : "굿즈",
             "title" : "위저딩 월드 오브 해리 포터™",
+            "link" : "harryPotter",
             "img" : "../images/goods/logo/harryPotterLogo.jpg"
         },
         {
             "idx" : "4",
             "category" : "굿즈",
             "title" : "세서미 스트리트™",
+            "link" : "sesame",
             "img" : "../images/goods/logo/sesaemeLogo.jpg"
         },
         {
             "idx" : "5",
             "category" : "굿즈",
             "title" : "스파이더맨",
+            "link" : "spiderman",
             "img" : "../images/goods/logo/spidermanLogo.jpg"
         },
         {
             "idx" : "6",
             "category" : "굿즈",
             "title" : "쥬라기 월드",
+            "link" : "jurassicPark",
             "img" : "../images/goods/logo/jurassicParkLogo.jpg"
         },
         {
             "idx" : "7",
             "category" : "굿즈",
             "title" : "헬로키티",
+            "link" : "helloKitty",
             "img" : "../images/goods/logo/sesaemeLogo.jpg"
         },
     ]
