@@ -38,10 +38,14 @@
 .ticket-wrap-img {
     width: 100%;
 }
-.ticket-wrap-img > img {
+.ticket-wrap-img > div {
+    width: 100%;
+}
+.ticket-wrap-img > div>img {
     width: 100%;
     aspect-ratio: 1/1;
 }
+
 /* <!-- 티켓 제목및 컨텐츠 (오른쪽)--> */
 .ticket-content-wrap-right {
     width: 55%;
