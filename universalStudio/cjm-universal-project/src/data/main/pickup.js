@@ -29,5 +29,29 @@ export const pickUpData = [
         emotion: "mountainSun",
         img: "pickup5.jpg",
     },
+    {
+        title: "사다코의 저주 ~다크 호러 라이드~",
+        cont: "개최기간：2023년 9월 24일 (일)~2024년 1월 8일(월)",
+        emotion: "ghost",
+        img: "pickup6.jpg",
+    },
+    {
+        title: "NO LIMIT! 카운트다운 2024",
+        cont: "개최기간：2023년 12월 31일 (일) 19:00~2024년 1월 1일 (월) 21:00",
+        emotion: "calendar",
+        img: "pickup7.jpg",
+    },
+    {
+        title: "“NO LIMIT!”",
+        cont: "개최기간：2022년 3월 29일(화)~ (일본어 페이지 한정)",
+        emotion: "earth",
+        img: "pickup8.jpg",
+    },
+    {
+        title: "귀멸의 칼날 XR 라이드 ~꿈속을 달리는 무한열차~",
+        cont: "개최기간：2024년 2월 1일(목)~6월 9일(일)",
+        emotion: "bolt",
+        img: "pickup9.jpg",
+    },
     
 ];

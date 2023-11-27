@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,18 +14,27 @@ import {
     faChessKing,
     faHatWizard,
     faMountainSun,
-    faEarthAsia
+    faEarthAsia,
+    faCalendarDays,
+    faGhost,
+    faBoltLightning,
 } from "@fortawesome/free-solid-svg-icons";
 
+// 데이터
 import { pickUpData } from "../data/main/pickup.js";
-import { Link } from "react-router-dom";
+
 import WaveText from "./module/WaveText.jsx";
 import { useState } from "react";
 
+// dragFn
+import { dragFn } from "../Function/dragFn.js";
+// jquery
+import "jquery-ui-dist/jquery-ui";
+
+// import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
 
 export function Main() {
-
-    const text = 'Universal Studio - PICK UP';
+    const text = "Universal Studio - PICK UP";
 
     const [visibleIndex, setVisibleIndex] = useState(0);
 
@@ -40,14 +50,15 @@ export function Main() {
         return () => clearInterval(interval); // 컴포넌트가 언마운트될 때 interval 정리
     }, [visibleIndex, text]);
 
-
     useEffect(() => {
         const mainImgStage = document.querySelector(".header-main-img-wrap");
         setTimeout(() => {
             mainImgStage.classList.add("on");
         }, 1500);
-    }, []);
 
+        // pick up 드래그
+        dragFn();
+    }, []);
 
     // 사진 클릭 회전
     // 박스별 회전 상태를 저장하는 배열
@@ -83,7 +94,7 @@ export function Main() {
                     </div>
                 </div>
                 {/* Main Section 1 */}
-                <div className="main1">
+                <div className="main1 page1 page">
                     <div className="universal_sns">
                         <div className="universal_instagram">
                             <Link
@@ -91,10 +102,7 @@ export function Main() {
                                 target="_blank"
                                 title="인스타그램 바로가기"
                             >
-                                <FontAwesomeIcon
-                                    className="fa-square-instagra fa-brands"
-                                    icon={faSquareInstagram}
-                                />
+                                <FontAwesomeIcon className="fa-square-instagra fa-brands" icon={faSquareInstagram} />
                             </Link>
                         </div>
                         <div className="universal_facebook">
@@ -103,26 +111,16 @@ export function Main() {
                                 target="_blank"
                                 title="인페이스북 바로가기"
                             >
-                                <FontAwesomeIcon
-                                    className="fa-brands fa-square-facebook"
-                                    icon={faSquareFacebook}
-                                />
+                                <FontAwesomeIcon className="fa-brands fa-square-facebook" icon={faSquareFacebook} />
                             </Link>
                         </div>
                         <div className="universal_twitter">
                             <Link to="https://twitter.com/USJ_Official" target="_blank" title="트위터 바로가기">
-                                <FontAwesomeIcon
-                                    className="fa-brands fa-square-twitter"
-                                    icon={faSquareTwitter}
-                                />
+                                <FontAwesomeIcon className="fa-brands fa-square-twitter" icon={faSquareTwitter} />
                             </Link>
                         </div>
                         <div className="universal_youtube">
-                            <Link
-                                to="https://www.youtube.com/user/usjTV"
-                                target="_blank"
-                                title="유튜브 바로가기"
-                            >
+                            <Link to="https://www.youtube.com/user/usjTV" target="_blank" title="유튜브 바로가기">
                                 <FontAwesomeIcon className="fa-brands fa-youtube" icon={faYoutube} />
                             </Link>
                         </div>
@@ -155,10 +153,12 @@ export function Main() {
                     </div>
                     {/* Pick-up Section */}
                     <div className="pick-up">
+                        <h1>PICK UP</h1>
+                        {/* <SwiperDrag /> */}
                         <div className="pick-up-wrap">
                             {pickUpData.map((v, i) => (
                                 <div
-                                    className={`pick-up-img-box ${boxRotations[i] ? 'on' : ''}`}
+                                    className={`pick-up-img-box ${boxRotations[i] ? "on" : ""}`}
                                     onClick={() => rotateAni(i)}
                                     key={i}
                                 >
@@ -168,10 +168,15 @@ export function Main() {
                                             <h2>{v.title}</h2>
                                         </div>
                                         <div className="pick2">
-                                            {v.emotion === 'gifts' && <FontAwesomeIcon icon={faGifts} />}
-                                            {v.emotion === 'chessKing' && <FontAwesomeIcon icon={faSpider} />}
-                                            {v.emotion === 'spider' && <FontAwesomeIcon icon={faChessKing} />}
-                                            {v.emotion === 'hatWizard' && <FontAwesomeIcon icon={faHatWizard} />}
+                                            {v.emotion === "gifts" && <FontAwesomeIcon icon={faGifts} />}
+                                            {v.emotion === "chessKing" && <FontAwesomeIcon icon={faSpider} />}
+                                            {v.emotion === "spider" && <FontAwesomeIcon icon={faChessKing} />}
+                                            {v.emotion === "hatWizard" && <FontAwesomeIcon icon={faHatWizard} />}
+                                            {v.emotion === "mountainSun" && <FontAwesomeIcon icon={faMountainSun} />}
+                                            {v.emotion === "ghost" && <FontAwesomeIcon icon={faGhost} />}
+                                            {v.emotion === "calendar" && <FontAwesomeIcon icon={faCalendarDays} />}
+                                            {v.emotion === "earth" && <FontAwesomeIcon icon={faEarthAsia} />}
+                                            {v.emotion === "bolt" && <FontAwesomeIcon icon={faBoltLightning} />}
                                             <p>{v.cont}</p>
                                         </div>
                                     </div>
@@ -181,24 +186,24 @@ export function Main() {
                     </div>
                 </div>
             </div>
-            <div className="page1">
+            <div className="page2 page">
+                <iframe src="https://www.youtube.com/embed/dI5GfJv1P0Q" allow="autoplay;"></iframe>
+            </div>
+            <div className="page2">
                 <div className="load-text">
                     <span>
-                        {text.split('').map((char, index) => (
-                            <span key={index} style={{ visibility: index < visibleIndex ? 'visible' : 'hidden' }}>
+                        {text.split("").map((char, index) => (
+                            <span key={index} style={{ visibility: index < visibleIndex ? "visible" : "hidden" }}>
                                 {char}
                             </span>
                         ))}
                     </span>
                 </div>
-
-                <div className="pick-up">
-                    <div className="join-img-bx">
-                        <img src="../images/main/join/join1.jpg" alt="" />
-                    </div>
-                    <div className="join-cont-bx">
-
-                    </div>
+                <div className="join-img-bx">
+                    <img src="../images/main/join/join1.jpg" alt="피크를즐기는 방법" />
+                </div>
+                <div className="join-cont-bx">
+                    <p></p>
                 </div>
             </div>
             <div className="page"></div>
