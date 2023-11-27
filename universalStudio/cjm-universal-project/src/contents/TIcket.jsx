@@ -13,17 +13,16 @@ import "../css/ticket.css";
 export function Ticket() {
     const makeTicImgList = () => {
         let temp = [];
-        for (let i = 0; i < 4; i++) {
-            temp[x] = (
-                <div>
-                    <li key={i}>
-                        <img src={`./images/slide-main${i + 1}.jpg`} alt="슬라이드 이미지" />
-                    </li>
-                </div>
+        for (let i = 0; i < 2; i++) {
+            temp[i] = (
+                <li key={i}>
+                    <img src={`./images/slide-main${i + 1}.jpg`} alt="슬라이드 이미지" />
+                </li>
             );
-            return temp;
         }
+        return temp;
     };
+
     return (
         <>
             <div class="ticket-wrap">
@@ -121,6 +120,12 @@ export function Ticket() {
                                 </div>
                             </di>
                         </div>
+                    </div>
+                </div>
+                {/* 구매 옵션 */}
+                <div className="ticket-section-wrap">
+                    <div className="ticket-section-bx1">
+
                     </div>
                 </div>
             </div>
