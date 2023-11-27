@@ -502,11 +502,20 @@ a {
 .page2>div{
     position: absolute;
     font-size: 8em;
+    left: 5%;
+}
+.faEarthAsia{
+    top: 20%;
+}
+.faEarthEurope{
+    top:40%
+}
+.faEarthAfrica{
+    top: 60%;
+
 }
 .faGlobe{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 80%;
     color: blue;
 }
 /* page3 */
