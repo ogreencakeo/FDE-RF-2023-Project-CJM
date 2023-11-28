@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareInstagram, faSquareFacebook, faSquareTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faFaceLaughSquint } from "@fortawesome/free-regular-svg-icons";
 import {
     faMapMarkerAlt,
     faClock,
@@ -21,6 +22,9 @@ import {
     faEarthEurope,
     faEarthAfrica,
     faGlobe,
+    faMobileScreenButton,
+    faCalendarCheck,
+    faIcons,
 } from "@fortawesome/free-solid-svg-icons";
 
 // 데이터
@@ -62,6 +66,15 @@ export function Main() {
         // pick up 드래그
         dragFn();
     }, []);
+
+    setTimeout(() => {
+        const page2Ele = document.querySelector(".page2");
+        const colorChange = ["#000", "#615754", "#333b35"];
+        const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
+        // page2Element.style.transition = 'background 0.5s';
+        page2Ele.style.transition = "background 0.5s ease-in-out";
+        page2Ele.style.backgroundColor = randomColor;
+    }, 1000);
 
     // 사진 클릭 회전
     // 박스별 회전 상태를 저장하는 배열
@@ -190,20 +203,47 @@ export function Main() {
                 </div>
             </div>
             <div className="page2 page">
-                {/* <div className="page2-video">
-                    <iframe src="https://www.youtube.com/embed/04iFJikOnGs" allow="autoplay;"></iframe>
-                </div> */}
-                <div className="page2-main-img">
-                    <img src="../images/page2-main.jpg" alt="" />
-                </div>
-                <div className="content">
-                    <h2>
-                        파크 전체가 열광 페스티벌! <br />
-                        새로워진 스트리트 쇼에 뛰어들자!
-                    </h2>
+                <h1>#ENJOY</h1>
+                <h1>
+                    피크를 즐기는 방법
+                    <FontAwesomeIcon icon={faFaceLaughSquint} />
+                </h1>
+                <div className="page2-cont">
+                    <div className="page2-cont1">
+                        <h1>
+                            <FontAwesomeIcon icon={faCalendarCheck} />
+                        </h1>
+                        <h2>POINT1</h2>
+                        <h3>시간을 효율적으로 활용하자!</h3>
+                        <p>#예약 탑승’ 티켓을 사용</p>
+                    </div>
+                    <div className="page2-cont2">
+                        <h1>
+                            <FontAwesomeIcon icon={faMobileScreenButton} />
+                        </h1>
+                        <h2>POINT2</h2>
+                        <h3>파크 내에서 앱을 능숙하게 사용하자!</h3>
+                        <p>#1:어트랙션 탑승 정리권</p>
+                        <p>#2:에어리어 입장 정리권</p>
+                        <p>#3:예약 탑승</p>
+                    </div>
+                    <div className="page2-cont3">
+                        <h1>
+                            <FontAwesomeIcon icon={faIcons} />
+                        </h1>
+                        <h2>POINT3</h2>
+                        <h3>NO LIMIT! 스트리트 페스티벌</h3>
+                        <p>#파크 전체가 열광 페스티벌!</p>
+                        <button>쇼 스케줄 & 맵</button>
+                    </div>
+                    <div className="map">
+                        <div className="show-map">
+                            <img src="../images/main/join/showmap.jpg" alt="쇼맵" />
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="page3">
+            {/* <div className="page3">
                 <div className="faEarthAsia">
                     <FontAwesomeIcon icon={faEarthAsia} />
                 </div>
@@ -216,7 +256,7 @@ export function Main() {
                 <div className="faGlobe">
                     <FontAwesomeIcon icon={faGlobe} />
                 </div>
-            </div>
+            </div> */}
             <div className="page4">
                 <div className="load-text">
                     <span>
@@ -226,12 +266,6 @@ export function Main() {
                             </span>
                         ))}
                     </span>
-                </div>
-                <div className="join-img-bx">
-                    <img src="../images/main/join/join1.jpg" alt="피크를즐기는 방법" />
-                </div>
-                <div className="join-cont-bx">
-                    <p></p>
                 </div>
             </div>
             <div className="page"></div>

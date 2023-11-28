@@ -519,24 +519,56 @@ a {
     color: blue;
 } */
 /* page3 */
+/* page2 */
 .page2{
-    width: 100%;
-    display: flex;
-    position: relative;
-    height: 550px;
-    margin: 50px;
+
 }
-.page2-main-img{
-    max-width: 50vw;
-    /* margin: 0 auto; */
-    position: absolute;
-    left: 10%;
+.page2{
+    color: #fff;
+    padding: 20px;
+}
+.page2-cont{
+    display: flex;
+}
+.page2-cont>div{
+    padding: 0 25px;
 }
 
-.page2-main-img>img{
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 15px;
+.page2-cont h1{
+    font-size: 8em;
+    margin: 70px 20px 20px;
+    text-align: center;
+}
+.page2-cont h2{
+    font-size: 2.5em;
+    /* padding: 10px; */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page2-cont h2::after {
+    content: ''; /* 가상 요소를 생성하기 위한 content 속성 추가 */
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    height: 5px; /* 밑줄의 높이 조절 */
+    background-color: yellow; /* 밑줄의 색상 지정 */
+    margin-top: 5px; /* 밑줄과 텍스트 사이의 간격 조절 */
+}
+.page2-cont h3{
+    font-size: 1.8em;
+    /* padding: 10px; */
+    text-align: center;
+    margin-bottom: 30px;
+}
+.page2-cont p{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* page2-map */
+.map{
+    display: none;
 }
 
 
