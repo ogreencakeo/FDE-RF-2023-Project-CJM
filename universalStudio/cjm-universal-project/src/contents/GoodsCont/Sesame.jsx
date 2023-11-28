@@ -5,9 +5,9 @@ import { GoodsAd } from "./GoodsAd";
 export function Sesame() {
     return (
         <>
+            <GoodsAd ad='sesame' bg_color = '#e1bae8'/>
             <GoodsSwiper />
             <GoodsItem cat={goods[3]} category="sesame" />
-            <GoodsAd ad='sesame' bg_color = '#e1bae8'/>
         </>
     );
 }

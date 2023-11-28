@@ -5,9 +5,9 @@ import { GoodsAd } from "./GoodsAd";
 export function JurassicPark() {
     return (
         <>
+            <GoodsAd ad='jurassicPark' bg_color = '#91e39f'/>
             <GoodsSwiper />
             <GoodsItem cat={goods[5]} category="jurassicPark" />
-            <GoodsAd ad='jurassicPark' bg_color = '#91e39f'/>
         </>
     );
 }

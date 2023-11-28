@@ -7,9 +7,9 @@ import { GoodsAd } from "./GoodsAd";
 export function HelloKitty(){
     return (
         <>
+            <GoodsAd ad='helloKitty' bg_color = '#fcc7f4'/>
             <GoodsSwiper />
             <GoodsItem cat={goods[6]} category="helloKitty" />
-            <GoodsAd ad='helloKitty' bg_color = '#fcc7f4'/>
         </>
     );
 }

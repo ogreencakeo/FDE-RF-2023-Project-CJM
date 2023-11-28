@@ -575,6 +575,11 @@ a {
     line-height: 1.5;
 }
 
+/* page5 */
+.page5{
+    max-width: 100%;
+}
+
 /* page-footer */
 .page-footer{
     max-width: 100%;
@@ -582,7 +587,7 @@ a {
 
 /* page2-map */
 .map{
-    display: none;
+    /* display: none; */
 }
 
 

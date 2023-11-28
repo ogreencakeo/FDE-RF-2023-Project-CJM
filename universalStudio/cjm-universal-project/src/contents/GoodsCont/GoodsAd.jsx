@@ -37,13 +37,6 @@ export function GoodsAd(props) {
                         </div>
                     </div>
                 </div>
-                <div className="goods_shop_map">
-                    {/* <h1>숍의 위치</h1>
-                    <div className="shop_map">
-                        <img src={`../../images/${selData.map}`} alt={`${selData.location}의 위치`} />
-                    </div> */}
-                    <Map shop_info={selData.map} shop_location={selData.location} cat='goods' />
-                </div>
             </div>
         </>
     )

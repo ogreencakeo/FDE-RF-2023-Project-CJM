@@ -94,7 +94,7 @@ export const goods =[
                 "itemGoods" : "스누피",
                 "usage" : "에코백",
                 "content" :"",
-                "image" : "goods2/goods1.jpg"
+                "image" : "goods2/goods1.jpg",
             },
             {
                 "store" : "유니버설 스튜디오 스토어 등",
