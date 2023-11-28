@@ -37,6 +37,7 @@ import { useState } from "react";
 import { dragFn } from "../Function/dragFn.js";
 // jquery
 import "jquery-ui-dist/jquery-ui";
+import { ImgMoveSlide } from "./module/ImgMoveSlide.jsx";
 
 // import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
 
@@ -268,9 +269,9 @@ export function Main() {
                     </span>
                 </div>
             </div>
-            <div className="page"></div>
-            <div className="page"></div>
-            <div className="page"></div>
+            <div className="page-footer">
+                <ImgMoveSlide imgMove="goods" />
+            </div>
         </>
     );
 }
