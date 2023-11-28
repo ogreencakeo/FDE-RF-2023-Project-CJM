@@ -19,6 +19,13 @@ export const moveImgData = {
         "../../../images/seasonal/seasonal2/seasonal2-4.jpg",
     ],
     "main" : [
-        
+        "../../../images/main/pickup/pickup1.jpg",
+        "../../../images/main/pickup/pickup2.jpg",
+        "../../../images/main/pickup/pickup3.jpg",
+        "../../../images/main/pickup/pickup4.jpg",
+        "../../../images/main/pickup/pickup5.jpg",
+        "../../../images/main/pickup/pickup6.jpg",
+        "../../../images/main/pickup/pickup7.jpg",
+        "../../../images/main/pickup/pickup8.jpg",
     ]
 }

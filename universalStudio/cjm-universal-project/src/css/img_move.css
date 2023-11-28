@@ -1,6 +1,6 @@
 .image-move-wrap{
     position: relative;
-    width: 100vw;
+    width: 4000px;
     overflow: hidden;
     margin: 20px 0;
 
@@ -12,7 +12,7 @@
 .image-move{
     position: relative;
     left: 0;
-    width: 200vw;
+    width: 8000px;
     display: flex;
 }
 
@@ -42,6 +42,6 @@
 
 @keyframes img-move-ani{
     to{
-        left: -100%;
+        left: -4000px;
     }
 }

@@ -270,7 +270,7 @@ export function Main() {
                 </div>
             </div>
             <div className="page-footer">
-                <ImgMoveSlide imgMove="goods" />
+                <ImgMoveSlide imgMove="main" />
             </div>
         </>
     );
