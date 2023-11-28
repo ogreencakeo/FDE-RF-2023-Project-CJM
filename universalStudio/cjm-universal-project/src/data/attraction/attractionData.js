@@ -2,6 +2,8 @@
     nintendo
     harrypotter
     minion
+    wonderland
+    빅 버드 빅 네스트까지 함
 */
 export const attractionData = [
     {
@@ -17,6 +19,7 @@ export const attractionData = [
         image: "attraction2",
         explanation:
             "길쭉한 모양의 블록과 톱니바퀴 모양의 블록. 여러 가지 모양의 커다란 블록이 한가득! 무엇을 만들까요? 마음대로 자유롭게 만들고 즐겨요!",
+        area: "wonderland",
     },
     {
         idx: "3",
@@ -24,6 +27,7 @@ export const attractionData = [
         image: "attraction3",
         explanation:
             "스누피와 함께 하늘을 날자! 직접 조종해서 피너츠 친구들의 주변을 돌며 날아올랐다가 저공으로 비행해 보자. 하늘 높이 날아서 구름 위에 있는 것처럼 둥실둥실 떠있는 기분을 맛보세요.",
+        area: "wonderland",
     },
     {
         idx: "4",
@@ -54,6 +58,7 @@ export const attractionData = [
         image: "attraction7",
         explanation:
             "댄스파티에 오신 것을 환영합니다. 하트와 별이 가득한 홀에서 DJ와 함께 음악에 맞춰 즐겁게 춤춰요! 몹피를 만날 수 있다면 행운이겠죠!",
+        area: "wonderland",
     },
     {
         idx: "8",
@@ -61,6 +66,7 @@ export const attractionData = [
         image: "attraction8",
         explanation:
             "몹피가 여러분을 즐거운 풍선 여행으로 초대했어요. 푸른 하늘로 날아올라 원더랜드의 깜찍한 세계를 즐겨보아요. 핸들을 돌리면 곤돌라도 빙글빙글, 모두 다 함께 신나게 놀자!",
+        area: "wonderland",
     },
     {
         idx: "9",
@@ -76,16 +82,16 @@ export const attractionData = [
         image: "attraction10",
         explanation:
             "성공하면 미니언들이 선물을 드려요. 생각지도 못했던 곳에 신기한 미니언이 숨어 있을지도?! 미니언 파크에 오면 스페이스 킬러 등의 게임 코너에서 책자를 손에 넣자!(유료)",
-        area : "minion",
-        },
+        area: "minion",
+    },
     {
         idx: "11",
         name: "미니언 메이헴",
         image: "attraction11",
         explanation:
             "거대 돔 스크린 위에 펼쳐지는 현장감 넘치는 영상과 함께 미니언들이 일으키는 뒤죽박죽 대소동 속으로 리얼하게 휩쓸려 들어가는 흥분 최고조의 라이드 어트랙션을 즐기자! 무대는 괴도 그루의 저택 겸 연구실. 그루가 발명한 특별한 차량을 타면 ‘미니언이 되기’ 위한 기상천외한 트레이닝 스타트! 수많은 미니언 & 그루의 세 딸과 함께 연구실 안을 어지럽게 뛰어다니기도 하고, 마음껏 신나게 날기도 하고, 그러다 땅끝까지 곤두박질! 인줄 알았더니 미니언과 그루 & 세 자매의 깊은 유대감에 생각지도 못하게 심쿵 하기도. 너무나 자유롭지만 정의감만큼은 투철한 미니언. 그 깜찍함을 만끽할 수 있는 뒤죽박죽 대소동의 한복판으로 뛰어들자!",
-        area : "minion",
-        },
+        area: "minion",
+    },
     {
         idx: "12",
         name: "미니언즈 피버 디스코 그리팅",
@@ -97,7 +103,7 @@ export const attractionData = [
         name: "바나나 카바나",
         image: "attraction13",
         explanation: "가장 좋아하는 바나나를 던져 주고, 미니언에게 선물을 받자!",
-        area : "minion",
+        area: "minion",
     },
     {
         idx: "14",
@@ -111,13 +117,15 @@ export const attractionData = [
         image: "attraction15",
         explanation:
             "미끄럼틀이 버트와 어니가 있는 볼 풀을 향해 뻗어 있네요. 용기 내서 미끄럼틀을 타고 내려가면 그곳은 파란색과 흰색 공이 가득한 바다! 해초가 하늘거리는 바닷속으로 잠수하거나 점프하면서 마음껏 헤엄치며 놀아요!",
-    },
+        area : "wonderland",
+        },
     {
         idx: "16",
         name: "버트와 어니의 프로숍 게임 플레이스",
         image: "attraction16",
         explanation:
             "어트랙션과 쇼를 즐기는 사이사이에 가볍게 놀 수 있는 게임에 도전해 보자! 깜찍한 경품을 받을 수 있는 찬스!",
+        area : "wonderland",
     },
     {
         idx: "17",
@@ -125,14 +133,16 @@ export const attractionData = [
         image: "attraction17",
         explanation:
             "빅서커스 단장이 된 빅 버드. 빅 버드의 지시에 따라 동물들이 어슬렁어슬렁 주변을 돌고 있네요. 이 많은 동물을 타고 함께 빙글빙글.",
-    },
+        area : "wonderland",
+        },
     {
         idx: "18",
         name: "빅 버드 빅 네스트",
         image: "attraction18",
         explanation:
             "센트럴 파크에 나타난 빅 버드의 둥지는 신나는 놀이공원이랍니다. 균형을 잡은 채 밧줄을 건너고 그물 위를 오르락내리락하면서 힘차게 몸을 움직여요! 씩씩하게 몸을 움직이자!",
-    },
+        area : "wonderland",
+        },
     {
         idx: "19",
         name: "세서미 빅 드라이브",
@@ -164,8 +174,8 @@ export const attractionData = [
         name: "스페이스 킬러",
         image: "attraction23",
         explanation:
-            "미니언들이, 세 자매가 제일 좋아하는 게임을 미니언 파크에도 오픈! 게임에 도전해서 경품을 받아 가자!",\
-        area : "minion",
+            "미니언들이, 세 자매가 제일 좋아하는 게임을 미니언 파크에도 오픈! 게임에 도전해서 경품을 받아 가자!",
+        area: "minion",
     },
     {
         idx: "24",
@@ -373,7 +383,7 @@ export const attractionData = [
         image: "attraction52",
         explanation:
             "미니언 파크의 열기 때문에 파크 안 수영장 물이 끓고 있다고?! 당황한 미니언들이 거대한 얼음 총을 꺼내와서 냉동광선 발사! 갑자기 등장한 아이스링크에 미니언들의 장난기가 폭발. 제빙차를 타고 이쪽으로 미끌 저쪽으로 미끌. 예측 불가능한 뒤죽박죽 신나는 얼음 위 레이스 스타트!",
-        area : "minion",
+        area: "minion",
     },
     {
         idx: "53",
