@@ -521,14 +521,17 @@ a {
 /* page3 */
 /* page2 */
 .page2{
-
-}
-.page2{
     color: #fff;
-    padding: 20px;
+    padding: 150px;
+    margin: 200px 0;
+}
+.page2>h2{
+    font-size: 3.5em;
 }
 .page2-cont{
     display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 .page2-cont>div{
     padding: 0 25px;
