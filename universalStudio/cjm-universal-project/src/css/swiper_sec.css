@@ -2,23 +2,24 @@
     max-width: 100%;
     margin: 0 auto;
 }
-.Swiper .mySwiper2{
+
+.mySwiper2 {
     width: 100%;
     padding: 10px;
     margin: 20px auto;
     box-sizing: border-box;
 }
+
 .mySwiper2 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    aspect-ratio: 1 / 1;
+    /* aspect-ratio: 1 / 1; */
 
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .swiper-sec-img{
@@ -28,7 +29,7 @@
     width: 100%;
     display: block;
     object-fit: cover;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
     padding: 5px;
     margin: 10px;
 }
