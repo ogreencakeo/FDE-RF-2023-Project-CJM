@@ -43,7 +43,8 @@ import { SwiperSec } from "./pages/plugin/SwiperSec.jsx";
 // import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
 
 export function Main() {
-    const text = "Universal Studio - PICK UP";
+
+    const text = "#ENJOY 피크를 즐기는 방법";
 
     const [visibleIndex, setVisibleIndex] = useState(0);
 
@@ -69,14 +70,40 @@ export function Main() {
         dragFn();
     }, []);
 
-    setTimeout(() => {
-        const page2Ele = document.querySelector(".page2");
-        const colorChange = ["#000", "#615754", "#333b35"];
-        const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
-        // page2Element.style.transition = 'background 0.5s';
-        page2Ele.style.transition = "backgroundColor 0.5s ease-in-out";
-        page2Ele.style.backgroundColor = randomColor;
-    }, 1000);
+    useEffect(() => {
+        // 이전 코드 생략
+
+        // 페이지 2 배경색 변경을 위한 함수
+        const changeBackgroundColor = () => {
+            const page2Ele = document.querySelector(".page2");
+            const colorChange = ["#000", "orangered", "#f043b9", "blue", "green"];
+            const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
+            page2Ele.style.backgroundColor = randomColor;
+            page2Ele.style.transition = "backgroundColor 0.5s ease-in-out";
+        };
+
+        // 페이지 2 배경색 초기 설정
+        changeBackgroundColor();
+
+        // 일정 간격으로 페이지 2 배경색 변경
+        const backgroundColorInterval = setInterval(() => {
+            changeBackgroundColor();
+        }, 1000); // 1000밀리초(5초) 간격으로 변경, 원하는 시간으로 조절
+
+        return () => {
+            clearInterval(backgroundColorInterval); // 컴포넌트가 언마운트될 때 interval 정리
+        };
+    }, []);
+
+
+    // setTimeout(() => {
+    //     const page2Ele = document.querySelector(".page2");
+    //     const colorChange = ["#000", "#333b35"];
+    //     const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
+    //     // page2Element.style.transition = 'background 0.5s';
+    //     page2Ele.style.backgroundColor = randomColor;
+    //     page2Ele.style.transition = "backgroundColor 0.5s ease-in-out";
+    // }, 1000);
 
     // 사진 클릭 회전
     // 박스별 회전 상태를 저장하는 배열
@@ -205,12 +232,19 @@ export function Main() {
                 </div>
             </div>
             <div className="page2 page">
-                <h1>#ENJOY</h1>
+                {/* <h1>#ENJOY</h1>
                 <h1>
                     피크를 즐기는 방법
                     <FontAwesomeIcon icon={faFaceLaughSquint} />
-                </h1>
-                <div className="page2-cont">
+                </h1> */}
+                <div className="main-character2">
+                    <img src="../images/main/character/character2.png" alt="" />
+                </div>
+                
+                <div className="main-character1">
+                    <img src="../images/main/character/character1.png" alt="" />
+                </div>
+                {/* <div className="page2-cont">
                     <div className="page2-cont1">
                         <h1>
                             <FontAwesomeIcon icon={faCalendarCheck} />
@@ -238,12 +272,13 @@ export function Main() {
                         <p>#파크 전체가 열광 페스티벌!</p>
                         <button>쇼 스케줄 & 맵</button>
                     </div>
-                    <div className="map">
+                    <div className="main-map">
                         <div className="show-map">
                             <img src="../images/main/join/showmap.jpg" alt="쇼맵" />
                         </div>
                     </div>
-                </div>
+                </div> */}
+                
             </div>
             {/* <div className="page3">
                 <div className="faEarthAsia">
@@ -260,6 +295,15 @@ export function Main() {
                 </div>
             </div> */}
             <div className="page4">
+                {/* <div className="load-text">
+                    <span>
+                        {text.split("").map((char, index) => (
+                            <span key={index} style={{ visibility: index < visibleIndex ? "visible" : "hidden" }}>
+                                {char}
+                            </span>
+                        ))}
+                    </span>
+                </div> */}
                 <div className="load-text">
                     <span>
                         {text.split("").map((char, index) => (
@@ -270,13 +314,13 @@ export function Main() {
                     </span>
                 </div>
             </div>
-            <div className="page5">
+            {/* <div className="page5">
                 <SwiperSec category="goods" />
                 <SwiperSec category="restaurant" />
             </div>
             <div className="page-footer">
                 <ImgMoveSlide imgMove="main" />
-            </div>
+            </div> */}
         </>
     );
 }

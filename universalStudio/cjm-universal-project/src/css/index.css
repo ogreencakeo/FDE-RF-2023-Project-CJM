@@ -23,11 +23,12 @@ body * {
 
 .load-text {
     display: flex;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
     justify-content: center;
     opacity: 0; /* 초기에는 투명하게 설정 */
     animation: fadeIn 2s alternate infinite; /* 애니메이션 적용 */
+    font-family: 'Black Han Sans';
 }
 
 .visible {
@@ -470,10 +471,18 @@ a {
     display: block;
     transform: rotateY(0deg);
     transition: transform 0.5s;
+    text-align: center;
 }
 
 .pick2 {
     transform: rotateY(180deg);
+    font-size: 8em;
+    color: #ccc;
+}
+.pick2 p{
+    font-size: 1.5rem;
+    margin-top: 50px;
+    color: rgb(152 152 152);;
 }
 
 .pick1>img,
@@ -527,11 +536,29 @@ a {
 /* page2 */
 .page2{
     color: #fff;
-    padding: 150px;
+    padding-bottom: 150px;
     margin: 200px 0;
 }
 .page2>h1{
     font-size: 3.5em;
+}
+
+.main-character1{
+    padding: 100px;
+    margin: 0 auto;
+    width: 50vw;
+}
+.main-character1>img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-character2{
+    width: 20vw;
+}
+.main-character2>img{
+    width: 100%;
+    margin: 0 100px;
 }
 .page2-cont{
     display: flex;
@@ -586,8 +613,8 @@ a {
 }
 
 /* page2-map */
-.map{
-    /* display: none; */
+.main-map{
+    display: none;
 }
 
 
