@@ -26,10 +26,10 @@ export function SwiperSec(props) {
                 navigation={true}
                 modules={[Navigation]}
                 breakpoints={{
-                    200: {
+                    350: {
                         slidesPerView: 1,
                     },
-                    500: {
+                    1000: {
                         slidesPerView: 2,
                     },
                 }}

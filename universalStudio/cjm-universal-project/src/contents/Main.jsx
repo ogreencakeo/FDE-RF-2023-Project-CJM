@@ -74,7 +74,7 @@ export function Main() {
         const colorChange = ["#000", "#615754", "#333b35"];
         const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
         // page2Element.style.transition = 'background 0.5s';
-        page2Ele.style.transition = "background 0.5s ease-in-out";
+        page2Ele.style.transition = "backgroundColor 0.5s ease-in-out";
         page2Ele.style.backgroundColor = randomColor;
     }, 1000);
 
