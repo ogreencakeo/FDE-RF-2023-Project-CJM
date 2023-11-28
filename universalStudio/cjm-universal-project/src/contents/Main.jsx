@@ -189,7 +189,21 @@ export function Main() {
                     </div>
                 </div>
             </div>
-            <div className="page2">
+            <div className="page2 page">
+                {/* <div className="page2-video">
+                    <iframe src="https://www.youtube.com/embed/04iFJikOnGs" allow="autoplay;"></iframe>
+                </div> */}
+                <div className="page2-main-img">
+                    <img src="../images/page2-main.jpg" alt="" />
+                </div>
+                <div className="content">
+                    <h2>
+                        파크 전체가 열광 페스티벌! <br />
+                        새로워진 스트리트 쇼에 뛰어들자!
+                    </h2>
+                </div>
+            </div>
+            <div className="page3">
                 <div className="faEarthAsia">
                     <FontAwesomeIcon icon={faEarthAsia} />
                 </div>
@@ -201,20 +215,6 @@ export function Main() {
                 </div>
                 <div className="faGlobe">
                     <FontAwesomeIcon icon={faGlobe} />
-                </div>
-            </div>
-            <div className="page3 page">
-                <div className="page3-video">
-                    <iframe src="https://www.youtube.com/embed/04iFJikOnGs" allow="autoplay;"></iframe>
-                </div>
-                <div className="content">
-                    <h2>
-                        파크 전체가 열광 페스티벌! <br />
-                        새로워진 스트리트 쇼에 뛰어들자!
-                    </h2>
-                </div>
-                <div>
-                    <img src="../images/universal_logo.webp" alt="유니버설 로고" />
                 </div>
             </div>
             <div className="page4">
