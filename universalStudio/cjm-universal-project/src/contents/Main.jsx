@@ -25,6 +25,7 @@ import {
     faMobileScreenButton,
     faCalendarCheck,
     faIcons,
+    faLightbulb
 } from "@fortawesome/free-solid-svg-icons";
 
 // 데이터
@@ -70,30 +71,30 @@ export function Main() {
         dragFn();
     }, []);
 
-    useEffect(() => {
-        // 이전 코드 생략
+    // useEffect(() => {
+    //     // 이전 코드 생략
 
-        // 페이지 2 배경색 변경을 위한 함수
-        const changeBackgroundColor = () => {
-            const page2Ele = document.querySelector(".page2");
-            const colorChange = ["#000", "orangered", "#f043b9", "blue", "green"];
-            const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
-            page2Ele.style.backgroundColor = randomColor;
-            page2Ele.style.transition = "backgroundColor 0.5s ease-in-out";
-        };
+    //     // 페이지 2 배경색 변경을 위한 함수
+    //     const changeBackgroundColor = () => {
+    //         const page2Ele = document.querySelector(".page2");
+    //         const colorChange = ["#000", "orangered", "#f043b9", "blue", "green"];
+    //         const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
+    //         page2Ele.style.backgroundColor = randomColor;
+    //         page2Ele.style.transition = "backgroundColor 0.5s ease-in-out";
+    //     };
 
-        // 페이지 2 배경색 초기 설정
-        changeBackgroundColor();
+    //     // 페이지 2 배경색 초기 설정
+    //     changeBackgroundColor();
 
-        // 일정 간격으로 페이지 2 배경색 변경
-        const backgroundColorInterval = setInterval(() => {
-            changeBackgroundColor();
-        }, 1000); // 1000밀리초(5초) 간격으로 변경, 원하는 시간으로 조절
+    //     // 일정 간격으로 페이지 2 배경색 변경
+    //     const backgroundColorInterval = setInterval(() => {
+    //         changeBackgroundColor();
+    //     }, 1000); // 1000밀리초(5초) 간격으로 변경, 원하는 시간으로 조절
 
-        return () => {
-            clearInterval(backgroundColorInterval); // 컴포넌트가 언마운트될 때 interval 정리
-        };
-    }, []);
+    //     return () => {
+    //         clearInterval(backgroundColorInterval); // 컴포넌트가 언마운트될 때 interval 정리
+    //     };
+    // }, []);
 
 
     // setTimeout(() => {
@@ -232,19 +233,17 @@ export function Main() {
                 </div>
             </div>
             <div className="page2 page">
-                {/* <h1>#ENJOY</h1>
-                <h1>
-                    피크를 즐기는 방법
-                    <FontAwesomeIcon icon={faFaceLaughSquint} />
-                </h1> */}
-                <div className="main-character2">
+                {/* <div className="main-character2">
                     <img src="../images/main/character/character2.png" alt="" />
                 </div>
                 
                 <div className="main-character1">
                     <img src="../images/main/character/character1.png" alt="" />
-                </div>
-                {/* <div className="page2-cont">
+                </div> */}
+                    <span className="page2-light">
+                        <FontAwesomeIcon icon={faLightbulb} />
+                    </span>
+                <div className="page2-cont">
                     <div className="page2-cont1">
                         <h1>
                             <FontAwesomeIcon icon={faCalendarCheck} />
@@ -277,9 +276,10 @@ export function Main() {
                             <img src="../images/main/join/showmap.jpg" alt="쇼맵" />
                         </div>
                     </div>
-                </div> */}
-                
+                </div>
             </div>
+
+
             {/* <div className="page3">
                 <div className="faEarthAsia">
                     <FontAwesomeIcon icon={faEarthAsia} />

@@ -73,7 +73,7 @@
 }
 /* 굿즈 - 상품 주의사항 */
 .goods_caution_wrap{
-    max-width: 100%;
+    max-width: 80%;
     /* max-width: 100%; */
     margin: 120px auto;
     display: flex;
@@ -81,7 +81,8 @@
     justify-content: center;
     /* background-color: whitesmoke; */
     padding: 10px;
-
+    background: url(../../public/images/goods/character/background4.png) no-repeat;
+   
 }
 .goods_caution_img{
     width: 300px;
@@ -93,14 +94,17 @@
     aspect-ratio: 1.1/1;
 }
 .goods_caution_content{
+    /* background-color: rgba(0, 0, 0, 0.5); */
     /* width:60%; */
     padding: 10px;
 }
 
 .goods_caution_content p{
     font-family: 'Nanum Gothic';
-    font-size: 15px;
+    font-size: 1.2vw;
     line-height: 2;
+    color: white;
+    text-shadow: 1px 1px 1px black;
 }
 
 

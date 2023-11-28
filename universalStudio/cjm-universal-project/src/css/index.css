@@ -538,9 +538,20 @@ a {
     color: #fff;
     padding-bottom: 150px;
     margin: 200px 0;
+    background-color: #000;
 }
 .page2>h1{
     font-size: 3.5em;
+}
+
+.page2-light{
+}
+
+.page2-light{
+    padding: 100px;
+    display: block;
+    font-size: 7em;
+    /* transform: rotate(180deg); */
 }
 
 .main-character1{
