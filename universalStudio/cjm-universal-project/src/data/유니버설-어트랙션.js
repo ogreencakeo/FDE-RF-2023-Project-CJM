@@ -9,6 +9,8 @@
 
 */
 
+
+
 const attraction_wrap = {
     "attraction_idx1":{
         idx : "1",

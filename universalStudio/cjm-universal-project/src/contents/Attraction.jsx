@@ -1,3 +1,5 @@
+import { AttractionCont } from "./module/AttractionCont";
+
 export function Attraction() {
     return (
         <div className="attraction-wrap">
@@ -62,6 +64,9 @@ export function Attraction() {
                         </li>
                     </ol>
                 </div>
+            </div>
+            <div className="attraction-cont-wrap">
+                <AttractionCont />
             </div>
         </div>
     );
