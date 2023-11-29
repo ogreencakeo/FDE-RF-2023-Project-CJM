@@ -20,48 +20,52 @@ export function Attraction() {
                                 type="checkbox" id="supermario"className="area"
                                 // onChange={chkSearch}
                                 />
-                            <label htmlFor="supermario" className="area"></label>
+                            <label htmlFor="supermario" className="arealb"></label>
                         </li>
                         <li>
                             위저딩 월드 오브 해리 포터™
                             <input type="checkbox" id="harry-potter" className="area" />
-                            <label htmlFor="harry-potter" className="area"></label>
+                            <label htmlFor="harry-potter" className="arealb"></label>
                         </li>
                         <li>
                             미니언 파크
                             <input type="checkbox" id="minion-park" className="area" />
-                            <label htmlFor="minion-park" className="area"></label>
+                            <label htmlFor="minion-park" className="arealb"></label>
                         </li>
                         <li>
                             유니버설 원더랜드
                             <input type="checkbox" id="wonderland" className="area" />
-                            <label htmlFor="wonderland" className="area"></label>
-                        </li>
-                    </ol>
-                    {/* 옵션2 -  */}
-                    <ol>
-                        <li>
-                            슈퍼 닌텐도 월드™
-                            <input
-                                type="checkbox" id="supermario"className="area"
-                                // onChange={chkSearch}
-                                />
-                            <label htmlFor="supermario" className="area"></label>
+                            <label htmlFor="wonderland" className="arealb"></label>
                         </li>
                         <li>
-                            위저딩 월드 오브 해리 포터™
-                            <input type="checkbox" id="harry-potter" className="area" />
-                            <label htmlFor="harry-potter" className="area"></label>
+                            할리우드
+                            <input type="checkbox" id="hollywood" className="area" />
+                            <label htmlFor="hollywood" className="arealb"></label>
                         </li>
                         <li>
-                            미니언 파크
-                            <input type="checkbox" id="minion-park" className="area" />
-                            <label htmlFor="minion-park" className="area"></label>
+                            뉴옥
+                            <input type="checkbox" id="newyork" className="area" />
+                            <label htmlFor="newyork" className="arealb"></label>
                         </li>
                         <li>
-                            유니버설 원더랜드
-                            <input type="checkbox" id="wonderland" className="area" />
-                            <label htmlFor="wonderland" className="area"></label>
+                            샌프란시스코
+                            <input type="checkbox" id="sanfrancisco" className="area" />
+                            <label htmlFor="sanfrancisco" className="arealb"></label>
+                        </li>
+                        <li>
+                            쥬라기 공원
+                            <input type="checkbox" id="jurassicpark" className="area" />
+                            <label htmlFor="jurassicpark" className="arealb"></label>
+                        </li>
+                        <li>
+                            애머티 빌리지
+                            <input type="checkbox" id="amityvillage" className="area" />
+                            <label htmlFor="amityvillage" className="arealb"></label>
+                        </li>
+                        <li>
+                            워터 월드
+                            <input type="checkbox" id="waterworld" className="area" />
+                            <label htmlFor="waterworld" className="arealb"></label>
                         </li>
                     </ol>
                 </div>
