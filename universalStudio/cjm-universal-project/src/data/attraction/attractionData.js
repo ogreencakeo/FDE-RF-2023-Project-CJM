@@ -207,6 +207,56 @@ export const attractionData = [
         desc : "스누피와 함께 하늘을 날자! 직접 조종해서 피너츠 친구들의 주변을 돌며 날아올랐다가 저공으로 비행해 보자.^하늘 높이 날아서 구름 위에 있는 것처럼 둥실둥실 떠있는 기분을 맛보세요.^협찬: Nippon Life Insurance Company",
         type : 'wonderland'
     },
+    {
+        idx : "20",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction20.jpg",
+        map : "map/attraction20.jpg",
+        name : "몹피의 럭키 댄스 파티",
+        title : "DJ와 함께 음악에 맞춰 댄스!",
+        desc : "댄스파티에 오신 것을 환영합니다. 하트와 별이 가득한 홀에서 DJ와 함께 음악에 맞춰 즐겁게 춤춰요! 몹피를 만날 수 있다면 행운이겠죠!",
+        type : 'wonderland'
+    },
+    {
+        idx : "21",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction21.jpg",
+        map : "map/attraction21.jpg",
+        name : "몹피의 벌룬 여행",
+        title : "놀이기구를 타고 원더랜드의 상공을 여행하자!",
+        desc : "몹피가 여러분을 즐거운 풍선 여행으로 초대했어요.푸른 하늘로 날아올라 원더랜드의 깜찍한 세계를 즐겨보아요.핸들을 돌리면 곤돌라도 빙글빙글, 모두 다 함께 신나게 놀자!^협찬: ART MOVING COMPANY",
+        type : 'wonderland'
+    },
+    {
+        idx : "22",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction22.jpg",
+        map : "map/attraction22.jpg",
+        name : "버트와 애니의 원더 더 시",
+        title : "볼 풀에 슬라이딩하기도 하고, 풍덩 뛰어들기도 하면서 놀아요.",
+        desc : "미끄럼틀이 버트와 어니가 있는 볼 풀을 향해 뻗어 있네요. 용기 내서 미끄럼틀을 타고 내려가면 그곳은 파란색과 흰색 공이 가득한 바다!^해초가 하늘거리는 바닷속으로 잠수하거나 점프하면서 마음껏 헤엄치며 놀아요!",
+        type : 'wonderland'
+    },
+    {
+        idx : "23",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction23.jpg",
+        map : "map/attraction23.jpg",
+        name : "버트와 어니의 프로숍 게임 플레이스",
+        title : "원하는 상품을 골라서 카니발 게임에 도전하자!",
+        desc : "어트랙션과 쇼를 즐기는 사이사이에 가볍게 놀 수 있는 게임에 도전해 보자! 깜찍한 경품을 받을 수 있는 찬스!",
+        type : 'wonderland'
+    },
+    {
+        idx : "24",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction24.jpg",
+        map : "map/attraction24.jpg",
+        name : "빅 버드 비드 탑 서커스",
+        title : "세서미 스트리트™의 세계를 도는 컬러풀한 회전목마.",
+        desc : "빅서커스 단장이 된 빅 버드. 빅 버드의 지시에 따라 동물들이 어슬렁어슬렁 주변을 돌고 있네요. 이 많은 동물을 타고 함께 빙글빙글.^협찬: ART MOVING COMPANY",
+        type : 'wonderland'
+    },
 ];
 
 /* 
