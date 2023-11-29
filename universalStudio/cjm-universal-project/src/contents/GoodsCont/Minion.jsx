@@ -1,16 +1,16 @@
-
 import { GoodsItem } from "../module/GoodsItem";
 import { GoodsSwiper } from "../pages/plugin/Swiper";
 import { GoodsAd } from "./GoodsAd";
+
 // 데이터
 import { goods } from "../../data/goods/goodsData";
 
-export function HelloKitty(){
+export function Minion() {
     return (
         <>
-            <GoodsAd ad='helloKitty' bg_color = '#fcc7f4'/>
+            <GoodsAd ad="minion" bg_color="#fac505" />
             <GoodsSwiper />
-            <GoodsItem cat={goods[6]} category="helloKitty" />
+            <GoodsItem cat={goods[7]} category="minion" />
         </>
     );
 }

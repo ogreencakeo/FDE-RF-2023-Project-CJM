@@ -54,5 +54,13 @@ export const goodsAdData = {
         "product" : "파크 오리지널의 헬로키티 굿즈라면 이곳!",
         "cont" : "이곳에서만 만날 수 있는 트렌디한 아이템에 심쿵! 다양한 라인업을 갖춘 헬로키티의 파크 내 플래그십 숍.",
         "map" : "goods/goods6/map.jpg",
+    },
+    "minion" : {
+        "tit" : "펀 스토어",
+        "logo" : "goods/logo/minionLogo.jpg",
+        "location" : "미니언",
+        "product" : "장난 천재 미니언들의 장난감 연구 개발 본부.",
+        "cont" : "장난 천재 미니언들의 장난감을 향한 사랑과 정열이 가득 담긴 스토어. 너나 할 것 없이 무의식 중에 웃게 만드는 즐거운 상품이 한가득!",
+        "map" : "goods/goods7/map.jpg",
     }
 }

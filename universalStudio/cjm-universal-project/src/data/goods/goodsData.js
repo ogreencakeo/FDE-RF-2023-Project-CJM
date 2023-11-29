@@ -593,5 +593,93 @@ export const goods =[
                 "image" : "goods7/goods11.jpg"
             },
         ]
+    },
+    {
+        "minion" : [
+            {
+                "store" : ":미니언 마켓 플레이스(미니언즈 POP! SHOP) 등",
+                "itemGoods" : "미니언",
+                "usage" : "핸드 타월 세트(2장)",
+                "content" :"",
+                "image" : "goods8/1.jpg"
+            },
+            {
+                "store" : ":스튜디오 스타일",
+                "itemGoods" : "미니언",
+                "usage" : "메달리온(미니언 총 3종)",
+                "content" :"※ 수베니어 메달리온은 모두 구리색입니다.",
+                "image" : "goods8/2.jpg"
+            },
+            {
+                "store" : ":미니언 마켓 플레이스(펀 스토어) 등",
+                "itemGoods" : "미니언",
+                "usage" : "재킷",
+                "content" :"",
+                "image" : "goods8/3.jpg"
+            },
+            {
+                "store" : ":미니언 마켓 플레이스(미니언즈 POP! SHOP) 등",
+                "itemGoods" : "미니언",
+                "usage" : "티켓 홀더",
+                "content" :"",
+                "image" : "goods8/4.jpg"
+            },
+            {
+                "store" : ":유니버설 스튜디오 스토어 등",
+                "itemGoods" : "미니언",
+                "usage" : "머리띠",
+                "content" :"",
+                "image" : "goods8/5.jpg"
+            },
+            {
+                "store" : "미니언 마켓 플레이스(펀 스토어) 등",
+                "itemGoods" : "미니언",
+                "usage" : "펜 스탠드",
+                "content" :"",
+                "image" : "goods8/6.jpg"
+            },
+            {
+                "store" : "미니언 마켓 플레이스(펀 스토어) 등",
+                "itemGoods" : "미니언",
+                "usage" : "바나나 쿠션",
+                "content" :"",
+                "image" : "goods8/7.jpg"
+            },
+            {
+                "store" : "유니버설 스튜디오 스토어 등",
+                "itemGoods" : "미니언",
+                "usage" : "봉제인형 모자",
+                "content" :"",
+                "image" : "goods8/8.jpg"
+            },
+            {
+                "store" : "미니언 마켓 플레이스(스위트 서렌더) 등",
+                "itemGoods" : "미니언",
+                "usage" : "롤 쿠키",
+                "content" :"",
+                "image" : "goods8/9.jpg"
+            },
+            {
+                "store" : "미니언 마켓 플레이스(스위트 서렌더) 등",
+                "itemGoods" : "미니언",
+                "usage" : "초콜릿 크런치",
+                "content" :"",
+                "image" : "goods8/10.jpg"
+            },
+            {
+                "store" : "미니언 마켓 플레이스(펀 스토어) 등",
+                "itemGoods" : "미니언",
+                "usage" : "메모 세트(6권)",
+                "content" :"",
+                "image" : "goods8/11.jpg"
+            },
+            {
+                "store" : "미니언 마켓 플레이스(스위트 서렌더) 등",
+                "itemGoods" : "미니언",
+                "usage" : "검볼 머신",
+                "content" :"",
+                "image" : "goods8/12.jpg"
+            },
+        ]
     }
 ]

@@ -74,6 +74,10 @@ export const navMenu = [
                 'txt' : '헬로키티',
                 'link' : 'goods/helloKitty',
             },
+            {
+                'txt' : '미니언',
+                'link' : 'goods/minion',
+            },
         ]
     },
     {

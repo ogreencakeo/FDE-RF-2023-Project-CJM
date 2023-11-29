@@ -100,6 +100,13 @@ export const cartData = {
             "link" : "helloKitty",
             "img" : "../images/goods/logo/sesaemeLogo.jpg"
         },
+        {
+            "idx" : "8",
+            "category" : "굿즈",
+            "title" : "미니언",
+            "link" : "minion",
+            "img" : "../images/goods/logo/minionLogo.jpg"
+        },
     ]
     
 }
