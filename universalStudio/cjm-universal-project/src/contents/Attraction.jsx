@@ -21,7 +21,8 @@ export function Attraction() {
                     className="schbtn"
                     title="Open Serach"
                     // onClick={schList}
-                    ref={xx}/>
+                    // ref={xx}
+                    />
                 </div>
                 {/* 체크박스 구역 */}
                 <div className="option-check">
