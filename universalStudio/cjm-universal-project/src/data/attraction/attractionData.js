@@ -167,6 +167,46 @@ export const attractionData = [
         desc : "가장 좋아하는 바나나를 던져 주고, 미니언에게 선물을 받자!",
         type : 'minion'
     },
+    {
+        idx : "16",
+        logo : "logo/attraction12.jpg",
+        img : "img/attraction16.jpg",
+        map : "map/attraction16.jpg",
+        name : "스페이스 킬러",
+        title : "세 자매가 아주 좋아하는 그 유명한 바주카포 게임에 도전!",
+        desc : "미니언들이, 세 자매가 제일 좋아하는 게임을 미니언 파크에도 오픈! 게임에 도전해서 경품을 받아 가자!^협찬: ART MOVING COMPANY",
+        type : 'minion'
+    },
+    {
+        idx : "17",
+        logo : "logo/attraction17.jpg",
+        img : "img/attraction17.jpg",
+        map : "map/attraction17.jpg",
+        name : "프리즈 레이 슬라이더",
+        title : "꽁꽁 언 얼음 위를 미끄러지며 뒤죽박죽 신나게 달리는 얼음 위 레이스!",
+        desc : "미니언 파크의 열기 때문에 파크 안 수영장 물이 끓고 있다고?! 당황한 미니언들이 거대한 얼음 총을 꺼내와서 냉동광선 발사! 갑자기 등장한 아이스링크에 미니언들의 장난기가 폭발. 제빙차를 타고 이쪽으로 미끌 저쪽으로 미끌. 예측 불가능한 뒤죽박죽 신나는 얼음 위 레이스 스타트!^협찬: EDION Corporation",
+        type : 'minion'
+    },
+    {
+        idx : "18",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction18.jpg",
+        map : "map/attraction18.jpg",
+        name : "그로버 콘스트럭션 컴퍼니",
+        title : "커다란 블록을 내 맘대로 만들며 놀 수 있어요.",
+        desc : "길쭉한 모양의 블록과 톱니바퀴 모양의 블록. 여러 가지 모양의 커다란 블록이 한가득! 무엇을 만들까요? 마음대로 자유롭게 만들고 즐겨요!",
+        type : 'wonderland'
+    },
+    {
+        idx : "19",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction19.jpg",
+        map : "map/attraction19.jpg",
+        name : "날아라 스누피",
+        title : "날아올랐다가 저공으로 비행했다가, 직접 조종하면서 스누피와 함께 하늘을 날자!",
+        desc : "스누피와 함께 하늘을 날자! 직접 조종해서 피너츠 친구들의 주변을 돌며 날아올랐다가 저공으로 비행해 보자.^하늘 높이 날아서 구름 위에 있는 것처럼 둥실둥실 떠있는 기분을 맛보세요.^협찬: Nippon Life Insurance Company",
+        type : 'wonderland'
+    },
 ];
 
 /* 
