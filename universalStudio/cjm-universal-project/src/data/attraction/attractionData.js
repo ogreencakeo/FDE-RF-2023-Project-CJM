@@ -3,7 +3,7 @@
     harrypotter
     minion
     wonderland
-    hollywood
+    jurassicpark
     
 */
 export const attractionData = [
@@ -396,6 +396,36 @@ export const attractionData = [
         title : "빙글빙글 돌며 헬로키티의 깜찍한 세계를 만끽하자!",
         desc : "헬로키티의 케이크 파티에 초대합니다. 색색별로 진열된 컵케이크 가운데 여러분은 어떤 것을 고르실 것인가요?^음악에 맞춰 빙글빙글 컵이 돌아갑니다. 핸들을 돌리면 더 재미있어질지도 모릅니다.",
         type : 'wonderland'
+    },
+    {
+        idx : "39",
+        logo : "logo/attraction39.png",
+        img : "img/attraction39.jpg",
+        map : "map/attraction39.jpg",
+        name : "더 플라잉 다이너소어",
+        title : "맨몸으로 힘껏 날자.",
+        desc : "상상을 초월하는 고저차와 길이를 자랑하는 최신예 플라잉 코스터. 폭주하는 공룡 프테라노돈에게 등을 붙잡혀 전신을 드러낸 채 공중을 난다! 쥬라기 공원의 세계를 360도 이리저리 끌려다니며, 일상까지 떨쳐버릴 “믿을 수 없는” 스릴 체험이 이곳에.^협찬: JCB Co., Ltd.",
+        type : 'jurassicpark'
+    },
+    {
+        idx : "40",
+        logo : "logo/attraction40.jpg",
+        img : "img/attraction40.jpg",
+        map : "map/attraction40.jpg",
+        name : "쥬라기 공원 다이너소어 미트&그리트",
+        title : "아열대 정글에서 박력 넘치는 거대한 공룡과 아기 공룡을 만날 수 있는 놀라운 체험!",
+        desc : "",
+        type : 'jurassicpark'
+    },
+    {
+        idx : "41",
+        logo : "logo/attraction41.jpg",
+        img : "img/attraction41.jpg",
+        map : "map/attraction41.jpg",
+        name : "쥬라기 공원 더 라이드",
+        title : "절체절명! 무시무시한 T-렉스를 피해 25.9m 아래로 급강하!",
+        desc : "태고의 공룡과 만나는 탐험에 예상 밖의 트러블 발생. 포효하며 날뛰는 T-렉스에 절체절명, 도망치기 위해 25.9m 밑으로 곤두박질!",
+        type : 'jurassicpark'
     },
 ];
 
