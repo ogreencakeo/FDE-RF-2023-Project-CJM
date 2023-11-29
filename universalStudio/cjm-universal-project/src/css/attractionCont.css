@@ -1,0 +1,26 @@
+/* 어트랙션 리스트 랩핑 */
+.attractionCont-list-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.attractionCont-list-bx{
+    width: calc((100% - 120px) / 3);
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.attractionCont-list-img{
+    width: 100%;
+    
+}
+.attractionCont-list-img>img{
+    width: 100%;
+}
+.attractionCont-list-bx>h2{
+    padding: 10px;
+}

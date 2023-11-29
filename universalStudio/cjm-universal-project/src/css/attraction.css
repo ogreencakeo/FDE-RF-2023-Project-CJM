@@ -1,0 +1,15 @@
+.attraction-wrap{
+    max-width: 1300px;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* 어트랙션 옵션 박스 */
+.attraction-option-wrap{
+    width: 25%;
+}
+
+/* 결과리스트 박스 */
+.attraction-cont-listbx{
+    width: 75%;
+}
