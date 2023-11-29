@@ -1,11 +1,28 @@
 import { AttractionCont } from "./module/AttractionCont";
+
+// css
 import '../css/attraction.css';
+
+// 폰트어썸 불러오기
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// 제이쿼리
+import $ from "jquery";
 
 export function Attraction() {
     return (
         <div className="attraction-wrap">
             {/* 어트랙션 옵션 박스 */}
             <div className="attraction-option-wrap">
+                {/* 검색박스 */}
+                <div className="searching">
+                    <FontAwesomeIcon icon={faSearch} 
+                    className="schbtn"
+                    title="Open Serach"
+                    // onClick={schList}
+                    ref={xx}/>
+                </div>
                 {/* 체크박스 구역 */}
                 <div className="option-check">
                     <h2>
@@ -70,7 +87,19 @@ export function Attraction() {
                     </ol>
                 </div>
             </div>
-            <div className="attraction-cont-wrap">
+            {/* 결과 리스트 박스 */}
+            <div className="attraction-cont-listbx">
+                <h2 className="listbx">어트랙션 
+                {/* ({cnt}) */}
+                </h2>
+                <div className="sortbx">
+                    <select name="sel" id="sel" className="sel" 
+                    // onChange={sortList}
+                    >
+                    <option value="0">A-Z</option>
+                            <option value="1">Z-A</option>
+                    </select>
+                </div>
                 <AttractionCont />
             </div>
         </div>

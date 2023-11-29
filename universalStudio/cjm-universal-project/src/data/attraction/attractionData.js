@@ -3,7 +3,8 @@
     harrypotter
     minion
     wonderland
-    빅 버드 빅 네스트까지 함
+    hollywood
+    
 */
 export const attractionData = [
     {
@@ -117,15 +118,15 @@ export const attractionData = [
         image: "attraction15",
         explanation:
             "미끄럼틀이 버트와 어니가 있는 볼 풀을 향해 뻗어 있네요. 용기 내서 미끄럼틀을 타고 내려가면 그곳은 파란색과 흰색 공이 가득한 바다! 해초가 하늘거리는 바닷속으로 잠수하거나 점프하면서 마음껏 헤엄치며 놀아요!",
-        area : "wonderland",
-        },
+        area: "wonderland",
+    },
     {
         idx: "16",
         name: "버트와 어니의 프로숍 게임 플레이스",
         image: "attraction16",
         explanation:
             "어트랙션과 쇼를 즐기는 사이사이에 가볍게 놀 수 있는 게임에 도전해 보자! 깜찍한 경품을 받을 수 있는 찬스!",
-        area : "wonderland",
+        area: "wonderland",
     },
     {
         idx: "17",
@@ -133,21 +134,22 @@ export const attractionData = [
         image: "attraction17",
         explanation:
             "빅서커스 단장이 된 빅 버드. 빅 버드의 지시에 따라 동물들이 어슬렁어슬렁 주변을 돌고 있네요. 이 많은 동물을 타고 함께 빙글빙글.",
-        area : "wonderland",
-        },
+        area: "wonderland",
+    },
     {
         idx: "18",
         name: "빅 버드 빅 네스트",
         image: "attraction18",
         explanation:
             "센트럴 파크에 나타난 빅 버드의 둥지는 신나는 놀이공원이랍니다. 균형을 잡은 채 밧줄을 건너고 그물 위를 오르락내리락하면서 힘차게 몸을 움직여요! 씩씩하게 몸을 움직이자!",
-        area : "wonderland",
-        },
+        area: "wonderland",
+    },
     {
         idx: "19",
         name: "세서미 빅 드라이브",
         image: "attraction19",
         explanation: "마치 뉴욕 센트럴 파크를 달리고 있는 듯한 박력 있는 드라이브를 즐길 수 있는 라이드 어트랙션.",
+        area: "wonderland",
     },
     {
         idx: "20",
@@ -168,6 +170,7 @@ export const attractionData = [
         name: "스누피 사운드 스테이지 어드벤처™",
         image: "attraction22",
         explanation: "아이들이 자유롭게 놀 수 있는 즐길 거리가 가득한 실내형 플레이랜드입니다.",
+        area: "wonderland",
     },
     {
         idx: "23",
@@ -204,6 +207,7 @@ export const attractionData = [
         image: "attraction27",
         explanation:
             "커다란 나무 안을 들여다보자 정말 신나는 정글짐이 펼쳐졌어요! 꼭대기까지 열심히 올라가면 어떤 경치가 보일까요?",
+        area: "wonderland",
     },
     {
         idx: "28",
@@ -211,6 +215,7 @@ export const attractionData = [
         image: "attraction28",
         explanation:
             "애비가 마법을 건 홀에는 커다란 별 블록과 공이 가득해요. 블록 위에 올라가거나 공을 던지면서 크고 작은 친구들도 다 함께 사이좋게 놀아요!",
+        area: "wonderland",
     },
     {
         idx: "29",
@@ -218,6 +223,7 @@ export const attractionData = [
         image: "attraction29",
         explanation:
             "마음에 드는 오리를 고르면 언덕 위에서 결승점을 향해 물에 띄워요. 도중에 걸리지 않고 끝까지 잘 도착할 수 있을까요?",
+        area: "wonderland",
     },
     {
         idx: "30",
@@ -232,6 +238,7 @@ export const attractionData = [
         image: "attraction31",
         explanation:
             "엘모와 함께 스케이트보드를 타고 경사면을 상쾌하게 달려보자!거대한 스케이트보드의 예측할 수 없는 다이내믹한 움직임에 아이들은 콩닥콩닥, 어른들도 어느샌가 환호성을 질러요!",
+        area: "wonderland",
     },
     {
         idx: "32",
@@ -239,6 +246,7 @@ export const attractionData = [
         image: "attraction32",
         explanation:
             "만 3세 어린이도 운전을 만끽할 수 있는 라이드 어트랙션. 귀여운 엘모 디자인의 자동차로 주행코스를 달려보아요.",
+        area: "wonderland",
     },
     {
         idx: "33",
@@ -246,6 +254,7 @@ export const attractionData = [
         image: "attraction33",
         explanation:
             "엘모의 꿈나라에 오신 것을 환영합니다. 엘모의 애완동물인 금붕어 도로시를 타고 떠나는 수상 여행 출발! 엘모가 만드는 비눗방울을 감상하며 여유롭게 항해하세요. 꿈속 세상 같은 실내 라이드 어트랙션입니다.",
+        area: "wonderland",
     },
     {
         idx: "34",
@@ -276,6 +285,7 @@ export const attractionData = [
         name: "워터 가든",
         image: "attraction37",
         explanation: "물이 리드미컬하게 솟아오르기도 하고 흘러내리기도 해요.",
+        area: "wonderland",
     },
     {
         idx: "38",
@@ -304,6 +314,7 @@ export const attractionData = [
         image: "attraction41",
         explanation:
             "유니버설 원더랜드의 친구들과 함께 인기 절정의 춤을 추자 귀여운 유니버설 원더랜드의 친구들과 함께 즐겁게 춤추며 놀자! 할로윈 한정 코스튬과 음악에 두근두근, 아이들의 얼굴에 웃음꽃이 만발하는 행복한 마중에 흥분 최고조!",
+        area: "wonderland",
     },
     {
         idx: "42",
@@ -339,6 +350,7 @@ export const attractionData = [
         image: "attraction46",
         explanation:
             "쿠키 몬스터가 커다란 미끄럼틀로 변했어요! 거대한 초코칩 쿠키를 먹으려고 내민 혀에 올라타서 단숨에 내려가 볼까요!",
+        area: "wonderland",
     },
     {
         idx: "47",
@@ -434,6 +446,7 @@ export const attractionData = [
         name: "헬로키티 리본 컬렉션",
         explanation:
             "헬로키티가 모두를 위해 스튜디오를 공개했습니다. 최신 패션 아이템과 하이힐 모양의 미끄럼틀에서 즐거운 시간을 보내고, 키티와 함께 기념사진도 찍어보세요.",
+        area: "wonderland",
     },
     {
         idx: "60",
@@ -441,6 +454,7 @@ export const attractionData = [
         name: "헬로키티 컵케이크 드림",
         explanation:
             "헬로키티의 케이크 파티에 초대합니다. 색색별로 진열된 컵케이크 가운데 여러분은 어떤 것을 고르실 것인가요? 음악에 맞춰 빙글빙글 컵이 돌아갑니다. 핸들을 돌리면 더 재미있어질지도 모릅니다.",
+        area: "wonderland",
     },
 ];
 
