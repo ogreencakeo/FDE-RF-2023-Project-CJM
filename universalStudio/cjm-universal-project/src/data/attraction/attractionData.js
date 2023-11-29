@@ -357,6 +357,36 @@ export const attractionData = [
         desc : "물이 리드미컬하게 솟아오르기도 하고 흘러내리기도 해요.",
         type : 'wonderland'
     },
+    {
+        idx : "35",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction35.jpg",
+        map : "map/attraction35.jpg",
+        name : "유니버설 원더랜드 필 더 리듬",
+        title : "유니버설 원더랜드의 친구들과 함께 인기 절정의 춤을 추자",
+        desc : "깜찍한 유니버설 원더랜드의 친구들과 함께 즐겁게 춤추며 놀자! 크리스마스 한정 코스튬과 음악에 두근두근 설레고 어른도 아이도 웃음꽃 활짝 피는, 행복한 마중에 흥분 최고조!",
+        type : 'wonderland'
+    },
+    {
+        idx : "36",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction36.jpg",
+        map : "map/attraction36.jpg",
+        name : "쿠키 몬스터 슬라이드",
+        title : "커다란 쿠키를 발견했어요! 쿠키를 가지러 큰 미끄럼틀을 한 번에 내려가 볼까요!",
+        desc : "쿠키 몬스터가 커다란 미끄럼틀로 변했어요! 거대한 초코칩 쿠키를 먹으려고 내민 혀에 올라타서 단숨에 내려가 볼까요!",
+        type : 'wonderland'
+    },
+    {
+        idx : "37",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction36.jpg",
+        map : "map/attraction36.jpg",
+        name : "쿠키 몬스터 슬라이드",
+        title : "커다란 쿠키를 발견했어요! 쿠키를 가지러 큰 미끄럼틀을 한 번에 내려가 볼까요!",
+        desc : "쿠키 몬스터가 커다란 미끄럼틀로 변했어요! 거대한 초코칩 쿠키를 먹으려고 내민 혀에 올라타서 단숨에 내려가 볼까요!",
+        type : 'wonderland'
+    },
 ];
 
 /* 
