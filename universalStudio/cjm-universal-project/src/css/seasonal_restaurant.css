@@ -299,7 +299,7 @@
 }
 .restaurant_bg_img>img{
     /* height: 500px; */
-    aspect-ratio: 2/1.3;
+    aspect-ratio: 2/1.5;
     width: 60vw;
     margin: 0 auto;
     display: block;
