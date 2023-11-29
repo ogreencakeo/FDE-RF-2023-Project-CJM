@@ -6,8 +6,15 @@
 /* 굿즈 상단 wrpa - 배너부분 */
 .goods-top-cont-wrap{
     max-width: 100%;
-    margin: 0 auto;
+    margin: 150px auto;
     padding: 30px;
+}
+
+.goods-top-cont-wrap h1{
+    font-size: 2vw;
+    font-family: 'Gugi';
+    padding: 20px;
+    margin: 20px 0;
 }
 
 /* 굿즈 개별 박스 wrap */
@@ -81,8 +88,7 @@
     justify-content: center;
     /* background-color: whitesmoke; */
     padding: 10px;
-    background: url(../../public/images/goods/character/background4.png) no-repeat;
-   
+    background: url(../../public/images/goods/character/background4.png);
 }
 .goods_caution_img{
     width: 300px;

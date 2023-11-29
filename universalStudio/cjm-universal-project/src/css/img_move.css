@@ -12,7 +12,7 @@
 .image-move{
     position: relative;
     left: 0;
-    width: 8000px;
+    width: 6400px;
     display: flex;
 }
 
@@ -20,19 +20,19 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    flex: 1;
+    /* flex: 1; */
     display: flex;
 }
 
 .image-move li{
-    flex: 1;
-    width: 500px;
+    /* flex: 1; */
+    width: 400px;
 }
 
 .image-move li>img{
     width: 100%;
     /* height: auto;  */
-    aspect-ratio: 1.2/1;
+    aspect-ratio: 1.1/1;
     display: block;
 }
 
@@ -42,6 +42,6 @@
 
 @keyframes img-move-ani{
     to{
-        left: -4000px;
+        left: -3200px;
     }
 }
