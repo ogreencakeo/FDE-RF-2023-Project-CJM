@@ -257,6 +257,106 @@ export const attractionData = [
         desc : "빅서커스 단장이 된 빅 버드. 빅 버드의 지시에 따라 동물들이 어슬렁어슬렁 주변을 돌고 있네요. 이 많은 동물을 타고 함께 빙글빙글.^협찬: ART MOVING COMPANY",
         type : 'wonderland'
     },
+    {
+        idx : "25",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction25.jpg",
+        map : "map/attraction25.jpg",
+        name : "빅 버드 빅 네스트",
+        title : "빅 버드의 둥지는 거대한 정글짐!",
+        desc : "센트럴 파크에 나타난 빅 버드의 둥지는 신나는 놀이공원이랍니다. 균형을 잡은 채 밧줄을 건너고 그물 위를 오르락내리락하면서 힘차게 몸을 움직여요! 씩씩하게 몸을 움직이자!",
+        type : 'wonderland'
+    },
+    {
+        idx : "26",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction26.jpg",
+        map : "map/attraction26.jpg",
+        name : "세서미 빅 드라이브",
+        title : "세서미 스트리트™의 친구들이 자동차로 변신!",
+        desc : "마치 뉴욕 센트럴 파크를 달리고 있는 듯한 박력 있는 드라이브를 즐길 수 있는 라이드 어트랙션.",
+        type : 'wonderland'
+    },
+    {
+        idx : "27",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction27.jpg",
+        map : "map/attraction27.jpg",
+        name : "스누피 사운드 스테이지 어드벤처™",
+        title : "스누피와 친구들과 함께 영화 스튜디오에서 놀아요!",
+        desc : "아이들이 자유롭게 놀 수 있는 즐길 거리가 가득한 실내형 플레이랜드입니다.",
+        type : 'wonderland'
+    },
+    {
+        idx : "28",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction28.jpg",
+        map : "map/attraction28.jpg",
+        name : "애비의 매지컬 트리",
+        title : "나무 안은 큰 정글짐 같아요!",
+        desc : "커다란 나무 안을 들여다보자 정말 신나는 정글짐이 펼쳐졌어요!꼭대기까지 열심히 올라가면 어떤 경치가 보일까요?",
+        type : 'wonderland'
+    },
+    {
+        idx : "29",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction29.jpg",
+        map : "map/attraction29.jpg",
+        name : "애비의 매지컬 파티",
+        title : "큰 별이나 공을 가지고 자유롭게 놀아요!",
+        desc : "애비가 마법을 건 홀에는 커다란 별 블록과 공이 가득해요. 블록 위에 올라가거나 공을 던지면서 크고 작은 친구들도 다 함께 사이좋게 놀아요!",
+        type : 'wonderland'
+    },
+    {
+        idx : "30",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction30.jpg",
+        map : "map/attraction30.jpg",
+        name : "어니의 러버 덕 레이스",
+        title : "어니가 좋아하는 오리 장난감이 떠 있는 강에서 물놀이해요!",
+        desc : "마음에 드는 오리를 고르면 언덕 위에서 결승점을 향해 물에 띄워요.^도중에 걸리지 않고 끝까지 잘 도착할 수 있을까요?",
+        type : 'wonderland'
+    },
+    {
+        idx : "31",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction31.jpg",
+        map : "map/attraction31.jpg",
+        name : "엘모의 고 고 스케이트보드",
+        title : "엘모와 함께 경사면을 종횡무진 달려 내려가자!",
+        desc : "엘모와 함께 스케이트보드를 타고 경사면을 상쾌하게 달려보자!^거대한 스케이트보드의 예측할 수 없는 다이내믹한 움직임에 아이들은 콩닥콩닥, 어른들도 어느샌가 환호성을 질러요!^협찬: ART MOVING COMPANY",
+        type : 'wonderland'
+    },
+    {
+        idx : "32",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction32.jpg",
+        map : "map/attraction32.jpg",
+        name : "엘모의 리틀 드라이브",
+        title : "만 3~5세 대상 고 카트.",
+        desc : "만 3세 어린이도 운전을 만끽할 수 있는 라이드 어트랙션. 귀여운 엘모 디자인의 자동차로 주행코스를 달려보아요.^협찬: ART MOVING COMPANY",
+        type : 'wonderland'
+    },
+    {
+        idx : "33",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction33.jpg",
+        map : "map/attraction33.jpg",
+        name : "엘모의 버블 버블",
+        title : "미니 보트를 타고 물 위를 둘러보자.",
+        desc : "엘모의 꿈나라에 오신 것을 환영합니다. 엘모의 애완동물인 금붕어 도로시를 타고 떠나는 수상 여행 출발! 엘모가 만드는 비눗방울을 감상하며 여유롭게 항해하세요. 꿈속 세상 같은 실내 라이드 어트랙션입니다.",
+        type : 'wonderland'
+    },
+    {
+        idx : "34",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction34.jpg",
+        map : "map/attraction34.jpg",
+        name : "워터 가든",
+        title : "물이 리드미컬하게 솟아오르기도 하고 흐르기도 해요. 물을 만지며 놀 수 있어요.",
+        desc : "물이 리드미컬하게 솟아오르기도 하고 흘러내리기도 해요.",
+        type : 'wonderland'
+    },
 ];
 
 /* 
