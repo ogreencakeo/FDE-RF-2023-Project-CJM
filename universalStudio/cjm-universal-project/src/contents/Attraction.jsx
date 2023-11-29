@@ -1,4 +1,5 @@
 import { AttractionCont } from "./module/AttractionCont";
+import '../css/attraction.css';
 
 export function Attraction() {
     return (
