@@ -380,11 +380,21 @@ export const attractionData = [
     {
         idx : "37",
         logo : "logo/attraction18.jpg",
-        img : "img/attraction36.jpg",
-        map : "map/attraction36.jpg",
-        name : "쿠키 몬스터 슬라이드",
-        title : "커다란 쿠키를 발견했어요! 쿠키를 가지러 큰 미끄럼틀을 한 번에 내려가 볼까요!",
-        desc : "쿠키 몬스터가 커다란 미끄럼틀로 변했어요! 거대한 초코칩 쿠키를 먹으려고 내민 혀에 올라타서 단숨에 내려가 볼까요!",
+        img : "img/attraction37.jpg",
+        map : "map/attraction37.jpg",
+        name : "헬로키티 리본 컬렉션",
+        title : "헬로키티와 함께 기념사진을 찍자!",
+        desc : "헬로키티가 모두를 위해 스튜디오를 공개했습니다. 최신 패션 아이템과 하이힐 모양의 미끄럼틀에서 즐거운 시간을 보내고, 키티와 함께 기념사진도 찍어보세요.",
+        type : 'wonderland'
+    },
+    {
+        idx : "38",
+        logo : "logo/attraction18.jpg",
+        img : "img/attraction38.jpg",
+        map : "map/attraction38.jpg",
+        name : "헬로키티 컵케이크 드림",
+        title : "빙글빙글 돌며 헬로키티의 깜찍한 세계를 만끽하자!",
+        desc : "헬로키티의 케이크 파티에 초대합니다. 색색별로 진열된 컵케이크 가운데 여러분은 어떤 것을 고르실 것인가요?^음악에 맞춰 빙글빙글 컵이 돌아갑니다. 핸들을 돌리면 더 재미있어질지도 모릅니다.",
         type : 'wonderland'
     },
 ];
