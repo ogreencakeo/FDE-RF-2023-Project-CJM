@@ -21,7 +21,7 @@ export function SwiperSec(props) {
                 {props.category == "restaurant" ? "푸드&레스토랑 카트보기" : "굿즈 카트보기"}
             </h1>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={4}
                 spaceBetween={20}
                 navigation={true}
                 modules={[Navigation]}
