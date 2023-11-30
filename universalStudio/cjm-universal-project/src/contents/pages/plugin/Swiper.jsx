@@ -11,17 +11,14 @@ import "../../../css/swiper.css";
 
 // import required modules
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-export function GoodsSwiper() {
-    // const imgArr = [
-    //     "1.jpg",
-    //     "2.jpg",
-    //     "3.jpg",
-    //     "4.jpg",
-    //     "5.jpg",
-    //     "6.png",
-    //     "6.png",
-    //     "6.png",
-    // ];
+export function GoodsSwiper(props) {
+    const attractionImg = [
+        "../../../images/attraction/img/attraction2.jpg",
+        "../../../images/attraction/img/attraction15.jpg",
+        "../../../images/attraction/img/attraction18.jpg",
+        "../../../images/attraction/img/attraction24.jpg",
+        "../../../images/attraction/img/attraction32.jpg",
+    ];
 
     const makeCod = () => {
         const temp = [];
@@ -29,6 +26,17 @@ export function GoodsSwiper() {
             temp[i] = (
                 <SwiperSlide key={i}>
                     <img src={"../../../images/goods/logoSwipe/" + (i + 1) + ".jpg"} alt="Logo image" />
+                </SwiperSlide>
+            );
+        }
+        return temp;
+    };
+    const makeCod2 = () => {
+        const temp = [];
+        for (let i = 0; attractionImg.length < 7; i++) {
+            temp[i] = (
+                <SwiperSlide key={i}>
+                    <img src={attractionImg[i]} alt="ticket image" />
                 </SwiperSlide>
             );
         }
@@ -54,12 +62,8 @@ export function GoodsSwiper() {
                         disableOnInteraction: false,
                     }}
                 >
-                    {makeCod()}
-                    {/* {imgArr.map((v, i) => (
-                        <SwiperSlide key={i}>
-                            <img src={"../../../images/goods/logoSwipe/" + v } alt="Logo image" />
-                        </SwiperSlide>
-                    ))} */}
+                    {props.cat == 'ticket' && makeCod2()}
+                    {props.cat == 'goods' && makeCod()}
                 </Swiper>
             </div>
         </>

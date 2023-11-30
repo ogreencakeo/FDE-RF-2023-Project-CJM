@@ -10,7 +10,7 @@ export function HelloKitty(){
     return (
         <>
             <GoodsAd ad='helloKitty' bg_color = '#fcc7f4'/>
-            <GoodsSwiper />
+            <GoodsSwiper cat='goods' />
             <GoodsItem cat={goods[6]} category="helloKitty" />
             <Map shop_info='map7' shop_location='헬로키티' cat='goods' />
         </>

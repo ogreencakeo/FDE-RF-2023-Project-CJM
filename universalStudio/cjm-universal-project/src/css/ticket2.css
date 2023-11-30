@@ -1,11 +1,134 @@
-.ticket-wrap{
-    min-width: 100%;
+.ticket-wrap {
+    /* min-width: 100%; */
     /* margin-top: 200px; */
+    max-width: 100%;
 }
 
-.ticket-wrap-bx{
-    background: url(../../public/images/goods/character/grass.png) no-repeat;
+.ticket-wrap-bx {
+    /* background: url(../../public/images/goods/character/grass.png) no-repeat; */
     max-width: 1280px;
-    aspect-ratio: 2/1.42;
+    /* aspect-ratio: 2/1.42; */
     margin: 0 auto;
+    /* background-color: black; */
+    display: flex;
 }
+.ticket-wrap-bx>div{
+    flex: 1;
+    max-width: 100%;
+}
+/* 티켓 메인 이미지 */
+.ticket-main-img{
+    position: relative;
+    max-width: 100%;
+}
+.ticket-main-img>img{
+    /* border: 20px solid black; */
+    margin-right: 25px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+}
+.ticket-main-img>span{
+    font-size: 2vw;
+    position: absolute;
+    display: block;
+    transform: rotate(90deg);
+    left: -20%;
+    top: 25%;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    border: 5px solid #524a37;
+    box-sizing: border-box;
+}
+
+
+
+/* 티켓 메인 정보 */
+.ticket-main-cont {
+    margin-top: 30px;
+    /* padding: 30px; */
+    /* background: url(../../public/images/main/character/character4.png) no-repeat; */
+    /* backmax-width: 600px; */
+}
+.ticket-main-cont > h1 {
+    margin-bottom: 30px;
+}
+.ticket-main-cont > h1::after {
+    display: block;
+    content: '';
+    background-color: #ccc;
+    height: 3px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.ticket-main-cont > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 티켓정보 */
+.ticket-info-bx {
+    display: flex;
+    width: 100%;
+    /* outline: 1px solid red; */
+    text-align: center;
+    flex-wrap: wrap;
+    /* background: url(../../public/images/main/character/character4.png) no-repeat; */
+}
+.ticket-info-bx > div {
+    width: calc((100% - 60px) / 3);
+    /* outline: 1px solid blue; */
+    box-sizing: border-box;
+    padding: 30px 10px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.ticket-info-bx > div > span {
+    display: block;
+    font-size: 1.3em;
+}
+.ticket-info-bx > div > span:first-child {
+    font-size: 4vw;
+    margin-bottom: 25px;
+}
+
+.ticket-info-bx > div:first-child span:first-child{
+    color: #524a37;
+}
+.ticket-info-bx > div:first-child {
+    border: 2px solid #524a37;
+}
+.ticket-info-bx > div:nth-child(2) span:first-child{
+    color: #281a78;
+}
+.ticket-info-bx > div:nth-child(2) {
+    border: 2px solid #281a78;
+}
+.ticket-info-bx > div:nth-child(3) span:first-child{
+    color:#05fa46;
+}
+.ticket-info-bx > div:nth-child(3) {
+    border: 2px solid #05fa46;
+}
+.ticket-info-bx > div:nth-child(4) span:first-child{
+    color:#f77c00;
+}
+.ticket-info-bx > div:nth-child(4) {
+    border: 2px solid #f77c00;
+}
+.ticket-info-bx > div:nth-child(5) span:first-child{
+    color:#f7eb05;
+}
+.ticket-info-bx > div:nth-child(5) {
+    border: 2px solid #f7eb05;
+}
+.ticket-info-bx > div:last-child span:first-child{
+    color:#fa0525;
+}
+.ticket-info-bx > div:last-child {
+    border: 2px solid #fa0525;
+}
+
