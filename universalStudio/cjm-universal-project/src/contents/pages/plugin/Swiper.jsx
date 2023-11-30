@@ -39,6 +39,20 @@ export function GoodsSwiper() {
                     loop={true}
                     navigation={true}
                     modules={[Pagination, Navigation, Autoplay]}
+                    breakpoints={{
+                        300: {
+                            slidesPerView: 1,
+                        },
+                        550: {
+                            slidesPerView: 2,
+                        },
+                        1000: {
+                            slidesPerView: 3,
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                        },
+                    }}
                     className="mySwiper"
                     autoplay={{
                         delay: 2500,

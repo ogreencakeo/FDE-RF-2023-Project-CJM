@@ -157,7 +157,7 @@
 
 .ticket-inquiry-cont{
     width: 90%;
-    margin: 0 auto;
+    margin: 30px auto 0;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -175,6 +175,7 @@
 .ticket-inquiry-cont>img{
     display: block;
     margin: 0 auto;
+    max-width: 210px;
 }
 
 /* 티켓 옵션 박스 A시즌~C시즌 */

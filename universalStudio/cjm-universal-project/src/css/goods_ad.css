@@ -8,6 +8,10 @@
     max-width: 800px;
     margin: 150px auto 50px;
 }
+.goods_ad_main_img>div{
+    max-width: 450px;
+    margin: 0 auto;
+}
 .goods_ch3{
     max-width: 200px;
     margin-bottom: 10px;
@@ -24,7 +28,7 @@
     }
 }
 .goods_ch4{
-    max-width: 450px;
+    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -46,6 +50,8 @@
 
 .goods_ad_cont{
     display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 .goods_ad_cont>div{
     flex: 1;
@@ -54,7 +60,7 @@
 
 
 .goods_img_logo>img{
-    width: 100%;
+    max-width: 100%;
     aspect-ratio: 1/1;
     display: block;
 }

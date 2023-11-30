@@ -21,16 +21,19 @@ export function SwiperSec(props) {
                 {props.category == "restaurant" ? "푸드&레스토랑 카트보기" : "굿즈 카트보기"}
             </h1>
             <Swiper
-                // slidesPerView={4}
+                slidesPerView={4}
                 spaceBetween={20}
                 navigation={true}
                 modules={[Navigation]}
                 breakpoints={{
-                    350: {
-                        slidesPerView: 1,
+                    300 : {
+                        slidesPerView : 1,
+                    },
+                    650: {
+                        slidesPerView: 2,
                     },
                     1000: {
-                        slidesPerView: 2,
+                        slidesPerView: 3,
                     },
                     1200: {
                         slidesPerView: 4,
