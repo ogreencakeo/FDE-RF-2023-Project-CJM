@@ -25,17 +25,6 @@ export function GoodsSwiper() {
         }
         return temp;
     };
-    const makeCod2 = () => {
-        const temp = [];
-        for (let i = 0; attractionImg.length < 7; i++) {
-            temp[i] = (
-                <SwiperSlide key={i}>
-                    <img src={attractionImg[i]} alt="ticket image" />
-                </SwiperSlide>
-            );
-        }
-        return temp;
-    };
 
     return (
         <>
