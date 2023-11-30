@@ -70,7 +70,6 @@ export function Ticket() {
     return (
         <>
             <div className="ticket-wrap">
-                {/* <TicketSwiper /> */}
                 <div className="ticket-wrap-bx">
                     {/* 티켓 메인 이미지 */}
                     <div className="ticket-main-img">
@@ -93,6 +92,21 @@ export function Ticket() {
                                     <span>{v.txt}</span>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+                {/* 티켓 구입 문의 */}
+                <div className="ticket-purchase-inquiry">
+                    <div className="ticket-inquiry-img">
+                        <img src="../images/main/character/character7.png" alt="티켓 구입 문의" />
+                        <div className="ticket-inquiry-cont">
+                            <h1>티켓 구입 문의</h1>
+                            <p>
+                                문의처: JTR Web Global Support Center Email:contact@jtrweb.com ※이 메일 주소는 여행사
+                                전용 비즈니스 메일입니다.여행사가 아닌 문의사항의 경우, 회신할 수 없으므로 양해
+                                바랍니다. 영업시간:월～금 일본시간 10:00～18:00 ※현재 문의가 많아 답장에 시간이 걸릴 수
+                                있습니다. 불편을 끼쳐 대단히 죄송합니다. 이해해 주셔서 감사합니다.
+                            </p>
                         </div>
                     </div>
                 </div>

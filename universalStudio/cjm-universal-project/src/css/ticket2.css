@@ -5,12 +5,15 @@
 }
 
 .ticket-wrap-bx {
-    /* background: url(../../public/images/goods/character/grass.png) no-repeat; */
+    /* background: url(../../public/images/main/character/character8.png) no-repeat; */
+    object-fit: contain;
     max-width: 1280px;
+    /* aspect-ratio: 1/1; */
     /* aspect-ratio: 2/1.42; */
     margin: 0 auto;
     /* background-color: black; */
     display: flex;
+    padding: 20px;
 }
 .ticket-wrap-bx>div{
     flex: 1;
@@ -20,6 +23,7 @@
 .ticket-main-img{
     position: relative;
     max-width: 100%;
+    /* padding: 50px; */
 }
 .ticket-main-img>img{
     /* border: 20px solid black; */
@@ -78,17 +82,17 @@
     /* background: url(../../public/images/main/character/character4.png) no-repeat; */
 }
 .ticket-info-bx > div {
-    width: calc((100% - 60px) / 3);
+    width: calc((100% - 84px) / 3);
     /* outline: 1px solid blue; */
     box-sizing: border-box;
-    padding: 30px 10px;
+    padding: 30px 50px;
     margin: 10px;
     border-radius: 25px;
 }
 
 .ticket-info-bx > div > span {
     display: block;
-    font-size: 1.3em;
+    font-size: 1vw;
 }
 .ticket-info-bx > div > span:first-child {
     font-size: 4vw;
@@ -132,6 +136,39 @@
     border: 2px solid #fa0525;
 }
 
+/* 티켓 구입 문의 */
+.ticket-purchase-inquiry{
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.ticket-inquiry-img{
+    max-width: 640px;
+    position: relative;
+    margin: 0 auto;
+}
+.ticket-inquiry-img>img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+}
+
+.ticket-inquiry-cont{
+    max-width: 640px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ticket-inquiry-cont>h1{
+    margin-bottom: 20px;
+}
+.ticket-inquiry-cont>p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
 
 /* 티켓 옵션 박스 A시즌~C시즌 */
 .ticket-option-wrap{
@@ -147,6 +184,15 @@
 
 .ticket-option-bx>h1{
     font-size: 7vw;
+}
+.ticket-option-bx:first-child>h1{
+    color: orangered;
+}
+.ticket-option-bx:nth-child(2)>h1{
+    color:olive;
+}
+.ticket-option-bx:last-child>h1{
+    color: palegoldenrod;
 }
 .ticket-option-bx>h2{
     font-size: 1.3vw;

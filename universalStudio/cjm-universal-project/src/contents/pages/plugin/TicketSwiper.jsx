@@ -1,60 +1,38 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+// import React, { useRef, useState } from "react";
+// // Import Swiper React components
+// import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+// // Import Swiper styles
+// import "swiper/css";
+// import "swiper/css/pagination";
 
-import "../../../css/swiper.css";
+// import "./styles.css";
 
-// import required modules
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// // import required modules
+// import { Pagination } from "swiper/modules";
 
-export function TicketSwiper() {
-    const attractionImg = [
-        "../../../images/attraction/img/attraction2.jpg",
-        "../../../images/attraction/img/attraction15.jpg",
-        "../../../images/attraction/img/attraction18.jpg",
-        "../../../images/attraction/img/attraction24.jpg",
-        "../../../images/attraction/img/attraction32.jpg",
-    ];
-
-    const makeCod2 = () => {
-        const temp = [];
-        for (let i = 0; attractionImg.length; i++) {
-            temp[i] = (
-                <SwiperSlide key={i}>
-                    <img src={attractionImg[i]} alt="ticket image" />
-                </SwiperSlide>
-            );
-        }
-        return temp;
-    };
-
-    return (
-        <>
-            <div className="goods-top-cont-wrap">
-                <h1>굿즈를 판매하고 있는 다른 숍!</h1>
-                <Swiper
-                    slidesPerView={3}
-                    spaceBetween={50}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    loop={true}
-                    navigation={true}
-                    modules={[Pagination, Navigation, Autoplay]}
-                    className="mySwiper"
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                >
-                    {makeCod2()}
-                </Swiper>
-            </div>
-        </>
-    );
-}
+// export default function App() {
+//     return (
+//         <>
+//             <Swiper
+//                 slidesPerView={3}
+//                 spaceBetween={20}
+//                 pagination={{
+//                     clickable: true,
+//                 }}
+//                 modules={[Pagination]}
+//                 className="mySwiper"
+//             >
+//                 <SwiperSlide>Slide 1</SwiperSlide>
+//                 <SwiperSlide>Slide 2</SwiperSlide>
+//                 <SwiperSlide>Slide 3</SwiperSlide>
+//                 <SwiperSlide>Slide 4</SwiperSlide>
+//                 <SwiperSlide>Slide 5</SwiperSlide>
+//                 <SwiperSlide>Slide 6</SwiperSlide>
+//                 <SwiperSlide>Slide 7</SwiperSlide>
+//                 <SwiperSlide>Slide 8</SwiperSlide>
+//                 <SwiperSlide>Slide 9</SwiperSlide>
+//             </Swiper>
+//         </>
+//     );
+// }
