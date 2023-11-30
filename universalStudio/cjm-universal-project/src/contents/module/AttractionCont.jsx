@@ -1,7 +1,10 @@
 
 import { Link } from 'react-router-dom';
+// CSS
 import '../../css/attractionCont.css';
+// 데이터
 import {attractionData} from '../../data/attraction/attractionData';
+
 export function AttractionCont(){
     const selData = attractionData;
     return(
