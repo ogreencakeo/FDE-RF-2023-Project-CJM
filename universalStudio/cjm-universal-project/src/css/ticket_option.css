@@ -1,0 +1,22 @@
+
+/* 티켓 옵션 박스 */
+.ticket-suboption-wrap>h1{
+    margin: 40px 0;
+    font-size: 2.5em;
+}
+.ticket-suboption-bx{
+    display: flex;
+}
+.ticket-opt-character{
+    flex: 1;
+    text-align: center;
+    margin: 50px 0;
+    /* cursor: pointer; */
+}
+/* .ticket-opt-character:hover {
+    color: blue;
+} */
+/* 티켓 옵션 박스 폰트어썸 캐릭터 - 노인, 성인, 아이*/
+.ticket-opt-character>h1{
+    font-size: 8em;
+}
