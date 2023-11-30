@@ -1,21 +1,13 @@
-
-
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faPaste,
-    faCircleUser,
-    faHourglassHalf,
-    faCircleXmark,
-} from "@fortawesome/free-regular-svg-icons";
-import {faCalendarWeek, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faPaste, faCircleUser, faHourglassHalf, faCircleXmark } from "@fortawesome/free-regular-svg-icons";
+import { faCalendarWeek, faLocationDot, faTicket } from "@fortawesome/free-solid-svg-icons";
 // import "../css/ticket.css";
 import "../css/ticket2.css";
 import { TicketSwiper } from "../contents/pages/plugin/TicketSwiper";
 import { TicketOption } from "./module/TicketOption";
 
 export function Ticket() {
-
     const ticket_info = [
         {
             font: <FontAwesomeIcon icon={faPaste} />,
@@ -42,6 +34,35 @@ export function Ticket() {
             txt: "오사카",
         },
     ];
+
+    const ticket_opt = ["[1일권 Low Price (A시즌)]", "[1일권 Middle Price (B시즌)]", "[1일권 High Price (C시즌)]"];
+
+    // const makeCod2 = () => {
+    //     const temp = [];
+    //     for (let i = 0; attractionImg.length; i++) {
+    //         temp[i] = (
+    //             <SwiperSlide key={i}>
+    //                 <img src={attractionImg[i]} alt="ticket image" />
+    //             </SwiperSlide>
+    //         );
+    //     }
+    //     return temp;
+    // };
+
+    const makeTiOption = () => {
+        const temp = [];
+        for (let i = 0; i < ticket_opt.length; i++) {
+            temp[i] = (
+                <div className="ticket-option-bx">
+                    <h1>
+                        <FontAwesomeIcon icon={faTicket} />{" "}
+                    </h1>
+                    <h2>{ticket_opt[i]}</h2>
+                </div>
+            );
+        }
+        return temp;
+    };
 
     return (
         <>
@@ -72,8 +93,13 @@ export function Ticket() {
                         </div>
                     </div>
                 </div>
-                <TicketOption />
-                
+                <div className="ticket-option-wrap">
+                    <div className="ticket-option-bx-wrap">
+                        {/* 티켓옵션박스 A시즌~C시즌 */}
+                        {makeTiOption()}
+                    </div>
+                    <TicketOption />
+                </div>
             </div>
         </>
     );
