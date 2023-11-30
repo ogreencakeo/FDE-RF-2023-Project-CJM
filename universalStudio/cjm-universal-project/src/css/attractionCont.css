@@ -4,12 +4,20 @@
     flex-wrap: wrap;
 }
 
-.attractionCont-list-bx{
+.attractionCont-list-wrap>a{
+    display: block;
     width: calc((100% - 120px) / 3);
-    text-align: center;
     padding: 10px;
     margin: 10px;
     border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.attractionCont-list-bx{
+    width: 100%;
+    aspect-ratio: 1/1;
+    text-align: center;
     box-sizing: border-box;
     border-radius: 20px;
     cursor: pointer;

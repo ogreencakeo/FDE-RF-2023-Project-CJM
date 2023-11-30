@@ -8,11 +8,13 @@ import {SeasonalMenu} from './contents/SeasonalMenu.jsx'
 import {Goods} from './contents/Goods.jsx'
 import {CustomerCenter} from './contents/CustomerCenter.jsx'
 import { Ticket } from './contents/TIcket.jsx';
+import { Detail } from './contents/Detail.jsx';
 
 // CSS 불러오기
 import './css/common.css';
 
 import { Layout } from './layout/Layout';
+
 
 export default function App() {
 
@@ -30,6 +32,7 @@ export default function App() {
           <Route path='goods/*' element={<Goods />} />
           <Route path='ticket' element={<Ticket />} />
           <Route path='customerCenter' element={<CustomerCenter />} />
+          <Route path='detail' element={<Detail />} />
         </Route>
       </Routes>
     </BrowserRouter>
