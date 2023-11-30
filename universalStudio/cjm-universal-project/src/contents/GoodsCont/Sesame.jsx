@@ -7,7 +7,7 @@ export function Sesame() {
     return (
         <>
             <GoodsAd ad='sesame' bg_color = '#e1bae8'/>
-            <GoodsSwiper  cat='goods' />
+            <GoodsSwiper />
             <GoodsItem cat={goods[3]} category="sesame" />
             <Map shop_info='map4' shop_location='세서미 스트리트™' cat='goods' />
         </>

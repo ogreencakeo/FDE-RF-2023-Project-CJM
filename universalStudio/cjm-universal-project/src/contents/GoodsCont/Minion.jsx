@@ -10,7 +10,7 @@ export function Minion() {
     return (
         <>
             <GoodsAd ad="minion" bg_color="#fac505" />
-            <GoodsSwiper cat='goods' />
+            <GoodsSwiper />
             <GoodsItem cat={goods[7]} category="minion" />
             <Map shop_info='map8' shop_location='미니언' cat='goods' />
         </>

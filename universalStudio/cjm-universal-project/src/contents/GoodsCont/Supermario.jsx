@@ -12,7 +12,7 @@ export function Supermario(){
     return(
         <>
             <GoodsAd ad='supermario' bg_color = '#ed7777'/>
-            <GoodsSwiper cat='goods' />
+            <GoodsSwiper/>
             <GoodsItem cat={goods[0]} category="supermario" />
             <Map shop_info='map1' shop_location='슈퍼마리오' cat='goods' />
         </>

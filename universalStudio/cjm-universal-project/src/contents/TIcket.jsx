@@ -1,29 +1,20 @@
+
+
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faShareFromSquare,
     faPaste,
     faCircleUser,
     faHourglassHalf,
     faCircleXmark,
 } from "@fortawesome/free-regular-svg-icons";
-import { faCoins, faLocationCrosshairs, faCalendarWeek, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {faCalendarWeek, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 // import "../css/ticket.css";
 import "../css/ticket2.css";
-import { GoodsSwiper } from "../contents/pages/plugin/Swiper";
+import { TicketSwiper } from "../contents/pages/plugin/TicketSwiper";
+import { TicketOption } from "./module/TicketOption";
 
 export function Ticket() {
-    // const makeTicImgList = () => {
-    //     let temp = [];
-    //     for (let i = 0; i < 2; i++) {
-    //         temp[i] = (
-    //             <li key={i}>
-    //                 <img src={`./images/slide-main${i + 1}.jpg`} alt="슬라이드 이미지" />
-    //             </li>
-    //         );
-    //     }
-    //     return temp;
-    // };
 
     const ticket_info = [
         {
@@ -55,7 +46,7 @@ export function Ticket() {
     return (
         <>
             <div className="ticket-wrap">
-                <GoodsSwiper cat='ticket' />
+                {/* <TicketSwiper /> */}
                 <div className="ticket-wrap-bx">
                     {/* 티켓 메인 이미지 */}
                     <div className="ticket-main-img">
@@ -81,6 +72,7 @@ export function Ticket() {
                         </div>
                     </div>
                 </div>
+                <TicketOption />
                 
             </div>
         </>

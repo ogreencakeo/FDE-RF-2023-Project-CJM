@@ -11,23 +11,19 @@ import "../../../css/swiper.css";
 
 // import required modules
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-export function GoodsSwiper() {
-   
 
-    const makeCod = () => {
-        const temp = [];
-        for (let i = 0; i < 7; i++) {
-            temp[i] = (
-                <SwiperSlide key={i}>
-                    <img src={"../../../images/goods/logoSwipe/" + (i + 1) + ".jpg"} alt="Logo image" />
-                </SwiperSlide>
-            );
-        }
-        return temp;
-    };
+export function TicketSwiper() {
+    const attractionImg = [
+        "../../../images/attraction/img/attraction2.jpg",
+        "../../../images/attraction/img/attraction15.jpg",
+        "../../../images/attraction/img/attraction18.jpg",
+        "../../../images/attraction/img/attraction24.jpg",
+        "../../../images/attraction/img/attraction32.jpg",
+    ];
+
     const makeCod2 = () => {
         const temp = [];
-        for (let i = 0; attractionImg.length < 7; i++) {
+        for (let i = 0; attractionImg.length; i++) {
             temp[i] = (
                 <SwiperSlide key={i}>
                     <img src={attractionImg[i]} alt="ticket image" />
@@ -56,7 +52,7 @@ export function GoodsSwiper() {
                         disableOnInteraction: false,
                     }}
                 >
-                    {makeCod()}
+                    {makeCod2()}
                 </Swiper>
             </div>
         </>
