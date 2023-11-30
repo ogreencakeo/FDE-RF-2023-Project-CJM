@@ -1,7 +1,7 @@
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaste, faCircleUser, faHourglassHalf, faCircleXmark } from "@fortawesome/free-regular-svg-icons";
-import { faCalendarWeek, faLocationDot, faTicket } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarWeek, faLocationDot, faTicket, faEye } from "@fortawesome/free-solid-svg-icons";
 // import "../css/ticket.css";
 import "../css/ticket2.css";
 import { TicketSwiper } from "../contents/pages/plugin/TicketSwiper";
@@ -58,6 +58,9 @@ export function Ticket() {
                         <FontAwesomeIcon icon={faTicket} />{" "}
                     </h1>
                     <h2>{ticket_opt[i]}</h2>
+                    <p>
+                        <FontAwesomeIcon icon={faEye} />
+                    </p>
                 </div>
             );
         }
