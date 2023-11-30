@@ -243,3 +243,10 @@
     z-index: 10;
     background-color: #ffffff00;
 }
+
+/* 티켓 서브 옵션 박스 */
+.ticket-suboption-wrap{
+    max-width: 1280px;
+    margin: 80px auto;
+    border: 1px solid #ccc;
+}
