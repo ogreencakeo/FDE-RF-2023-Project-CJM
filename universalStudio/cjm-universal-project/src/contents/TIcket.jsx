@@ -58,9 +58,10 @@ export function Ticket() {
                         <FontAwesomeIcon icon={faTicket} />{" "}
                     </h1>
                     <h2>{ticket_opt[i]}</h2>
-                    <p>
+                    <div>
                         <FontAwesomeIcon icon={faEye} />
-                    </p>
+                        {/* <img src="../images/main/character/more.png" alt="" /> */}
+                    </div>
                 </div>
             );
         }

@@ -208,48 +208,52 @@
 }
 
 /* 티켓옵션 오버시 */
-.ticket-option-bx{
-    width: calc((100% - 50px) /3);
+.ticket-option-bx {
+    position: relative;
+    width: calc((100% - 50px) / 3);
     text-align: center;
     margin: 10px;
     border: 3px solid black;
-    padding: 50px 0;
-
-    position: relative;
-    cursor: pointer;
-    transition: all .4s ease-out;
+    overflow: hidden; /* 내용 넘치게 감춤 */
 }
 
-.ticket-option-bx:hover ::before{
+.ticket-option-bx::before {
     content: '';
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: #000;
-    opacity: 0.5;
-
-    /* 트랜지션: 속시이지 */
-    transition: all .4s ease-out;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease-out;
 }
 
-.ticket-option-bx>P{
+.ticket-option-bx:hover::before {
+    opacity: 0.5;
+}
+
+.ticket-option-bx h2 {
+    margin-top: 10px;
+}
+
+.ticket-option-bx div {
     position: absolute;
-    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 5vw;
     opacity: 0;
+    z-index: 1;
+    transition: font-weight 0.4s ease-out, opacity 0.4s ease-out;
 }
 
-.ticket-option-bx:hover p{
+.ticket-option-bx:hover div {
     font-weight: 800;
     opacity: 1;
     color: #fff;
-    z-index: 10;
-    background-color: #ffffff00;
+    z-index: 2;
 }
 
 /* 티켓 서브 옵션 박스 */
