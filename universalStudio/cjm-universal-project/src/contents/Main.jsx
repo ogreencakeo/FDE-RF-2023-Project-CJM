@@ -40,6 +40,7 @@ import { dragFn } from "../Function/dragFn.js";
 import "jquery-ui-dist/jquery-ui";
 import { ImgMoveSlide } from "./module/ImgMoveSlide.jsx";
 import { SwiperSec } from "./pages/plugin/SwiperSec.jsx";
+import { UniverSalText } from "./module/UniverSalText.jsx";
 
 // import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
 
@@ -342,6 +343,7 @@ export function Main() {
             <div className="page-footer">
                 <ImgMoveSlide imgMove="main" />
             </div> */}
+            <UniverSalText />
         </>
     );
 }

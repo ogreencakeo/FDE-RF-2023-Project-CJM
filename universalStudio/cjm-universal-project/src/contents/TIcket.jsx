@@ -6,6 +6,7 @@ import { faCalendarWeek, faLocationDot, faTicket, faEye } from "@fortawesome/fre
 import "../css/ticket2.css";
 import { TicketSwiper } from "../contents/pages/plugin/TicketSwiper";
 import { TicketOption } from "./module/TicketOption";
+import { UniverSalText } from "./module/UniverSalText";
 
 export function Ticket() {
     const ticket_info = [
@@ -37,15 +38,6 @@ export function Ticket() {
 
     const ticket_opt = ["[1일권 Low Price (A시즌)]", "[1일권 Middle Price (B시즌)]", "[1일권 High Price (C시즌)]"];
 
-    const move_txt = "UNIVERSAL STUDIO";
-
-    const makeTextCode = (i) => {
-        const temp = [];
-        for (let i = 0; i < 4; i++) {
-            temp[i] = <li key={i}>{move_txt}</li>;
-        }
-        return temp;
-    };
 
     return (
         <>
@@ -97,22 +89,7 @@ export function Ticket() {
                     <TicketOption />
                 </div>
             </div>
-            <div class="main3">
-                <div class="logo-move-wrap">
-                    <div class="logo-span-move-wrap">
-                        <div class="logo-span-wrap logo-span-ani">
-                            <ul>{makeTextCode()}</ul>
-                            <ul>{makeTextCode()}</ul>
-                        </div>
-                    </div>
-                    <div class="logo-span-move-wrap span-move2">
-                        <div class="logo-span-wrap logo-span-ani2">
-                            <ul>{makeTextCode()}</ul>
-                            <ul>{makeTextCode()}</ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <UniverSalText />
         </>
     );
 }
