@@ -113,7 +113,7 @@ export function Ticket() {
                 <div className="ticket-option-wrap">
                     <div className="ticket-option-bx-wrap">
                         {/* 티켓옵션박스 A시즌~C시즌 */}
-                        {makeTiOption()}
+                        {/* {makeTiOption()} */}
                     </div>
                     <TicketOption />
                 </div>

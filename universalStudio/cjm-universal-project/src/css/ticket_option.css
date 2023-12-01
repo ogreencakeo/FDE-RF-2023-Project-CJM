@@ -19,6 +19,15 @@
     font-size: 8rem;
     margin-bottom: 20px;
 }
+.ticket-opt-character:first-child>h1{
+    color: #ff4500;
+}
+.ticket-opt-character:nth-child(2)>h1{
+    color: #808000;
+}
+.ticket-opt-character:last-child>h1{
+    color: #eee8aa;
+}
 .ticket-opt-character>h2{
     margin-bottom: 10px;
     font-size: 1.3rem;
