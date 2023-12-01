@@ -37,35 +37,14 @@ export function Ticket() {
 
     const ticket_opt = ["[1일권 Low Price (A시즌)]", "[1일권 Middle Price (B시즌)]", "[1일권 High Price (C시즌)]"];
 
-    // const makeCod2 = () => {
-    //     const temp = [];
-    //     for (let i = 0; attractionImg.length; i++) {
-    //         temp[i] = (
-    //             <SwiperSlide key={i}>
-    //                 <img src={attractionImg[i]} alt="ticket image" />
-    //             </SwiperSlide>
-    //         );
-    //     }
-    //     return temp;
-    // };
+    const move_txt = "UNIVERSAL STUDIO";
 
-    const makeTiOption = () => {
+    const makeTextCode = (i) => {
         const temp = [];
-        for (let i = 0; i < ticket_opt.length; i++) {
-            temp[i] = (
-                <div className="ticket-option-bx" key={i}>
-                    <h1>
-                        <FontAwesomeIcon icon={faTicket} />{" "}
-                    </h1>
-                    <h2>{ticket_opt[i]}</h2>
-                    <div>
-                        <FontAwesomeIcon icon={faEye} />
-                        {/* <img src="../images/main/character/more.png" alt="" /> */}
-                    </div>
-                </div>
-            );
+        for (let i = 0; i < 4; i++) {
+            temp[i] = <li key={i}>{move_txt}</li>;
         }
-        return temp;
+        return temp[i];
     };
 
     return (
@@ -103,9 +82,9 @@ export function Ticket() {
                         <div className="ticket-inquiry-cont">
                             <img src="../images/main/character/character12.gif" alt="지구 이미지" />
                             <p>
-                                문의처: JTR Web Global Support Center Email:contact@jtrweb.com<br />
-                                ※이 메일 주소는 여행사
-                                전용 비즈니스 메일입니다.
+                                문의처: JTR Web Global Support Center Email:contact@jtrweb.com
+                                <br />
+                                ※이 메일 주소는 여행사 전용 비즈니스 메일입니다.
                             </p>
                         </div>
                     </div>
@@ -116,6 +95,46 @@ export function Ticket() {
                         {/* {makeTiOption()} */}
                     </div>
                     <TicketOption />
+                </div>
+            </div>
+            <div class="main3">
+                <div class="logo-move-wrap">
+                    <div class="logo-span-move-wrap">
+                        <div class="logo-span-wrap logo-span-ani">
+                            <ul>
+                            {makeTextCode()}
+                                {/* <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li>
+                            <li>UNIVERSAL STUDIO</li> */}
+                            </ul>
+                            <ul>
+                                {makeTextCode()}
+                                {/* <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li> */}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="logo-span-move-wrap span-move2">
+                        <div class="logo-span-wrap logo-span-ani2">
+                            <ul>
+                                {/* <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li> */}
+                                {makeTextCode()}
+                            </ul>
+                            <ul>
+                                {/* <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li>
+                                <li>UNIVERSAL STUDIO</li> */}
+                                {makeTextCode()}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

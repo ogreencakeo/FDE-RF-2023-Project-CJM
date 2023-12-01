@@ -260,6 +260,7 @@
 
 /* 티켓 서브 옵션 박스 */
 .ticket-suboption-wrap{
+    padding: 20px;
     max-width: 1280px;
     margin: 80px auto;
     border: 5px solid #ccc;

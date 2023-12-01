@@ -58,7 +58,9 @@ export function TicketOption() {
         <>
             {/* 티켓 서브 옵션 박스 랩핑 */}
             <div className="ticket-suboption-wrap">
-                <h1>[1일권 Low Price (A시즌)]</h1>
+                <img src="../images/main/character/character9.gif" alt="" />
+                <h1>[1일권 Low Price (A시즌)]
+                </h1>
                 {/* 티컷 서브 옵션 박스 */}
                 <div className="ticket-suboption-bx">
                     {option.map((v, idx) => (

@@ -1,7 +1,8 @@
 
 /* 티켓 옵션 박스 */
 .ticket-suboption-wrap>h1{
-    margin: 40px 0;
+    margin: 25px 0;
+    /* margin-bottom: 30px; */
     font-size: 2.5em;
 }
 .ticket-suboption-bx{
@@ -10,8 +11,11 @@
 .ticket-opt-character{
     flex: 1;
     text-align: center;
-    margin: 50px 0;
     /* cursor: pointer; */
+    border: 3px solid #b5b5b5;
+    margin: 50px 10px;
+    padding: 20px 0;
+    border-radius: 20px;
 }
 
 /* 티켓 옵션 박스 폰트어썸 캐릭터 - 노인, 성인, 아이*/
@@ -30,7 +34,7 @@
 }
 .ticket-opt-character>h2{
     margin-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 /* 티켓 버튼 +, - */
@@ -41,7 +45,7 @@
 .ticket-btn{
     margin: 0 10px;
     font-size: 1.2rem;
-    padding: 8px;
+    padding: 6px;
     border-radius: 5px;
     background-color: #fff;
     cursor: pointer;
@@ -65,5 +69,5 @@
 
 /* 총가격 */
 .ticket-total-price{
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
 }
