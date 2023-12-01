@@ -23,12 +23,14 @@ export function SeasonalInfo(props) {
                     {/* <!-- 레스토랑 로고 + 컨텐츠박스 wrap --> */}
                     <div className="restaurant_explanation ">
                         {/* <!-- 레스토랑 로고 --> */}
-                        <div className={`restaurant_logo${selData.idx} restaurant_logo`}></div>
-                        <div className="restaurant_caution col-3">
-                            <p>에어리어</p>
-                            <p>할리우드</p>
-                            <p>파크 맵</p>
-                            <p>파크 정보</p>
+                        <div className="col-3">
+                            <div className={`restaurant_logo${selData.idx} restaurant_logo`}></div>
+                            <div className="restaurant_caution">
+                                <p>에어리어</p>
+                                <p>할리우드</p>
+                                <p>파크 맵</p>
+                                <p>파크 정보</p>
+                            </div>
                         </div>
                         <div className="restaurant_content_wrap col-8">
                             <span>푸드&레스토랑</span>
