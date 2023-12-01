@@ -19,4 +19,8 @@
 /* 티켓 옵션 박스 폰트어썸 캐릭터 - 노인, 성인, 아이*/
 .ticket-opt-character>h1{
     font-size: 8em;
+    margin-bottom: 20px;
+}
+.ticket-opt-character>h2{
+    margin-bottom: 10px;
 }
