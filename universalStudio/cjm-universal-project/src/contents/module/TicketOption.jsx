@@ -38,9 +38,16 @@ export function TicketOption() {
         }
     }
 
+    // 각 가격 계산
+    const optionPrice = () => {
+        
+    }
+
     // 전체 가격 계산
     const totalPrice = () => {
-        return
+        return option.reduce((total, option) =>
+            total + option.quantity * option.price, 0 
+        )
     }
     return (
         <>
@@ -57,6 +64,7 @@ export function TicketOption() {
                         <h2>₩ 74,300</h2>
                         <button>＋</button>
                         <button>－</button>
+                        <h3>totalPrice : {optionPrice}</h3>
                     </div>
                     <div className="option-child ticket-opt-character">
                         <h1>
@@ -75,6 +83,7 @@ export function TicketOption() {
                         <h2>₩ 66,500</h2>
                         <button>＋</button>
                         <button>－</button>
+                        <h3>총 가격{totalPrice()}</h3>
                     </div>
                 </div>
             </div>
