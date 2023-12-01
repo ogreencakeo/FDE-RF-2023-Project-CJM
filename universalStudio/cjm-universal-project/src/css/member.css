@@ -31,4 +31,8 @@
 .member-bx>form li{
     margin: 5px 0;
     padding: 5px 0;
+    font-size: 1.2rem;
+}
+.member-bx>form input{
+    padding: 5px;
 }
