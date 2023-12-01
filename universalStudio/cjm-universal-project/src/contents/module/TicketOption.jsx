@@ -24,9 +24,23 @@ export function TicketOption() {
 
     // const [increaseQuntity, setIncreaseQuntity] =
 
-    function increaseQuntity(){
+    const increaseQuntity = (idx) => {
         const newOption = [...option];
-        newOption =
+        newOption[idx].quantity += 1;
+        setOption(newOption);
+    }
+
+    const decreaseQuntity = (idx) => {
+        const newOption = [...option];
+        if(newOption[idx].quantity > 1){
+            newOption[idx].quantity -= 1;
+            setOption(newOption);
+        }
+    }
+
+    // 전체 가격 계산
+    const totalPrice = () => {
+        return
     }
     return (
         <>
