@@ -101,38 +101,14 @@ export function Ticket() {
                 <div class="logo-move-wrap">
                     <div class="logo-span-move-wrap">
                         <div class="logo-span-wrap logo-span-ani">
-                            <ul>
-                            {makeTextCode()}
-                                {/* <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li>
-                            <li>UNIVERSAL STUDIO</li> */}
-                            </ul>
-                            <ul>
-                                {makeTextCode()}
-                                {/* <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li> */}
-                            </ul>
+                            <ul>{makeTextCode()}</ul>
+                            <ul>{makeTextCode()}</ul>
                         </div>
                     </div>
                     <div class="logo-span-move-wrap span-move2">
                         <div class="logo-span-wrap logo-span-ani2">
-                            <ul>
-                                {/* <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li> */}
-                                {makeTextCode()}
-                            </ul>
-                            <ul>
-                                {/* <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li>
-                                <li>UNIVERSAL STUDIO</li> */}
-                                {makeTextCode()}
-                            </ul>
+                            <ul>{makeTextCode()}</ul>
+                            <ul>{makeTextCode()}</ul>
                         </div>
                     </div>
                 </div>

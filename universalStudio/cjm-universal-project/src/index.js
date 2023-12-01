@@ -14,6 +14,7 @@ import { Detail } from './contents/Detail.jsx';
 import './css/common.css';
 
 import { Layout } from './layout/Layout';
+import { Member } from './contents/Member.jsx';
 
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
           <Route path='ticket' element={<Ticket />} />
           <Route path='customerCenter' element={<CustomerCenter />} />
           <Route path='detail' element={<Detail />} />
+          <Route path='member' element={<Member />} />
         </Route>
       </Routes>
     </BrowserRouter>
