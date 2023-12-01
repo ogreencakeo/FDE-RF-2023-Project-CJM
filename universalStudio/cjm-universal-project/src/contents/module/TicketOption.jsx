@@ -4,8 +4,8 @@ import "../../css/ticket_option.css";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPerson, faChild, faPersonCane, faCirclePlus, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { faPerson, faChild, faPersonCane, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useRef, useState } from "react";
 export function TicketOption() {
     const [option, setOption] = useState([
         {
@@ -42,13 +42,12 @@ export function TicketOption() {
         }
     };
 
-    // 각 가격 계산
-    const optionPrice = () => {};
-
     // 전체 가격 계산
     const totalPrice = () => {
         return option.reduce((total, option) => total + option.quantity * option.price, 0);
     };
+
+
     return (
         <>
             {/* 티켓 서브 옵션 박스 랩핑 */}
@@ -63,8 +62,8 @@ export function TicketOption() {
                             <h2>가격(1인) : ₩ {v.price}</h2>
                             {/* 티켓 버튼 +, - */}
                             <div className="ticket-price-btn">
-                                <button onClick={() => increaseQuntity(idx)}><FontAwesomeIcon icon={faCirclePlus} /></button>
-                                <button onClick={() => decreaseQuntity(idx)}><FontAwesomeIcon icon={faCircleMinus} /></button>
+                                <button className="ticket-btn" onClick={() => increaseQuntity(idx)}><FontAwesomeIcon icon={faPlus} /></button>
+                                <button className="ticket-btn" onClick={() => decreaseQuntity(idx)}><FontAwesomeIcon icon={faMinus} /></button>
                             </div>
                             <div className="ticket-opt-price">
                                 <h2>수량 : {v.quantity}</h2>
