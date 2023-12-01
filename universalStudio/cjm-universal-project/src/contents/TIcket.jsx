@@ -44,7 +44,7 @@ export function Ticket() {
         for (let i = 0; i < 4; i++) {
             temp[i] = <li key={i}>{move_txt}</li>;
         }
-        return temp[i];
+        return temp;
     };
 
     return (

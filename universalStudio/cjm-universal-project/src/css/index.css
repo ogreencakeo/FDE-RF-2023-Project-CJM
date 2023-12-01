@@ -684,6 +684,7 @@ a {
 .logo-move-wrap {
     /* background: url(../images/Rectbleu.png); */
     cursor: pointer;
+    margin-bottom: 40px;
 }
 
 .logo-span-move-wrap {
