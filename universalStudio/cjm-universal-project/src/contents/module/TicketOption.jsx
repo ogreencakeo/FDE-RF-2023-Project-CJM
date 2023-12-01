@@ -4,51 +4,51 @@ import "../../css/ticket_option.css";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPerson, faChild, faPersonCane } from "@fortawesome/free-solid-svg-icons";
+import { faPerson, faChild, faPersonCane, faCirclePlus, faCircleMinus } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 export function TicketOption() {
     const [option, setOption] = useState([
         {
             price: 74300,
-            quantity: 1,
+            quantity: 0,
+            character: <FontAwesomeIcon icon={faPerson} />,
+            txt: "성인(만12 - 64세)",
         },
         {
             price: 48400,
-            quantity: 1,
+            quantity: 0,
+            character: <FontAwesomeIcon icon={faChild} />,
+            txt: "어린이(만4 - 11세)",
         },
         {
             price: 66500,
-            quantity: 1,
+            quantity: 0,
+            character: <FontAwesomeIcon icon={faPersonCane} />,
+            txt: "시니어(만 65세 이상)",
         },
     ]);
-
-    // const [increaseQuntity, setIncreaseQuntity] =
 
     const increaseQuntity = (idx) => {
         const newOption = [...option];
         newOption[idx].quantity += 1;
         setOption(newOption);
-    }
+    };
 
     const decreaseQuntity = (idx) => {
         const newOption = [...option];
-        if(newOption[idx].quantity > 1){
+        if (newOption[idx].quantity > 0) {
             newOption[idx].quantity -= 1;
             setOption(newOption);
         }
-    }
+    };
 
     // 각 가격 계산
-    const optionPrice = () => {
-        
-    }
+    const optionPrice = () => {};
 
     // 전체 가격 계산
     const totalPrice = () => {
-        return option.reduce((total, option) =>
-            total + option.quantity * option.price, 0 
-        )
-    }
+        return option.reduce((total, option) => total + option.quantity * option.price, 0);
+    };
     return (
         <>
             {/* 티켓 서브 옵션 박스 랩핑 */}
@@ -56,35 +56,23 @@ export function TicketOption() {
                 <h1>[1일권 Low Price (A시즌)]</h1>
                 {/* 티컷 서브 옵션 박스 */}
                 <div className="ticket-suboption-bx">
-                    <div className="option-adult ticket-opt-character">
-                        <h1>
-                            <FontAwesomeIcon icon={faPerson} />
-                        </h1>
-                        <h2>성인(만12 - 64세)</h2>
-                        <h2>₩ 74,300</h2>
-                        <button>＋</button>
-                        <button>－</button>
-                        <h3>totalPrice : {optionPrice}</h3>
-                    </div>
-                    <div className="option-child ticket-opt-character">
-                        <h1>
-                            <FontAwesomeIcon icon={faChild} />
-                        </h1>
-                        <h2>어린이(만4 - 11세)</h2>
-                        <h2>₩ 48,400</h2>
-                        <button onClick={()=>increaseQuntity(idx)}>＋</button>
-                        <button onClick={()=>decreaseQuntity(idx)}>－</button>
-                    </div>
-                    <div className="option-senior ticket-opt-character">
-                        <h1>
-                            <FontAwesomeIcon icon={faPersonCane} />
-                        </h1>
-                        <h2>시니어(만 65세 이상)</h2>
-                        <h2>₩ 66,500</h2>
-                        <button>＋</button>
-                        <button>－</button>
-                        <h3>총 가격{totalPrice()}</h3>
-                    </div>
+                    {option.map((v, idx) => (
+                        <div className="ticket-opt-character" key={idx}>
+                            <h1>{v.character}</h1>
+                            <h2>{v.txt}</h2>
+                            <h2>가격(1인) : ₩ {v.price}</h2>
+                            {/* 티켓 버튼 +, - */}
+                            <div className="ticket-price-btn">
+                                <button onClick={() => increaseQuntity(idx)}><FontAwesomeIcon icon={faCirclePlus} /></button>
+                                <button onClick={() => decreaseQuntity(idx)}><FontAwesomeIcon icon={faCircleMinus} /></button>
+                            </div>
+                            <div className="ticket-opt-price">
+                                <h2>수량 : {v.quantity}</h2>
+                                <h2>총가 : ₩ {v.price * v.quantity}</h2>
+                            </div>
+                        </div>
+                    ))}
+                    <h3>totalPrice : {totalPrice()}</h3>
                 </div>
             </div>
         </>

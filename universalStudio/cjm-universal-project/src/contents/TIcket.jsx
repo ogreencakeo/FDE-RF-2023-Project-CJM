@@ -53,7 +53,7 @@ export function Ticket() {
         const temp = [];
         for (let i = 0; i < ticket_opt.length; i++) {
             temp[i] = (
-                <div className="ticket-option-bx">
+                <div className="ticket-option-bx" key={i}>
                     <h1>
                         <FontAwesomeIcon icon={faTicket} />{" "}
                     </h1>
@@ -86,7 +86,7 @@ export function Ticket() {
                             #가족이랑#우리 아이와#친구와#여럿이서#짜릿한 액티비티 즐기러
                         </h2>
                         {/* 티켓 정보 */}
-                        <div class="ticket-info-bx">
+                        <div className="ticket-info-bx">
                             {ticket_info.map((v, i) => (
                                 <div key={i}>
                                     <span>{v.font}</span>
