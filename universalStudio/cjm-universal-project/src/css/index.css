@@ -682,8 +682,6 @@ a {
 
 /* 움직이는 로고애니 */
 .logo-move-wrap {
-    /* background: url(../images/Rectbleu.png); */
-    cursor: pointer;
     margin-bottom: 40px;
 }
 
@@ -740,10 +738,6 @@ a {
     animation: text-span-ani2 30s linear infinite;
 }
 
-.logo-span-ani:hover,
-.logo-span-ani2:hover {
-    animation-play-state: paused;
-}
 
 @keyframes text-span-ani {
     to {
