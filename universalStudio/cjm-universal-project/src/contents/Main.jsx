@@ -288,18 +288,20 @@ export function Main() {
                 <div className="page2-cont">
                     {/* <img className='character16' src="../images/main/character/character16.png" alt="팬더" /> */}
                     <div className="enjoy-pick-cont">
-                        <h1>
+                        {/* <h1>
                             <FontAwesomeIcon icon={faCalendarCheck} />
-                        </h1>
+                        </h1> */}
+                        <img className="enjoty-pick-img" src="../images/main/character/clock.gif" alt="시간" />
                         <h2 className="point-span"><span data-hover="POINT1">POINT1</span></h2>
                         <h3>시간을 효율적으로 활용하자!</h3>
                         <p>#예약 탑승’ 티켓을 사용</p>
 
                     </div>
                     <div className="enjoy-pick-cont">
-                        <h1>
+                        {/* <h1>
                             <FontAwesomeIcon icon={faMobileScreenButton} />
-                        </h1>
+                        </h1> */}
+                            < img className="enjoty-pick-img" src="../images/main/character/phone.gif" alt="핸드폰" />
                         <h2 className="point-span"><span data-hover="POINT2">POINT2</span></h2>
                         <h3>파크 내에서 앱을 능숙하게 사용하자!</h3>
                         <p>#1:어트랙션 탑승 정리권</p>
@@ -307,9 +309,10 @@ export function Main() {
                         <p>#3:예약 탑승</p>
                     </div>
                     <div className="enjoy-pick-cont">
-                        <h1>
+                        {/* <h1>
                             <FontAwesomeIcon icon={faIcons} />
-                        </h1>
+                        </h1> */}
+                        < img className="enjoty-pick-img" src="../images/main/character/party.gif" alt="파티" />
                         <h2 className="point-span"><span data-hover="POINT3">POINT3</span></h2>
                         <h3>NO LIMIT!<br/> 스트리트 페스티벌</h3>
                         <p>#파크 전체가 열광 페스티벌!</p>
