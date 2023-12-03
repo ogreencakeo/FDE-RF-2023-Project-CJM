@@ -571,7 +571,7 @@ a {
     margin: 0 20px;
 }
 .page2-light span .on{
-    color: yellow;
+    color: #ffd43b;
 }
 
 .main-character1{
@@ -599,12 +599,21 @@ a {
 }
 .enjoy-pick-cont{
     padding: 25px;
-    border: 2px solid black;
+    flex: 1;
     margin: 10px 20px;
     border-radius: 20px;
-    max-width: 315px;
     overflow: hidden;
-    transform: translateY(20%);
+    /* transform: translateY(20%); */
+    transition: .4s ease-in-out;
+}
+.enjoy-pick-cont:first-child{
+    border: 5px solid #2b4584;
+}
+.enjoy-pick-cont:nth-child(2){
+    border: 5px solid steelblue;
+}
+.enjoy-pick-cont:last-child{
+    border: 5px solid slategray;
 }
 .enjoy-pick-cont .on{
     transform: translateY(0);
@@ -613,10 +622,28 @@ a {
     /* background: url(../../public/images/main/character/time.jpg); */
 }
 
+.enjoy-pick-cont:first-child h1{
+    color: #2b4584;
+}
+.enjoy-pick-cont:nth-child(2) h1{
+    color: steelblue;
+}
+.enjoy-pick-cont:last-child h1{
+    color: slategray;
+}
 .enjoy-pick-cont h1{
     font-size: 8em;
     margin: 20px 20px 20px;
     text-align: center;
+}
+
+.character16{
+    width: 15vw;
+}
+.character16 img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
 }
 .point-span{
     text-align: center;
@@ -656,20 +683,28 @@ a {
     font-size: 1.8em;
     text-align: center;
     margin-bottom: 30px;
+    transform: translateY(60px);
+    transition: .4s ease-in-out;
 }
 .enjoy-pick-cont p{
     font-size: 1.5em;
     text-align: center;
     line-height: 1.5;
-    /* transform: translateY(500%); */
+    transform: translateY(500%);
     transition: .4s ease-in-out;
 }
-/* .enjoy-pick-cont:hover p{
+.enjoy-pick-cont:hover{
+    background-color: whitesmoke;
+}
+.enjoy-pick-cont:hover h3{
+    transform: translateY(0);
+}
+.enjoy-pick-cont:hover p{
     font-size: 1.5em;
     text-align: center;
     line-height: 1.5;
     transform: translateY(0);
-} */
+}
 
 /* page5 */
 .page5{

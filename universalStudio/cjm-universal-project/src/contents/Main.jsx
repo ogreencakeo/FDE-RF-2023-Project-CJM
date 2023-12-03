@@ -144,39 +144,6 @@ export function Main() {
     }
 
 
-   
-  
-    const CRITERIA = (window.innerHeight / 4) * 3;
-
-    const enjoyPickContRefs = Array.from({ length: 3 }, () => useRef(null));
-  
-    useEffect(() => {
-      enjoyPickContRefs.forEach((ref) => {
-        const enjoyPickCont = ref.current;
-  
-        const addOn = () => {
-          const bTop = enjoyPickCont.getBoundingClientRect().top;
-  
-          if (bTop < CRITERIA) enjoyPickCont.classList.add("on");
-          else enjoyPickCont.classList.remove("on");
-        };
-  
-        addOn();
-  
-        const handleScroll = () => {
-          addOn();
-        };
-  
-        window.addEventListener("scroll", handleScroll);
-  
-        return () => {
-          window.removeEventListener("scroll", handleScroll);
-        };
-      });
-    }, [enjoyPickContRefs]);
-  
-
-
     return (
         <>
             {/* Header */}
@@ -314,26 +281,22 @@ export function Main() {
                 </div>
             </div>
             <div className="page2 page">
+
                 <span className="page2-light">
                     {makeLight()}
                 </span>
                 <div className="page2-cont">
-                    <PickEnjoy />
-                {enjoyPickContRefs.map((ref, index) => (
-            <div key={index} ref={ref} className="enjoy-pick-cont">
-              {/* 나머지 내용 */}
-            </div>
-          ))}
-                    <div ref={enjoyPickContRef} className="enjoy-pick-cont">
+                    {/* <img className='character16' src="../images/main/character/character16.png" alt="팬더" /> */}
+                    <div className="enjoy-pick-cont">
                         <h1>
                             <FontAwesomeIcon icon={faCalendarCheck} />
                         </h1>
                         <h2 className="point-span"><span data-hover="POINT1">POINT1</span></h2>
                         <h3>시간을 효율적으로 활용하자!</h3>
                         <p>#예약 탑승’ 티켓을 사용</p>
-                        <div className="hihihi"></div>
+
                     </div>
-                    <div key={index} ref={ref} className="enjoy-pick-cont">
+                    <div className="enjoy-pick-cont">
                         <h1>
                             <FontAwesomeIcon icon={faMobileScreenButton} />
                         </h1>
@@ -343,12 +306,12 @@ export function Main() {
                         <p>#2:에어리어 입장 정리권</p>
                         <p>#3:예약 탑승</p>
                     </div>
-                    <div ref={enjoyPickContRef}  className="enjoy-pick-cont">
+                    <div className="enjoy-pick-cont">
                         <h1>
                             <FontAwesomeIcon icon={faIcons} />
                         </h1>
                         <h2 className="point-span"><span data-hover="POINT3">POINT3</span></h2>
-                        <h3>NO LIMIT! 스트리트 페스티벌</h3>
+                        <h3>NO LIMIT!<br/> 스트리트 페스티벌</h3>
                         <p>#파크 전체가 열광 페스티벌!</p>
                     </div>
                 </div>

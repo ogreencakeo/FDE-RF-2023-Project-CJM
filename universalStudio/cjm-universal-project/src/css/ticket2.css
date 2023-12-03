@@ -92,8 +92,12 @@
 
 .ticket-info-bx > div > span {
     display: block;
-    font-size: 1vw;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    text-shadow: 1px 2px 2px black;
+    /* font-family: 'Gugi'; */
 }
+
 .ticket-info-bx > div > span:first-child {
     font-size: 4vw;
     margin-bottom: 25px;
@@ -103,37 +107,37 @@
     color: #524a37;
 }
 .ticket-info-bx > div:first-child {
-    border: 2px solid #524a37;
+    border: 3.5px solid #524a37;
 }
 .ticket-info-bx > div:nth-child(2) span:first-child{
     color: #281a78;
 }
 .ticket-info-bx > div:nth-child(2) {
-    border: 2px solid #281a78;
+    border: 3.5px solid #281a78;
 }
 .ticket-info-bx > div:nth-child(3) span:first-child{
     color:#05fa46;
 }
 .ticket-info-bx > div:nth-child(3) {
-    border: 2px solid #05fa46;
+    border: 3.5px solid #05fa46;
 }
 .ticket-info-bx > div:nth-child(4) span:first-child{
     color:#f77c00;
 }
 .ticket-info-bx > div:nth-child(4) {
-    border: 2px solid #f77c00;
+    border: 3.5px solid #f77c00;
 }
 .ticket-info-bx > div:nth-child(5) span:first-child{
     color:#f7eb05;
 }
 .ticket-info-bx > div:nth-child(5) {
-    border: 2px solid #f7eb05;
+    border: 3.5px solid #f7eb05;
 }
 .ticket-info-bx > div:last-child span:first-child{
     color:#fa0525;
 }
 .ticket-info-bx > div:last-child {
-    border: 2px solid #fa0525;
+    border: 3.5px solid #fa0525;
 }
 
 /* 티켓 구입 문의 */
