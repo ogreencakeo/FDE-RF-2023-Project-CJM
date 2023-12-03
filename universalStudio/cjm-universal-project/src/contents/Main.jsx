@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { Link, useHref } from "react-router-dom";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -144,15 +144,37 @@ export function Main() {
     }
 
 
-    // enjoy-pick-cont
-    useEffect(()=>{
-        const enjoy_pick_cont = document.querySelector('.enjoy-pick-cont');
-        const rec = enjoy_pick_cont.getBoundingClientRect();
-        if(window.scrollY >= rec){
-            
-        }
-    })
+   
+  
+    const CRITERIA = (window.innerHeight / 4) * 3;
 
+    const enjoyPickContRefs = Array.from({ length: 3 }, () => useRef(null));
+  
+    useEffect(() => {
+      enjoyPickContRefs.forEach((ref) => {
+        const enjoyPickCont = ref.current;
+  
+        const addOn = () => {
+          const bTop = enjoyPickCont.getBoundingClientRect().top;
+  
+          if (bTop < CRITERIA) enjoyPickCont.classList.add("on");
+          else enjoyPickCont.classList.remove("on");
+        };
+  
+        addOn();
+  
+        const handleScroll = () => {
+          addOn();
+        };
+  
+        window.addEventListener("scroll", handleScroll);
+  
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+      });
+    }, [enjoyPickContRefs]);
+  
 
 
     return (
@@ -296,7 +318,13 @@ export function Main() {
                     {makeLight()}
                 </span>
                 <div className="page2-cont">
-                    <div className="enjoy-pick-cont">
+                    <PickEnjoy />
+                {enjoyPickContRefs.map((ref, index) => (
+            <div key={index} ref={ref} className="enjoy-pick-cont">
+              {/* 나머지 내용 */}
+            </div>
+          ))}
+                    <div ref={enjoyPickContRef} className="enjoy-pick-cont">
                         <h1>
                             <FontAwesomeIcon icon={faCalendarCheck} />
                         </h1>
@@ -305,7 +333,7 @@ export function Main() {
                         <p>#예약 탑승’ 티켓을 사용</p>
                         <div className="hihihi"></div>
                     </div>
-                    <div className="enjoy-pick-cont">
+                    <div key={index} ref={ref} className="enjoy-pick-cont">
                         <h1>
                             <FontAwesomeIcon icon={faMobileScreenButton} />
                         </h1>
@@ -315,7 +343,7 @@ export function Main() {
                         <p>#2:에어리어 입장 정리권</p>
                         <p>#3:예약 탑승</p>
                     </div>
-                    <div className="enjoy-pick-cont">
+                    <div ref={enjoyPickContRef}  className="enjoy-pick-cont">
                         <h1>
                             <FontAwesomeIcon icon={faIcons} />
                         </h1>

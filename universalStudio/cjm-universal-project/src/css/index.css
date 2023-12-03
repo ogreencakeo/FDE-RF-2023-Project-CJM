@@ -604,6 +604,10 @@ a {
     border-radius: 20px;
     max-width: 315px;
     overflow: hidden;
+    transform: translateY(20%);
+}
+.enjoy-pick-cont .on{
+    transform: translateY(0);
 }
 .enjoy-pick-cont:first-child{
     /* background: url(../../public/images/main/character/time.jpg); */
