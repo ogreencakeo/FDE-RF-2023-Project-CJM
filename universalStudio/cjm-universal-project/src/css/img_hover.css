@@ -1,6 +1,28 @@
 .img_hover_play_wrap{
     max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
 }
 .img_hover_play_bx{
     max-width: 100%;
+}
+.mouseBox{
+    position: absolute;
+    transition: opacity 0.5s;
+    z-index: 10;
+}
+
+.mouseBox img{
+    width: 20vw;
+    height: 45vh;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.character14 img{
+    /* z-index: 20; */
+    /* display: block; */
+    position: relative;
 }
