@@ -14,10 +14,10 @@
 }
 
 .mouseBox img{
-    width: 20vw;
+    max-width: 30vw;
     height: 45vh;
     object-fit: cover;
-    border: 2px solid black;
+    border: 5px solid black;
     border-radius: 20px;
 }
 
@@ -25,4 +25,26 @@
     /* z-index: 20; */
     /* display: block; */
     position: relative;
+    max-width: 100%;
 }
+
+.character15{
+    max-width: 40vw;
+    z-index: -1;
+    margin: 20px 50px;
+}
+.character15 img{
+    max-width: 100%;
+    animation: character15-ani linear 2s infinite;
+    z-index: -1;
+}
+
+@keyframes character15-ani {
+    0%{
+        transform: scalex(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+

@@ -82,8 +82,8 @@ export function ImgHoverPlay() {
                 <div className='character14'>
                     <img src="./images/main/character/character14.png" alt="카세트" />
                 </div>
-                <div className='star'>
-                    <img src="./images/main/character/character9.gif" alt="" />
+                <div className='character15'>
+                    <img src="./images/main/character/character15.gif" alt="필름" />
                 </div>
             </div>
         </>
