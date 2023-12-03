@@ -505,33 +505,6 @@ a {
     /* height: 100vh; */
 }
 
-/* page2 */
-/* .page2{
-    position: relative;
-    height: 100vh;
-}
-.page2>div{
-    position: absolute;
-    font-size: 8em;
-    left: 5%;
-}
-.faEarthAsia{
-    top: 20%;
-}
-.faEarthEurope{
-    top:40%
-}
-.faEarthAfrica{
-    top: 60%;
-
-}
-.faGlobe{
-    top: 80%;
-    color: blue;
-} */
-/* page3 */
-
-
 .character-erath{
     max-width: 100%;
     margin: 150px 0 100px;
@@ -578,29 +551,34 @@ a {
 }
 /* page2 */
 .page2{
-    color: #fff;
     padding-bottom: 150px;
     margin: 200px 0;
-    background-color: #000;
 }
 .page2>h1{
     font-size: 3.5em;
 }
 
+/* page2 - 전등ㄴ */
 .page2-light{
+    text-align: center;
+    padding: 75px;
+    display: block;
 }
 
-.page2-light{
-    padding: 100px;
-    display: block;
-    font-size: 7em;
-    /* transform: rotate(180deg); */
+.page2-light span{
+    font-size: 8em;
+    display: inline-block;
+    margin: 0 20px;
+}
+.page2-light span .on{
+    color: yellow;
 }
 
 .main-character1{
     padding: 100px;
     margin: 0 auto;
     width: 50vw;
+   
 }
 .main-character1>img{
     width: 100%;
@@ -617,44 +595,77 @@ a {
 .page2-cont{
     display: flex;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1200px;
 }
-.page2-cont>div{
-    padding: 0 25px;
+.enjoy-pick-cont{
+    padding: 25px;
+    border: 2px solid black;
+    margin: 10px 20px;
+    border-radius: 20px;
+    max-width: 315px;
+    overflow: hidden;
+}
+.enjoy-pick-cont:first-child{
+    /* background: url(../../public/images/main/character/time.jpg); */
 }
 
-.page2-cont h1{
+.enjoy-pick-cont h1{
     font-size: 8em;
-    margin: 70px 20px 20px;
+    margin: 20px 20px 20px;
     text-align: center;
 }
-.page2-cont h2{
-    font-size: 2.5em;
-    /* padding: 10px; */
+.point-span{
     text-align: center;
     margin-bottom: 10px;
+    font-size: 2.5em;
+    /* position: relative; */
+    overflow: hidden;
+    /* display: inline-block; */
+}
+.point-span span{
+    width: 100%;
+    color: #555;
+    display: inline-block;
+    position: relative;
+    transition: .4s;
+}
+.point-span span::before{
+    position: absolute;
+    top: 100%;
+    color: #000;
+    content: attr(data-hover);
+}
+.enjoy-pick-cont:hover span{
+    transform: translateY(-100%);
 }
 
-.page2-cont h2::after {
-    content: ''; /* 가상 요소를 생성하기 위한 content 속성 추가 */
+/* .enjoy-pick-cont h2::after {
+    content: ''; 
     display: block;
     width: 60%;
     margin: 0 auto;
-    height: 5px; /* 밑줄의 높이 조절 */
-    background-color: yellow; /* 밑줄의 색상 지정 */
-    margin-top: 5px; /* 밑줄과 텍스트 사이의 간격 조절 */
-}
-.page2-cont h3{
+    height: 5px; 
+    background-color: yellow; 
+    margin-top: 5px;
+} */
+.enjoy-pick-cont h3{
     font-size: 1.8em;
-    /* padding: 10px; */
     text-align: center;
     margin-bottom: 30px;
 }
-.page2-cont p{
+.enjoy-pick-cont p{
     font-size: 1.5em;
     text-align: center;
     line-height: 1.5;
+    /* transform: translateY(500%); */
+    transition: .4s ease-in-out;
 }
+/* .enjoy-pick-cont:hover p{
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5;
+    transform: translateY(0);
+} */
 
 /* page5 */
 .page5{
@@ -863,4 +874,30 @@ a {
     100% {
         transform: translateY(0);
     }
+}
+
+/* 마우스 무브 */
+.mouse-move{
+    text-align: center;
+    margin: 100px 0;
+    padding: 10px 0;
+    min-width: 100%;
+}
+.mouse-move h1{
+    font-size: 3rem;
+    animation: 1s mouse-move-ani linear alternate infinite;
+}
+
+@keyframes mouse-move-ani {
+    from{
+        transform: translateX(-50px);
+    }
+    to{
+        transform: translateX(50px);
+    }
+}
+
+.mouse-move h2{
+    color: #555;
+    margin: 10px 0;
 }
