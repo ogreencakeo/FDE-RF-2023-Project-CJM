@@ -1,38 +1,83 @@
 /* 전체 회원가입 페이지 랩핑 박스 */
-.join-the-membership-wrap{
+.join-the-membership-wrap {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px;
 
 }
+
 /* 회원가입 박스 */
 .member-bx {
     max-width: 600px;
-    border: 3px solid red;
+    border: 3px solid #ccc;
     text-align: center;
     margin: 0 auto;
     padding: 50px;
 }
-.member-bx>h1{
+
+.member-bx>h1 {
     font-size: 5rem;
     margin-bottom: 10px;
 }
 
-.member-bx>h2{
+.member-bx>h2 {
     font-size: 2rem;
     margin: 20px;
     border-bottom: 2px solid #333;
     padding: 10px;
 }
-.member-bx>form{
+
+.member-bx>form {
     padding: 20px;
     margin: 20px;
 }
-.member-bx>form li{
-    margin: 5px 0;
-    padding: 5px 0;
-    font-size: 1.2rem;
+.member-bx table {
+    margin: 0 auto;
+    width: 100%;
+    /* border-collapse: collapse; */
+    /* table-layout: fixed; */
 }
-.member-bx>form input{
-    padding: 5px;
+
+.member-bx tr {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.member-bx td {
+    box-sizing: border-box;
+    padding: 15px;
+    outline: 2px solid black;
+    font-size: 1.1rem;
+    
+}
+
+.member-bx td:first-child {
+    min-width: 150px; /* 첫 번째 td의 너비 설정 */
+}
+
+.member-bx td:last-child {
+    width: 100%;
+}
+
+.member-bx td input{
+    padding: 10px 50px;
+}
+.member-bx tr button{
+    font-size: 1.1rem;
+    background-color: slategrey;
+    border-radius: 10px;
+    padding: 15px 70px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+.member-bx p{
+    font-size: 1.1rem;
+}
+.member-bx p strong{
+    margin: 0 10px;
+}
+.member-bx p strong:hover .login-link{
+    color: orangered;
 }
