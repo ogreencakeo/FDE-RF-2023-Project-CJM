@@ -4,7 +4,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { AttractionCont } from "./AttractionCont";
 
-export function Seaching() {
+// 제이쿼리
+import $ from "jquery";
+
+// css
+import '../../css/attraction.css';
+import { useState } from "react";
+
+export function Seaching(props) {
+
+    const [kword, setKword] = useState(null);
+    const [cntNum, setCntNum] = useState(0);
+    // - 정렬상태값 : 0 - 오름차순, 1 - 내림차순, 2 - 정렬전
+    const [selData, setSelData] = useState([[], 2]);
+    const [cnt, setCnt] = useState(0);
+
+    const chgKword = (txt) => setKword(txt); 
+
+    const allow = useRef(1);
+
     return (
         <>
             <div className="attraction-wrap">
