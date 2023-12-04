@@ -8,6 +8,7 @@
 }
 .partner-hotel-bx ul{
     display: flex;
+    padding: 0 10px;
 }
 .partner-hotel-bx ul button{
     padding: 15px;
@@ -15,9 +16,11 @@
     background-color: #0368d9;
     color: #fff;
     border: 0px;
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    position: relative;
 }
 .partner-hotel-cont{
     max-width: 100%;
@@ -73,6 +76,7 @@
     margin: 0 auto;
     color: #fff;
     border: 0px;
+    
 }
 .selectColor{
     background-color: #fff !important;
@@ -80,7 +84,7 @@
     box-shadow: 0 1px 8px #0003;
     z-index: 1;
 }
-/* .partner-hotel-bx button span::after{
+.partner-hotel-bx button span::after{
     background-color: #fff;
     content: "";
     display: block;
@@ -89,4 +93,4 @@
     position: absolute;
     right: -10px;
     top: 100%;
-} */
+}
