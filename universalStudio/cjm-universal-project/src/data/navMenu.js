@@ -1,9 +1,9 @@
 export const navMenu = [
     
-    {
-        txt : '어트랙션',
-        link : '/attraction'
-    },
+    // {
+    //     txt : '어트랙션',
+    //     link : '/attraction'
+    // },
     {
         txt : '시즈널메뉴',
         link : '/seasonalMenu',
@@ -85,7 +85,11 @@ export const navMenu = [
         link : '/ticket'
     },
     {
+        txt : '파트널호텔',
+        link : '/hotel'
+    },
+    {
         txt : '고객센터',
         link : '/customerCenter'
-    },
+    }
 ]
