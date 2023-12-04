@@ -45,9 +45,9 @@ export function Member() {
     // 아이디 유효성 검사
     const changeUserId = (e) => {
         const valid = /^[A-Za-z0-9+]{5,}$/;
+
         if(valid.test(e.target.value)){
             initData();
-
             let memData = localStorage.getItem('mem-data');
             memData = JSON.parse(memData);
 
@@ -76,13 +76,14 @@ export function Member() {
     const changePwd = (e) => {
         const valid = /^.*(?=^.{5,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
 
-        if(valid.test(e.target.value)) setChkPwd(false);
-        else setChkPwd(true);
+        if(valid.test(e.target.value)) setPwdError(false);
+        else setPwdError(true);
 
         setPwd(e.target.value);
     }
 
     const changeChkPwd = (e) => {
+        
         if(pwd == e.target.value) setChkPwdError(false);
         else setChkPwdError(true);
 
@@ -128,7 +129,26 @@ export function Member() {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        
+        if(totalValid()){
+            initData();
+            let memData = localStorage.getItem('mem-data');
+            memData = JSON.parse(memData);
+
+            let newData = {
+                idx : memData.length + 1,
+                uid : userId,
+                pwd : pwd,
+                unm : userName,
+                eml : email
+            };
+
+            memData.push(newData);
+
+            localStorage.setItem('mem-data', JSON.stringify(memData));
+            document.querySelector('.sbtn').innerText = '넌 이제 회원인거야~!';
+        }else{
+            alert('입력창을 수정해주시오.');
+        }
     }
 
     return (
