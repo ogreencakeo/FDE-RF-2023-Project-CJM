@@ -35,7 +35,7 @@
     /* height: auto; */
     aspect-ratio: 1.2/1;
     display: block;
-    border: 5px solid black;
+    border: 10px solid black;
     box-sizing: border-box;
 }
 
