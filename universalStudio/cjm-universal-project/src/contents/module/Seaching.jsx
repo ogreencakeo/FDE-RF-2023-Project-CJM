@@ -9,7 +9,7 @@ import $ from "jquery";
 
 // css
 import "../../css/attraction.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from "react";
 
 // 데이터
@@ -28,6 +28,12 @@ export function Seaching(props) {
     const allow = useRef(1);
     const firstSts = useRef(0);
 
+    const xx = useRef(null);
+    useEffect(() => {
+        console.log(xx);
+        xx.current.style.outline = "5px dotted orange";
+    }); //// useEffect ///
+
     const initFn = () => {
         chgKword(props.kword);
         $("#schin").val(props.kword);
@@ -35,7 +41,30 @@ export function Seaching(props) {
         schList();
     };
 
+     // 만약 useRef변수값이 1이면(true면) initFn실행!
     if (allow.current) initFn();
+
+    function firstDo(){
+        const firstTemp = attractionData.filter((v) => {
+            if(v.name.indexOf(props.kword) != -1) return true;
+        });
+
+        firstTemp.sort((a, b) => {
+            return a.name == b.name? 0:a.name>b.name? 1:-1;
+        });
+
+        setSelData([firstTemp, 2]);
+        setCnt(firstTemp.length);
+        chgKword(props.kword);
+    }
+
+    // 한번만 호출
+    if(!firstSts.current){
+        firstDo();
+        firstSts.current = 1;
+    }
+
+    useEffect(()=>{}, []);
 
     // 검색리스트 만들기 함수
     function schList(e) {
@@ -81,8 +110,16 @@ export function Seaching(props) {
                 lastList = nowList;
             }
         }else{
-            
+            for(let i=0; i<temp.length; i++){
+                if(temp[i].type == cid){
+                    temp.splice(i, 1);
+                    i--;
+                }
+            }
+            lastList = temp;
         }
+        setSelData([lastList, 2]);
+        setCnt(lastList.length);
     };
 
     // 리스트 정렬 함수
@@ -116,7 +153,7 @@ export function Seaching(props) {
                             className="schbtn"
                             title="Open Serach"
                             onClick={schList}
-                            // ref={xx}
+                            ref={xx}
                         />
                         <input
                             id="schin"
