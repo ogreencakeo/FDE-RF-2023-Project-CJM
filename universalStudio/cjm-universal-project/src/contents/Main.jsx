@@ -19,14 +19,8 @@ import {
     faGhost,
     faBoltLightning,
     faEarthAsia,
-    faEarthEurope,
-    faEarthAfrica,
-    faGlobe,
-    faMobileScreenButton,
-    faCalendarCheck,
-    faIcons,
     faLightbulb,
-    faComputerMouse
+    faComputerMouse,
 } from "@fortawesome/free-solid-svg-icons";
 
 // 데이터
@@ -39,15 +33,17 @@ import { useState } from "react";
 import { dragFn } from "../Function/dragFn.js";
 // jquery
 import "jquery-ui-dist/jquery-ui";
+
 import { ImgMoveSlide } from "./module/ImgMoveSlide.jsx";
 import { SwiperSec } from "./pages/plugin/SwiperSec.jsx";
 import { UniverSalText } from "./module/UniverSalText.jsx";
 import { ImgHoverPlay } from "./module/ImgHoverPlay.jsx";
 
+import {Area} from '../contents/module/Area.jsx';
+
 // import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
 
 export function Main() {
-
     const text = "#ENJOY 피크를 즐기는 방법";
 
     const [visibleIndex, setVisibleIndex] = useState(0);
@@ -99,7 +95,6 @@ export function Main() {
         };
     }, []);
 
-
     // setTimeout(() => {
     //     const page2Ele = document.querySelector(".page2");
     //     const colorChange = ["#000", "#333b35"];
@@ -127,7 +122,7 @@ export function Main() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setLightIdx((prev) => (prev + 1) % 3)
+            setLightIdx((prev) => (prev + 1) % 3);
         }, 1000);
         return () => clearInterval(interval);
     }, []);
@@ -135,14 +130,14 @@ export function Main() {
     const makeLight = () => {
         const lightTemp = [];
         for (let i = 0; i < 3; i++) {
-            lightTemp[i] =
-                <span key={i} >
-                    <FontAwesomeIcon className={i == lightIdx ? 'on' : ''} icon={faLightbulb} />
+            lightTemp[i] = (
+                <span key={i}>
+                    <FontAwesomeIcon className={i == lightIdx ? "on" : ""} icon={faLightbulb} />
                 </span>
+            );
         }
         return lightTemp;
-    }
-
+    };
 
     return (
         <>
@@ -272,8 +267,7 @@ export function Main() {
                     </div>
                     {/* 동영상 짤막한 내용 */}
                     <div className="main-video-cont">
-                        <h1>#특별한 #재미있는 #신나는 #멋진
-                        </h1>
+                        <h1>#특별한 #재미있는 #신나는 #멋진</h1>
                         <div className="main-video-cont-img">
                             <img src="../images/main/character/character13.gif" alt="열기구" />
                         </div>
@@ -281,10 +275,7 @@ export function Main() {
                 </div>
             </div>
             <div className="page2 page">
-
-                <span className="page2-light">
-                    {makeLight()}
-                </span>
+                <span className="page2-light">{makeLight()}</span>
                 <div className="page2-cont">
                     {/* <img className='character16' src="../images/main/character/character16.png" alt="팬더" /> */}
                     <div className="enjoy-pick-cont">
@@ -292,17 +283,20 @@ export function Main() {
                             <FontAwesomeIcon icon={faCalendarCheck} />
                         </h1> */}
                         <img className="enjoty-pick-img" src="../images/main/character/clock.gif" alt="시간" />
-                        <h2 className="point-span"><span data-hover="POINT1">POINT1</span></h2>
+                        <h2 className="point-span">
+                            <span data-hover="POINT1">POINT1</span>
+                        </h2>
                         <h3>시간을 효율적으로 활용하자!</h3>
                         <p>#예약 탑승’ 티켓을 사용</p>
-
                     </div>
                     <div className="enjoy-pick-cont">
                         {/* <h1>
                             <FontAwesomeIcon icon={faMobileScreenButton} />
                         </h1> */}
-                            < img className="enjoty-pick-img" src="../images/main/character/phone.gif" alt="핸드폰" />
-                        <h2 className="point-span"><span data-hover="POINT2">POINT2</span></h2>
+                        <img className="enjoty-pick-img" src="../images/main/character/phone.gif" alt="핸드폰" />
+                        <h2 className="point-span">
+                            <span data-hover="POINT2">POINT2</span>
+                        </h2>
                         <h3>파크 내에서 앱을 능숙하게 사용하자!</h3>
                         <p>#1:어트랙션 탑승 정리권</p>
                         <p>#2:에어리어 입장 정리권</p>
@@ -312,14 +306,19 @@ export function Main() {
                         {/* <h1>
                             <FontAwesomeIcon icon={faIcons} />
                         </h1> */}
-                        < img className="enjoty-pick-img" src="../images/main/character/party.gif" alt="파티" />
-                        <h2 className="point-span"><span data-hover="POINT3">POINT3</span></h2>
-                        <h3>NO LIMIT!<br/> 스트리트 페스티벌</h3>
+                        <img className="enjoty-pick-img" src="../images/main/character/party.gif" alt="파티" />
+                        <h2 className="point-span">
+                            <span data-hover="POINT3">POINT3</span>
+                        </h2>
+                        <h3>
+                            NO LIMIT!
+                            <br /> 스트리트 페스티벌
+                        </h3>
                         <p>#파크 전체가 열광 페스티벌!</p>
                     </div>
                 </div>
             </div>
-            <div className="page4">
+            {/* <div className="page4">
                 <div className="load-text">
                     <span>
                         {text.split("").map((char, index) => (
@@ -329,11 +328,18 @@ export function Main() {
                         ))}
                     </span>
                 </div>
+            </div> */}
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565411122063!2d135.42974357461148!3d34.66567677293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z7Jyg64uI67KE7ISkIOyKpO2KnOuUlOyYpCDsnqztjKw!5e0!3m2!1sko!2skr!4v1701601504032!5m2!1sko!2skr"
+                width="600" height="450" ></iframe> */}
+            <div className="page3">
+                <div className="area-cont-wrap">
+                    <Area />
+                </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565411122063!2d135.42974357461148!3d34.66567677293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z7Jyg64uI67KE7ISkIOyKpO2KnOuUlOyYpCDsnqztjKw!5e0!3m2!1sko!2skr!4v1701601504032!5m2!1sko!2skr"
-                width="600" height="450" ></iframe>
             <div className="mouse-move">
-                <h1><FontAwesomeIcon icon={faComputerMouse} /></h1>
+                <h1>
+                    <FontAwesomeIcon icon={faComputerMouse} />
+                </h1>
                 <h2>MOUSE MOVE</h2>
             </div>
             <ImgHoverPlay />
