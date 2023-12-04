@@ -3,19 +3,20 @@ import {MainArea} from './MainArea';
 import {FooterArea} from './FooterArea';
 import { useNavigate } from 'react-router-dom';
 import { universalCon } from '../contents/module/universalContext';
-import { useEffect } from 'react';
+import { useCallback, useEffect, useLayoutEffect } from 'react';
 
 export function Layout(){
 
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0, 0);
     });
     
     const goNav = useNavigate();
-    const chgPage = (txt) => goNav(txt);
+
+    const chgPage = useCallback((pgName, param) => goNav(pgName, param), []);
     return(
         <universalCon.Provider value={{chgPage}}>
-            <TopArea />
+            <TopArea chgPageFn={chgPage} />
             <MainArea />
             <FooterArea />
         </universalCon.Provider>

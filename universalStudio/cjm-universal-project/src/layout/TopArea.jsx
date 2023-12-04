@@ -1,9 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+
+// 제이쿼리
+import $ from 'jquery';
+
 import { navMenu } from '../data/navMenu';
 import { Logo } from '../contents/module/Logo';
+
 // import '../css/nav.css';
-export function TopArea() {
+
+// 폰트어썸
+// 폰트어썸 불러오기
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export const TopArea = memo(({chgPageFn}) => {
+    // showSerach
+    const showSerach = (e) => {
+        e.preventDefault();
+        $('.searchingGnb').show();
+        $('#schinGnb').focus();
+    }
+
+    // enterKey
+    const enterKey = (e) => {
+        if(e.key === 'Enter'){
+            let txt = $(e.target).val().trim();
+            if(txt !== ''){
+                $(e.target).val('').parent().hide();
+                goSerach(txt);
+            }
+        };
+    };
+
+    const goSerach = (txt) => {
+        chgPageFn('/schpage', {state : {keyword : txt}});
+    }
+
     return (
         <>
             <header className="top-area">
@@ -37,15 +70,24 @@ export function TopArea() {
                             )
                         }
                         <li style={{marginLeft: 'auto'}}>
-                            <Link to='/member'>Join US</Link>
+                            <div className="searchingGnb">
+                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
+                                <input id="schinGnb" type="text" placeholder="Filter by keyword" onKeyUp={enterKey} />
+                            </div>
+                            <a href="#" onClick={showSerach}>
+                                <FontAwesomeIcon icon={faSearch} />
+                            </a>
                         </li>
                         <li>
-                            <Link to='/login'>Login</Link>
+                            <Link to='/member'>회원가입</Link>
+                        </li>
+                        <li>
+                            <Link to='/login'>로그인</Link>
                         </li>
                     </ul>
-                    {/* <button className='bambtn'></button> */}
+                    <button className="hambtn"></button>
                 </nav>
             </header>
         </>
     );
-}
+});
