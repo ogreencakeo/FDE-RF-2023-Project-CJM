@@ -2,7 +2,7 @@ export const hotelData = {
     official_hotel: [
         {
             name: "오리엔탈 호텔 유니버설 시티",
-            desc: "대자연을 테마로 한 안락하고 편안한 호텔^몸과 마음 모두 건강해지는 조식이 매력",
+            desc: "대자연을 테마로 한 안락하고 편안한 호텔.^몸과 마음 모두 건강해지는 조식이 매력",
             img: "hotel/hotel1/1.jpg",
             btn: "",
             link : ""
