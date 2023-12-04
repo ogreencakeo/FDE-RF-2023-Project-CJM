@@ -28,5 +28,15 @@ export const moveImgData = {
         "../../../images/main/pickup/pickup6.jpg",
         "../../../images/main/pickup/pickup7.jpg",
         "../../../images/main/pickup/pickup8.jpg",
+    ],
+    "attraction" : [
+        "../../../images/attraction/img/attraction1.jpg",
+        "../../../images/attraction/img/attraction10.jpg",
+        "../../../images/attraction/img/attraction16.jpg",
+        "../../../images/attraction/img/attraction19.jpg",
+        "../../../images/attraction/img/attraction21.jpg",
+        "../../../images/attraction/img/attraction29.jpg",
+        "../../../images/attraction/img/attraction38.jpg",
+        "../../../images/attraction/img/attraction41.jpg",
     ]
 }

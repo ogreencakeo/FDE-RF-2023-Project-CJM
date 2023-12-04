@@ -44,21 +44,7 @@ import {Area} from '../contents/module/Area.jsx';
 // import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
 
 export function Main() {
-    const text = "#ENJOY 피크를 즐기는 방법";
-
-    const [visibleIndex, setVisibleIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (visibleIndex < text.length) {
-                setVisibleIndex((prevIndex) => prevIndex + 1);
-            } else {
-                clearInterval(interval);
-            }
-        }, 200);
-
-        return () => clearInterval(interval); // 컴포넌트가 언마운트될 때 interval 정리
-    }, [visibleIndex, text]);
+    
 
     useEffect(() => {
         const mainImgStage = document.querySelector(".header-main-img-wrap");
@@ -274,6 +260,13 @@ export function Main() {
                     </div>
                 </div>
             </div>
+            
+            <ImgMoveSlide imgMove="attraction" />
+            {/* <div className="map-wrapper-view">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565411122063!2d135.42974357461148!3d34.66567677293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z7Jyg64uI67KE7ISkIOyKpO2KnOuUlOyYpCDsnqztjKw!5e0!3m2!1sko!2skr!4v1701601504032!5m2!1sko!2skr"
+                    width="600" height="450" ></iframe>
+                
+            </div> */}
             <div className="page2 page">
                 <span className="page2-light">{makeLight()}</span>
                 <div className="page2-cont">
@@ -318,6 +311,7 @@ export function Main() {
                     </div>
                 </div>
             </div>
+            
             {/* <div className="page4">
                 <div className="load-text">
                     <span>
@@ -332,10 +326,20 @@ export function Main() {
             {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565411122063!2d135.42974357461148!3d34.66567677293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z7Jyg64uI67KE7ISkIOyKpO2KnOuUlOyYpCDsnqztjKw!5e0!3m2!1sko!2skr!4v1701601504032!5m2!1sko!2skr"
                 width="600" height="450" ></iframe> */}
             <div className="page3">
+                .
                 <div className="area-cont-wrap">
                     <Area />
                 </div>
             </div>
+            {/* <div className="page4">
+                <div className="page4-ticket-bx">
+                    <nav className="effect-span">
+                        <a href="#"><span data-hover='hi2'>Hi2</span></a>
+                        <a href="#"><span data-hover='hi2'>Hi2</span></a>
+                        <a href="#"><span data-hover='hi3'>Hi3</span></a>
+                    </nav>
+                </div>
+            </div> */}
             <div className="mouse-move">
                 <h1>
                     <FontAwesomeIcon icon={faComputerMouse} />

@@ -3,7 +3,8 @@
     width: 4000px;
     overflow: hidden;
     margin: 20px 0;
-
+    border-top: 7px solid black;
+    border-bottom: 7px solid black;
 }
 .img-move-ani:hover {
     animation-play-state: paused;
@@ -31,9 +32,11 @@
 
 .image-move li>img{
     width: 100%;
-    /* height: auto;  */
-    aspect-ratio: 1.1/1;
+    /* height: auto; */
+    aspect-ratio: 1.2/1;
     display: block;
+    border: 5px solid black;
+    box-sizing: border-box;
 }
 
 .img-move-ani{

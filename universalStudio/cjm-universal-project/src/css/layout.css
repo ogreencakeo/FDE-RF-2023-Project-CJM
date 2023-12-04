@@ -30,7 +30,7 @@ main.cont {
 .gnb>ul>li{
     /* 상위메뉴 부모자격 */
     position: relative;
-    /* line-height: 58px; */
+    line-height: 65px;
     font-family: 'Gugi';
     font-size: 1.2rem;
 }
@@ -61,7 +61,7 @@ main.cont {
     line-height: 2.5;
     /* 처음에 안보임 */
     display: none;
-    top: 45px;
+    top: 53px;
 }
 /* 오버시보임 */
 .gnb>ul>li:hover .smenu{
@@ -71,7 +71,7 @@ main.cont {
 .smenu::after{
     content: '';
     position: absolute;
-    top: -14px;
+    top: -5px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
