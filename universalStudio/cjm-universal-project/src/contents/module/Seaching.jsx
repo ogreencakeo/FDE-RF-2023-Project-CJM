@@ -107,7 +107,7 @@ export function Seaching(props) {
 
         if(chked){
             const nowList = attractionData.filter((v) => {
-                if(v.type == cid) return true;
+                if(v.areatype == cid) return true;
             });
 
             if(num > 1){ // 체크개수가 1초과일때
@@ -117,7 +117,7 @@ export function Seaching(props) {
             }
         }else{
             for(let i=0; i<temp.length; i++){
-                if(temp[i].type == cid){
+                if(temp[i].areatype == cid){
                     temp.splice(i, 1);
                     i--;
                 }
