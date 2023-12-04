@@ -10,6 +10,7 @@ import $ from "jquery";
 // css
 import '../../css/attraction.css';
 import { useState } from "react";
+import { useRef } from "react";
 
 export function Seaching(props) {
 
@@ -21,7 +22,13 @@ export function Seaching(props) {
 
     const chgKword = (txt) => setKword(txt); 
 
+    // 1-상단검색허용 , 0-상단검색불허용
     const allow = useRef(1);
+    const firstSts = useRef(0);
+
+    const initFn = () => {
+        
+    };
 
     return (
         <>
