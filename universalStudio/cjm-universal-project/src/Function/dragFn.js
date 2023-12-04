@@ -41,7 +41,7 @@ export function dragFn() {
     let lastPoint = target.width() - (winW / 3) * 2;
     console.log("마지막 한계값:", lastPoint);
 
-    $("html,body").on("mousedown mouseup mousemove", () => {
+    $(".pick-up-wrap").on("mousedown mouseup mousemove", () => {
         let tgPos = target.offset().left;
         console.log("현재left값:", tgPos);
 

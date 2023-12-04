@@ -35,6 +35,7 @@ export function Seaching(props) {
     }); //// useEffect ///
 
     const initFn = () => {
+        console.log('init 실행');
         chgKword(props.kword);
         $("#schin").val(props.kword);
         // 검색 리스트 만들기
@@ -42,7 +43,7 @@ export function Seaching(props) {
     };
 
      // 만약 useRef변수값이 1이면(true면) initFn실행!
-    if (allow.current) initFn();
+    //  if (allow.current) initFn();
 
     function firstDo(){
         const firstTemp = attractionData.filter((v) => {
@@ -64,22 +65,27 @@ export function Seaching(props) {
         firstSts.current = 1;
     }
 
-    useEffect(()=>{}, []);
+    useEffect(()=>{
+        if (allow.current) initFn();
+    }, []);
 
     // 검색리스트 만들기 함수
     function schList(e) {
+        console.log(e);
         let keyword = $("#schin").val();
         const newList = attractionData.filter((v) => {
             if (v.name.indexOf(keyword) != -1) return true;
         });
-
+        console.log(newList);
         setSelData([newList, 2]);
         setCnt(newList.length);
     }
 
     // 엔터키 반응 함수
     const enterKey = (e) => {
+        console.log('enter진입1');
         if (e.key == "Enter") {
+            console.log('enter진입2');
             allow.current = 0;
             setTimeout(() => (allow.current = 1), 0);
             let txt = $(e.target).val();
@@ -97,7 +103,7 @@ export function Seaching(props) {
         let temp = selData[0];
         let lastList = [];
 
-        let num = $('chkhdn:checked').length;
+        let num = $('.chkhdn:checked').length;
 
         if(chked){
             const nowList = attractionData.filter((v) => {
@@ -173,18 +179,18 @@ export function Seaching(props) {
                         <ol>
                             <li>
                                 슈퍼 닌텐도 월드™
-                                <input type="checkbox" id="supermario" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="supermario" className="arealb"></label>
+                                <input type="checkbox" id="nintendo" className="chkhdn" onChange={chkSearch} />
+                                <label htmlFor="nintendo" className="arealb"></label>
                             </li>
                             <li>
                                 위저딩 월드 오브 해리 포터™
-                                <input type="checkbox" id="harry-potter" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="harry-potter" className="arealb"></label>
+                                <input type="checkbox" id="harrypotter" className="chkhdn" onChange={chkSearch} />
+                                <label htmlFor="harrypotter" className="arealb"></label>
                             </li>
                             <li>
                                 미니언 파크
-                                <input type="checkbox" id="minion-park" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="minion-park" className="arealb"></label>
+                                <input type="checkbox" id="minion" className="chkhdn" onChange={chkSearch} />
+                                <label htmlFor="minion" className="arealb"></label>
                             </li>
                             <li>
                                 유니버설 원더랜드
@@ -192,34 +198,9 @@ export function Seaching(props) {
                                 <label htmlFor="wonderland" className="arealb"></label>
                             </li>
                             <li>
-                                할리우드
-                                <input type="checkbox" id="hollywood" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="hollywood" className="arealb"></label>
-                            </li>
-                            <li>
-                                뉴옥
-                                <input type="checkbox" id="newyork" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="newyork" className="arealb"></label>
-                            </li>
-                            <li>
-                                샌프란시스코
-                                <input type="checkbox" id="sanfrancisco" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="sanfrancisco" className="arealb"></label>
-                            </li>
-                            <li>
                                 쥬라기 공원
                                 <input type="checkbox" id="jurassicpark" className="chkhdn" onChange={chkSearch} />
                                 <label htmlFor="jurassicpark" className="arealb"></label>
-                            </li>
-                            <li>
-                                애머티 빌리지
-                                <input type="checkbox" id="amityvillage" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="amityvillage" className="arealb"></label>
-                            </li>
-                            <li>
-                                워터 월드
-                                <input type="checkbox" id="waterworld" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="waterworld" className="arealb"></label>
                             </li>
                         </ol>
                     </div>
