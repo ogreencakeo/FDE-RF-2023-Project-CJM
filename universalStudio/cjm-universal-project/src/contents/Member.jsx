@@ -1,4 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+// 로컬스토리지 생성 JS
+import { clearData, initData} from '../Function/mem_fn.js';
 
 // CSS
 import '../css/member.css';
@@ -6,7 +10,7 @@ import '../css/member.css';
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+
 
 export function Member() {
 
@@ -19,7 +23,7 @@ export function Member() {
     // 에러 상태관리 변수
     const [userIdError, setUserIdError] = useState(false);
     const [pwdError, setPwdError] = useState(false);
-    const [phkPwdError, setChkPwdError] = useState(false);
+    const [chkPwdError, setChkPwdError] = useState(false);
     const [userNameError, setUserNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
 
@@ -42,9 +46,26 @@ export function Member() {
     const changeUserId = (e) => {
         const valid = /^[A-Za-z0-9+]{5,}$/;
         if(valid.test(e.target.value)){
-            // 로컬스토리지 체크 함수 호출
+            initData();
 
-            // setIdMsg(msgId[1])
+            let memData = localStorage.getItem('mem-data');
+            memData = JSON.parse(memData);
+
+            // 기존 아이디가 있으면 상태값 false로 업데이트
+            let isOk = true;
+
+            memData.forEach((v) => {
+                if(v.uid === e.target.value){
+                    setIdMsg(msgId[1]);
+                    setUserIdError(true);
+                    isOk = false;
+                }
+            });
+
+            if(isOk){
+                setIdMsg(msgId[1]);
+                setUserIdError(false);
+            }
             
         }
     }
@@ -54,6 +75,29 @@ export function Member() {
 
         if(valid.test(e.target.value)) setChkPwd(false);
         else setChkPwd(true);
+
+        setPwd(e.target.value);
+    }
+
+    const changeChkPwd = (e) => {
+        if(pwd == e.target.value) setChkPwdError(false);
+        else setChkPwdError(true);
+
+        setChkPwd(e.target.value);
+    }
+
+    const changeUserName = (e) => {
+        if(e.target.value != '') setUserNameError(false);
+        else setUserNameError(true);
+
+        SetUserName(e.target.value);
+    } 
+
+    const changeEmail = (e) => {
+        const valid =  /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+        if(valid.test(e.target.value)) setEmailError(false);
+        else setEmailError(true);
+        setEmail(e.target.value);
     }
 
     return (
@@ -67,30 +111,111 @@ export function Member() {
                         <table>
                             <tr>
                                 <td><label>아이디 </label></td>
-                                <td><input type="text" maxLength="20" placeholder="아이디를 입력해주세요" value={userId} onChange={changeUserId} /></td>
+                                <td>
+                                    <input type="text" maxLength="20" placeholder="아이디를 입력해주세요" value={userId} onChange={changeUserId} />
+                                    {
+                                        userIdError && (
+                                            <div className="msg">
+                                                <small style={{
+                                                    color : 'red',
+                                                    fontSize : '10px'
+                                                }}>
+                                                    {idMsg}
+                                                </small>
+                                            </div>
+                                        )
+                                    }
+                                    {
+                                        !userIdError && userId && (
+                                            <div className="msg">
+                                                <small style={{
+                                                    color : 'green',
+                                                    fontSize : '10px'
+                                                }}>
+                                                    {msgId[2]}
+                                                </small>
+                                            </div>
+                                        )
+                                    }
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>비밀번호 </label></td>
-                                <td><input type="password" maxLength="20" placeholder="비밀번호를 입력해주세요" /></td>
+                                <td>
+                                    <input type="password" maxLength="20" placeholder="비밀번호를 입력해주세요" value={pwd} onChange={changePwd} />
+                                    {
+                                        pwdError && (
+                                            <div className="msg">
+                                                <small style={{
+                                                    color : 'red',
+                                                    fontSize : '10px'
+                                                }}>
+                                                    {msgEtc.pwd}
+                                                </small>
+                                            </div>
+                                        )
+                                    }
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>비밀번호 확인 </label></td>
-                                <td><input type="password" maxLength="20" placeholder="비밀번호를 다시 입력해주세요" /></td>
+                                <td>
+                                    <input type="password" maxLength="20" placeholder="비밀번호를 다시 입력해주세요" value={chkPwd} onChange={changeChkPwd} />
+                                    {
+                                        chkPwdError && (
+                                            <div className="msg">
+                                                <small style={{
+                                                    color : 'red',
+                                                    fontSize : '10px'
+                                                }}>
+                                                    {msgEtc.confPwd}
+                                                </small>
+                                            </div>
+                                        )
+                                    }
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>닉네임</label></td>
-                                <td><input type="text" maxLength="20" placeholder="이름을 입력해주세요" /></td>
+                                <td>
+                                    <input type="text" maxLength="20" placeholder="닉네임을 입력해주세요" value={userName} onChange={changeUserName} />
+                                    {
+                                        userNameError && (
+                                            <div className="msg">
+                                                <small style={{
+                                                    color : 'red',
+                                                    fontSize : '10px'
+                                                }}>
+                                                    {msgEtc.req}
+                                                </small>
+                                            </div>
+                                        )
+                                    }
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>이메일</label></td>
-                                <td><input type="text" maxLength={50} placeholder="예)universal@studio.com" /></td>
+                                <td>
+                                    <input type="text" maxLength={50} placeholder="예)universal@studio.com" value={email} onChange={changeEmail} />
+                                    {
+                                        emailError && (
+                                            <div className="msg">
+                                                <small style={{
+                                                    color : 'red',
+                                                    fontSize : '10px'
+                                                }}>
+                                                    {msgEtc.email}
+                                                </small>
+                                            </div>
+                                        )
+                                    }
+                                </td>
                             </tr>
-                            <tr cosp>
-                                <button className="sbtn">
+                            <tr>
+                                <button className="sbtn" onClick={onSubmit}>
                                     가입하기
                                 </button>
                             </tr>
-
                         </table>
                         <p>로그인 페이지로 이동하겠습니까?
                             <strong>
