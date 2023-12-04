@@ -63,11 +63,14 @@ export function Member() {
             });
 
             if(isOk){
-                setIdMsg(msgId[1]);
+                setIdMsg(msgId[0]);
                 setUserIdError(false);
             }
             
+        }else{
+            setUserIdError(true);
         }
+        setUserId(e.target.value);
     }
 
     const changePwd = (e) => {
@@ -98,6 +101,34 @@ export function Member() {
         if(valid.test(e.target.value)) setEmailError(false);
         else setEmailError(true);
         setEmail(e.target.value);
+    }
+
+    const totalValid = () => {
+        if(!userId) setUserIdError(true);
+        if(!pwd) setPwdError(true);
+        if(!chkPwd) setChkPwdError(true);
+        if(!userName) setUserNameError(true);
+        if(!email) setEmailError(true);
+
+        if(
+            userId &&
+            pwd &&
+            chkPwd &&
+            userName &&
+            email &&
+            !userIdError &&
+            !pwdError &&
+            !chkPwdError &&
+            !userNameError &&
+            !emailError
+        )
+            return true;
+        else return false;
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        
     }
 
     return (
