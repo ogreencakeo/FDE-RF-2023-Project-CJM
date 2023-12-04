@@ -9,13 +9,12 @@ import {Goods} from './contents/Goods.jsx'
 import {CustomerCenter} from './contents/CustomerCenter.jsx'
 import { Ticket } from './contents/TIcket.jsx';
 import { Detail } from './contents/Detail.jsx';
+import { Layout } from './layout/Layout';
+import { Member } from './contents/Member.jsx';
+import { SchPage } from './contents/SchPage.jsx';
 
 // CSS 불러오기
 import './css/common.css';
-
-import { Layout } from './layout/Layout';
-import { Member } from './contents/Member.jsx';
-
 
 export default function App() {
 
@@ -28,11 +27,12 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Main />} />
-          <Route path='attraction' element={<Attraction />} />
+          {/* <Route path='attraction' element={<Attraction />} /> */}
           <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
           <Route path='goods/*' element={<Goods />} />
           <Route path='ticket' element={<Ticket />} />
           <Route path='customerCenter' element={<CustomerCenter />} />
+          <Route path='schpage' element={<SchPage />} />
           <Route path='detail' element={<Detail />} />
           <Route path='member' element={<Member />} />
         </Route>
