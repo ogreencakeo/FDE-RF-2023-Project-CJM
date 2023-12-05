@@ -4,7 +4,8 @@ import { faPaste, faCircleUser, faHourglassHalf, faCircleXmark } from "@fortawes
 import { faCalendarWeek, faLocationDot, faTicket, faEye } from "@fortawesome/free-solid-svg-icons";
 // import "../css/ticket.css";
 import "../css/ticket2.css";
-import { TicketSwiper } from "../contents/pages/plugin/TicketSwiper";
+
+// 모듈 불러오기
 import { TicketOption } from "./module/TicketOption";
 import { UniverSalText } from "./module/UniverSalText";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";

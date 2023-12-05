@@ -12,8 +12,6 @@ import { JurassicPark } from "./GoodsCont/JurassicPark";
 // 지도
 import { Map } from "./module/Map";
 
-// 모듈 가져오기
-import { GoodsLink } from "./module/GoodsLink";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 
 // CSS
@@ -24,7 +22,6 @@ import "../css/goods.css";
 // 스와이퍼
 import { GoodsSwiper } from "./pages/plugin/Swiper";
 import { Caution } from "./module/Caution";
-import { VidSection } from "./module/VidSection";
 import { GoodsMain } from "./GoodsCont/GoodsMain";
 import { HelloKitty } from "./GoodsCont/HelloKitty.jsx";
 import { SwiperSec } from "./pages/plugin/SwiperSec";

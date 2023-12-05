@@ -18,12 +18,6 @@ export function ImgMoveSlide(props) {
                                 <img src={v} alt={`움직이는 이미지 ${i}`} />
                             </li>)
                     }
-                    {/* {Array.isArray(props.imgMove) &&
-                        props.imgMove.map((v, i) => (
-                            <li key={i}>
-                                <img src={v} alt={`움직이는 이미지${i + 1}`} />
-                            </li>
-                        ))} */}
                 </ul>
                 <ul>
                     {
