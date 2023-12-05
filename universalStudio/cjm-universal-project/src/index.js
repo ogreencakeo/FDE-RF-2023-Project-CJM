@@ -16,6 +16,7 @@ import { SchPage } from './contents/SchPage.jsx';
 // CSS 불러오기
 import './css/common.css';
 import { Hotel } from './contents/Hotel.jsx';
+import { Login } from './contents/Login.jsx';
 
 export default function App() {
 
@@ -36,6 +37,7 @@ export default function App() {
           <Route path='schpage' element={<SchPage />} />
           <Route path='detail' element={<Detail />} />
           <Route path='member' element={<Member />} />
+          <Route path='login' element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>
