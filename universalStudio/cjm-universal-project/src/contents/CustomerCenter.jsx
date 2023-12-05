@@ -1,17 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../css/customerCenter.css";
 
 import { announcement } from "../data/유니버설-문의";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleRight, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 export function CustomerCenter() {
-    const [customerColor, setCustomerColor] = useState("notice-announcement");
+
+    const [customBtn, setCustomBtn] = useState('notice_announcement');
+    const [selData, setSelData] = useState(announcement[customBtn])
+
+    const [customerColor, setCustomerColor] = useState("notice_announcement");
     const customerCenterFn = (data) => {
+        setCustomBtn(data);
         setCustomerColor(data);
     };
+
+    useEffect(()=>{
+        const selectedData = announcement[customBtn];
+        setSelData(selectedData);
+    }, [customBtn]);
 
     return (
         <>
@@ -21,8 +31,8 @@ export function CustomerCenter() {
                     {/* 옵션 버튼 박스 */}
                     <div className="customer-option-bx">
                         <button
-                            className={customerColor === "notice-announcement" ? "customerColorOn" : ""}
-                            onClick={() => customerCenterFn("notice-announcement")}
+                            className={customerColor === "notice_announcement" ? "customerColorOn" : ""}
+                            onClick={() => customerCenterFn("notice_announcement")} key={0}
                         >
                             <span>공지사항</span>
                             {/* <span><FontAwesomeIcon icon={faCircleRight} /></span> */}
@@ -31,8 +41,8 @@ export function CustomerCenter() {
                             </span>
                         </button>
                         <button
-                            className={customerColor === "frequently-asked" ? "customerColorOn" : ""}
-                            onClick={() => customerCenterFn("frequently-asked")}
+                            className={customerColor === "frequently_asked" ? "customerColorOn" : ""}
+                            onClick={() => customerCenterFn("frequently_asked")} key={1}
                         >
                             <span>자주하는 질문</span>
                             <span>
@@ -41,7 +51,7 @@ export function CustomerCenter() {
                         </button>
                         <button
                             className={customerColor === "one-to-one-inquiry" ? "customerColorOn" : ""}
-                            onClick={() => customerCenterFn("one-to-one-inquiry")}
+                            onClick={() => customerCenterFn("one-to-one-inquiry")} key={2}
                         >
                             <span>1대1 문의</span>
                             <span>
@@ -60,7 +70,7 @@ export function CustomerCenter() {
                             <div>작성자</div>
                             <div>작성일</div>
                         </div>
-                        {announcement.map((v, i) => (
+                        {selData.map((v, i) => (
                             <ul className="customerCenter-smenu" key={i}>
                                 <li>{v.idx}</li>
                                 <li>{v.tit}</li>

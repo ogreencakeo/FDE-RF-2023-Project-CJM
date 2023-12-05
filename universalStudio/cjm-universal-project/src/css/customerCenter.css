@@ -71,33 +71,43 @@ h1, h2, h3, p, span, div, button{
     display: flex;
     border-top: 1px solid #333333 ;
     border-bottom: 1px solid #333333 ;
+    box-sizing: border-box;
 }
 .customerCenter-bx>div>div{
     padding: 10px 30px;
-    flex: 1;
+    /* flex: 1; */
     text-align: center;
-}
-.customerCenter-bx>div>div:first-child{
-    flex: 0.3;
-}
-.customerCenter-bx>div>div:nth-child(2){
-    flex: 1.8;
 }
 .customerCenter-bx>ul{
     display: flex;
 }
 .customerCenter-bx>ul>li{
-    flex: 1;
     padding: 10px 30px;
     /* outline: 1px solid beige; */
     border-bottom:1px solid #f4f4f4;
     text-align: center;
+    box-sizing: border-box;
 }
+.customerCenter-bx>div>div:first-child{
+    flex: 0.2;
+}
+.customerCenter-bx>div>div:nth-child(2){
+    flex: 3.1;
+}
+.customerCenter-bx>div>div:nth-child(3),
+.customerCenter-bx>div>div:last-child{
+    flex: 0.6;
+}
+/*  */
 .customerCenter-bx>ul>li:first-child{
-    flex: 0.3;
+    flex: 0.2;
 }
 .customerCenter-bx>ul>li:nth-child(2){
-    flex: 1.8;
+    flex: 2.5;
+}
+.customerCenter-bx>ul>li:nth-child(3),
+.customerCenter-bx>ul>li:last-child{
+    flex: 0.6;
 }
 
 
