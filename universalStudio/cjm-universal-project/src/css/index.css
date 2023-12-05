@@ -451,7 +451,7 @@ a {
 
 /* 180회전 박스 */
 .pick-up-img-box {
-    width: 450px;
+    width: 430px;
     height: 400px;
     position: relative;
     perspective: 1500px;
@@ -493,6 +493,9 @@ a {
     ;
 }
 
+.pick1 h2{
+    margin-top: 5px;
+}
 .pick1>img,
 .pick2>img {
     display: block;

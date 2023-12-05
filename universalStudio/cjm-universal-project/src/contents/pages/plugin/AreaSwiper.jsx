@@ -50,8 +50,11 @@ export function AreaSwiper(props) {
             {selData.map((v, i) => (
                 <SwiperSlide key={i}>
                     <div className="area-swiper-bx">
-                        <div>
+                        <div className="area-swiper-img">
                             <img src={`../images/${v.img}`} alt="에어리어 이미지" />
+                            <div className="img-hi">
+                                <h3>{v.txt}</h3>
+                            </div>
                         </div>
                         <h1>{v.name}</h1>
                     </div>
