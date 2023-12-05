@@ -30,8 +30,8 @@ export function CustomerCenter() {
     
     // 토글 버튼
     const togglebox = document.querySelectorAll('.togglebox');
-    console.log('togglebox', togglebox.length);
     const [isOn, setIsOn] = useState(Array(togglebox.length).fill(false));
+    console.log('togglebox', togglebox.length);
     console.log(isOn);
     
     
@@ -40,7 +40,6 @@ export function CustomerCenter() {
             const newToggleList = [...prev];
             newToggleList[index] = !newToggleList[index];
             return newToggleList;
-
         })
     }
 
