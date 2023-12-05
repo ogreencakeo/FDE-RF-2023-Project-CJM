@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { Link, useHref } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -48,7 +48,7 @@ export function Main() {
         const mainImgStage = document.querySelector(".header-main-img-wrap");
         setTimeout(() => {
             mainImgStage.classList.add("on");
-        }, 1500);
+        }, 700);
 
         // pick up 드래그
         dragFn();
@@ -78,15 +78,6 @@ export function Main() {
             clearInterval(backgroundColorInterval); // 컴포넌트가 언마운트될 때 interval 정리
         };
     }, []);
-
-    // setTimeout(() => {
-    //     const page2Ele = document.querySelector(".page2");
-    //     const colorChange = ["#000", "#333b35"];
-    //     const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
-    //     // page2Element.style.transition = 'background 0.5s';
-    //     page2Ele.style.backgroundColor = randomColor;
-    //     page2Ele.style.transition = "backgroundColor 0.5s ease-in-out";
-    // }, 1000);
 
     // 사진 클릭 회전
     // 박스별 회전 상태를 저장하는 배열
@@ -139,8 +130,6 @@ export function Main() {
 
     return (
         <>
-            {/* Header */}
-            {/* <div className={`${isMainVisible ? 'visible' : 'hidden'}`}> */}
             <div>
                 <div className="header">
                     <div className="header-img">
@@ -288,11 +277,7 @@ export function Main() {
             <div className="page2 page">
                 <span className="page2-light">{makeLight()}</span>
                 <div className="page2-cont">
-                    {/* <img className='character16' src="../images/main/character/character16.png" alt="팬더" /> */}
                     <div className="enjoy-pick-cont">
-                        {/* <h1>
-                            <FontAwesomeIcon icon={faCalendarCheck} />
-                        </h1> */}
                         <img className="enjoty-pick-img" src="../images/main/character/clock.gif" alt="시간" />
                         <h2 className="point-span">
                             <span data-hover="POINT1">POINT1</span>
@@ -301,9 +286,6 @@ export function Main() {
                         <p>#예약 탑승’ 티켓을 사용</p>
                     </div>
                     <div className="enjoy-pick-cont">
-                        {/* <h1>
-                            <FontAwesomeIcon icon={faMobileScreenButton} />
-                        </h1> */}
                         <img className="enjoty-pick-img" src="../images/main/character/phone.gif" alt="핸드폰" />
                         <h2 className="point-span">
                             <span data-hover="POINT2">POINT2</span>
@@ -314,9 +296,6 @@ export function Main() {
                         <p>#3:예약 탑승</p>
                     </div>
                     <div className="enjoy-pick-cont">
-                        {/* <h1>
-                            <FontAwesomeIcon icon={faIcons} />
-                        </h1> */}
                         <img className="enjoty-pick-img" src="../images/main/character/party.gif" alt="파티" />
                         <h2 className="point-span">
                             <span data-hover="POINT3">POINT3</span>
@@ -329,36 +308,12 @@ export function Main() {
                     </div>
                 </div>
             </div>
-
-            {/* <div className="page4">
-                <div className="load-text">
-                    <span>
-                        {text.split("").map((char, index) => (
-                            <span key={index} style={{ visibility: index < visibleIndex ? "visible" : "hidden" }}>
-                                {char}
-                            </span>
-                        ))}
-                    </span>
-                </div>
-            </div> */}
-            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565411122063!2d135.42974357461148!3d34.66567677293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z7Jyg64uI67KE7ISkIOyKpO2KnOuUlOyYpCDsnqztjKw!5e0!3m2!1sko!2skr!4v1701601504032!5m2!1sko!2skr"
-                width="600" height="450" ></iframe> */}
             <div className="page3">
                 <div className="area-cont-wrap">
                     <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx"><span data-hover='Area' onClick={(e) => e.preventDefault()}>Area</span></a></nav></h1>
                     <Area />
                 </div>
             </div>
-            {/* <div className="page4">
-                <div className="page4-ticket-bx">
-                    <nav className="effect-span">
-                        <a href="#"><span data-hover='hi2'>Hi2</span></a>
-                        <a href="#"><span data-hover='hi2'>Hi2</span></a>
-                        <a href="#"><span data-hover='hi3'>Hi3</span></a>
-                    </nav>
-                </div>
-            </div> */}
-            {/* <GridAnimation /> */}
             <div className="main-footer-character">
                 <div className="character-star">
                     <img src="../images/main/character/character9.gif" alt="캐릭터 별" />
@@ -375,9 +330,6 @@ export function Main() {
             </div>
             <ImgHoverPlay />
             <UniverSalText />
-            <div className="welcome-universal">
-
-            </div>
         </>
     );
 }
