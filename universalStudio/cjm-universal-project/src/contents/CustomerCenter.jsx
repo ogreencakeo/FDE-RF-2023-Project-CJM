@@ -24,8 +24,15 @@ export function CustomerCenter() {
 
     const cusmenu = document.querySelector('.cust-smenu-cont');
 
+    // const viewCusCont = () => {
+    //     cusmenu.classList.toggle('on');
+    // }
+    
+    // 토글 버튼
+    const [isOn, setIsOn] = useState(false);
+    
     const viewCusCont = () => {
-        cusmenu.classList.toggle('on');
+        setIsOn(!isOn);
     }
 
     return (
@@ -121,17 +128,17 @@ export function CustomerCenter() {
                         {selData.map(
                             (v, i) =>
                                 v.writer != "" && (
-                                    <>
-                                        <ul className="customerCenter-smenu" key={i} onClick={()=>viewCusCont()}>
+                                    <div className="togglebox" onClick={()=>viewCusCont()}  key={i}>
+                                        <ul className="customerCenter-smenu">
                                             <li>{v.idx}</li>
                                             <li>{v.tit}</li>
                                             <li>{v.writer}</li>
                                             <li>{v.date}</li>
                                         </ul>
-                                        <div className="cust-smenu-cont">
+                                        <div className={`cust-smenu-cont ${isOn? 'on' : '' }`}>
                                             {v.cont}
                                         </div>
-                                    </>
+                                    </div>
                                 )
                         )}
                         {selData.map(
