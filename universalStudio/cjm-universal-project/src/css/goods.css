@@ -87,10 +87,11 @@
     display: flex;
     gap: 50px;
     justify-content: center;
-    /* background-color: whitesmoke; */
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 8px #555;
     padding: 10px;
-    background: url(../../public/images/goods/character/background4.png) no-repeat;
     flex-wrap: wrap;
+    border: 1px solid #ccc;
 }
 .goods_caution_img{
     /* width: 300px; */
@@ -109,11 +110,11 @@
 }
 
 .goods_caution_content p{
-    font-family: 'Nanum Gothic';
+    font-family: 'Jua';
     font-size: 1.2vw;
     line-height: 2;
     color: white;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 2px black;
 }
 
 

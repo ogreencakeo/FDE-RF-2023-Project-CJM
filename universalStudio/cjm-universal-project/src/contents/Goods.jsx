@@ -20,7 +20,6 @@ import "../css/goods.css";
 
 
 // 스와이퍼
-import { GoodsSwiper } from "./pages/plugin/Swiper";
 import { Caution } from "./module/Caution";
 import { GoodsMain } from "./GoodsCont/GoodsMain";
 import { HelloKitty } from "./GoodsCont/HelloKitty.jsx";

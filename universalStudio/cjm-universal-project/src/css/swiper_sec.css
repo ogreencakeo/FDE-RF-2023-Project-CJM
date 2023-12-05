@@ -49,11 +49,12 @@ body {
 .swipe_sec_cat{
     font-family: 'Gugi';
     font-size: 1.2em;
-    padding: 5px;
-    background-color: whitesmoke;
+    padding: 10px;
+    background-color: #073888;
     border-radius: 20px;
     width: 65%;
     margin: 10px auto;
+    color: #fff;
 }
 .swipe_sec_tit{
     font-family: 'Nanum Gothic';
