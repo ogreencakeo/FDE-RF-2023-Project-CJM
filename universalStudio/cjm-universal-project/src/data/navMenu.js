@@ -92,8 +92,8 @@ export const navMenu = [
         txt : '고객센터',
         link : '/customerCenter'
     },
-    {
-        txt : '에어리어',
-        link : '/area'
-    }
+    // {
+    //     txt : '에어리어',
+    //     link : '/area'
+    // }
 ]
