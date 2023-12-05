@@ -4,7 +4,6 @@ import { Link, useHref } from "react-router-dom";
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareInstagram, faSquareFacebook, faSquareTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faFaceLaughSquint } from "@fortawesome/free-regular-svg-icons";
 import {
     faMapMarkerAlt,
     faClock,
