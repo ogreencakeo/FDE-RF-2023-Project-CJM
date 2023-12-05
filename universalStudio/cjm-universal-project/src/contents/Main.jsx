@@ -36,13 +36,10 @@ import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 import { ImgMoveSlide } from "./module/ImgMoveSlide.jsx";
-import { SwiperSec } from "./pages/plugin/SwiperSec.jsx";
 import { UniverSalText } from "./module/UniverSalText.jsx";
 import { ImgHoverPlay } from "./module/ImgHoverPlay.jsx";
-import { ChangeImg } from "./module/ChangeImg.jsx";
 
 import { Area } from "../contents/module/Area.jsx";
-import { GridAnimation } from "./module/GridAnimation.jsx";
 
 // import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
 

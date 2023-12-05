@@ -7,7 +7,7 @@ export const moveImgData = {
         "../../../images/goods/goods5/goods5.jpg",
         "../../../images/goods/goods6/goods6.jpg",
         "../../../images/goods/goods7/goods7.jpg",
-        "../../../images/goods/goods7/goods1.jpg",
+        "../../../images/goods/goods8/1.jpg",
     ],
     "seasonal" : [
         "../../../images/seasonal/seasonal1/seasonal1-1.jpg",
@@ -38,5 +38,25 @@ export const moveImgData = {
         "../../../images/attraction/img/attraction29.jpg",
         "../../../images/attraction/img/attraction38.jpg",
         "../../../images/attraction/img/attraction41.jpg",
+    ],
+    "ticket" : [
+        "../../../images/attraction/img/attraction4.jpg",
+        "../../../images/attraction/img/attraction9.jpg",
+        "../../../images/attraction/img/attraction14.jpg",
+        "../../../images/attraction/img/attraction23.jpg",
+        "../../../images/attraction/img/attraction31.jpg",
+        "../../../images/attraction/img/attraction36.jpg",
+        "../../../images/attraction/img/attraction40.jpg",
+        "../../../images/attraction/img/attraction2.jpg",
+    ],
+    "hotel" : [
+        "../../../images/hotel/hotel1/3.jpg",
+        "../../../images/hotel/hotel2/3.jpg",
+        "../../../images/hotel/hotel2/5.jpg",
+        "../../../images/hotel/hotel3/6.jpg",
+        "../../../images/hotel/hotel2/7.jpg",
+        "../../../images/hotel/hotel3/8.jpg",
+        "../../../images/hotel/hotel1/2.jpg",
+        "../../../images/hotel/hotel3/1.jpg",
     ]
 }

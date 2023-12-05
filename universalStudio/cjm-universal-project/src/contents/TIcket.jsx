@@ -7,6 +7,7 @@ import "../css/ticket2.css";
 import { TicketSwiper } from "../contents/pages/plugin/TicketSwiper";
 import { TicketOption } from "./module/TicketOption";
 import { UniverSalText } from "./module/UniverSalText";
+import { ImgMoveSlide } from "./module/ImgMoveSlide";
 
 export function Ticket() {
     const ticket_info = [
@@ -90,6 +91,7 @@ export function Ticket() {
                 </div>
             </div>
             <UniverSalText />
+            <ImgMoveSlide imgMove="ticket" />
         </>
     );
 }

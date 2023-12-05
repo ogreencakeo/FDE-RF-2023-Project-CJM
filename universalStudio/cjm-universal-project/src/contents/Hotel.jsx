@@ -3,6 +3,9 @@ import "../css/hotel.css";
 import { hotelData } from "../data/hotel/hotelData.js";
 import { useEffect, useState } from "react";
 
+import { UniverSalText } from "./module/UniverSalText.jsx";
+import { ImgMoveSlide } from "./module/ImgMoveSlide";
+
 export function Hotel() {
     
     const [hotelBtn, setHotelBtn] = useState('official_hotel');
@@ -87,6 +90,8 @@ export function Hotel() {
                     </div> */}
                 </div>
             </div>
+            <UniverSalText />
+            <ImgMoveSlide imgMove="hotel" />
         </>
     );
 }
