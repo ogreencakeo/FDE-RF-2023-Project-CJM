@@ -72,7 +72,7 @@ export function CustomerCenter() {
                                 <FontAwesomeIcon icon={faCaretRight} />
                             </span>
                         </button>
-                        <button
+                        {/* <button
                             className={customerColor === "one-to-one-inquiry" ? "customerColorOn" : ""}
                             onClick={() => customerCenterFn("one-to-one-inquiry")}
                             key={2}
@@ -81,7 +81,7 @@ export function CustomerCenter() {
                             <span>
                                 <FontAwesomeIcon icon={faCaretRight} />
                             </span>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 {/* 옵션 선택시 결과 박스 */}
