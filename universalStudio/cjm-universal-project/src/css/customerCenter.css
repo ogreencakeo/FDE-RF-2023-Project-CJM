@@ -72,6 +72,7 @@ h1, h2, h3, p, span, div, button{
     border-top: 1px solid #333333 ;
     border-bottom: 1px solid #333333 ;
     box-sizing: border-box;
+    text-align: center;
 }
 .customerCenter-bx>div>div{
     padding: 10px 30px;
@@ -87,12 +88,17 @@ h1, h2, h3, p, span, div, button{
     border-bottom:1px solid #f4f4f4;
     text-align: center;
     box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: start;
+    /* width: 95px; */
 }
 .customerCenter-bx>div>div:first-child{
     flex: 0.2;
 }
 .customerCenter-bx>div>div:nth-child(2){
-    flex: 3.1;
+    flex: 2.5;
 }
 .customerCenter-bx>div>div:nth-child(3),
 .customerCenter-bx>div>div:last-child{
@@ -110,6 +116,10 @@ h1, h2, h3, p, span, div, button{
     flex: 0.6;
 }
 
+/* 고객센터 아코디언 박스 */
+.cust-smenu-cont{
+    display: none;
+}
 
 /* 테이블 */
 /* .customerCenter-wrap table th{
