@@ -91,8 +91,13 @@ export function CustomerCenter() {
                         <div>
                             <div>번호</div>
                             <div>제목</div>
-                            <div>작성자</div>
-                            <div>작성일</div>
+                            {
+                                customBtn === "notice_announcement" &&
+                                <>
+                                <div>작성자</div>
+                                <div>작성일</div>                                
+                                </>
+                            }
                         </div>
                         {/* {selData['notice_announcement'] && (
                             <>
@@ -134,6 +139,7 @@ export function CustomerCenter() {
                                 )}
                             </>
                         )} */}
+                        
                         {selData.map(
                             (v, i) =>
                                 v.writer != "" && (
@@ -150,7 +156,7 @@ export function CustomerCenter() {
                                     </div>
                                 )
                         )}
-                        {selData.map(
+                        {/* {selData.map(
                             (v, i) =>
                                 v.writer == "" && (
                                     <ul className="customerCenter-smenu" key={i}>
@@ -159,7 +165,7 @@ export function CustomerCenter() {
                                         <div className="Cust-smenu-cont"></div>
                                     </ul>
                                 )
-                        )}
+                        )} */}
                     </div>
                 </div>
             </div>
