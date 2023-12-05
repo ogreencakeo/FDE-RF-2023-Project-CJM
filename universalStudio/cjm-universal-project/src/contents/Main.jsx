@@ -129,11 +129,13 @@ export function Main() {
         const cbtn = $(".cbtn");
 
         universal_main_map.fadeIn(300);
-        
-        cbtn.click(()=>{
+
+        cbtn.click(() => {
             universal_main_map.fadeOut(300);
         })
     };
+
+    // prevent
 
     return (
         <>
@@ -226,7 +228,8 @@ export function Main() {
                     </div>
                     {/* Pick-up Section */}
                     <div className="pick-up">
-                        <h1>PICK UP</h1>
+                        {/* <h1>PICK UP</h1> */}
+                        <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx"><span data-hover='PICK UP' onClick={(e) => e.preventDefault()}>PICK UP</span></a></nav></h1>
                         {/* <SwiperDrag /> */}
                         <div className="pick-up-wrap">
                             {pickUpData.map((v, i) => (
@@ -262,6 +265,7 @@ export function Main() {
             <div className="character-erath">
                 <img src="../images/main/character/character12.gif" alt="캐릭터 지구" />
                 <div className="main-video">
+
                     {/* 동영상 */}
                     <div class="main-video-wrap">
                         <iframe
@@ -341,6 +345,7 @@ export function Main() {
                 width="600" height="450" ></iframe> */}
             <div className="page3">
                 <div className="area-cont-wrap">
+                    <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx"><span data-hover='Area' onClick={(e) => e.preventDefault()}>Area</span></a></nav></h1>
                     <Area />
                 </div>
             </div>
@@ -370,6 +375,9 @@ export function Main() {
             </div>
             <ImgHoverPlay />
             <UniverSalText />
+            <div className="welcome-universal">
+
+            </div>
         </>
     );
 }

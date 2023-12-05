@@ -27,7 +27,7 @@ export function FooterArea() {
                         <ul>
                             {fmenu1.map((v, i) => (
                                 <li key={i}>
-                                    <Link to={v.link} target="_blank">{v.txt}</Link>
+                                    <p>{v.txt}</p>
                                 </li>
                             ))}
                         </ul>
@@ -36,7 +36,7 @@ export function FooterArea() {
                         <ul>
                             { fmenu2.map((v, i) => (
                                 <li key={i}>
-                                    <Link to={v.link} target="_blank">{v.txt}</Link>
+                                    <p>{v.txt}</p>
                                 </li>
                             ))
 
