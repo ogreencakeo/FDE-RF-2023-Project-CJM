@@ -233,7 +233,6 @@ a {
     padding: 10px;
     background-color: #fff;
     border-radius: 20px;
-    cursor: pointer;
     transition: .4s ease-out;
     box-sizing: border-box;
     border: 6px solid #193175;
@@ -250,6 +249,7 @@ a {
     background-color: #fff;
     transition: .4s ease-in;
     border: 0;
+    cursor: pointer;
 }
 
 .universal_link:hover button {
@@ -271,6 +271,7 @@ a {
     background-color: #ebe3de;
     border-radius: 30px;
     border: 8px solid #fff;
+    text-align: center;
 }
 
 .universal_sns:hover {
@@ -279,14 +280,12 @@ a {
 
 .universal_sns>div {
     height: calc(100%/4);
+    transform: translateY(10px);
+    
 }
 
 .universal_sns .fa-brands {
     font-size: 3vw;
-    display: block;
-    text-align: center;
-    line-height: 1.5;
-
 }
 
 .fa-square-instagram:hover {
@@ -582,13 +581,14 @@ a {
     display: none;
     background-color: rgba(0, 0, 0, 0.742);
     cursor: pointer;
+    z-index: 9999;
 }
 .map-model-bx{
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 35vw;
+    width: 40vw;
     aspect-ratio: 1.15/1;
     background-color: #fff;
     border-radius: 20px;

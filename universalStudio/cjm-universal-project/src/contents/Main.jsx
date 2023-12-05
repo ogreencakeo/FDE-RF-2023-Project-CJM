@@ -126,10 +126,10 @@ export function Main() {
     // 지도 보이기
     const universalMapFn = () => {
         const universal_main_map = $(".map-wrapper-model");
+
         const cbtn = $(".cbtn");
 
         universal_main_map.fadeIn(300);
-
         cbtn.click(() => {
             universal_main_map.fadeOut(300);
         })
