@@ -141,9 +141,9 @@ export function Main() {
                             {/* Main Content */}
                             <WaveText />
                             <div className="universal_link">
-                                <a href="https://www.usj.co.jp/web/ko/kr" target="_blank">
+                                <button>
                                     GO TO SITE
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>

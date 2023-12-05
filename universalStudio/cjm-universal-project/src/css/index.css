@@ -236,10 +236,10 @@ a {
     cursor: pointer;
     transition: .4s ease-out;
     box-sizing: border-box;
-    border: 3px solid #fff;
+    border: 3px solid #193175;
 }
 
-.universal_link a {
+.universal_link button {
     font-size: 2vw;
     color: #193175;
     width: 100%;
@@ -247,13 +247,16 @@ a {
     display: block;
     font-family: 'Gowun Batang', serif;
     font-weight: 600;
+    background-color: #fff;
+    transition: .4s ease-in;
+    border: 0;
 }
 
-.universal_link:hover {
+.universal_link:hover button {
     background-color: #193175;
 }
 
-.universal_link:hover a {
+.universal_link:hover button {
     color: #fff;
 }
 
