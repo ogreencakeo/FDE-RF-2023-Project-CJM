@@ -50,7 +50,6 @@ export function GoodsItem(props) {
                     <h2 className="goods-tit"></h2>
                     <img className="goods-img" src="" alt="굿즈" />
                     <FontAwesomeIcon className="cbtn" icon={faXmark} />
-
                 </div>
             </section>
         </>

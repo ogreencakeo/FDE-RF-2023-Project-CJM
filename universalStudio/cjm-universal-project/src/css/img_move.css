@@ -33,7 +33,7 @@
 .image-move li>img{
     width: 100%;
     /* height: auto; */
-    aspect-ratio: 1.2/1;
+    aspect-ratio: 1.15/1;
     display: block;
     border: 10px solid black;
     box-sizing: border-box;

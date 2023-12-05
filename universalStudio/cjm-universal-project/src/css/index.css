@@ -236,7 +236,7 @@ a {
     cursor: pointer;
     transition: .4s ease-out;
     box-sizing: border-box;
-    border: 3px solid #193175;
+    border: 6px solid #193175;
 }
 
 .universal_link button {
@@ -352,6 +352,7 @@ a {
 .utility-panel>a:hover div {
     background-color: #2b4584;
     animation: utility-panel-ani .65s ease;
+    /* height: 100%; */
 }
 
 .utility-panel>a:hover span,
@@ -564,14 +565,36 @@ a {
 }
 
 /* 지도 */
-.map-wrapper-view {
-    max-width: 1280px;
-    margin: 0 auto;
+.map-wrapper-model {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.742);
+    cursor: pointer;
+}
+.map-model-bx{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    aspect-ratio: 1.15/1;
+    background-color: #fff;
+    border-radius: 20px;
+    z-index: 11;
+    max-width: 800px;
 }
 
-.map-wrapper-view iframe {
-    margin: 0 auto;
-    display: block;
+.map-wrapper-model iframe {
+    aspect-ratio: 1/1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
 }
 
 /* page2 */

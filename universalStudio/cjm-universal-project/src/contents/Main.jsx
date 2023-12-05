@@ -20,6 +20,7 @@ import {
     faEarthAsia,
     faLightbulb,
     faComputerMouse,
+    faXmark
 } from "@fortawesome/free-solid-svg-icons";
 
 // 데이터
@@ -31,6 +32,7 @@ import { useState } from "react";
 // dragFn
 import { dragFn } from "../Function/dragFn.js";
 // jquery
+import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
 
 import { ImgMoveSlide } from "./module/ImgMoveSlide.jsx";
@@ -39,14 +41,12 @@ import { UniverSalText } from "./module/UniverSalText.jsx";
 import { ImgHoverPlay } from "./module/ImgHoverPlay.jsx";
 import { ChangeImg } from "./module/ChangeImg.jsx";
 
-import { Area } from '../contents/module/Area.jsx';
+import { Area } from "../contents/module/Area.jsx";
 import { GridAnimation } from "./module/GridAnimation.jsx";
 
 // import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
 
 export function Main() {
-
-
     useEffect(() => {
         const mainImgStage = document.querySelector(".header-main-img-wrap");
         setTimeout(() => {
@@ -126,6 +126,18 @@ export function Main() {
         return lightTemp;
     };
 
+    // 지도 보이기
+    const universalMapFn = () => {
+        const universal_main_map = $(".map-wrapper-model");
+        const cbtn = $(".cbtn");
+
+        universal_main_map.fadeIn(300);
+        
+        cbtn.click(()=>{
+            universal_main_map.fadeOut(300);
+        })
+    };
+
     return (
         <>
             {/* Header */}
@@ -141,11 +153,20 @@ export function Main() {
                             {/* Main Content */}
                             <WaveText />
                             <div className="universal_link">
-                                <button>
-                                    GO TO SITE
-                                </button>
+                                <button onClick={() => universalMapFn()}>GO TO MAP</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+                {/* 지도 */}
+                <div className="map-wrapper-model">
+                    <div className="map-model-bx">
+                        <FontAwesomeIcon className="cbtn" icon={faXmark} />
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565411122063!2d135.42974357461148!3d34.66567677293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z7Jyg64uI67KE7ISkIOyKpO2KnOuUlOyYpCDsnqztjKw!5e0!3m2!1sko!2skr!4v1701601504032!5m2!1sko!2skr"
+                            width="600"
+                            height="450"
+                        ></iframe>
                     </div>
                 </div>
                 {/* Main Section 1 */}
@@ -263,11 +284,6 @@ export function Main() {
             </div>
 
             <ImgMoveSlide imgMove="attraction" />
-            {/* <div className="map-wrapper-view">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565411122063!2d135.42974357461148!3d34.66567677293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z7Jyg64uI67KE7ISkIOyKpO2KnOuUlOyYpCDsnqztjKw!5e0!3m2!1sko!2skr!4v1701601504032!5m2!1sko!2skr"
-                    width="600" height="450" ></iframe>
-                
-            </div> */}
             <div className="page2 page">
                 <span className="page2-light">{makeLight()}</span>
                 <div className="page2-cont">
