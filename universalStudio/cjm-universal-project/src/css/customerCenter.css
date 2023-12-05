@@ -48,3 +48,17 @@ h1, h2, h3, p, span, div, button{
     border-bottom: 1px solid #ccc;
     padding: 0;
 }
+
+.customerCenter-right-wrap th{
+    font-size: 1.2rem;
+}
+
+/*  */
+.customerCenter-con{
+    display: flex;
+}
+
+.customerCenter-right-wrap th,
+.customerCenter-right-wrap td{
+    padding: 10px;
+}

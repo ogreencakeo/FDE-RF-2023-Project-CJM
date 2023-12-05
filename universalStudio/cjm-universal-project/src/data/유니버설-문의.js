@@ -1,4 +1,10 @@
-const announcement = [
+export const announcement = [
+    // {
+    //     "idx" : "번호",
+    //     "tit" : "제목",
+    //     "writer" : "작성자",
+    //     "data" : "작성일"
+    // },
     {
         "idx" : "1",
         "tit" : "【전매된 티켓의 QR 코드 무효화에 대하여】",

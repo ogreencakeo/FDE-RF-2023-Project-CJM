@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import '../css/customerCenter.css';
+
+import {announcement} from '../data/유니버설-문의';
+
 export function CustomerCenter(){
-    const [clickColor, setClickColor] = useState(0);
-    const clickNoticeFn = () => {
-        setClickColor();
-    }
+
+    const [notice, setNotice] = useState('.customer-option-bx');
+    const CustomerCenterFn = () =>{
+
+    };
+    
     return(
         <>
             <div className="customerCenter-wrap">
@@ -12,9 +17,9 @@ export function CustomerCenter(){
                     <h1>고객센터</h1>
                     {/* 옵션 버튼 박스 */}
                     <div className="customer-option-bx">
-                        <button className="customner-notice" onClick={clickNoticeFn}>공지사항</button>
-                        <button className="frequently-asked-questions">자주하는 질문</button>
-                        <button className="one-to-one-inquiry">1대1 문의</button>
+                        <button onClick={CustomerCenterFn}>공지사항</button>
+                        <button>자주하는 질문</button>
+                        <button>1대1 문의</button>
                     </div>
                 </div>
                 {/* 옵션 선택시 결과 박스 */}
@@ -27,13 +32,25 @@ export function CustomerCenter(){
                             <th>작성자</th>
                             <th>작성일</th>
                         </tr>
-                        <tr>
-                            <td>1번호입니다.</td>
-                            <td>제목입니다.</td>
-                            <td>작성자입니다.</td>
-                            <td>작성일입니다.</td>
-                        </tr>
+                        {
+                            announcement.map((v, i) => 
+                                <tr key={i}>
+                                    <td>{v.idx}</td>
+                                    <td>{v.tit}</td>
+                                    <td>{v.writer}</td>
+                                    <td>{v.date}</td>
+                                </tr>
+                            )
+                        }
                     </table>
+                    {/* <div className="customerCenter-bx">
+                        <div className="customerCenter-cont">
+                            <h2>번호</h2>
+                            <h2>제목</h2>
+                            <h2>작성자</h2>
+                            <h2>작성일</h2>
+                        </div>
+                    </div> */}
                 </div>
             </div>
         </>
