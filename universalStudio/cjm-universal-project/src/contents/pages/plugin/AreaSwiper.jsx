@@ -56,6 +56,7 @@ export function AreaSwiper(props) {
                         <div className="area-swiper-img">
                             <img src={`../images/${v.img}`} alt="에어리어 이미지" />
                             <div className="img-hi">
+                                <h5>area</h5>
                                 <p>{v.txt}</p>
                             </div>
                         </div>
