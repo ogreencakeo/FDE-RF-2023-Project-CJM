@@ -41,8 +41,6 @@ import { ImgHoverPlay } from "./module/ImgHoverPlay.jsx";
 
 import { Area } from "../contents/module/Area.jsx";
 
-// import { SwiperDrag } from "./pages/plugin/SwiperDrag.jsx";
-
 export function Main() {
     useEffect(() => {
         const mainImgStage = document.querySelector(".header-main-img-wrap");
@@ -218,7 +216,13 @@ export function Main() {
                     {/* Pick-up Section */}
                     <div className="pick-up">
                         {/* <h1>PICK UP</h1> */}
-                        <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx"><span data-hover='PICK UP' onClick={(e) => e.preventDefault()}>PICK UP</span></a></nav></h1>
+                        <h1>
+                            <nav className="hover-move-wrap">
+                                <a href="#" className="hover-move-bx">
+                                    <span data-hover='PICK UP' onClick={(e) => e.preventDefault()}>PICK UP</span>
+                                </a>
+                            </nav>
+                        </h1>
                         {/* <SwiperDrag /> */}
                         <div className="pick-up-wrap">
                             {pickUpData.map((v, i) => (
