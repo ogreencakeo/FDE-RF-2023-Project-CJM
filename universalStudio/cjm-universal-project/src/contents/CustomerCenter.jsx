@@ -71,16 +71,6 @@ export function CustomerCenter() {
                                 <FontAwesomeIcon icon={faCaretRight} />
                             </span>
                         </button>
-                        {/* <button
-                            className={customerColor === "one-to-one-inquiry" ? "customerColorOn" : ""}
-                            onClick={() => customerCenterFn("one-to-one-inquiry")}
-                            key={2}
-                        >
-                            <span>1대1 문의</span>
-                            <span>
-                                <FontAwesomeIcon icon={faCaretRight} />
-                            </span>
-                        </button> */}
                     </div>
                 </div>
                 {/* 옵션 선택시 결과 박스 */}
