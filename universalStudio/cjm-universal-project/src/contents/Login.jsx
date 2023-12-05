@@ -1,4 +1,5 @@
 import '../css/login.css';
+import { Seaching2 } from './module/Seaching2';
 export function Login(){
     return(
         <div className="login-page-wrap">

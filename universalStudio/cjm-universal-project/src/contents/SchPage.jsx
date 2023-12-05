@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { Seaching } from "./module/Seaching";
+import { Seaching2 } from "./module/Seaching2";
 
 export function SchPage(){
     const loc = useLocation();
@@ -10,7 +10,7 @@ export function SchPage(){
     return(
         <>
             <h1 className="tit">검색 결과</h1>
-            <Seaching kword={keyword} />
+            <Seaching2 kword={keyword} />
         </>
     );
 }

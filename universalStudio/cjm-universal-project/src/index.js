@@ -17,6 +17,7 @@ import { SchPage } from './contents/SchPage.jsx';
 import './css/common.css';
 import { Hotel } from './contents/Hotel.jsx';
 import { Login } from './contents/Login.jsx';
+import { Seaching2 } from './contents/module/Seaching2.jsx';
 
 export default function App() {
 
@@ -34,6 +35,7 @@ export default function App() {
           <Route path='ticket' element={<Ticket />} />
           <Route path='customerCenter' element={<CustomerCenter />} />
           <Route path='hotel' element={<Hotel />} />
+          {/* <Route path='area' element={<Seaching2 />} /> */}
           <Route path='schpage' element={<SchPage />} />
           <Route path='detail' element={<Detail />} />
           <Route path='member' element={<Member />} />
