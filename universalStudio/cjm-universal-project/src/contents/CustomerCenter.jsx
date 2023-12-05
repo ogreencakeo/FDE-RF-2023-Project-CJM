@@ -29,10 +29,19 @@ export function CustomerCenter() {
     // }
     
     // 토글 버튼
-    const [isOn, setIsOn] = useState(false);
+    const togglebox = document.querySelectorAll('.togglebox');
+    console.log('togglebox', togglebox.length);
+    const [isOn, setIsOn] = useState(Array(togglebox.length).fill(false));
+    console.log(isOn);
     
-    const viewCusCont = () => {
-        setIsOn(!isOn);
+    
+    const viewCusCont = (index) => {
+        setIsOn((prev) => {
+            const newToggleList = [...prev];
+            newToggleList[index] = !newToggleList[index];
+            return newToggleList;
+
+        })
     }
 
     return (
@@ -128,14 +137,14 @@ export function CustomerCenter() {
                         {selData.map(
                             (v, i) =>
                                 v.writer != "" && (
-                                    <div className="togglebox" onClick={()=>viewCusCont()}  key={i}>
+                                    <div className="togglebox" onClick={()=>viewCusCont(i)}  key={i}>
                                         <ul className="customerCenter-smenu">
                                             <li>{v.idx}</li>
                                             <li>{v.tit}</li>
                                             <li>{v.writer}</li>
                                             <li>{v.date}</li>
                                         </ul>
-                                        <div className={`cust-smenu-cont ${isOn? 'on' : '' }`}>
+                                        <div className={`cust-smenu-cont ${isOn[i]? 'on' : '' }`}>
                                             {v.cont}
                                         </div>
                                     </div>
