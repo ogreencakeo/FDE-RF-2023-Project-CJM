@@ -31,14 +31,17 @@ export function AreaSwiper(props) {
                 300: {
                     slidesPerView: 1,
                 },
-                650: {
+                500: {
                     slidesPerView: 2,
                 },
-                980 : {
+                650: {
                     slidesPerView: 3,
                 },
-                1200: {
+                980 : {
                     slidesPerView: 4,
+                },
+                1200: {
+                    slidesPerView: 5,
                 },
             }}
             className="mySwiper3"
@@ -53,7 +56,7 @@ export function AreaSwiper(props) {
                         <div className="area-swiper-img">
                             <img src={`../images/${v.img}`} alt="에어리어 이미지" />
                             <div className="img-hi">
-                                <h3>{v.txt}</h3>
+                                <p>{v.txt}</p>
                             </div>
                         </div>
                         <h1>{v.name}</h1>
