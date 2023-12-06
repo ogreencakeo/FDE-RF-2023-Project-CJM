@@ -39,6 +39,16 @@ export const moveImgData = {
         "../../../images/attraction/img/attraction38.jpg",
         "../../../images/attraction/img/attraction41.jpg",
     ],
+    "logo" : [
+        "../../../images/attraction/logo/attraction1.jpg",
+        "../../../images/attraction/logo/attraction2.jpg",
+        "../../../images/attraction/logo/attraction3.png",
+        "../../../images/attraction/logo/attraction4.jpg",
+        "../../../images/attraction/logo/attraction5.jpg",
+        "../../../images/attraction/logo/attraction12.jpg",
+        "../../../images/attraction/logo/attraction18.jpg",
+        "../../../images/attraction/logo/attraction29.jpg",
+    ],
     "ticket" : [
         "../../../images/attraction/img/attraction4.jpg",
         "../../../images/attraction/img/attraction9.jpg",

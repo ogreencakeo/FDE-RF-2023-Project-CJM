@@ -3,6 +3,7 @@ export function Map(props) {
     const shopInfo = props.shop_info;
     const shopLocation = props.shop_location;
     const category = props.cat;
+    console.log(props.mapi);
     return (
         <>
             {/* <!-- 레스토랑 위치 사진 --> */}

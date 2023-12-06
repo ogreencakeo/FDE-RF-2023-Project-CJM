@@ -1,4 +1,43 @@
-.attraction-detail-wrap{
+.attraction-detail-wrap {
     max-width: 1280px;
+    margin: 50px auto;
+}
+
+.attraction-detail-main-img{
+    max-width: 1000px;
     margin: 0 auto;
+}
+.attraction-detail-main-img>img {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+}
+
+.attraction-detail-cont {
+    margin-top: 100px;
+}
+
+.attraction-detail-cont > h1 {
+    margin-bottom: 50px;
+}
+
+.attraction-detail-cont h2 {
+    font-size: 2rem;
+    font-family: "Jua";
+    text-align: center;
+}
+.attraction-detail-cont p {
+    font-size: 1.2rem;
+    font-family: 'Jua';
+    text-align: center;
+}
+
+.attraction-logo-img {
+    max-width: 400px;
+    margin: 50px auto;
+}
+.attraction-logo-img>img {
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
 }
