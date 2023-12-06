@@ -825,6 +825,56 @@ a {
     width: 100%;
 }
 
+/* 이벤트 */
+.main-upcomingEv-wrap{
+    max-width: 100%;
+    margin: 100px 0;
+    outline: 1px solid red;
+    padding: 20px
+}
+.main-upcomingEv{
+    max-width: 1350px;
+    margin: 50px auto 0;
+    outline: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-upcomingEv-bx{
+    max-width: calc((100% - 140px) /3);
+    margin: 20px;
+    margin: 0 auto;
+}
+/* 이벤트 - 이미지 박스 */
+.upcomingEv-img-bx{
+    max-width: 100%;
+}
+.upcomingEv-img-bx>img{
+    max-width: 100%;
+    aspect-ratio: 1/1;
+}
+
+/* 이벤트 - 하단 내용 */
+.main-upcomingEv-cont{
+    padding: 35px;
+    outline: 1px solid red;
+    text-align: center;
+}
+.main-upcomingEv-cont h2{
+    font-size: 1.8rem;
+    font-family: 'Gugi';
+    margin: 5px 0;
+}
+.main-upcomingEv-cont h3{
+    font-size: 1.3rem;
+    font-family: 'Jua';
+    margin: 15px 0;
+}
+.main-upcomingEv-cont p{
+    font-size: 1rem;
+    font-family: 'Black Han Sans';
+    margin: 5px 0;
+}
+
 /* 움직이는 로고애니 */
 .logo-move-wrap {
     margin-bottom: 40px;
@@ -896,35 +946,6 @@ a {
     }
 }
 
-/* 여행사 */
-.travel_agency_wrap {
-    max-width: 100%;
-    background-color: #232025;
-    color: whitesmoke;
-    padding-top: 30px;
-}
-
-.tarvel_agency {
-    width: 90%;
-    margin: 0 auto;
-    background-color: slategray;
-    border-radius: 40px;
-}
-
-.travel_agency_wrap ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.travel_agency_wrap ul li {
-    flex: 1;
-}
-
-.travel_agency_wrap ul li img {
-    width: 15vw;
-    height: 13vh;
-    display: block;
-}
 
 /* 하단 footer */
 .footer {
@@ -1014,49 +1035,6 @@ a {
     }
 }
 
-/* page4 */
-/* .page4-ticket-bx {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.effect-span  {
-	position: relative;
-	z-index: 1;
-}
-.effect-span a {
-	overflow: hidden;
-}
-.effect-span a span {
-	display: block;
-	padding: 10px 20px;
-	background: #0f7c67;
-	transition: transform 0.3s;
-}
-.effect-span a::before {
-	content: attr(data-hover);
-	position: absolute;
-	z-index: -1;
-	left: 0;
-	top: 0;
-	padding: 10px 20px;
-	width: 100%;
-	height: 100%;
-	font-weight: 400;
-	background: #fff;
-	color: #0f7c67;
-	transition: transform 0.3s;
-    -webkit-transform: translateX(-25%);
-}
-.effect-span a:hover span,
-.effect-span a:focus span {
-	transform: translateX(100%);
-}
-.effect-span a:hover::before,
-.effect-span a:focus::before {
-	transform: translateX(0%);
-} */
-
 
 /* 마우스 무브 */
 .mouse-move {
@@ -1112,11 +1090,14 @@ a {
     aspect-ratio: 2/1;
 }
 
+/* 이벤트 */
+.main-event-wrap{
+    max-width: 1280px;
+    margin: 0 auto;
+}
 
 /* 오버시 글자이동 */
-.hover-move-wrap{
-    
-}
+
 .hover-move-bx{
     display: inline-block;
     position: relative;

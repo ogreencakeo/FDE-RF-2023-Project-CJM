@@ -25,6 +25,7 @@ import {
 
 // 데이터
 import { pickUpData } from "../data/main/pickup.js";
+import { eventData } from "../data/event/eventData.js";
 
 import WaveText from "./module/WaveText.jsx";
 import { useState } from "react";
@@ -318,6 +319,7 @@ export function Main() {
                     <Area />
                 </div>
             </div>
+            {/* 아이 사진 */}
             <div className="main-footer-character">
                 <div className="character-star">
                     <img src={process.env.PUBLIC_URL +"/images/main/character/character9.gif"} alt="캐릭터 별" />
@@ -326,6 +328,27 @@ export function Main() {
                     <img src={process.env.PUBLIC_URL + "/images/main/character/character17.png"} alt="어린이" />
                 </div>
             </div>
+            {/* 이벤트 */}
+            <div className="main-upcomingEv-wrap">
+                <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx"><span data-hover='Upcoming Event' onClick={(e) => e.preventDefault()}>Upcoming Event</span></a></nav></h1>
+                <div className="main-upcomingEv">
+                    {
+                        eventData.map((v, i) =>
+                            <div className="main-upcomingEv-bx" key={i}>
+                                <div className="upcomingEv-img-bx">
+                                    <img src={process.env.PUBLIC_URL + `/images/event/${v.img}`} alt="이벤트사진" />
+                                </div>
+                                <div className="main-upcomingEv-cont">
+                                    <h2>{v.name}</h2>
+                                    <h3>{v.cont}</h3>
+                                    <p>{v.date}</p>
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
+            </div>
+            {/* 마우스 오버시 사진 */}
             <div className="mouse-move">
                 <h1>
                     <FontAwesomeIcon icon={faComputerMouse} />

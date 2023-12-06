@@ -27,10 +27,10 @@ export function GoodsSwiper(props) {
     };
     const makeCod2 = () => {
         const temp = [];
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i <7 ; i++) {
             temp[i] = (
                 <SwiperSlide key={i}>
-                    <img src={process.env.PUBLIC_URL + "/images/area/main/" + (i + 1) + ".jpg"} alt="Logo image" />
+                    <img src={process.env.PUBLIC_URL + "/images/agency/travel_agency" + (i + 1) + ".jpg"} alt="Logo image" />
                 </SwiperSlide>
             );
         }
