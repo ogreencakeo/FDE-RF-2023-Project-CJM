@@ -37,7 +37,7 @@ export function Map(props) {
                         </div>
                         <div className="map_content">
                             <div className="map_logo">
-                                <img src="../../images/universal_logo.webp" alt="유니버설로고" />
+                                <img src={process.env.PUBLIC_URL +"/images/universal_logo.webp"} alt="유니버설로고" />
                             </div>
                             <div className="map_area">
                                 <span>에어리어</span>

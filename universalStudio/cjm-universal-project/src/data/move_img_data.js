@@ -48,7 +48,7 @@ export const moveImgData = {
         "/images/attraction/logo/attraction5.jpg",
         "/images/attraction/logo/attraction12.jpg",
         "/images/attraction/logo/attraction18.jpg",
-        "/images/attraction/logo/attraction29.jpg",
+        "/images/attraction/logo/attraction39.png",
     ],
     "ticket" : [
         "/images/attraction/img/attraction4.jpg",
