@@ -40,6 +40,7 @@
     font-size: 1.2rem;
     font-family: 'Gugi';
     color: #ccc;
+    cursor: pointer;
 }
 
 .arealicolor{
@@ -64,16 +65,50 @@
     box-shadow: 1px 1px 8px #ccc;
 }
 .area-type-img{
+    position: relative;
+}
+.area-type-img>img{
     max-width: 100%;
     aspect-ratio: 1/1;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
+    
 }
-.area-type-img img{
-    border-radius: 5px;
-    max-width: 100%;
-    aspect-ratio: 1/1;
+
+/* 사진 오버시 */
+.area-type-img::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
 }
+.area-type-img:hover::before{
+    opacity: 0.5;
+}
+.area-type-img h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5vw;
+    opacity: 0;
+    z-index: 1;
+    transition: font-weight 0.4s ease-out, opacity 0.4s ease-out;
+}
+.area-type-img:hover h2 {
+    font-weight: 800;
+    opacity: 1;
+    color: #fff;
+    z-index: 2;
+}
+
 
 /* 에어리어 내용 */
 .area-type-cont{

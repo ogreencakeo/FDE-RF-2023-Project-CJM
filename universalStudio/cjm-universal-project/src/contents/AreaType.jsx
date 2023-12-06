@@ -6,6 +6,10 @@ import { Link, useLocation } from "react-router-dom";
 import { GoodsSwiper } from "./pages/plugin/Swiper";
 import { UniverSalText } from "./module/UniverSalText";
 
+// 폰트어썸
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+
 export function AreaType() {
     const loc = useLocation();
     let keyword;
@@ -96,6 +100,7 @@ export function AreaType() {
                         >
                             <div className="area-type-img">
                                 <img src={v.img} alt={v.name} />
+                                <h2><FontAwesomeIcon icon={faCirclePlus} /></h2>
                             </div>
                         </Link>
                         <div className="area-type-cont">
