@@ -1,6 +1,6 @@
 export const moveImgData = {
     "goods" : [
-        "../../../images/goods/goods1/goods12.jpg",
+        "/images/goods/goods1/goods12.jpg",
         "../../../images/goods/goods2/goods4.jpg",
         "../../../images/goods/goods3/goods9.jpg",
         "../../../images/goods/goods4/goods12.jpg",
