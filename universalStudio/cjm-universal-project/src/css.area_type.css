@@ -124,13 +124,23 @@
     font-family: 'Gugi';
     font-size: 1.3rem;
 }
+.area-type-bx:nth-child(even) .area-type-cont h3{
+    background: linear-gradient( 45deg, #0f5223ff, orangered );
+}
+
+
 .area-type-cont h2::before{
     content: '';
     display: block;
-    height: 2px;
-    background: linear-gradient( 45deg, #0f5223ff, #ffcdd2 );
+    height: 3px;
+    background-color: #a8c7faff;;
     margin-bottom: 10px;
 }
+
+.area-type-bx:nth-child(even) .area-type-cont h2::before{
+    background-color: #c4eed0ff;
+}
+
 .area-type-cont h2{
     font-size: 1.3rem;
     font-family: 'Gugi';
