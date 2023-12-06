@@ -18,8 +18,8 @@ export function FooterArea() {
                         <FontAwesomeIcon icon={faFaceSmile} />
                     </div>
                     <div className="footer-right">
-                        <img src="./images/character/charactre1.png" alt="슈퍼마리오" />
-                        <img src="./images/character/character2.png" alt="햇님" />
+                        <img src= {process.env.PUBLIC_URL+ "/images/character/charactre1.png"} alt="슈퍼마리오" />
+                        <img src= {process.env.PUBLIC_URL+ "/images/character/character2.png"} alt="햇님" />
                     </div>
                 </div>
                 <div className="footer-wrap-bottom">
