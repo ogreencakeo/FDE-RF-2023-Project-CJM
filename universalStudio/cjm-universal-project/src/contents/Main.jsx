@@ -358,6 +358,7 @@ export function Main() {
             </div>
             <ImgHoverPlay />
             <UniverSalText />
+            <ImgMoveSlide imgMove='attraction2' />
         </>
     );
 }
