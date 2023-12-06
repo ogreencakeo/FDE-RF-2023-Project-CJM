@@ -6,18 +6,19 @@ import { UniverSalText } from './UniverSalText.jsx';
 export function ImgHoverPlay() {
 
     const [images, setImages] = useState([
-        './images/attraction/logo/attraction1.jpg',
-        './images/attraction/logo/attraction2.jpg',
-        './images/attraction/logo/attraction3.png',
-        './images/attraction/logo/attraction4.jpg',
-        './images/attraction/logo/attraction5.jpg',
-        './images/attraction/logo/attraction12.jpg',
-        './images/attraction/logo/attraction14.jpg',
-        './images/attraction/logo/attraction17.jpg',
-        './images/attraction/logo/attraction18.jpg',
-        './images/attraction/logo/attraction39.png',
-        './images/attraction/logo/attraction40.jpg',
-        './images/attraction/logo/attraction41.jpg',
+        // './images/attraction/logo/attraction1.jpg',
+        '/images/attraction/logo/attraction1.jpg',
+        '/images/attraction/logo/attraction2.jpg',
+        '/images/attraction/logo/attraction3.png',
+        '/images/attraction/logo/attraction4.jpg',
+        '/images/attraction/logo/attraction5.jpg',
+        '/images/attraction/logo/attraction12.jpg',
+        '/images/attraction/logo/attraction14.jpg',
+        '/images/attraction/logo/attraction17.jpg',
+        '/images/attraction/logo/attraction18.jpg',
+        '/images/attraction/logo/attraction39.png',
+        '/images/attraction/logo/attraction40.jpg',
+        '/images/attraction/logo/attraction41.jpg',
     ]);
 
     const [canShowImage, setCanShowImage] = useState(true);
@@ -62,6 +63,7 @@ export function ImgHoverPlay() {
     
         const imgElement = document.createElement('img');
         imgElement.src = imageUrl;
+        imgElement.src = process.env.PUBLIC_URL +imageUrl;
         imgElement.className = 'lazyloaded';
     
         mouseBox.appendChild(imgElement);
@@ -80,10 +82,10 @@ export function ImgHoverPlay() {
         <>
             <div className="img_hover_play_wrap">
                 <div className='character14'>
-                    <img src="./images/main/character/character14.png" alt="카세트" />
+                    <img src= {process.env.PUBLIC_URL + "/images/main/character/character14.png"} alt="카세트" />
                 </div>
                 <div className='character15'>
-                    <img src="./images/main/character/character15.gif" alt="필름" />
+                    <img src= {process.env.PUBLIC_URL + "/images/main/character/character15.gif"} alt="필름" />
                 </div>
             </div>
         </>

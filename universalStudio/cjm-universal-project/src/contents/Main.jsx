@@ -233,7 +233,7 @@ export function Main() {
                                 >
                                     <div className="pick-up-img">
                                         <div className="pick1">
-                                            <img src={`./images/main/pickup/${v.img}`} alt={`${v.idx}번째 이미지`} />
+                                            <img src={process.env.PUBLIC_URL+`/images/main/pickup/${v.img}`} alt='픽업이미지' />
                                             <h2>{v.title}</h2>
                                         </div>
                                         <div className="pick2">
@@ -256,7 +256,7 @@ export function Main() {
                 </div>
             </div>
             <div className="character-erath">
-                <img src="../images/main/character/character12.gif" alt="캐릭터 지구" />
+                <img src={process.env.PUBLIC_URL +"/images/main/character/character12.gif"} alt="캐릭터 지구" />
                 <div className="main-video">
 
                     {/* 동영상 */}
@@ -271,7 +271,7 @@ export function Main() {
                     <div className="main-video-cont">
                         <h1>#특별한 #재미있는 #신나는 #멋진</h1>
                         <div className="main-video-cont-img">
-                            <img src="../images/main/character/character13.gif" alt="열기구" />
+                            <img src={process.env.PUBLIC_URL + "/images/main/character/character13.gif"} alt="열기구" />
                         </div>
                     </div>
                 </div>
@@ -282,7 +282,7 @@ export function Main() {
                 <span className="page2-light">{makeLight()}</span>
                 <div className="page2-cont">
                     <div className="enjoy-pick-cont">
-                        <img className="enjoty-pick-img" src="../images/main/character/clock.gif" alt="시간" />
+                        <img className="enjoty-pick-img" src={process.env.PUBLIC_URL + "/images/main/character/clock.gif"} alt="시간" />
                         <h2 className="point-span">
                             <span data-hover="POINT1">POINT1</span>
                         </h2>
@@ -290,7 +290,7 @@ export function Main() {
                         <p>#예약 탑승’ 티켓을 사용</p>
                     </div>
                     <div className="enjoy-pick-cont">
-                        <img className="enjoty-pick-img" src="../images/main/character/phone.gif" alt="핸드폰" />
+                        <img className="enjoty-pick-img" src={process.env.PUBLIC_URL +"/images/main/character/phone.gif"} alt="핸드폰" />
                         <h2 className="point-span">
                             <span data-hover="POINT2">POINT2</span>
                         </h2>
@@ -300,7 +300,7 @@ export function Main() {
                         <p>#3:예약 탑승</p>
                     </div>
                     <div className="enjoy-pick-cont">
-                        <img className="enjoty-pick-img" src="../images/main/character/party.gif" alt="파티" />
+                        <img className="enjoty-pick-img" src={process.env.PUBLIC_URL + "/images/main/character/party.gif"} alt="파티" />
                         <h2 className="point-span">
                             <span data-hover="POINT3">POINT3</span>
                         </h2>
@@ -320,10 +320,10 @@ export function Main() {
             </div>
             <div className="main-footer-character">
                 <div className="character-star">
-                    <img src="../images/main/character/character9.gif" alt="캐릭터 별" />
+                    <img src={process.env.PUBLIC_URL +"/images/main/character/character9.gif"} alt="캐릭터 별" />
                 </div>
                 <div className="character-child">
-                    <img src="../images/main/character/character17.png" alt="어린이" />
+                    <img src={process.env.PUBLIC_URL + "/images/main/character/character17.png"} alt="어린이" />
                 </div>
             </div>
             <div className="mouse-move">
