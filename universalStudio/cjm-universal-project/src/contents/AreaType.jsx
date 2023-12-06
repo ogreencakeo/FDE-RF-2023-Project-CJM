@@ -83,21 +83,21 @@ export function AreaType() {
             <div className="area-type-wrap">
                 {selData.map((v, i) => (
                     <div className="area-type-bx" key={i}>
-                        <div className="area-type-img">
-                            <Link
-                                to="/detail"
-                                state={{
-                                    name: v.name,
-                                    img: v.img,
-                                    map: v.map,
-                                    title: v.title,
-                                    desc: v.desc,
-                                    logo: v.logo,
-                                }}
-                            >
+                        <Link
+                            to="/detail"
+                            state={{
+                                name: v.name,
+                                img: v.img,
+                                map: v.map,
+                                title: v.title,
+                                desc: v.desc,
+                                logo: v.logo,
+                            }}
+                        >
+                            <div className="area-type-img">
                                 <img src={v.img} alt={v.name} />
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                         <div className="area-type-cont">
                             <h3>{v.areatype}</h3>
                             <h2>{v.name}</h2>

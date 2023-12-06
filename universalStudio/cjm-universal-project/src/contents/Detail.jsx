@@ -14,22 +14,18 @@ export function Detail() {
     console.log("mapLocal", mapLocal);
     console.log("img", img);
 
-
     const makeCode = (data) => {
-        const selData = data.split('^');
+        const selData = data.split("^");
         const temp = [];
-        for(let i=0; i<selData.length; i++){
-            temp[i] = <p className="detail-split-p">{selData[i]}</p>
+        for (let i = 0; i < selData.length; i++) {
+            temp[i] = <p className="detail-split-p">{selData[i]}</p>;
         }
         return temp;
-    }
+    };
 
     return (
         <div className="attraction-detail-wrap">
             <div className="attraction-detail-bx">
-                <div className="attraction-detail-main-img">
-                    <img src={`${img}`} alt="어트랙견 사진" />
-                </div>
                 <div className="attraction-detail-cont">
                     <h1>
                         <nav className="hover-move-wrap">
@@ -47,8 +43,11 @@ export function Detail() {
                     </div>
                     <p>
                         {/* {desc} */}
-                        {desc.indexOf('^') == -1?  desc :makeCode(desc)}
+                        {desc.indexOf("^") == -1 ? desc : makeCode(desc)}
                     </p>
+                    <div className="attraction-detail-main-img">
+                        <img src={`${img}`} alt="어트랙션 사진" />
+                    </div>
                     <Map cat="attraction" mapi={mapLocal} shop_location="어트랙션" />
                 </div>
             </div>
