@@ -70,9 +70,10 @@
 }
 .hotel-desc button{
     padding: 12px;
-    background-color: #0368d9;;
+    background-color: #0368d9;
     width: 150px;
-    display: block;
+    display: inline-block;
+    cursor: pointer;
     margin: 0 auto;
     color: #fff;
     border: 0px;
