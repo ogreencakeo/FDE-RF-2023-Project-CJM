@@ -111,10 +111,8 @@
 
 .goods_caution_content p{
     font-family: 'Jua';
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     line-height: 2;
-    color: white;
-    text-shadow: 1px 1px 2px black;
 }
 
 

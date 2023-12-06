@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import "../css/detail.css";
 import { Map } from "./module/Map";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
+import { Caution } from "./module/Caution";
 
 export function Detail() {
     const loc = useLocation();
@@ -51,6 +52,7 @@ export function Detail() {
                     <Map cat="attraction" mapi={mapLocal} shop_location="어트랙션" />
                 </div>
             </div>
+            <Caution caution='attractionCaution' />
             <ImgMoveSlide imgMove="logo" />
         </div>
     );

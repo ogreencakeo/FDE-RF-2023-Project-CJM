@@ -960,7 +960,7 @@ a {
 .footer-right>img {
     position: absolute;
     right: 5%;
-    top: 10%;
+    top: -80%;
     width: 13vw;
     display: block;
     animation: footer-ani 5s linear infinite alternate;
