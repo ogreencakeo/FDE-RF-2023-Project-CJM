@@ -70,9 +70,9 @@ export function SeasonalInfo(props) {
                 <div className="seasonal_restaurant_product">
                     <div className="product_detail">
                         <div className="detail_img">
-                            <img className="move_sun" src="../images/seasonal/character/character2.png" alt="" />
+                            <img className="move_sun" src= {process.env.PUBLIC_URL+ "/images/seasonal/character/character2.png"} alt="해" />
                             {/* <div className="product_detail_img"> */}
-                            <img className="product_detail_img" src="../images/seasonal/character/character1.png" alt="sdf" />
+                            <img className="product_detail_img" src= {process.env.PUBLIC_URL+ "/images/seasonal/character/character1.png"} alt="사람" />
                         </div>
                         {/* </div> */}
 
@@ -95,7 +95,7 @@ export function SeasonalInfo(props) {
                                 >
                                     <div className="menu_pick_img">
                                         <img
-                                            src={`../images/seasonal/seasonal${selData.idx}/${v.image}`}
+                                            src={process.env.PUBLIC_URL+ `/images/seasonal/seasonal${selData.idx}/${v.image}`}
                                             alt={`픽업메뉴이미지${v.idx}`}
                                         />
                                     </div>
@@ -124,7 +124,7 @@ export function SeasonalInfo(props) {
                                 >
                                     <div className="menu_pick_img">
                                         <img
-                                            src={`../images/seasonal/seasonal${selData.idx}/${v.image}`}
+                                            src={process.env.PUBLIC_URL+ `/images/seasonal/seasonal${selData.idx}/${v.image}`}
                                             alt={`픽업메뉴이미지${v.idx}`}
                                         />
                                     </div>
@@ -142,7 +142,7 @@ export function SeasonalInfo(props) {
                     <div className="restaurant_bg_wrap">
                         <div className="restaurant_bg_img">
                             <img
-                                src={`../images/seasonal/restaurant_bg/${selData.restaurant_bg}`}
+                                src= {process.env.PUBLIC_URL+ `/images/seasonal/restaurant_bg/${selData.restaurant_bg}`}
                                 alt={`${selData.location} 배경`}
                             />
                         </div>

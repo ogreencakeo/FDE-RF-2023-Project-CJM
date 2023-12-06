@@ -16,14 +16,14 @@ export function Map(props) {
                             {
                                 category == 'food' &&
                                 <img
-                                    src={`../images/seasonal/restaurant_map/${shopInfo}`}
+                                    src= {process.env.PUBLIC_URL+ `/images/seasonal/restaurant_map/${shopInfo}`}
                                     alt={`${shopLocation} 지도`}
                                 />
                             }
                             {
                                 category == 'goods' &&
                                 <img
-                                    src={`../images/goods/goods_map/${shopInfo}.jpg`}
+                                    src={process.env.PUBLIC_URL+ `/images/goods/goods_map/${shopInfo}.jpg`}
                                     alt={`${shopLocation} 지도`}
                                 />
                             }

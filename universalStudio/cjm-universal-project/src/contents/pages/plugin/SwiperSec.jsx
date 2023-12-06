@@ -46,7 +46,7 @@ export function SwiperSec(props) {
                         <Link to={props.category=='restaurant'? `/seasonalMenu/restaurant${i + 1}` : `/goods/${v.link}` }>
                             <li key={i}>
                                 <div className="swiper-sec-img">
-                                    <img src={v.img} alt={v.title} />
+                                    <img src={process.env.PUBLIC_URL+ `${v.img}`} alt={v.title} />
                                 </div>
                                 <h2 className="swipe_sec_cat">{v.category}</h2>
                                 <h2 className="swipe_sec_tit">{v.title}</h2>
