@@ -15,7 +15,7 @@ export function ImgMoveSlide(props) {
                     {
                         selData.map((v, i) =>
                             <li key={i}>
-                                <img src={process.env.PUBLIC_URL + `${v}`} alt={`움직이는 이미지 ${i}`} />
+                                <img src={process.env.PUBLIC_URL + v} alt={`움직이는 이미지 ${i}`} />
                             </li>)
                     }
                 </ul>
