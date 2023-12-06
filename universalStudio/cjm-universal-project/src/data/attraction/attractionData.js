@@ -11,7 +11,7 @@ export const attractionData = [
         idx : "1",
         logo : "logo/attraction1.jpg",
         img : "img/attraction1.jpg",
-        map : "map/attraction1.jpg",
+        map : "../images/attraction/map/attraction1.jpg",
         name : "마리오 카트: 쿠파의 도전장™",
         title : "마리오 카트를 타고 레이스!",
         desc : "그 유명한 마리오 카트의 세계와 놀라움 가득한 갖가지 코스가 바로 눈앞에 등장한다! 등껍질을 던져 적을 격퇴하면서 마리오 그리고 피치공주와 함께 돌진하라! 파크만의 최신 기술로 실현되는 세계 최초*의 마리오 카트 체험에 두근두근 흥분이 멈추지 않는다!^* 마리오 카트 및 마리오의 게임 속 세계를 테마로 한 테마파크의 오리지널 어트랙션, 게임을 취급하는 시설을 대상으로 한 자사 조사.",

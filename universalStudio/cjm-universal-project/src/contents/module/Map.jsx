@@ -29,7 +29,7 @@ export function Map(props) {
                             {
                                 category == 'attraction' && 
                                 <img
-                                    src={`../images/attraction/${props.map}/`}
+                                    src={`${props.mapi}`}
                                     alt={`${shopLocation} 지도`}
                             />
                             }
