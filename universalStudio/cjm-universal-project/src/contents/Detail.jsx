@@ -14,8 +14,8 @@ export function Detail() {
     console.log("mapLocal", mapLocal);
     console.log("img", img);
     return (
-        <>
-            <div className="attraction-detail-wrap">
+        <div className="attraction-detail-wrap">
+            <div className="attraction-detail-bx">
                 <div className="attraction-detail-main-img">
                     <img src={`../../images/attraction/${img}`} alt="" />
                 </div>
@@ -36,9 +36,9 @@ export function Detail() {
                     </div>
                     <p>{desc}</p>
                     <Map cat="attraction" mapi={mapLocal} shop_location="어트랙션" />
-                    <ImgMoveSlide imgMove='logo' />
                 </div>
             </div>
-        </>
+            <ImgMoveSlide imgMove="logo" />
+        </div>
     );
 }
