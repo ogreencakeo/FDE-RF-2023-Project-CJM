@@ -1,21 +1,13 @@
 @charset "utf-8";
 
 body {
-    /* background:url(../images/Rectbleu.png) repeat-y; */
-    /* background:url(https://cdn.pixabay.com/photo/2017/07/08/11/36/cube-background-2484131_1280.jpg) repeat; */
-    /* background:url(https://cdn.pixabay.com/photo/2015/01/26/17/29/wall-612926_1280.jpg) repeat; */
     overflow-x: hidden;
 }
 
-body * {}
 
 /* 로딩 페이지 */
 .loading-page {
-    /* align-items: center;
-    justify-content: center; */
     height: 100vh;
-    /* font-size: 2.5rem;
-    font-weight: bold; */
     opacity: 0;
 }
 
@@ -52,10 +44,6 @@ body * {}
 }
 
 /* 헤더 */
-.page {
-    /* height: 100vh; */
-}
-
 .header {
     width: 100%;
     background-color: #fff;
@@ -453,13 +441,10 @@ a {
 /* 180회전 박스 */
 .pick-up-img-box {
     width: 430px;
-    /* height: 400px; */
     aspect-ratio: 1/1;
     position: relative;
     perspective: 1500px;
     margin: 1%;
-    /* background-color: #fff; */
-    /* border: 1px solid #ccc; */
 }
 
 .pick-up-img {
@@ -516,12 +501,6 @@ a {
     transform: rotateY(0deg);
 }
 
-
-/* ////////////////////////////////////// */
-.page {
-    /* height: 100vh; */
-}
-
 .character-erath {
     max-width: 100%;
     margin: 150px 0 235px;
@@ -545,9 +524,6 @@ a {
     border-bottom: 5px solid black;
     box-sizing: border-box;
 }
-
-.main-video-wrap {}
-
 .main-video-wrap>iframe {
     aspect-ratio: 16/12;
     width: 750px;
@@ -691,11 +667,6 @@ a {
 .enjoy-pick-cont .on {
     transform: translateY(0);
 }
-
-.enjoy-pick-cont:first-child {
-    /* background: url(../../public/images/main/character/time.jpg); */
-}
-
 .enjoy-pick-cont:first-child h1 {
     color: #2b4584;
 }
@@ -828,7 +799,7 @@ a {
 /* 이벤트 */
 .main-upcomingEv-wrap{
     max-width: 100%;
-    margin: 100px 0;
+    margin: 150px 0;
     padding: 20px
 }
 .main-upcomingEv{
@@ -869,8 +840,9 @@ a {
     font-size: 1.2rem;
     font-family: 'Nanum Gothic';
     margin: 15px 0;
-    transform: translateY(30%);
+    transform: translateY(50%);
     transition: .4s ease-in;
+    color: #808080;
 }
 .main-upcomingEv-cont p{
     font-size: 0.9rem;
@@ -878,6 +850,13 @@ a {
     margin: 5px 0;
     transform: translateY(300%);
     transition: .4s ease-in;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    background-color: #198639ff;;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+
 }
 
 
@@ -937,6 +916,7 @@ a {
 
 .main-upcomingEv-bx:hover h3{
     transform: translateY(0%);
+    color: #000;
 }
 .main-upcomingEv-bx:hover p{
     transform: translateY(0%);
