@@ -17,7 +17,7 @@ export function Detail() {
         <div className="attraction-detail-wrap">
             <div className="attraction-detail-bx">
                 <div className="attraction-detail-main-img">
-                    <img src={`../../images/attraction/${img}`} alt="" />
+                    <img src={`${img}`} alt="" />
                 </div>
                 <div className="attraction-detail-cont">
                     <h1>
@@ -32,7 +32,7 @@ export function Detail() {
                     {/* <h1>{name}</h1> */}
                     <h2>{title}</h2>
                     <div className="attraction-logo-img">
-                        <img src={`../../images/attraction/${logo}`} alt="" />
+                        <img src={`${logo}`} alt="" />
                     </div>
                     <p>{desc}</p>
                     <Map cat="attraction" mapi={mapLocal} shop_location="어트랙션" />
