@@ -1,0 +1,81 @@
+.area-type-wrap{
+    max-width: 1350px;
+    margin: 20px auto;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 에어리어 버튼 */
+.area-type-btn{
+    max-width: 1350px;
+    margin: 0 auto;
+}
+.area-type-btn nav ul{
+    display: flex;
+}
+.area-type-btn nav ul li{
+    flex: 1;
+    /* outline: 1px solid pink; */
+    text-align: center;
+    /* border-top: 1px solid #041e49ff; */
+    padding: 20px 0;
+    border-bottom: 3px solid #041e49ff; 
+}
+.area-type-btn nav ul li button{
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border: 0;
+    font-size: 1.2rem;
+    font-family: 'Gugi';
+}
+
+/* 에어리어 박스 */
+
+.area-type-bx{
+    max-width: calc((100% - 150px) / 3);
+    margin: 25px;
+    border: 3px solid #041e49ff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px 8px #ccc;
+}
+.area-type-img{
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}
+.area-type-img img{
+    border-radius: 5px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+}
+
+/* 에어리어 내용 */
+.area-type-cont{
+    padding: 20px;
+    text-align: center;
+}
+.area-type-cont h3{
+    border-radius: 5px;
+    background: linear-gradient( 45deg, #0b57d0ff, #dc362eff );
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: 'Gugi';
+    font-size: 1.3rem;
+}
+.area-type-cont h2::before{
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient( 45deg, #0f5223ff, #ffcdd2 );
+    margin-bottom: 10px;
+}
+.area-type-cont h2{
+    font-size: 1.3rem;
+    font-family: 'Gugi';
+}
