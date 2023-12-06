@@ -32,8 +32,8 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Main />} />
-          <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
           <Route path='areaType' element={<AreaType />} />
+          <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
           <Route path='goods/*' element={<Goods />} />
           <Route path='ticket' element={<Ticket />} />
           <Route path='customerCenter' element={<CustomerCenter />} />
