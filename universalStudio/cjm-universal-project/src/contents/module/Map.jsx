@@ -30,7 +30,7 @@ export function Map(props) {
                             {
                                 category == 'attraction' && 
                                 <img
-                                    src={`${props.mapi}`}
+                                    src={process.env.PUBLIC_URL + `${props.mapi}`}
                                     alt={`${shopLocation} 지도`}
                             />
                             }

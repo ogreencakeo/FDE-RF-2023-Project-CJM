@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import "../css/detail.css";
+
 import { Map } from "./module/Map";
+
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { Caution } from "./module/Caution";
 
@@ -40,14 +42,14 @@ export function Detail() {
                     {/* <h1>{name}</h1> */}
                     <h2>{title}</h2>
                     <div className="attraction-logo-img">
-                        <img src={`${logo}`} alt="로고이미지" />
+                        <img src={process.env.PUBLIC_URL +`${logo}`} alt="로고이미지" />
                     </div>
                     <p>
                         {/* {desc} */}
                         {desc.indexOf("^") == -1 ? desc : makeCode(desc)}
                     </p>
                     <div className="attraction-detail-main-img">
-                        <img src={`${img}`} alt="어트랙션 사진" />
+                        <img src={process.env.PUBLIC_URL + `${img}`} alt="어트랙션 사진" />
                     </div>
                     <Map cat="attraction" mapi={mapLocal} shop_location="어트랙션" />
                 </div>

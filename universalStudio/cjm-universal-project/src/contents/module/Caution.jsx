@@ -10,7 +10,7 @@ export function Caution(props) {
     return (
         <div className="goods_caution_wrap">
             <div className="goods_caution_img">
-                <img src={`../../../images/character/${cautionImg[props.caution]}`} alt="굿즈 주의사항" />
+                <img src= {process.env.PUBLIC_URL + `/images/character/${cautionImg[props.caution]}`} alt="굿즈 주의사항" />
             </div>
             <div className="goods_caution_content">
                 {
