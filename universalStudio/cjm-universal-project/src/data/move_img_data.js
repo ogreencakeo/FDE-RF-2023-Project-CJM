@@ -51,7 +51,7 @@ export const moveImgData = {
         "/images/attraction/img/attraction24.jpg",
     ],
     "logo" : [
-        "/images/attraction/logo/attraction11.jpg",
+        "/images/attraction/logo/attraction1.jpg",
         "/images/attraction/logo/attraction2.jpg",
         "/images/attraction/logo/attraction3.png",
         "/images/attraction/logo/attraction4.jpg",
