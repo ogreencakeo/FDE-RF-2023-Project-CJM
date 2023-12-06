@@ -47,7 +47,7 @@ export function Ticket() {
                 <div className="ticket-wrap-bx">
                     {/* 티켓 메인 이미지 */}
                     <div className="ticket-main-img">
-                        <img src="../images/main/character/character3.png" alt="" />
+                        <img src= {process.env.PUBLIC_URL+ "/images/main/character/character3.png"} alt="마리오" />
                         <span>UNIVERSAL STUDIO</span>
                     </div>
                     {/* 티켓 메인 정보 */}
@@ -72,9 +72,9 @@ export function Ticket() {
                 {/* 티켓 구입 문의 */}
                 <div className="ticket-purchase-inquiry">
                     <div className="ticket-inquiry-img">
-                        <img src="../images/main/character/character7.png" alt="티켓 구입 문의" />
+                        <img src= {process.env.PUBLIC_URL+ "/images/main/character/character7.png"} alt="티켓 구입 문의" />
                         <div className="ticket-inquiry-cont">
-                            <img src="../images/main/character/character12.gif" alt="지구 이미지" />
+                            <img src= {process.env.PUBLIC_URL+ "/images/main/character/character12.gif"} alt="지구 이미지" />
                             <p>
                                 문의처: JTR Web Global Support Center Email:contact@jtrweb.com
                                 <br />

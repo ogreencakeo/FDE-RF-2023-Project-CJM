@@ -27,7 +27,7 @@ export function AttractionCont({ dt, total }) {
                             >
                                 <div className="attractionCont-list-bx" key={i}>
                                     <div className="attractionCont-list-img">
-                                        <img src={`../images/attraction/${v.img}`} alt={v.name} />
+                                        <img src= {process.env.PUBLIC_URL+ `${v.img}`} alt={v.name} />
                                     </div>
                                     <h2>{v.name}</h2>
                                 </div>
