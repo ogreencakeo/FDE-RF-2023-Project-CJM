@@ -339,9 +339,11 @@ export function Main() {
                                     <img src={process.env.PUBLIC_URL + `/images/event/${v.img}`} alt="이벤트사진" />
                                 </div>
                                 <div className="main-upcomingEv-cont">
-                                    <h2>{v.name}</h2>
-                                    <h3>{v.cont}</h3>
-                                    <p>{v.date}</p>
+                                    <div><a href="#"><span data-hover={v.name}>{v.name}</span></a></div>
+                                    <div className="upcoimgEv-cont-bx">
+                                        <h3>{v.cont}</h3>
+                                        <p>{v.date}</p>
+                                    </div>
                                 </div>
                             </div>
                         )
