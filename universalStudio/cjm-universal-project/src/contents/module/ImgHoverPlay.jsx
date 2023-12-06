@@ -34,7 +34,7 @@ export function ImgHoverPlay() {
             setCanShowImage(false);
             setTimeout(() => {
                 setCanShowImage(true);
-            }, 500);
+            }, 300);
         }
     };
 
