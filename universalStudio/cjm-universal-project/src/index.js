@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
 
 import {Main} from './contents/Main.jsx'
 import {Attraction} from './contents/Attraction.jsx'
@@ -26,7 +26,8 @@ export default function App() {
   })
   
   return(
-    <BrowserRouter>
+    // <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Main />} />
@@ -42,7 +43,8 @@ export default function App() {
           <Route path='login' element={<Login />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    {/* // </BrowserRouter> */}
+    </HashRouter>
   );
 }
 
