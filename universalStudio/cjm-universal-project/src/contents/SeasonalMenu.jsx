@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 // import { seasonalMenu } from "../data/seasonalMenu";
 
-// 레스토랑 라우터 
+// 레스토랑 라우터 모듈 불러오기
 import { Restaurant1 } from "./SeasonalCont/Restaurant1";
 import { Restaurant2 } from "./SeasonalCont/Restaurant2";
 import { Restaurant4 } from "./SeasonalCont/Restaurant4";
@@ -15,25 +15,11 @@ import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { Caution } from "./module/Caution";
 import { FoodInfo } from "./SeasonalCont/FoodInfo";
 import { SwiperSec } from "./pages/plugin/SwiperSec";
-import { UniverReInfo } from "./module/UniverReInfo";
 
 
 export function SeasonalMenu() {
     return (
         <>
-            {/* 스와이프 배너 */}
-            {/* <GoodsSwiper /> */}
-            {/*  추천 시즈널 메뉴 대특집  */}
-            
-            {/* <Swiper /> */}
-            {/* <SeasonalMu /> */}
-
-            {/*시즈널 메뉴 링크 */}
-            {/* <SeasonalLink /> */}
-            {/* <SeasonalMuLink /> */}
-
-            {/* 시즈널 메뉴 콘텍츠 */}
-            {/* <SeasonalMuContent /> */}
             
             <Routes>
                 <Route element='' />

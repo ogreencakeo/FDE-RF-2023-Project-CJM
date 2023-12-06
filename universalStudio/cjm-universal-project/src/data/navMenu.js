@@ -1,9 +1,9 @@
 export const navMenu = [
     
-    // {
-    //     txt : '어트랙션',
-    //     link : '/attraction'
-    // },
+    {
+        txt : '어트랙션',
+        link : '/areaType',
+    },
     {
         txt : '시즈널메뉴',
         link : '/seasonalMenu',

@@ -18,6 +18,7 @@ import './css/common.css';
 import { Hotel } from './contents/Hotel.jsx';
 import { Login } from './contents/Login.jsx';
 import { Seaching2 } from './contents/module/Seaching2.jsx';
+import { AreaType } from './contents/AreaType.jsx';
 
 export default function App() {
 
@@ -32,6 +33,7 @@ export default function App() {
         <Route path='/' element={<Layout/>}>
           <Route index element={<Main />} />
           <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
+          <Route path='areaType' element={<AreaType />} />
           <Route path='goods/*' element={<Goods />} />
           <Route path='ticket' element={<Ticket />} />
           <Route path='customerCenter' element={<CustomerCenter />} />
