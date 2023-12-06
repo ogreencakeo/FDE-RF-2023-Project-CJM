@@ -14,9 +14,9 @@ export function GoodsAd(props) {
         <>
             <div className="goods_ad_wrap">
                 <div className='goods_ad_main_img'>
-                    <img className='goods_ch3' src="../../images/goods/character/character3.png" alt="" />
+                    <img className='goods_ch3' src= {process.env.PUBLIC_URL+ "/images/goods/character/character3.png"} alt="구름" />
                     <div>
-                        <img className='goods_ch4' src="../../images/goods/character/character2.png" alt="" />
+                        <img className='goods_ch4' src= {process.env.PUBLIC_URL+ "/images/goods/character/character2.png"} alt="아이" />
                     </div>
                 </div>
                 <div className="goods_ad_bx">
@@ -24,7 +24,7 @@ export function GoodsAd(props) {
                         <h1 className='goods_tit'>{selData.tit}</h1>
                         <div className="goods_ad_cont">
                             <div className="goods_img_logo">
-                                <img src={`../../images/${selData.logo}`} alt={selData.product} />
+                                <img src={process.env.PUBLIC_URL + `/images/${selData.logo}`} alt={selData.product} />
                             </div>
                             <div className="good_ad">
                                 <span className='goods_location' style={{ backgroundColor: color }}>{selData.location}</span>

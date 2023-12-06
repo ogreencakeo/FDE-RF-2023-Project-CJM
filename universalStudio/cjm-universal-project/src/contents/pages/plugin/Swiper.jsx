@@ -19,7 +19,7 @@ export function GoodsSwiper(props) {
         for (let i = 0; i < 7; i++) {
             temp[i] = (
                 <SwiperSlide key={i}>
-                    <img src= {process.env.PUBLIC_URL + "/images/goods/logoSwipe/}" + (i + 1) + ".jpg"} alt="Logo image" />
+                    <img src= {process.env.PUBLIC_URL + "/images/goods/logoSwipe/" + (i + 1) + ".jpg"} alt="Logo image" />
                 </SwiperSlide>
             );
         }

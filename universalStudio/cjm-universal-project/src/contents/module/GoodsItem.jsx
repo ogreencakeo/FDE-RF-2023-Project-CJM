@@ -17,7 +17,7 @@ export function GoodsItem(props) {
         const goods_img = $(".goods-img");
 
         goods_tit.text(usage);
-        goods_img.attr("src", `../../../../images/goods/${img}`);
+        goods_img.attr("src", process.env.PUBLIC_URL + `/images/goods/${img}`);
 
         modelwrap.fadeIn(300);
         top_area.fadeOut(300);
@@ -33,7 +33,7 @@ export function GoodsItem(props) {
                 {categoryGoods.map((v, i) => (
                     <div className="goods_bx" key={i} onClick={() => showGoodsImg(v.image, v.usage)}>
                         <div className="goods_img">
-                            <img src={`../../../../images/goods/${v.image}`} alt="" />
+                            <img src= {process.env.PUBLIC_URL+ `/images/goods/${v.image}`} alt="" />
                         </div>
                         <div className="goods_content">
                             <span className="goods_store">판매 점포: {v.store}</span>
