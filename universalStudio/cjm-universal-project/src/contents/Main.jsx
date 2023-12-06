@@ -189,25 +189,25 @@ export function Main() {
                         </div>
                     </div>
                     <div className="utility-panel">
-                        <a href="#">
+                        <a href="#" onClick={(e) => e.preventDefault()}>
                             <div className="panel-clock">
                                 <FontAwesomeIcon className="panel-icon" icon={faClock} />
                                 <span>영업시간</span>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="#" onClick={(e) => e.preventDefault()}>
                             <div className="panel-park-map">
                                 <FontAwesomeIcon className="panel-icon" icon={faMapMarkerAlt} />
                                 <span>파크맵</span>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="#" onClick={(e) => e.preventDefault()}>
                             <div className="panel-clock">
                                 <FontAwesomeIcon className="panel-icon" icon={faSquareParking} />
                                 <span>주차장 정보</span>
                             </div>
                         </a>
-                        <a href="#">
+                        <a href="#" onClick={(e) => e.preventDefault()}>
                             <div className="panel-clock">
                                 <FontAwesomeIcon className="panel-icon" icon={faCar} />
                                 <span>교통편</span>
@@ -219,8 +219,8 @@ export function Main() {
                         {/* <h1>PICK UP</h1> */}
                         <h1>
                             <nav className="hover-move-wrap">
-                                <a href="#" className="hover-move-bx">
-                                    <span data-hover='PICK UP' onClick={(e) => e.preventDefault()}>PICK UP</span>
+                                <a href="#" className="hover-move-bx" onClick={(e) => e.preventDefault()}>
+                                    <span data-hover='PICK UP'>PICK UP</span>
                                 </a>
                             </nav>
                         </h1>
@@ -259,21 +259,20 @@ export function Main() {
             <div className="character-erath">
                 <img src={process.env.PUBLIC_URL +"/images/main/character/character12.gif"} alt="캐릭터 지구" />
                 <div className="main-video">
-
-                    {/* 동영상 */}
-                    <div class="main-video-wrap">
-                        <iframe
-                            src="https://www.youtube.com/embed/yKCqJ8llKuA"
-                            title="동영상"
-                            allow="autoplay; "
-                        ></iframe>
-                    </div>
                     {/* 동영상 짤막한 내용 */}
                     <div className="main-video-cont">
                         <h1>#특별한 #재미있는 #신나는 #멋진</h1>
                         <div className="main-video-cont-img">
                             <img src={process.env.PUBLIC_URL + "/images/main/character/character13.gif"} alt="열기구" />
                         </div>
+                    </div>
+                     {/* 동영상 */}
+                    <div class="main-video-wrap">
+                        <iframe
+                            src="https://www.youtube.com/embed/yKCqJ8llKuA"
+                            title="동영상"
+                            allow="autoplay; "
+                        ></iframe>
                     </div>
                 </div>
             </div>
@@ -315,7 +314,7 @@ export function Main() {
             </div>
             <div className="page3">
                 <div className="area-cont-wrap">
-                    <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx"><span data-hover='Area' onClick={(e) => e.preventDefault()}>Area</span></a></nav></h1>
+                    <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx" onClick={(e) => e.preventDefault()}><span data-hover='Area'>Area</span></a></nav></h1>
                     <Area />
                 </div>
             </div>
@@ -330,7 +329,7 @@ export function Main() {
             </div>
             {/* 이벤트 */}
             <div className="main-upcomingEv-wrap">
-                <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx"><span data-hover='Upcoming Event' onClick={(e) => e.preventDefault()}>Upcoming Event</span></a></nav></h1>
+                <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx" onClick={(e) => e.preventDefault()}><span data-hover='Upcoming Event'>Upcoming Event</span></a></nav></h1>
                 <div className="main-upcomingEv">
                     {
                         eventData.map((v, i) =>
@@ -339,7 +338,7 @@ export function Main() {
                                     <img src={process.env.PUBLIC_URL + `/images/event/${v.img}`} alt="이벤트사진" />
                                 </div>
                                 <div className="main-upcomingEv-cont">
-                                    <div><a href="#"><span data-hover={v.name}>{v.name}</span></a></div>
+                                    <div><a href="#" onClick={(e) => e.preventDefault()}><span data-hover={v.name}>{v.name}</span></a></div>
                                     <div className="upcoimgEv-cont-bx">
                                         <h3>{v.cont}</h3>
                                         <p>{v.date}</p>

@@ -133,8 +133,8 @@ a {
     top: 17%;
     left: 50%;
     transform: translateX(-50%);
-    /* background: #00000069; */
     padding: 22px;
+    width: 100%;
 }
 
 .header-content>span,
@@ -147,6 +147,9 @@ a {
     font-family: 'Gugi';
     text-align: center;
     margin-top: 50px;
+}
+.span_wave {
+    max-width: 100vw;
 }
 
 .span_wave>span {
@@ -205,10 +208,10 @@ a {
 .header-content>span:last-of-type::after {
     content: '';
     display: block;
-    margin-top: 20px;
     width: 50vw;
     height: 2px;
     background-color: #b69f8f;
+    margin: 20px auto 0;
 }
 
 .universal_link {
@@ -301,6 +304,7 @@ a {
     margin: 0.8% 0;
     background-color: #fff;
     margin-bottom: 120px;
+    flex-wrap: wrap;
 }
 
 .utility-panel>a>div {
@@ -523,6 +527,7 @@ a {
     border-top: 5px solid black;
     border-bottom: 5px solid black;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 .main-video-wrap>iframe {
     aspect-ratio: 16/12;
@@ -633,6 +638,7 @@ a {
     display: flex;
     margin: 0 auto;
     max-width: 1200px;
+    flex-wrap: wrap;
 }
 
 .enjoy-pick-cont {
@@ -809,7 +815,7 @@ a {
     flex-wrap: wrap;
 }
 .main-upcomingEv-bx{
-    max-width: calc((100% - 140px) /3);
+    width: calc((100% - 140px) /3);
     margin: 20px;
     margin: 0 auto;
     border: 5px solid #0965a0;
@@ -1197,4 +1203,100 @@ a {
 /* 에어리어 마진 */
 .area-cont-wrap>h1{
     margin-bottom: 20px;
+}
+
+@media screen and (max-width:1255px)  {
+    .header-content>span:first-of-type {
+        font-size: 4vw;
+    }
+    .span_wave>span {
+        font-size: 5.9vw;
+    }
+    .main-video-cont-img{
+        display: none;
+    }
+    .hover-move-bx{
+        font-size: 4.2rem;
+    }
+}
+
+
+@media screen and (max-width:1070px)  {
+    .page2-cont {
+    }
+    .enjoy-pick-cont{
+        flex: initial;
+        margin: 0 auto 25px;
+        width: 35%;
+    }
+    .main-upcomingEv-bx{
+        flex: initial;
+        width: 45%;
+        margin-bottom: 25px;
+    }
+    .mouseBox img{
+        width: 250px;
+        height: 200px;
+    }
+    .universal_sns{
+        display: none;
+    }
+}
+
+@media screen and (max-width:850px)  {
+    .span_wave>span{
+        font-size: 7vw;
+    }
+    .universal_link{
+        width: 70vw;
+    }
+    .utility-panel>a{
+        flex: initial;
+        width: 50%;
+    }
+    .main-video-wrap>iframe{
+        width: 500px;
+    }
+}
+@media screen and (max-width:700px)  {
+    .header-content>span:first-of-type{
+        font-size: 5vw;
+    }
+    .span_wave>span{
+        font-size: 8vw;
+    }
+    .universal_link button{
+        font-size: 3vw;
+    }
+    .enjoy-pick-cont{
+        width: 85vw;
+    }
+    .enjoty-pick-img{
+        width: 200px;
+    }
+    .main-upcomingEv-bx{
+        width: 80%;
+    }
+    .mouseBox img{
+        width: 220px;
+        height: 170px;
+    }
+}
+@media screen and (max-width:550px){
+    .header-content>span:first-of-type{
+        font-size: 8vw;
+    }
+    .span_wave>span{
+        font-size: 10vw;
+    }
+    /* .header, .header-img-wrap, .header-main-img-wrap, .header-main-img{
+        height: 55vh;
+    } */
+    .universal_link button{
+        font-size: 4.5vw;
+    }
+    .page2-light span {
+        font-size: 6em;
+        margin: 0 10px;
+    }
 }

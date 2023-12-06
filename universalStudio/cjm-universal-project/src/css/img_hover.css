@@ -16,6 +16,7 @@
 .mouseBox img{
     max-width: 30vw;
     height: 45vh;
+    /* aspect-ratio: 1/1.5; */
     object-fit: cover;
     border: 5px solid black;
     border-radius: 20px;

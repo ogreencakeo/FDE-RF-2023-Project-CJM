@@ -9,6 +9,7 @@ import { UniverSalText } from "./module/UniverSalText";
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import { Caution } from "./module/Caution";
 
 export function AreaType() {
     const loc = useLocation();
