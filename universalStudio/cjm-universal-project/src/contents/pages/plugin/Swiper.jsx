@@ -11,7 +11,7 @@ import "../../../css/swiper.css";
 
 // import required modules
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-export function GoodsSwiper() {
+export function GoodsSwiper(props) {
    
 
     const makeCod = () => {
@@ -25,11 +25,22 @@ export function GoodsSwiper() {
         }
         return temp;
     };
+    const makeCod2 = () => {
+        const temp = [];
+        for (let i = 0; i < 6; i++) {
+            temp[i] = (
+                <SwiperSlide key={i}>
+                    <img src={"../../../images/area/main/" + (i + 1) + ".jpg"} alt="Logo image" />
+                </SwiperSlide>
+            );
+        }
+        return temp;
+    };
 
     return (
         <>
             <div className="goods-top-cont-wrap">
-                <h1>굿즈를 판매하고 있는 다른 숍!</h1>
+                {props.cats==='goods'? <h1>굿즈를 판매하고 있는 다른 숍!</h1> : ''}
                 <Swiper
                     slidesPerView={3}
                     spaceBetween={50}
@@ -59,7 +70,7 @@ export function GoodsSwiper() {
                         disableOnInteraction: false,
                     }}
                 >
-                    {makeCod()}
+                    {props.cats === 'goods'? makeCod() : makeCod2()}
                 </Swiper>
             </div>
         </>

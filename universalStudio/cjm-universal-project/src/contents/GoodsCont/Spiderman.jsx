@@ -7,7 +7,7 @@ export function Spiderman(){
     return(
         <>
             <GoodsAd ad='spiderman' bg_color = '#5f915d'/>
-            <GoodsSwiper/>
+            <GoodsSwiper cats='goods'/>
             <GoodsItem cat={goods[4]} category='spiderman' />
             <Map shop_info='map5' shop_location='스파이더맨' cat='goods' />
         </>

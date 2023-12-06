@@ -6,6 +6,16 @@
     flex-wrap: wrap;
 }
 
+/* 에어리어 메인 이미지 */
+.area_type_main_img{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.area_type_main_img>img{
+    max-width: 100%;
+    aspect-ratio: 2/1;
+}
+
 /* 에어리어 버튼 */
 .area-type-btn{
     max-width: 1350px;

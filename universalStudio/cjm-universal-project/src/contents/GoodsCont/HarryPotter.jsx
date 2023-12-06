@@ -7,7 +7,7 @@ export function HarryPotter(){
     return(
         <>
             <GoodsAd ad='harryPotter' bg_color = '#30738a'/>
-            <GoodsSwiper/>
+            <GoodsSwiper cats='goods'/>
             <GoodsItem cat={goods[2]} category='harryPotter' />
             <Map shop_info='map3' shop_location='위저딩 월드 오브 해리 포터™' cat='goods' />
         </>

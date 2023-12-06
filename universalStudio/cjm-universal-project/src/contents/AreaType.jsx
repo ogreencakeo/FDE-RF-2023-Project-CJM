@@ -3,6 +3,8 @@ import { areaData } from "../data/attraction/attractionData";
 
 import "../css.area_type.css";
 import { Link, useLocation } from "react-router-dom";
+import { GoodsSwiper } from "./pages/plugin/Swiper";
+import { UniverSalText } from "./module/UniverSalText";
 
 export function AreaType() {
     const loc = useLocation();
@@ -26,6 +28,7 @@ export function AreaType() {
 
     return (
         <>
+            <GoodsSwiper cats="area" />
             <div className="area-type-btn">
                 <nav>
                     <ul>
@@ -102,6 +105,7 @@ export function AreaType() {
                     </div>
                 ))}
             </div>
+            <UniverSalText />
         </>
     );
 }

@@ -36,6 +36,9 @@
     text-align: center;
 }
 
+.detail-split-p{
+    margin: 25px;
+}
 .attraction-logo-img {
     max-width: 400px;
     margin: 50px auto;
