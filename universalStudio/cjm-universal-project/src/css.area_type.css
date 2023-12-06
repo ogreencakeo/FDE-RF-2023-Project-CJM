@@ -20,7 +20,7 @@
     text-align: center;
     /* border-top: 1px solid #041e49ff; */
     padding: 20px 0;
-    border-bottom: 3px solid #041e49ff; 
+    
 }
 .area-type-btn nav ul li button{
     background-color: #fff;
@@ -30,6 +30,10 @@
     border: 0;
     font-size: 1.2rem;
     font-family: 'Gugi';
+}
+
+.areabuttoncolor{
+    border-bottom: 3px solid #041e49ff; 
 }
 
 /* 에어리어 박스 */
