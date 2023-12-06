@@ -13,7 +13,7 @@
 }
 .attraction-detail-main-img>img {
     max-width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.1/1;
     border-radius: 20px;
 }
 
