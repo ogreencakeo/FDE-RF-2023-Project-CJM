@@ -463,16 +463,6 @@ export const areaData = {
             areatype : 'nintendo'
         },
         {
-            idx : "3",
-            logo : "../images/attraction/logo/attraction3.png",
-            img : "../images/attraction/img/attraction3.jpg",
-            map : "../images/attraction/map/attraction3.jpg",
-            name : "요시 어드벤처™",
-            title : "요시와 모험 여행을 떠나자!",
-            desc : "요시의 등에 타고 키노피오대장을 쫓아서 보물찾기 모험을 떠나자!^ 대장이 깜빡하고 놓고 간 지도를 참고하여 사방에 숨어 있는 3개의 달걀을 찾아내자.^ 키다리산에서 버섯 왕국을 내려다보기도 하고 깜찍한 아이들과 만나는 등 즐거움이 한가득!",
-            areatype : 'nintendo'
-        },
-        {
             idx : "4",
             logo : "../images/attraction/logo/attraction4.jpg",
             img : "../images/attraction/img/attraction4.jpg",

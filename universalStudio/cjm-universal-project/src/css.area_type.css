@@ -20,7 +20,6 @@
     text-align: center;
     /* border-top: 1px solid #041e49ff; */
     padding: 20px 0;
-    
 }
 .area-type-btn nav ul li button{
     background-color: #fff;
@@ -30,10 +29,17 @@
     border: 0;
     font-size: 1.2rem;
     font-family: 'Gugi';
+    color: #ccc;
 }
 
+.arealicolor{
+    border-bottom: 5px solid #041e49ff; 
+    font-size: 800;
+    
+}
 .areabuttoncolor{
-    border-bottom: 3px solid #041e49ff; 
+    color: #041e49ff !important;
+    font-weight: bold;
 }
 
 /* 에어리어 박스 */
@@ -51,6 +57,7 @@
     max-width: 100%;
     aspect-ratio: 1/1;
     border-radius: 5px;
+    cursor: pointer;
 }
 .area-type-img img{
     border-radius: 5px;
