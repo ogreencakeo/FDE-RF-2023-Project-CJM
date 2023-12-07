@@ -1,7 +1,7 @@
 export function CartList() {
-    const selData = JSON.parse(localStorage.getItem("cart"));
+    const shopData = JSON.parse(localStorage.getItem("cart"));
 
-    console.log(selData);
+    console.log(shopData);
 
     //정규식함수(숫자 세자리마다 콤마해주는 기능)
     function addComma(x) {
@@ -10,6 +10,7 @@ export function CartList() {
 
     return (
         <>
+            <h1>장바구니Hi</h1>
             <section id="cartlist">
                 <a href="#" className="cbtn cbtn2">
                     <span>닫기버튼</span>
@@ -22,32 +23,21 @@ export function CartList() {
                         <tr>
                             <th>상품</th>
                             <th>번호</th>
-                            <th>상품명</th>
-                            <th>상품코드</th>
-                            <th>단가</th>
                             <th>수량</th>
+                            <th>단가</th>
                             <th>합계</th>
                             <th>삭제</th>
                         </tr>
 
-                        {selData.map((v, i) => (
+                        {shopData.map((v, i) => (
                             <tr key={i}>
-                                {/* 상품이미지 */}
-                                <td>
-                                    <img src={"images/goods/" + v.cat + "/" + v.ginfo[0] + ".png"} alt="item" />
-                                </td>
-                                {/* 리스트순번 */}
-                                <td>{i + 1}</td>
-                                {/* 상품명 */}
-                                <td>{v.ginfo[1]}</td>
-                                {/* 상품코드 */}
-                                <td>{v.ginfo[2]}</td>
-                                {/* 상품가격 */}
-                                <td>{addComma(v.ginfo[3])}원</td>
-                                {/* 상품수량 */}
-                                <td>{v.num}</td>
-                                {/* 상품가격 총합계 */}
-                                <td>{addComma(v.ginfo[3] * v.num)}원</td>
+                                <td>{v.항목}</td>
+                                <td>{v.번호}</td>
+                                <td>{v.수량}</td>
+                                <td>{v.가격}</td>
+                                <td>{v.가격 * v.수량}</td>
+                                {/* <td>{addComma(v.ginfo[3])}원</td> */}
+
                                 <td>
                                     <button className="cfn" data-idx={v.idx}>
                                         ×
@@ -56,11 +46,6 @@ export function CartList() {
                             </tr>
                         ))}
 
-                        <tr>
-                            <td colSpan="6">총합계 :</td>
-                            <td>999,000원</td>
-                            <td></td>
-                        </tr>
                     </tbody>
                 </table>
             </section>
