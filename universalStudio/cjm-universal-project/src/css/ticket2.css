@@ -93,9 +93,7 @@
 .ticket-info-bx > div > span {
     display: block;
     font-size: 1.2rem;
-    color: whitesmoke;
-    text-shadow: 1px 2px 2px black;
-    /* font-family: 'Gugi'; */
+    font-family: 'Jua';
 }
 
 .ticket-info-bx > div > span:first-child {
@@ -191,7 +189,15 @@
 .ticket-option-bx-wrap{
     width: 100%;
     display: flex;
+    margin: 0 auto;
+}
+
+.ticket-option-bx{
     flex: 1;
+    margin: 0 10px;
+    border: 5px solid #555;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .ticket-option-bx>h1{
@@ -201,10 +207,10 @@
     color: orangered;
 }
 .ticket-option-bx:nth-child(2)>h1{
-    color:olive;
+    color:#fbbc05;
 }
 .ticket-option-bx:last-child>h1{
-    color: palegoldenrod;
+    color: #1b6ef3ff;
 }
 .ticket-option-bx>h2{
     font-size: 1.3vw;
@@ -215,6 +221,6 @@
 .ticket-suboption-wrap{
     padding: 20px;
     max-width: 1280px;
-    margin: 80px auto;
+    margin: 100px auto;
     border: 5px solid #555;
 }

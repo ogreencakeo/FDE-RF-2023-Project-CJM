@@ -38,7 +38,20 @@ export function Ticket() {
         },
     ];
 
-    const ticket_opt = ["[1일권 Low Price (A시즌)]", "[1일권 Middle Price (B시즌)]", "[1일권 High Price (C시즌)]"];
+    const makeTiOption = () => {
+        const temp = [];
+        for(let i=0; i<3; i++){
+            temp[i] = 
+            (
+                <div className="ticket-option-bx" key={i}>
+                    <h1>
+                        <FontAwesomeIcon icon={faTicket} />
+                    </h1>
+                </div>
+            )
+        }
+        return temp;
+    }
 
 
     return (
@@ -86,7 +99,7 @@ export function Ticket() {
                 <div className="ticket-option-wrap">
                     <div className="ticket-option-bx-wrap">
                         {/* 티켓옵션박스 A시즌~C시즌 */}
-                        {/* {makeTiOption()} */}
+                        {makeTiOption()}
                     </div>
                     <TicketOption />
                 </div>
