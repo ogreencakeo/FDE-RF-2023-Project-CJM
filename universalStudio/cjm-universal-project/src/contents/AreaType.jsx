@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { areaData } from "../data/attraction/attractionData";
 
-import "../css.area_type.css";
+// css
+import '../css/area_type.css';
+
 import { Link, useLocation } from "react-router-dom";
 import { GoodsSwiper } from "./pages/plugin/Swiper";
 import { UniverSalText } from "./module/UniverSalText";
@@ -9,7 +11,6 @@ import { UniverSalText } from "./module/UniverSalText";
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import { Caution } from "./module/Caution";
 
 export function AreaType() {
     const loc = useLocation();

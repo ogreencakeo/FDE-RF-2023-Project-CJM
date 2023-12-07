@@ -38,15 +38,17 @@ export function Ticket() {
         },
     ];
 
+    const tickOp = ['[1일권 Low Price (A시즌)]', '[1일권 Middle Price (B시즌)]', '[1일권 High Price (C시즌)]' ]
+
     const makeTiOption = () => {
         const temp = [];
         for(let i=0; i<3; i++){
             temp[i] = 
             (
                 <div className="ticket-option-bx" key={i}>
-                    <h1>
-                        <FontAwesomeIcon icon={faTicket} />
-                    </h1>
+                    <h3>{tickOp[i]}</h3>
+                    <h1><FontAwesomeIcon icon={faTicket} /></h1>
+                    <h2><FontAwesomeIcon icon={faEye} /></h2>
                 </div>
             )
         }

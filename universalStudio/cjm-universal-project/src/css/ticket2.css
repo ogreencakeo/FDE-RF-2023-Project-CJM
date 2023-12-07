@@ -191,13 +191,45 @@
     display: flex;
     margin: 0 auto;
 }
-
 .ticket-option-bx{
     flex: 1;
     margin: 0 10px;
     border: 5px solid #555;
     border-radius: 15px;
     padding: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.ticket-option-bx::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+.ticket-option-bx:hover::before{
+    opacity: 0.5;
+}
+.ticket-option-bx h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0;
+    z-index: 1;
+    transition: font-weight 0.4s ease-out opacity 0.4s ease-out;
+}
+.ticket-option-bx:hover h2{
+    font-weight: 800;
+    opacity: 1;
+    color: #fff;
+    z-index: 2;
 }
 
 .ticket-option-bx>h1{
@@ -212,9 +244,10 @@
 .ticket-option-bx:last-child>h1{
     color: #1b6ef3ff;
 }
-.ticket-option-bx>h2{
-    font-size: 1.3vw;
-    margin-top: 30px;
+.ticket-option-bx>h3{
+    text-align: center;
+    font-family: 'Jua';
+    font-size: 1.5rem;
 }
 
 /* 티켓 서브 옵션 박스 */
