@@ -10,10 +10,10 @@ export function UniverSalText() {
     };
     return (
         <>
-            <div class="main3">
-                <div class="logo-move-wrap">
-                    <div class="logo-span-move-wrap">
-                        <div class="logo-span-wrap logo-span-ani">
+            <div className="main3">
+                <div className="logo-move-wrap">
+                    <div className="logo-span-move-wrap">
+                        <div className="logo-span-wrap logo-span-ani">
                             <ul>{makeTextCode()}</ul>
                             <ul>{makeTextCode()}</ul>
                         </div>

@@ -267,7 +267,7 @@ export function Main() {
                         </div>
                     </div>
                      {/* 동영상 */}
-                    <div class="main-video-wrap">
+                    <div className="main-video-wrap">
                         <iframe
                             src="https://www.youtube.com/embed/yKCqJ8llKuA"
                             title="동영상"
