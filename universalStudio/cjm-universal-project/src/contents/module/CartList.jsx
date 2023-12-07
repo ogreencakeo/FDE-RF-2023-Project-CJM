@@ -1,5 +1,7 @@
-export function CartList() {
-    const selData = JSON.parse(localStorage.getItem("cart"));
+import { memo } from "react";
+
+export const CartList = memo (({selData}) => {
+    
 
     console.log(selData);
 
@@ -51,4 +53,4 @@ export function CartList() {
             </section>
         </>
     );
-}
+});
