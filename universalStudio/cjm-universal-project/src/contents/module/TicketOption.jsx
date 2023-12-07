@@ -40,8 +40,8 @@ export function TicketOption() {
                 localD.push(temp);
                 localStorage.setItem("cart", JSON.stringify(localD));
             }
-            setCsts(1);
         }
+        setCsts(1);
     };
 
     const [option, setOption] = useState([
