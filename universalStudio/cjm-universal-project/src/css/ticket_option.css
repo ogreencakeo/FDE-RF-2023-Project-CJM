@@ -7,34 +7,54 @@
 }
 .ticket-suboption-bx{
     display: flex;
+    flex-wrap: wrap;
 }
 .ticket-opt-character{
-    flex: 1;
     text-align: center;
     /* cursor: pointer; */
     border: 3px solid #555;
     margin: 50px 10px;
     padding: 20px 0;
     border-radius: 20px;
+    width: calc((100% - 75px) / 3);
 }
 
 /* 티켓 옵션 박스 폰트어썸 캐릭터 - 노인, 성인, 아이*/
+.ticket-opt-character>span{
+    font-size: 1.7rem;
+    font-family: 'Jua';
+    border: 3px solid #000;
+    padding: 5px;
+    background-color: #555;
+    color: #fff;
+    display: inline-block;
+    margin: 10px;
+}
 .ticket-opt-character>h1{
     font-size: 8rem;
     margin-bottom: 20px;
 }
-.ticket-opt-character:first-child>h1{
+.person-icon{
     color: #ff4500;
 }
-.ticket-opt-character:nth-child(2)>h1{
-    color: #808000;
+.child-icon{
+    color: #fbbc05;
 }
-.ticket-opt-character:last-child>h1{
-    color: #eee8aa;
+.senior-icon{
+    color: #1b6ef3ff;
 }
+
 .ticket-opt-character>h2{
     margin-bottom: 10px;
     font-size: 1.2rem;
+}
+.ticket-opt-character>h2:nth-of-type(2):after{
+    display: block;
+    content: '';
+    height: 1px;
+    background-color: #555;
+    width: 90%;
+    margin: 10px auto 0;
 }
 
 /* 티켓 버튼 +, - */
@@ -62,12 +82,22 @@
     /* border: 1px solid red; */
     display: inline-block;
     margin: 0 auto;
+    width: 90%;
 }
 .ticket-opt-price>h2{
     margin: 5px 0;
+    border: 5px solid #ccc;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
 }
 
 /* 총가격 */
 .ticket-total-price{
-    font-size: 1.5rem !important;
+    font-size: 2rem !important;
+    border: 5px solid #555;
+    background-color: #ccc;
+    padding: 15px;
+    font-family: 'Jua';
 }
