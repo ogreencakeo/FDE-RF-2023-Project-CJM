@@ -16,6 +16,7 @@ export function CustomerCenter() {
     const customerCenterFn = (data) => {
         setCustomBtn(data);
         setCustomerColor(data);
+        // setIsOn(false);
     };
 
     useEffect(() => {
@@ -42,6 +43,10 @@ export function CustomerCenter() {
             return newToggleList;
         });
     };
+    
+    useEffect(()=>{
+
+    }, [isOn]);
 
     // 게시판
     const makeCode = (data) => {
