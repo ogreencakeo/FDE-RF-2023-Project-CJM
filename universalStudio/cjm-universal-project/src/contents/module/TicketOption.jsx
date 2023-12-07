@@ -20,8 +20,6 @@ export function TicketOption() {
     // 카트 사용여부 상태변수
     const [csts, setCsts] = useState(0);
 
-    const [lastData,setLastData] = useState(JSON.parse(localStorage.getItem("cart")));
-
     const useCart = (idx) => {
         const quantity = option[idx]["quantity"];
         if (option[idx]["price"] > 0) {
@@ -32,40 +30,19 @@ export function TicketOption() {
             console.log("temp :", temp);
             console.log("selData :", selData);
 
-            let localD;
-
             if (!localStorage.getItem("cart")) {
-                localD = [];
+                let localD = [];
                 localD.push(temp);
                 localStorage.setItem("cart", JSON.stringify(localD));
             } else {
-                localD = localStorage.getItem("cart");
+                let localD = localStorage.getItem("cart");
                 localD = JSON.parse(localD);
                 localD.push(temp);
                 localStorage.setItem("cart", JSON.stringify(localD));
             }
-            setCsts(1);
-            setLastData(localD)
         }
+        setCsts(1);
     };
-
-    const increaseQuntity = (idx) => {
-        const newOption = [...option];
-        newOption[idx].quantity += 1;
-        setOption(newOption);
-    };
-
-    const decreaseQuntity = (idx) => {
-        const newOption = [...option];
-        if (newOption[idx].quantity > 0) {
-            newOption[idx].quantity -= 1;
-            setOption(newOption);
-        }
-    };
-
-    // useEffect(()=>{
-    //     temp.가격
-    // }, [])
 
     const [option, setOption] = useState([
         // A시즌
@@ -145,7 +122,19 @@ export function TicketOption() {
         },
     ]);
 
-   
+    const increaseQuntity = (idx) => {
+        const newOption = [...option];
+        newOption[idx].quantity += 1;
+        setOption(newOption);
+    };
+
+    const decreaseQuntity = (idx) => {
+        const newOption = [...option];
+        if (newOption[idx].quantity > 0) {
+            newOption[idx].quantity -= 1;
+            setOption(newOption);
+        }
+    };
 
     // 전체 가격 계산
     const totalPrice = () => {
@@ -184,7 +173,7 @@ export function TicketOption() {
                 </div>
                 {/* 카트리스트 */}
                 <h1 className="ticket-total-price">총가격 : ₩ {totalPrice().toLocaleString()}원 </h1>
-                {csts && <CartList selData={lastData} />}
+                {csts && <CartList />}
                 {/* <button className="shoppingCart" onClick={useCart}>담기</button>  */}
             </div>
         </>
