@@ -13,16 +13,35 @@ import {
     faMoneyCheckDollar,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
-export function TicketOption() {
 
+import { CartList } from "./CartList";
+
+export function TicketOption() {
     // 카트 사용여부 상태변수
-    const [CSSTransformComponent, setCsts] = useState(0);
+    const [csts, setCsts] = useState(0);
 
     const useCart = (idx) => {
-        const quantity =option[idx]['quantity'];
-        if(option[idx]['quantity'] > 0){
-            console.log('quantity', quantity, ', idx :', idx);
+        const quantity = option[idx]["quantity"];
+        if (option[idx]["quantity"] > 0) {
+            console.log("quantity", quantity, ", idx :", idx);
+            // const selData = option[idx];
+            const selData = option[idx];
+            const temp = {'수량' : selData.quantity, '가격' : selData.price,  '이름' : selData.txt}
+            console.log("temp :", temp);
+            console.log("selData :", selData);
+
+            // if (!localStorage.getItem("cart")) {
+            //     let localD = [];
+            //     localD.push(selData);
+            //     localStorage.setItem("cart", JSON.stringify(localD));
+            // } else {
+            //     let localD = localStorage.getItem("cart");
+            //     localD = JSON.parse(localD);
+            //     localD.push(selData);
+            //     localStorage.setItem("cart", JSON.stringify(localD));
+            // }
         }
+        // setCsts(1);
     };
 
     const [option, setOption] = useState([
@@ -32,21 +51,21 @@ export function TicketOption() {
             quantity: 0,
             character: <FontAwesomeIcon icon={faPerson} className="person-icon" />,
             txt: "성인(만12 - 64세)",
-            option : "[1일권 Low Price (A시즌)]",
+            option: "[1일권 Low Price (A시즌)]",
         },
         {
             price: 48400,
             quantity: 0,
             character: <FontAwesomeIcon icon={faChild} className="child-icon" />,
             txt: "어린이(만4 - 11세)",
-            option : "[1일권 Low Price (A시즌)]",
+            option: "[1일권 Low Price (A시즌)]",
         },
         {
             price: 66500,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />,
             txt: "시니어(만 65세 이상)",
-            option : "[1일권 Low Price (A시즌)]",
+            option: "[1일권 Low Price (A시즌)]",
         },
         // B 시즌
         {
@@ -54,21 +73,21 @@ export function TicketOption() {
             quantity: 0,
             character: <FontAwesomeIcon icon={faPerson} className="person-icon" />,
             txt: "성인(만12 - 64세)",
-            option : "[1일권 Middle Price (B시즌)]",
+            option: "[1일권 Middle Price (B시즌)]",
         },
         {
             price: 50100,
             quantity: 0,
             character: <FontAwesomeIcon icon={faChild} className="child-icon" />,
             txt: "어린이(만4 - 11세)",
-            option : "[1일권 Middle Price (B시즌)]",
+            option: "[1일권 Middle Price (B시즌)]",
         },
         {
             price: 69100,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />,
             txt: "시니어(만 65세 이상)",
-            option : "[1일권 Middle Price (B시즌)]",
+            option: "[1일권 Middle Price (B시즌)]",
         },
         // C 시즌
         {
@@ -76,21 +95,21 @@ export function TicketOption() {
             quantity: 0,
             character: <FontAwesomeIcon icon={faPerson} className="person-icon" />,
             txt: "성인(만12 - 64세)",
-            option : "[1일권 High Price (C시즌)]",
+            option: "[1일권 High Price (C시즌)]",
         },
         {
             price: 53600,
             quantity: 0,
             character: <FontAwesomeIcon icon={faChild} className="child-icon" />,
             txt: "어린이(만4 - 11세)",
-            option : "[1일권 High Price (C시즌)]",
+            option: "[1일권 High Price (C시즌)]",
         },
         {
             price: 74300,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />,
             txt: "시니어(만 65세 이상)",
-            option : "[1일권 High Price (C시즌)]",
+            option: "[1일권 High Price (C시즌)]",
         },
     ]);
 
@@ -137,10 +156,14 @@ export function TicketOption() {
                                 <h2>수량 : {v.quantity}</h2>
                                 <h2>가격 : ₩ {(v.price * v.quantity).toLocaleString()}</h2>
                             </div>
-                            <button className="shoppingCart" onClick={useCart(idx)}>담기</button>
+                            <button className="shoppingCart" onClick={() => useCart(idx)}>
+                                담기
+                            </button>
                         </div>
                     ))}
                 </div>
+                {/* 카트리스트 */}
+                {csts && <CartList />}
                 {/* <h1 className="ticket-total-price">총가격 : ₩ {totalPrice().toLocaleString()}원 </h1>
                 <button className="shoppingCart" onClick={useCart}>담기</button> */}
             </div>
