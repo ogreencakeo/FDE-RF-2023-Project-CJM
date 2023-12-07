@@ -1,7 +1,7 @@
 export function CartList() {
-    const shopData = JSON.parse(localStorage.getItem("cart"));
+    const selData = JSON.parse(localStorage.getItem("cart"));
 
-    console.log(shopData);
+    console.log(selData);
 
     //정규식함수(숫자 세자리마다 콤마해주는 기능)
     function addComma(x) {
@@ -29,7 +29,7 @@ export function CartList() {
                             <th>삭제</th>
                         </tr>
 
-                        {shopData.map((v, i) => (
+                        {selData.map((v, i) => (
                             <tr key={i}>
                                 <td>{v.항목}</td>
                                 <td>{v.번호}</td>
