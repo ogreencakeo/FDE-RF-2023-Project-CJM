@@ -14,6 +14,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
 export function TicketOption() {
+
+    // 카트 사용여부 상태변수
+    const [CSSTransformComponent, setCsts] = useState(0);
+
+    const useCart = (idx) => {
+        const quantity =option[idx]['quantity'];
+        if(option[idx]['quantity'] > 0){
+            console.log('quantity', quantity, ', idx :', idx);
+        }
+    };
+
     const [option, setOption] = useState([
         // A시즌
         {
@@ -126,10 +137,12 @@ export function TicketOption() {
                                 <h2>수량 : {v.quantity}</h2>
                                 <h2>가격 : ₩ {(v.price * v.quantity).toLocaleString()}</h2>
                             </div>
+                            <button className="shoppingCart" onClick={useCart(idx)}>담기</button>
                         </div>
                     ))}
                 </div>
-                <h1 className="ticket-total-price">총가격 : ₩ {totalPrice().toLocaleString()}원 </h1>
+                {/* <h1 className="ticket-total-price">총가격 : ₩ {totalPrice().toLocaleString()}원 </h1>
+                <button className="shoppingCart" onClick={useCart}>담기</button> */}
             </div>
         </>
     );
