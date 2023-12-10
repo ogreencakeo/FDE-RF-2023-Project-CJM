@@ -38,19 +38,19 @@ export function Ticket() {
         },
     ];
 
-    const tickOp = ['[1일권 Low Price (A시즌)]', '[1일권 Middle Price (B시즌)]', '[1일권 High Price (C시즌)]' ]
+    const tickOp = ['[1일권 Low Price (A시즌)]', '[1일권 Middle Price (B시즌)]', '[1일권 High Price (C시즌)]']
 
     const makeTiOption = () => {
         const temp = [];
-        for(let i=0; i<3; i++){
-            temp[i] = 
-            (
-                <div className="ticket-option-bx" key={i}>
-                    <h3>{tickOp[i]}</h3>
-                    <h1><FontAwesomeIcon icon={faTicket} /></h1>
-                    <h2><FontAwesomeIcon icon={faEye} /></h2>
-                </div>
-            )
+        for (let i = 0; i < 3; i++) {
+            temp[i] =
+                (
+                    <div className="ticket-option-bx" key={i}>
+                        <h3>{tickOp[i]}</h3>
+                        <h1><FontAwesomeIcon icon={faTicket} /></h1>
+                        <h2><FontAwesomeIcon icon={faEye} /></h2>
+                    </div>
+                )
         }
         return temp;
     }
@@ -62,7 +62,7 @@ export function Ticket() {
                 <div className="ticket-wrap-bx">
                     {/* 티켓 메인 이미지 */}
                     <div className="ticket-main-img">
-                        <img src= {process.env.PUBLIC_URL+ "/images/main/character/character3.png"} alt="마리오" />
+                        <img src={process.env.PUBLIC_URL + "/images/main/character/character3.png"} alt="마리오" />
                         <span>UNIVERSAL STUDIO</span>
                     </div>
                     {/* 티켓 메인 정보 */}
@@ -87,9 +87,9 @@ export function Ticket() {
                 {/* 티켓 구입 문의 */}
                 <div className="ticket-purchase-inquiry">
                     <div className="ticket-inquiry-img">
-                        <img src= {process.env.PUBLIC_URL+ "/images/main/character/character7.png"} alt="티켓 구입 문의" />
+                        <img src={process.env.PUBLIC_URL + "/images/main/character/character7.png"} alt="티켓 구입 문의" />
                         <div className="ticket-inquiry-cont">
-                            <img src= {process.env.PUBLIC_URL+ "/images/main/character/character12.gif"} alt="지구 이미지" />
+                            <img src={process.env.PUBLIC_URL + "/images/main/character/character12.gif"} alt="지구 이미지" />
                             <p>
                                 문의처: JTR Web Global Support Center Email:contact@jtrweb.com
                                 <br />
