@@ -118,6 +118,9 @@
     .company-introduce-wrap{
         display: none;
     }
+    .saja-event-nav-wrap nav ul li button{
+        font-size: 2vw;
+    }
 }
 @media screen and (max-width : 1000px) {
     .saja-item-box{
@@ -142,6 +145,10 @@
         width: 80%;
         
     }
+
+    .saja-event-nav-wrap nav ul li button{
+        font-size: 2.5vw;
+    }
 }
 
 @media screen and (max-width : 650px) {
@@ -155,6 +162,9 @@
     .saja-item-box{
         width: 100%;
         margin: 0 auto;
+    }
+    .saja-event-nav-wrap nav ul li button{
+        font-size: 3vw;
     }
 }
 
