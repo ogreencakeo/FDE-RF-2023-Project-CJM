@@ -590,19 +590,19 @@ a {
 /* 쇼핑큐레이션 -nav */
 .shopping-curation {
     max-width: 1200px;
-    height: 70px;
     margin: 0 auto;
     position: sticky;
     top: 0;
     background-color: white;
     z-index: 2;
     border-bottom: 1px solid rgb(235, 235, 235);
+    /* box-sizing: border-box; */
 }
 
 .shopping-curation nav {
-    max-width: 960px;
-    height: 70px;
-    margin: 0 120px;
+    /* max-width: 960px; */
+    /* height: 70px; */
+    /* margin: 0 120px; */
 }
 
 .shopping-curation nav ul {
@@ -610,8 +610,8 @@ a {
 }
 
 .shopping-curation nav ul li {
-    height: 70px;
-    width: 240px;
+    height: 60px;
+    width: calc(100% / 4);
     justify-content: space-evenly;
 }
 
