@@ -121,6 +121,9 @@
     .saja-event-nav-wrap nav ul li button{
         font-size: 2vw;
     }
+    .curation-item-img{
+        max-width: 30%;
+    }
 }
 @media screen and (max-width : 1000px) {
     .saja-item-box{
@@ -149,6 +152,10 @@
     .saja-item-box{
         width: 80%;
         
+    }
+
+    .curation-item-img{
+        max-width: 50%;
     }
 
     .saja-event-nav-wrap nav ul li button{
@@ -192,6 +199,10 @@
     }
     .saja-itmes-btnBx button strong, .saja-itmes-btnBx button span{
         font-size: 16px;
+    }
+
+    .curation-item-img{
+        max-width: 100%;
     }
 }
 
