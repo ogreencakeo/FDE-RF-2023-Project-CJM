@@ -172,6 +172,9 @@
     .saja-event-nav-wrap nav ul li button{
         font-size: 3vw;
     }
+    .saja-item-img section span:first-child::after{
+        font-size: 1.52rem;
+    }
     
 }
 
