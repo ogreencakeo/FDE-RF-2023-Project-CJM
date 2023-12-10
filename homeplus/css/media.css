@@ -138,6 +138,10 @@
     .footer-logo-wrap ul{
         display: none;
     }
+    .saja-item-box{
+        width: 80%;
+        
+    }
 }
 
 @media screen and (max-width : 650px) {
