@@ -142,7 +142,9 @@
         max-width: 100%;
     }
     .footer-logo-wrap ul{
-        display: none;
+        /* display: none; */
+        column-gap: 5%;
+        padding: 0;
     }
     .saja-item-box{
         width: 80%;
@@ -183,6 +185,13 @@
     .shopping-curation nav ul li button{
         font-size: 3vw;
     }
-    
+    .footer-logo-wrap ul{
+        /* column-gap: 0; */
+        flex-wrap: wrap;
+       
+    }
+    .saja-itmes-btnBx button strong, .saja-itmes-btnBx button span{
+        font-size: 16px;
+    }
 }
 

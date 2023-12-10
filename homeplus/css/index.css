@@ -531,7 +531,7 @@ a {
 }
 
 .saja-itmes-btnBx button {
-    width: min(65vw, 837.333px);
+    width: min(75vw, 837.333px);
     /* width: 837.333px; */
     height: 67.333px;
     border: 1.333px;
@@ -677,13 +677,9 @@ a {
 }
 
 .curation-item-img {
-    width: 270px;
-    height: 392px;
-}
-
-.curation-item-img {
     margin-top: 40px;
     /* margin-left: 40px; */
+    max-width: calc((100% - 132px)/ 4);
 }
 
 /* .shopping-curation-box div:first-child{
@@ -691,10 +687,14 @@ a {
 } */
 .curation-img-wrap {
     position: relative;
-    width: 270px;
-    height: 270px;
+    max-width: 100%;
+    aspect-ratio: 1/1;
     overflow: hidden;
     cursor: pointer;
+}
+.curation-img-wrap>img{
+    max-width: 100%;
+    aspect-ratio: 1/1;
 }
 
 .curation-img-wrap>section>span>img {
