@@ -149,6 +149,12 @@
     .saja-event-nav-wrap nav ul li button{
         font-size: 2.5vw;
     }
+    .saja-item-img section img{
+        width: 90px;
+    }
+    .saja-item-img section span:first-child::after{
+        font-size: 3.2vw;
+    }
 }
 
 @media screen and (max-width : 650px) {
