@@ -267,15 +267,15 @@ a {
 
 .saja-content-img {
     max-width: 1230px;
-    height: 120.984px;
+    /* height: 120.984px; */
 }
 
 /* 메인부분 - 사자 컨텐츠 이미지 */
 .saja-content-img img {
     display: block;
-    width: 669px;
-    height: 120.061px;
+    max-width: 100%;
     margin: 0 auto;
+    aspect-ratio: 6/1;
 }
 
 /* 메인부분 - 사자 nav, 큐레이션 nav 색변화 */
@@ -325,7 +325,8 @@ a {
 }
 
 .saja-items-div {
-    max-width: 1230px;
+    /* max-width: 1230px; */
+    max-width: 100%;
     /* height: 1145.95px; */
     display: flex;
     flex-wrap: wrap;
@@ -336,7 +337,8 @@ a {
 /* 메인부분 - 사자 물품박스 아이템 각각 */
 .saja-item-box {
     /* width: 373.992px; */
-    width: 30%;
+    /* width: 30%; */
+    max-width: calc((100% - 90px) /3);
     /* height: 542.997px; */
     margin-left: 39px;
     padding: 30px 0 45px;
@@ -347,8 +349,8 @@ a {
 }
 
 .saja-item-explanation {
-    width: 374px;
-    height: 151.042px;
+    /* width: 374px; */
+    /* height: 151.042px; */
 }
 
 .saja-item-img {
@@ -357,13 +359,14 @@ a {
     /* height: 374px; */
     overflow: hidden;
     cursor: pointer;
+    aspect-ratio: 1/1;
 }
 
 .saja-item-img>img {
     /* width: 374px; */
     /* height: 374px; */
-    aspect-ratio: 1/1;
     width: 100%;
+    aspect-ratio: 1/1;
 }
 
 /* .saja-item-img-event img{
@@ -375,7 +378,8 @@ a {
     } */
 .saja-item-img section img {
     width: 56px;
-    height: 56px;
+    /* height: 56px; */
+    aspect-ratio: 1/1;
 }
 
 .saja-item-img:hover section span {
@@ -418,7 +422,7 @@ a {
 }
 
 .saja-item-box section {
-    width: 374px;
+    /* width: 374px; */
     /* height: 129px; */
     padding-top: 18px;
 }
@@ -451,7 +455,7 @@ a {
 }
 
 .saja-item-exp-name {
-    width: 374px;
+    /* width: 374px; */
     height: 66.042px;
     margin-bottom: 5px;
 }
@@ -465,13 +469,13 @@ a {
 
 .saja-item-exp-name p:last-child {
     color: rgb(51, 51, 51);
-    width: 374px;
+    /* width: 374px; */
     height: 44px;
     font-size: 15px;
 }
 
 .saja-item-exp-price {
-    width: 374px;
+    /* width: 374px; */
     height: 50px;
 }
 
@@ -502,7 +506,7 @@ a {
 }
 
 .saja-item-exp-review {
-    width: 374px;
+    /* width: 374px; */
     height: 18px;
     margin-top: 11px;
 }
@@ -527,13 +531,15 @@ a {
 
 .saja-itmes-btnBx button {
     width: min(65vw, 837.333px);
+    /* width: 837.333px; */
     height: 67.333px;
     border: 1.333px;
-    margin: 0 195px;
+    margin: 0 auto;
     cursor: pointer;
     border-radius: 3px;
     border: 1px solid rgb(153, 153, 153);
     background-color: rgb(255, 255, 255);
+    display: block;
 }
 
 .saja-itmes-btnBx button img {
@@ -573,8 +579,9 @@ a {
 }
 
 .promotion-event-img img {
-    width: 670px;
-    height: 115px;
+    max-width: 100%;
+    /* height: 115px; */
+    aspect-ratio: 6/1;
     margin: 0 auto;
     display: block;
 }
