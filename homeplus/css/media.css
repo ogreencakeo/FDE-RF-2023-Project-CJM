@@ -153,7 +153,7 @@
         width: 90px;
     }
     .saja-item-img section span:first-child::after{
-        font-size: 3.2vw;
+        font-size: 1.6rem;
     }
 }
 
