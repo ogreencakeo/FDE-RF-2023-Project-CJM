@@ -3,7 +3,7 @@ import '../../css/cartList.css';
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
+import { faBasketShopping, faPerson, faChild, faPersonCane } from "@fortawesome/free-solid-svg-icons";
 
 export const CartList = memo (({selData}) => {
     
@@ -29,6 +29,7 @@ export const CartList = memo (({selData}) => {
                         <tr>
                             <th>상품</th>
                             <th>번호</th>
+                            <th>사진</th>
                             <th>수량</th>
                             <th>단가</th>
                             <th>합계</th>
@@ -39,6 +40,11 @@ export const CartList = memo (({selData}) => {
                             <tr key={i}>
                                 <td>{v.항목}</td>
                                 <td>{v.번호}</td>
+                                <td>
+                                    {v.이름 === '성인(만12 - 64세)' && <FontAwesomeIcon icon={faPerson} className="person-icon" />}
+                                    {v.이름 === '어린이(만4 - 11세)' && <FontAwesomeIcon icon={faChild} className="child-icon" />}
+                                    {v.이름 === '시니어(만 65세 이상)' && <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />}
+                                </td>
                                 <td>{v.수량}</td>
                                 <td>{v.가격}</td>
                                 <td>{v.가격 * v.수량}</td>

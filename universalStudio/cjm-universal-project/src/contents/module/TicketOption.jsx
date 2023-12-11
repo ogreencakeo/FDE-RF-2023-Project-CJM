@@ -28,7 +28,7 @@ export function TicketOption() {
             console.log("quantity", quantity, ", idx :", idx);
             // const selData = option[idx];
             const selData = option[idx];
-            const temp = {'수량' : selData.quantity, '가격' : selData.price,  '이름' : selData.txt, '번호' : selData.idx, "항목" : selData.option}
+            const temp = {'수량' : selData.quantity, '가격' : selData.price,  '이름' : selData.txt, '번호' : selData.idx, "항목" : selData.option,}
             console.log("temp :", temp);
             console.log("selData :", selData);
 
