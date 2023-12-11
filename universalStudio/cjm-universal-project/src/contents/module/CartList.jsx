@@ -1,25 +1,47 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import '../../css/cartList.css';
+
+// 제이쿼리
+import $ from "jquery";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBasketShopping, faPerson, faChild, faPersonCane } from "@fortawesome/free-solid-svg-icons";
+import { faBasketShopping, faPerson, faChild, faPersonCane, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-export const CartList = memo (({selData}) => {
+export const CartList = memo (({selData, tprice}) => {
     
-
     console.log(selData);
+    // 데이터 개수
+    const cntData = selData.length;
+
 
     //정규식함수(숫자 세자리마다 콤마해주는 기능)
     function addComma(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 
+    useEffect(()=>{
+        $('#mycart')
+        .removeClass('on')
+        .fadeIn(300, function(){
+            $(this).addClass('on')
+        });
+    }, []);
+
+    const showList = () => {
+        $('#cartlist').animate({right : '0'}, 600);
+    };
+
+    const hideList = (e) => {
+        e.preventDefault();
+        $('#cartlist').animate({right : '-60%'}, 600);
+    }
+
     return (
         <>
             <section id="cartlist">
-                <a href="#" className="cbtn cbtn2">
-                    <span>닫기버튼</span>
+                <a href="#" className="cbtn cbtn2" onClick={hideList}>
+                    <span><FontAwesomeIcon icon={faXmark} /></span>
                 </a>
                 <table>
                     <caption>
@@ -57,12 +79,17 @@ export const CartList = memo (({selData}) => {
                                 </td>
                             </tr>
                         ))}
-
+                        <tr>
+                            <td colSpan={6}>
+                                <h1 className="ticket-total-price">총가격 : ₩ {tprice}원 </h1>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </section>
-            <div id="mycart">
-                <span><FontAwesomeIcon icon={faBasketShopping} /></span>
+            <div id="mycart" onClick={showList}>
+                <h1><FontAwesomeIcon icon={faBasketShopping} /></h1>
+                <div className="cntBx">{cntData}</div>
             </div>
         </>
     );

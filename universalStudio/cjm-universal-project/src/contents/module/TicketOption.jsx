@@ -152,6 +152,8 @@ export function TicketOption() {
         return option.reduce((total, option) => total + option.quantity * option.price, 0);
     };
 
+    const t_price = totalPrice().toLocaleString();
+
     const ticket_opt = ["[1일권 Low Price (A시즌)]", "[1일권 Middle Price (B시즌)]", "[1일권 High Price (C시즌)]"];
 
     return (
@@ -183,8 +185,8 @@ export function TicketOption() {
                     ))}
                 </div>
                 {/* 카트리스트 */}
-                <h1 className="ticket-total-price">총가격 : ₩ {totalPrice().toLocaleString()}원 </h1>
-                {csts && <CartList selData={lastData} />}
+                {/* <h1 className="ticket-total-price">총가격 : ₩ {t_price}원 </h1> */}
+                {csts && <CartList selData={lastData} tprice={t_price} />}
                 {/* <button className="shoppingCart" onClick={useCart}>담기</button>  */}
             </div>
         </>
