@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom';
 import '../css/login.css';
 import { Seaching2 } from './module/Seaching2';
+import { useState } from 'react';
 export function Login(){
+
+    const [userId, setUserId] = useState('');
+    const [pwd, setPwd] = useState('');
+
+    const [userIdError, setUserIdError] = useState(false);
+    const [pwdError, setPwdError] = useState(false);
+    
+
     return(
         <div className="login-page-wrap">
             <div className="login-bx">
