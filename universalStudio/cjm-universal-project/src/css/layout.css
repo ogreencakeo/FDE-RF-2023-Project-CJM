@@ -3,7 +3,7 @@
 main.cont {
     /* 최소높이 상단,하단제외 채우기
     - 하단 여백이 생기는 일이 없어짐! */
-    min-height: calc(100vh - 58px - 370px);
+    min-height: calc(100vh - 63px - 370px);
     /* transform: translateY(10px); */
     margin-top: 69px;
 }
@@ -179,7 +179,7 @@ ol.bmenu{
 /* 1320px이하 미디어쿼리 */
 @media screen and (max-width:1320px) {
     body{
-        /* padding-top: 58px; */
+        /* padding-top: 63px; */
         /* 첫번째 컨텐츠 가려짐방지 패딩 */
         overflow-x: hidden;
     }
@@ -188,7 +188,7 @@ ol.bmenu{
         position: fixed;
         top: 0;
         width: 100vw;
-        height: 58px;
+        height: 63px;
         padding: 0 20px;
         box-sizing: border-box;
         z-index: 9999;
@@ -224,28 +224,28 @@ ol.bmenu{
         text-indent: 50px;
     }
     .gnb>ul>li:nth-child(2){
-        top: calc(58px * 1);
+        top: calc(63px * 1);
     }
     .gnb>ul>li:nth-child(3){
-        top: calc(58px * 2);
+        top: calc(63px * 2);
     }
     .gnb>ul>li:nth-child(4){
-        top: calc(58px * 3);
+        top: calc(63px * 3);
     }
     .gnb>ul>li:nth-child(5){
-        top: calc(58px * 4);
+        top: calc(63px * 4);
     }
     .gnb>ul>li:nth-child(6){
-        top: calc(58px * 5);
+        top: calc(63px * 5);
     }
     .gnb>ul>li:nth-child(7){
-        top: calc(58px * 6);
+        top: calc(63px * 6);
     }
     .gnb>ul>li:nth-child(8){
-        top: calc(58px * 7);
+        top: calc(63px * 7);
     }
     .gnb>ul>li:nth-child(9){
-        top: calc(58px * 8);
+        top: calc(63px * 8);
         border-bottom: 1px solid #000;
     }
     /* Join Us / LOGIN */
@@ -253,7 +253,7 @@ ol.bmenu{
     .gnb>ul>li:nth-child(11) > a    
     {
         position: absolute;
-        top: calc(58px * 8);
+        top: calc(63px * 8);
         left: 5%;
         text-align: center;
         width: 40%;
