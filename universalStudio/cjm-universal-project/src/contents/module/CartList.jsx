@@ -1,4 +1,9 @@
 import { memo } from "react";
+import '../../css/cartList.css';
+
+// 폰트어썸
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 
 export const CartList = memo (({selData}) => {
     
@@ -12,7 +17,6 @@ export const CartList = memo (({selData}) => {
 
     return (
         <>
-            <h1>장바구니Hi</h1>
             <section id="cartlist">
                 <a href="#" className="cbtn cbtn2">
                     <span>닫기버튼</span>
@@ -51,6 +55,9 @@ export const CartList = memo (({selData}) => {
                     </tbody>
                 </table>
             </section>
+            <div id="mycart">
+                <span><FontAwesomeIcon icon={faBasketShopping} /></span>
+            </div>
         </>
     );
 });
