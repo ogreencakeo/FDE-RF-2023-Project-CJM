@@ -607,11 +607,12 @@ a {
 
 .shopping-curation nav ul {
     display: flex;
+    padding: 0;
 }
 
 .shopping-curation nav ul li {
     height: 60px;
-    width: calc(100% / 4);
+    flex: 1;
     justify-content: space-evenly;
 }
 
