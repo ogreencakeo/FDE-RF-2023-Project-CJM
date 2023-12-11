@@ -637,6 +637,10 @@ a {
     transition: 0.4s ease-in-out;
 }
 
+.curation-hover-btn a{
+    margin: 0 10px;
+}
+
 .curation-img-wrap:hover .curation-hover-btn {
     opacity: 1;
     transition: 0.4s ease-in-out;
@@ -679,6 +683,7 @@ a {
 
 .curation-item-img {
     margin-top: 40px;
+    margin: 16px;
     /* margin-left: 40px; */
     max-width: calc((100% - 132px)/ 4);
 }

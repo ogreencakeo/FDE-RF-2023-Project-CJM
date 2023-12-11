@@ -1,208 +1,256 @@
 @charset "utf-8";
 @media screen and (max-width : 1665px) {
-    body{
+    body {
         overflow-x: hidden;
     }
-    body > *{
+
+    body>* {
         margin: 0;
         padding: 0;
     }
-    .main-inner-adbox{
+
+    .main-inner-adbox {
         display: none;
     }
 }
+
 @media screen and (max-width : 1250px) {
+
     .main-inner-adbox,
     .mini-mypage,
     .banner-ad,
-    .header-ad{
+    .header-ad {
         display: none;
     }
-    .section{
+
+    .section {
         height: 300px;
     }
 
     /* 메인광고 */
-    .main-ad-box{
+    .main-ad-box {
         /* max-width: 800px; */
         margin: 0 auto;
     }
-    .section-ad-banner img{
+
+    .section-ad-banner img {
         /* max-width: 800px; */
         /* height: auto; */
         margin: 0 auto;
     }
+
     /* nav */
-    .move-to-exhibition{
+    .move-to-exhibition {
         /* max-width: 700px; */
     }
-    .move-to-exhibition ul{
+
+    .move-to-exhibition ul {
         flex-wrap: wrap;
         justify-content: start !important;
         /* max-width: 800px; */
         /* outline: 1px solid red; */
-        
+
     }
-    .move-to-exhibition ul li{
+
+    .move-to-exhibition ul li {
         /* flex-basis: calc(100% / 3 - 30px * 2); */
         /* width: 20%; */
-        font-size: min(15vh,40px);
+        font-size: min(15vh, 40px);
     }
-    .move-to-exhibition ul li img{
+
+    .move-to-exhibition ul li img {
         /* transform: scale(1.25); */
     }
 
     /* 사자버튼 */
-    .saja-event-nav-wrap nav ul li button{
+    .saja-event-nav-wrap nav ul li button {
         font-size: 1.5vw;
     }
-    .saja-items-div{
+
+    .saja-items-div {
         /* flex-wrap: wrap; */
         /* max-width: 970px; */
         /* max-width: 100%; */
         /* outline: 1px solid red; */
     }
 
-    .saja-item-box{
+    .saja-item-box {
         margin: 0;
         /* width: 45%; */
     }
 
-    .saja-item-exp-name p{
+    .saja-item-exp-name p {
         font-size: 1.2vw;
     }
 
     /* 쇼핑큐레이션 */
-    .shopping-curation nav ul li button{
+    .shopping-curation nav ul li button {
         font-size: 1.5vw;
     }
 
     /* footer */
 
-    .footer-content{
+    .footer-content {
         /* height: 350px; */
         flex-wrap: wrap;
         text-align: center;
     }
 
-    .footer-content-left{
+    .footer-content-left {
         max-width: 100%;
         margin: 0 auto;
     }
 
-    .footer-content-right{
+    .footer-content-right {
         padding: 0;
         max-width: 100%;
         margin: 0 auto;
     }
 
-    .footer-content-left>h2{
+    .footer-content-left>h2 {
         max-width: 100%;
     }
 
-    .footer-r-content3{
+    .footer-r-content3 {
         margin-top: 0;
     }
-    .footer-r-content4{
+
+    .footer-r-content4 {
         margin-top: 0;
     }
-    .footer-r-content4{
+
+    .footer-r-content4 {
         margin-top: 0;
     }
-    .footer-r-content5{
+
+    .footer-r-content5 {
         margin-top: 0;
     }
 }
 
 @media screen and (max-width : 1020px) {
-    .company-introduce-wrap{
+    .company-introduce-wrap {
         display: none;
     }
-    .saja-event-nav-wrap nav ul li button{
+
+    .saja-event-nav-wrap nav ul li button {
         font-size: 2vw;
     }
-    .curation-item-img{
+
+    .curation-item-img {
         max-width: 30%;
     }
 }
+
 @media screen and (max-width : 1000px) {
-    .saja-item-box{
+    .saja-item-box {
         max-width: 50%;
     }
-    .header-wrap{
+
+    .header-wrap {
         display: none;
     }
-    .move-to-exhibition{
+
+    .move-to-exhibition {
         padding: 0;
     }
-    .shopping-curation nav ul li button{
+
+    .shopping-curation nav ul li button {
         font-size: 2vw;
     }
 }
 
 @media screen and (max-width : 830px) {
-    .saja-item-box{
+    .saja-item-box {
         max-width: 100%;
     }
-    .footer-logo-wrap ul{
+
+    .footer-logo-wrap ul {
         /* display: none; */
         column-gap: 5%;
         padding: 0;
     }
-    .saja-item-box{
+
+    .saja-item-box {
         width: 80%;
-        
+
     }
 
-    .curation-item-img{
-        max-width: 50%;
+    .curation-item-img {
+        max-width: 43%;
     }
 
-    .saja-event-nav-wrap nav ul li button{
+    .saja-event-nav-wrap nav ul li button {
         font-size: 2.5vw;
     }
-    .saja-item-img section img{
+
+    .saja-item-img section img {
         width: 70px;
     }
-    .saja-item-img section span:first-child::after{
+
+    .saja-item-img section span:first-child::after {
         font-size: 1.4rem;
     }
 
-    .shopping-curation nav ul li button{
+    .shopping-curation nav ul li button {
         font-size: 2.5vw;
     }
+
+    /*  */
+
+    .shopping-curation-box {}
+
+    
     
 }
 
-@media screen and (max-width : 650px) {
-    .move-to-exhibition{
-        padding: 0;
-    }
-    /* .saja-item-img section img{
-        width: 80px;
-    } */
-    .saja-item-box{
-        width: 100%;
-        margin: 0 auto;
-    }
-    .saja-event-nav-wrap nav ul li button{
-        font-size: 3vw;
-    }
 
-    .shopping-curation nav ul li button{
-        font-size: 3vw;
-    }
-    .footer-logo-wrap ul{
-        /* column-gap: 0; */
-        flex-wrap: wrap;
-       
-    }
-    .saja-itmes-btnBx button strong, .saja-itmes-btnBx button span{
-        font-size: 16px;
-    }
 
-    .curation-item-img{
+@media screen and (max-width : 750px) {
+    .curation-item-img {
         max-width: 100%;
+        flex: 0 0 80%;
+        box-sizing: border-box;
+    }
+    .curation-img-wrap>img {
+        aspect-ratio: 1/1;
+        width: 100%;
+    }
+    .curation-hover-btn{
+        width: 100%;
     }
 }
 
+@media screen and (max-width : 650px) {
+    .move-to-exhibition {
+        padding: 0;
+    }
+
+    /* .saja-item-img section img{
+        width: 80px;
+    } */
+    .saja-item-box {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .saja-event-nav-wrap nav ul li button {
+        font-size: 3vw;
+    }
+
+    .shopping-curation nav ul li button {
+        font-size: 3vw;
+    }
+
+    .footer-logo-wrap ul {
+        /* column-gap: 0; */
+        flex-wrap: wrap;
+
+    }
+
+    .saja-itmes-btnBx button strong,
+    .saja-itmes-btnBx button span {
+        font-size: 16px;
+    }
+    
+}
