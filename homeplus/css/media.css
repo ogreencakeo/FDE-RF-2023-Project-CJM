@@ -207,7 +207,7 @@
 
 
 @media screen and (max-width : 750px) {
-    .curation-item-img {
+    /* .curation-item-img {
         max-width: 100%;
         flex: 0 0 80%;
         box-sizing: border-box;
@@ -218,7 +218,7 @@
     }
     .curation-hover-btn{
         width: 100%;
-    }
+    } */
 }
 
 @media screen and (max-width : 650px) {
@@ -251,6 +251,19 @@
     .saja-itmes-btnBx button strong,
     .saja-itmes-btnBx button span {
         font-size: 16px;
+    }
+
+    .curation-item-img {
+        max-width: 100%;
+        flex: 0 0 80%;
+        box-sizing: border-box;
+    }
+    .curation-img-wrap>img {
+        aspect-ratio: 1/1;
+        width: 100%;
+    }
+    .curation-hover-btn{
+        width: 100%;
     }
     
 }
