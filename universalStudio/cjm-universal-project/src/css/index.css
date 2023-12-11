@@ -1205,6 +1205,9 @@ a {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width:1300px)  {
+    
+}
 @media screen and (max-width:1255px)  {
     .header-content>span:first-of-type {
         font-size: 4vw;

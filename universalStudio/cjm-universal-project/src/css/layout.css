@@ -213,7 +213,7 @@ ol.bmenu{
         border-top: 2px solid #ccc;
     }
     /* 메뉴 CHARACTERS ~ OPINION */
-    .gnb>ul>li:nth-child(1)~li:nth-child(-n+8)
+    .gnb>ul>li:nth-child(1)~li:nth-child(-n+9)
     {
         /* outline: 2px dotted red; */
         background-color: #fff;
@@ -243,6 +243,9 @@ ol.bmenu{
     }
     .gnb>ul>li:nth-child(8){
         top: calc(58px * 7);
+    }
+    .gnb>ul>li:nth-child(9){
+        top: calc(58px * 8);
         border-bottom: 1px solid #000;
     }
     /* Join Us / LOGIN */
