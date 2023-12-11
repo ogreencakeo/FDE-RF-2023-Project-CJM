@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/login.css';
 import { Seaching2 } from './module/Seaching2';
 export function Login(){
@@ -15,7 +16,11 @@ export function Login(){
                 </div>
                 <div className="login-button">
                     <button>로그인</button>
-                    <button>회원가입</button>
+                    <button>
+                        <Link to='/member'>
+                            회원가입
+                        </Link>
+                    </button>
                 </div>
             </div>
         </div>
