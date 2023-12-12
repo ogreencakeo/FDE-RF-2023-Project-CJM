@@ -305,4 +305,11 @@
     .ticket-info-bx > div{
         padding: 10px;
     }
+
+    .ticket-inquiry-cont>img{
+        width: 150px;
+    }
+    .ticket-inquiry-cont>p{
+        font-size: 0.95rem;
+    }
 }
