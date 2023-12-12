@@ -53,7 +53,7 @@ export function AreaType() {
                                 key={1}
                                 className={areaType === "harrypotter" ? "areabuttoncolor" : ""}
                             >
-                                해리 포터
+                                위저딩 월드 오브 해리 포터™
                             </button>
                         </li>
                         <li className={areaType === "minion" ? "arealicolor" : ""}>
