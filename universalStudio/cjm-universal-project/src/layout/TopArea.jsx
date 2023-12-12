@@ -1,11 +1,11 @@
-import React, { memo, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { memo, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // 제이쿼리
-import $ from 'jquery';
+import $ from "jquery";
 
-import { navMenu } from '../data/navMenu';
-import { Logo } from '../contents/module/Logo';
+import { navMenu } from "../data/navMenu";
+import { Logo } from "../contents/module/Logo";
 
 // import '../css/nav.css';
 
@@ -14,28 +14,28 @@ import { Logo } from '../contents/module/Logo';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const TopArea = memo(({chgPageFn}) => {
+export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // showSerach
     const showSerach = (e) => {
         e.preventDefault();
-        $('.searchingGnb').show();
-        $('#schinGnb').focus();
-    }
+        $(".searchingGnb").show();
+        $("#schinGnb").focus();
+    };
 
     // enterKey
     const enterKey = (e) => {
-        if(e.key === 'Enter'){
+        if (e.key === "Enter") {
             let txt = $(e.target).val().trim();
-            if(txt !== ''){
-                $(e.target).val('').parent().hide();
+            if (txt !== "") {
+                $(e.target).val("").parent().hide();
                 goSerach(txt);
             }
-        };
+        }
     };
 
     const goSerach = (txt) => {
-        chgPageFn('/schpage', {state : {keyword : txt}});
-    }
+        chgPageFn("/schpage", { state: { keyword: txt } });
+    };
 
     return (
         <>
@@ -46,30 +46,23 @@ export const TopArea = memo(({chgPageFn}) => {
                             <Logo />
                         </li>
 
-                        {
-                            navMenu.map((v, i) =>
-            
-                                <li key={i}>
-                                    {v.sub? <a href='#'>{v.txt}</a> :<Link to={v.link}>{v.txt}</Link>}
-                                    {
-                                        v.sub && (
-                                            <div className="smenu">
-                                                <ol>
-                                                    {
-                                                    v.sub.map((v, i) =>
-                                                        <li key={i}>
-                                                            <Link to={v.link}>{v.txt}</Link>
-                                                        </li>)
-
-                                                    }
-                                                </ol>
-                                            </div>
-                                        )
-                                    }
-                                </li>
-                            )
-                        }
-                        <li style={{marginLeft: 'auto'}}>
+                        {navMenu.map((v, i) => (
+                            <li key={i}>
+                                {v.sub ? <a href="#">{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>}
+                                {v.sub && (
+                                    <div className="smenu">
+                                        <ol>
+                                            {v.sub.map((v, i) => (
+                                                <li key={i}>
+                                                    <Link to={v.link}>{v.txt}</Link>
+                                                </li>
+                                            ))}
+                                        </ol>
+                                    </div>
+                                )}
+                            </li>
+                        ))}
+                        <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
                                 <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
                                 <input id="schinGnb" type="text" placeholder="Filter by keyword" onKeyUp={enterKey} />
@@ -78,17 +71,29 @@ export const TopArea = memo(({chgPageFn}) => {
                                 <FontAwesomeIcon icon={faSearch} />
                             </a>
                         </li>
-                        <li>
-                            <Link to='/member'>회원가입</Link>
-                        </li>
-                        <li>
-                            <Link to='/login'>로그인</Link>
-                        </li>
+                        {logSts === null && (
+                            <>
+                                <li>
+                                    <Link to="/member">회원가입</Link>
+                                </li>
+                                <li>
+                                    <Link to="/login">로그인</Link>
+                                </li>
+                            </>
+                        )}
+                        {
+                            logSts !== null && (
+                                <>
+                                    <li>
+                                        <a href="#" onClick={logOut}>LOGOUT</a>
+                                    </li>
+                                </>
+                            )
+                        }
                     </ul>
                     <button className="hambtn"></button>
                 </nav>
             </header>
-            
         </>
     );
 });

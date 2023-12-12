@@ -66,6 +66,9 @@ export function Login() {
                     setPwdError(false);
                     localStorage.setItem('minfo', JSON.stringify(findData));
 
+                    myCon.setLogSts(localStorage.getItem('minfo'));
+                    myCon.setLogMsg(findD.unm + '님 환영합니다!');
+
                     myCon.chgPage('/', {});
                 }else{
                     setPwdMsg(msgPwd[1]);
