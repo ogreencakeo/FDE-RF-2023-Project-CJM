@@ -16,9 +16,8 @@ import { Navigation, Pagination } from "swiper/modules";
 export function VidSwiper() {
     const selData = vidData;
     return (
-        <>
+        <div className="vid-swiper-wrap">
                 <Swiper
-                    slidesPerView={3}
                     spaceBetween={50}
                     pagination={{
                         clickable: true,
@@ -44,7 +43,7 @@ export function VidSwiper() {
                 >
                     {
                         selData.map((v, i) =>
-                            <div>
+                            <div className="vid-swiper-bx">
                                 <img src={v.src} alt={`동영상 ${i+1}이미지`} />
                                 <p>{v.tit}</p>
                             </div>
@@ -53,6 +52,6 @@ export function VidSwiper() {
                     }
                 </Swiper>
 
-        </>
+        </div>
     );
 }
