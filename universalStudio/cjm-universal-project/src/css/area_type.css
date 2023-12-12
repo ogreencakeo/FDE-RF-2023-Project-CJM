@@ -145,3 +145,18 @@
     font-size: 1.3rem;
     font-family: 'Gugi';
 }
+
+
+@media screen and (max-width:1000px)  {
+    .area-type-bx{
+        max-width: 47%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width:650px)  {
+    .area-type-bx{
+        max-width: 95%;
+        margin: 10px auto;
+    }
+}
