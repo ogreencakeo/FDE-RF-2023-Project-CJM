@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import "../css/login.css";
 import { Seaching2 } from "./module/Seaching2";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { initData } from "../Function/mem_fn";
+import { universalCon } from "./module/universalContext";
 export function Login() {
+
+    // 컨텍스트 API 사용
+    const myCon = useContext(universalCon);
+
     const [userId, setUserId] = useState("");
     const [pwd, setPwd] = useState("");
 
@@ -18,7 +24,58 @@ export function Login() {
 
     // 아이디 유효성 검사
     const changeUserId = (e) => {
+        if(e.target.value !== '') setUserIdError(false);
+        else{
+            setIdMsg(idMsg[0]);
+            setUserIdError(true);
+        }
+        setUserId(e.target.value);
+    };
 
+    const changePwd = (e) => {
+        if(e.target.value !== '') setPwdError(false);
+        else{
+            setPwdMsg(msgPwd[0]);
+            setPwdError(true);
+        }
+        setPwd(e.target.value);
+    };
+
+    const totalValid = () => {
+        if(!userId) setUserIdError(true);
+        if(!pwd) setPwdError(true);
+
+        if(userId && pwd) return true;
+        else return false;
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        if(totalValid()){
+            initData();
+            let memData = localStorage.getItem('mem-data');
+            memData = JSON.parse(memData);
+
+            let findData = memData.find((v) => {
+                if(v['uid'] === userId) return true;
+            });
+
+            if(findData){
+                setUserIdError(false);
+                if(findData['pwd'] === pwd){
+                    setPwdError(false);
+                    localStorage.setItem('minfo', JSON.stringify(findData));
+
+                    myCon.chgPage('/', {});
+                }else{
+                    setPwdMsg(msgPwd[1]);
+                    setPwdError(true);
+                }
+            }else{
+                setIdMsg(msgId[1]);
+                setUserIdError(true);
+            }
+        }
     };
 
     return (
@@ -29,9 +86,18 @@ export function Login() {
                     <ul>
                         <li>
                             <input type="text" maxLength="20" placeholder="아이디를 입력해주세요" value={userId} onChange={changeUserId} />
+                            {
+                                userIdError && (
+                                    <div className="msg">
+                                        <small style={{
+                                            color : 'red', fontSize : '10px'
+                                        }}>{idMsg}</small>
+                                    </div>
+                                )
+                            }
                         </li>
                         <li>
-                            <input type="password" maxLength="20" placeholder="비밀번호를 입력해주세요" value={pwd} />
+                            <input type="password" maxLength="20" placeholder="비밀번호를 입력해주세요" value={pwd} onChange={changePwd} />
                         </li>
                     </ul>
                 </form>
@@ -40,7 +106,7 @@ export function Login() {
                     <span>비밀번호 찾기</span>
                 </div>
                 <div className="login-button">
-                    <button>로그인</button>
+                    <button onClick={onSubmit}>로그인</button>
                     <button>
                         <Link to="/member">회원가입</Link>
                     </button>

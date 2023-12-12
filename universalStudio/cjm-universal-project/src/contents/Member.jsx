@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { universalCon } from '../contents/module/universalContext';
 
 // 로컬스토리지 생성 JS
 import { clearData, initData} from '../Function/mem_fn.js';
@@ -13,6 +14,9 @@ import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
 
 export function Member() {
+
+    // 컨텍스트 API
+    const myCon = useContext(universalCon);
 
     const [userId, setUserId] = useState('');
     const [pwd, setPwd] = useState('');
@@ -144,8 +148,13 @@ export function Member() {
 
             memData.push(newData);
 
+            // 로컬스에 반영하기
             localStorage.setItem('mem-data', JSON.stringify(memData));
-            document.querySelector('.sbtn').innerText = '넌 이제 회원인거야~!';
+            // document.querySelector('.sbtn').innerText = '넌 이제 회원인거야~!';
+
+            alert('로그인 페이지로 이동하겠습니다!');
+            myCon.chgPage('login', {});
+            
         }else{
             alert('입력창을 수정해주시오.');
         }
