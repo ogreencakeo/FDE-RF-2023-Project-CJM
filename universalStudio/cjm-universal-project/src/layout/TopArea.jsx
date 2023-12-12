@@ -39,6 +39,9 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
 
     return (
         <>
+            {
+                logMsg && alert({logMsg})
+            }
             <header className="top-area">
                 <nav className="gnb">
                     <ul>
