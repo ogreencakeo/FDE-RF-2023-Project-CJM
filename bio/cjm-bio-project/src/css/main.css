@@ -4,6 +4,69 @@
 }
 .service-cont{
     max-width: 1280px;
-    margin: 0 auto;
-    outline: 1px solid red;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
 }
+
+.service-cont-bx{
+    margin: 10px;
+    padding: 15px;
+    width: calc((100% - 40px) / 3);
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px #000;
+    border-radius: 5px;
+    display: flex; 
+    /* 내부의 요소들을 세로 방향으로 배치하기 위해 */
+    flex-direction: column; 
+}
+
+.service-cont-bx h2{
+    text-align: center;
+    padding: 10px;
+    background-color: #073888ff;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.service-cont-img{
+    max-width: 100%;
+}
+.service-cont-img>img{
+    width: 100%;
+    aspect-ratio: 1.5/1;
+}
+
+.service-cont-bx p{
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.service-cont-bx button{
+    display: block;
+    padding: 20px 50px;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    /* 버튼을 수평으로 중앙에 정렬하기 위해 */
+    align-self: center; 
+    color: #fff;
+    background-color: #005789ff;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.service-cont-bx button:hover{
+    background-color: #fff;
+    color: #005789ff;
+}
+
+.button-link {
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+  }
