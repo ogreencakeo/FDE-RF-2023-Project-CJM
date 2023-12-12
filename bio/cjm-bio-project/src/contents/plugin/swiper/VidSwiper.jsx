@@ -17,41 +17,41 @@ export function VidSwiper() {
     const selData = vidData;
     return (
         <div className="vid-swiper-wrap">
-                <Swiper
-                    spaceBetween={50}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    loop={true}
-                    navigation={true}
-                    modules={[Pagination, Navigation]}
-                    breakpoints={{
-                        300: {
-                            slidesPerView: 1,
-                        },
-                        550: {
-                            slidesPerView: 2,
-                        },
-                        1000: {
-                            slidesPerView: 3,
-                        },
-                        1200: {
-                            slidesPerView: 4,
-                        },
-                    }}
-                    className="mySwiper1"
-                >
-                    {
-                        selData.map((v, i) =>
-                            <div className="vid-swiper-bx">
-                                <img src={v.src} alt={`동영상 ${i+1}이미지`} />
+            <Swiper
+                spaceBetween={10}
+                pagination={{
+                    clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                breakpoints={{
+                    300: {
+                        slidesPerView: 1,
+                    },
+                    550: {
+                        slidesPerView: 2,
+                    },
+                    1000: {
+                        slidesPerView: 3,
+                    },
+                    1300: {
+                        slidesPerView: 4,
+                    },
+                }}
+                className="mySwiper1"
+            >
+                {
+                    selData.map((v, i) =>
+                        <SwiperSlide className="vid-swiper-bx" key={i}>
+                            <li key={i}>
+                                <div className="vid-swiper-img">
+                                    <img src={v.src} alt={`동영상 ${i+1}이미지`} />
+                                </div>
                                 <p>{v.tit}</p>
-                            </div>
-                        )
-
-                    }
-                </Swiper>
-
+                            </li>
+                        </SwiperSlide>
+                    )}
+            </Swiper>
         </div>
     );
 }

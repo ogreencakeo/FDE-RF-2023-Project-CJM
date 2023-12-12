@@ -17,13 +17,18 @@
 .vid-swiper-wrap{
     max-width: 1300px;
     margin: 0 auto;
-    display: flex;
 }
 
-.mySwiper1{
-    display: flex;
-}
 
 .vid-swiper-bx{
-    margin: 0 10px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.vid-swiper-img{
+    max-width: 100%;
+}
+.vid-swiper-img img{
+    width: 100%;
+    aspect-ratio: 1.4/1;
 }

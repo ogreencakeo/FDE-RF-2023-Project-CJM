@@ -28,6 +28,8 @@
     background-color: #073888ff;
     color: #fff;
     margin-bottom: 5px;
+    font-family: 'Nanum Gothic Coding';
+    font-size: 1.7rem;
 }
 
 .service-cont-img{
@@ -40,14 +42,16 @@
 
 .service-cont-bx p{
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.5;
     text-align: justify;
+    font-family: 'Poor Stroy';
 }
 
 .service-cont-bx button{
+    width: 100%;
     display: block;
-    padding: 20px 50px;
+    padding: 20px;
     border-radius: 10px;
     margin-top: auto;
     margin-left: auto;
