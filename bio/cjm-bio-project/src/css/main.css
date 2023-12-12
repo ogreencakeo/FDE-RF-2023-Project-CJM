@@ -14,8 +14,7 @@
     padding: 15px;
     width: calc((100% - 40px) / 3);
     margin: 0 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 3px #000;
+    border: 2px solid #555;
     border-radius: 5px;
     display: flex; 
     /* 내부의 요소들을 세로 방향으로 배치하기 위해 */
@@ -42,10 +41,11 @@
 
 .service-cont-bx p{
     padding: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.5;
     text-align: justify;
     font-family: 'Poor Stroy';
+    margin: 10px 5px;
 }
 
 .service-cont-bx button{
@@ -73,4 +73,17 @@
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
-  }
+}
+
+/* 인재상 */
+.ideal-talent-wrap{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.ideal-talent-img{
+    max-width: 600px;
+}
+.ideal-talent-img img{
+    width: 100%;
+    aspect-ratio: 1.8/1;
+}

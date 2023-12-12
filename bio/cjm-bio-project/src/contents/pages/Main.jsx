@@ -10,6 +10,12 @@ export function Main(){
         <>
             <Banner category='main' />
             <SurviceCont category='main' />
+            {/* 인재상 */}
+            <div className="ideal-talent-wrap">
+                <div className="ideal-talent-img">
+                    <img src="../images/main/cont/develope.png" alt="" />
+                </div>
+            </div>
             <VidSwiper category='main' />
         </>
     );
