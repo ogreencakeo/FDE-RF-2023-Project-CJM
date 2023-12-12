@@ -20,6 +20,10 @@
 .area-type-btn{
     max-width: 1350px;
     margin: 0 auto;
+
+}
+.area-type-btn nav{
+
 }
 .area-type-btn nav ul{
     display: flex;
@@ -157,9 +161,35 @@
     } 
 }
 
+@media screen and (max-width:780px)  {
+    .area-type-btn nav ul li button{
+        font-size: 1rem;
+    }
+    .area-type-btn nav ul li{
+        padding: 5px;
+    }
+    .arealicolor{
+        border-bottom: 3px solid #041e49ff
+    }
+}
 @media screen and (max-width:650px)  {
     .area-type-bx{
         max-width: 95%;
         margin: 10px auto;
+    }
+    .area-type-btn nav ul li button{
+        padding: 5px;
+    }
+    .goods-top-cont-wrap{
+        margin: 150px auto 50px;
+    }
+}
+
+@media screen and (max-width:550px){
+    .area-type-btn nav ul li button{
+        font-size: 0.74rem;
+    }
+    .arealicolor {
+        border-bottom: 2px solid #041e49ff;
     }
 }

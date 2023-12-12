@@ -11,6 +11,7 @@ import { UniverSalText } from "./module/UniverSalText";
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import { dragFn } from "../Function/dragFn";
 
 export function AreaType() {
     const loc = useLocation();
@@ -32,6 +33,9 @@ export function AreaType() {
         setSelData(selectedData);
     }, [areaType]);
 
+    useEffect(()=>{
+        dragFn();
+    })
     return (
         <>
             <GoodsSwiper cats="area" />
@@ -44,7 +48,7 @@ export function AreaType() {
                                 key={0}
                                 className={areaType === "nintendo" ? "areabuttoncolor" : ""}
                             >
-                                슈퍼 닌텐도 월드™
+                                닌텐도월드
                             </button>
                         </li>
                         <li className={areaType === "harrypotter" ? "arealicolor" : ""}>
@@ -53,7 +57,7 @@ export function AreaType() {
                                 key={1}
                                 className={areaType === "harrypotter" ? "areabuttoncolor" : ""}
                             >
-                                위저딩 월드 오브 해리 포터™
+                                해리포터
                             </button>
                         </li>
                         <li className={areaType === "minion" ? "arealicolor" : ""}>
@@ -62,7 +66,7 @@ export function AreaType() {
                                 key={2}
                                 className={areaType === "minion" ? "areabuttoncolor" : ""}
                             >
-                                미니언 파크
+                                미니언파크
                             </button>
                         </li>
                         <li className={areaType === "wonderland" ? "arealicolor" : ""}>
@@ -80,7 +84,7 @@ export function AreaType() {
                                 key={4}
                                 className={areaType === "jurassicpark" ? "areabuttoncolor" : ""}
                             >
-                                쥬라기 공원
+                                쥬라기공원
                             </button>
                         </li>
                     </ul>

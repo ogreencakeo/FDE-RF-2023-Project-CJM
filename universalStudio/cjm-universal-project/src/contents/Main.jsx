@@ -240,8 +240,8 @@ export function Main() {
                                         </div>
                                         <div className="pick2">
                                             {v.emotion === "gifts" && <FontAwesomeIcon icon={faGifts} />}
-                                            {v.emotion === "chessKing" && <FontAwesomeIcon icon={faSpider} />}
-                                            {v.emotion === "spider" && <FontAwesomeIcon icon={faChessKing} />}
+                                            {v.emotion === "chessKing" && <FontAwesomeIcon icon={faChessKing}  />}
+                                            {v.emotion === "spider" && <FontAwesomeIcon  icon={faSpider} />}
                                             {v.emotion === "hatWizard" && <FontAwesomeIcon icon={faHatWizard} />}
                                             {v.emotion === "mountainSun" && <FontAwesomeIcon icon={faMountainSun} />}
                                             {v.emotion === "ghost" && <FontAwesomeIcon icon={faGhost} />}
