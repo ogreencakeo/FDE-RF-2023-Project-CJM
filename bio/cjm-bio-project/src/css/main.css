@@ -49,6 +49,7 @@
 }
 
 .service-cont-bx button{
+    font-size: 1rem;
     width: 100%;
     display: block;
     padding: 20px;
@@ -81,9 +82,19 @@
     margin: 0 auto;
 }
 .ideal-talent-img{
-    max-width: 600px;
+    max-width: 300px;
 }
 .ideal-talent-img img{
     width: 100%;
-    aspect-ratio: 1.8/1;
+    aspect-ratio: 1/1;
+    animation: ideal-talent-ani 15s linear infinite;
+}
+
+@keyframes ideal-talent-ani {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }

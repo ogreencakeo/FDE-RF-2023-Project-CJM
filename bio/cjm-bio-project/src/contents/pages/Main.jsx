@@ -15,6 +15,11 @@ export function Main(){
                 <div className="ideal-talent-img">
                     <img src="../images/main/cont/develope.png" alt="" />
                 </div>
+                <p>
+                    회사 비전과 목표를 공유하며,
+                    강한 열정과 책임감으로 해당분야 최고의 전문성과 실행력을 통해 성과창출을 극대화하고,
+                    협업으로 집단지성을 추구하는 글로벌 인재
+                </p>
             </div>
             <VidSwiper category='main' />
         </>
