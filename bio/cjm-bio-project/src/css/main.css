@@ -98,3 +98,38 @@
         transform: rotate(360deg);
     }
 }
+
+
+/* footer */
+.footer-wrap{
+    max-width: 100%;
+    background-color: #000;
+}
+.footer{
+    max-width: 1300px;
+    margin: 0 auto;
+    color: #fff;
+}
+/* .footer-logo{
+    max-width: 350px;
+    margin: 0 auto;
+}
+.footer-logo img{
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+} */
+.footer h1{
+    font-size: 5rem;
+    text-align: center;
+}
+.footer p{
+    text-align: center;
+}
+.footer h2{
+    text-align: center;
+}
+.footer h2:nth-of-type(1){
+    color: #1b6ef3ff;
+    font-size: 3rem;
+}
