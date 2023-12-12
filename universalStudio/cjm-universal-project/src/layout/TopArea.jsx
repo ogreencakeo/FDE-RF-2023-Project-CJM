@@ -88,6 +88,7 @@ export const TopArea = memo(({chgPageFn}) => {
                     <button className="hambtn"></button>
                 </nav>
             </header>
+            
         </>
     );
 });

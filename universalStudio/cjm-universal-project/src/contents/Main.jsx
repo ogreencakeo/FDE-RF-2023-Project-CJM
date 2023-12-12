@@ -145,6 +145,7 @@ export function Main() {
                         </div>
                     </div>
                 </div>
+
                 {/* 지도 */}
                 <div className="map-wrapper-model">
                     <div className="map-model-bx">
