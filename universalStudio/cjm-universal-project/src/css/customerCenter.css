@@ -8,6 +8,7 @@ h1, h2, h3, p, span, div, button{
     margin: 150px auto 100px;
     display: flex;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .customerCenter-left-wrap{
@@ -152,4 +153,23 @@ h1, h2, h3, p, span, div, button{
 
 .tit-color-change.on{
     color: #1b6ef3;
+}
+
+@media screen and (max-width : 900px) {
+    .customerCenter-left-wrap{
+        width: 100%;
+    }
+    .customerCenter-right-wrap{
+        width: 100%;
+    }
+    .customer-option-bx{
+        display: flex;
+    }
+    .customer-option-bx button{
+        flex: 1;
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width : 550px) {
+    
 }
