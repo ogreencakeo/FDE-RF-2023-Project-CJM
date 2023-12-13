@@ -262,10 +262,6 @@
 
 /* 미디어쿼리 */
 @media screen and (max-width:1255px)  {
-    /* .goods_bx{
-        max-width: 45%;
-        margin: 10px auto;
-    } */
     .ticket-wrap-bx>div{
         flex: initial;
     }
@@ -275,7 +271,7 @@
         padding: 20px;
     }
     .ticket-opt-character{
-        width: 45%;
+        flex-basis: 45%;
     }
 }
 @media screen and (max-width:970px) {
@@ -314,5 +310,9 @@
     }
     .ticket-inquiry-cont>p{
         font-size: 0.95rem;
+    }
+
+    .ticket-opt-character{
+        flex-basis: 45%;
     }
 }
