@@ -192,6 +192,7 @@
     width: 100%;
     display: flex;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 .ticket-option-bx{
     flex: 1;
@@ -296,6 +297,16 @@
     .ticket-opt-character>span{
         font-size: 2rem !important;
     }
+    .ticket-option-bx{
+        flex: initial;
+        flex-basis: 100%;
+        padding: 5px;
+        margin: 10px;
+    }
+    .ticket-option-bx>h1 {
+        font-size: 15vw;
+    }
+
 }
 @media screen and (max-width:700px) {
     .ticket-info-bx > div{
@@ -329,7 +340,8 @@
         font-size: 0.95rem;
     }
 
-    .ticket-opt-character{
-        flex-basis: 45%;
+    .ticket-opt-character>span {
+        font-size: 1.5rem !important;
     }
+   
 }
