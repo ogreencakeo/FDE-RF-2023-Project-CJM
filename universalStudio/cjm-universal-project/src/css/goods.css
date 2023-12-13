@@ -26,7 +26,8 @@
 }
 /* 굿즈 개별*/
 .goods_bx{
-    max-width: calc((1300px - 60px) / 3);
+    /* max-width: calc((1300px - 60px) / 3); */
+    flex-basis: 30%;
     border: 1px solid #ccc;
     border-radius: 20px;
     box-shadow: 1px 1px 3px #ccc;
@@ -193,26 +194,10 @@
 }
 
 /* 미디어쿼리 */
+
+
 @media screen and (max-width:1255px)  {
-    .goods_bx{
-        max-width: 45%;
-        margin: 10px auto;
-    }
-}
-@media screen and (max-width:1100px)  {
-    .goods_bx{
-        max-width: 45%;
-        margin: 10px auto;
-    }
-    .goods_caution_wrap{
-        gap: 0;
-    }
-}
-@media screen and (max-width:1255px)  {
-    .goods_bx{
-        max-width: 45%;
-        margin: 10px auto;
-    }
+
     .goods_caution_content{
         max-width: 100%;
         width: 100%;
@@ -228,6 +213,17 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width:1100px)  {
+    .goods_bx{
+        margin: 10px auto;
+        flex-basis: 45%;
+    }
+    .goods_caution_wrap{
+        gap: 0;
+    }
+}
+
 @media screen and (max-width:750px)  {
     .goods_img_logo{
         width: 100%;
@@ -251,7 +247,8 @@
 }
 @media screen and (max-width:650px)  {
     .goods_bx{
-        max-width: 100%;
+        /* max-width: 100%; */
+        flex-basis: 100%;
         margin: 10px 10px;
     }
     .goods_caution_img{
