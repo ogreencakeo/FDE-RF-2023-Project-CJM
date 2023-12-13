@@ -1,19 +1,20 @@
 import { Banner } from "../modules/Banner";
-import {SurviceCont} from '../modules/SurviceCont';
+import { SurviceCont } from '../modules/SurviceCont';
 import '../../css/main.css';
 
-import {surviceData} from '../data/serviceData.js';
+import { surviceData } from '../data/serviceData.js';
 import { VidSwiper } from "../plugin/swiper/VidSwiper.jsx";
 
-export function Main(){
-    return(
+export function Main() {
+    return (
         <>
             <Banner category='main' />
             <SurviceCont category='main' />
             {/* 인재상 */}
             <div className="ideal-talent-wrap">
+                <h2>바이오 인재상</h2>
                 <div className="ideal-talent-img">
-                    <img src="../images/main/cont/develope.png" alt="" />
+                    <img src="../images/main/cont/earth.png" alt="" />
                 </div>
                 <p>
                     회사 비전과 목표를 공유하며,
