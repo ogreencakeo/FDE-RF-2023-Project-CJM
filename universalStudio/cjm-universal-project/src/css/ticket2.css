@@ -273,11 +273,28 @@
     .ticket-opt-character{
         flex-basis: 45%;
     }
+    .ticket-suboption-wrap{
+        padding: 0;
+    }
 }
 @media screen and (max-width:970px) {
     .ticket-info-bx > div{
         flex: initial;
         width: 30%;
+    }
+}
+@media screen and (max-width:806px) {
+    .ticket-opt-character>span{
+        font-size: 1.5rem !important;
+    }
+    
+}
+@media screen and (max-width:722px) {
+    .ticket-opt-character{
+        flex-basis: 100%;
+    }
+    .ticket-opt-character>span{
+        font-size: 2rem !important;
     }
 }
 @media screen and (max-width:700px) {
