@@ -37,6 +37,10 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         chgPageFn("/schpage", { state: { keyword: txt } });
     };
 
+    const showMenu = () => {
+        $('.top-area').toggleClass('on');
+    }
+
     return (
         <>
             {
@@ -94,7 +98,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                             )
                         }
                     </ul>
-                    <button className="hambtn"></button>
+                    <button className="hambtn" onClick={showMenu}></button>
                 </nav>
             </header>
         </>
