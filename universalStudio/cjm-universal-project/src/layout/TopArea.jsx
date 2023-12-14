@@ -59,6 +59,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
 
     useEffect(()=>{
         let smenu = document.querySelectorAll('.smenu');
+        let hv = smenu.querySelector('ol').innerHeight;
     })
 
 
