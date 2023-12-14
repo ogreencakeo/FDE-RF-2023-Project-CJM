@@ -131,7 +131,15 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             <div className="top-show-nav">
                 <nav className="gnb2">
                     <ul>
-
+                        {/* <li style={{ marginLeft: "auto" }}>
+                            <div className="searchingGnb">
+                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
+                                <input id="schinGnb" type="text" placeholder="Filter by keyword" onKeyUp={enterKey} />
+                            </div>
+                            <a href="#" onClick={showSerach}>
+                                <FontAwesomeIcon icon={faSearch} />
+                            </a>
+                        </li> */}
                         {navMenu.map((v, i) => (
                             <li key={i}>
                                 {v.sub ? <a href="#">{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>}
@@ -148,15 +156,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                                 )}
                             </li>
                         ))}
-                        <li style={{ marginLeft: "auto" }}>
-                            <div className="searchingGnb">
-                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
-                                <input id="schinGnb" type="text" placeholder="Filter by keyword" onKeyUp={enterKey} />
-                            </div>
-                            <a href="#" onClick={showSerach}>
-                                <FontAwesomeIcon icon={faSearch} />
-                            </a>
-                        </li>
+
                         {logSts === null && (
                             <>
                                 <li>

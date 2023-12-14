@@ -226,6 +226,9 @@ ol.bmenu{
         border-bottom: 1px solid #ccc;
         text-indent: 5px !important;
     }
+    .smenu2>ol>li{
+        font-size: 0.95rem !important;
+    }
 }
 
 /* lauout2 */
