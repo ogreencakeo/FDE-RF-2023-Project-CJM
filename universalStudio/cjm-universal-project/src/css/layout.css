@@ -7,6 +7,7 @@ main.cont {
     /* transform: translateY(10px); */
     /* margin-top: 69px; */
 }
+
 .top-area{
     position: fixed;
     top: 0;
@@ -185,115 +186,24 @@ ol.bmenu{
         padding-top: 58px;
         /* 첫번째 컨텐츠 가려짐방지 패딩 */
     }
-    .top-area{
-        /* 보이는 화면고정 */
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 58px;
-        padding: 0 20px;
-        box-sizing: border-box;
-        z-index: 9999;
-        /* overflow: hidden; */
-        transition: .4s ease-out;
-    }
-    .top-area.on{
-        height: 100vh;
-    }
 }
 
 
 /* 1024px 이하 미디어쿼리 */
 @media screen and (max-width:1024px) {
-
+    
     .top-area{
         overflow: hidden;
     }
-    .gnb{
-        background-color: #fff;
-    }
-    .gnb>ul>li{
-        position: static;
-    }
-    .gnb>ul>li:nth-child(2){
-        border-top: 2px solid #ccc;
-    }
+
     /* 메뉴 CHARACTERS ~ OPINION */
     /* .gnb>ul>li:nth-child(1)~li:nth-child(-n+9) */
     .gnb>ul>li:nth-child(1)~li:nth-child(-n+10)
     {
-        /* outline: 2px dotted red; */
-        background-color: #fff;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-        text-indent: 50px;
+        display: none;
+        
     }
-    .gnb>ul>li:nth-child(8){
-        top: calc(58px * 1);
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
-    }
-    .gnb>ul>li:nth-child(2){
-        top: calc(58px * 2);
-    }
-    .gnb>ul>li:nth-child(3){
-        top: calc(58px * 3);
-    }
-    .gnb>ul>li:nth-child(4){
-        top: calc(58px * 4);
-    }
-    .gnb>ul>li:nth-child(5){
-        top: calc(58px * 5);
-    }
-    .gnb>ul>li:nth-child(6){
-        top: calc(58px * 6);
-    }
-    .gnb>ul>li:nth-child(7){
-        top: calc(58px * 7);
-    }
-    
-    /* .gnb>ul>li:nth-child(9){
-        top: calc(58px * 8);
-        border-bottom: 1px solid #000;
-    } */
-    /* Join Us / LOGIN */
-    /* .gnb>ul>li:nth-child(10) > a,
-    .gnb>ul>li:nth-child(11) > a     */
-    .gnb>ul>li:nth-child(9) > a,
-    .gnb>ul>li:nth-child(10) > a    
-    {
-        position: absolute;
-        /* top: calc(58px * 8); */
-        top: calc(58px * 7);
-        left: 5%;
-        text-align: center;
-        width: 40%;
-        border-radius: 30px;
-        border: 2px solid #000;
-        background-color: #fff;
-        white-space: nowrap;
-        margin-top: 20px;
-        transition: .3s;
-        text-indent: 0;
-    }
-    /* .gnb>ul>li:nth-child(11) > a{         */
-    .gnb>ul>li:nth-child(10) > a{        
-        left: 55%;
-    }
-    .gnb>ul>li:nth-child(10) > a:hover,
-    .gnb>ul>li:nth-child(11) > a:hover  {
-        color: #fff;
-        background-color: #0d6efd;
-    }
-    .gnb>ul>li:nth-child(3) > a::after,
-    .gnb>ul>li:nth-child(4) > a::after  {
-        content: '▼';
-        font-size: 11px;
-        vertical-align: 2px;
-        margin-left: 5px;
-    }
+  
     /* 검색박스 */
     .searchingGnb{
         /* left: 80px; */
@@ -306,10 +216,64 @@ ol.bmenu{
         display: block;
     }
 
-    /* 서브메뉴 */
-    .smenu {
-        left: 5%;
-        transform: none;
-        z-index: 1;
+    
+}
+@media screen and (max-width:550px) {
+    .gnb2 li{
+        font-size: 1.5rem;
+        margin: 5px;
+        font-family: 'Jua';
+        border-bottom: 1px solid #ccc;
+        text-indent: 5px !important;
     }
+}
+
+/* lauout2 */
+.top-show-nav{
+    display: none;
+}
+.top-show-nav.on{
+    transition: .4s ease-in-out;
+    display: block;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 100;
+}
+.gnb2{
+    padding-top: 58px;
+}
+
+.gnb2 li{
+    font-size: 1.5rem;
+    margin: 5px;
+    font-family: 'Jua';
+    border-bottom: 1px solid #ccc;
+    text-indent: 30px;
+}
+.gnb2 li a{
+    color: #000;
+    display: block;
+}
+.smenu2 ol{
+    display: flex;
+    flex-wrap: wrap;
+}
+.smenu2>ol>li{
+    font-size: 1.2rem;
+    width: 45%;
+    border: 0;
+}
+.smenu2>ol>li a{
+    color: #555;
+    /* text-align: center; */
+}
+.gnb2 li:nth-child(2) .smenu2 a::before,
+.gnb2 li:nth-child(3) .smenu2 a::before{
+    content: '>';
+    display: inline-block;
+    /* margin-right: 5px; */
+
 }

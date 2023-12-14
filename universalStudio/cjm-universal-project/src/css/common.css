@@ -7,7 +7,7 @@
 @import url('./layout.css');
 /* @import url('./goods.css'); */
 
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
     width: 15px;
 }
 body::-webkit-scrollbar-thumb{
@@ -18,5 +18,5 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-track{
     background-color: rgb(182, 204, 224);
     box-shadow: 1px 1px 5px #fff;
-}
+} */
 
