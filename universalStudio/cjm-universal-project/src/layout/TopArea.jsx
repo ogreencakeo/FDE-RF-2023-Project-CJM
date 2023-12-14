@@ -51,11 +51,15 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             $('.top-area').removeClass('on')
         }); // click /////////
 
-        let smenu = document.querySelectorAll('.smenu');
+        
         // let hv = smenu.offsetHeight;
         // smenu.style.height = hv + 'px';
         
     }); // useEffect
+
+    useEffect(()=>{
+        let smenu = document.querySelectorAll('.smenu');
+    })
 
 
     return (
