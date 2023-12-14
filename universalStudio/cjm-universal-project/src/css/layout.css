@@ -280,3 +280,25 @@ ol.bmenu{
     /* margin-right: 5px; */
 
 }
+
+
+.gnb2 .searchingGnb{    
+    position: relative;
+    top: 28px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #efefef;
+    box-sizing: border-box;
+    padding: 0 5px;
+    display: none;/* 처음에 안보임! */
+}
+.searchingGnb input{
+    position: absolute;
+    font-size: 15px;
+    width: 77%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+}

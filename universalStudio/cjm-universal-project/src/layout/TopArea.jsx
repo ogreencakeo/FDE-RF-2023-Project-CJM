@@ -131,7 +131,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             <div className="top-show-nav">
                 <nav className="gnb2">
                     <ul>
-                        {/* <li style={{ marginLeft: "auto" }}>
+                        <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
                                 <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
                                 <input id="schinGnb" type="text" placeholder="Filter by keyword" onKeyUp={enterKey} />
@@ -139,7 +139,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                             <a href="#" onClick={showSerach}>
                                 <FontAwesomeIcon icon={faSearch} />
                             </a>
-                        </li> */}
+                        </li>
                         {navMenu.map((v, i) => (
                             <li key={i}>
                                 {v.sub ? <a href="#">{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>}
