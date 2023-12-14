@@ -1260,6 +1260,40 @@ a {
     .main-video-wrap>iframe{
         width: 500px;
     }
+    .image-move{
+        width: 4480px;
+
+    }
+    .character-erath{
+        margin: 20px 0;
+    }
+    .main-video{
+        margin: 90px 0 120px;
+    }
+
+    
+    .page2{
+        margin: 70px 0;
+        padding-bottom: 20px;
+    }
+    .image-move li{
+        width: 280px;
+    }
+    .area-cont-bx{
+        margin: 0 auto 130px;
+    }
+    .main-upcomingEv-wrap{
+        margin: 100px 0 80px;
+    }
+    .mouse-move{
+        margin: 0 0 110px;
+    }
+
+    @keyframes img-move-ani{
+        to{
+            left: -2240px;
+        }
+    }
 }
 @media screen and (max-width:700px)  {
     .header-content>span:first-of-type{
@@ -1272,17 +1306,20 @@ a {
         font-size: 3vw;
     }
     .enjoy-pick-cont{
-        width: 85vw;
+        width: 80vw;
     }
     .enjoty-pick-img{
         width: 200px;
     }
     .main-upcomingEv-bx{
-        width: 80%;
+        width: 90%;
     }
     .mouseBox img{
         width: 220px;
         height: 170px;
+    }
+    .main-upcomingEv-wrap{
+        padding: 0;
     }
 }
 @media screen and (max-width:550px){
@@ -1292,14 +1329,37 @@ a {
     .span_wave>span{
         font-size: 10vw;
     }
-    /* .header, .header-img-wrap, .header-main-img-wrap, .header-main-img{
-        height: 55vh;
-    } */
+
     .universal_link button{
         font-size: 4.5vw;
     }
     .page2-light span {
         font-size: 6em;
         margin: 0 10px;
+    }
+    .main-upcomingEv-cont a span{
+        padding: 3px 10px 0;
+    }
+    .page2-light{
+        padding: 75px 0;
+    }
+
+    .img-move-ani:hover {
+        animation-play-state: running;
+        cursor: pointer;
+    }
+    
+    .image-move{
+        width: 3520px;
+
+    }
+    .image-move li{
+        width: 220px;
+    }
+
+    @keyframes img-move-ani{
+        to{
+            left: -1760px;
+        }
     }
 }

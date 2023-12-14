@@ -180,7 +180,7 @@ ol.bmenu{
 /* 1320px이하 미디어쿼리 */
 @media screen and (max-width:1320px) {
     html, body{
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     body{
         padding-top: 58px;
