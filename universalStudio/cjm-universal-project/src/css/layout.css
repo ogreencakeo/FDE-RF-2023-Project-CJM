@@ -218,7 +218,8 @@ ol.bmenu{
         border-top: 2px solid #ccc;
     }
     /* 메뉴 CHARACTERS ~ OPINION */
-    .gnb>ul>li:nth-child(1)~li:nth-child(-n+9)
+    /* .gnb>ul>li:nth-child(1)~li:nth-child(-n+9) */
+    .gnb>ul>li:nth-child(1)~li:nth-child(-n+10)
     {
         /* outline: 2px dotted red; */
         background-color: #fff;
@@ -230,6 +231,7 @@ ol.bmenu{
     }
     .gnb>ul>li:nth-child(8){
         top: calc(58px * 1);
+        border-top: 1px solid #000;
         border-bottom: 1px solid #000;
     }
     .gnb>ul>li:nth-child(2){
@@ -263,7 +265,7 @@ ol.bmenu{
     {
         position: absolute;
         /* top: calc(58px * 8); */
-        top: calc(58px * 8);
+        top: calc(58px * 7);
         left: 5%;
         text-align: center;
         width: 40%;
@@ -273,8 +275,10 @@ ol.bmenu{
         white-space: nowrap;
         margin-top: 20px;
         transition: .3s;
+        text-indent: 0;
     }
-    .gnb>ul>li:nth-child(11) > a{        
+    /* .gnb>ul>li:nth-child(11) > a{         */
+    .gnb>ul>li:nth-child(10) > a{        
         left: 55%;
     }
     .gnb>ul>li:nth-child(10) > a:hover,
@@ -291,7 +295,8 @@ ol.bmenu{
     }
     /* 검색박스 */
     .searchingGnb{
-        left: 80px;
+        /* left: 80px; */
+        left: 20px;
         width: 80%;
     }
 
