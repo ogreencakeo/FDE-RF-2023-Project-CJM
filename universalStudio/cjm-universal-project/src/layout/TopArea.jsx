@@ -41,6 +41,23 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         $('.top-area').toggleClass('on');
     }
 
+
+    useEffect(()=>{
+        // GNB a 요소 클릭시 전체메뉴 닫기
+        // 대상 : .gnb a[href!='#']
+        // -> href가 '#'이 아닌 gnb 하위 모든 a요소
+        // -> !=은 제이쿼리 전용!
+        $(".gnb a[href!='#']").on('click', ()=>{
+            $('.top-area').removeClass('on')
+        }); // click /////////
+
+        let smenu = document.querySelectorAll('.smenu');
+        // let hv = smenu.offsetHeight;
+        // smenu.style.height = hv + 'px';
+        
+    }); // useEffect
+
+
     return (
         <>
             {
