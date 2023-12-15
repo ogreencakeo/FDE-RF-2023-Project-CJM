@@ -40,6 +40,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     const showMenu = () => {
         // $('.top-area').toggleClass('on');
         $('.top-show-nav').toggleClass('on');
+        // $('.cont, .footer').toggleClass('on');
     }
 
 
@@ -48,7 +49,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         // 대상 : .gnb a[href!='#']
         // -> href가 '#'이 아닌 gnb 하위 모든 a요소
         // -> !=은 제이쿼리 전용!
-        $(".gnb2 a[href!='#']").on('click', () => {
+        $(".gnb2 a[href!='#'],.nav-logo").on('click', () => {
             $('.top-show-nav').removeClass('on');
         }); // click /////////
 

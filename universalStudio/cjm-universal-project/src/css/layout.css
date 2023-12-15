@@ -232,6 +232,10 @@ ol.bmenu{
 }
 
 /* lauout2 */
+.cont.on, .footer.on{
+    display: none;
+}
+
 .top-show-nav{
     display: none;
 }
@@ -255,10 +259,12 @@ ol.bmenu{
     font-family: 'Jua';
     border-bottom: 1px solid #ccc;
     text-indent: 30px;
+    padding: 5px;
 }
 .gnb2 li a{
     color: #000;
     display: block;
+    text-align: center;
 }
 .smenu2 ol{
     display: flex;
@@ -268,10 +274,11 @@ ol.bmenu{
     font-size: 1.2rem;
     width: 45%;
     border: 0;
+    padding: 0;
 }
 .smenu2>ol>li a{
     color: #555;
-    /* text-align: center; */
+    text-align: start;
 }
 .gnb2 li:nth-child(3) .smenu2 a::before,
 .gnb2 li:nth-child(4) .smenu2 a::before{
