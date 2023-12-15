@@ -62,3 +62,34 @@
     font-weight: 700;
     font-size: 1.2rem;
 }
+
+@media screen and (max-width : 800px) {
+    .member-bx td{
+        padding: 10px 20px;
+    }
+    .member-bx td{
+        font-size: 1rem;
+    }
+    .member-bx td input {
+        padding: 10px 30px;
+    }
+    .member-bx>form{
+        padding: 0;
+    }
+}
+@media screen and (max-width : 700px) {
+    .member-bx{
+        padding: 10px;
+    }
+}
+@media screen and (max-width : 600px) {
+    .member-bx td:first-child{
+        display: none;
+    }
+    .member-bx td:first-child{
+        outline: none;
+    }
+    .member-bx td{
+        padding: 0;
+    }
+}
