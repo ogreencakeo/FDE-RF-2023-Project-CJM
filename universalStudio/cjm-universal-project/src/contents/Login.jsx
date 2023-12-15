@@ -101,6 +101,15 @@ export function Login() {
                         </li>
                         <li>
                             <input type="password" maxLength="20" placeholder="비밀번호를 입력해주세요" value={pwd} onChange={changePwd} />
+                            {
+                                pwdError && (
+                                    <div className="msg">
+                                        <small style={{
+                                            color : 'red', fontSize : '10px'
+                                        }}>{pwdMsg}</small>
+                                    </div>
+                                )
+                            }
                         </li>
                     </ul>
                 </form>
