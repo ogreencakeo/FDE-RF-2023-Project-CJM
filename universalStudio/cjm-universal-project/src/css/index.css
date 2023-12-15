@@ -1362,4 +1362,8 @@ a {
             left: -1760px;
         }
     }
+
+    .main-video-wrap>iframe{
+        width: 350px;
+    }
 }
