@@ -273,8 +273,8 @@ ol.bmenu{
     color: #555;
     /* text-align: center; */
 }
-.gnb2 li:nth-child(2) .smenu2 a::before,
-.gnb2 li:nth-child(3) .smenu2 a::before{
+.gnb2 li:nth-child(3) .smenu2 a::before,
+.gnb2 li:nth-child(4) .smenu2 a::before{
     content: '>';
     display: inline-block;
     /* margin-right: 5px; */
