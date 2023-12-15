@@ -57,6 +57,7 @@
 
 .member-bx td:last-child {
     width: 100%;
+    
 }
 
 .member-bx td input{
@@ -84,13 +85,13 @@
 
 @media screen and (max-width : 800px) {
     .member-bx td{
-        padding: 10px 20px;
+        /* padding: 10px 20px; */
     }
     .member-bx td{
         font-size: 1rem;
     }
     .member-bx td input {
-        padding: 10px 30px;
+        text-align: center;
     }
     .member-bx>form{
         padding: 0;
@@ -108,11 +109,40 @@
     .member-bx td:first-child{
         outline: none;
     }
+    .member-bx td:last-child{
+        display: block;
+    }
     .member-bx td{
         padding: 0;
         outline: none;
     }
     .join-the-membership-wrap{
         padding: 10px;
+    }
+    .member-bx td input {
+        width: 300px;
+    }
+    .member-bx table{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .member-bx td input {
+        max-width: 150px;
+    }
+    .member-bx table{
+        padding: 0;
+    }
+    .member-bx tr{
+        margin-bottom: 10px;
+    }
+    .member-bx tr button{
+        padding: 10px 70px;
+    }
+    .member-bx p {
+        font-size: 0.95rem;
+        width: 350px;
+        text-align: start;
     }
 }

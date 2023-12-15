@@ -63,3 +63,9 @@
     font-size: 1.2rem;
 }
 
+
+@media screen and (max-width : 430px) {
+    .login-bx ul li input{
+        width: 200px;
+    }
+}
