@@ -67,11 +67,12 @@ export function Seaching2(props) {
 
     // 첫 렌더링 시에만 초기화를 수행하도록 변경
     useEffect(() => {
-        if (!firstSts.current) {
-            firstDo();
-            firstSts.current = 1;
-        }
-    }, []);
+        // if (!firstSts.current) {
+        //     firstDo();
+        //     firstSts.current = 1;
+        // }
+        firstDo();
+    });
 
     // 검색리스트 만들기 함수
     function schList(e) {
@@ -100,40 +101,40 @@ export function Seaching2(props) {
     };
 
     // 체크박스 검색 함수
-    const chkSearch = (e) => {
-        const cid = e.target.id;
-        const chked = e.target.checked;
-    
-        let temp = selData[0];
-        let lastList = [];
-    
-        let num = $('.chkhdn:checked').length;
-    
-        if (chked) {
-            const nowList = attractionData.filter((v) => {
-                if (v.areatype === cid) return true;
-            });
-    
-            if (num > 1) {
-                // 체크된 항목이 여러 개일 때
-                lastList = [...temp, ...nowList];
-            } else {
-                // 체크된 항목이 하나일 때
-                lastList = [...nowList];
-            }
-        } else {
-            // 체크가 해제된 경우
-            for (let i = 0; i < temp.length; i++) {
-                if (temp[i].areatype === cid) {
-                    temp.splice(i, 1);
-                    i--;
-                }
-            }
-            lastList = temp;
-        }
-        setSelData([lastList, 2]);
-        setCnt(lastList.length);
-    };
+    // const chkSearch = (e) => {
+    //     const cid = e.target.id;
+    //     const chked = e.target.checked;
+
+    //     let temp = selData[0];
+    //     let lastList = [];
+
+    //     let num = $('.chkhdn:checked').length;
+
+    //     if (chked) {
+    //         const nowList = attractionData.filter((v) => {
+    //             if (v.areatype === cid) return true;
+    //         });
+
+    //         if (num > 1) {
+    //             // 체크된 항목이 여러 개일 때
+    //             lastList = [...temp, ...nowList];
+    //         } else {
+    //             // 체크된 항목이 하나일 때
+    //             lastList = [...nowList];
+    //         }
+    //     } else {
+    //         // 체크가 해제된 경우
+    //         for (let i = 0; i < temp.length; i++) {
+    //             if (temp[i].areatype === cid) {
+    //                 temp.splice(i, 1);
+    //                 i--;
+    //             }
+    //         }
+    //         lastList = temp;
+    //     }
+    //     setSelData([lastList, 2]);
+    //     setCnt(lastList.length);
+    // };
 
     // 리스트 정렬 함수
     const sortList = (e) => {
@@ -158,9 +159,9 @@ export function Seaching2(props) {
         <>
             <div className="attraction-wrap">
                 {/* 어트랙션 옵션 박스 */}
-                <div className="attraction-option-wrap">
-                    {/* 검색박스 */}
-                    <div className="searching">
+                {/* <div className="attraction-option-wrap"> */}
+                {/* 검색박스 */}
+                {/* <div className="searching">
                         <FontAwesomeIcon
                             icon={faSearch}
                             className="schbtn"
@@ -175,14 +176,12 @@ export function Seaching2(props) {
                             onKeyUp={enterKey}
                             defaultValue={kword}
                         />
-                    </div>
-                    {/* 체크박스 구역 */}
-                    <div className="option-check">
+                    </div> */}
+                {/* <div className="option-check">
                         <h2>
                             에어리어
                             <span className="spbtn">＋</span>
                         </h2>
-                        {/* 옵션1 - 에어리어 */}
                         <ol>
                             <li>
                                 슈퍼 닌텐도 월드™
@@ -210,10 +209,11 @@ export function Seaching2(props) {
                                 <label htmlFor="jurassicpark" className="arealb"></label>
                             </li>
                         </ol>
-                    </div>
-                </div>
+                    </div> */}
+                {/* </div> */}
                 {/* 결과 리스트 박스 */}
                 <div className="attraction-cont-listbx">
+                    <h1 className="tit">검색 결과</h1>
                     <h2 className="listbx">어트랙션 검색결과가 ({cnt})개 나왔습니다.</h2>
                     <div className="sortbx">
                         <select name="sel" id="sel" className="sel" onChange={sortList}>

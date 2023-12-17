@@ -1,15 +1,28 @@
 .attraction-wrap{
     max-width: 1300px;
-    display: flex;
+    /* display: flex; */
     margin: 0 auto;
+    margin: 100px auto;
 }
 
 /* 어트랙션 옵션 박스 */
-.attraction-option-wrap{
+/* .attraction-option-wrap{
     width: 25%;
-}
+} */
 
 /* 결과리스트 박스 */
 .attraction-cont-listbx{
-    width: 75%;
+    /* width: 75%; */
+    max-width: 100%;
+}
+
+.tit{
+    
+    font-family: 'Jua';
+    font-size: 3rem;
+}
+
+.listbx{
+    text-align: center;
+    padding: 10px;
 }
