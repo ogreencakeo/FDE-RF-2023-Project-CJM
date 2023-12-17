@@ -64,6 +64,12 @@
 }
 
 
+@media screen and (max-width : 1020px) {
+    .login-page-wrap{
+        margin: 20px auto;
+    }
+
+}
 @media screen and (max-width : 430px) {
     .login-bx ul li input{
         width: 200px;

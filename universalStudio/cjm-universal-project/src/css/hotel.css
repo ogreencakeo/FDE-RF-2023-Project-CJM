@@ -110,6 +110,11 @@
         text-align: center;
     }
 }
+@media screen and (max-width : 1020px) {
+    .partner-hotel-wrap{
+        margin: 40px auto;
+    }
+}
 @media screen and (max-width : 550px) {
     .hotel-desc h1{
         font-size: 1.4rem;

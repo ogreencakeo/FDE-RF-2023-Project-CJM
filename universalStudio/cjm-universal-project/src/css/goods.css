@@ -11,7 +11,7 @@
 }
 
 .goods-top-cont-wrap h1{
-    font-size: 2vw;
+    font-size: 2.2rem;
     font-family: 'Gugi';
     padding: 20px;
     margin: 20px 0;
@@ -222,8 +222,21 @@
     .goods_caution_wrap{
         gap: 0;
     }
+    .goods-top-cont-wrap h1{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:1020px)  {
+    .goods_ad_main_img{
+        margin: 20px auto 40px;
+    }
 }
 
+@media screen and (max-width:900px) {
+    .img-model-box{
+        width: 65vw;
+    }
+}
 @media screen and (max-width:750px)  {
     .goods_img_logo{
         width: 100%;
@@ -257,5 +270,17 @@
     .goods_caution_content p {
         font-size: 0.9rem;
         width: 100%;
+    }
+    .goods-top-cont-wrap{
+        margin: 10px auto;
+    }
+    .img-model-box{
+        width: 80vw;
+    }
+}
+@media screen and (max-width:450px)  {
+    
+    .goods-top-cont-wrap h1{
+        font-size: 1.6rem;
     }
 }

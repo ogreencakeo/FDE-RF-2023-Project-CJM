@@ -19,12 +19,12 @@ export function AreaSwiper(props) {
     return (
         <Swiper
             slidesPerView={4}
-            spaceBetween={20}
+            spaceBetween={30}
 
             pagination={{
                 clickable: true,
             }}
-            loop={true}
+            loop={false}
             navigation={true}
             modules={[Pagination, Navigation, Autoplay]}
             breakpoints={{
@@ -34,14 +34,11 @@ export function AreaSwiper(props) {
                 500: {
                     slidesPerView: 2,
                 },
-                650: {
+                750: {
                     slidesPerView: 3,
                 },
-                980 : {
-                    slidesPerView: 4,
-                },
                 1200: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                 },
             }}
             className="mySwiper3"

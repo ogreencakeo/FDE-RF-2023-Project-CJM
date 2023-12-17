@@ -1048,6 +1048,7 @@ a {
 
 .footer-wrap-bottom div ul {
     display: flex;
+    flex-wrap: wrap;
     position: absolute;
 }
 
@@ -1313,6 +1314,8 @@ a {
     }
     .footer-wrap-bottom div ul p{
         font-size: 1rem;
+        margin-right: 10px;
+        margin-bottom: 5px;
     }
     .footer-right>img{
         width: 20vw;
@@ -1419,7 +1422,5 @@ a {
     .footer-right>img{
         width: 20vw;
     }
-    .footer-wrap-bottom div:last-child{
-        line-height: 2;
-    }
+
 }

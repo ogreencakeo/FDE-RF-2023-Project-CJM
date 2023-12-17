@@ -266,6 +266,9 @@
     .ticket-wrap-bx>div{
         flex: initial;
     }
+    .ticket-main-img>span{
+        font-size: 3vw;
+    }
 }
 @media screen and (max-width:1100px) {
     .ticket-info-bx > div{
@@ -277,12 +280,19 @@
     .ticket-suboption-wrap{
         padding: 0;
     }
+    
 }
 @media screen and (max-width:970px) {
     .ticket-info-bx > div{
         flex: initial;
         width: 30%;
     }
+    .ticket-main-img>span{
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width:900px) {
+   
 }
 @media screen and (max-width:806px) {
     .ticket-opt-character>span{

@@ -164,6 +164,11 @@ button {
     color: #1b6ef3;
 }
 
+@media screen and (max-width: 1020px) {
+    .customerCenter-wrap{
+        margin: 10px auto 40px;
+    }
+}
 @media screen and (max-width: 900px) {
     .customerCenter-left-wrap {
         width: 100%;

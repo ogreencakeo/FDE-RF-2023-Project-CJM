@@ -180,9 +180,6 @@
     .area-type-btn nav ul li button{
         padding: 5px;
     }
-    .goods-top-cont-wrap{
-        margin: 150px auto 50px;
-    }
 }
 
 @media screen and (max-width:550px){

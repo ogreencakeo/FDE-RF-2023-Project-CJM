@@ -4,10 +4,10 @@
 #cartlist {
     position: fixed;
     top: 0px;
-    right: -60%;
-    width: 60vw;
+    right: -100%;
+    width: 90vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.93);
     z-index: 99999999;
 }
 
@@ -39,7 +39,6 @@
 
 #cartlist caption {
     padding: 20px 0px;
-    text-decoration: underline wavy;
     font-size: 30px;
 }
 
@@ -75,7 +74,7 @@
 #mycart.on {
     position: fixed;
     top: 50%;
-    left: calc(100% - 80px);
+    left: calc(100% - 70px);
     transform: translate(0, -50%);
     background-color: #ccc;
     border-radius: 10px 0 0 10px;

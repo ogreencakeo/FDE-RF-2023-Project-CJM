@@ -35,7 +35,7 @@ export const CartList = memo (({selData, tprice}) => {
 
     const hideList = (e) => {
         e.preventDefault();
-        $('#cartlist').animate({right : '-60%'}, 600);
+        $('#cartlist').animate({right : '-100%'}, 600);
     };
 
     return (
