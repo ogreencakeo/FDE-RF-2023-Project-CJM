@@ -1,0 +1,16 @@
+.about-page-wrap{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.about-page-wrap h1{
+    font-size: 3rem;
+    text-align: center;
+}
+.person-img{
+    max-width: 320px;
+    margin: 0 auto;
+}
+.person-img>img{
+    max-width: 100%;
+    aspect-ratio: 1/2;
+}
