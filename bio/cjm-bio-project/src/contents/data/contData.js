@@ -1,4 +1,4 @@
-export const businessContData = {
+export const contData = {
     main: [
         {
             tit: '기업개요',

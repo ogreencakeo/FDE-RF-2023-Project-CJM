@@ -30,13 +30,16 @@ li
 span {
     padding: 0;
     margin: 0;
+    font-family: 'Poor Stroy';
 }
 
 ol,
 ul {
     list-style: none;
+    font-family: 'Poor Stroy';
 }
 
 a {
     text-decoration: none;
+    font-family: 'Poor Stroy';
 }

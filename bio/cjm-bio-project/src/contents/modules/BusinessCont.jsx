@@ -1,11 +1,18 @@
-export {businessContData } from '../data/businessContData';
+import {contData} from '../data/contData';
 
 export function BusinessCont(props){
-    const selData = businessContData[props.cat];
+    const selData = contData[props.cat];
 
     return(
         <div className="business-cont-wrap">
-            <div className="business-value-tit">{selData.tit}</div>
+            {
+                selData.map((v, i) =>
+                    <div className="business-explain-bx" key={i}>
+                        <div className='business-explain-txt'>{v.tit}</div>
+                        <h2>{v.cont}</h2>
+                    </div>
+                )
+            }
         </div>
     )
 }
