@@ -3,6 +3,10 @@ import '../../css/banner.css';
 // 제이쿼리 + 제이쿼리 UI
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
+$.easing.easeInOut = $.easing.easeInOut || function (x, t, b, c, d) {
+    if ((t /= d / 2) < 1) return c / 2 * t * t + b;
+    return -c / 2 * ((--t) * (t - 2) - 1) + b;
+  };
 
 export function Banner(props){
     const selData = banData[props.category];
@@ -21,8 +25,8 @@ export function Banner(props){
 
     const A_TM = 600;
     const A_ES = 'easeInOut';
-    const cSts = 0;
-    const sNum = 0;
+    let cSts = 0;
+    let sNum = 0;
 
     const goSlide = (e) => {
         const tg = e.target;

@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import { serviceData } from "../data/serviceData";
 export function SurviceCont(props){
-    const selData = serviceData[props.category]
+    const selData = serviceData[props.category];
+    const makeCode = (data) => {
+        const temp = [];
+        const split_data = data.split('^');
+        for(let i=0; i<split_data.length; i++){
+            temp[i] = <span>{split_data[i]}</span>
+        }
+        return temp;
+    }
     return(
         <>
             <div className="service-cont-wrap">
@@ -9,14 +17,14 @@ export function SurviceCont(props){
                     {
                         selData.map((v,i) =>
                             <div className="service-cont-bx" key={i}>
-                                <h2>{v.txt}</h2>
+                                <h2>{v.txt.indexOf('^') == -1? v.txt : makeCode(v.txt)}</h2>
                                 <div className="service-cont-img">
-                                    <img src={v.img} alt={v.txt} />
+                                    <img src={v.img} alt='서비스' />
                                 </div>
                                 <p>{v.cont}</p>
-                                <Link to='' className="button-link">
+                                {/* <Link to='' className="button-link">
                                     <button>VIEW MORE</button>
-                                </Link>
+                                </Link> */}
                             </div>
                         )
                     }

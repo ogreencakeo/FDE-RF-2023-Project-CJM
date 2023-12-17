@@ -16,7 +16,7 @@
 
 .logo>img {
     max-width: 100%;
-    aspect-ratio: 2/1;
+    aspect-ratio: 3/1;
 }
 
 /* 햄버거 버튼 */
@@ -78,6 +78,7 @@
     background-color: #fff;
     display: none;
     outline: 1px solid red;
+    z-index: 1;
 }
 
 .ham-nav-bx.on {

@@ -11,10 +11,8 @@
 
 .service-cont-bx{
     margin: 10px;
-    padding: 15px;
     width: calc((100% - 40px) / 3);
     margin: 0 10px;
-    /* border: 2px solid #555; */
     border-radius: 5px;
     display: flex; 
     /* 내부의 요소들을 세로 방향으로 배치하기 위해 */
@@ -30,17 +28,19 @@
     font-family: 'Nanum Gothic Coding';
     font-size: 1.7rem;
 }
+.service-cont-bx h2 span{
+    display: block;
+}
 
 .service-cont-img{
     max-width: 100%;
 }
 .service-cont-img>img{
     width: 100%;
-    aspect-ratio: 1.5/1;
+    aspect-ratio: 1/1;
 }
 
 .service-cont-bx p{
-    padding: 10px;
     font-size: 1rem;
     line-height: 1.5;
     text-align: justify;
@@ -75,42 +75,42 @@
     flex-direction: column;
     justify-content: space-between;
 }
-
 /* 인재상 */
-.ideal-talent-wrap{
+.business-cont-wrap{
     max-width: 1300px;
-    margin: 0 auto;
 }
-.ideal-talent-img{
-    max-width: 300px;
-}
-.ideal-talent-img img{
-    width: 100%;
-    aspect-ratio: 1/1;
-    animation: ideal-talent-ani 15s linear infinite;
-}
+
+/* 비즈니스 관점 */
 .bio-talent-div{
     max-width: 1300px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
-@keyframes ideal-talent-ani {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
 
-/* 비즈니스 관점 */
-.bio-talent-bx{
-    flex: 1;
-    text-align: center;
-}
 .business-value-tit{
     font-size: 2rem;
+    color: #50b947;
+    width: 15%;
+}
+
+.business-value-tit::before{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50px;
+    background-color: #50b947;
+}
+.business-value-bx{
+    display: flex;
+    width: 85%;
+    flex-wrap: wrap;
+}
+.bio-talent-bx{
+    text-align: center;
+    width: 42%;
+    margin: 30px;
+    display: flex;
 }
 .bio-talent-bx h2{
     font-size:2rem;
@@ -118,15 +118,28 @@
 }
 .bio-talent-bx h1{
     font-size:4rem;
-    line-height: 2;
-    border: 1px solid #555;
-    border-radius: 50%;
-    width: 60%;
-    margin: 0 auto;
-    aspect-ratio: 1/1;
+    margin-right: 10px;
+    color: #555;
 }
 .bio-talent-bx p{
     font-size: 1.5rem;
+    font-weight: 800;
+}
+.bio-talent-bx p:last-child{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+/* .bio-talent-img{
+    width: 100px;
+    margin: 0 auto;
+}
+.bio-talent-img img{
+    width: 100%;
+    aspect-ratio: 1/1;
+} */
+.bio-talent-txt{
+    margin: 0 10px;
 }
 /* footer */
 .footer-wrap{
