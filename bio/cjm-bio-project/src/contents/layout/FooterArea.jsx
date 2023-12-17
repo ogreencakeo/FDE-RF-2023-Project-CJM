@@ -1,4 +1,6 @@
-export function FooterArea(){
+import { memo } from "react";
+
+export const FooterArea = memo(()=>{
     return(
         <div className="footer-wrap">
             <div className="footer">
@@ -9,4 +11,4 @@ export function FooterArea(){
             </div>
         </div>
     );
-}
+});

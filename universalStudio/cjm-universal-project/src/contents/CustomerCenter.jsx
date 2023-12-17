@@ -5,7 +5,7 @@ import { announcement } from "../data/유니버설-문의";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretRight, faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { faCircleDown } from "@fortawesome/free-regular-svg-icons";
 
 export function CustomerCenter() {

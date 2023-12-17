@@ -10,6 +10,8 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 // 모듈 불러오기
 import {Layout} from './contents/layout/Layout';
 import {Main} from './contents/pages/Main';
+import {About} from './contents/pages/About';
+
 
 export default function App() {
   return(
@@ -17,6 +19,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
+          <Route path='about' element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

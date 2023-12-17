@@ -80,6 +80,7 @@
 .ideal-talent-wrap{
     max-width: 1300px;
     margin: 0 auto;
+    display: flex;
 }
 .ideal-talent-img{
     max-width: 300px;

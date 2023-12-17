@@ -1,4 +1,90 @@
-.top-area-wrap{
+/* 상단 */
+.top-area-wrap {
     height: 80px;
     outline: solid 1px black;
+    position: relative;
+}
+
+/* 로고 */
+.logo {
+    width: 150px;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.logo>img {
+    max-width: 100%;
+    aspect-ratio: 2/1;
+}
+
+/* 햄버거 버튼 */
+.ham-btn {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    cursor: pointer;
+}
+
+.ham-btn>span {
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 50px;
+    background-color: black;
+}
+
+.ham-btn>span:first-child {
+    top: 15px;
+}
+
+.ham-btn>span:nth-child(2) {
+    top: 35px;
+    transform: translateX(-20px);
+    transition: .2s ease-in;
+}
+
+.ham-btn>span:last-child {
+    top: 55px;
+}
+
+.ham-btn:hover span:nth-child(2) {
+    transform: translateX(0);
+    transition: .2s ease-in;
+}
+
+.ham-btn.on span:first-child{
+    display: none;
+}
+.ham-btn.on span:nth-child(2){
+    top: 35px;
+    transform: rotate(45deg);
+    width: 60px;
+}
+.ham-btn.on span:last-child{
+    top: 35px;
+    transform: rotate(-45deg);
+    width: 60px;
+}
+
+/* 햄버거 창 */
+.ham-nav-bx{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: none;
+    outline: 1px solid red;
+}
+
+.ham-nav-bx.on {
+    display: block;
+}
+
+.ham-nav-bx{
+    font-size: 5rem;
+    text-align: center;
 }
