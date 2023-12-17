@@ -38,35 +38,23 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     };
 
     const showMenu = () => {
-        // $('.top-area').toggleClass('on');
-        $('.top-show-nav').toggleClass('on');
-        // $('.cont, .footer').toggleClass('on');
+
+        $('.top-show-nav').slideToggle().toggleClass('on');
+        window.scrollTo(0, 0);
+
     }
 
 
     useEffect(() => {
-        // GNB a 요소 클릭시 전체메뉴 닫기
-        // 대상 : .gnb a[href!='#']
-        // -> href가 '#'이 아닌 gnb 하위 모든 a요소
-        // -> !=은 제이쿼리 전용!
-        $(".gnb2 a[href!='#'],.nav-logo").on('click', () => {
-            $('.top-show-nav').removeClass('on');
-        }); // click /////////
+
+        $(".gnb2 a[href!='#']").on('click', () => {
+            $('.top-show-nav').slideToggle().removeClass('on');
+        });
 
 
-        // let hv = smenu.offsetHeight;
-        // smenu.style.height = hv + 'px';
 
     }); // useEffect
 
-    useEffect(() => {
-        // let smenu = document.querySelectorAll('.smenu');
-        // let hv = document.querySelector('.smenu ol').cleintHeight;
-        // document.addEventListener('.gnb li', 'onmousemove', ()=>{
-        //     smenu.style.height = hv + 'px';
-        // })
-
-    })
 
 
     return (
@@ -157,26 +145,27 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                                 )}
                             </li>
                         ))}
-
-                        {logSts === null && (
-                            <>
-                                <li>
-                                    <Link to="/member">회원가입</Link>
-                                </li>
-                                <li>
-                                    <Link to="/login">로그인</Link>
-                                </li>
-                            </>
-                        )}
-                        {
-                            logSts !== null && (
+                        <div className="member-join">
+                            {logSts === null && (
                                 <>
                                     <li>
-                                        <a href="#" onClick={logOut}>LOGOUT</a>
+                                        <Link to="/member">회원가입</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/login">로그인</Link>
                                     </li>
                                 </>
-                            )
-                        }
+                            )}
+                            {
+                                logSts !== null && (
+                                    <>
+                                        <li>
+                                            <a href="#" onClick={logOut}>LOGOUT</a>
+                                        </li>
+                                    </>
+                                )
+                            }
+                        </div>
                     </ul>
                 </nav>
             </div>

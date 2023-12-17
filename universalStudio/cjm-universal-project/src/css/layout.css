@@ -205,11 +205,7 @@ ol.bmenu{
     }
   
     /* 검색박스 */
-    .searchingGnb{
-        /* left: 80px; */
-        left: 20px;
-        width: 80%;
-    }
+
 
     /* 햄버거버튼 */
     .hambtn{
@@ -240,7 +236,6 @@ ol.bmenu{
     display: none;
 }
 .top-show-nav.on{
-    transition: .4s ease-in-out;
     display: block;
     height: 100vh;
     position: fixed;
@@ -261,10 +256,13 @@ ol.bmenu{
     text-indent: 30px;
     padding: 5px;
 }
+.gnb2 li:first-child{
+    text-align: center;
+    position: relative;
+}
 .gnb2 li a{
     color: #000;
     display: block;
-    text-align: center;
 }
 .smenu2 ol{
     display: flex;
@@ -288,11 +286,14 @@ ol.bmenu{
 
 }
 
-
 .gnb2 .searchingGnb{    
-    position: relative;
-    top: 28px;
-    width: 100%;
+    text-align: start;
+    position: absolute;
+    top: 0;
+    width: 80%;
+    /* margin: 0 auto; */
+    left: 50%;
+    transform: translateX(-50%);
     height: 40px;
     border-radius: 20px;
     background-color: #efefef;
@@ -308,4 +309,17 @@ ol.bmenu{
     margin-left: 10px;
     background-color: transparent;
     border: none;
+}
+
+.member-join{
+    display: flex;
+    margin: 0 20px;
+}
+
+.member-join li{
+    border: 1px solid #555;
+    flex: 1;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 10px;
 }
