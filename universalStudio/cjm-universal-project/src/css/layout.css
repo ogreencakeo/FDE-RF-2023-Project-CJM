@@ -90,7 +90,7 @@ h1{
 .searchingGnb{    
     position: absolute;
     left: -225px;
-    top: 12px;
+    top: 5px;
     line-height: 41px;
 
     width: 250px;
@@ -175,56 +175,6 @@ ol.bmenu{
 }
 .top-area.on .hambtn::before{
     content: '×';
-}
-
-/* 1320px이하 미디어쿼리 */
-@media screen and (max-width:1320px) {
-    html, body{
-        /* overflow-x: hidden; */
-    }
-    body{
-        padding-top: 58px;
-        /* 첫번째 컨텐츠 가려짐방지 패딩 */
-    }
-}
-
-
-/* 1024px 이하 미디어쿼리 */
-@media screen and (max-width:1024px) {
-    
-    .top-area{
-        overflow: hidden;
-    }
-
-    /* 메뉴 CHARACTERS ~ OPINION */
-    /* .gnb>ul>li:nth-child(1)~li:nth-child(-n+9) */
-    .gnb>ul>li:nth-child(1)~li:nth-child(-n+10)
-    {
-        display: none;
-        
-    }
-  
-    /* 검색박스 */
-
-
-    /* 햄버거버튼 */
-    .hambtn{
-        display: block;
-    }
-
-    
-}
-@media screen and (max-width:550px) {
-    .gnb2 li{
-        font-size: 1.5rem;
-        margin: 5px;
-        font-family: 'Jua';
-        border-bottom: 1px solid #ccc;
-        text-indent: 5px !important;
-    }
-    .smenu2>ol>li{
-        font-size: 0.95rem !important;
-    }
 }
 
 /* lauout2 */
@@ -322,4 +272,41 @@ ol.bmenu{
     text-align: center;
     margin: 0 10px;
     border-radius: 10px;
+}
+
+
+@media screen and (max-width:1320px) {
+    body{
+        padding-top: 58px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    
+    .top-area{
+        overflow: hidden;
+    }
+
+    .gnb>ul>li:nth-child(1)~li:nth-child(-n+10)
+    {
+        display: none;
+        
+    }
+
+    .hambtn{
+        display: block;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .gnb2 li{
+        font-size: 1.5rem;
+        margin: 5px;
+        font-family: 'Jua';
+        border-bottom: 1px solid #ccc;
+        text-indent: 5px !important;
+    }
+    .smenu2>ol>li{
+        font-size: 0.95rem !important;
+    }
 }
