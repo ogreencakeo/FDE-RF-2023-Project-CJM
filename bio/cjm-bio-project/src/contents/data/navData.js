@@ -6,23 +6,23 @@ export const navData = {
         },
         {
             "txt" : "Our Services",
-            "link" : "",
+            "link" : "/service",
         },
         {
             "txt" : "Careers",
-            "link" : "",
+            "link" : "/career",
         },
         {
             "txt" : "Sustainability",
-            "link" : "",
+            "link" : "/sustainability",
         },
         {
             "txt" : "Investors",
-            "link" : "",
+            "link" : "/investors",
         },
         {
             "txt" : "Newsroom",
-            "link" : "",
+            "link" : "/newsroom",
         },
         
     ],

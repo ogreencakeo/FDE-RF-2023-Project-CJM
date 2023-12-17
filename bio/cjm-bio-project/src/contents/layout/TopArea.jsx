@@ -14,7 +14,7 @@ export const TopArea = memo(() => {
         $('.ham-nav-bx.on a, .logo').on('click', ()=>{
             $('.ham-nav-bx.on, .ham-btn.on').removeClass('on');
         })
-    })
+    }, [])
     return (
         <>
             <div className="top-area-wrap">
