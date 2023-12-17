@@ -9,7 +9,7 @@ export function Map(props) {
             {/* <!-- 레스토랑 위치 사진 --> */}
             <div className="map_wrap">
                 <div className="map_bx">
-                    <h1>{props.cat == 'goods'?'굿즈의 위치' : '레스토랑의 위치'}</h1>
+                    <h1>{props.cat == 'goods'?'굿즈의 위치' : props.cat=='attraction'? '어트랙션의 위치' :'레스토랑의 위치'}</h1>
                     {/* <!-- 레스토랑 지도및 설명 --> */}
                     <div className="map">
                         <div className="map_img">
