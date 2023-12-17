@@ -11,8 +11,8 @@ export const TopArea = memo(() => {
         $('.ham-nav-bx, .ham-btn').toggleClass('on');
     }
     useEffect(() => {
-        $('ham-nav-bx li a').on('click', ()=>{
-            $('.ham-nav-bx, .ham-btn').removeClass('on');
+        $('.ham-nav-bx.on a, .logo').on('click', ()=>{
+            $('.ham-nav-bx.on, .ham-btn.on').removeClass('on');
         })
     })
     return (
