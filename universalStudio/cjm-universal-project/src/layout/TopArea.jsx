@@ -88,7 +88,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
                                 <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
-                                <input id="schinGnb" type="text" placeholder="Filter by keyword" onKeyUp={enterKey} />
+                                <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>
                             <a href="#" onClick={showSerach}>
                                 <FontAwesomeIcon icon={faSearch} />
@@ -123,7 +123,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
                                 <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
-                                <input id="schinGnb" type="text" placeholder="Filter by keyword" onKeyUp={enterKey} />
+                                <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>
                             <a href="#" onClick={showSerach}>
                                 <FontAwesomeIcon icon={faSearch} />
