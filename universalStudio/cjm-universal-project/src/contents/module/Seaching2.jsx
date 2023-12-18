@@ -67,12 +67,19 @@ export function Seaching2(props) {
 
     // 첫 렌더링 시에만 초기화를 수행하도록 변경
     useEffect(() => {
-        // if (!firstSts.current) {
-        //     firstDo();
-        //     firstSts.current = 1;
-        // }
-        firstDo();
-    });
+        const firstTemp = attractionData.filter((v) => {
+            if (v.name.indexOf(props.kword) != -1) return true;
+        });
+
+        firstTemp.sort((a, b) => {
+            return a.name == b.name ? 0 : a.name > b.name ? 1 : -1;
+        });
+
+        setSelData([firstTemp, 2]);
+        setCnt(firstTemp.length);
+        chgKword(props.kword);
+        // schList();
+    },[]);
 
     // 검색리스트 만들기 함수
     function schList(e) {

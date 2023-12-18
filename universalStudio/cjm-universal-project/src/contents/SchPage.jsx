@@ -9,7 +9,6 @@ export function SchPage(){
 
     return(
         <>
-           
             <Seaching2 kword={keyword} />
         </>
     );
