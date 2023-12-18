@@ -1277,13 +1277,15 @@ a {
         margin: 90px 0 120px;
     }
 
-    
     .page2{
         margin: 70px 0;
         padding-bottom: 20px;
     }
     .image-move li{
         width: 280px;
+    }
+    .image-move li>img{
+        border: 5px solid #000;
     }
     .area-cont-bx{
         margin: 0 auto 130px;

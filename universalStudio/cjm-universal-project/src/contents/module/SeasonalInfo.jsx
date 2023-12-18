@@ -54,7 +54,7 @@ export function SeasonalInfo(props) {
                                     </tr>
                                     <tr>
                                         <td><FontAwesomeIcon icon={faUserShield} /></td>
-                                        <td>안심·안전한 파크 운영</td>
+                                        <td colSpan={2}>안심·안전한 파크 운영</td>
                                     </tr>
                                 </table>
                             </div>
