@@ -17,22 +17,11 @@ import { attractionData } from "../../data/attraction/attractionData";
 
 export function Seaching2(props) {
     const [kword, setKword] = useState(null);
-    const [cntNum, setCntNum] = useState(0);
     // - 정렬상태값 : 0 - 오름차순, 1 - 내림차순, 2 - 정렬전
     const [selData, setSelData] = useState([[], 2]);
     const [cnt, setCnt] = useState(0);
 
     const chgKword = (txt) => setKword(txt);
-
-    // 1-상단검색허용 , 0-상단검색불허용
-    const allow = useRef(1);
-    const firstSts = useRef(0);
-
-    // const xx = useRef(null);
-    // useEffect(() => {
-    //     console.log(xx);
-    //     xx.current.style.outline = "5px dotted orange";
-    // }); //// useEffect ///
 
     const initFn = () => {
         console.log('init 실행');
@@ -41,50 +30,9 @@ export function Seaching2(props) {
             $("#schinGnb").val(props.kword);
             schList();
         }
-        // 검색 리스트 만들기
     };
 
     initFn();
-
-    // 만약 useRef변수값이 1이면(true면) initFn실행!
-    //  if (allow.current) initFn();
-
-    function firstDo() {
-        const firstTemp = attractionData.filter((v) => {
-            if (v.name.indexOf(props.kword) != -1) return true;
-        });
-
-        firstTemp.sort((a, b) => {
-            return a.name == b.name ? 0 : a.name > b.name ? 1 : -1;
-        });
-
-        setSelData([firstTemp, 2]);
-        setCnt(firstTemp.length);
-        chgKword(props.kword);
-    }
-
-    // 한번만 호출
-    // if (!firstSts.current) {
-    //     firstDo();
-    //     firstSts.current = 1;
-    // }
-
-    // 첫 렌더링 시에만 초기화를 수행하도록 변경
-    useEffect(() => {
-        initFn(); 
-        // const firstTemp = attractionData.filter((v) => {
-        //     if (v.name.indexOf(props.kword) != -1) return true;
-        // });
-
-        // firstTemp.sort((a, b) => {
-        //     return a.name == b.name ? 0 : a.name > b.name ? 1 : -1;
-        // });
-
-        // setSelData([firstTemp, 2]);
-        // setCnt(firstTemp.length);
-        // chgKword(props.kword);
-        // schList();
-    },[]);
 
     // 검색리스트 만들기 함수
     function schList(e) {
@@ -97,57 +45,6 @@ export function Seaching2(props) {
         setSelData([newList, 2]);
         setCnt(newList.length);
     }
-
-    // 엔터키 반응 함수
-    const enterKey = (e) => {
-        console.log('enter진입1');
-        if (e.key == "Enter") {
-            console.log('enter진입2');
-            allow.current = 0;
-            setTimeout(() => (allow.current = 1), 0);
-            let txt = $(e.target).val();
-            chgKword(txt);
-
-            schList();
-        }
-    };
-
-    // 체크박스 검색 함수
-    // const chkSearch = (e) => {
-    //     const cid = e.target.id;
-    //     const chked = e.target.checked;
-
-    //     let temp = selData[0];
-    //     let lastList = [];
-
-    //     let num = $('.chkhdn:checked').length;
-
-    //     if (chked) {
-    //         const nowList = attractionData.filter((v) => {
-    //             if (v.areatype === cid) return true;
-    //         });
-
-    //         if (num > 1) {
-    //             // 체크된 항목이 여러 개일 때
-    //             lastList = [...temp, ...nowList];
-    //         } else {
-    //             // 체크된 항목이 하나일 때
-    //             lastList = [...nowList];
-    //         }
-    //     } else {
-    //         // 체크가 해제된 경우
-    //         for (let i = 0; i < temp.length; i++) {
-    //             if (temp[i].areatype === cid) {
-    //                 temp.splice(i, 1);
-    //                 i--;
-    //             }
-    //         }
-    //         lastList = temp;
-    //     }
-    //     setSelData([lastList, 2]);
-    //     setCnt(lastList.length);
-    // };
-
     // 리스트 정렬 함수
     const sortList = (e) => {
         const optVal = e.target.value;
@@ -167,62 +64,14 @@ export function Seaching2(props) {
         setSelData([temp, Number(optVal)]);
     };
 
+    // 첫 렌더링 시에만 초기화를 수행하도록 변경
+    useEffect(() => {
+        initFn(); 
+    },[]);
+
     return (
         <>
             <div className="attraction-wrap">
-                {/* 어트랙션 옵션 박스 */}
-                {/* <div className="attraction-option-wrap"> */}
-                {/* 검색박스 */}
-                {/* <div className="searching">
-                        <FontAwesomeIcon
-                            icon={faSearch}
-                            className="schbtn"
-                            title="Open Serach"
-                            onClick={schList}
-                            // ref={xx}
-                        />
-                        <input
-                            id="schin"
-                            type="text"
-                            placeholder="Filter by Kwyword"
-                            onKeyUp={enterKey}
-                            defaultValue={kword}
-                        />
-                    </div> */}
-                {/* <div className="option-check">
-                        <h2>
-                            에어리어
-                            <span className="spbtn">＋</span>
-                        </h2>
-                        <ol>
-                            <li>
-                                슈퍼 닌텐도 월드™
-                                <input type="checkbox" id="nintendo" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="nintendo" className="arealb"></label>
-                            </li>
-                            <li>
-                                위저딩 월드 오브 해리 포터™
-                                <input type="checkbox" id="harrypotter" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="harrypotter" className="arealb"></label>
-                            </li>
-                            <li>
-                                미니언 파크
-                                <input type="checkbox" id="minion" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="minion" className="arealb"></label>
-                            </li>
-                            <li>
-                                유니버설 원더랜드
-                                <input type="checkbox" id="wonderland" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="wonderland" className="arealb"></label>
-                            </li>
-                            <li>
-                                쥬라기 공원
-                                <input type="checkbox" id="jurassicpark" className="chkhdn" onChange={chkSearch} />
-                                <label htmlFor="jurassicpark" className="arealb"></label>
-                            </li>
-                        </ol>
-                    </div> */}
-                {/* </div> */}
                 {/* 결과 리스트 박스 */}
                 <div className="attraction-cont-listbx">
                     <h1 className="tit">검색 결과</h1>

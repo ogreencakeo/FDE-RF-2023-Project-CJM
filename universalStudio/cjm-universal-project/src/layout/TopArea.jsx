@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 // 제이쿼리
 import $ from "jquery";
-import "jquery-ui-dist/jquery-ui";
 
 import { navMenu } from "../data/navMenu";
 import { Logo } from "../contents/module/Logo";
@@ -35,7 +34,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     };
 
     const goSerach = (txt) => {
-        $('.top-show-nav').slideUp().removeClass('on');
+        $('.top-show-nav').slideToggle().removeClass('on');
         chgPageFn("/schpage", { state: { keyword: txt } });
     };
 
