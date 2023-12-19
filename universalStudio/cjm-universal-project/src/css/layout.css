@@ -34,7 +34,7 @@ main.cont {
 .gnb>ul>li {
     /* 상위메뉴 부모자격 */
     position: relative;
-    line-height: 65px;
+    line-height: 80px;
     font-family: 'Gugi';
     font-size: 1.2rem;
 }
@@ -309,7 +309,7 @@ ol.bmenu {
     font-family: 'Jua';
     font-size: 1.2rem;
     left: 50%;
-    top: 0;
+    /* top: 0; */
     transform: translateX(-50%);
     
 }
@@ -323,8 +323,8 @@ ol.bmenu {
 @media screen and (max-width:1024px) {
     .logmsg{
         right: 5%;
-        top: 50%;
-        transform: translate(0, -50%);
+        /* top: 50%; */
+        /* transform: translate(0, -50%); */
     }
 
     .top-area {

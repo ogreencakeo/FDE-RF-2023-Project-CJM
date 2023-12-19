@@ -62,7 +62,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     return (
         <>
             <header className="top-area">
-                <div className="logmsg">{logMsg}</div>
+            <div className="logmsg">{logMsg}</div>
                 <nav className="gnb">
                     <ul>
                         <li>
