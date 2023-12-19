@@ -1,4 +1,4 @@
-import { business_data } from '../data/business_data.js';
+import { business_data } from '../data/business_data';
 
 export function BusinessValue(props) {
     const selData = business_data[props.cat];

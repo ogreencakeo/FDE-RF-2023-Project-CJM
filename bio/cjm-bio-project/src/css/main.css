@@ -7,6 +7,7 @@
     margin: 100px auto;
     display: flex;
     justify-content: space-between;
+    padding: 50px 0;
 }
 
 .service-cont-bx{
@@ -22,7 +23,7 @@
 .service-cont-bx h2{
     text-align: center;
     padding: 10px;
-    background-color: #073888ff;
+    background-color: #303f2dff;
     color: #fff;
     margin-bottom: 5px;
     font-family: 'Nanum Gothic Coding';
@@ -37,7 +38,7 @@
 }
 .service-cont-img>img{
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.2/1;
 }
 
 .service-cont-bx p{
@@ -75,6 +76,143 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+/* 역사 */
+.history-wrap{
+    max-width: 100%;
+}
+
+.history-top{
+    margin-bottom: 150px;
+}
+.history-top>p{
+    text-align: center;
+    font-family: 'Jua';
+    font-size: 1.5rem;
+}
+.history-top>p::after{
+    content: '';
+    width: 95%;
+    display: block;
+    margin: 5px auto 10px;
+    height: 3px;
+    background-color: #6b7c67ff;
+}
+.history-top>h1{
+    font-size: 2rem;
+    line-height: 2;
+    text-align: center;
+}
+.green-div{
+    width: 25vw;
+    height: 30vh;
+    background: linear-gradient(90deg, #fff, rgb(112 181 115), #475743ff );
+    position: relative;
+    margin-left: auto;
+}
+.history-img-bx{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.history-cont-bx{
+    width: 40%;
+    border-left: 1px solid #475743ff;
+    transform: translateX(25px);
+}
+.history-cont{
+    max-width: 100%;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.history-cont h1::before{
+    content: '';
+    display: block;
+    transform: translateX(-31px);
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid rgb(112 181 115);
+    box-sizing: border-box;
+}
+.history-cont h1::after{
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    content: '';
+    display: block;
+    transform: translateX(-21px);
+    background-color: rgb(112 181 115);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+.history-cont h1{
+    color: #002023ff;
+}
+.history-cont p{
+    line-height: 1.8;
+}
+.history-img{
+    width: 50%;
+}
+.history-img img{
+    max-width: 100%;
+    aspect-ratio: 1.3/1;
+}
+/* 핵심기술 */
+.platform-tech-wrap{
+    max-width: 100%;
+    background-color: #e4e7ec;
+    /* position: static; */
+    height: 510px;
+    /* border-top: 2px solid #555; */
+    /* border-bottom: 2px solid #555; */
+}
+.platform-tech-div{
+    max-width: 1300px;
+    top: 10%;
+    margin: 0 auto;
+    /* position: relative; */
+    height: 100%;
+}
+.platform-tech-bx{
+    /* position: absolute; */
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(60px);
+
+}
+.platform-tech-div img{
+    max-width: 100%;
+    aspect-ratio: 2/1.3;
+    display: block;
+    max-width: 800px;
+}
+
+.platfrom-tech-cont{
+    margin-left: 20px;
+    transform: translateY(-10px);
+}
+.platfrom-tech-cont>h1{
+    transform: translateX(-150px);
+    font-size: 5rem;
+    text-shadow: 1px 1px 5px #555;
+    color: #fff;
+}
+.platfrom-tech-li{
+    display: flex;
+}
+.platfrom-tech-li h1{
+    margin: 10px 50px;
+    font-size: 3rem;
+}
+.platfrom-tech-li div{
+    line-height: 1.8;
+}
+
 /* 인재상 */
 .business-cont-wrap{
     max-width: 1300px;
@@ -169,7 +307,7 @@
 /* footer */
 .footer-wrap{
     max-width: 100%;
-    background-color: #000;
+    background-color:  #baccb3ff;
 }
 .footer{
     max-width: 1300px;
@@ -192,10 +330,35 @@
 .footer p{
     text-align: center;
 }
-.footer h2{
+.footer h2:nth-of-type(1){
+    color: #000;
+    font-size: 3rem;
+}
+
+/* 메인 비주얼 */
+/* 메인 비주얼1 */
+.main_visual01{
+    position: relative;
+    max-width: 100%;
+}
+.main_visual01 img{
+    max-width: 100%;
+    aspect-ratio: 3.5/1;
+    display: block;
+}
+.main_visual_cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
     text-align: center;
 }
-.footer h2:nth-of-type(1){
-    color: #1b6ef3ff;
+.main_visual_cont h1{
+    font-size: 5rem;
+    margin: 30px;
+}
+.main_visual_cont h2{
     font-size: 3rem;
+    text-shadow: 2px 2px 5px #000;
 }

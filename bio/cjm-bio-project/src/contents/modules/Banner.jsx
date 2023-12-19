@@ -6,18 +6,28 @@ import "jquery-ui-dist/jquery-ui";
 $.easing.easeInOut = $.easing.easeInOut || function (x, t, b, c, d) {
     if ((t /= d / 2) < 1) return c / 2 * t * t + b;
     return -c / 2 * ((--t) * (t - 2) - 1) + b;
-  };
+};
 
 export function Banner(props){
     const selData = banData[props.category];
+
+    const makeCode = (data) => {
+        const temp = [];
+        const split_data = data.split('^');
+        for(let i=0; i<split_data.length; i++){
+            temp[i] = <p>{split_data[i]}</p>
+        }
+        return temp;
+    };
+
     const makeList = (data) => {
         return data.map((v, i) =>
             <li key={i}>
                 <img src={v.src} alt='' />
                 <section className='bantit'>
                     <h3>{v.tit}</h3>
-                    <h2>{v.subtit}</h2>
-                    {v.btn != '' && <button>{v.btn}</button>}
+                    <p>{v.subtit.indexOf('^') == -1? v.subtit : makeCode(v.subtit)}</p>
+                    {/* {v.btn != '' && <button>{v.btn}</button>} */}
                 </section>
             </li>
         )
