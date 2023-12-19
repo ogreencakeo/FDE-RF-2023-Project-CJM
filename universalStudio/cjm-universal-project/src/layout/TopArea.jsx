@@ -20,9 +20,9 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     const enterKey = (e) => {
         $(e.target).bind( 'keydown',function (e) {
             if (e.key === "Enter" || e.keyCode === 13) {
-                console.log('e.target :', e.target);
-                console.log(e.keyCode);
+                // console.log('e.target :', e.target);
                 let txt = $(e.target).val().trim();
+                console.log(txt);
                 if (txt !== "") {
                     $(e.target).val("").parent().hide();
                     goSerach(txt);
@@ -88,6 +88,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
                                 <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
+                                <input type="text" style={{display : 'none'}}/>
                                 <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>
                             <a href="#" onClick={showSerach}>
