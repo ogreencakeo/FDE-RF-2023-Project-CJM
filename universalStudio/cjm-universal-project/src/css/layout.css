@@ -306,10 +306,12 @@ ol.bmenu {
 /* 환영메시지 */
 .logmsg{
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     font-family: 'Jua';
     font-size: 1.2rem;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    
 }
 
 @media screen and (max-width:1320px) {
@@ -319,6 +321,11 @@ ol.bmenu {
 }
 
 @media screen and (max-width:1024px) {
+    .logmsg{
+        right: 5%;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
 
     .top-area {
         overflow: hidden;

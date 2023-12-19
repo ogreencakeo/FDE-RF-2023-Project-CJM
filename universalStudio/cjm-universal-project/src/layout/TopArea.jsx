@@ -18,7 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // enterKey
     const enterKey = (e) => {
-        $(e.target).bind( 'keydown',function (e) {
+        $(e.target).bind("keydown", function (e) {
             if (e.key === "Enter" || e.keyCode === 13) {
                 // console.log('e.target :', e.target);
                 let txt = $(e.target).val().trim();
@@ -50,7 +50,6 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
 
     const showMenu = () => {
         $(".top-show-nav").slideToggle().toggleClass("on");
-        
     };
 
     useEffect(() => {
@@ -89,7 +88,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
                                 <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
-                                <input type="text" style={{display : 'none'}}/>
+                                <input type="text" style={{ display: "none" }} />
                                 <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>
                             <a href="#" onClick={showSerach}>
@@ -125,7 +124,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
                                 <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
-                                <input type="text" style={{display : 'none'}}/>
+                                <input type="text" style={{ display: "none" }} />
                                 <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>
                             <a href="#" onClick={showSerach}>

@@ -27,6 +27,11 @@
     padding: 10px;
 }
 
+@media screen and (max-width:1020px) {
+    .attraction-wrap{
+        margin: 50px auto;
+    }
+}
 @media screen and (max-width:1000px) {
     .attractionCont-list-wrap>a{
         width: 47%;
