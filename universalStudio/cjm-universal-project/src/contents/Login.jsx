@@ -53,7 +53,7 @@ export function Login() {
         e.preventDefault();
         if(totalValid()){
             initData();
-            let memData = localStorage.getItem('mem-data');
+            let memData = localStorage.getItem('universal-mem-data');
             memData = JSON.parse(memData);
 
             let findData = memData.find((v) => {
@@ -64,9 +64,9 @@ export function Login() {
                 setUserIdError(false);
                 if(findData['pwd'] === pwd){
                     setPwdError(false);
-                    localStorage.setItem('minfo', JSON.stringify(findData));
+                    localStorage.setItem('universal-minfo', JSON.stringify(findData));
 
-                    myCon.setLogSts(localStorage.getItem('minfo'));
+                    myCon.setLogSts(localStorage.getItem('universal-minfo'));
                     myCon.setLogMsg(findData.unm + '님 환영합니다!');
 
                     myCon.chgPage('/', {});

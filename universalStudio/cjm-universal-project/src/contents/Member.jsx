@@ -52,7 +52,7 @@ export function Member() {
 
         if(valid.test(e.target.value)){
             initData();
-            let memData = localStorage.getItem('mem-data');
+            let memData = localStorage.getItem('universal-mem-data');
             memData = JSON.parse(memData);
 
             // 기존 아이디가 있으면 상태값 false로 업데이트
@@ -135,7 +135,7 @@ export function Member() {
         e.preventDefault();
         if(totalValid()){
             initData();
-            let memData = localStorage.getItem('mem-data');
+            let memData = localStorage.getItem('universal-mem-data');
             memData = JSON.parse(memData);
 
             let newData = {
@@ -149,7 +149,7 @@ export function Member() {
             memData.push(newData);
 
             // 로컬스에 반영하기
-            localStorage.setItem('mem-data', JSON.stringify(memData));
+            localStorage.setItem('universal-mem-data', JSON.stringify(memData));
             // document.querySelector('.sbtn').innerText = '넌 이제 회원인거야~!';
 
             alert('로그인 페이지로 이동하겠습니다!');

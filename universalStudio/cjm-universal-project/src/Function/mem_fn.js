@@ -6,9 +6,9 @@ const clearData = () => {
 }; 
 
 const initData = () => {
-    if (localStorage.getItem("mem-data") === null) {
+    if (localStorage.getItem("universal-mem-data") === null) {
         localStorage.setItem(
-            "mem-data",
+            "universal-mem-data",
             `
                 [
                     {
