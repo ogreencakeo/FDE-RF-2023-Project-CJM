@@ -16,13 +16,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
-    // showSerach
-    const showSerach = (e) => {
-        e.preventDefault();
-        $(".searchingGnb").show();
-        $("#schinGnb").focus();
-    };
-
+    
     // enterKey
     const enterKey = (e) => {
         if (e.key === "Enter") {
@@ -33,30 +27,38 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             }
         }
     };
+    // showSerach
+    const showSerach = (e) => {
+        e.preventDefault();
+        $(".searchingGnb").show();
+        $("#schinGnb").focus();
+        let txt = $('#schinGnb').val().trim();
+        console.log(txt);
+        // if (txt !== "") {
+        //     $(e.target).val("").parent().hide();
+        //     goSerach(txt);
+        // }
+    };
 
     const goSerach = (txt) => {
-        $('.top-show-nav').slideUp().removeClass('on');
+        $(".top-show-nav").slideUp().removeClass("on");
         chgPageFn("/schpage", { state: { keyword: txt } });
     };
 
     const showMenu = () => {
-        $('.top-show-nav').slideToggle().toggleClass('on');
+        $(".top-show-nav").slideToggle().toggleClass("on");
         window.scrollTo(0, 0);
-    }
+    };
 
     useEffect(() => {
-        $(".gnb2 a[href!='#']").on('click', () => {
-            $('.top-show-nav').slideUp().removeClass('on');
+        $(".gnb2 a[href!='#']").on("click", () => {
+            $(".top-show-nav").slideUp().removeClass("on");
         });
     }); // useEffect
 
-
-
     return (
         <>
-            {
-                logMsg && alert(`${logMsg}`)
-            }
+            {logMsg && alert(`${logMsg}`)}
             <header className="top-area">
                 <nav className="gnb">
                     <ul>
@@ -99,15 +101,15 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                                 </li>
                             </>
                         )}
-                        {
-                            logSts !== null && (
-                                <>
-                                    <li>
-                                        <a href="#" onClick={logOut}>LOGOUT</a>
-                                    </li>
-                                </>
-                            )
-                        }
+                        {logSts !== null && (
+                            <>
+                                <li>
+                                    <a href="#" onClick={logOut}>
+                                        LOGOUT
+                                    </a>
+                                </li>
+                            </>
+                        )}
                     </ul>
                     <button className="hambtn" onClick={showMenu}></button>
                 </nav>
@@ -151,15 +153,15 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                                     </li>
                                 </>
                             )}
-                            {
-                                logSts !== null && (
-                                    <>
-                                        <li>
-                                            <a href="#" onClick={logOut}>LOGOUT</a>
-                                        </li>
-                                    </>
-                                )
-                            }
+                            {logSts !== null && (
+                                <>
+                                    <li>
+                                        <a href="#" onClick={logOut}>
+                                            LOGOUT
+                                        </a>
+                                    </li>
+                                </>
+                            )}
                         </div>
                     </ul>
                 </nav>
