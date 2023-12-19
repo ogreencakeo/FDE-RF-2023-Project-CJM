@@ -18,8 +18,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // enterKey
     const enterKey = (e) => {
-        $(e.target).keydown(function (e) {
-            if (e.key === "Enter" || e.keyCode == 13) {
+        $(e.target).bind( 'keydown',function (e) {
+            if (e.key === "Enter" || e.keyCode === 13) {
+                console.log('e.target :', e.target);
+                console.log(e.keyCode);
                 let txt = $(e.target).val().trim();
                 if (txt !== "") {
                     $(e.target).val("").parent().hide();
