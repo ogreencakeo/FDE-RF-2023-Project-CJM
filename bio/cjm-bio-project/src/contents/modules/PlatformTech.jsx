@@ -8,7 +8,7 @@ export function PlatformTech(){
             <div className="platform-tech-wrap">
                 <div className="platform-tech-div">
                     <div className="platform-tech-bx">
-                        <img src="../images/platformTech/2.jpg" alt="핵심기술" />
+                        <img src="../images/platformTech/1.jpg" alt="핵심기술" />
                         <div className="platfrom-tech-cont">
                             <h1>At a Glance</h1>
                             {
