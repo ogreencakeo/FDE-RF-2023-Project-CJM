@@ -34,8 +34,8 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     };
 
     const goSerach = (txt) => {
+        $('.top-show-nav').slideUp().removeClass('on');
         chgPageFn("/schpage", { state: { keyword: txt } });
-        $('.top-show-nav').slideToggle().removeClass('on');
     };
 
     const showMenu = () => {
@@ -45,7 +45,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
 
     useEffect(() => {
         $(".gnb2 a[href!='#']").on('click', () => {
-            $('.top-show-nav').slideToggle().removeClass('on');
+            $('.top-show-nav').slideUp().removeClass('on');
         });
     }); // useEffect
 
