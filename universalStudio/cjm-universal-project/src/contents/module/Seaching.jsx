@@ -6,6 +6,7 @@ import { AttractionCont } from "./AttractionCont";
 
 // 제이쿼리
 import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
 
 // css
 import "../../css/attraction.css";

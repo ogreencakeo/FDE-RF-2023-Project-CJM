@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 // 제이쿼리
 import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
 
 import { navMenu } from "../data/navMenu";
 import { Logo } from "../contents/module/Logo";
