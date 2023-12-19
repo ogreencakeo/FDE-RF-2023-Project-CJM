@@ -19,7 +19,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // enterKey
     const enterKey = (e) => {
         $(e.target).bind( 'keydown',function (e) {
-            if (e.key === "Enter" || window.e.keyCode === 13) {
+            if (e.key === "Enter") {
                 // console.log('e.target :', e.target);
                 let txt = $(e.target).val().trim();
                 console.log(txt);
@@ -61,8 +61,8 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
 
     return (
         <>
-            {logMsg && alert(`${logMsg}`)}
             <header className="top-area">
+                <div className="logmsg">{logMsg}</div>
                 <nav className="gnb">
                     <ul>
                         <li>

@@ -11,7 +11,18 @@ export function Layout(){
 
     useLayoutEffect(()=>{
         window.scrollTo(0, 0);
+        
     });
+
+    useEffect(()=>{
+        if (localStorage.getItem("universal-minfo")) {
+            const minfo = JSON.parse(localStorage.getItem("universal-minfo"));
+            // 유저아이콘
+            const usrIcon = ["🧡", "💜", "💚", "💙", "💛", "🤎"];
+            // 컨텍스트 API에 공개된 로그인 메시지 업데이트하기!
+            setLogMsg("Welcome " + minfo.unm + usrIcon[Math.floor(Math.random() * 5)]);
+        } // if ///////////
+    },[])
     
     const goNav = useNavigate();
 
