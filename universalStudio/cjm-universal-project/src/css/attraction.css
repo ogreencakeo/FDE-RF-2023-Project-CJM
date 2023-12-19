@@ -26,3 +26,14 @@
     text-align: center;
     padding: 10px;
 }
+
+@media screen and (max-width:1000px) {
+    .attractionCont-list-wrap>a{
+        width: 47%;
+    }
+}
+@media screen and (max-width:700px) {
+    .attractionCont-list-wrap>a{
+        width: 100%;
+    }
+}
