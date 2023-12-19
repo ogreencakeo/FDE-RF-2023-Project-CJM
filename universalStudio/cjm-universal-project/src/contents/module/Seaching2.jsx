@@ -36,11 +36,15 @@ export function Seaching2(props) {
 
     const initFn = () => {
         console.log('init 실행');
-        chgKword(props.kword);
-        $("#schin").val(props.kword);
+        if(props.kword!=kword){
+            chgKword(props.kword);
+            $("#schinGnb").val(props.kword);
+            schList();
+        }
         // 검색 리스트 만들기
-        schList();
     };
+
+    initFn();
 
     // 만약 useRef변수값이 1이면(true면) initFn실행!
     //  if (allow.current) initFn();
@@ -60,31 +64,32 @@ export function Seaching2(props) {
     }
 
     // 한번만 호출
-    if (!firstSts.current) {
-        firstDo();
-        firstSts.current = 1;
-    }
+    // if (!firstSts.current) {
+    //     firstDo();
+    //     firstSts.current = 1;
+    // }
 
     // 첫 렌더링 시에만 초기화를 수행하도록 변경
     useEffect(() => {
-        const firstTemp = attractionData.filter((v) => {
-            if (v.name.indexOf(props.kword) != -1) return true;
-        });
+        initFn(); 
+        // const firstTemp = attractionData.filter((v) => {
+        //     if (v.name.indexOf(props.kword) != -1) return true;
+        // });
 
-        firstTemp.sort((a, b) => {
-            return a.name == b.name ? 0 : a.name > b.name ? 1 : -1;
-        });
+        // firstTemp.sort((a, b) => {
+        //     return a.name == b.name ? 0 : a.name > b.name ? 1 : -1;
+        // });
 
-        setSelData([firstTemp, 2]);
-        setCnt(firstTemp.length);
-        chgKword(props.kword);
+        // setSelData([firstTemp, 2]);
+        // setCnt(firstTemp.length);
+        // chgKword(props.kword);
         // schList();
     },[]);
 
     // 검색리스트 만들기 함수
     function schList(e) {
         console.log(e);
-        let keyword = $("#schin").val();
+        let keyword = $("#schinGnb").val();
         const newList = attractionData.filter((v) => {
             if (v.name.indexOf(keyword) != -1) return true;
         });
