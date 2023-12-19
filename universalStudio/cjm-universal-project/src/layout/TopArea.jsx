@@ -50,13 +50,14 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
 
     const showMenu = () => {
         $(".top-show-nav").slideToggle().toggleClass("on");
-        window.scrollTo(0, 0);
+        
     };
 
     useEffect(() => {
         $(".gnb2 a[href!='#']").on("click", () => {
             $(".top-show-nav").slideUp().removeClass("on");
         });
+        // window.scrollTo(0, 0);
     }); // useEffect
 
     return (

@@ -67,7 +67,6 @@ export function Login() {
                     localStorage.setItem('universal-minfo', JSON.stringify(findData));
 
                     myCon.setLogSts(localStorage.getItem('universal-minfo'));
-                    myCon.setLogMsg(findData.unm + '님 환영합니다!');
 
                     myCon.chgPage('/', {});
                 }else{

@@ -7,7 +7,7 @@ import { moveImgData } from "../../data/move_img_data";
 export function ImgMoveSlide(props) {
     const selData = moveImgData[props.imgMove];
     // console.log(props.imgMove);
-    console.log(selData);
+    // console.log(selData);
     return (
         <div className="image-move-wrap">
             <div className="image-move img-move-ani">
