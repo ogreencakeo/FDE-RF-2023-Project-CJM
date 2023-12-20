@@ -14,7 +14,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
     const pgBlock = 5;
     const [pgNum, setPgNum] = useState(1);
     const [cartData, setCartData] = useState(selData);
-    const [force, setForce] = useState(null);
 
     if (cartData !== selData && flag.current) {
         setCartData(selData);
@@ -30,21 +29,26 @@ export const CartList = memo(({ selData, tprice, flag }) => {
 
         let confMsg = "정말로 지우시겠습니까?";
 
-        if (confirm(confMsg)) {
+        if (window.confirm(confMsg)) {
             const selIdx = $(e.target).attr("data-idx");
             console.log("지울아이:", selIdx);
             // console.log("cartData", cartData);
 
             const newData = cartData.filter((v) => {
-                if (v.번호 !== selIdx) return true;
+                if (v['번호'].toString() !== selIdx.toString()) {
+                    // console.log('v["번호"]', v['번호'])
+                    return true
+                };
             });
 
             console.log("newData :", newData);
 
             localStorage.setItem("universal-cart", JSON.stringify(newData));
             setCartData(newData);
+
         } ////// if /////////
     };
+
 
     //정규식함수(숫자 세자리마다 콤마해주는 기능)
     function addComma(x) {
