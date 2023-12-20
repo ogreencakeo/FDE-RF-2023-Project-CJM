@@ -37,16 +37,18 @@
 
 .ham-btn>span:first-child {
     top: 15px;
+    transition: .3s ease-in;
 }
 
 .ham-btn>span:nth-child(2) {
     top: 35px;
     transform: translateX(-20px);
-    transition: .2s ease-in;
+    transition: .3s ease-in;
 }
 
 .ham-btn>span:last-child {
     top: 55px;
+    transition: .2s ease-in;
 }
 
 .ham-btn:hover span:nth-child(2) {
@@ -55,12 +57,12 @@
 }
 
 .ham-btn.on span:first-child{
-    display: none;
-}
-.ham-btn.on span:nth-child(2){
     top: 35px;
     transform: rotate(45deg);
     width: 60px;
+}
+.ham-btn.on span:nth-child(2){
+    display: none;
 }
 .ham-btn.on span:last-child{
     top: 35px;

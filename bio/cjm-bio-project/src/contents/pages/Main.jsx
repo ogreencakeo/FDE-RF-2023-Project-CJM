@@ -66,7 +66,8 @@ export function Main() {
                 </div>
             </div>
             <div className="main_visual01">
-                <img src="../images/main/main_visual01.png" alt="메인 이미지" />
+                <div className="main_visual_img"></div>
+                {/* <img src="../images/main/main_visual01.png" alt="메인 이미지" /> */}
                 <div className="main_visual_cont">
                     <h1>Company</h1>
                     <h2>대한민국 대표 바이오기업 셀트리온</h2>

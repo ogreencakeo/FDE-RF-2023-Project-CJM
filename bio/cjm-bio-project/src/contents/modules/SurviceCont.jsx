@@ -13,6 +13,8 @@ export function SurviceCont(props){
     return(
         <>
             <div className="service-cont-wrap">
+                <h1>COMPANY</h1>
+                <p>새로운 역사를 만들어 가는 셀트리온의 노력은 계속됩니다</p>
                 <div className="service-cont">
                     {
                         selData.map((v,i) =>

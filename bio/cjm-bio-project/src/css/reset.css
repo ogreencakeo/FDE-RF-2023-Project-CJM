@@ -16,6 +16,9 @@
   @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang&family=Gugi&family=Jua&family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap&family=Poor+Story&display=swap');
 </style>
 */
+body, html{
+    overflow-x: hidden;
+}
 html,
 body,
 h1,

@@ -1,13 +1,13 @@
 /* 서비스 내용 */
 .service-cont-wrap{
     max-width: 100%;
+    padding: 200px 0 50px;
 }
 .service-cont{
-    max-width: 1300px;
+    max-width:100%;
     margin: 100px auto;
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
 }
 
 .service-cont-bx{
@@ -75,6 +75,22 @@
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
+}
+
+.bio-icon{
+    font-size: 10rem;
+    position: absolute;
+    top: 70%;
+    right: -10%;
+    animation: bio-icon-ani 10s linear infinite;
+}
+@keyframes bio-icon-ani {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 /* 역사 */
@@ -151,10 +167,12 @@
 }
 .history-cont h1{
     color: #002023ff;
+    font-size: 1.2rem;
 }
 .history-cont p{
-    line-height: 1.8;
+    line-height: 1.6;
     text-align: justify;
+    font-size: 0.85rem;
 }
 .history-img{
     width: 50%;
@@ -168,7 +186,7 @@
     max-width: 100%;
     background-color: whitesmoke;
     /* position: static; */
-    height: 510px;
+    height: 460px;
     /* border-top: 2px solid #555; */
     /* border-bottom: 2px solid #555; */
 }
@@ -190,15 +208,16 @@
     max-width: 100%;
     aspect-ratio: 2/1.3;
     display: block;
-    max-width: 800px;
+    max-width: 700px;
 }
 
 .platfrom-tech-cont{
     margin-left: 20px;
     transform: translateY(-10px);
 }
-.platfrom-tech-cont>h1{
-    transform: translateX(-150px);
+/* .platfrom-tech-cont>h1{ */
+.at-a-glance{
+    transform: translateX(-250px);
     font-size: 5rem;
     text-shadow: 1px 1px 5px #555;
     color: #fff;
@@ -208,10 +227,11 @@
 }
 .platfrom-tech-li h1{
     margin: 10px 50px;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: #555;
 }
 .platfrom-tech-li div{
-    line-height: 1.8;
+    line-height: 1.5;
 }
 
 /* 인재상 */
@@ -341,25 +361,31 @@
 .main_visual01{
     position: relative;
     max-width: 100%;
+    
 }
-.main_visual01 img{
-    max-width: 100%;
-    aspect-ratio: 3.5/1;
+.main_visual_img{
+    background: url(../../public/images/main/main_visual02.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 50vh;
     display: block;
 }
 .main_visual_cont{
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 5%;
+    transform: translateY(-50%);
     color: whitesmoke;
     text-align: center;
 }
 .main_visual_cont h1{
-    font-size: 5rem;
+    font-size: 4.5rem;
     margin: 30px;
+    text-shadow: 2px 2px 5px #000;
 }
 .main_visual_cont h2{
-    font-size: 3rem;
+    font-size: 2rem;
     text-shadow: 2px 2px 5px #000;
 }
