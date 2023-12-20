@@ -24,7 +24,7 @@ export function TicketOption() {
 
     const useCart = (idx) => {
         const quantity = option[idx]["quantity"];
-        if (option[idx]["price"] > 0) {
+        if (option[idx]["quantity"] > 0) {
             console.log("quantity", quantity, ", idx :", idx);
             // const selData = option[idx];
             const selData = option[idx];
