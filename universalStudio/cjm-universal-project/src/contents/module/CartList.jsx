@@ -33,17 +33,27 @@ export const CartList = memo(({ selData, tprice, flag }) => {
         if (confirm(confMsg)) {
             const selIdx = $(e.target).attr("data-idx");
             console.log("지울아이:", selIdx);
-            console.log('cartData', cartData);
-            console.log('cartData', cartData.번호);
+            console.log("cartData", cartData);
+            console.log("cartData.번호", cartData.번호);
 
-
-            const newData = cartData.filter((v) => {
-                if (v.번호 !== selIdx) return true;
-            });
-
-            console.log("제거후리스트:", newData);
+            for (let idx = 0; idx < cartData.length; idx++) {
+                if(cartData[idx]["번호"] !== selIdx) {
+                    console.log("hi");
+                    return true;
+                    // goNewData();
+                }
+            }
             localStorage.setItem("universal-cart", JSON.stringify(newData));
             setCartData(newData);
+
+            function goNewData(){
+                const newData = cartData.filter((v) => {
+                    if (v.번호 !== selIdx) return true;
+                    console.log("제거후리스트:", newData);
+                });
+            }
+
+
         } ////// if /////////
     };
 
