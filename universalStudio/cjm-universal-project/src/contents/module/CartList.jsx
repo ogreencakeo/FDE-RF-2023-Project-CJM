@@ -36,7 +36,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             // console.log("cartData", cartData);
 
             const newData = cartData.filter((v) => {
-                if (v.idx !== selIdx) return true;
+                if (v.번호 !== selIdx) return true;
             });
 
             console.log("newData :", newData);
