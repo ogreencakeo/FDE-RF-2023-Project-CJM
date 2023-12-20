@@ -23,7 +23,7 @@ export function TicketOption() {
     const [option, setOption] = useState([
         // A시즌
         {   
-            idx : 1,
+            idx : "1",
             price: 74300,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPerson} className="person-icon" />,
@@ -31,7 +31,7 @@ export function TicketOption() {
             option: "[1일권 Low Price (A시즌)]-성인",
         },
         {
-            idx : 2,
+            idx : "2",
             price: 48400,
             quantity: 0,
             character: <FontAwesomeIcon icon={faChild} className="child-icon" />,
@@ -39,7 +39,7 @@ export function TicketOption() {
             option: "[1일권 Low Price (A시즌)]-어린이",
         },
         {
-            idx : 3,
+            idx : "3",
             price: 66500,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />,
@@ -48,7 +48,7 @@ export function TicketOption() {
         },
         // B 시즌
         {
-            idx : 4,
+            idx : "4",
             price: 76900,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPerson} className="person-icon" />,
@@ -56,7 +56,7 @@ export function TicketOption() {
             option: "[1일권 Middle Price (B시즌)]",
         },
         {
-            idx : 5,
+            idx : "5",
             price: 50100,
             quantity: 0,
             character: <FontAwesomeIcon icon={faChild} className="child-icon" />,
@@ -64,7 +64,7 @@ export function TicketOption() {
             option: "[1일권 Middle Price (B시즌)]",
         },
         {
-            idx : 6,
+            idx : "6",
             price: 69100,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />,
@@ -73,7 +73,7 @@ export function TicketOption() {
         },
         // C 시즌
         {
-            idx : 7,
+            idx : "7",
             price: 82100,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPerson} className="person-icon" />,
@@ -81,7 +81,7 @@ export function TicketOption() {
             option: "[1일권 High Price (C시즌)]",
         },
         {
-            idx : 8,
+            idx : "8",
             price: 53600,
             quantity: 0,
             character: <FontAwesomeIcon icon={faChild} className="child-icon" />,
@@ -89,7 +89,7 @@ export function TicketOption() {
             option: "[1일권 High Price (C시즌)]",
         },
         {
-            idx : 9,
+            idx : "9",
             price: 74300,
             quantity: 0,
             character: <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />,

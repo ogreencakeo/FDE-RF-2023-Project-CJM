@@ -35,7 +35,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             // console.log("cartData", cartData);
 
             const newData = cartData.filter((v) => {
-                if (v['번호'].toString() !== selIdx.toString()) {
+                if (v['번호'] !== selIdx) {
                     // console.log('v["번호"]', v['번호'])
                     return true
                 };
@@ -46,8 +46,18 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             localStorage.setItem("universal-cart", JSON.stringify(newData));
             setCartData(newData);
 
+            
+        // 상태가 변경되었는지 확인
+        console.log("Updated cart data:", newData);
+
         } ////// if /////////
     };
+    useEffect(() => {
+        if (flag.current) {
+            console.log("Setting cart data:", selData);
+            setCartData(selData);
+        }
+    }, [selData, flag.current]);
 
 
     //정규식함수(숫자 세자리마다 콤마해주는 기능)
@@ -61,7 +71,9 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             .fadeIn(300, function () {
                 $(this).addClass("on");
             });
+            
     }, []);
+    
 
     const showList = () => {
         console.log("열려라!!");
@@ -97,7 +109,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                         </tr>
 
                         {selData.map((v, i) => (
-                            <tr key={i}>
+                            <tr key={v.번호}>
                                 <td>{v.항목}</td>
                                 {/* <td>{v.번호}</td> */}
                                 <td>
