@@ -35,23 +35,14 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             console.log("지울아이:", selIdx);
             // console.log("cartData", cartData);
 
-            // 해당 데이터 순번 알아내기
             const newData = cartData.filter((v) => {
-                console.log('cartData :', cartData);
-                console.log('cartData v :', v);
-                console.log("v['번호']", v['번호']);
-                if (v['번호'] !== selIdx){
-                    console.log("newData v['번호'] :", v['번호']);
-                    console.log('v', v);
-                    return true;
-                }
+                if (v.idx !== selIdx) return true;
             });
 
-            console.log('newData :', newData);
+            console.log("newData :", newData);
 
             localStorage.setItem("universal-cart", JSON.stringify(newData));
             setCartData(newData);
-
         } ////// if /////////
     };
 
