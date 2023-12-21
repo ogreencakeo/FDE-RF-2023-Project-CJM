@@ -27,6 +27,17 @@
     padding: 10px;
 }
 
+.sel{
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-family: 'Jua';
+    font-size: 1.2rem;
+    padding: 10px;
+
+}
+
 @media screen and (max-width:1020px) {
     .attraction-wrap{
         margin: 50px auto;
