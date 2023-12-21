@@ -14,6 +14,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
     const pgBlock = 5;
     const [pgNum, setPgNum] = useState(1);
     const [cartData, setCartData] = useState(selData);
+    const [force, setForce] = useState(null);
 
     if (cartData !== selData && flag.current) {
         setCartData(selData);
@@ -35,10 +36,10 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             // console.log("cartData", cartData);
 
             const newData = cartData.filter((v) => {
-                if (v['번호'] !== selIdx) {
+                if (v["번호"] !== selIdx) {
                     // console.log('v["번호"]', v['번호'])
-                    return true
-                };
+                    return true;
+                }
             });
 
             console.log("newData :", newData);
@@ -46,10 +47,9 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             localStorage.setItem("universal-cart", JSON.stringify(newData));
             setCartData(newData);
 
-            
-        // 상태가 변경되었는지 확인
-        console.log("Updated cart data:", newData);
-
+            // 상태가 변경되었는지 확인
+            console.log("Updated cart data:", newData);
+            setForce(Math.random());
         } ////// if /////////
     };
     useEffect(() => {
@@ -58,7 +58,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             setCartData(selData);
         }
     }, [selData, flag.current]);
-
 
     //정규식함수(숫자 세자리마다 콤마해주는 기능)
     function addComma(x) {
@@ -71,9 +70,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             .fadeIn(300, function () {
                 $(this).addClass("on");
             });
-            
     }, []);
-    
 
     const showList = () => {
         console.log("열려라!!");
@@ -83,6 +80,37 @@ export const CartList = memo(({ selData, tprice, flag }) => {
     const hideList = (e) => {
         e.preventDefault();
         $("#cartlist").animate({ right: "-100%" }, 600);
+    };
+
+    const chgNum = (e) => {
+        const tg = $(e.currentTarget);
+        const tgInput = tg.parent().siblings('.item-cnt');
+        let cNum = Number(tgInput.val());
+
+        tgInput.focus();
+
+        if (tg.attr("alt") === "증가") cNum++;
+        else cNum--;
+
+        if (cNum < 1) cNum = 1;
+
+        tgInput.val(cNum);
+    };
+
+    const goResult = (e) => {
+        let tg = $(e.currentTarget);
+        let cidx = tg.attr('data-idx');
+        flag.current = false;
+        cartData.some((v, i)=> {
+            if(v.번호 == cidx){
+                cartData[i].수량 = tg.prev().val();
+                return true;
+            }
+        });
+
+        localStorage.setItem('universal-cart', JSON.stringify(cartData));
+        setCartData(cartData);
+        setForce(Math.random());
     };
 
     return (
@@ -125,9 +153,25 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                                 </td>
                                 <td>{v.수량}</td>
                                 <td>{v.가격}</td>
-                                <td>{v.가격 * v.수량}</td>
+                                <td>{v.가격 * v.수량}원</td>
                                 {/* <td>{addComma(v.ginfo[3])}원</td> */}
-
+                                {/* 상품 수량 */}
+                                <td className="cnt-part">
+                                    <div>
+                                        <span>
+                                            <input type="text" className="item-cnt" readOnly value={v.수량} />
+                                            <button className="btn-insert" onClick={goResult} data-idx={v.번호}>
+                                                반영
+                                            </button>
+                                            <b className="btn-cnt">
+                                                <button alt="증가" onClick={chgNum}>+</button>
+                                                <button alt="감소" onClick={chgNum}>-</button>
+                                            </b>
+                                            
+                                        </span>
+                                    </div>
+                                </td>
+                                {/* 삭제버튼 */}
                                 <td>
                                     <button className="cfn" data-idx={v.번호} onClick={deleteItem}>
                                         ×
