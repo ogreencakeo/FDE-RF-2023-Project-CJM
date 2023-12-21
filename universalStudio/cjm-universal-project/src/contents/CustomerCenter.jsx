@@ -38,7 +38,7 @@ export function CustomerCenter() {
 
     const viewCusCont = (index) => {
         setIsOn((prev) => {
-            const newToggleList = [...prev];
+            const newToggleList = JSON.parse(JSON.stringify(prev));
             newToggleList[index] = !newToggleList[index];
             return newToggleList;
         });
