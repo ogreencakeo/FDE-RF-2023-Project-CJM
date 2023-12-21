@@ -189,16 +189,16 @@ export function TicketOption() {
     //     }
     // }, [])
 
-    
-
-   
+    const [totalPrice, setTotalPrice] = useState(0);
 
     // 전체 가격 계산
-    const totalPrice = () => {
-        return option.reduce((total, option) => total + option.quantity * option.price, 0);
+    const totalPriceFn = () => {
+        const newPrice = option.reduce((total, option) => (total + option.quantity * option.price), 0);
+        // setTotalPrice(newPrice);
+        return newPrice;
     };
 
-    const t_price = totalPrice().toLocaleString();
+    const t_price = totalPriceFn().toLocaleString();
 
     const ticket_opt = ["[1일권 Low Price (A시즌)]", "[1일권 Middle Price (B시즌)]", "[1일권 High Price (C시즌)]"];
 

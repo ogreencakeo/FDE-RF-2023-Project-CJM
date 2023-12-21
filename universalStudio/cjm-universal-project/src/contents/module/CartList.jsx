@@ -6,7 +6,20 @@ import $ from "jquery";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBasketShopping, faPerson, faChild, faPersonCane, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+    faBasketShopping,
+    faPerson,
+    faChild,
+    faPersonCane,
+    faXmark,
+    faPlus,
+    faMinus,
+} from "@fortawesome/free-solid-svg-icons";
+
+//정규식함수(숫자 세자리마다 콤마해주는 기능)
+function addComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 export const CartList = memo(({ selData, tprice, flag }) => {
     console.log(selData);
@@ -132,6 +145,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                 </tr>
             );
         }
+
         return tempData.map((v, i) => (
             <tr key={i}>
                 <td>{v.항목}</td>
@@ -144,8 +158,8 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                     )}
                 </td>
                 {/* <td>{v.수량}</td> */}
-                <td>{v.가격}</td>
-                <td>{v.가격 * v.수량}원</td>
+                <td>{addComma(v.가격)}원</td>
+                <td>{addComma(v.가격 * v.수량)}원</td>
                 {/* <td>{addComma(v.ginfo[3])}원</td> */}
                 {/* 상품 수량 */}
                 <td className="cnt-part">
@@ -157,10 +171,14 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                             </button>
                             <b className="btn-cnt">
                                 <button alt="증가" onClick={chgNum}>
-                                    +
+                                    <h3>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </h3>
                                 </button>
                                 <button alt="감소" onClick={chgNum}>
-                                    -
+                                    <h3>
+                                        <FontAwesomeIcon icon={faMinus} />
+                                    </h3>
                                 </button>
                             </b>
                         </span>
@@ -207,6 +225,15 @@ export const CartList = memo(({ selData, tprice, flag }) => {
         let currNum = e.target.innerText;
         setPgNum(currNum);
     };
+
+
+    // 전체 가격 계산
+    const totalPriceFn = () => {
+        const newPrice = cartData.reduce((total, cartData) => total + cartData.수량 * cartData.가격, 0);
+        // setTotalPrice(newPrice);
+        return newPrice;
+    };
+
     return (
         <>
             <section id="cartlist">
@@ -235,7 +262,8 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                         {bindList()}
                         <tr>
                             <td colSpan={6}>
-                                <h1 className="ticket-total-price">총가격 : ₩ {tprice}원 </h1>
+                                {/* <h1 className="ticket-total-price">총가격 : ₩ {tprice}원 </h1> */}
+                                <h1 className="ticket-total-price">총가격 : ₩ {addComma(totalPriceFn())}원 </h1>
                             </td>
                         </tr>
                         {/* 하단 페이징 부분 */}

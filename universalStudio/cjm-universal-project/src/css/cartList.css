@@ -53,8 +53,8 @@
     border-top: 1px solid rgb(85, 85, 85);
     text-align: center;
 }
-#cartlist td:nth-child(3) {
-    font-size: 1.2rem;
+#cartlist td:nth-child(2) {
+    font-size: 5rem;
 }
 #cartlist td img {
     width: 50px;
@@ -79,7 +79,7 @@
     background-color: #ccc;
     border-radius: 10px 0 0 10px;
     padding: 15px;
-    transition: .4s ease-in 2s;
+    transition: 0.4s ease-in 2s;
     border: 3px solid #555;
 }
 
@@ -102,7 +102,15 @@
 }
 
 /* cnt-part */
-.item-cnt{
+.item-cnt {
     width: 30px;
     text-align: center;
+}
+
+.btn-cnt button {
+    background-color: #fff;
+    border: 0;
+}
+.btn-cnt button h3 {
+    cursor: pointer;
 }
