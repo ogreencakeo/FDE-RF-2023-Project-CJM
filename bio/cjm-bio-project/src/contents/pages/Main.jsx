@@ -72,7 +72,9 @@ export function Main() {
             </div>
             {/* 한눈에 */}
             <AtAGlance />
-            
+            <div>
+            <a href="https://player.vimeo.com/video/836389151">링크</a>
+            </div>
             {/* 서비스 */}
             <SurviceCont category='main' />
 

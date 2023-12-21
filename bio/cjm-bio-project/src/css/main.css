@@ -120,8 +120,8 @@
 /* 한눈에 */
 .at-a-glance-wrap{
     max-width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
-    linear-gradient(rgba(0, 18, 70, .5), rgba(0, 18, 70, .5)),url(../../public/images/main/dna-bg.jpg) no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)),
+        linear-gradient(rgba(15, 69, 21, 0.3), rgba(15, 69, 21, 0.3)),url(../../public/images/main/virus.jpg) no-repeat center/cover;
     aspect-ratio: 2/1;
 }
 .at-a-glance-wrap>h3{
