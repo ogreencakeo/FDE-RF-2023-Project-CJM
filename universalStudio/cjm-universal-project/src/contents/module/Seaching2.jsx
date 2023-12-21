@@ -66,6 +66,7 @@ export function Seaching2(props) {
     // 첫 렌더링 시에만 초기화를 수행하도록 변경
     useEffect(() => {
         initFn(); 
+        
     },[]);
 
     return (
