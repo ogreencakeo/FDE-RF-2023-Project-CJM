@@ -124,6 +124,10 @@
     color: blue;
 }
 
+.cnt-part span{
+    display: flex;
+}
+
 /* 카트 삭제 버튼 */
 .cfn{
     width: 25px;
