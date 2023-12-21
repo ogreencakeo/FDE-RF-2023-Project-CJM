@@ -15,14 +15,8 @@
 }
 
 .vid-swiper-wrap{
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-
-.vid-swiper-bx{
-    margin: 5px;
-    padding: 5px;
+    max-width: 1350px;
+    margin: 80px auto;
 }
 
 .vid-swiper-img{
@@ -30,5 +24,5 @@
 }
 .vid-swiper-img img{
     width: 100%;
-    aspect-ratio: 1.4/1;
+    aspect-ratio: 1.5/1;
 }

@@ -8,12 +8,15 @@ import { VidSwiper } from "../plugin/swiper/VidSwiper.jsx";
 
 import { BusinessValue } from "../modules/BusinessValue.jsx";
 import { BusinessCont } from "../modules/BusinessCont.jsx";
+import { AtAGlance } from "../modules/AtAGlance.jsx";
 import { PlatformTech } from "../modules/PlatformTech.jsx";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDna }
+import { faDna, faBraille }
     from "@fortawesome/free-solid-svg-icons";
+import { faBuilding}
+    from "@fortawesome/free-regular-svg-icons";
 
 export function Main() {
     const historyData = [
@@ -36,12 +39,45 @@ export function Main() {
     ]
     return (
         <>
-            <Banner category='main' />
-            {/* 핵심기술 */}
-            <PlatformTech />
+            {/* 메인 비주얼 */}
+            <div className="main-visual">
+                <div className="main-visual-img"></div>
+                <div className="main-visual-sec">
+                    <h2>OUR CELLTRION</h2>
+                    <h1>Biologics that make more sense</h1>
+                </div>
+                    <p>세계적 수준의 바이오의약품 R&D 역량과 전문성을 바탕으로 새로운 패러다임을 제시할 첨단 의약품을 개발합니다</p>
+            </div>
+            {/* 비디오 */}
+            <VidSwiper category='main' />
+            {/* 메인 테크 */}
+            <div className="main-tech-wrap">
+                <div className="main-tech-img">
+                    <img src="../images/main/mainTech.jpg" alt="메인테크" />
+                </div>
+                <div className="main-tech-vision">
+                    <div className="green-div"></div>
+                    <h3>COMPANY <b><FontAwesomeIcon icon={faBuilding} /></b></h3>
+                    <p>글로벌 헬스케어 리딩기업 셀트리온</p>
+                    <h3>OUR VISION <b><FontAwesomeIcon icon={faBraille} /></b></h3>
+                    <p>셀트리온은 차세대 바이오의약품 및 케미컬의약품 개발을 통해 인류의 건강과 복지 증진의 가치를 실현하는 세계적인 종합생명공학 기업으로 성장해나가겠습니다.</p>
+                </div>
+            </div>
+            <div className="main_visual01">
+                <div className="main_visual_img"></div>
+                {/* <div className="main_visual_cont">
+                    <h1>Company</h1>
+                    <h2>대한민국 대표 바이오기업 셀트리온</h2>
+                </div> */}
+            </div>
+            {/* 한눈에 */}
+            <AtAGlance />
+            
             {/* 서비스 */}
             <SurviceCont category='main' />
-            {/* 역사 */}
+
+            {/* <PlatformTech />
+            <Banner category='main' />
             <div className="history-wrap">
                 <div className="history-top">
                     <p>CELLTRION</p>
@@ -64,21 +100,14 @@ export function Main() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="main_visual01">
-                <div className="main_visual_img"></div>
-                {/* <img src="../images/main/main_visual01.png" alt="메인 이미지" /> */}
-                <div className="main_visual_cont">
-                    <h1>Company</h1>
-                    <h2>대한민국 대표 바이오기업 셀트리온</h2>
-                </div>
-            </div>
-            {/* 인재상 */}
-            <BusinessCont cat='main' />
-            {/* 핵심가치 */}
-            <BusinessValue cat='핵심가치' />
+            </div> */}
             
-            <VidSwiper category='main' />
+            {/* 인재상 */}
+            {/* <BusinessCont cat='main' /> */}
+            {/* 핵심가치 */}
+            {/* <BusinessValue cat='핵심가치' /> */}
+            
+           
         </>
     );
 }

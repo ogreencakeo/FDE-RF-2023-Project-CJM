@@ -1,13 +1,12 @@
 /* 상단 */
 .top-area-wrap {
     height: 80px;
-    outline: solid 1px black;
     position: relative;
 }
 
 /* 로고 */
 .logo {
-    width: 150px;
+    width: 120px;
     position: absolute;
     top: 5px;
     left: 10px;
@@ -16,7 +15,8 @@
 
 .logo>img {
     max-width: 100%;
-    aspect-ratio: 3/1;
+    aspect-ratio: 3.5/1;
+    
 }
 
 /* 햄버거 버튼 */
