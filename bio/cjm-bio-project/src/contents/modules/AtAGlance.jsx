@@ -51,7 +51,7 @@ export function AtAGlance() {
     }
     return (
         <div className="at-a-glance-wrap">
-            <h3>At A Glance</h3>
+            <h3>CELLTRION At A Glance</h3>
             <div className="at-a-glance-div">
                 {
                     selData.map((v, i) =>
