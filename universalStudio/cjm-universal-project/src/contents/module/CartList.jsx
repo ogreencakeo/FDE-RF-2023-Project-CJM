@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { Fragment, memo, useEffect, useState } from "react";
 import "../../css/cartList.css";
 
 // 제이쿼리
@@ -84,7 +84,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
 
     const chgNum = (e) => {
         const tg = $(e.currentTarget);
-        const tgInput = tg.parent().siblings('.item-cnt');
+        const tgInput = tg.parent().siblings(".item-cnt");
         let cNum = Number(tgInput.val());
 
         tgInput.focus();
@@ -99,20 +99,114 @@ export const CartList = memo(({ selData, tprice, flag }) => {
 
     const goResult = (e) => {
         let tg = $(e.currentTarget);
-        let cidx = tg.attr('data-idx');
+        let cidx = tg.attr("data-idx");
         flag.current = false;
-        cartData.some((v, i)=> {
-            if(v.번호 == cidx){
+        cartData.some((v, i) => {
+            if (v.번호 == cidx) {
                 cartData[i].수량 = tg.prev().val();
                 return true;
             }
         });
 
-        localStorage.setItem('universal-cart', JSON.stringify(cartData));
+        localStorage.setItem("universal-cart", JSON.stringify(cartData));
         setCartData(cartData);
         setForce(Math.random());
     };
 
+    //
+    const bindList = () => {
+        const tempData = [];
+
+        let initNum = (pgNum - 1) * pgBlock;
+        let limitNum = pgBlock * pgNum;
+
+        for (let i = initNum; i < limitNum; i++) {
+            if (i >= cntData) break;
+            tempData.push(cartData[i]);
+        }
+
+        if (cartData.length === 0) {
+            return (
+                <tr>
+                    <td colSpan="8">There is no data.</td>
+                </tr>
+            );
+        }
+        return tempData.map((v, i) => (
+            <tr key={i}>
+                <td>{v.항목}</td>
+                {/* <td>{v.번호}</td> */}
+                <td>
+                    {v.이름 === "성인(만12 - 64세)" && <FontAwesomeIcon icon={faPerson} className="person-icon" />}
+                    {v.이름 === "어린이(만4 - 11세)" && <FontAwesomeIcon icon={faChild} className="child-icon" />}
+                    {v.이름 === "시니어(만 65세 이상)" && (
+                        <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />
+                    )}
+                </td>
+                {/* <td>{v.수량}</td> */}
+                <td>{v.가격}</td>
+                <td>{v.가격 * v.수량}원</td>
+                {/* <td>{addComma(v.ginfo[3])}원</td> */}
+                {/* 상품 수량 */}
+                <td className="cnt-part">
+                    <div>
+                        <span>
+                            <input type="text" className="item-cnt" readOnly value={v.수량} />
+                            <button className="btn-insert" onClick={goResult} data-idx={v.번호}>
+                                반영
+                            </button>
+                            <b className="btn-cnt">
+                                <button alt="증가" onClick={chgNum}>
+                                    +
+                                </button>
+                                <button alt="감소" onClick={chgNum}>
+                                    -
+                                </button>
+                            </b>
+                        </span>
+                    </div>
+                </td>
+                {/* 삭제버튼 */}
+                <td>
+                    <button className="cfn" data-idx={v.번호} onClick={deleteItem}>
+                        ×
+                    </button>
+                </td>
+            </tr>
+        ));
+    };
+
+    // 페이징링크
+    const pagingLink = () => {
+        const blockCnt = Math.floor(cntData / pgBlock);
+        const blockPad = cntData % pgBlock;
+        const limit = blockCnt + (blockPad === 0 ? 0 : 1);
+        let pgCode = [];
+
+        for (let i = 0; i < limit; i++) {
+            pgCode[i] = (
+                <Fragment key={i}>
+                    {pgNum - 1 === i ? (
+                        <b>{i + 1}</b>
+                    ) : (
+                        <a href="#" onClick={chgList}>
+                            {i + 1}
+                        </a>
+                    )}
+
+                    {i < limit - 1 ? " | " : ""}
+                </Fragment>
+            );
+        }
+
+        return pgCode;
+    };
+
+    const chgList = (e) => {
+        e.preventDefault();
+        let currNum = e.target.innerText;
+        setPgNum(currNum);
+    };
     return (
         <>
             <section id="cartlist">
@@ -130,60 +224,28 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                             <th>상품</th>
                             {/* <th>번호</th> */}
                             <th>사진</th>
-                            <th>수량</th>
+                            {/* <th>수량</th> */}
                             <th>단가</th>
                             <th>합계</th>
+                            {/* <th>삭제</th> */}
+                            <th>수량</th>
                             <th>삭제</th>
                         </tr>
 
-                        {selData.map((v, i) => (
-                            <tr key={v.번호}>
-                                <td>{v.항목}</td>
-                                {/* <td>{v.번호}</td> */}
-                                <td>
-                                    {v.이름 === "성인(만12 - 64세)" && (
-                                        <FontAwesomeIcon icon={faPerson} className="person-icon" />
-                                    )}
-                                    {v.이름 === "어린이(만4 - 11세)" && (
-                                        <FontAwesomeIcon icon={faChild} className="child-icon" />
-                                    )}
-                                    {v.이름 === "시니어(만 65세 이상)" && (
-                                        <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />
-                                    )}
-                                </td>
-                                <td>{v.수량}</td>
-                                <td>{v.가격}</td>
-                                <td>{v.가격 * v.수량}원</td>
-                                {/* <td>{addComma(v.ginfo[3])}원</td> */}
-                                {/* 상품 수량 */}
-                                <td className="cnt-part">
-                                    <div>
-                                        <span>
-                                            <input type="text" className="item-cnt" readOnly value={v.수량} />
-                                            <button className="btn-insert" onClick={goResult} data-idx={v.번호}>
-                                                반영
-                                            </button>
-                                            <b className="btn-cnt">
-                                                <button alt="증가" onClick={chgNum}>+</button>
-                                                <button alt="감소" onClick={chgNum}>-</button>
-                                            </b>
-                                            
-                                        </span>
-                                    </div>
-                                </td>
-                                {/* 삭제버튼 */}
-                                <td>
-                                    <button className="cfn" data-idx={v.번호} onClick={deleteItem}>
-                                        ×
-                                    </button>
-                                </td>
-                            </tr>
-                        ))}
+                        {bindList()}
                         <tr>
                             <td colSpan={6}>
                                 <h1 className="ticket-total-price">총가격 : ₩ {tprice}원 </h1>
                             </td>
                         </tr>
+                        {/* 하단 페이징 부분 */}
+                        <tfoot>
+                            <tr>
+                                <td colSpan="6" className="paging">
+                                    {pagingLink()}
+                                </td>
+                            </tr>
+                        </tfoot>
                     </tbody>
                 </table>
             </section>

@@ -100,3 +100,9 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+/* cnt-part */
+.item-cnt{
+    width: 30px;
+    text-align: center;
+}
