@@ -140,7 +140,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
         if (cartData.length === 0) {
             return (
                 <tr>
-                    <td colSpan="8">There is no data.</td>
+                    <td colSpan="8">담은 아이템이 없습니다</td>
                 </tr>
             );
         }
@@ -188,7 +188,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                 {/* 삭제버튼 */}
                 <td>
                     <button className="cfn" del-idx={v.번호} onClick={deleteItem}>
-                        <h2>×</h2>
+                        <h2><FontAwesomeIcon icon={faXmark} /></h2>
                     </button>
                 </td>
             </tr>
