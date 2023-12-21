@@ -12,8 +12,8 @@ import {
     faChild,
     faPersonCane,
     faXmark,
-    faPlus,
-    faMinus,
+    faCirclePlus,
+    faCircleMinus,
 } from "@fortawesome/free-solid-svg-icons";
 
 //정규식함수(숫자 세자리마다 콤마해주는 기능)
@@ -125,38 +125,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
         setForce(Math.random());
     };
 
-    // const goResult = (e) => {
-    //     let tg = $(e.currentTarget);
-    //     let cidx = tg.attr("data-idx");
-    //     flag.current = false;
-    //     cartData.some((v, i) => {
-    //         if (v.번호 == cidx) {
-    //             cartData[i].수량 = tg.parent('.btn-cnt').siblings('.item-cnt').val();
-    //             return true;
-    //         }
-    //     });
-
-    //     localStorage.setItem("universal-cart", JSON.stringify(cartData));
-    //     setCartData(cartData);
-    //     setForce(Math.random());
-    // };
-
-    // const goResult = (e) => {
-    //     let tg = $(e.currentTarget);
-    //     let cidx = tg.attr("data-idx");
-    //     flag.current = false;
-    //     cartData.some((v, i) => {
-    //         if (v.번호 == cidx) {
-    //             cartData[i].수량 = tg.siblings('.item-cnt').val();
-    //             return true;
-    //         }
-    //     });
-
-    //     localStorage.setItem("universal-cart", JSON.stringify(cartData));
-    //     setCartData(cartData);
-    //     setForce(Math.random());
-    // };
-
     //
     const bindList = () => {
         const tempData = [];
@@ -201,12 +169,12 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                             <b className="btn-cnt" data-idx={v.번호}>
                                 <button alt="증가" onClick={chgNum}>
                                     <h3>
-                                        <FontAwesomeIcon icon={faPlus} />
+                                        <FontAwesomeIcon icon={faCirclePlus} />
                                     </h3>
                                 </button>
                                 <button alt="감소" onClick={chgNum}>
                                     <h3>
-                                        <FontAwesomeIcon icon={faMinus} />
+                                        <FontAwesomeIcon icon={faCircleMinus} />
                                     </h3>
                                 </button>
                             </b>
@@ -220,7 +188,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                 {/* 삭제버튼 */}
                 <td>
                     <button className="cfn" data-idx={v.번호} onClick={deleteItem}>
-                        ×
+                        <h2><FontAwesomeIcon icon={faXmark} /></h2>
                     </button>
                 </td>
             </tr>

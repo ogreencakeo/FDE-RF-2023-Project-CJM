@@ -10,8 +10,8 @@ import {
     faPerson,
     faChild,
     faPersonCane,
-    faCirclePlus,
-    faCircleMinus,
+    faPlus,
+    faMinus,
     faMoneyCheckDollar,
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
@@ -239,10 +239,10 @@ export function TicketOption() {
                             <h2>가격(1인) : ₩ {v.price.toLocaleString()}</h2>
                             <div className="ticket-price-btn">
                                 <button className="ticket-btn" onClick={() => increaseQuntity(idx)}>
-                                    <FontAwesomeIcon icon={faCirclePlus} />
+                                    <FontAwesomeIcon icon={faPlus} />
                                 </button>
                                 <button className="ticket-btn" onClick={() => decreaseQuntity(idx)}>
-                                    <FontAwesomeIcon icon={faCircleMinus} />
+                                    <FontAwesomeIcon icon={faMinus} />
                                 </button>
                             </div>
                             <div className="ticket-opt-price">
