@@ -108,23 +108,54 @@ export const CartList = memo(({ selData, tprice, flag }) => {
         if (cNum < 1) cNum = 1;
 
         tgInput.val(cNum);
-    };
+        // document.querySelector('.btn-insert').style.display = 'block';
 
-    const goResult = (e) => {
-        let tg = $(e.currentTarget);
-        let cidx = tg.attr("data-idx");
+        let tg2 = tg.parent('.btn-cnt');
+        console.log('tg2', tg2);
+        let cidx = tg2.attr("data-idx");
         flag.current = false;
         cartData.some((v, i) => {
             if (v.번호 == cidx) {
-                cartData[i].수량 = tg.siblings('.item-cnt').val();
+                cartData[i].수량 = tg2.siblings('.item-cnt').val();
                 return true;
             }
         });
-
         localStorage.setItem("universal-cart", JSON.stringify(cartData));
         setCartData(cartData);
         setForce(Math.random());
     };
+
+    // const goResult = (e) => {
+    //     let tg = $(e.currentTarget);
+    //     let cidx = tg.attr("data-idx");
+    //     flag.current = false;
+    //     cartData.some((v, i) => {
+    //         if (v.번호 == cidx) {
+    //             cartData[i].수량 = tg.parent('.btn-cnt').siblings('.item-cnt').val();
+    //             return true;
+    //         }
+    //     });
+
+    //     localStorage.setItem("universal-cart", JSON.stringify(cartData));
+    //     setCartData(cartData);
+    //     setForce(Math.random());
+    // };
+
+    // const goResult = (e) => {
+    //     let tg = $(e.currentTarget);
+    //     let cidx = tg.attr("data-idx");
+    //     flag.current = false;
+    //     cartData.some((v, i) => {
+    //         if (v.번호 == cidx) {
+    //             cartData[i].수량 = tg.siblings('.item-cnt').val();
+    //             return true;
+    //         }
+    //     });
+
+    //     localStorage.setItem("universal-cart", JSON.stringify(cartData));
+    //     setCartData(cartData);
+    //     setForce(Math.random());
+    // };
 
     //
     const bindList = () => {
@@ -167,7 +198,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                         <span>
                             <input type="text" className="item-cnt" readOnly value={v.수량} />
                             
-                            <b className="btn-cnt">
+                            <b className="btn-cnt" data-idx={v.번호}>
                                 <button alt="증가" onClick={chgNum}>
                                     <h3>
                                         <FontAwesomeIcon icon={faPlus} />

@@ -129,3 +129,8 @@
     padding: 5px;
     background-color: #fff;
 }
+
+/* 반영 버튼 */
+.btn-insert{
+    display: none;
+}
