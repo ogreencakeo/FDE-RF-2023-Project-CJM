@@ -116,7 +116,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
         flag.current = false;
         cartData.some((v, i) => {
             if (v.번호 == cidx) {
-                cartData[i].수량 = tg.prev().val();
+                cartData[i].수량 = tg.siblings('.item-cnt').val();
                 return true;
             }
         });
@@ -166,7 +166,23 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                     <div>
                         <span>
                             <input type="text" className="item-cnt" readOnly value={v.수량} />
+                            
+                            <b className="btn-cnt">
+                                <button alt="증가" onClick={chgNum}>
+                                    <h3>
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </h3>
+                                </button>
+                                <button alt="감소" onClick={chgNum}>
+                                    <h3>
+                                        <FontAwesomeIcon icon={faMinus} />
+                                    </h3>
+                                </button>
+                            </b>
                             <button className="btn-insert" onClick={goResult} data-idx={v.번호}>
+                                반영
+                            </button>
+                            {/* <button className="btn-insert" onClick={goResult} data-idx={v.번호}>
                                 반영
                             </button>
                             <b className="btn-cnt">
@@ -180,7 +196,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                                         <FontAwesomeIcon icon={faMinus} />
                                     </h3>
                                 </button>
-                            </b>
+                            </b> */}
                         </span>
                     </div>
                 </td>

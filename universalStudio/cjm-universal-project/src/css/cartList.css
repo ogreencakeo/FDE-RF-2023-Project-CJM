@@ -103,14 +103,29 @@
 
 /* cnt-part */
 .item-cnt {
-    width: 30px;
+    width: 20px;
     text-align: center;
+    aspect-ratio: 1/1;
 }
 
 .btn-cnt button {
     background-color: #fff;
-    border: 0;
+    /* border: 0; */
+    margin: 0 5px;
+    border-radius: 10px;
+}
+.btn-cnt button:hover{
+    background-color: steelblue;
+    color: #fff;
 }
 .btn-cnt button h3 {
     cursor: pointer;
+}
+
+/* 카트 삭제 버튼 */
+.cfn{
+    width: 20px;
+    aspect-ratio: 1/1;
+    padding: 5px;
+    background-color: #fff;
 }
