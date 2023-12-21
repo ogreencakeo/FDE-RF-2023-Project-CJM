@@ -86,7 +86,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
     }, []);
 
     const showList = () => {
-        console.log("열려라!!");
         $("#cartlist").animate({ right: "0" }, 600);
     };
 
