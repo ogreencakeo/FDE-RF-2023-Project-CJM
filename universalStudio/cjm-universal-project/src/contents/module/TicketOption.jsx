@@ -96,6 +96,31 @@ export function TicketOption() {
             txt: "시니어(만 65세 이상)",
             option: "[1일권 High Price (C시즌)]",
         },
+        // D 시즌
+        {
+            idx : "10",
+            price: 88800,
+            quantity: 0,
+            character: <FontAwesomeIcon icon={faPerson} className="person-icon" />,
+            txt: "성인(만12 - 64세)",
+            option: "[1일권 Premium Price (D시즌)]",
+        },
+        {
+            idx : "11",
+            price: 58000,
+            quantity: 0,
+            character: <FontAwesomeIcon icon={faChild} className="child-icon" />,
+            txt: "어린이(만4 - 11세)",
+            option: "[1일권 Premium Price (D시즌)]",
+        },
+        {
+            idx : "12",
+            price: 79800,
+            quantity: 0,
+            character: <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />,
+            txt: "시니어(만 65세 이상)",
+            option: "[1일권 Premium Price (D시즌)]",
+        },
     ]);
     
     const flag = useRef(true);
