@@ -44,9 +44,9 @@ export const CartList = memo(({ selData, tprice, flag }) => {
         let confMsg = "정말로 지우시겠습니까?";
 
         if (window.confirm(confMsg)) {
-            const selIdx = $(e.target).attr("data-idx");
+            const selIdx = $(e.currentTarget).attr("del-idx");
+            console.log(e.target);
             console.log("지울아이:", selIdx);
-            // console.log("cartData", cartData);
 
             const newData = cartData.filter((v) => {
                 if (v["번호"] !== selIdx) {
@@ -187,8 +187,8 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                 </td>
                 {/* 삭제버튼 */}
                 <td>
-                    <button className="cfn" data-idx={v.번호} onClick={deleteItem}>
-                        <h2><FontAwesomeIcon icon={faXmark} /></h2>
+                    <button className="cfn" del-idx={v.번호} onClick={deleteItem}>
+                        <h2>×</h2>
                     </button>
                 </td>
             </tr>
