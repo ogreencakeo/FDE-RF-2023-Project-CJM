@@ -166,10 +166,10 @@
 /* 서비스 내용 */
 .service-cont-wrap {
     max-width: 100%;
-    padding: 200px 0 50px;
+    padding: 100px 0 50px;
     position: relative;
     background-color: #fff;
-    aspect-ratio: 1.5/1;
+    aspect-ratio: 1.6/1;
     border: 1px solid blue;
 }
 
@@ -248,53 +248,30 @@
     padding: 10px;
 }
 
-.service-cont-bx button {
-    font-size: 1rem;
-    width: 100%;
-    display: block;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    /* 버튼을 수평으로 중앙에 정렬하기 위해 */
-    align-self: center;
-    color: #fff;
-    background: linear-gradient(#5ab3f0ff, #005789ff);
-    border: 2px solid #000;
-    cursor: pointer;
-}
-
-.service-cont-bx button:hover {
-    background: #fff;
-    color: #005789ff;
-}
-
-.button-link {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.bio-icon {
-    font-size: 10rem;
+/* 셀트리온 글자 */
+.fbx{
     position: absolute;
-    top: 70%;
-    right: -10%;
-    animation: bio-icon-ani 10s linear infinite;
+    bottom: 0;
+    /* overflow: hidden; */
+    width: 100vw;
+}
+.tbx{
+    display: flex;
+    width: 200vw;
+}
+.tbx ul{
+    display: flex;
 }
 
-@keyframes bio-icon-ani {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+.tbx ul li{
+    font-size: 4vw;
+    margin-left: 15px;
+    font-family: 'Gugi';
+    color: #555;
 }
-
+.tbx ul li:nth-child(2n){
+    color: green;
+}
 /* 역사 */
 .history-wrap {
     max-width: 100%;
