@@ -562,7 +562,7 @@ a {
     display: none;
     background-color: rgba(0, 0, 0, 0.742);
     cursor: pointer;
-    z-index: 9999;
+    z-index: 9999999;
 }
 .map-model-bx{
     position: fixed;
@@ -1220,7 +1220,21 @@ a {
 }
 @media screen and (max-width:1060px)  {
     .map-model-bx{
-        width: 60vw;
+        width: 70vw;
+    }
+}
+@media screen and (max-width:900px)  {
+    .map-model-bx{
+        width: 80vw;
+    }
+}
+@media screen and (max-width:800px)  {
+    .map-model-bx{
+        width: 90vw;
+    }
+    .map-wrapper-model iframe{
+        width: 500px;
+        height: 400px;
     }
 }
 @media screen and (max-width:1255px)  {
