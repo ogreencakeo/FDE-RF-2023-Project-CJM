@@ -19,7 +19,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // enterKey
     const enterKey = (e) => {
         $(e.target).bind("keydown", function (e) {
-            if (e.key === "Enter" || e.keyCode === 13) {
+            if (e.key === "Enter" || e.keyCode === 13 || e.code ==='Enter') {
                 // console.log('e.target :', e.target);
                 let txt = $(e.target).val().trim();
                 console.log(txt);
