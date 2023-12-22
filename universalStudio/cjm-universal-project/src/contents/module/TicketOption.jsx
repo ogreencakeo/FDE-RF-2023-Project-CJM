@@ -14,11 +14,14 @@ import {
     faMinus,
     faMoneyCheckDollar,
 } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 import { CartList } from "./CartList";
+import { universalCon } from "./universalContext";
 
 export function TicketOption() {
+
+    const myCon = useContext(universalCon);
 
     const [option, setOption] = useState([
         // A시즌
@@ -123,26 +126,21 @@ export function TicketOption() {
         },
     ]);
     
-    const flag = useRef(true);
+    // const flag = useRef(true);
     // 카트 사용여부 상태변수
-    let stsVal = 0;
-    let transVal = null;
+    // let stsVal = 0;
+    // let transVal = null;
 
-    if(localStorage.getItem('universal-cart')){
-        transVal = JSON.parse(localStorage.getItem('universal-cart'));
-        if(transVal.length !== 0) stsVal = 1;
-    }
-    const [transData, setTransData] = useState(transVal); // 로컬스 변환값 변수
-    const [csts, setCsts] = useState(stsVal);
-
-    const [lastData,setLastData] = useState(JSON.parse(localStorage.getItem("universal-cart")));
-
-
-
+    // if(localStorage.getItem('universal-cart')){
+    //     transVal = JSON.parse(localStorage.getItem('universal-cart'));
+    //     if(transVal.length !== 0) stsVal = 1;
+    // }
+    // const [transData, setTransData] = useState(transVal); // 로컬스 변환값 변수
+    // const [csts, setCsts] = useState(stsVal);
 
 
     const useCart = (idx) => {
-        flag.current = true;
+        myCon.flag.current = true;
         const quantity = option[idx]["quantity"];
         if (quantity > 0) {
             console.log("quantity", quantity, ", idx :", idx);
@@ -159,8 +157,8 @@ export function TicketOption() {
                 localD = [];
                 localD.push(selData1);
                 localStorage.setItem("universal-cart", JSON.stringify(localD));
-                setTransData(localD);
-                setCsts(1);
+                myCon.setTransData(localD);
+                myCon.setCsts(1);
                 $('#mycart')
                     .removeClass('on')
                     .delay(1000)
@@ -179,8 +177,8 @@ export function TicketOption() {
                 }else{
                     localD.push(selData1);
                     localStorage.setItem("universal-cart", JSON.stringify(localD));
-                    setTransData(localD);
-                    setCsts(1);
+                    myCon.setTransData(localD);
+                    myCon.setCsts(1);
                     $('#mycart')
                         .removeClass('on')
                         .delay(1000)
@@ -223,7 +221,6 @@ export function TicketOption() {
         return newPrice;
     };
 
-    const t_price = totalPriceFn().toLocaleString();
 
     const ticket_opt = ["[1일권 Low Price (A시즌)]", "[1일권 Middle Price (B시즌)]", "[1일권 High Price (C시즌)]"];
 
@@ -256,10 +253,7 @@ export function TicketOption() {
                     ))}
                 </div>
                 {/* 카트리스트 */}
-                {/* <h1 className="ticket-total-price">총가격 : ₩ {t_price}원 </h1> */}
-                {/* {csts && <CartList selData={lastData} tprice={t_price} />} */}
-                {csts && <CartList selData={transData} flag={flag} tprice={t_price} />}
-                {/* <button className="shoppingCart" onClick={useCart}>담기</button>  */}
+                {/* {csts && <CartList selData={transData} flag={flag} />} */}
             </div>
         </>
     );
