@@ -30,6 +30,16 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             }
         });
     };
+    const goPage = (e) => {
+        console.log('goPage');
+        const tg = $(e.currentTarget).siblings('#schinGnb');
+        console.log('tg', tg);
+        let tgTxt = tg.val().trim();
+        if (tgTxt !== "") {
+            $(tg).val("").parent().hide();
+            goSerach(tgTxt);
+        }
+    };
     // showSerach
     const showSerach = (e) => {
         e.preventDefault();
@@ -87,7 +97,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         ))}
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
-                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
+                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" onClick={goPage} />
                                 <input type="text" style={{ display: "none" }} />
                                 <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>
@@ -123,7 +133,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                     <ul>
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
-                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" />
+                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" onClick={goPage} />
                                 <input type="text" style={{ display: "none" }} />
                                 <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>

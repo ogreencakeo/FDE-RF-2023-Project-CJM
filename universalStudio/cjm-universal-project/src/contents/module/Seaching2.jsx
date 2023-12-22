@@ -1,6 +1,4 @@
 // 폰트어썸 불러오기
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { AttractionCont } from "./AttractionCont";
 
@@ -10,7 +8,6 @@ import $ from "jquery";
 // css
 import "../../css/attraction.css";
 import { useEffect, useState } from "react";
-import { useRef } from "react";
 
 // 데이터
 import { attractionData } from "../../data/attraction/attractionData";
