@@ -13,16 +13,20 @@ export function SurviceCont(props){
     return(
         <>
             <div className="service-cont-wrap">
-                <h1>COMPANY</h1>
-                <p>새로운 역사를 만들어 가는 셀트리온의 노력은 계속됩니다</p>
+                <div className="service-cont-main-img">
+                    <section>
+                        <h2>Research & Development</h2>
+                        <p>혁신 의약품 및 생명공학 기술 개발로 미래 성장 동력을 발굴합니다</p>
+                    </section>
+                </div>
                 <div className="service-cont">
                     {
                         selData.map((v,i) =>
                             <div className="service-cont-bx" key={i}>
-                                <h2>{v.txt.indexOf('^') == -1? v.txt : makeCode(v.txt)}</h2>
                                 <div className="service-cont-img">
                                     <img src={v.img} alt='서비스' />
                                 </div>
+                                <h2>{v.txt.indexOf('^') == -1? v.txt : makeCode(v.txt)}</h2>
                                 <p>{v.cont}</p>
                                 {/* <Link to='' className="button-link">
                                     <button>VIEW MORE</button>
@@ -31,6 +35,7 @@ export function SurviceCont(props){
                         )
                     }
                 </div>
+                
             </div>
         </>
     );

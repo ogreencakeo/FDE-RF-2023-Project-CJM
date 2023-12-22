@@ -16,11 +16,6 @@ export function AtAGlance() {
             font: <FontAwesomeIcon icon={faPlaneDeparture} />,
         },
         {
-            txt: '임직원수',
-            cont: '2,172명',
-            font: <FontAwesomeIcon icon={faUsersRectangle} />
-        },
-        {
             txt: '매출액',
             cont: '2 조 2,840억 원',
             font: <FontAwesomeIcon icon={faSackDollar} />,
