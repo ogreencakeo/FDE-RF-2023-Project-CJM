@@ -1,41 +1,28 @@
 import { Link } from "react-router-dom";
 import { serviceData } from "../data/serviceData";
 import { useEffect, useState } from "react";
+import { SpanMove } from "./SpanMove";
 export function SurviceCont(props) {
 
-    const [scrollPosition, setScrollPosition] = useState(0);
 
-    const handleScroll = () => {
-        setScrollPosition(window.scrollY);
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
 
     const selData = serviceData[props.category];
     const makeCode = (data) => {
         const temp = [];
         const split_data = data.split('^');
         for (let i = 0; i < split_data.length; i++) {
-            temp[i] = <span>{split_data[i]}</span>
+            temp[i] = <span key={i}>{split_data[i]}</span>
         }
         return temp;
     }
 
-    const makeSpan = () => {
-        const temp = [];
-        for(let i=0; i<15; i++){
-            temp[i] = <li>CELLTRION</li>
-        }
-        return temp;
-    }
+
     return (
         <>
             <div className="service-cont-wrap">
+                <div className="fx1">
+                    <SpanMove />
+                </div>
                 <div className="service-cont-main-img">
                     <section>
                         <h2>Research & Development</h2>
@@ -58,15 +45,8 @@ export function SurviceCont(props) {
                         )
                     }
                 </div>
-                <div class="fbx f1" style={{ left: `-${scrollPosition}px` }}>
-                    <div class="tbx txt-ani1">
-                        <ul>
-                            {makeSpan()}
-                        </ul>
-                        <ul>
-                            {makeSpan()}
-                        </ul>
-                    </div>
+                <div className="fx2">
+                    <SpanMove />
                 </div>
             </div>
         </>

@@ -1,22 +1,21 @@
 import { Banner } from "../modules/Banner";
-import { SurviceCont } from '../modules/SurviceCont';
 import '../../css/main.css';
 
-import { surviceData } from '../data/serviceData.js';
+// 모듈
+import { SurviceCont } from '../modules/SurviceCont';
 import { VidSwiper } from "../plugin/swiper/VidSwiper.jsx";
-
-
-import { BusinessValue } from "../modules/BusinessValue.jsx";
-import { BusinessCont } from "../modules/BusinessCont.jsx";
+import { ResearchField } from "../plugin/swiper/ResearchField.jsx";
 import { AtAGlance } from "../modules/AtAGlance.jsx";
-import { PlatformTech } from "../modules/PlatformTech.jsx";
+import { ContactUs } from "../modules/ContactUs.jsx";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDna, faBraille }
+import { faBraille }
     from "@fortawesome/free-solid-svg-icons";
-import { faBuilding}
+import { faBuilding }
     from "@fortawesome/free-regular-svg-icons";
+
+
 
 export function Main() {
     const historyData = [
@@ -46,10 +45,13 @@ export function Main() {
                     <h2>OUR CELLTRION</h2>
                     <h1>Biologics that make more sense</h1>
                 </div>
-                    <p>세계적 수준의 바이오의약품 R&D 역량과 전문성을 바탕으로 새로운 패러다임을 제시할 첨단 의약품을 개발합니다</p>
+                <p>세계적 수준의 바이오의약품 R&D 역량과 전문성을 바탕으로 새로운 패러다임을 제시할 첨단 의약품을 개발합니다</p>
             </div>
             {/* 서비스 */}
             <SurviceCont category='main' />
+            {/* 한눈에 */}
+            <AtAGlance />
+
             {/* 비디오 */}
             <VidSwiper category='main' />
             {/* 메인 테크 */}
@@ -65,15 +67,18 @@ export function Main() {
                     <p>셀트리온은 차세대 바이오의약품 및 케미컬의약품 개발을 통해 인류의 건강과 복지 증진의 가치를 실현하는 세계적인 종합생명공학 기업으로 성장해나가겠습니다.</p>
                 </div>
             </div>
+            {/* 연구분야 */}
+            {/* <ResearchField /> */}
+            {/* 보도자료 */}
+            <ContactUs />
             {/* <div className="main_visual01">
                 <div className="main_visual_img"></div>
             </div> */}
-            {/* 한눈에 */}
-            <AtAGlance />
+            <Banner category='main' />
             <div>
-            <a href="https://player.vimeo.com/video/836389151">링크</a>
+                <a href="https://player.vimeo.com/video/836389151">링크</a>
             </div>
-            
+
 
             {/*  */}
 
@@ -102,13 +107,11 @@ export function Main() {
                     </div>
                 </div>
             </div> */}
-            
+
             {/* 인재상 */}
             {/* <BusinessCont cat='main' /> */}
             {/* 핵심가치 */}
             {/* <BusinessValue cat='핵심가치' /> */}
-            
-           
         </>
     );
 }

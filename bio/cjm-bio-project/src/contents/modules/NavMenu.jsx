@@ -8,7 +8,7 @@ export function NavMenu(props) {
     return (
         <ul>
             {selData.map((v, i) =>
-                <li key={i}>
+                <li className='footer-li' key={i}>
                     <Link to={v.link}> {v.txt}</Link>
                 </li>
             )}

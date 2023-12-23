@@ -37,7 +37,7 @@ export function AtAGlance() {
         console.log(data_split);
         const temp = [];
         for (let i = 0; i < data_split.length; i++) {
-            temp[i] = <Fragment>
+            temp[i] = <Fragment key={i}>
                 {data_split[i]}<br/>
             </Fragment>
 

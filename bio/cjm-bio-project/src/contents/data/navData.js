@@ -36,10 +36,6 @@ export const navData = {
             "link" : "",
         },
         {
-            "txt" : "법적고지",
-            "link" : "",
-        },
-        {
             "txt" : "내부정보관리규정",
             "link" : "",
         },

@@ -14,7 +14,7 @@
 .bantit{
     position: absolute;
     top: 50%;
-    left: 5%;
+    left: 15%;
     transform: translateY(-50%);
     color: #fff;
 }
@@ -47,6 +47,20 @@
     max-width: 100%;
     aspect-ratio: 3.5/1;
 }
-.banner button{
-
+.abtn{
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    aspect-ratio: 1/1;
+    font-size: 8rem;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+.lb{
+    left: 0%;
+}
+.rb{
+    right: 5%;
 }

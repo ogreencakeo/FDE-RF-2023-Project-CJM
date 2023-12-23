@@ -78,8 +78,8 @@ export function Banner(props){
             {
                 selData.length > 1 && (
                     <>
-                        <button className='abtn lb' onClick={goSlide}>＜</button>
-                        <button className='abtn rb' onClick={goSlide}>＞</button>
+                        <div className='abtn lb' onClick={goSlide}>＜</div>
+                        <div className='abtn rb' onClick={goSlide}>＞</div>
                         <ol className='indic'>
                             {
                                 selData.map((v, i) => 
