@@ -600,13 +600,19 @@
 .footer-wrap {
     max-width: 100%;
     /* background-color: #baccb3ff; */
+    text-align: center;
+    border-top: 2px solid #ccc;
 }
 
 .footer {
     max-width: 1300px;
     margin: 0 auto;
     color: black;
-    padding: 50px;
+    padding: 30px;
+}
+
+.footer>div{
+    width: 200px;
 }
 
 .footer h1 {

@@ -1,10 +1,12 @@
 import { memo } from "react";
 import { NavMenu } from "../modules/NavMenu";
+import { Logo } from "../modules/Logo";
 
-export const FooterArea = memo(()=>{
-    return(
+export const FooterArea = memo(() => {
+    return (
         <div className="footer-wrap">
             <div className="footer">
+                <Logo />
                 <p>인천광역시 연수구 아카데미로 23 032-850-5000</p>
                 <nav className="footer-area-nav">
                     <NavMenu cat='footer' />
