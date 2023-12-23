@@ -25,6 +25,7 @@
     top: 0;
     right: 70px;
     cursor: pointer;
+    transition: 1s ease-out;
 }
 
 .ham-btn>span {
@@ -73,21 +74,23 @@
 /* 햄버거 창 */
 .ham-nav-bx{
     position: fixed;
-    top: 80px;
-    left: 0;
+    /* top: 80px; */
+    /* top: -200%; */
+    right: -200%;
     width: 100vw;
     height: 100vh;
     background-color: #fff;
-    display: none;
+    /* display: none; */
     outline: 1px solid red;
     z-index: 1;
+    transition: 1s ease-out;
+    font-size: 5rem;
+    text-align: center;
 }
 
 .ham-nav-bx.on {
-    display: block;
-}
-
-.ham-nav-bx{
-    font-size: 5rem;
-    text-align: center;
+    /* display: block; */
+    top: 80px;
+    right: 0%;
+    transition: 1s ease-out;
 }

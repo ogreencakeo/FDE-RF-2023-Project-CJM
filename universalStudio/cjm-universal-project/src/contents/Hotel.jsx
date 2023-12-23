@@ -16,16 +16,10 @@ export function Hotel() {
         setHotelBtn(data);
         setHotelColor(data);
     }
-    
-
     useEffect(()=>{
         const selectedData = hotelData[hotelBtn];
         SetSelData(selectedData);
     }, [hotelBtn]);
-    
-
-    
-
 
     const linkCode = (data) =>{
         console.log(data);

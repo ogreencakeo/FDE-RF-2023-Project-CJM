@@ -10,7 +10,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 // 모듈 불러오기
 import {Layout} from './contents/layout/Layout';
 import {Main} from './contents/pages/Main';
-import {About} from './contents/pages/About';
+import {History} from './contents/pages/History';
 import {Service} from './contents/pages/Service';
 import {Career} from './contents/pages/Career';
 import {Sustainability} from './contents/pages/Sustainability';
@@ -24,7 +24,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path='about' element={<About />} />
+          <Route path='hisory' element={<History />} />
           <Route path='service' element={<Service />} />
           <Route path='career' element={<Career />} />
           <Route path='sustainability' element={<Sustainability />} />
