@@ -188,8 +188,11 @@ const imgData = {
         { img: '../images/main/history/4.jpg' },
     ],
     four : [
-        {img : ''},
-        {img : ''},
+        {img : '../images/main/history/5.jpg'},
+        {img : '../images/main/history/6.jpg'},
+        {img : '../images/main/history/7.jpg'},
+        {img : '../images/main/history/8.jpg'},
+        {img : '../images/main/history/9.png'},
     ]
 };
 
@@ -221,7 +224,7 @@ const mainData = {
             txt : '고속 성장의 궤도에 올라서다',
             cont : '2016년, 셀트리온은 유럽에 이어 미국 FDA로부터 램시마의 판매 허가를 획득하며 새로운 기회의 신대륙에 발을 내디뎠습니다. 또한 셀트리온은 항체 신약과 백신, 바이오베터 개발 등 새로운 치료제 및 신기술 개발에도 앞장서며 글로벌 종합생명공학 회사로 발전해 나가고 있습니다'
         }
-    ]
+    ],
 };
 
 

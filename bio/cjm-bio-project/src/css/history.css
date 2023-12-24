@@ -86,17 +86,20 @@
 
 .history-cont h1 {
     color: #002023ff;
-    font-size: 2rem
+    font-size: 1.8rem
 }
 
 .history-cont p {
-    line-height: 1.6;
+    line-height: 1.2;
     text-align: justify;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 
 .history-img {
     width: 50%;
+}
+.history-img>div{
+    margin-bottom: 100px;
 }
 
 .history-img img {
