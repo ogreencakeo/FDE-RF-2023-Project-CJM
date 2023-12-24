@@ -36,10 +36,10 @@ export function History() {
                 <div className="history-top">
                     {/* <p>CELLTRION</p> */}
                     <ul>
-                        <button onClick={() =>showHistory('one')} >STEP1</button>
-                        <button onClick={() =>showHistory('two')} >STEP2</button>
-                        <button onClick={() =>showHistory('three')}>STEP3</button>
-                        <button onClick={() =>showHistory('four')}>STEP4</button>
+                        <button onClick={() => showHistory('one')} >STEP1</button>
+                        <button onClick={() => showHistory('two')} >STEP2</button>
+                        <button onClick={() => showHistory('three')}>STEP3</button>
+                        <button onClick={() => showHistory('four')}>STEP4</button>
                     </ul>
                     <div className="history-main-img" >
                         {/* <img src="../images/main/history.jpg" alt="사진" /> */}
@@ -79,6 +79,13 @@ export function History() {
                         </div>
                         <div className="green-div"></div>
                     </div>
+                </div>
+                <div className="img-lab-div">
+                    <img src="../images/main/img_lab01.jpg" alt="연구실" />
+                    <section>
+                        <h1>국내 최대 규모 R&D 전문 인력</h1>
+                        <h2>전체 임직원의 33%</h2>
+                    </section>
                 </div>
                 <Banner category='main' />
             </div>

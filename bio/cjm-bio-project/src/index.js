@@ -11,7 +11,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import {Layout} from './contents/layout/Layout';
 import {Main} from './contents/pages/Main';
 import {History} from './contents/pages/History';
-import {Service} from './contents/pages/Service';
+import {Technology} from './contents/pages/Technology';
 import {Career} from './contents/pages/Career';
 import {Sustainability} from './contents/pages/Sustainability';
 import {Investors} from './contents/pages/Investors';
@@ -25,7 +25,7 @@ export default function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
           <Route path='hisory' element={<History />} />
-          <Route path='service' element={<Service />} />
+          <Route path='technology' element={<Technology />} />
           <Route path='career' element={<Career />} />
           <Route path='sustainability' element={<Sustainability />} />
           <Route path='investors' element={<Investors />} />

@@ -1,12 +1,12 @@
 export const navData = {
     top : [
         {
-            "txt" : "연혁",
+            "txt" : "Hisory",
             "link" : "/hisory",
         },
         {
-            "txt" : "Our Services",
-            "link" : "/service",
+            "txt" : "Technology",
+            "link" : "/technology",
         },
         {
             "txt" : "Careers",
