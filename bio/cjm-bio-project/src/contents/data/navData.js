@@ -1,59 +1,61 @@
 export const navData = {
-    top : [
+    top: [
         {
-            "txt" : "Hisory",
-            "link" : "/hisory",
+            "txt": "Hisory",
+            "link": "/hisory",
         },
         {
-            "txt" : "Technology",
-            "link" : "/technology",
+            "txt": "Technology",
+            "link": "/technology",
         },
         {
-            "txt" : "Careers",
-            "link" : "/career",
+            "txt": "New Medicines",
+            "link": "/newMedicines",
+
         },
         {
-            "txt" : "Sustainability",
-            "link" : "/sustainability",
+            "txt": "Newsroom",
+            "link": "/newsroom",
         },
         {
-            "txt" : "Investors",
-            "link" : "/investors",
+            "txt": "Login",
+            "link": "/login",
         },
         {
-            "txt" : "Newsroom",
-            "link" : "/newsroom",
+            "txt": "Member",
+            "link": "/member",
         },
         
+
     ],
-    footer : [
+    footer: [
         {
-            "txt" : "개인정보처리방침",
-            "link" : "",
+            "txt": "개인정보처리방침",
+            "link": "",
         },
         {
-            "txt" : "법적고지",
-            "link" : "",
+            "txt": "법적고지",
+            "link": "",
         },
         {
-            "txt" : "내부정보관리규정",
-            "link" : "",
+            "txt": "내부정보관리규정",
+            "link": "",
         },
         {
-            "txt" : "개인정보처윤리경영",
-            "link" : "",
+            "txt": "개인정보처윤리경영",
+            "link": "",
         },
         {
-            "txt" : "환경안전경영",
-            "link" : "",
+            "txt": "환경안전경영",
+            "link": "",
         },
         {
-            "txt" : "고객센터",
-            "link" : "",
+            "txt": "고객센터",
+            "link": "",
         },
         {
-            "txt" : "오시는 길",
-            "link" : "",
+            "txt": "오시는 길",
+            "link": "",
         },
     ]
 }

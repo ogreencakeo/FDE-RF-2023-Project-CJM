@@ -12,10 +12,10 @@ import {Layout} from './contents/layout/Layout';
 import {Main} from './contents/pages/Main';
 import {History} from './contents/pages/History';
 import {Technology} from './contents/pages/Technology';
-import {Career} from './contents/pages/Career';
-import {Sustainability} from './contents/pages/Sustainability';
-import {Investors} from './contents/pages/Investors';
+import {NewMedicines} from './contents/pages/NewMedicines';
 import {Newsroom} from './contents/pages/Newsroom';
+import {Login} from './contents/pages/Login';
+import {Member} from './contents/pages/Member';
 
 
 export default function App() {
@@ -26,10 +26,10 @@ export default function App() {
           <Route index element={<Main />} />
           <Route path='hisory' element={<History />} />
           <Route path='technology' element={<Technology />} />
-          <Route path='career' element={<Career />} />
-          <Route path='sustainability' element={<Sustainability />} />
-          <Route path='investors' element={<Investors />} />
+          <Route path='newMedicines' element={<NewMedicines />} />
           <Route path='newsroom' element={<Newsroom />} />
+          <Route path='login' element={<Login />} />
+          <Route path='member' element={<Member />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,3 +1,26 @@
 .technology-wrap{
     max-width: 100%;
 }
+
+.technology-bx-wrap{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.technology-bx{
+    width: 32%;
+    margin: 20px 10px;
+}
+
+.technology-bx>img{
+    max-width: 100%;
+    aspect-ratio: 1.2/1;
+    display: block;
+}
+
+.technology-bx>h2{
+    margin: 10px;
+    text-align: center;
+}
