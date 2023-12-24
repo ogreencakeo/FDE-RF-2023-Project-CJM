@@ -1,7 +1,9 @@
+import '../data/technology.js';
+import '../../css/technology.css';
 export function Technology(){
     return(
-        <>
-            Technology 페이지
-        </>
+        <div className='technology-wrap'>
+            
+        </div>
     );
 }
