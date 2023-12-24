@@ -1,45 +1,9 @@
 import { useEffect, useState } from 'react';
-import '../../css/history.css';
 import { Banner } from '../modules/Banner';
-export function History() {
-    const historyData = {
-        one : [
-            {
-                date : '2001.10',
-                cont : 'JVC 설립을 위한 MOU 체결'
-            },
-            {
-                date : '2002.02',
-                cont : '셀트리온 설립'
-            },
-        ],
-        two : [
-            {
-                date : '2005.06',
-                cont : 'BMS와 제품 공급계약 체결'
-            },
-            {
-                date : '2005.07',
-                cont : '1공장 준공식(50,000L)'
-            },
-            {
-                date : '2007.12',
-                cont : '1공장 cGMP 생산 설비 미국 FDA 인준'
-            },
-            {
-                date : '2008.08',
-                cont : '코스닥 상장'
-            },
-        ],
-    };
-    const imgData = {
-        one : [{img : '../images/main/history/1.jpg'}],
-        two : [{img : '../images/main/history/2.jpg'}]
-    }
+import '../../css/history.css';
+import { historyData, imgData, mainData } from '../data/historyData.js';
 
-    const mainData = {
-        one : [{img : './images/main/history/main/1.jpg'}]
-    }
+export function History() {
 
     const [historyBtn, setHistoryBtn] = useState('one');
     const [selData, SetSelData] = useState(historyData[historyBtn]);
@@ -56,7 +20,7 @@ export function History() {
         setMainImg(data);
     };
 
-    useEffect(()=>{
+    useEffect(() => {
         const selectedData = historyData[historyBtn];
         const selectedData2 = imgData[historyImg];
         const selectedData3 = mainData[mainImg];
@@ -65,28 +29,32 @@ export function History() {
         SetSelData3(selectedData3);
     }, [historyBtn, historyImg, mainImg]);
 
-    
+
     return (
         <>
             <div className="history-wrap">
                 <div className="history-top">
                     {/* <p>CELLTRION</p> */}
                     <ul>
-                        <button onClick={()=>showHistory('one')} >2000-2002</button>
-                        <button onClick={()=>showHistory('two')} >2003-2008</button>
-                        <button></button>
-                        <button></button>
+                        <button onClick={() =>showHistory('one')} >STEP1</button>
+                        <button onClick={() =>showHistory('two')} >STEP2</button>
+                        <button onClick={() =>showHistory('three')}>STEP3</button>
+                        <button onClick={() =>showHistory('four')}>STEP4</button>
                     </ul>
                     <div className="history-main-img" >
-                            {/* <img src="../images/main/history.jpg" alt="사진" /> */}
-                            {
-                                selData3.map((v, i) =>
-                                    <div key={i}>
-                                        <img src={v.img} alt="역사" />
-                                    </div>
-                                )
-                            }
-                        </div>
+                        {/* <img src="../images/main/history.jpg" alt="사진" /> */}
+                        {
+                            selData3.map((v, i) =>
+                                <div key={i}>
+                                    <img src={v.img} alt="역사" />
+                                    <section>
+                                        <h2>{v.txt}</h2>
+                                        <p>{v.cont}</p>
+                                    </section>
+                                </div>
+                            )
+                        }
+                    </div>
                     <div className="history-img-bx">
                         <div className="history-cont-bx">
                             {
@@ -104,6 +72,7 @@ export function History() {
                                 selData2.map((v, i) =>
                                     <div key={i}>
                                         <img src={v.img} alt="역사" />
+
                                     </div>
                                 )
                             }

@@ -108,7 +108,28 @@
 .history-main-img{
     max-width: 100%;
 }
+.history-main-img>div{
+    position: relative;
+}
 .history-main-img>div>img{
     max-width: 100%;
     aspect-ratio: 3/1;
+    position: relative;
+    display: block;
+}
+.history-main-img>div>section{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    width: 75%;
+}
+.history-main-img>div>section>h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.history-main-img>div>section>p{
+    font-size: 1.5rem;
 }
