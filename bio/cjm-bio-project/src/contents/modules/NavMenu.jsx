@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { navData } from '../data/navData.js';
 
@@ -9,7 +9,24 @@ export function NavMenu(props) {
         <ul>
             {selData.map((v, i) =>
                 <li className='footer-li' key={i}>
-                    <Link to={v.link}> {v.txt}</Link>
+                    {
+                        v.sub ? <span>{v.txt}</span> : <Link to={v.link}> {v.txt}</Link>
+                    }
+                    {
+                        v.sub && (
+                            <div className="smenu">
+                                <ol>
+                                    {
+                                        v.sub.map((v, i) =>
+                                            <li key={i}>
+                                                <Link to={v.link}>{v.txt}</Link>
+                                            </li>
+                                        )
+                                    }
+                                </ol>
+                            </div>
+                        )
+                    }
                 </li>
             )}
         </ul>
