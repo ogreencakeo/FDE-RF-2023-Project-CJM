@@ -1,0 +1,57 @@
+.newMedicines-img-wrap{
+    max-width: 100%;
+    position: relative;
+}
+.newMedicines-img-wrap>img{
+    max-width: 100%;
+    aspect-ratio: 4.5/1;
+    position: relative;
+}
+
+.newMedicines-img-wrap>section{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+.newMedicines-img-wrap>section>h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.newMedicines-img-wrap>section>p{
+    font-size: 1.2rem;
+}
+
+/* 인재상 */
+.business-cont-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.business-explain-bx {
+    display: flex;
+    margin: 60px 0 100px;
+    justify-content: space-between;
+}
+
+.business-explain-txt {
+    font-size: 2.2rem;
+    color: #50b947;
+    width: 15%;
+}
+
+.business-explain-bx h2 {
+    width: 80%;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.business-explain-txt::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #50b947;
+}

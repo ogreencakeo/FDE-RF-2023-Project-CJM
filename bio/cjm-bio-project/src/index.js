@@ -26,7 +26,7 @@ export default function App() {
           <Route index element={<Main />} />
           <Route path='hisory' element={<History />} />
           <Route path='technology' element={<Technology />} />
-          <Route path='newMedicines' element={<NewMedicines />} />
+          <Route path='newMedicines/*' element={<NewMedicines />} />
           <Route path='newsroom' element={<Newsroom />} />
           <Route path='login' element={<Login />} />
           <Route path='member' element={<Member />} />

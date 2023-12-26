@@ -14,19 +14,19 @@ export const navData = {
             sub : [
                 {
                     txt : '신제형',
-                    link : '/newformulation',
+                    link : 'newMedicines/newformulation',
                 },
                 {
                     txt : '바이오베터',
-                    link : '/bioBetter',
+                    link : 'newMedicines/bioBetter',
                 },
                 {
                     txt : '신약개발',
-                    link : '/newDrugDevelopment',
+                    link : 'newMedicines/newDrugDevelopment',
                 },
                 {
                     txt : '디지털 헬스케어',
-                    link : '/digitalHealthcare',
+                    link : 'newMedicines/digitalHealthcare',
                 },
             ]
 

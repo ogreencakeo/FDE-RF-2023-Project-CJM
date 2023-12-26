@@ -95,8 +95,7 @@ export function Main() {
                 </div>
             </div> */}
 
-            {/* 인재상 */}
-            {/* <BusinessCont cat='main' /> */}
+            
             {/* 핵심가치 */}
             {/* <BusinessValue cat='핵심가치' /> */}
         </>
