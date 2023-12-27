@@ -484,7 +484,7 @@
         padding: 15px;
     }
     .swipe_sec_tit{
-        font-size: 1.6rem;
+        font-size: 1.6rem !important;
     }
     .swipe_sec_cat{
         font-size: 1.2rem;

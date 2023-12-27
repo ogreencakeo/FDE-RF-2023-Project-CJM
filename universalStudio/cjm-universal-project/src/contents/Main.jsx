@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 
 // 폰트어썸
@@ -74,10 +74,15 @@ export function Main() {
             changeBackgroundColor();
         }, 1000); // 1000밀리초(5초) 간격으로 변경, 원하는 시간으로 조절
 
+        
+
         return () => {
             clearInterval(backgroundColorInterval); // 컴포넌트가 언마운트될 때 interval 정리
         };
+
     }, []);
+
+    
 
     // 사진 클릭 회전
     // 박스별 회전 상태를 저장하는 배열

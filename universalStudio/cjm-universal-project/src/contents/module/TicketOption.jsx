@@ -31,7 +31,7 @@ export function TicketOption() {
             quantity: 0,
             character: <FontAwesomeIcon icon={faPerson} className="person-icon" />,
             txt: "성인(만12 - 64세)",
-            option: "[1일권 Low Price (A시즌)]-성인",
+            option: "[1일권 Low Price (A시즌)]",
         },
         {
             idx : "2",
@@ -39,7 +39,7 @@ export function TicketOption() {
             quantity: 0,
             character: <FontAwesomeIcon icon={faChild} className="child-icon" />,
             txt: "어린이(만4 - 11세)",
-            option: "[1일권 Low Price (A시즌)]-어린이",
+            option: "[1일권 Low Price (A시즌)]",
         },
         {
             idx : "3",
@@ -47,7 +47,7 @@ export function TicketOption() {
             quantity: 0,
             character: <FontAwesomeIcon icon={faPersonCane} className="senior-icon" />,
             txt: "시니어(만 65세 이상)",
-            option: "[1일권 Low Price (A시즌)]-시니어",
+            option: "[1일권 Low Price (A시즌)]",
         },
         // B 시즌
         {

@@ -2,17 +2,11 @@
     max-width: 300px;
     margin: 50px auto;
     text-align: center;
-    border: 3px solid #073888ff;
-    box-shadow: 1px 1px 3px #000;
+    border: 3px solid #000;
+    box-shadow: 1px 1px 5px #ccc;
     padding: 10px;
-    background: linear-gradient(45deg,#7cacf8ff, #ecf3feff, #7cacf8ff, #ecf3feff);
     font-family: 'Gugi';
     border-radius: 5px;
-}
-
-.weather-bx:hover{
-    background: linear-gradient(45deg,#f44336, #ffebee, #f44336, #ffebee );
-    border: 3px solid #b71c1c;
 }
 
 .weather-bx>h4{
