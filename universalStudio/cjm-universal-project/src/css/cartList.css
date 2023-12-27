@@ -8,7 +8,7 @@
     width: 90vw;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.93);
-    z-index: 99999999;
+    z-index: 999999999;
 }
 
 /* 닫기버튼 */
@@ -66,7 +66,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999999;
+    z-index: 9999;
     cursor: pointer;
     display: none;
 }
@@ -109,10 +109,11 @@
     border: 0;
     font-size: 1.2rem;
     margin-right: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn-cnt button {
-    background-color: rgba(255, 255, 255, 0.93);
+    background-color: rgba(255, 255, 255, 0.1);
     border: 0;
 }
 
@@ -133,7 +134,7 @@
     width: 25px;
     aspect-ratio: 1/1;
     padding: 5px;
-    background-color: rgba(255, 255, 255, 0.93);
+    background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
     margin: 0 auto;
     border: 0;
