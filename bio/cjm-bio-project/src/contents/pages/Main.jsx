@@ -35,6 +35,8 @@ export function Main() {
             <SurviceCont category='main' />
             {/* 한눈에 */}
             <AtAGlance />
+            {/* 연구소 */}
+            <Laboratory />
             {/* 비디오 */}
             <VidSwiper category='main' />
             
@@ -51,8 +53,7 @@ export function Main() {
                     <p>셀트리온은 차세대 바이오의약품 및 케미컬의약품 개발을 통해 인류의 건강과 복지 증진의 가치를 실현하는 세계적인 종합생명공학 기업으로 성장해나가겠습니다.</p>
                 </div>
             </div>
-            {/* 연구소 */}
-            <Laboratory />
+            
             {/* 보도자료 */}
             <ContactUs />
             {/* 연구분야 */}
@@ -94,6 +95,7 @@ export function Main() {
             
             {/* 핵심가치 */}
             {/* <BusinessValue cat='핵심가치' /> */}
+            
         </>
     );
 }
