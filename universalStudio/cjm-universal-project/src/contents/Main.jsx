@@ -39,6 +39,7 @@ import "jquery-ui-dist/jquery-ui";
 import { ImgMoveSlide } from "./module/ImgMoveSlide.jsx";
 import { UniverSalText } from "./module/UniverSalText.jsx";
 import { ImgHoverPlay } from "./module/ImgHoverPlay.jsx";
+import  Weather  from "./module/Weather.jsx";
 
 import { Area } from "../contents/module/Area.jsx";
 
@@ -327,6 +328,8 @@ export function Main() {
                     <img src={process.env.PUBLIC_URL + "/images/main/character/character17.png"} alt="어린이" />
                 </div>
             </div>
+            {/* 날씨정보 */}
+            <Weather />
             {/* 이벤트 */}
             <div className="main-upcomingEv-wrap">
                 <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx" onClick={(e) => e.preventDefault()}><span data-hover='Upcoming Event'>Upcoming Event</span></a></nav></h1>
