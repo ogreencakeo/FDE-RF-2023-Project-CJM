@@ -8,7 +8,7 @@ import { bioConn } from "../modules/bioContent"
 import $ from 'jquery';
 
 export function Login(){
-    const myCon = useContext(dcCon);
+    const myCon = useContext(bioConn);
     const [userId, setUserId] = useState('');
     const [pwd, setPwd] = useState('');
 

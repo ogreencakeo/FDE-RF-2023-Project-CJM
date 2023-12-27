@@ -488,6 +488,100 @@
 .img-lab-div>section>h2{
     font-size: 2rem;
 }
+
+/* 연구소 */
+.laboratory-wrap{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.laboratory-bx{
+    flex: 1;
+    transition: .4s ease-in-out;
+    overflow: hidden;
+    aspect-ratio: 1/1.8;
+    filter: brightness(0.55);
+    position: relative;
+}
+.laboratory-bx:hover{
+    transform: scale(1.07);
+    filter: brightness(0.85);
+    z-index: 1;
+    border: 8px solid black;
+}
+.laboratory-bx>img{
+    width: 100%;
+    display: block;
+    aspect-ratio: 1/1.8;
+    position: relative;
+}
+.laboratory-bx>section{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color: rgba(255, 255, 255, 1);
+    transform: translateX(-50%);
+    transition: color 0.4s ease-in-out;
+    
+}
+.laboratory-bx:hover >section{
+    color: black;
+}
+.laboratory-bx>section h3{
+    font-size: 2rem;
+    margin: 20px;
+    font-family: 'Gugi';
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+.laboratory-bx>section h3::after{
+    display: block;
+    content: '';
+    width: 200px;
+    height: 5px;
+    background-color: #000;
+    border: 5px solid #fff;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.laboratory-bx-cont{
+    transition: .6s ease-out;
+    width: 100%;
+    padding: 30px 0;
+    background-color: rgb(255, 255, 255, 0.7);
+    transform: translate(-150%, -150%);
+    position: absolute;
+}
+.laboratory-bx:hover .laboratory-bx-cont{
+    transform: translateY(0);
+}
+
+.laboratory-bx>section h1{
+    font-size: 2.2rem;
+    font-family: 'Jua';
+    margin: 10px;
+}
+
+.laboratory-bx>section h2{
+    font-size: 1.5rem;
+    font-family: 'Jua';
+
+}
+.laboratory-bx>section p{
+    font-family: 'Jua';
+
+
+}
+
+.laboratory-bx:hover h1, 
+.laboratory-bx:hover p, 
+.laboratory-bx:hover h2{
+    transform: translateY(0);
+}
 /* footer */
 .footer-wrap {
     max-width: 100%;

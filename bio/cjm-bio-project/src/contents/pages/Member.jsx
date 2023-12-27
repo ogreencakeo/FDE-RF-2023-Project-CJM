@@ -2,6 +2,8 @@
 import { useContext, useState } from 'react';
 import {initData} from '../data/mem_fn.js';
 
+import {Link} from 'react-router-dom';
+
 // 컨텍스트 API 불러오기
 import { bioConn } from '../modules/bioContent.jsx';
 

@@ -14,6 +14,7 @@ import { faBraille }
     from "@fortawesome/free-solid-svg-icons";
 import { faBuilding }
     from "@fortawesome/free-regular-svg-icons";
+import { Laboratory } from "../modules/Laboratory.jsx";
 
 
 
@@ -50,13 +51,8 @@ export function Main() {
                     <p>셀트리온은 차세대 바이오의약품 및 케미컬의약품 개발을 통해 인류의 건강과 복지 증진의 가치를 실현하는 세계적인 종합생명공학 기업으로 성장해나가겠습니다.</p>
                 </div>
             </div>
-            <div className="img-lab-div">
-                <img src="../images/main/img_lab01.jpg" alt="연구실" />
-                <section>
-                    <h1>국내 최대 규모 R&D 전문 인력</h1>
-                    <h2>전체 임직원의 33%</h2>
-                </section>
-            </div>
+            {/* 연구소 */}
+            <Laboratory />
             {/* 보도자료 */}
             <ContactUs />
             {/* 연구분야 */}
