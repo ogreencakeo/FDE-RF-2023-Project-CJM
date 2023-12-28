@@ -35,14 +35,14 @@ export const navData = {
             "txt": "Newsroom",
             "link": "/newsroom",
         },
-        {
-            "txt": "Login",
-            "link": "/login",
-        },
-        {
-            "txt": "Member",
-            "link": "/member",
-        },
+        // {
+        //     "txt": "Login",
+        //     "link": "/login",
+        // },
+        // {
+        //     "txt": "Member",
+        //     "link": "/member",
+        // },
         
 
     ],

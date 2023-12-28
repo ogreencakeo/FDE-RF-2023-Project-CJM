@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { NavMenu } from "../modules/NavMenu";
 import { Logo } from "../modules/Logo";
 
-export const TopArea = memo(() => {
+export const TopArea = memo(({ chgPageFn,logSts, logMsg, logOut}) => {
     const showMenu = () => {
         $('.ham-nav-bx, .ham-btn').toggleClass('on');
     }
@@ -21,6 +21,7 @@ export const TopArea = memo(() => {
     return (
         <>
             <div className="top-area-wrap">
+                <div className="logmsg">{logMsg}</div>
                 <div className="logo">
                     <Logo />
                 </div>

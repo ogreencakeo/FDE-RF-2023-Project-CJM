@@ -35,6 +35,54 @@ export function Login(){
         setUserId(e.target.value);
     };
 
+    const changePwd = (e) => {
+        if(e.target.value !== '') setPwdError(false);
+        else{
+            setIdMsg(msgPwd[0]);
+            setPwdError(true);
+        }
+        setPwd(e.target.value);
+    };
+
+    const totalValid = () => {
+        if(!userId) setUserIdError(true);
+        if(!pwd) setPwdError(true);
+
+        if(userId && pwd) return true;
+        else return false;
+    };
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        if(totalValid()){
+            initData();
+            let memData = localStorage.getItem('bio-mem-data');
+            memData = JSON.parse(memData);
+
+            let findD = memData.find((v) => {
+                if(v['uid'] === userId) return true;
+            });
+
+            if(findD){
+                setUserIdError(false);
+                if(findD['pwd'] === pwd){
+                    setPwdError(false);
+                }
+                localStorage.setItem('bio-minfo', JSON.stringify(findD));
+
+                myCon.setLogSts(localStorage.getItem('bio-minfo'))
+                
+                myCon.chgPage('/',{});
+            }else{
+                setPwdMsg(msgPwd[1]);
+                setPwdError(true);
+            }
+        }else{
+            setIdMsg(msgId[1]);
+            setUserIdError(true);
+        }
+    }
+
     return(
         <div className="login-bx">
             <section className="membx" style={{minHeight : '300px'}}>
