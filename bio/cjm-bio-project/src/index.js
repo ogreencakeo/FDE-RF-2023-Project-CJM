@@ -13,6 +13,7 @@ import {Main} from './contents/pages/Main';
 import {History} from './contents/pages/History';
 import {Technology} from './contents/pages/Technology';
 import {NewMedicines} from './contents/pages/NewMedicines';
+import {Shop} from './contents/pages/Shop';
 import {Newsroom} from './contents/pages/Newsroom';
 import {Login} from './contents/pages/Login';
 import {Member} from './contents/pages/Member';
@@ -28,6 +29,7 @@ export default function App() {
           <Route path='technology' element={<Technology />} />
           <Route path='newMedicines/*' element={<NewMedicines />} />
           <Route path='newsroom' element={<Newsroom />} />
+          <Route path='shop' element={<Shop />} />
           <Route path='login' element={<Login />} />
           <Route path='member' element={<Member />} />
         </Route>

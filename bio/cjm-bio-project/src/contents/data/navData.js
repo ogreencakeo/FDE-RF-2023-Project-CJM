@@ -35,6 +35,10 @@ export const navData = {
             "txt": "Newsroom",
             "link": "/newsroom",
         },
+        {
+            "txt": "Shop",
+            "link": "/shop",
+        },
         // {
         //     "txt": "Login",
         //     "link": "/login",
