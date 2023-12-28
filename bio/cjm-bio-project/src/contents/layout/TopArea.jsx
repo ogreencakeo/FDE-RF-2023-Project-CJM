@@ -4,13 +4,12 @@ import { Link } from "react-router-dom";
 import $ from "jquery";
 import { useEffect } from "react";
 
-import { NavMenu } from "../modules/NavMenu";
 import { Logo } from "../modules/Logo";
 
 import { navData } from "../data/navData.js";
 
-export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
-    const selData = navData['top'];
+export const TopArea = memo(({ logSts, logMsg, logOut }) => {
+    const selData = navData["top"];
     console.log("TopArea selData :", selData);
     const showMenu = () => {
         $(".ham-nav-bx, .ham-btn").toggleClass("on");
@@ -50,17 +49,24 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
                                                     <Link to={v.link}>{v.txt}</Link>
                                                 </li>
                                             ))}
-                                            {logSts === null && (
-                                                <li>
-                                                    <Link to="/member">JOIN US</Link>
-                                                    <Link to="/login">LOGIN</Link>
-                                                </li>
-                                            )}
                                         </ol>
                                     </div>
                                 )}
                             </li>
                         ))}
+                        {logSts === null && (
+                            <li className="join-login-div">
+                                <Link to="/member">JOIN US</Link>
+                                <Link to="/login">LOGIN</Link>
+                            </li>
+                        )}
+                        {logSts !== null && (
+                            <li className="join-login-div">
+                                <a href="#" onClick={logOut}>
+                                    LOGOUT
+                                </a>
+                            </li>
+                        )}
                     </ul>
                 </nav>
             </div>

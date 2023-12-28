@@ -1,10 +1,12 @@
 import {TopArea} from './TopArea';
 import {MainArea} from './MainArea';
 import {FooterArea} from './FooterArea';
+
+// Context API 불러오기
 import { bioConn } from '../modules/bioContent';
 
 import { useEffect, useLayoutEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { useCallback } from 'react';
 
 export function Layout(){
@@ -35,7 +37,7 @@ export function Layout(){
 
     return(
         <bioConn.Provider value={{chgPage, logSts, setLogSts, setLogMsg}}>
-            <TopArea chgPageFn={chgPage} logSts={logSts} logMsg={logMsg} logOut={logOut} />
+            <TopArea logSts={logSts} logMsg={logMsg} logOut={logOut} />
             <MainArea />
             <FooterArea />
         </bioConn.Provider>
