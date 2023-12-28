@@ -1,3 +1,9 @@
+// 폰트어썸
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHandHoldingDroplet, faBed, faDroplet, faBone, faFire }
+    from "@fortawesome/free-solid-svg-icons";
+
+
 export const shopItem = [
     {
         idx : '1',
@@ -6,7 +12,9 @@ export const shopItem = [
         cost: '66000',
         sale : '20',
         price : '52900',
-        img : 'antioxidant/1.jpg',
+        img : '../images/shop/antioxidant/1.jpg',
+        color : 'orange',
+        icon : <FontAwesomeIcon icon={faHandHoldingDroplet} />
     },
     {
         idx : '2',
@@ -15,7 +23,9 @@ export const shopItem = [
         cost : '66000',
         sale : '40',
         price : '39900',
-        img : 'antioxidant/2.jpg',
+        img : '../images/shop/antioxidant/2.jpg',
+        color : 'orange',
+        icon : <FontAwesomeIcon icon={faHandHoldingDroplet} />
     },
     {
         idx : '3',
@@ -24,7 +34,9 @@ export const shopItem = [
         cost : '5200',
         price : '36900',
         sale : '29',
-        img : 'antioxidant/3.jpg',
+        img : '../images/shop/antioxidant/3.jpg',
+        color : 'orange',
+        icon : <FontAwesomeIcon icon={faHandHoldingDroplet} />
     },
     {
         idx : '4',
@@ -33,7 +45,9 @@ export const shopItem = [
         cost : '46900',
         price : '90000',
         sale : '48',
-        img : 'antioxidant/4.jpg',
+        img : '../images/shop/antioxidant/4.jpg',
+        color : 'orange',
+        icon : <FontAwesomeIcon icon={faHandHoldingDroplet} />
     },
     {
         idx : '5',
@@ -42,7 +56,9 @@ export const shopItem = [
         cost : '300000',
         price : '139900',
         sale : '53',
-        img : 'vitality/1.jpg',
+        img : '../images/shop/vitality/1.jpg',
+        color : 'blue',
+        icon : <FontAwesomeIcon icon={faBed} />
     },
     {
         idx : '5',
@@ -51,7 +67,9 @@ export const shopItem = [
         cost : '300000',
         price : '139900',
         sale : '53',
-        img : 'vitality/1.jpg',
+        img : '../images/shop/vitality/2.jpg',
+        color : 'blue',
+        icon : <FontAwesomeIcon icon={faBed} />
     },
     {
         idx : '6',
@@ -60,7 +78,9 @@ export const shopItem = [
         cost : '90000',
         price : '58900',
         sale : '35',
-        img : 'vitality/2.jpg',
+        img : '../images/shop/vitality/2.jpg',
+        color : 'blue',
+        icon : <FontAwesomeIcon icon={faBed} />
     },
     {
         idx : '7',
@@ -69,7 +89,9 @@ export const shopItem = [
         cost : '180000',
         price : '89900',
         sale : '50',
-        img : 'vitality/3.jpg',
+        img : '../images/shop/vitality/3.jpg',
+        color : 'blue',
+        icon : <FontAwesomeIcon icon={faBed} />
     },
     {
         idx : '8',
@@ -78,7 +100,9 @@ export const shopItem = [
         cost : '90000',
         price : '56900',
         sale : '37',
-        img : 'vitality/4.jpg',
+        img : '../images/shop/vitality/4.jpg',
+        color : 'blue',
+        icon : <FontAwesomeIcon icon={faBed} />
     },
     {
         idx : '9',
@@ -87,7 +111,9 @@ export const shopItem = [
         cost : '120000',
         price : '57900',
         sale : '37',
-        img : 'vitality/5.jpg',
+        img : '../images/shop/vitality/5.jpg',
+        color : 'blue',
+        icon : <FontAwesomeIcon icon={faBed} />
     },
     {
         idx : '10',
@@ -96,7 +122,9 @@ export const shopItem = [
         cost : '180000',
         price : '127900',
         sale : '29',
-        img : 'blood/1.jpg',
+        img : '../images/shop/blood/1.jpg',
+        color : 'orangered',
+        icon : <FontAwesomeIcon icon={faDroplet} />
     },
     {
         idx : '11',
@@ -105,7 +133,9 @@ export const shopItem = [
         cost : '130000',
         price : '64900',
         sale : '29',
-        img : 'blood/2.jpg',
+        img : '../images/shop/blood/2.jpg',
+        color : 'orangered',
+        icon : <FontAwesomeIcon icon={faDroplet} />
     },
     {
         idx : '12',
@@ -114,7 +144,9 @@ export const shopItem = [
         cost : '76000',
         price : '39000',
         sale : '29',
-        img : 'blood/3.jpg',
+        img : '../images/shop/blood/3.jpg',
+        color : 'orangered',
+        icon : <FontAwesomeIcon icon={faDroplet} />
     },
     {
         idx : '13',
@@ -123,7 +155,9 @@ export const shopItem = [
         cost : '30000',
         price : '26900',
         sale : '29',
-        img : 'blood/4.jpg',
+        img : '../images/shop/blood/4.jpg',
+        color : 'orangered',
+        icon : <FontAwesomeIcon icon={faDroplet} />
     },
     {
         idx : '13',
@@ -132,7 +166,9 @@ export const shopItem = [
         cost : '216000',
         price : '117900',
         sale : '45',
-        img : 'bone/1.jpg',
+        img : '../images/shop/bone/1.jpg',
+        color : 'green',
+        icon : <FontAwesomeIcon icon={faBone} />
     },
     {
         idx : '14',
@@ -141,7 +177,9 @@ export const shopItem = [
         cost : '180000',
         price : '74900',
         sale : '58',
-        img : 'bone/2.jpg',
+        img : '../images/shop/bone/2.jpg',
+        color : 'green',
+        icon : <FontAwesomeIcon icon={faBone} />
     },
     {
         idx : '15',
@@ -150,7 +188,9 @@ export const shopItem = [
         cost : '66000',
         price : '39900',
         sale : '40',
-        img : 'bone/3.jpg',
+        img : '../images/shop/bone/3.jpg',
+        color : 'green',
+        icon : <FontAwesomeIcon icon={faBone} />
     },
     {
         idx : '16',
@@ -159,7 +199,9 @@ export const shopItem = [
         cost : '36000',
         price : '21900',
         sale : '39',
-        img : 'bone/4.jpg',
+        img : '../images/shop/bone/4.jpg',
+        color : 'green',
+        icon : <FontAwesomeIcon icon={faBone} />
     },
     {
         idx : '17',
@@ -168,7 +210,9 @@ export const shopItem = [
         cost : '224000',
         price : '139900',
         sale : '38',
-        img : 'muscle/1.jpg',
+        img : '../images/shop/muscle/1.jpg',
+        color : 'purple',
+        icon : <FontAwesomeIcon icon={faFire} />
     },
     {
         idx : '18',
@@ -177,7 +221,9 @@ export const shopItem = [
         cost : '224000',
         price : '139900',
         sale : '38',
-        img : 'muscle/1.jpg',
+        img : '../images/shop/muscle/1.jpg',
+        color : 'purple',
+        icon : <FontAwesomeIcon icon={faFire} />
     },
     {
         idx : '19',
@@ -186,7 +232,9 @@ export const shopItem = [
         cost : '112000',
         price : '77900',
         sale : '30',
-        img : 'muscle/2.jpg',
+        img : '../images/shop/muscle/2.jpg',
+        color : 'purple',
+        icon : <FontAwesomeIcon icon={faFire} />
     },
     {
         idx : '20',
@@ -195,6 +243,8 @@ export const shopItem = [
         cost : '28000',
         price : '21900',
         sale : '22',
-        img : 'muscle/3.jpg',
+        img : '../images/shop/muscle/3.jpg',
+        color : 'purple',
+        icon : <FontAwesomeIcon icon={faFire} />
     },
 ]
