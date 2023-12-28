@@ -17,9 +17,9 @@ export function Shop() {
                         </div>
                         <div className="shop-cont-middle">{v.name}</div>
                         <div className="shop-cont-foot">
-                            <span>{v.cost}</span>
-                            <span>{v.price}</span>
-                            <span>{v.sale}</span>
+                            <p><del>{v.cost}원</del></p>
+                            <p>{v.price}원</p>
+                            <p>{v.sale}%</p>
                         </div>
                     </section>
                 </div>

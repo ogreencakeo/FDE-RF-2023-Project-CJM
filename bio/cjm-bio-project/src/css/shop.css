@@ -50,3 +50,16 @@
     font-size: 1rem;
     margin: 10px 0;
 }
+
+.shop-cont-foot{
+    display: flex;
+    justify-content: space-between;
+}
+.shop-cont-foot p{
+    display: inline-block;
+    flex: 1;
+}
+
+.shop-cont-foot p:first-child{
+    color: #ccc;
+}
