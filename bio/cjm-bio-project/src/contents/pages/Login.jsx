@@ -11,6 +11,8 @@ export function Login(){
     const myCon = useContext(bioConn);
     const [userId, setUserId] = useState('');
     const [pwd, setPwd] = useState('');
+    const [userIdError, setUserIdError] = useState(false);
+    const [pwdError, setPwdError] = useState(false);
 
     const msgId = [
         "This is a required entry", //필수입력

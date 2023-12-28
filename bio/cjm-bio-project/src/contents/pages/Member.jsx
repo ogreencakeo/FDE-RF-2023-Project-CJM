@@ -83,8 +83,8 @@ export function Member(){
     };
 
     const changeUserName = (e) => {
-        if(e.target.value !== '') setUserIdError(false);
-        else setUserIdError(true);
+        if(e.target.value !== '') setUserNameError(false);
+        else setUserNameError(true);
 
         setUserName(e.target.value);
     };
@@ -99,10 +99,10 @@ export function Member(){
 
     const totalValid = () => {
         if(!userId) setUserIdError(true);
-        if(!pwd) setPwd(true);
-        if(!chkPwd) setChkPwd(true);
-        if(!userName) setUserName(true);
-        if(!email) setEmail(true);
+        if(!pwd) setPwdError(true);
+        if(!chkPwd) setChkPwdError(true);
+        if(!userName) setUserNameError(true);
+        if(!email) setEmailError(true);
 
         if(
             userId &&
