@@ -22,7 +22,7 @@
     aspect-ratio: 1/1;
 }
 .shop-bx>section{
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .shop-cont-top{
@@ -58,8 +58,19 @@
 .shop-cont-foot p{
     display: inline-block;
     flex: 1;
+    text-align: center;
+    font-family: 'Jua';
 }
-
 .shop-cont-foot p:first-child{
     color: #ccc;
+    text-align: start;
+    font-size: 0.8rem;
+}
+.shop-cont-foot p:nth-child(2){
+    font-size: 1.2rem;
+}
+.shop-cont-foot p:last-child{
+    text-align: right;
+    font-size: 1.2rem;
+    color: red;  
 }
