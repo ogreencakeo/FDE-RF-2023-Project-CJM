@@ -28,7 +28,7 @@ export function Layout(){
 
     useEffect(()=>{
         if(localStorage.getItem('bio-minfo')){
-            const minfo = JSON.parse(localStorage.getItem('bio-info'));
+            const minfo = JSON.parse(localStorage.getItem('bio-minfo'));
             setLogMsg(`welcome ${minfo.unm}`);
         }
     }, [])
