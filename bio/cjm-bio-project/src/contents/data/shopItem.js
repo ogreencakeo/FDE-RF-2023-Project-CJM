@@ -179,4 +179,22 @@ export const shopItem = [
         sale : '38',
         img : 'muscle/1.jpg',
     },
+    {
+        idx : '19',
+        cat : '근육증진',
+        name : '헬시플러스 초유프로틴(40gx7포) 4박스',
+        cost : '112000',
+        price : '77900',
+        sale : '30',
+        img : 'muscle/2.jpg',
+    },
+    {
+        idx : '20',
+        cat : '근육증진',
+        name : '헬시플러스 초유프로틴(40gx7포) 1박스',
+        cost : '28000',
+        price : '21900',
+        sale : '22',
+        img : 'muscle/3.jpg',
+    },
 ]
