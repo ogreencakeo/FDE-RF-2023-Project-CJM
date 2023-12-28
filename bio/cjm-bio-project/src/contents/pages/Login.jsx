@@ -23,6 +23,18 @@ export function Login(){
         "Password doesn't match",
     ];
 
+    const [idMsg, setIdMsg] = useState(msgId[0]);
+    const [pwdMsg, setPwdMsg] = useContext(msgPwd[0]);
+
+    const changeUserId = (e) => {
+        if(e.target.value !== '') setUserIdError(false);
+        else{
+            setIdMsg(msgId[0]);
+            setUserIdError(true);
+        }
+        setUserId(e.target.value);
+    };
+
     return(
         <div className="login-bx">
             <section className="membx" style={{minHeight : '300px'}}>
@@ -31,7 +43,14 @@ export function Login(){
                     <ul>
                         <li>
                             <label>ID : </label>
-                            <input type="text" maxLength="20" placeholder="Please enter your ID"  />
+                            <input type="text" maxLength="20" placeholder="Please enter your ID" value={userId} onChange={changeUserId}  />
+                        </li>
+                        <li>
+                            <label>Password : </label>
+                            <input type="password" maxLength='20' placeholder="Please enter your Password" value={pwd} onChange={changePwd} />
+                        </li>
+                        <li style={{overflow : 'hidden'}}>
+                            <button className="sbtn" onClick={onSubmit}>Submit</button>
                         </li>
                     </ul>
                 </form>
