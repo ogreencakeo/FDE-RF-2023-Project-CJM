@@ -36,7 +36,7 @@ export const navData = {
             "link": "/newsroom",
         },
         {
-            "txt": "Shop",
+            "txt": "CELLTRION BEAUTY",
             "link": "/shop",
         },
         // {

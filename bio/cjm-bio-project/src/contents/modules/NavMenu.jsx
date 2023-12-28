@@ -23,14 +23,14 @@ export function NavMenu(props) {
                                             </li>
                                         )
                                     }
-                                    {
+                                    {/* {
                                         logSts === null && (
                                             <li>
                                                 <Link to='/member'>JOIN US</Link>
                                                 <Link to='/login'>LOGIN</Link>
                                             </li>
                                         )
-                                    }
+                                    } */}
                                 </ol>
                             </div>
                         )

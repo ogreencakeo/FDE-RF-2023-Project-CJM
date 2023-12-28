@@ -1,23 +1,38 @@
+// 폰트어썸
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faVialVirus, faGears, faWrench, faFlask}
+    from "@fortawesome/free-solid-svg-icons";
+
 export function Laboratory() {
     const labData = [
         {
             img: '../images/main/lab3.jpg',
             txt: '감염성 바이러스^ 치료 신약 개발',
-            cont: 'BL-2 Bio Safety Level 2 연구시설 별도 보유'
+            cont: 'BL-2 Bio Safety Level 2 연구시설 별도 보유',
+            icon : <FontAwesomeIcon icon={faVialVirus} />,
+            color : '#649460'
+            
         },
         {
             img: '../images/main/lab1.jpg',
             txt: '선도적 기술력과 역량',
             cont: '세포주∙배양 공정∙정제 공정 개발 분야',
+            icon : <FontAwesomeIcon icon={faWrench} />,
+            color : '#5a256e'
+
         },
         {
             txt: '핵심 기반기술 축적',
-            cont: '항체 개발 및 ADC 융합기술 등'
+            cont: '항체 개발 및 ADC 융합기술 등',
+            icon : <FontAwesomeIcon icon={faGears} />,
+            color: '#00363bff'
         },
         {
             img: '../images/main/lab2.jpg',
             txt: '최신 연구 설비',
-            cont: '물리화학 및 생물학적 분석'
+            cont: '물리화학 및 생물학적 분석',
+            icon : <FontAwesomeIcon icon={faFlask} />,
+            color : '#f44336'
         },
     ];
 
@@ -40,6 +55,9 @@ export function Laboratory() {
                             <div className="laboratory-bx-cont">
                                 <h1>{v.txt.indexOf('^') == -1? v.txt : makeCode(v.txt)}</h1>
                                 <h2>{v.cont}</h2>
+                                <h4 className="laboratory-icon" style={{
+                                    color : v.color
+                                }}>{v.icon}</h4>
                             </div>
                         </section>
                     </div>

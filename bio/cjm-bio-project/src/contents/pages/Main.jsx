@@ -67,31 +67,6 @@ export function Main() {
             {/*  */}
 
             {/* <PlatformTech />
-            <Banner category='main' />
-            <div className="history-wrap">
-                <div className="history-top">
-                    <p>CELLTRION</p>
-
-                    <div className="green-div"></div>
-
-                    <div className="history-img-bx">
-                        <div className="history-cont-bx">
-                            {
-                                historyData.map((v, i) =>
-                                    <div className="history-cont" key={i}>
-                                        <h1>{v.txt}</h1>
-                                        <p>{v.cont}</p>
-                                    </div>
-                                )
-                            }
-                        </div>
-                        <div className="history-img">
-                            <img src="../images/main/history.jpg" alt="사진" />
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
             
             {/* 핵심가치 */}
             {/* <BusinessValue cat='핵심가치' /> */}

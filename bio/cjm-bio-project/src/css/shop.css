@@ -1,6 +1,9 @@
 .shop-wrap{
     max-width: 1300px;
     margin: 0 auto;
+    
+}
+.shop-bx-wrap{
     display: flex;
     flex-wrap: wrap;
 }
@@ -73,4 +76,13 @@
     text-align: right;
     font-size: 1.2rem;
     color: red;  
+}
+
+.optbx{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.optbx{
+    max-width: 85%;
+    margin: 0 auto;
 }

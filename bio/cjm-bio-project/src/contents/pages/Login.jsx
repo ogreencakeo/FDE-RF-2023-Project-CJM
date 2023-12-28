@@ -4,8 +4,6 @@ import { initData } from "../data/mem_fn"
 // 컨텍스트 API
 import { bioConn } from "../modules/bioContent"
 
-// 제이쿼리
-import $ from 'jquery';
 
 export function Login(){
     const myCon = useContext(bioConn);
@@ -24,7 +22,7 @@ export function Login(){
     ];
 
     const [idMsg, setIdMsg] = useState(msgId[0]);
-    const [pwdMsg, setPwdMsg] = useContext(msgPwd[0]);
+    const [pwdMsg, setPwdMsg] = useState(msgPwd[0]);
 
     const changeUserId = (e) => {
         if(e.target.value !== '') setUserIdError(false);
@@ -67,12 +65,12 @@ export function Login(){
                 setUserIdError(false);
                 if(findD['pwd'] === pwd){
                     setPwdError(false);
+                    localStorage.setItem('bio-minfo', JSON.stringify(findD));
+    
+                    myCon.setLogSts(localStorage.getItem('bio-minfo'))
+                    
+                    myCon.chgPage('/',{});
                 }
-                localStorage.setItem('bio-minfo', JSON.stringify(findD));
-
-                myCon.setLogSts(localStorage.getItem('bio-minfo'))
-                
-                myCon.chgPage('/',{});
             }else{
                 setPwdMsg(msgPwd[1]);
                 setPwdError(true);
@@ -92,10 +90,24 @@ export function Login(){
                         <li>
                             <label>ID : </label>
                             <input type="text" maxLength="20" placeholder="Please enter your ID" value={userId} onChange={changeUserId}  />
+                            {
+                                userIdError && (
+                                    <div className="msg" style={{
+                                        color : 'red', fontSize : '10px'
+                                    }}>{idMsg}</div>
+                                )
+                            }
                         </li>
                         <li>
                             <label>Password : </label>
                             <input type="password" maxLength='20' placeholder="Please enter your Password" value={pwd} onChange={changePwd} />
+                            {
+                                pwdError && (
+                                    <div className="msg" style={{
+                                        color : 'red', fontSize : '10px'
+                                    }}>{pwdMsg}</div>
+                                )
+                            }
                         </li>
                         <li style={{overflow : 'hidden'}}>
                             <button className="sbtn" onClick={onSubmit}>Submit</button>
