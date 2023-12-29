@@ -27,13 +27,14 @@
 }
 .area-type-btn nav ul{
     display: flex;
+    flex-wrap:  wrap;
 }
 .area-type-btn nav ul li{
-    flex: 1;
-    /* outline: 1px solid pink; */
+    width: 20%;
+    font-size: 1.2rem;
     text-align: center;
-    /* border-top: 1px solid #041e49ff; */
     padding: 20px 0;
+    font-family: 'Jua';
 }
 .area-type-btn nav ul li button{
     background-color: #fff;
@@ -150,7 +151,22 @@
     font-family: 'Gugi';
 }
 
-
+/* 체크박스 */
+.chkbx{
+    /* accent-color: #fff; */
+    border: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid #999;
+    appearance: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.chkbx:checked{
+    background: linear-gradient(to right, #264069, blue);
+    border: none;
+}
 @media screen and (max-width:1000px)  {
     .area-type-bx{
         max-width: 47%;
@@ -172,6 +188,11 @@
         border-bottom: 3px solid #041e49ff
     }
 }
+@media screen and (max-width:680px)  {
+    .area-type-btn nav ul li{
+        width: 30%;
+    }
+}
 @media screen and (max-width:650px)  {
     .area-type-bx{
         max-width: 95%;
@@ -180,6 +201,7 @@
     .area-type-btn nav ul li button{
         padding: 5px;
     }
+
 }
 
 @media screen and (max-width:550px){
@@ -188,5 +210,8 @@
     }
     .arealicolor {
         border-bottom: 2px solid #041e49ff;
+    }
+    .area-type-btn nav ul li{
+        width: 45%;
     }
 }

@@ -6,7 +6,7 @@ import {Main} from './contents/Main.jsx'
 import {Attraction} from './contents/Attraction.jsx'
 import {SeasonalMenu} from './contents/SeasonalMenu.jsx'
 import {Goods} from './contents/Goods.jsx'
-import {CustomerCenter} from './contents/CustomerCenter.jsx'
+// import {CustomerCenter} from './contents/CustomerCenter.jsx'
 import { Ticket } from './contents/TIcket.jsx';
 import { Detail } from './contents/Detail.jsx';
 import { Layout } from './layout/Layout';
@@ -19,6 +19,7 @@ import { Hotel } from './contents/Hotel.jsx';
 import { Login } from './contents/Login.jsx';
 import { Seaching2 } from './contents/module/Seaching2.jsx';
 import { AreaType } from './contents/AreaType.jsx';
+import { CustomerCenter2 } from './contents/CustomerCenter2.jsx';
 
 export default function App() {
 
@@ -36,7 +37,8 @@ export default function App() {
           <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
           <Route path='goods/*' element={<Goods />} />
           <Route path='ticket' element={<Ticket />} />
-          <Route path='customerCenter' element={<CustomerCenter />} />
+          {/* <Route path='customerCenter' element={<CustomerCenter />} /> */}
+          <Route path='customerCenter' element={<CustomerCenter2 />} />
           <Route path='hotel' element={<Hotel />} />
           {/* <Route path='area' element={<Seaching2 />} /> */}
           <Route path='schpage' element={<SchPage />} />
