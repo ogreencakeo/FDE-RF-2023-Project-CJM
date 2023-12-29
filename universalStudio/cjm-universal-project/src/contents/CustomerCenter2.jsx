@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { announcement } from "../data/유니버설-문의2";
+import baseData from "../data/유니버설-문의2.json";
+
+// 제이쿼리
+import $ from 'jquery';
 
 export function CustomerCenter2(){
     
@@ -7,7 +10,7 @@ export function CustomerCenter2(){
 
     const [pgNum, setPgNum] = useState(1);
     const pgBlock = 8;
-    const totNum = announcement.length;
+    const totNum = baseData.length;
 
     const bindList = () => {
         const tempData = [];
@@ -53,7 +56,7 @@ export function CustomerCenter2(){
                         {/* 중앙 레코드 표시부분 */}
                         <div>{bindList()}</div>
                         {/* 하단 : 페이징 */}
-                        <div>{pagingLink()}</div>
+                        {/* <div>{pagingLink()}</div> */}
                     </>
                 )
             }
