@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { areaData } from "../data/attraction/attractionData";
+import { attractionData } from "../data/attraction/attractionData";
 
 // css
-import '../css/area_type.css';
+import "../css/area_type.css";
 
 import { Link, useLocation } from "react-router-dom";
 import { GoodsSwiper } from "./pages/plugin/Swiper";
@@ -11,7 +11,6 @@ import { UniverSalText } from "./module/UniverSalText";
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import { dragFn } from "../Function/dragFn";
 
 export function AreaType() {
     const loc = useLocation();
@@ -19,30 +18,77 @@ export function AreaType() {
 
     if (loc.state) keyword = loc.state.keyword;
 
-    const [areaType, setAreaType] = useState("nintendo");
-    const [selData, setSelData] = useState(areaData[areaType]);
-    const [areaColor, setAreaColor] = useState("nintendo");
+    // const [areaType, setAreaType] = useState("nintendo");
+    // const [selData, setSelData] = useState(areaData[areaType]);
+    // const [areaColor, setAreaColor] = useState("nintendo");
 
-    const areaChangeFn = (data) => {
-        setAreaType(data);
-        setAreaColor(data);
+    // const areaChangeFn = (data) => {
+    //     setAreaType(data);
+    //     setAreaColor(data);
+    // };
+
+    // useEffect(() => {
+    //     const selectedData = areaData[areaType];
+    //     setSelData(selectedData);
+    // }, [areaType]);
+
+    // useEffect(() => {
+    //     // dragFn();
+    // });
+
+    const [selectedCat, setSelectedCat] = useState(["nintendo", "harrypotter", "minion", "wonderland", "jurassicpark"]);
+
+    const changeList = (e) => {
+        const cid = e.target.id;
+        const isChecked = e.target.checked;
+
+        setSelectedCat((v) => {
+            if (isChecked) {
+                return [...v, cid];
+            } else {
+                return v.filter((v) => v !== cid);
+            }
+        });
     };
 
-    useEffect(() => {
-        const selectedData = areaData[areaType];
-        setSelData(selectedData);
-    }, [areaType]);
+    const makeList = () => {
+        const filterData = attractionData.filter((v) => selectedCat.includes(v.areatype))
+        
+        return filterData.map((v, i) => (
+            <div className="area-type-bx" key={i}>
+                <Link
+                    to="/detail"
+                    state={{
+                        name: v.name,
+                        img: v.img,
+                        map: v.map,
+                        title: v.title,
+                        desc: v.desc,
+                        logo: v.logo,
+                    }}
+                >
+                    <div className="area-type-img">
+                        <img src={process.env.PUBLIC_URL + `${v.img}`} alt={v.name} />
+                        <h2>
+                            <FontAwesomeIcon icon={faCirclePlus} />
+                        </h2>
+                    </div>
+                </Link>
+                <div className="area-type-cont">
+                    <h3>{v.areatype}</h3>
+                    <h2>{v.name}</h2>
+                </div>
+            </div>
+        ));
+    };
 
-    useEffect(()=>{
-        dragFn();
-    })
     return (
         <>
             <GoodsSwiper cats="area" />
             <div className="area-type-btn">
                 <nav>
                     <ul>
-                        <li className={areaType === "nintendo" ? "arealicolor" : ""}>
+                        {/* <li className={areaType === "nintendo" ? "arealicolor" : ""}>
                             <button
                                 onClick={() => areaChangeFn("nintendo")}
                                 key={0}
@@ -86,12 +132,33 @@ export function AreaType() {
                             >
                                 쥬라기공원
                             </button>
+                        </li> */}
+                        <li>
+                            <label htmlFor="nintendo">닌텐도 월드</label>
+                            <input type="checkbox" className="chkbx" id="nintendo" defaultChecked={selectedCat.includes('nintendo')} onChange={changeList} />
+                        </li>
+                        <li>
+                            <label htmlFor="harrypotter">해리포터</label>
+                            <input type="checkbox" className="chkbx" id="harrypotter" defaultChecked={selectedCat.includes('harrypotter')} onChange={changeList} />
+                        </li>
+                        <li>
+                            <label htmlFor="minion">미니언파크</label>
+                            <input type="checkbox" className="chkbx" id="minion" defaultChecked={selectedCat.includes('minion')} onChange={changeList} />
+                        </li>
+                        <li>
+                            <label htmlFor="wonderland">원더랜드</label>
+                            <input type="checkbox" className="chkbx" id="wonderland" defaultChecked={selectedCat.includes('wonderland')} onChange={changeList} />
+                        </li>
+                        <li>
+                            <label htmlFor="jurassicpark">쥬라기공원</label>
+                            <input type="checkbox" className="chkbx" id="jurassicpark" defaultChecked={selectedCat.includes('jurassicpark')} onChange={changeList} />
                         </li>
                     </ul>
                 </nav>
             </div>
             <div className="area-type-wrap">
-                {selData.map((v, i) => (
+                {makeList()}
+                {/* {selData.map((v, i) => (
                     <div className="area-type-bx" key={i}>
                         <Link
                             to="/detail"
@@ -106,7 +173,9 @@ export function AreaType() {
                         >
                             <div className="area-type-img">
                                 <img src={process.env.PUBLIC_URL + `${v.img}`} alt={v.name} />
-                                <h2><FontAwesomeIcon icon={faCirclePlus} /></h2>
+                                <h2>
+                                    <FontAwesomeIcon icon={faCirclePlus} />
+                                </h2>
                             </div>
                         </Link>
                         <div className="area-type-cont">
@@ -114,7 +183,7 @@ export function AreaType() {
                             <h2>{v.name}</h2>
                         </div>
                     </div>
-                ))}
+                ))} */}
             </div>
             <UniverSalText />
         </>
