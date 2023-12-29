@@ -1,0 +1,3 @@
+const navData = [
+    "PRODUCT", "BRAND", "MAKEUP LOOK", "STORE", "FOUNDATION FACTORY"
+];
