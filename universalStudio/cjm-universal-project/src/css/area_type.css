@@ -167,6 +167,14 @@
     background: linear-gradient(to right, #264069, blue);
     border: none;
 }
+@media screen and (max-width:1080px) {
+    .area-type-bx{
+        margin: 5px;
+    }
+    .area-type-cont h2{
+        font-size: 1.2rem;
+    }
+}
 @media screen and (max-width:1000px)  {
     .area-type-bx{
         max-width: 32%;
@@ -190,6 +198,15 @@
     .area-type-bx{
         max-width: 47%;
         margin: 10px auto;
+    }
+    .area-type-cont h3{
+        font-size: 1.1rem;
+    }
+    .area-type-cont h2{
+        font-size: 1rem;
+    }
+    .area-type-cont{
+        padding: 5px;
     }
 }
 @media screen and (max-width:680px)  {
@@ -217,5 +234,23 @@
     }
     .area-type-btn nav ul li{
         width: 45%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .area-type-bx{
+        border: 2px solid #000;
+        padding: 5px;
+    }
+    .area-type-cont h3{
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    .area-type-cont h2{
+        font-size: 0.75rem;
+    }
+    .area-type-bx{
+        margin: 5px auto 0;
     }
 }
