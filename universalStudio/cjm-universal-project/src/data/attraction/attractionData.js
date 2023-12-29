@@ -38,17 +38,6 @@ export const attractionData = [
         icon : <FontAwesomeIcon icon={faDiceTwo} />
     },
     {
-        idx : "3",
-        logo : "/images/attraction/logo/attraction3.png",
-        img : "/images/attraction/img/attraction3.jpg",
-        map : "/images/attraction/map/attraction3.jpg",
-        name : "요시 어드벤처™",
-        title : "요시와 모험 여행을 떠나자!",
-        desc : "요시의 등에 타고 키노피오대장을 쫓아서 보물찾기 모험을 떠나자!^ 대장이 깜빡하고 놓고 간 지도를 참고하여 사방에 숨어 있는 3개의 달걀을 찾아내자.^ 키다리산에서 버섯 왕국을 내려다보기도 하고 깜찍한 아이들과 만나는 등 즐거움이 한가득!",
-        areatype : 'nintendo',
-        icon : <FontAwesomeIcon icon={faDiceTwo} />
-    },
-    {
         idx : "4",
         logo : "/images/attraction/logo/attraction4.jpg",
         img : "/images/attraction/img/attraction4.jpg",
@@ -103,28 +92,28 @@ export const attractionData = [
         areatype : 'harrypotter',
         icon : <FontAwesomeIcon icon={faHatWizard} />
     },
-    {
-        idx : "9",
-        logo : "/images/attraction/logo/attraction5.jpg",
-        img : "/images/attraction/img/attraction9.jpg",
-        map : "/images/attraction/map/attraction9.jpg",
-        name : "프로그 콰이어",
-        title : "마법 학교 학생들의 화음.",
-        desc : "호그와트™ 마법 학교 학생들의 멋진 화음을 들어보세요. 그리핀도르™, 슬리데린™, 후플푸프™, 래번클로™의 각 기숙사에서 선발한 4명의 합창단이 마법세계의 명곡을 선보입니다. 재능 넘치는 개구리들의 반주에도 주목해 주세요.",
-        areatype : 'harrypotter',
-        icon : <FontAwesomeIcon icon={faHatWizard} />
-    },
-    {
-        idx : "10",
-        logo : "/images/attraction/logo/attraction5.jpg",
-        img : "/images/attraction/img/attraction10.jpg",
-        map : "/images/attraction/map/attraction10.jpg",
-        name : "플라이트 오브 더 히포그리프™",
-        title : "마법세계의 생물들과 함께 하늘을 질주하자.",
-        desc : "마법세계의 생물인 히포그리프와 하늘을 질주하는 이 라이드는 온 가족이 함께 즐길 수 있는 어트랙션입니다.^해그리드™에게 히포그리프에 대한 올바른 접근 방법을 배운 후 히포그리프로 비행 훈련을 시작합시다.^독수리의 머리와 말의 몸을 가진 히포그리프는 대단히 긍지 높은 마법 생물이므로 다가가기 전에 먼저 인사하는 것을 잊지 마세요. 해그리드의 오두막과 호박밭 하늘을 날아다니는 이 어트랙션에서는 멋진 경관도 즐길 수 있습니다.",
-        areatype : 'harrypotter',
-        icon : <FontAwesomeIcon icon={faHatWizard} />
-    },
+    // {
+    //     idx : "9",
+    //     logo : "/images/attraction/logo/attraction5.jpg",
+    //     img : "/images/attraction/img/attraction9.jpg",
+    //     map : "/images/attraction/map/attraction9.jpg",
+    //     name : "프로그 콰이어",
+    //     title : "마법 학교 학생들의 화음.",
+    //     desc : "호그와트™ 마법 학교 학생들의 멋진 화음을 들어보세요. 그리핀도르™, 슬리데린™, 후플푸프™, 래번클로™의 각 기숙사에서 선발한 4명의 합창단이 마법세계의 명곡을 선보입니다. 재능 넘치는 개구리들의 반주에도 주목해 주세요.",
+    //     areatype : 'harrypotter',
+    //     icon : <FontAwesomeIcon icon={faHatWizard} />
+    // },
+    // {
+    //     idx : "10",
+    //     logo : "/images/attraction/logo/attraction5.jpg",
+    //     img : "/images/attraction/img/attraction10.jpg",
+    //     map : "/images/attraction/map/attraction10.jpg",
+    //     name : "플라이트 오브 더 히포그리프™",
+    //     title : "마법세계의 생물들과 함께 하늘을 질주하자.",
+    //     desc : "마법세계의 생물인 히포그리프와 하늘을 질주하는 이 라이드는 온 가족이 함께 즐길 수 있는 어트랙션입니다.^해그리드™에게 히포그리프에 대한 올바른 접근 방법을 배운 후 히포그리프로 비행 훈련을 시작합시다.^독수리의 머리와 말의 몸을 가진 히포그리프는 대단히 긍지 높은 마법 생물이므로 다가가기 전에 먼저 인사하는 것을 잊지 마세요. 해그리드의 오두막과 호박밭 하늘을 날아다니는 이 어트랙션에서는 멋진 경관도 즐길 수 있습니다.",
+    //     areatype : 'harrypotter',
+    //     icon : <FontAwesomeIcon icon={faHatWizard} />
+    // },
     {
         idx : "11",
         logo : "/images/attraction/logo/attraction5.jpg",
@@ -191,28 +180,28 @@ export const attractionData = [
         areatype : 'minion',
         icon : <FontAwesomeIcon icon={faParachuteBox} />
     },
-    {
-        idx : "17",
-        logo : "/images/attraction/logo/attraction17.jpg",
-        img : "/images/attraction/img/attraction17.jpg",
-        map : "/images/attraction/map/attraction17.jpg",
-        name : "프리즈 레이 슬라이더",
-        title : "꽁꽁 언 얼음 위를 미끄러지며 뒤죽박죽 신나게 달리는 얼음 위 레이스!",
-        desc : "미니언 파크의 열기 때문에 파크 안 수영장 물이 끓고 있다고?! 당황한 미니언들이 거대한 얼음 총을 꺼내와서 냉동광선 발사! 갑자기 등장한 아이스링크에 미니언들의 장난기가 폭발. 제빙차를 타고 이쪽으로 미끌 저쪽으로 미끌. 예측 불가능한 뒤죽박죽 신나는 얼음 위 레이스 스타트!^협찬: EDION Corporation",
-        areatype : 'minion',
-        icon : <FontAwesomeIcon icon={faParachuteBox} />
-    },
-    {
-        idx : "18",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction18.jpg",
-        map : "/images/attraction/map/attraction18.jpg",
-        name : "그로버 콘스트럭션 컴퍼니",
-        title : "커다란 블록을 내 맘대로 만들며 놀 수 있어요.",
-        desc : "길쭉한 모양의 블록과 톱니바퀴 모양의 블록. 여러 가지 모양의 커다란 블록이 한가득! 무엇을 만들까요? 마음대로 자유롭게 만들고 즐겨요!",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
+    // {
+    //     idx : "17",
+    //     logo : "/images/attraction/logo/attraction17.jpg",
+    //     img : "/images/attraction/img/attraction17.jpg",
+    //     map : "/images/attraction/map/attraction17.jpg",
+    //     name : "프리즈 레이 슬라이더",
+    //     title : "꽁꽁 언 얼음 위를 미끄러지며 뒤죽박죽 신나게 달리는 얼음 위 레이스!",
+    //     desc : "미니언 파크의 열기 때문에 파크 안 수영장 물이 끓고 있다고?! 당황한 미니언들이 거대한 얼음 총을 꺼내와서 냉동광선 발사! 갑자기 등장한 아이스링크에 미니언들의 장난기가 폭발. 제빙차를 타고 이쪽으로 미끌 저쪽으로 미끌. 예측 불가능한 뒤죽박죽 신나는 얼음 위 레이스 스타트!^협찬: EDION Corporation",
+    //     areatype : 'minion',
+    //     icon : <FontAwesomeIcon icon={faParachuteBox} />
+    // },
+    // {
+    //     idx : "18",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction18.jpg",
+    //     map : "/images/attraction/map/attraction18.jpg",
+    //     name : "그로버 콘스트럭션 컴퍼니",
+    //     title : "커다란 블록을 내 맘대로 만들며 놀 수 있어요.",
+    //     desc : "길쭉한 모양의 블록과 톱니바퀴 모양의 블록. 여러 가지 모양의 커다란 블록이 한가득! 무엇을 만들까요? 마음대로 자유롭게 만들고 즐겨요!",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
     {
         idx : "19",
         logo : "/images/attraction/logo/attraction18.jpg",
@@ -224,61 +213,61 @@ export const attractionData = [
         areatype : 'wonderland',
         icon : <FontAwesomeIcon icon={faDemocrat} />
     },
-    {
-        idx : "20",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction20.jpg",
-        map : "/images/attraction/map/attraction20.jpg",
-        name : "몹피의 럭키 댄스 파티",
-        title : "DJ와 함께 음악에 맞춰 댄스!",
-        desc : "댄스파티에 오신 것을 환영합니다. 하트와 별이 가득한 홀에서 DJ와 함께 음악에 맞춰 즐겁게 춤춰요! 몹피를 만날 수 있다면 행운이겠죠!",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "21",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction21.jpg",
-        map : "/images/attraction/map/attraction21.jpg",
-        name : "몹피의 벌룬 여행",
-        title : "놀이기구를 타고 원더랜드의 상공을 여행하자!",
-        desc : "몹피가 여러분을 즐거운 풍선 여행으로 초대했어요.푸른 하늘로 날아올라 원더랜드의 깜찍한 세계를 즐겨보아요.핸들을 돌리면 곤돌라도 빙글빙글, 모두 다 함께 신나게 놀자!^협찬: ART MOVING COMPANY",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "22",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction22.jpg",
-        map : "/images/attraction/map/attraction22.jpg",
-        name : "버트와 애니의 원더 더 시",
-        title : "볼 풀에 슬라이딩하기도 하고, 풍덩 뛰어들기도 하면서 놀아요.",
-        desc : "미끄럼틀이 버트와 어니가 있는 볼 풀을 향해 뻗어 있네요. 용기 내서 미끄럼틀을 타고 내려가면 그곳은 파란색과 흰색 공이 가득한 바다!^해초가 하늘거리는 바닷속으로 잠수하거나 점프하면서 마음껏 헤엄치며 놀아요!",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "23",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction23.jpg",
-        map : "/images/attraction/map/attraction23.jpg",
-        name : "버트와 어니의 프로숍 게임 플레이스",
-        title : "원하는 상품을 골라서 카니발 게임에 도전하자!",
-        desc : "어트랙션과 쇼를 즐기는 사이사이에 가볍게 놀 수 있는 게임에 도전해 보자! 깜찍한 경품을 받을 수 있는 찬스!",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "24",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction24.jpg",
-        map : "/images/attraction/map/attraction24.jpg",
-        name : "빅 버드 비드 탑 서커스",
-        title : "세서미 스트리트™의 세계를 도는 컬러풀한 회전목마.",
-        desc : "빅서커스 단장이 된 빅 버드. 빅 버드의 지시에 따라 동물들이 어슬렁어슬렁 주변을 돌고 있네요. 이 많은 동물을 타고 함께 빙글빙글.^협찬: ART MOVING COMPANY",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
+    // {
+    //     idx : "20",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction20.jpg",
+    //     map : "/images/attraction/map/attraction20.jpg",
+    //     name : "몹피의 럭키 댄스 파티",
+    //     title : "DJ와 함께 음악에 맞춰 댄스!",
+    //     desc : "댄스파티에 오신 것을 환영합니다. 하트와 별이 가득한 홀에서 DJ와 함께 음악에 맞춰 즐겁게 춤춰요! 몹피를 만날 수 있다면 행운이겠죠!",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "21",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction21.jpg",
+    //     map : "/images/attraction/map/attraction21.jpg",
+    //     name : "몹피의 벌룬 여행",
+    //     title : "놀이기구를 타고 원더랜드의 상공을 여행하자!",
+    //     desc : "몹피가 여러분을 즐거운 풍선 여행으로 초대했어요.푸른 하늘로 날아올라 원더랜드의 깜찍한 세계를 즐겨보아요.핸들을 돌리면 곤돌라도 빙글빙글, 모두 다 함께 신나게 놀자!^협찬: ART MOVING COMPANY",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "22",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction22.jpg",
+    //     map : "/images/attraction/map/attraction22.jpg",
+    //     name : "버트와 애니의 원더 더 시",
+    //     title : "볼 풀에 슬라이딩하기도 하고, 풍덩 뛰어들기도 하면서 놀아요.",
+    //     desc : "미끄럼틀이 버트와 어니가 있는 볼 풀을 향해 뻗어 있네요. 용기 내서 미끄럼틀을 타고 내려가면 그곳은 파란색과 흰색 공이 가득한 바다!^해초가 하늘거리는 바닷속으로 잠수하거나 점프하면서 마음껏 헤엄치며 놀아요!",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "23",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction23.jpg",
+    //     map : "/images/attraction/map/attraction23.jpg",
+    //     name : "버트와 어니의 프로숍 게임 플레이스",
+    //     title : "원하는 상품을 골라서 카니발 게임에 도전하자!",
+    //     desc : "어트랙션과 쇼를 즐기는 사이사이에 가볍게 놀 수 있는 게임에 도전해 보자! 깜찍한 경품을 받을 수 있는 찬스!",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "24",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction24.jpg",
+    //     map : "/images/attraction/map/attraction24.jpg",
+    //     name : "빅 버드 비드 탑 서커스",
+    //     title : "세서미 스트리트™의 세계를 도는 컬러풀한 회전목마.",
+    //     desc : "빅서커스 단장이 된 빅 버드. 빅 버드의 지시에 따라 동물들이 어슬렁어슬렁 주변을 돌고 있네요. 이 많은 동물을 타고 함께 빙글빙글.^협찬: ART MOVING COMPANY",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
     {
         idx : "25",
         logo : "/images/attraction/logo/attraction18.jpg",
@@ -356,83 +345,83 @@ export const attractionData = [
         areatype : 'wonderland',
         icon : <FontAwesomeIcon icon={faDemocrat} />
     },
-    {
-        idx : "32",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction32.jpg",
-        map : "/images/attraction/map/attraction32.jpg",
-        name : "엘모의 리틀 드라이브",
-        title : "만 3~5세 대상 고 카트.",
-        desc : "만 3세 어린이도 운전을 만끽할 수 있는 라이드 어트랙션. 귀여운 엘모 디자인의 자동차로 주행코스를 달려보아요.^협찬: ART MOVING COMPANY",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "33",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction33.jpg",
-        map : "/images/attraction/map/attraction33.jpg",
-        name : "엘모의 버블 버블",
-        title : "미니 보트를 타고 물 위를 둘러보자.",
-        desc : "엘모의 꿈나라에 오신 것을 환영합니다. 엘모의 애완동물인 금붕어 도로시를 타고 떠나는 수상 여행 출발! 엘모가 만드는 비눗방울을 감상하며 여유롭게 항해하세요. 꿈속 세상 같은 실내 라이드 어트랙션입니다.",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "34",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction34.jpg",
-        map : "/images/attraction/map/attraction34.jpg",
-        name : "워터 가든",
-        title : "물이 리드미컬하게 솟아오르기도 하고 흐르기도 해요. 물을 만지며 놀 수 있어요.",
-        desc : "물이 리드미컬하게 솟아오르기도 하고 흘러내리기도 해요.",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "35",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction35.jpg",
-        map : "/images/attraction/map/attraction35.jpg",
-        name : "유니버설 원더랜드 필 더 리듬",
-        title : "유니버설 원더랜드의 친구들과 함께 인기 절정의 춤을 추자",
-        desc : "깜찍한 유니버설 원더랜드의 친구들과 함께 즐겁게 춤추며 놀자! 크리스마스 한정 코스튬과 음악에 두근두근 설레고 어른도 아이도 웃음꽃 활짝 피는, 행복한 마중에 흥분 최고조!",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "36",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction36.jpg",
-        map : "/images/attraction/map/attraction36.jpg",
-        name : "쿠키 몬스터 슬라이드",
-        title : "커다란 쿠키를 발견했어요! 쿠키를 가지러 큰 미끄럼틀을 한 번에 내려가 볼까요!",
-        desc : "쿠키 몬스터가 커다란 미끄럼틀로 변했어요! 거대한 초코칩 쿠키를 먹으려고 내민 혀에 올라타서 단숨에 내려가 볼까요!",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "37",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction37.jpg",
-        map : "/images/attraction/map/attraction37.jpg",
-        name : "헬로키티 리본 컬렉션",
-        title : "헬로키티와 함께 기념사진을 찍자!",
-        desc : "헬로키티가 모두를 위해 스튜디오를 공개했습니다. 최신 패션 아이템과 하이힐 모양의 미끄럼틀에서 즐거운 시간을 보내고, 키티와 함께 기념사진도 찍어보세요.",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
-    {
-        idx : "38",
-        logo : "/images/attraction/logo/attraction18.jpg",
-        img : "/images/attraction/img/attraction38.jpg",
-        map : "/images/attraction/map/attraction38.jpg",
-        name : "헬로키티 컵케이크 드림",
-        title : "빙글빙글 돌며 헬로키티의 깜찍한 세계를 만끽하자!",
-        desc : "헬로키티의 케이크 파티에 초대합니다. 색색별로 진열된 컵케이크 가운데 여러분은 어떤 것을 고르실 것인가요?^음악에 맞춰 빙글빙글 컵이 돌아갑니다. 핸들을 돌리면 더 재미있어질지도 모릅니다.",
-        areatype : 'wonderland',
-        icon : <FontAwesomeIcon icon={faDemocrat} />
-    },
+    // {
+    //     idx : "32",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction32.jpg",
+    //     map : "/images/attraction/map/attraction32.jpg",
+    //     name : "엘모의 리틀 드라이브",
+    //     title : "만 3~5세 대상 고 카트.",
+    //     desc : "만 3세 어린이도 운전을 만끽할 수 있는 라이드 어트랙션. 귀여운 엘모 디자인의 자동차로 주행코스를 달려보아요.^협찬: ART MOVING COMPANY",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "33",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction33.jpg",
+    //     map : "/images/attraction/map/attraction33.jpg",
+    //     name : "엘모의 버블 버블",
+    //     title : "미니 보트를 타고 물 위를 둘러보자.",
+    //     desc : "엘모의 꿈나라에 오신 것을 환영합니다. 엘모의 애완동물인 금붕어 도로시를 타고 떠나는 수상 여행 출발! 엘모가 만드는 비눗방울을 감상하며 여유롭게 항해하세요. 꿈속 세상 같은 실내 라이드 어트랙션입니다.",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "34",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction34.jpg",
+    //     map : "/images/attraction/map/attraction34.jpg",
+    //     name : "워터 가든",
+    //     title : "물이 리드미컬하게 솟아오르기도 하고 흐르기도 해요. 물을 만지며 놀 수 있어요.",
+    //     desc : "물이 리드미컬하게 솟아오르기도 하고 흘러내리기도 해요.",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "35",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction35.jpg",
+    //     map : "/images/attraction/map/attraction35.jpg",
+    //     name : "유니버설 원더랜드 필 더 리듬",
+    //     title : "유니버설 원더랜드의 친구들과 함께 인기 절정의 춤을 추자",
+    //     desc : "깜찍한 유니버설 원더랜드의 친구들과 함께 즐겁게 춤추며 놀자! 크리스마스 한정 코스튬과 음악에 두근두근 설레고 어른도 아이도 웃음꽃 활짝 피는, 행복한 마중에 흥분 최고조!",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "36",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction36.jpg",
+    //     map : "/images/attraction/map/attraction36.jpg",
+    //     name : "쿠키 몬스터 슬라이드",
+    //     title : "커다란 쿠키를 발견했어요! 쿠키를 가지러 큰 미끄럼틀을 한 번에 내려가 볼까요!",
+    //     desc : "쿠키 몬스터가 커다란 미끄럼틀로 변했어요! 거대한 초코칩 쿠키를 먹으려고 내민 혀에 올라타서 단숨에 내려가 볼까요!",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "37",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction37.jpg",
+    //     map : "/images/attraction/map/attraction37.jpg",
+    //     name : "헬로키티 리본 컬렉션",
+    //     title : "헬로키티와 함께 기념사진을 찍자!",
+    //     desc : "헬로키티가 모두를 위해 스튜디오를 공개했습니다. 최신 패션 아이템과 하이힐 모양의 미끄럼틀에서 즐거운 시간을 보내고, 키티와 함께 기념사진도 찍어보세요.",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
+    // {
+    //     idx : "38",
+    //     logo : "/images/attraction/logo/attraction18.jpg",
+    //     img : "/images/attraction/img/attraction38.jpg",
+    //     map : "/images/attraction/map/attraction38.jpg",
+    //     name : "헬로키티 컵케이크 드림",
+    //     title : "빙글빙글 돌며 헬로키티의 깜찍한 세계를 만끽하자!",
+    //     desc : "헬로키티의 케이크 파티에 초대합니다. 색색별로 진열된 컵케이크 가운데 여러분은 어떤 것을 고르실 것인가요?^음악에 맞춰 빙글빙글 컵이 돌아갑니다. 핸들을 돌리면 더 재미있어질지도 모릅니다.",
+    //     areatype : 'wonderland',
+    //     icon : <FontAwesomeIcon icon={faDemocrat} />
+    // },
     {
         idx : "39",
         logo : "/images/attraction/logo/attraction39.png",

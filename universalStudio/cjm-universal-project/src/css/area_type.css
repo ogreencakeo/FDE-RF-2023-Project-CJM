@@ -61,8 +61,8 @@
 /* 에어리어 박스 */
 
 .area-type-bx{
-    max-width: calc((100% - 150px) / 3);
-    margin: 25px;
+    max-width: calc((100% - 80px) / 4);
+    margin: 10px;
     border: 3px solid #041e49ff;
     box-sizing: border-box;
     border-radius: 5px;
@@ -169,7 +169,7 @@
 }
 @media screen and (max-width:1000px)  {
     .area-type-bx{
-        max-width: 47%;
+        max-width: 32%;
         margin: 10px auto;
     }
     .area-type-img:hover h2{
@@ -187,6 +187,10 @@
     .arealicolor{
         border-bottom: 3px solid #041e49ff
     }
+    .area-type-bx{
+        max-width: 47%;
+        margin: 10px auto;
+    }
 }
 @media screen and (max-width:680px)  {
     .area-type-btn nav ul li{
@@ -194,10 +198,10 @@
     }
 }
 @media screen and (max-width:650px)  {
-    .area-type-bx{
+    /* .area-type-bx{
         max-width: 95%;
         margin: 10px auto;
-    }
+    } */
     .area-type-btn nav ul li button{
         padding: 5px;
     }

@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { attractionData } from "../data/attraction/attractionData";
 
 // css
@@ -47,19 +47,19 @@ export function AreaType() {
     const cntData = attractionData.length;
 
     const makeList = () => {
-        const tempData = [];
+        // const tempData = [];
 
-        let initNum = (pgNum - 1) * pgBlock;
-        let limitNum = pgNum * pgBlock;
+        // let initNum = (pgNum - 1) * pgBlock;
+        // let limitNum = pgNum * pgBlock;
 
         const filterData = attractionData.filter((v) => selectedCat.includes(v.areatype));
         
-        for (let i = initNum; i < limitNum; i++) {
-            if (i >= cntData) break;
-            tempData.push(filterData[i]);
-            console.log('tempData :', tempData);
-        }
-        return tempData.map((v, i) => (
+        // for (let i = initNum; i < limitNum; i++) {
+        //     if (i >= cntData) break;
+        //     tempData.push(filterData[i]);
+        //     console.log('tempData :', tempData);
+        // }
+        return filterData.map((v, i) => (
             <div className="area-type-bx" key={i}>
                 <Link
                     to="/detail"
@@ -193,7 +193,7 @@ export function AreaType() {
                 </nav>
             </div>
             <div className="area-type-wrap">{makeList()}</div>
-            <div style={{width:'100px', height:'50px'}}>{pagingLink()}</div>
+            {/* <div style={{width:'100px', height:'50px'}}>{pagingLink()}</div> */}
             <UniverSalText />
         </>
     );
