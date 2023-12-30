@@ -94,37 +94,44 @@ const whatsData = [
         img : '../image/main/whatsNew/1.jpg',
         cont : '#리플레이 #시럽글로시밤',
         txt : '(리플레이) 시럽 글로시밤',
-        price : '14,000원',
+        price : '14,000',
     },
     {
         img : '../image/main/whatsNew/2.jpg',
         cont : '#룩앳마이아이즈 #리플레이 #아이섀도우',
         txt : '(리플레이) 룩앳 마이 아이즈',
-        price : '5,500원',
+        price : '5,500',
     },
     {
         img : '../image/main/whatsNew/3.jpg',
         cont : '#리플레이 #아이섀도우 #플레이컬러아이즈',
         txt : '(리플레이) 플레이 컬러 아이즈',
-        price : '18,000원',
+        price : '18,000',
     },
     {
         img : '../image/main/whatsNew/4.jpg',
-        cont : '##립펜슬 #오버립',
+        cont : '#립펜슬 #오버립',
         txt : '베이스 앤 오버 립 펜슬  #핑크베이지',
-        price : '12,000원',
+        price : '12,000',
     },
     {
         img : '../image/main/whatsNew/5.jpg',
         cont : '#마스카라 #콤브브러쉬',
         txt : '래쉬업 콤브 마스카라',
-        price : '16,000원',
+        price : '16,000',
     },
     {
         img : '../image/main/whatsNew/6.jpg',
         cont : '#MLBB #핑덕러버스 #핑카이브 ',
         txt : '하트 플러터 블러셔 4g',
-        price : '13,000원',
+        price : '13,000',
     },
-]
+];
 
+const snsData = [
+    "../image/main/sns/1.jpg",
+    "../image/main/sns/2.jpg",
+    "../image/main/sns/3.jpg",
+    "../image/main/sns/4.jpg",
+    "../image/main/sns/5.jpg",
+];

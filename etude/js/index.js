@@ -106,8 +106,6 @@ for(let i=0; i<giftBxData.length; i++){
 
 giftBx.innerHTML += temp.join('');
 
-
-
 // whats new Swiper
 const swiperContainer2 = new Swiper('.whats-new-swipe-container', {
     slidesPerView: 4,
@@ -137,7 +135,7 @@ whatsData.forEach((item, index) => {
                 <div class="whats-content">
                     <p>${item.cont}</p>
                     <h2>${item.txt}</h2>
-                    <h3>${item.price}</h3>
+                    <p><strong>${item.price}</strong>원</p>
                 </div>
             </div>
     `;
@@ -177,3 +175,35 @@ handleMediaQueryChange(mediaQuery);
 
 // 미디어 쿼리 변경 시 이벤트 리스너 등록
 mediaQuery.addListener(handleMediaQueryChange);
+
+
+// sns 스와이퍼
+const swiperContainer3 = new Swiper('.sns-bx2-swipe-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: "swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
+    autoplay: {
+        delay: 1500, 
+        disableOnInteraction: false, 
+    },
+    loop : 'true'
+});
+
+for (let i = 0; i < snsData.length; i++) {
+    const swiperSlide3 = document.createElement('div');
+    swiperSlide3.classList.add('swiper-slide');
+
+    const imgElement3 = document.createElement('img');
+    imgElement3.src = snsData[i];
+
+    swiperSlide3.appendChild(imgElement3);
+    swiperContainer3.appendSlide(swiperSlide3);
+}
+
+swiperContainer3.update(); // Swiper 업데이트

@@ -1,6 +1,59 @@
+
+@media screen and (max-width:1150px) {
+    .sns-bx1{
+        width: 30%;
+    }
+}
 @media screen and (max-width:1100px) {
     .main2-icon-bx section p{
         display: none;
+    }
+    .sns-bx-wrap{
+        position: static;
+    }
+    /* sns1 */
+    .sns-bx1 {
+        width: 100%;
+        position: static;
+        text-align: center;
+    }
+    .sns-bx1>div {
+        position: static;
+        transform: translateY(0);
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .sns-bx1>div>img {
+        margin: 0 15px;
+    }
+    .sns-bx1>div::before {
+        content: 'ETUDE Official';
+        position: static;
+        transform: rotate(00deg);
+    }
+    /* sns2 */
+    .sns-bx2 {
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: space-between;
+    }
+    .pink-bg {
+        position: static;
+    }
+    .sns2-swipe-wrap {
+        position: static;
+    }
+    .sns-bx2-swipe-container{
+        position: static;
+        /* float: right; */
+    }
+    .pink-bg::after {
+        position: static;
+        width: 250px;
+        height: 400px;
     }
 }
 
@@ -29,7 +82,23 @@
     }
 
 }
-
+@media screen and (max-width:620px) {
+    /* sns1 */
+    .sns-bx1 {
+        padding-left: 0;
+    }
+    .sns-bx1>div::before {
+        width: 100%;
+        text-align: center;
+    }
+    /* sns2 */
+    .pink-bg::after {
+        display: none;
+    }
+    .sns-bx2-swipe-container{
+        width: 100%;
+    }
+}
 @media screen and (max-width:600px) {
     .main-img-bx {
         margin: 10px auto;
