@@ -255,7 +255,7 @@
 
 .whats-new-swipe-container{
     padding: 20px;
-    
+    overflow-x: hidden;
 }
 
 .whats-swpie-bx{
@@ -305,7 +305,6 @@
     position: relative;
     flex-wrap: wrap;
     padding: 10px 0 100px 0;
-    border: 1px solid black;
 }
 
 
@@ -313,7 +312,6 @@
     width: 35%;
     position: relative;
     padding-left: 100px;
-    border: 1px solid red;
 }
 .sns-bx1>div{
     position: relative;
@@ -336,11 +334,13 @@
     max-width: 320px;
     aspect-ratio: 1/2;
 }
+.sns-bx1 section{
+    margin: 20px auto 50px;
+}
 
-/* / */
+/* sns2 */
 .sns-bx2{
     width: 55%;
-    border: 1px solid red;
     position: relative;
 }
 
@@ -354,9 +354,8 @@
     right: -100px;
     content: '';
     display: block;
-    background-color: #ccc;
     width: 400px;
-    height: 900px;
+    height: 968px;
     background: linear-gradient(180deg, #F5E2E2 0%, #F2C6CF 100%);
 }
 .sns2-swipe-wrap{
@@ -368,7 +367,6 @@
     width: 85%;
     aspect-ratio: 1/1.1;
     position: absolute;
-    border: 1px solid #ccc;
     bottom: -100px;
     right: 10%;
     z-index: 2;
@@ -399,7 +397,6 @@
 
 .news-event-wrap{
     max-width: 100%;
-    border: 1px solid red;
     padding-top: 50px;
 }
 

@@ -20,7 +20,7 @@ swiper-slide img {
 }
 
 .header-swiper-container{
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     max-width: 100%;
 }
 
