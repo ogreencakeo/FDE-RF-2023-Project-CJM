@@ -19,17 +19,19 @@ swiper-slide img {
     object-fit: cover;
 }
 
-.header-swiper-container{
+.header-swiper-container {
     overflow-x: hidden;
     max-width: 100%;
 }
 
-.header-swiper-container img{
+.header-swiper-container img {
     max-width: 100%;
     display: block;
     aspect-ratio: 2.2/1;
 }
-.header-swiper-container span{
+
+.header-swiper-container span {
     display: block;
 
 }
+

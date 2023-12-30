@@ -42,9 +42,11 @@
     }
     .pink-bg {
         position: static;
+        float: right;
     }
     .sns2-swipe-wrap {
         position: static;
+        max-width: 65%;
     }
     .sns-bx2-swipe-container{
         position: static;
@@ -52,14 +54,34 @@
     }
     .pink-bg::after {
         position: static;
-        width: 250px;
-        height: 400px;
+        width: 30vw;
+        height: 80vh;
+        margin-right: auto;
+    }
+    .sns-info-bx{
+        text-align: center;
+    }
+    
+    .sns-bx2-swipe-container::before {
+        margin-top: 80px;
+    }
+    .sns-info-bx{
+        padding: 20px;
     }
 }
 
 @media screen and (max-width:900px) {
     .main2-icon-bx .view-more {
         display: none;
+    }
+}
+@media screen and (max-width:700px) {
+    .pink-bg::after {
+        width: 25vw;
+        height: 60vh;
+    }
+    .sns-bx2{
+        margin-top: 10px;
     }
 }
 
@@ -98,6 +120,22 @@
     .sns-bx2-swipe-container{
         width: 100%;
     }
+    .sns-bx2{
+        flex-wrap: wrap;
+    }
+    .sns2-swipe-wrap{
+        max-width: 100%;
+    }
+    .sns2-swipe-wrap{
+        background: linear-gradient(to right, #4e834bff, rgb(106, 79, 242), orangered);
+        backdrop-filter: blur(10px);
+    }
+    .sns-bx2-swipe-container::before {
+        color: #fff;
+        text-shadow: 1px 1px 3px #000;
+        margin-bottom: 10px;
+    }
+    
 }
 @media screen and (max-width:600px) {
     .main-img-bx {
@@ -109,5 +147,8 @@
     }
     .main2-icon-img>img {
         width: 18px;
+    }
+    .sns-bx2-swipe-container::before {
+        font-size: 1.5rem;
     }
 }

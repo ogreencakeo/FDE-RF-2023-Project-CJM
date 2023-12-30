@@ -320,8 +320,8 @@
 .sns-bx1>div::before{
     content: 'ETUDE Official';
     position: absolute;
-    top: 115px;
-    left: -150px;
+    top: 105px;
+    left: -220px;
     z-index: 1;
     font-family: 'Black Han Sans';
     font-size: 2rem;
@@ -358,6 +358,11 @@
     height: 968px;
     background: linear-gradient(180deg, #F5E2E2 0%, #F2C6CF 100%);
 }
+
+.sns-info-bx>a{
+    display: inline-block;
+    margin: 30px 15px 0;
+}
 .sns2-swipe-wrap{
     position: relative;
     width: 100%;
@@ -367,7 +372,7 @@
     width: 85%;
     aspect-ratio: 1/1.1;
     position: absolute;
-    bottom: -100px;
+    bottom: -48px;
     right: 10%;
     z-index: 2;
     overflow: hidden;
@@ -386,6 +391,7 @@
     aspect-ratio: 1/1.1;
 }
 
+/* news-envet */
 .news-event-wrap::before{
     content: '';
     display: block;
@@ -402,4 +408,18 @@
 
 .news-event-wrap .icon-bx{
     margin-top: 60px;
+}
+
+.news-event-swipe-container{
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 500px;
+    overflow: hidden;
+}
+
+.evnet-swipe-bx{
+    flex-basis: 45%;
+}
+.evnet-swipe-bx img{
+    max-width: 100%;
 }

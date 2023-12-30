@@ -189,7 +189,7 @@ const swiperContainer3 = new Swiper('.sns-bx2-swipe-container', {
         },
     },
     autoplay: {
-        delay: 1500, 
+        delay: 2500, 
         disableOnInteraction: false, 
     },
     loop : 'true'
@@ -207,3 +207,71 @@ for (let i = 0; i < snsData.length; i++) {
 }
 
 swiperContainer3.update(); // Swiper 업데이트
+
+
+// news-event Swiper
+const swiperContainer4 = new Swiper('.news-event-swipe-container', {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    pagination: {
+        el: "swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+// Swiper의 wrapper 요소 가져오기
+const swiperWrapper4 = document.querySelector('.news-event-swipe-container .swiper-wrapper');
+
+// 각 상품에 대해 반복
+newsEventData.forEach((item, index) => {
+    // Swiper 슬라이드 요소 생성
+    const slide4 = document.createElement('div');
+    slide4.classList.add('swiper-slide');
+
+    // 각 상품에 대한 HTML 내용 생성
+    const content4 = `
+            <div class='evnet-swipe-bx'>
+                <img src=${item.img} alt=${item.txt}>
+            </div>
+    `;
+
+    // Swiper 슬라이드에 HTML 내용 설정
+    slide4.innerHTML = content4;
+
+    // Swiper wrapper에 슬라이드 추가
+    swiperWrapper4.appendChild(slide4);
+});
+
+// 슬라이드 추가 후 Swiper 업데이트
+swiperContainer4.update();
+
+// // // 미디어 쿼리
+// const mediaQuery2 = window.matchMedia('(max-width: 767px)');
+// function handleMediaQueryChange(event) {
+//     if (event.matches) {
+//         // 작은 화면에 대한 옵션
+//         swiperContainer4.params.slidesPerView = 1;
+//         swiperContainer4.params.spaceBetween = 5;
+//     } else {
+//         // 큰 화면에 대한 옵션
+//         swiperContainer4.params.slidesPerView = 2; // 변경된 값 (원래는 4)
+//         swiperContainer4.params.spaceBetween = 10;
+//     }
+
+//     // 스와이퍼 업데이트
+//     swiperContainer4.update();
+// }
+
+// // 초기 호출
+// handleMediaQueryChange(mediaQuery2);
+
+// // 미디어 쿼리 변경 시 이벤트 리스너 등록
+// mediaQuery2.addListener(handleMediaQueryChange);
+

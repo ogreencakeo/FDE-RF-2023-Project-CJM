@@ -128,6 +128,7 @@ const whatsData = [
     },
 ];
 
+
 const snsData = [
     "../image/main/sns/1.jpg",
     "../image/main/sns/2.jpg",
@@ -135,3 +136,19 @@ const snsData = [
     "../image/main/sns/4.jpg",
     "../image/main/sns/5.jpg",
 ];
+
+const newsEventData = [
+    {
+        img : '"../image/main/eventNews/1.jpg",',
+    },
+    {
+        img : '"../image/main/eventNews/2.jpg",',
+    },
+    {
+        img : '"../image/main/eventNews/3.jpg",',
+    },
+    {
+        img : '"../image/main/eventNews/4.jpg",',
+    },
+    
+]
