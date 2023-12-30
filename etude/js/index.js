@@ -105,3 +105,75 @@ for(let i=0; i<giftBxData.length; i++){
 }
 
 giftBx.innerHTML += temp.join('');
+
+
+
+// whats new Swiper
+const swiperContainer2 = new Swiper('.whats-new-swipe-container', {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    pagination: {
+        el: "swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
+});
+
+// Swiper의 wrapper 요소 가져오기
+const swiperWrapper = document.querySelector('.whats-new-swipe-container .swiper-wrapper');
+
+// 각 상품에 대해 반복
+whatsData.forEach((item, index) => {
+    // Swiper 슬라이드 요소 생성
+    const slide = document.createElement('div');
+    slide.classList.add('swiper-slide');
+
+    // 각 상품에 대한 HTML 내용 생성
+    const content = `
+            <div class='whats-swpie-bx'>
+                <img src="${item.img}" alt="${item.txt}" class="whats-img-${index+1}">
+                <div class="whats-content">
+                    <p>${item.cont}</p>
+                    <h2>${item.txt}</h2>
+                    <h3>${item.price}</h3>
+                </div>
+            </div>
+    `;
+
+    // Swiper 슬라이드에 HTML 내용 설정
+    slide.innerHTML = content;
+
+    // Swiper wrapper에 슬라이드 추가
+    swiperWrapper.appendChild(slide);
+});
+
+// 슬라이드 추가 후 Swiper 업데이트
+swiperContainer2.update();
+
+
+// 미디어 쿼리
+const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+// 미디어 쿼리 변경 사항 감지
+function handleMediaQueryChange(event) {
+    if (event.matches) {
+        // 작은 화면에 대한 옵션
+        swiperContainer2.params.slidesPerView = 1;
+        swiperContainer2.params.spaceBetween = 5;
+    } else {
+        // 큰 화면에 대한 옵션
+        swiperContainer2.params.slidesPerView = 4;
+        swiperContainer2.params.spaceBetween = 10;
+    }
+
+    // 스와이퍼 업데이트
+    swiperContainer2.update();
+}
+
+// 초기 호출
+handleMediaQueryChange(mediaQuery);
+
+// 미디어 쿼리 변경 시 이벤트 리스너 등록
+mediaQuery.addListener(handleMediaQueryChange);

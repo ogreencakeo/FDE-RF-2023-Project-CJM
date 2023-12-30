@@ -159,6 +159,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    align-items: center;
 }
 .main4-div-wrap>div{
     max-width: 55%;
@@ -169,7 +170,7 @@
 .main4-img-r>img{
     display: block;
     width: 100%;
-    aspect-ratio: 1/1.6;
+    aspect-ratio: 1/1.45;
 }
 
 .main4-img-l{
@@ -189,7 +190,7 @@
     border-top-left-radius: 5px;
 }
 .main4Bx-img>img{
-    aspect-ratio: 1.1/1;
+    aspect-ratio: 1.2/1;
     width: 100%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -234,4 +235,37 @@
 .gift-bx>img{
     max-width: 100%;
     aspect-ratio: 1.1/1;
+}
+
+/* What's New */
+.whats-new-wrap{
+    max-width: 100%;
+    background: url(../image//main//whatsNew/bg.jpg) no-repeat;
+    aspect-ratio: 2/1;
+    background-position: center/center;
+    background-size: cover;
+}
+
+.whats-new-wrap .icon-bx{
+    transform: translateY(50px);
+}
+
+.whats-new-swipe-container{
+    padding: 20px;
+    
+}
+
+.whats-swpie-bx{
+    border: 1px solid red;
+    background-color: #fff;
+    /* flex-basis: 25%; */
+}
+.whats-swpie-bx img{
+    width: 100%;
+}
+.whats-content{
+    min-height: 150px;
+}
+.whats-content>p{
+    font-size: 14px;
 }
