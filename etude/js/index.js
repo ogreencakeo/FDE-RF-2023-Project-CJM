@@ -38,24 +38,37 @@ swiperContainer.update(); // Swiper 업데이트
 
 
 // main1
+
+const shuffledData = main1Data.sort(()=> Math.random() - 0.5);
+const unipueImg = new Set();
+const selectedData = shuffledData.filter(v => {
+    if(!unipueImg.has(v.img)){
+        unipueImg.add(v.img);
+        return true;
+    }
+    return false;
+}).slice(0, 5);
+
 const main1Bx = document.querySelector('.main1-wrap');
 
-temp = [];
-main1Data.map((v, i) =>{
-    temp[i] =`
+
+const main1RandomResult = selectedData.map((v) =>
+    `
         <div class='main1Bx'>
             <div class='main1Img'>
                 <img src=${v.img} alt='메인이미지' />
             </div>
             <section>
+                <p style='background-color: ${v.color};' class='fas ${v.font}'> &nbsp;${v.cat}</p>
                 <p>${v.txt}</p>
                 <h2>${v.cont}</h2>
             </section>
         </div>
     `
-});
+);
 
-main1Bx.innerHTML += temp.join('');
+
+main1Bx.innerHTML += main1RandomResult.join('');
 
 // main2
 const main2Img = [
@@ -253,7 +266,7 @@ swiperContainer3.update(); // Swiper 업데이트
 
 // news-event Swiper
 const swiperContainer4 = new Swiper('.news-event-swipe-container', {
-    slidesPerView: 2,
+    slidesPerView: 4,
     spaceBetween: 10,
     pagination: {
         el: "swiper-pagination",
@@ -294,26 +307,26 @@ newsEventData.forEach((item, index) => {
 // 슬라이드 추가 후 Swiper 업데이트
 swiperContainer4.update();
 
-// // // 미디어 쿼리
-// const mediaQuery2 = window.matchMedia('(max-width: 767px)');
-// function handleMediaQueryChange(event) {
-//     if (event.matches) {
-//         // 작은 화면에 대한 옵션
-//         swiperContainer4.params.slidesPerView = 1;
-//         swiperContainer4.params.spaceBetween = 5;
-//     } else {
-//         // 큰 화면에 대한 옵션
-//         swiperContainer4.params.slidesPerView = 2; // 변경된 값 (원래는 4)
-//         swiperContainer4.params.spaceBetween = 10;
-//     }
+// // 미디어 쿼리
+const mediaQuery2 = window.matchMedia('(max-width: 767px)');
+function handleMediaQueryChange2(event) {
+    if (event.matches) {
+        // 작은 화면에 대한 옵션
+        swiperContainer4.params.slidesPerView = 2;
+        swiperContainer4.params.spaceBetween = 5;
+    } else {
+        // 큰 화면에 대한 옵션
+        swiperContainer4.params.slidesPerView = 4; 
+        swiperContainer4.params.spaceBetween = 10;
+    }
 
-//     // 스와이퍼 업데이트
-//     swiperContainer4.update();
-// }
+    // 스와이퍼 업데이트
+    swiperContainer4.update();
+}
 
-// // 초기 호출
-// handleMediaQueryChange(mediaQuery2);
+// 초기 호출
+handleMediaQueryChange2(mediaQuery2);
 
-// // 미디어 쿼리 변경 시 이벤트 리스너 등록
-// mediaQuery2.addListener(handleMediaQueryChange);
+// 미디어 쿼리 변경 시 이벤트 리스너 등록
+mediaQuery2.addListener(handleMediaQueryChange2);
 

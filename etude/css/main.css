@@ -19,7 +19,7 @@
 }
 .main1-wrap{
     max-width: 100%;
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     display: flex;
     justify-content: space-around;
     padding: 150px 20px;
@@ -42,11 +42,23 @@
 }
 .main1Bx>section>p{
     font-size: 16px;
-    margin: 10px 0 40px;
+    margin: 8px 0 25px;
     font-weight: 550;
+}
+.main1Bx>section>p:first-of-type{
+    background-color: #555;
+    color: #fff;
+    width: 80%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+.main1Bx>section>p:last-of-type{
+    font-family: 'Jua';
 }
 .main1Bx>section>h2{
     font-size: 18px;
+    font-family: 'Jua';
 }
 
 /* main2 */
