@@ -1,4 +1,3 @@
-import { ticketData } from "../../data/ticket/ticket_option";
 
 import "../../css/ticket_option.css";
 // 제이쿼리

@@ -22,12 +22,13 @@ function addComma(x) {
 }
 
 export const CartList = memo(({ selData, tprice, flag }) => {
-    console.log(selData);
+    // console.log(selData);
 
     const pgBlock = 5;
     const [pgNum, setPgNum] = useState(1);
     const [cartData, setCartData] = useState(selData);
     const [force, setForce] = useState(null);
+    console.log('selData',selData);
 
     if (cartData !== selData && flag.current) {
         setCartData(selData);
@@ -36,6 +37,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
 
     // 전체 데이터 개수
     const cntData = cartData.length;
+  
 
     // 삭제함수
     const deleteItem = (e) => {
