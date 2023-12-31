@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 main{
     max-width: 100%;
 }
@@ -212,10 +215,68 @@ body > *, div > *{
     margin: 10px auto 0;
 }
 
-.sub-detail-bx{
+.sub-explanation-bx1{
     width: 100%;
     text-align: center;
 }
-.sub-detail-bx img{
+.sub-explanation-bx1 img{
     width: 100%;
+}
+
+/* 서브 상세페이지 - 버튼 */
+.sub-explanation-bx1{
+    overflow: hidden;
+    height: 3800px;
+}
+
+.sub-bx1-btn{
+    text-align: center;
+}
+
+.sub-bx1-btn button{
+    width: 80%;
+    padding: 15px;
+    margin: 15px auto;
+    display: inline-block;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+}
+
+.sub-explanation-bx1.on{
+    overflow: auto;
+    height: auto;
+}
+
+/* 진성품 상품정보 */
+.sub-explanation-bx2-wrap{
+    max-width: 100%;
+}
+
+.sub-product-info-bx{
+    display: flex;
+    margin: 20px auto;
+}
+.product-info1{
+    width: 30%;
+    margin-right: 20px;
+}
+.product-info1 p{
+    font-weight: 600;
+    color: #555;
+}
+.product-info2{
+    width: 68%;
+}
+
+.product-info2 p{
+    
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.info2-7 p{
+    margin: 15px auto;
 }
