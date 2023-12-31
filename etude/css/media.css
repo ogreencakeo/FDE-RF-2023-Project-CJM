@@ -142,6 +142,9 @@
     .gift-bx {
         flex-basis: 47%;
     }
+    .sub-l-img{
+        position: static;
+    }
 
     .footer-l-bx-2 ul li{
         flex-basis: 30%;
@@ -440,6 +443,7 @@
     }
     .tint-bx {
         width: 25%;
+        margin: 10px;
     }
     
 }

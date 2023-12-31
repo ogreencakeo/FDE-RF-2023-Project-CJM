@@ -31,10 +31,12 @@ const showTintFn = (modalImg, modalTxt, modalPrice) => {
     TintPrice.textContent = modalPrice; 
     TintImg.src = modalImg;
     document.querySelector('.modal').style.display = 'block';
+    document.querySelector('.sub-btn-bx').style.display = 'none';
 }
 
 document.querySelector('.close-btn').onclick = function(){
     document.querySelector('.modal').style.display = 'none';
+    document.querySelector('.sub-btn-bx').style.display = 'block';
 }
 
 // 서브 - 상세페이지

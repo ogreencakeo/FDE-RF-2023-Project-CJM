@@ -7,17 +7,20 @@ body > *, div > *{
 }
 /* 서브 */
 .sub-wrap{
-    max-width: 95%;
+    max-width: 1300px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: space-evenly;
 }
 .sub-wrap>div{
-    flex-basis: 48%;;
+    width: 50%;
 }
 /* 서브-left */
 .sub-l-img{
     max-width: 100%;
+    position: sticky;
+    top: 0;
 }
 .sub-l-img>img{
     max-width: 100%;
@@ -46,9 +49,9 @@ body > *, div > *{
 
 /* sub-main-bx2 */
 .sub-main-bx2{
-    max-width: 520px;
+    max-width : 100%;
     margin: 10px auto;
-    padding-left: 10px
+    padding: 40px;
 }
 
 .sub-main-bx2>h1{
@@ -89,7 +92,7 @@ body > *, div > *{
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .sub-option-wrap>span{
@@ -107,6 +110,7 @@ body > *, div > *{
     display: flex;
     margin: 10px 0;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .tint-bx{
     margin: 0 10px;
@@ -182,10 +186,28 @@ body > *, div > *{
 .modal-content h2{
     font-size: 1.2rem;
 }
+/* 서브 - 버튼 */
+.sub-btn-bx{
+    max-width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    background-color: #fff;
+}
+.sub-btn-bx ul{
+    display: flex;
+}
+
+.sub-btn-bx ul li{
+    width: 33%;
+    
+    text-align: center;
+}
 
 /* 서브 상세페이지 */
 .sub-explanation-wrap{
-    max-width: 75vw;
+    /* max-width: 75vw; */
+    max-width: 100%;
     margin: 10px auto 0;
 }
 
