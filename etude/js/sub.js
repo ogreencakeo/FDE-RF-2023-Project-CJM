@@ -1,3 +1,8 @@
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
+
+
 const navList = document.querySelector('.nav-wrap ul');
 let temp = [];
 for (let i = 0; i < navData.length; i++) {
@@ -98,3 +103,32 @@ productInfo.map((v, i) => {
 });
 
 subBx2Wrap.innerHTML += temp.join('');
+
+
+// 추천제품
+const recommended_bx = document.querySelector('.recommended-bx-wrap');
+
+temp = [];
+recommendedData.map((v, i)=>{
+    temp[i] = `
+        <div class='recommended-bx'>
+            <div class='recommended-bx-img' onmouseover='productImgFn(${i})' onmouseout='restoreProductFn(${i})'>
+                <img src=${v.img} alt=${v.txt} id='product-img-${i}' />
+            </div>
+            <h2>${v.txt}</h2>
+            <h3>${v.price}</h3>
+        </div>
+    `
+});
+
+recommended_bx.innerHTML += temp.join('');
+
+const productImgFn = (idx) => {
+    const imgEle = document.getElementById(`product-img-${idx}`);
+    imgEle.src = `../image/sub/recommended/${idx+1}-2.jpg`;
+};
+
+const restoreProductFn = (idx) => {
+    const imgEle = document.getElementById(`product-img-${idx}`);
+    imgEle.src = recommendedData[idx].img;
+};

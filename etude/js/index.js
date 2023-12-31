@@ -1,3 +1,6 @@
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
 
 const navList = document.querySelector('.nav-wrap ul');
 let temp = [];

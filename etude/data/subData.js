@@ -113,3 +113,26 @@ const productInfo = [
         cont: '고객상담실 1544-5418'
     },
 ];
+
+const recommendedData = [
+    {
+        img : '../image/sub/recommended/1-1.jpg',
+        txt : '입꼬리 메이커 0.8g',
+        price : '12,000원'
+    },
+    {
+        img : '../image/sub/recommended/2-1.jpg',
+        txt : '크레마 벨벳 틴트 3.6g',
+        price : '12,000원'
+    },
+    {
+        img : '../image/sub/recommended/3-1.jpg',
+        txt : '글라스 루즈 틴트 3.2g',
+        price : '14,000원'
+    },
+    {
+        img : '../image/sub/recommended/4-1.jpg',
+        txt : '시럽 글로시 밤 2.5g',
+        price : '14,000원'
+    },
+];

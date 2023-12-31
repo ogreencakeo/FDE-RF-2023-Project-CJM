@@ -174,7 +174,7 @@ body > *, div > *{
     border: 0;
 }
 .modal-tint-img{
-    max-width: 350px;
+    max-width: 450px;
     margin: 0 auto;
     margin-bottom: 10px;
 }
@@ -236,7 +236,7 @@ body > *, div > *{
 .sub-bx1-btn button{
     width: 80%;
     padding: 15px;
-    margin: 15px auto;
+    margin: 15px auto 30px;
     display: inline-block;
     font-size: 1.1rem;
     border-radius: 5px;
@@ -256,18 +256,19 @@ body > *, div > *{
 
 .sub-product-info-bx{
     display: flex;
+    flex-wrap: wrap;
     margin: 20px auto;
 }
 .product-info1{
-    width: 30%;
-    margin-right: 20px;
+    width: 29%;
+    margin-right: 18px;
 }
 .product-info1 p{
     font-weight: 600;
     color: #555;
 }
 .product-info2{
-    width: 68%;
+    width: 67%;
 }
 
 .product-info2 p{
@@ -279,4 +280,49 @@ body > *, div > *{
 
 .info2-7 p{
     margin: 15px auto;
+}
+
+/* 추천제품 */
+.recommended-product-wrap{
+    max-width: 1280px;
+    margin: 55px auto 70px;
+}
+.recommended-product-wrap>h1{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Gugi';
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #f6d9b8, rgb(249, 143, 104), red);
+}
+
+.recommended-bx-wrap{
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recommended-bx{
+    width: 23%;
+    margin: 10px;
+    text-align: center;
+}
+
+.recommended-bx-img{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.recommended-bx-img:hover img{
+    transform: scale(1.07);
+}
+
+.recommended-bx-img>img{
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    transition: .6s ease-in-out;
+}
+.recommended-bx h2{
+    margin: 20px 0 35px;
 }
