@@ -27,7 +27,7 @@ swiper-slide img {
 .header-swiper-container img {
     max-width: 100%;
     display: block;
-    aspect-ratio: 2.2/1;
+    aspect-ratio: 2.15/1.05;
 }
 
 .header-swiper-container span {

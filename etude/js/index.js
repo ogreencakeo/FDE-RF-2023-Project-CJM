@@ -55,7 +55,23 @@ main1Data.map((v, i) =>{
     `
 });
 
-main1Bx.innerHTML += temp;
+main1Bx.innerHTML += temp.join('');
+
+// main2
+const main2Img = [
+    "../image/main/main2/img1.jpg",
+    "../image/main/main2/img2.jpg",
+    "../image/main/main2/img3.jpg",
+];
+
+const main_img_bx  = document.querySelector('.main-img-bx');
+const main_img = document.createElement('img');
+main_img.classList.add('main-img');
+
+const randomImg = Math.floor(Math.random()*3);
+main_img.setAttribute('src', main2Img[randomImg]);
+
+main_img_bx.appendChild(main_img);
 
 // main3
 const main3Bx = document.querySelector('.main3-wrap');
@@ -74,14 +90,16 @@ for(let i=0; i<main3Data.length; i++){
 
 main3Bx.innerHTML += temp.join('');
 
+
+// main4
 const main4Bx = document.querySelector('.main4-img-l');
 
 temp = [];
 main4Data.map((v, i) => {
     temp[i] = `
         <div class='main4Bx'>
-            <div class='main4Bx-img'>
-                <img src=${v.img} alt='main4 이미지' />
+            <div class='main4Bx-img' onmouseover="changeImgFn(${i})" onmouseout="restoreImgFn(${i})">
+                <img src=${v.img} alt='main4 이미지' id='image${i}' />
             </div>
             <section>
                 <h2>${v.cont}</h2>
@@ -93,6 +111,18 @@ main4Data.map((v, i) => {
 });
 
 main4Bx.innerHTML += temp.join('');
+
+const changeImgFn = (index) => {
+    const img = document.getElementById(`image${index}`);
+    img.src = `../image/main/main4/${index+1}-2.jpg`;
+}
+
+const restoreImgFn = (index) => {
+    const img = document.getElementById(`image${index}`);
+    img.src = main4Data[index].img;
+}
+
+// giftBx
 
 const giftBx = document.querySelector('.gift-bx-wrap');
 temp = [];
@@ -123,7 +153,7 @@ const swiperContainer2 = new Swiper('.whats-new-swipe-container', {
 const swiperWrapper = document.querySelector('.whats-new-swipe-container .swiper-wrapper');
 
 // 각 상품에 대해 반복
-whatsData.forEach((item, index) => {
+whatsData.forEach((v, i) => {
     // Swiper 슬라이드 요소 생성
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
@@ -131,11 +161,13 @@ whatsData.forEach((item, index) => {
     // 각 상품에 대한 HTML 내용 생성
     const content = `
             <div class='whats-swpie-bx'>
-                <img src="${item.img}" alt="${item.txt}" class="whats-img-${index+1}">
+                <div  class="whats-img" onmouseover='changeImgFn2(${i})' onmouseout='restoreImgFn2(${i})'>
+                    <img src="${v.img}" alt="${v.txt}" id='whatsImg${i}'>
+                </div>
                 <div class="whats-content">
-                    <p>${item.cont}</p>
-                    <h2>${item.txt}</h2>
-                    <p><strong>${item.price}</strong>원</p>
+                    <p>${v.cont}</p>
+                    <h2>${v.txt}</h2>
+                    <p><strong>${v.price}</strong>원</p>
                 </div>
             </div>
     `;
@@ -146,6 +178,16 @@ whatsData.forEach((item, index) => {
     // Swiper wrapper에 슬라이드 추가
     swiperWrapper.appendChild(slide);
 });
+
+const changeImgFn2 = (idx) => {
+    const img = document.getElementById(`whatsImg${idx}`);
+    img.src = `../image/main/whatsNew/${idx+1}-2.jpg`;
+};
+
+const restoreImgFn2 = (idx) => {
+    const img = document.getElementById(`whatsImg${idx}`);
+    img.src = whatsData[idx].img;
+};
 
 // 슬라이드 추가 후 Swiper 업데이트
 swiperContainer2.update();
@@ -158,7 +200,7 @@ const mediaQuery = window.matchMedia('(max-width: 767px)');
 function handleMediaQueryChange(event) {
     if (event.matches) {
         // 작은 화면에 대한 옵션
-        swiperContainer2.params.slidesPerView = 1;
+        swiperContainer2.params.slidesPerView = 2;
         swiperContainer2.params.spaceBetween = 5;
     } else {
         // 큰 화면에 대한 옵션
@@ -188,10 +230,10 @@ const swiperContainer3 = new Swiper('.sns-bx2-swipe-container', {
             return '<span class="' + className + '">' + (index + 1) + "</span>";
         },
     },
-    autoplay: {
-        delay: 2500, 
-        disableOnInteraction: false, 
-    },
+    // autoplay: {
+    //     delay: 2500, 
+    //     disableOnInteraction: false, 
+    // },
     loop : 'true'
 });
 
