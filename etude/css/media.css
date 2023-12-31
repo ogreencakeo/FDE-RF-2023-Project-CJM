@@ -497,6 +497,31 @@
     .recommended-bx h3{
         font-size: 1.1rem;
     }
+    .main2-icon-bx>div{
+        flex-wrap: wrap;
+    }
+    .main2-icon-bx>div section{
+        width: 100%;
+    }
+
+    .main2-wrap{
+        background: linear-gradient(to bottom, red, blue, whitesmoke);
+        aspect-ratio: 1/1.2;
+        margin-bottom: 15px;
+    }
+    .main-img-bx{
+        max-width: 70vw;
+    }
+    .main2-icon-bx section h2{
+        font-size: 2.5rem;
+        color: #fff;
+        text-align: center;
+        margin: 15px;
+        font-family: 'Gugi';
+    }
+    .main2-icon-img{
+        display: none;
+    }
 }
 
 @media screen and (max-width:450px) {
@@ -522,5 +547,30 @@
 @media screen and (max-width:430px) {
     .recommended-product-wrap>h1 {
         font-size: 1.7rem;
+    }
+    .main2-icon-bx section h2{
+        font-size: 2rem;
+    }
+    .main2-wrap{
+        margin-bottom: 30px;
+    }
+    .main1Bx{
+        flex-basis: 90%;
+    }
+    .main1Img>img{
+        aspect-ratio: 1.7/1;
+        object-fit: cover;
+    }
+    .main1Bx>section{
+        margin: 0 auto 15px;
+    }
+    .main1Bx>section>p {
+        font-size: 1.2rem;
+    }
+    .main1Bx>section>h2{
+        font-size: 1rem;
+    }
+    .main1Bx>section>p{
+        margin-bottom: 10px;
     }
 }
