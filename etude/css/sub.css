@@ -2,12 +2,12 @@ main{
     max-width: 100%;
 }
 body > *, div > *{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     box-sizing: border-box;
 }
 /* 서브 */
 .sub-wrap{
-    max-width: 1300px;
+    max-width: 1380px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -24,8 +24,9 @@ body > *, div > *{
 }
 .sub-l-img>img{
     max-width: 100%;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
     object-fit: cover;
+    height: 100vh;
 }
 
 /* 서브-right */
