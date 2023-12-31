@@ -114,7 +114,7 @@
     }
 
     .main4Bx {
-        flex-basis: 28%;
+        width: 30%;
     }
 
     .modal-content {
@@ -151,7 +151,8 @@
 
 @media screen and (max-width:800px) {
     .main4Bx {
-        flex-basis: 45%;
+        /* flex-basis: 45%; */
+        width: 45%;
     }
 
     .modal-content {
@@ -395,6 +396,10 @@
         font-size: 12px;
         text-align: center;
     }
+    .main4Bx{
+        width: 90%;
+    }
+
 }
 
 @media screen and (max-width:500px) {
@@ -409,14 +414,6 @@
 
     .main1Bx>section>h2 {
         font-size: 14px;
-    }
-
-    .main4Bx section h1 {
-        font-size: 0.8rem;
-    }
-
-    .main4Bx section h2 {
-        font-size: 0.65rem;
     }
 
     .main4-div-wrap>div:last-child {
@@ -464,10 +461,4 @@
         font-size: 1.1rem;
     }
 
-    .main3-img section h2 {
-        font-size: 1.9rem !important;
-    }
-    .main3-img section h3 {
-        font-size: 1.75rem !important;
-    }
 }

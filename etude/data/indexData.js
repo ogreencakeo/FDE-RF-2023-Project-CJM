@@ -40,7 +40,7 @@ const main1Data = [
         cont : '20,000원',
         cat : 'FACE',
         font : "fa-regular fa-face-flushed",
-        color : '#555'
+        color : '#a89882'
     },
     {
         img : '../image/main/main1/5.png',
@@ -56,7 +56,7 @@ const main1Data = [
         cont : '12,000원',
         cat : 'BODY',
         font : "fa-solid fa-child-dress",
-        color : '#4e834bff',
+        color : '#7ba36a',
     },
     {
         img : '../image/main/main1/7.png',

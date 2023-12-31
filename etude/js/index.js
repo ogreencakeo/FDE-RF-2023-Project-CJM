@@ -59,7 +59,7 @@ const main1RandomResult = selectedData.map((v) =>
                 <img src=${v.img} alt='메인이미지' />
             </div>
             <section>
-                <p style='background-color: ${v.color};' class='fas ${v.font}'>&nbsp;${v.cat}</p>
+                <p style='background: linear-gradient(to right, ${v.color}, #f74d52, yellow);' class='fas ${v.font}'>&nbsp;${v.cat}</p>
                 <p>${v.txt}</p>
                 <h2>${v.cont}</h2>
             </section>
@@ -246,10 +246,10 @@ const swiperContainer3 = new Swiper('.sns-bx2-swipe-container', {
             return '<span class="' + className + '">' + (index + 1) + "</span>";
         },
     },
-    // autoplay: {
-    //     delay: 2500, 
-    //     disableOnInteraction: false, 
-    // },
+    autoplay: {
+        delay: 2500, 
+        disableOnInteraction: false, 
+    },
     loop : 'true'
 });
 

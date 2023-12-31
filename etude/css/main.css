@@ -51,7 +51,9 @@
     width: 80%;
     text-align: center;
     padding: 10px 0;
-    border-radius: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1.5px solid #555;
 }
 .main1Bx>section>p:last-of-type{
     font-weight: 600;
@@ -228,8 +230,8 @@
     justify-content: space-evenly;
 }
 .main4Bx{
-    flex-basis: 45%;
-    background-color: whitesmoke;
+    width: 45%;
+    background-color: #ffffff;
     margin: 10px 0;
     border-radius: 5px;
 }
@@ -260,8 +262,8 @@
     font-size: 0.85rem;
 }
 .main4Bx section h1{
-    font-size: 1.05rem;
-    margin: 8px auto;
+    font-size: 1rem;
+    margin: 15px auto;
 }
 .main4Bx section h2:first-of-type{
     color: #555;
@@ -392,7 +394,7 @@
     content: 'ETUDE Official';
     position: absolute;
     top: 105px;
-    left: -220px;
+    left: -150px;
     z-index: 1;
     font-family: 'Black Han Sans';
     font-size: 2rem;
@@ -427,7 +429,7 @@
     display: block;
     width: 400px;
     height: 968px;
-    background: linear-gradient(180deg, #F5E2E2 0%, #F2C6CF 100%);
+    background: linear-gradient(180deg, #F5E2E2 0%, #faa7e6 50%, #fa6ed9 100%);
 }
 
 .sns-info-bx>a{
@@ -444,7 +446,7 @@
     aspect-ratio: 1/1.1;
     position: absolute;
     bottom: -48px;
-    right: 10%;
+    right: 0;
     z-index: 2;
     overflow: hidden;
 }
