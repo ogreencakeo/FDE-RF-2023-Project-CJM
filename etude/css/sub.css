@@ -2,7 +2,7 @@ main{
     max-width: 100%;
 }
 body > *, div > *{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     box-sizing: border-box;
 }
 /* 서브 */
