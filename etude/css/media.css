@@ -108,7 +108,7 @@
     .main4-div-wrap>div:last-child {
         width: 100%;
         margin: 0 auto;
-        background: linear-gradient(to right, rgb(11, 119, 208), rgb(135, 173, 201), rgb(202, 233, 247));
+        background: linear-gradient(45deg, rgb(11, 119, 208), rgb(135, 173, 201), rgb(202, 233, 247),rgb(11, 119, 208), rgb(135, 173, 201) );
         background-position: center;
         padding: 50px 10px;
     }
@@ -254,7 +254,7 @@
     }
 
     .sns2-swipe-wrap {
-        background: linear-gradient(to right, #4e834bff, rgb(106, 79, 242), orangered);
+        background: linear-gradient(45deg, #fa2fe6, rgb(106, 79, 242), orangered, #fa2fe6, rgb(106, 79, 242));
         backdrop-filter: blur(10px);
     }
 
@@ -266,6 +266,11 @@
 
     .sns-bx2-swipe-container {
         aspect-ratio: initial;
+    }
+    .sns-bx2-swipe-container img{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
     }
 
     .modal-content{
@@ -364,6 +369,11 @@
     }
     .footer{
         padding: 20px 0 10px;
+    }
+    .sns-bx2-swipe-container img{
+        width: 90%;
+        display: block;
+        margin: 0 auto;
     }
 }
 
