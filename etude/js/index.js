@@ -59,7 +59,7 @@ const main1RandomResult = selectedData.map((v) =>
                 <img src=${v.img} alt='메인이미지' />
             </div>
             <section>
-                <p style='background-color: ${v.color};' class='fas ${v.font}'> &nbsp;${v.cat}</p>
+                <p style='background-color: ${v.color};' class='fas ${v.font}'>&nbsp;${v.cat}</p>
                 <p>${v.txt}</p>
                 <h2>${v.cont}</h2>
             </section>
@@ -90,16 +90,19 @@ main_img_bx.appendChild(main_img);
 const main3Bx = document.querySelector('.main3-wrap');
 temp = [];
 
-for(let i=0; i<main3Data.length; i++){
+main3Data.map((v, i) => {
     temp[i] = `
-        <div class='main3Bx'>
+        <div class='main3-bx'>
             <div class='main3-img'>
-                <img src=${main3Data[i]} alt='main3사진'/>
-                <span></span>
+                <img src=${v.img} alt=${v.cont}>
+                <section>
+                    <h2>${v.txt}</h2>
+                    <h3>${v.cont}</h3>
+                </section>
             </div>
         </div>
-    `
-}
+    `;
+})
 
 main3Bx.innerHTML += temp.join('');
 

@@ -14,7 +14,7 @@ const main1Data = [
         img : '../image/main/main1/1.png',
         txt : '팍싱틴트',
         cont : '12,000원',
-        cat : '립',
+        cat : 'LIP',
         font : 'fa-regular fa-face-kiss-wink-heart',
         color : 'orangered'
     },
@@ -22,7 +22,7 @@ const main1Data = [
         img : '../image/main/main1/2.png',
         txt : '플레이 컬러 아이즈',
         cont : '30,000원',
-        cat : '아이',
+        cat : 'EYE',
         font : 'fa-regular fa-eye',
         color : '#4287f5',
     },
@@ -30,7 +30,7 @@ const main1Data = [
         img : '../image/main/main1/3.png',
         txt : '컬 픽스 마스카라',
         cont : '15,000원',
-        cat : '아이',
+        cat : 'EYE',
         font : 'fa-regular fa-eye',
         color : '#4287f5',
     },
@@ -38,7 +38,7 @@ const main1Data = [
         img : '../image/main/main1/4.png',
         txt : '그림자 쉐딩',
         cont : '20,000원',
-        cat : '페이스',
+        cat : 'FACE',
         font : "fa-regular fa-face-flushed",
         color : '#555'
     },
@@ -46,7 +46,7 @@ const main1Data = [
         img : '../image/main/main1/5.png',
         txt : '순정 시카 카밍 앰플 에센스',
         cont : '29,000원',
-        cat : '스킨케어',
+        cat : 'SKINCARE',
         font : "fa-solid fa-glass-water-droplet",
         color : '#fc7d4e'
     },
@@ -54,7 +54,7 @@ const main1Data = [
         img : '../image/main/main1/6.png',
         txt : '쁘띠비쥬 코튼스노우 바디워시 300ml',
         cont : '12,000원',
-        cat : '바디',
+        cat : 'BODY',
         font : "fa-solid fa-child-dress",
         color : '#4e834bff',
     },
@@ -62,15 +62,15 @@ const main1Data = [
         img : '../image/main/main1/7.png',
         txt : '2X 쌩얼 라이너 0.5g',
         cont : '14,000원',
-        cat : '아이',
+        cat : 'EYE',
         font : 'fa-regular fa-eye',
         color : '#4287f5',
     },
     {
         img : '../image/main/main1/8.png',
         txt : 'AC 클린업 핑크 파우더 스팟 15ml',
-        cont : '14,00원',
-        cat : '스킨케어',
+        cont : '14,000원',
+        cat : 'SKINCARE',
         font : "fa-solid fa-glass-water-droplet",
         color : '#fc7d4e'
     },
@@ -78,7 +78,7 @@ const main1Data = [
         img : '../image/main/main1/9.png',
         txt : '헬프 마이 핑거 네일 핑거팩 12ml',
         cont : '1,500원',
-        cat : '네일',
+        cat : 'NAIL',
         font : 'fa-regular fa-hand-spock',
         color : '#d148f7'
     },
@@ -86,15 +86,34 @@ const main1Data = [
         img : '../image/main/main1/10.png',
         txt : '베러 립스-톡 3.5g',
         cont : '13,000원',
-        cat : '립',
+        cat : 'LIP',
         font : 'fa-regular fa-face-kiss-wink-heart',
         color : 'orangered'
     },
 ];
 
 const main3Data = [
-    "../image/main/main3/1.jpg",
-    "../image/main/main3/2.jpg",
+    {
+        img : "../image/main/main3/1.jpg",
+        txt : 'WOOD BRICK LOOK',
+        cont : '우드 브릭 룩'
+    },
+    {
+        img : "../image/main/main3/2.jpg",
+        txt : 'VANILLA LOOK',
+        cont : '로아커 바닐라 룩'
+    },
+    {
+        img : "../image/main/main3/3.jpg",
+        txt : 'BARE EDGE LOOK',
+        cont : '베어 엣지 룩'
+    },
+    {
+        img : "../image/main/main3/4.jpg",
+        txt : 'LILAC ROSE LOOK',
+        cont : '라일락 로즈 룩'
+    },
+    
 ];
 
 const main4Data = [

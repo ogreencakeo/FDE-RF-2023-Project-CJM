@@ -46,7 +46,7 @@
     font-weight: 550;
 }
 .main1Bx>section>p:first-of-type{
-    background-color: #555;
+    letter-spacing: 3px;
     color: #fff;
     width: 80%;
     text-align: center;
@@ -54,11 +54,11 @@
     border-radius: 5px;
 }
 .main1Bx>section>p:last-of-type{
-    font-family: 'Jua';
+    font-weight: 600;
 }
 .main1Bx>section>h2{
     font-size: 18px;
-    font-family: 'Jua';
+    font-weight: 800;
 }
 
 /* main2 */
@@ -132,24 +132,51 @@
 
 /* main3 */
 .main3-wrap{
-    max-width: 1280px;
+    max-width: 1380px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
-.main3Bx{
-    flex-basis: 48%;
+.main3-bx{
+    width: 24%;
+    margin: 5px;
+}
+.main3-bx:hover .main3-img section{
+    display: block;
+}
+.main3-bx:hover .main3-img img{
+    filter: grayscale(100%);
+    transform: scale(1.1);
 }
 .main3-img{
     max-width: 100%;
-    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
-.main3-img>img{
+.main3-img img{
     max-width: 100%;
-    aspect-ratio: 1.7/1;
-    border-radius: 5px;
+    display: block;
+    position: relative;
+    aspect-ratio: 1/1.25;
+    transition: .4s ease-in;
 }
 
+.main3-img section{
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+.main3-img section h2{
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
 /* main4 */
 .main4-wrap{
     margin-top: 170px;
