@@ -27,7 +27,7 @@ export default function App() {
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  });
 
   useEffect(() => {
     // 비동기 작업이 끝나면 로딩 상태 변경

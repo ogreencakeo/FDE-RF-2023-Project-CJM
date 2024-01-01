@@ -27,7 +27,7 @@ export function Layout() {
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
-    });
+    }, []);
 
     useEffect(() => {
         if (localStorage.getItem("universal-minfo")) {
@@ -45,15 +45,15 @@ export function Layout() {
     
     const flag = useRef(true);
     // let stsVal = 0;
-    // let transVal = null;
+    let transVal = null;
 
-    // if(localStorage.getItem('universal-cart')){
-    //     transVal = JSON.parse(localStorage.getItem('universal-cart'));
-    //     if(transVal.length !== 0) stsVal = 1;
-    // }
+    if(localStorage.getItem('universal-cart')){
+        transVal = JSON.parse(localStorage.getItem('universal-cart'));
+        // if(transVal.length !== 0) stsVal = 1;
+    }
     
-    // const [transData, setTransData] = useState(transVal); // 로컬스 변환값 변수
-    const [transData, setTransData] = useState([]); // 로컬스 변환값 변수
+    const [transData, setTransData] = useState(transVal); // 로컬스 변환값 변수
+    // const [transData, setTransData] = useState([]); // 로컬스 변환값 변수
     // const [csts, setCsts] = useState(stsVal);
 
     useEffect(()=>{
