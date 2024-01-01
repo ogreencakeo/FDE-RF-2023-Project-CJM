@@ -1,0 +1,50 @@
+.loadpage-page>div{
+    /* display: flex; */
+
+    height: 50vh;
+    width: 80vw;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    /* border: 1px solid red; */
+}
+
+.loading-text {
+    font-size: 4.5rem;
+    display: flex;
+    font-family: 'Gugi';
+    /* border: 1px solid red; */
+    text-align: center;
+    margin: 0 auto;
+}
+
+.loading-text span {
+    opacity: 0;
+    animation: fadeInOut 1s forwards infinite alternate;
+    animation-delay: calc(var(--char-index) * 0.1s);
+    margin: 0 auto;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.45;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.45;
+    }
+}
+
+.loadpage-img-bx{
+    max-width: 250px;
+    margin: 0 auto;
+}
+.loadpage-img-bx img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}

@@ -1,11 +1,11 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter, HashRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
-import {Main} from './contents/Main.jsx'
-import {Attraction} from './contents/Attraction.jsx'
-import {SeasonalMenu} from './contents/SeasonalMenu.jsx'
-import {Goods} from './contents/Goods.jsx'
+import { Main } from './contents/Main.jsx'
+import { Attraction } from './contents/Attraction.jsx'
+import { SeasonalMenu } from './contents/SeasonalMenu.jsx'
+import { Goods } from './contents/Goods.jsx'
 // import {CustomerCenter} from './contents/CustomerCenter.jsx'
 import { Ticket } from './contents/TIcket.jsx';
 import { Detail } from './contents/Detail.jsx';
@@ -20,18 +20,36 @@ import { Login } from './contents/Login.jsx';
 import { Seaching2 } from './contents/module/Seaching2.jsx';
 import { AreaType } from './contents/AreaType.jsx';
 import { CustomerCenter2 } from './contents/CustomerCenter2.jsx';
+import { Loading } from './contents/Loading.jsx';
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
 
-  useLayoutEffect(()=>{
-    window.scrollTo(0,0);
-  })
-  
-  return(
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    // 비동기 작업이 끝나면 로딩 상태 변경
+    const fetchData = async () => {
+      await new Promise(resolve => setTimeout(resolve, 3500));
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    // 로딩 중일 때 Loading 컴포넌트 렌더링
+    return <Loading />;
+  }
+
+
+  return (
     // <BrowserRouter>
     <HashRouter>
       <Routes>
-        <Route path='/' element={<Layout/>}>
+        <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
           <Route path='areaType' element={<AreaType />} />
           <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
@@ -47,7 +65,7 @@ export default function App() {
           <Route path='login' element={<Login />} />
         </Route>
       </Routes>
-    {/* // </BrowserRouter> */}
+      {/* // </BrowserRouter> */}
     </HashRouter>
   );
 }

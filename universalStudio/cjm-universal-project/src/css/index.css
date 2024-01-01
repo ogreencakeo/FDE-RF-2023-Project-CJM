@@ -535,11 +535,16 @@ a {
     border-radius: 20px;
 }
 
-.main-video-cont>h1 {
+.main-video-cont h1 {
     font-size: 2rem;
     line-height: 1.5;
     font-family: 'Jua';
     text-align: center;
+    margin: 0 5px;
+}
+
+.has-tag-div{
+    display: flex;
 }
 
 /* 열기구 사진 */

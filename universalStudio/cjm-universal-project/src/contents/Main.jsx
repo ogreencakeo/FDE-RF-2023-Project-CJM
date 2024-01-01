@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // 폰트어썸
@@ -55,14 +55,16 @@ export function Main() {
         dragFn();
     }, []);
 
-    useEffect(() => {
-        // 이전 코드 생략
+    // 배경색을 저장하는 useRef
+    const backgroundColorRef = useRef("#ebe3de");
 
+    useEffect(() => {
         // 페이지 2 배경색 변경을 위한 함수
         const changeBackgroundColor = () => {
             const page2Ele = document.querySelector(".main-video");
             const colorChange = ["#ebe3de", "#cadbb8", "whitesmoke", "#cebfd6", "#c5dfe3"];
             const randomColor = colorChange[Math.floor(Math.random() * colorChange.length)];
+            backgroundColorRef.current = randomColor;
             page2Ele.style.backgroundColor = randomColor;
             page2Ele.style.transition = "backgroundColor 0.5s ease-in-out";
         };
@@ -147,6 +149,40 @@ export function Main() {
             };
         }
     }, []); 
+
+
+    // 랜덤 비디오hash tag 
+    const video_hash_tag = [
+        "#특별한",
+        "#재미있는",
+        "#신나는",
+        "#멋진",
+        "#환상",
+        "#꿈같은",
+        "#매력",
+        "#생각",
+        "#달콤한"
+    ];
+    const [selectedHashTags, setSelectedHashTags] = useState([]);
+
+    const makeHashTag = () => {
+        const hashData = video_hash_tag.sort(() => Math.random() - 0.5);
+        const data = new Set();
+        const selectedData = hashData.filter((v) => {
+            if (!data.has(v)) {
+                data.add(v);
+                return true;
+            }
+            return false;
+        }).splice(0, 4);
+
+        setSelectedHashTags(selectedData);
+    };
+
+    useEffect(() => {
+        makeHashTag(); // makeHashTag 함수를 호출하여 초기 설정
+    }, []);
+
     return (
         <>
             <div>
@@ -326,7 +362,12 @@ export function Main() {
                 <div className="main-video">
                     {/* 동영상 짤막한 내용 */}
                     <div className="main-video-cont">
-                        <h1>#특별한 #재미있는 #신나는 #멋진</h1>
+                        {/* <h1>#특별한 #재미있는 #신나는 #멋진</h1> */}
+                        <div className="has-tag-div">
+                            {selectedHashTags.map((v, i) => (
+                                <h1 className="has_tag" key={i}>{v}</h1>
+                            ))}
+                        </div>
                         <div className="main-video-cont-img">
                             <img src={process.env.PUBLIC_URL + "/images/main/character/character13.gif"} alt="열기구" />
                         </div>
