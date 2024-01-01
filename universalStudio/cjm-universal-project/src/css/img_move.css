@@ -1,10 +1,11 @@
 .image-move-wrap{
     position: relative;
-    width: 4000px;
+    width: 2000px;
     overflow: hidden;
     margin: 20px 0;
     border-top: 7px solid black;
     border-bottom: 7px solid black;
+    box-sizing: border-box;
 }
 .img-move-ani:hover {
     animation-play-state: paused;
@@ -41,10 +42,12 @@
 
 .img-move-ani{
     animation: img-move-ani 35s linear infinite;
+    /* animation: img-move-ani 5s linear infinite; */
 }
 
 @keyframes img-move-ani{
     to{
         left: -3200px;
+        /* left: -1600px; */
     }
 }

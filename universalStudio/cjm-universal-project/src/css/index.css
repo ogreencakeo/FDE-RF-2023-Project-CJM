@@ -507,7 +507,7 @@ a {
 
 .character-erath {
     max-width: 100%;
-    margin: 150px 0 235px;
+    margin: 70px 0 235px;
 }
 .character-erath>img {
     max-width: 210px;
@@ -1202,6 +1202,7 @@ a {
 .hover-move-bx:hover::before, .hover-move-bx:focus::before {
     background: #28a2ee;
 }
+
 
 /* 에어리어 마진 */
 .area-cont-wrap>h1{

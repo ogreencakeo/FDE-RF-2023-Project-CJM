@@ -39,9 +39,10 @@ import "jquery-ui-dist/jquery-ui";
 import { ImgMoveSlide } from "./module/ImgMoveSlide.jsx";
 import { UniverSalText } from "./module/UniverSalText.jsx";
 import { ImgHoverPlay } from "./module/ImgHoverPlay.jsx";
-import  Weather  from "./module/Weather.jsx";
+import Weather from "./module/Weather.jsx";
 
 import { Area } from "../contents/module/Area.jsx";
+import { MoveAgency } from "./module/MoveAgency.jsx";
 
 export function Main() {
     useEffect(() => {
@@ -74,7 +75,7 @@ export function Main() {
             changeBackgroundColor();
         }, 1000); // 1000밀리초(5초) 간격으로 변경, 원하는 시간으로 조절
 
-        
+
 
         return () => {
             clearInterval(backgroundColorInterval); // 컴포넌트가 언마운트될 때 interval 정리
@@ -82,7 +83,7 @@ export function Main() {
 
     }, []);
 
-    
+
 
     // 사진 클릭 회전
     // 박스별 회전 상태를 저장하는 배열
@@ -133,9 +134,64 @@ export function Main() {
 
     // prevent
 
+    // 공지버튼 모달
+    const handleModalClose = () => {
+        document.querySelector('.notice-modal-wrap').style.display = 'none';
+    };
+    useEffect(() => {
+        const closeButton = document.querySelector('.modal-btn-bx button');
+        if (closeButton) {
+            closeButton.addEventListener('click', handleModalClose);
+            return () => {
+                closeButton.removeEventListener('click', handleModalClose);
+            };
+        }
+    }, []); 
     return (
         <>
             <div>
+                {/* 모달창 */}
+                <div className="notice-modal-wrap">
+                    <div className="notice-modal">
+                        <div className="modal-btn-bx">
+                            <button>X</button>
+                        </div>
+                        <div>
+                            <h3>
+                            ※ 본 웹사이트는 유니버설 스튜디오의 공식 웹사이트가 아니며, 상업적인 목적이 아닌 개인적인 포트폴리오 제작을 위해 만들어졌습니다. 사용된 모든 콘텐츠는 원본 창작자의 권리를 존중하며 출처를 명시하여 사용하였습니다.
+                            </h3><br />
+                            <h4> 유니버설 스튜디오 재팬의 공식 웹 사이트 주소<br /><a href="https://www.usj.co.jp/web/ko/kr" target="_blank">https://www.usj.co.jp/web/ko/kr</a></h4><br/>
+                            <h4>저작권과 상표</h4>
+                            <span>WIZARDING WORLD and all related trademarks, characters, names, and indicia are © & ™ Warner Bros. Entertainment Inc. Publishing Rights © JKR. (s23)
+                                Minions and all related elements and indicia TM & © 2023 Universal Studios. All rights reserved.
+                                © Nintend
+                                BEETLEJUICE and all related characters and elements © & ™ Warner Bros. Entertainment Inc. (s23)
+                                TM & © 2023 Sesame Workshop
+                                © 2023 Peanuts Worldwide LLC
+                                © 2023 SANRIO CO., LTD.　APPROVAL NO.EJ6031502
+                                Shrek © 2023 DreamWorks Animation LLC. All Rights Reserved.
+                                © 2023 MARVEL
+                                © Walter Lantz Productions LLC
+                                TM & © Universal Studios & Amblin Entertainment
+                                TM & © Universal Studios.
+                                © 2023 UNIVERSAL STUDIOS
+                                © TOMY　　「トランスフォーマー」、「TRANSFORMERS」 は株式会社タカラトミーの登録商標です。
+                                TRANSFORMERS and all related characters are trademarks of Hasbro and are used with permission. © 2023  Hasbro. All Rights Reserved. Licensed by Hasbro.
+                                Curious George ®, created by Margret and H.A. Rey, is copyrighted and trademarked by HarperCollins Publishing Company and used under license. Licensed by Universal Studios Licensing, Inc. All rights reserved.
+                                ©2023 Pokémon. ©1995-2023 Nintendo/Creatures Inc. /GAME FREAK inc.
+                                ©KADOKAWA
+                                ©KoyoharuGotoge/ SHUEISHA, Aniplex, ufotable
+                                © SISYU
+                                Detective Conan by Gosho Aoyama (published in Shogakukan’s Weekly Shonen Sunday magazine)
+                                © 2024 GOSHO AOYAMA/DETECTIVE CONAN COMMITTEE
+                                © SCRAP All Rights Reserved.
+                                © K. Horikoshi / Shueisha, My Hero Academia Project
+                                ©CAPCOM CO., LTD. ALL RIGHTS RESERVED.
+                                ©Gosho Aoyama/1996,2024 Shogakukan,YTV,TMS
+                                TM & © Universal Studios. All rights reserved.</span>
+                        </div>
+                    </div>
+                </div>
                 <div className="header">
                     <div className="header-img">
                         <div className="header-img-wrap">
@@ -158,7 +214,7 @@ export function Main() {
                         <FontAwesomeIcon className="cbtn" icon={faXmark} />
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565411122063!2d135.42974357461148!3d34.66567677293211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z7Jyg64uI67KE7ISkIOyKpO2KnOuUlOyYpCDsnqztjKw!5e0!3m2!1sko!2skr!4v1701601504032!5m2!1sko!2skr"
-                            
+
                         ></iframe>
                     </div>
                 </div>
@@ -240,13 +296,13 @@ export function Main() {
                                 >
                                     <div className="pick-up-img">
                                         <div className="pick1">
-                                            <img src={process.env.PUBLIC_URL+`/images/main/pickup/${v.img}`} alt='픽업이미지' />
+                                            <img src={process.env.PUBLIC_URL + `/images/main/pickup/${v.img}`} alt='픽업이미지' />
                                             <h2>{v.title}</h2>
                                         </div>
                                         <div className="pick2">
                                             {v.emotion === "gifts" && <FontAwesomeIcon icon={faGifts} />}
-                                            {v.emotion === "chessKing" && <FontAwesomeIcon icon={faChessKing}  />}
-                                            {v.emotion === "spider" && <FontAwesomeIcon  icon={faSpider} />}
+                                            {v.emotion === "chessKing" && <FontAwesomeIcon icon={faChessKing} />}
+                                            {v.emotion === "spider" && <FontAwesomeIcon icon={faSpider} />}
                                             {v.emotion === "hatWizard" && <FontAwesomeIcon icon={faHatWizard} />}
                                             {v.emotion === "mountainSun" && <FontAwesomeIcon icon={faMountainSun} />}
                                             {v.emotion === "ghost" && <FontAwesomeIcon icon={faGhost} />}
@@ -262,8 +318,11 @@ export function Main() {
                     </div>
                 </div>
             </div>
+            {/* 로고이미지 */}
+            <MoveAgency />
             <div className="character-erath">
-                <img src={process.env.PUBLIC_URL +"/images/main/character/character12.gif"} alt="캐릭터 지구" />
+                <img src={process.env.PUBLIC_URL + "/images/main/character/character12.gif"} alt="캐릭터 지구" />
+
                 <div className="main-video">
                     {/* 동영상 짤막한 내용 */}
                     <div className="main-video-cont">
@@ -272,7 +331,7 @@ export function Main() {
                             <img src={process.env.PUBLIC_URL + "/images/main/character/character13.gif"} alt="열기구" />
                         </div>
                     </div>
-                     {/* 동영상 */}
+                    {/* 동영상 */}
                     <div className="main-video-wrap">
                         <iframe
                             src="https://www.youtube.com/embed/yKCqJ8llKuA"
@@ -296,7 +355,7 @@ export function Main() {
                         <p>#예약 탑승’ 티켓을 사용</p>
                     </div>
                     <div className="enjoy-pick-cont">
-                        <img className="enjoty-pick-img" src={process.env.PUBLIC_URL +"/images/main/character/phone.gif"} alt="핸드폰" />
+                        <img className="enjoty-pick-img" src={process.env.PUBLIC_URL + "/images/main/character/phone.gif"} alt="핸드폰" />
                         <h2 className="point-span">
                             <span data-hover="POINT2">POINT2</span>
                         </h2>
@@ -327,7 +386,7 @@ export function Main() {
             {/* 아이 사진 */}
             <div className="main-footer-character">
                 <div className="character-star">
-                    <img src={process.env.PUBLIC_URL +"/images/main/character/character9.gif"} alt="캐릭터 별" />
+                    <img src={process.env.PUBLIC_URL + "/images/main/character/character9.gif"} alt="캐릭터 별" />
                 </div>
                 <div className="character-child">
                     <img src={process.env.PUBLIC_URL + "/images/main/character/character17.png"} alt="어린이" />
