@@ -1,0 +1,37 @@
+.board-wrap{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.dtbl{
+    width: 100%;  
+}
+.dtbl ul{
+    display: flex;
+}
+
+.board-cont-wrap{
+    width: 100%;
+}
+
+.board-cont-wrap ul{
+    display: flex;
+}
+
+.board-cont-wrap ul li{
+    width: 18%;
+    text-align: center;
+}
+
+.board-cont-wrap ul li:nth-child(2){
+    width: 30%;
+}
+
+.dtbl ul li{
+    width: 18%;
+    text-align: center;
+}
+
+.board-cont-wrap ul li:nth-child(2){
+    width: 30%;
+}

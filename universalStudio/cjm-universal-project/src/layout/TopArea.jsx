@@ -19,11 +19,12 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // enterKey
     const enterKey = (e) => {
         if (e.key === "Enter" || e.keyCode === 13 || e.code === "Enter") {
-            // console.log('e.target :', e.target);
+            console.log('e.target :', e.target);
             let txt = $(e.target).val().trim();
-            console.log(txt);
+            console.log('enterKey txt :', txt);
             if (txt !== "") {
                 $(e.target).val("").parent().hide();
+                console.log('go');
                 goSerach(txt);
             }
         }
