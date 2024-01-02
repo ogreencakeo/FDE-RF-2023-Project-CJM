@@ -213,6 +213,7 @@ ol.bmenu {
     width: 100vw;
     background-color: #fff;
     z-index: 999999;
+    overflow: auto;
 }
 
 .gnb2 {
@@ -239,13 +240,13 @@ ol.bmenu {
 }
 
 .smenu2 ol {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
 }
 
 .smenu2>ol>li {
     font-size: 1.2rem;
-    width: 45%;
+    width: 95%;
     border: 0;
     padding: 0;
 }
@@ -352,12 +353,5 @@ ol.bmenu {
 
     .smenu2>ol>li {
         font-size: 0.95rem !important;
-    }
-}
-
-@media screen and (max-width:450px) {
-
-    .smenu2>ol>li {
-        font-size: 0.8rem !important;
     }
 }

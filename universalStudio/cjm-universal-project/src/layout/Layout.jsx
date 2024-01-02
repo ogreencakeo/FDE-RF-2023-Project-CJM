@@ -44,38 +44,40 @@ export function Layout() {
 
     
     const flag = useRef(true);
-    // let stsVal = 0;
+    let stsVal = 0;
     let transVal = null;
+    // let transVal;
 
     if(localStorage.getItem('universal-cart')){
+        // let transVal = JSON.parse(localStorage.getItem('universal-cart'));
         transVal = JSON.parse(localStorage.getItem('universal-cart'));
-        // if(transVal.length !== 0) stsVal = 1;
+        if(transVal.length !== 0) stsVal = 1;
     }
     
     const [transData, setTransData] = useState(transVal); // 로컬스 변환값 변수
     // const [transData, setTransData] = useState([]); // 로컬스 변환값 변수
-    // const [csts, setCsts] = useState(stsVal);
+    const [csts, setCsts] = useState(stsVal);
 
     useEffect(()=>{
-        // if (csts === 1) {
-            // $(() => {
-            //     $(".bgbx").show();
-            //     $("#mycart").addClass("on");
-            // });
-        // } 
+        if (csts === 1) {
+            $(() => {
+                $(".bgbx").show();
+                $("#mycart").addClass("on");
+            });
+        } 
     }, []);
 
     return (
         // <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg }}>
-        // <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag, setCsts }}>
-        // <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag }}>
-        <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag }}>
+        <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag, setCsts }}>
+        {/* // <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag }}> */}
+        {/* // <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag }}> */}
             <TopArea chgPageFn={chgPage} logSts={logSts} logMsg={logMsg} logOut={logOut} />
             <MainArea />
             <FooterArea />
             {/* 카트리스트 */}
-            {/* {csts && <CartList selData={transData} flag={flag} />} */}
-            <CartList selData={transData} flag={flag} />
+            {csts && <CartList selData={transData} flag={flag} />}
+            {/* <CartList selData={transData} flag={flag} /> */}
         </universalCon.Provider>
     );
 }

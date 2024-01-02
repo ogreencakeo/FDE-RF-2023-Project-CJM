@@ -37,6 +37,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
 
     // 전체 데이터 개수
     const cntData = cartData.length;
+    console.log('cntDat', cntData)
   
 
     // 삭제함수

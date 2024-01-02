@@ -1,4 +1,4 @@
-.notice-modal-wrap{
+.notice-modal-wrap {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,7 +8,7 @@
     z-index: 999999999999999;
 }
 
-.notice-modal{
+.notice-modal {
     width: 60vw;
     height: 70vh;
     position: absolute;
@@ -18,14 +18,16 @@
     transform: translate(-50%, -50%);
     border-radius: 5px;
     padding: 20px;
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 
-.modal-btn-bx{
+.modal-btn-bx {
     text-align: end;
     margin: 0 0 5px;
 }
 
-.modal-btn-bx button{
+.modal-btn-bx button {
     padding: 5px 10px;
     background-color: #fff;
     border: 0;
@@ -33,41 +35,31 @@
     cursor: pointer;
     color: grey;
 }
-.modal-btn-bx button:hover{
+
+.modal-btn-bx button:hover {
     color: #000;
 }
 
 @media screen and (max-width : 1250px) {
-    .notice-modal-wrap h3{
+    .notice-modal-wrap h3 {
         font-size: 15px;
     }
-    .notice-modal-wrap span{
+
+    .notice-modal-wrap span {
         font-size: 12px;
     }
 }
 
 @media screen and (max-width : 1100px) {
-    .notice-modal{
+    .notice-modal {
         width: 80vw;
         height: 80vh;
     }
 }
 
-@media screen and (max-width : 636px) {
+/* @media screen and (max-width : 636px) {
     .notice-modal{
         width: 90vw;
         height: 90vh;
     }
-}
-
-@media screen and (max-width : 550px) {
-    .notice-modal-wrap h3 {
-        font-size: 11px;
-    }
-    .notice-modal-wrap h4 {
-        font-size: 11px;
-    }
-    .notice-modal-wrap span {
-        font-size: 8px;
-    }
-}
+} */
