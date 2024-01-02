@@ -44,6 +44,7 @@ import Weather from "./module/Weather.jsx";
 import { Area } from "../contents/module/Area.jsx";
 import { MoveAgency } from "./module/MoveAgency.jsx";
 import { universalCon } from "./module/universalContext.jsx";
+import { NoticeModal } from "./module/NoticeModal.jsx";
 
 export function Main() {
     useEffect(() => {
@@ -174,32 +175,14 @@ export function Main() {
 
     
     // const modalSts = useRef(true);
-    const handleModalClose = () => {
-        document.querySelector('.notice-modal-wrap').style.display = 'none';
-    };
-
-
     
-    
-    useEffect(() => {
-
-        const closeButton = document.querySelector('.modal-btn-bx button');
-        if (closeButton) {
-            closeButton.addEventListener('click', handleModalClose);
-            return () => {
-                closeButton.removeEventListener('click', handleModalClose);
-            };
-        }
-
-        document.querySelector('.notice-modal-wrap').style.display = 'none';
-
-    },[]);
 
     return (
         <>
             <div>
                 {/* 모달창 */}
-                <div className="notice-modal-wrap">
+                <NoticeModal />
+                {/* <div className="notice-modal-wrap">
                     <div className="notice-modal">
                         <div className="modal-btn-bx">
                             <button>X</button>
@@ -239,7 +222,7 @@ export function Main() {
                                 TM & © Universal Studios. All rights reserved.</span>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="header">
                     <div className="header-img">
                         <div className="header-img-wrap">
