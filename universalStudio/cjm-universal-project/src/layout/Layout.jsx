@@ -16,6 +16,9 @@ export function Layout() {
     const [logSts, setLogSts] = useState(localStorage.getItem("universal-minfo"));
     // 로그인 환영 메시지 상태변수
     const [logMsg, setLogMsg] = useState(null);
+    // 모달창 상태변수
+    // const [modalSts, setModalSts] = useState(false);
+    const modalSts = useRef(false);
 
     const logOut = useCallback(() => {
         localStorage.removeItem("universal-minfo");
@@ -37,6 +40,7 @@ export function Layout() {
             // 컨텍스트 API에 공개된 로그인 메시지 업데이트하기!
             setLogMsg("Welcome " + minfo.unm + usrIcon[Math.floor(Math.random() * 5)]);
         } // if ///////////
+
     });
 
     const goNav = useNavigate();

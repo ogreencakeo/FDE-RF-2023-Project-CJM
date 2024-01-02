@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useMemo, useRef } from "react";
+import React, { useContext, useEffect, useLayoutEffect, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // 폰트어썸
@@ -43,6 +43,7 @@ import Weather from "./module/Weather.jsx";
 
 import { Area } from "../contents/module/Area.jsx";
 import { MoveAgency } from "./module/MoveAgency.jsx";
+import { universalCon } from "./module/universalContext.jsx";
 
 export function Main() {
     useEffect(() => {
@@ -136,19 +137,7 @@ export function Main() {
 
     // prevent
 
-    // 공지버튼 모달
-    const handleModalClose = () => {
-        document.querySelector('.notice-modal-wrap').style.display = 'none';
-    };
-    useEffect(() => {
-        const closeButton = document.querySelector('.modal-btn-bx button');
-        if (closeButton) {
-            closeButton.addEventListener('click', handleModalClose);
-            return () => {
-                closeButton.removeEventListener('click', handleModalClose);
-            };
-        }
-    }, []); 
+
 
 
     // 랜덤 비디오hash tag 
@@ -183,6 +172,29 @@ export function Main() {
         makeHashTag(); // makeHashTag 함수를 호출하여 초기 설정
     }, []);
 
+    
+    // const modalSts = useRef(true);
+    const handleModalClose = () => {
+        document.querySelector('.notice-modal-wrap').style.display = 'none';
+    };
+
+
+    
+    
+    useEffect(() => {
+
+        const closeButton = document.querySelector('.modal-btn-bx button');
+        if (closeButton) {
+            closeButton.addEventListener('click', handleModalClose);
+            return () => {
+                closeButton.removeEventListener('click', handleModalClose);
+            };
+        }
+
+        document.querySelector('.notice-modal-wrap').style.display = 'none';
+
+    },[]);
+
     return (
         <>
             <div>
@@ -194,9 +206,9 @@ export function Main() {
                         </div>
                         <div>
                             <h3>
-                            ※ 본 웹사이트는 유니버설 스튜디오의 공식 웹사이트가 아니며, 상업적인 목적이 아닌 개인적인 포트폴리오 제작을 위해 만들어졌습니다. 사용된 모든 콘텐츠는 원본 창작자의 권리를 존중하며 출처를 명시하여 사용하였습니다.
+                                ※ 본 웹사이트는 유니버설 스튜디오의 공식 웹사이트가 아니며, 상업적인 목적이 아닌 개인적인 포트폴리오 제작을 위해 만들어졌습니다. 사용된 모든 콘텐츠는 원본 창작자의 권리를 존중하며 출처를 명시하여 사용하였습니다.
                             </h3><br />
-                            <h4> 유니버설 스튜디오 재팬의 공식 웹 사이트 주소<br /><a href="https://www.usj.co.jp/web/ko/kr" target="_blank">https://www.usj.co.jp/web/ko/kr</a></h4><br/>
+                            <h4> 유니버설 스튜디오 재팬의 공식 웹 사이트 주소<br /><a href="https://www.usj.co.jp/web/ko/kr" target="_blank">https://www.usj.co.jp/web/ko/kr</a></h4><br />
                             <h4>저작권과 상표</h4>
                             <span>WIZARDING WORLD and all related trademarks, characters, names, and indicia are © & ™ Warner Bros. Entertainment Inc. Publishing Rights © JKR. (s23)
                                 Minions and all related elements and indicia TM & © 2023 Universal Studios. All rights reserved.

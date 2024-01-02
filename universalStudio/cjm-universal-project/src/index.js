@@ -37,6 +37,7 @@ export default function App() {
     };
 
     fetchData();
+
   }, []);
 
   if (loading) {
