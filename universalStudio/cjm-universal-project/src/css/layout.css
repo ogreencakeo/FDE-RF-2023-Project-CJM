@@ -315,6 +315,13 @@ ol.bmenu {
     
 }
 
+.smenu2{
+    display: none;
+}
+.smenu2.on{
+    display: block;
+}
+
 @media screen and (max-width:1320px) {
     body {
         padding-top: 65px;

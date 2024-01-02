@@ -8,12 +8,23 @@ import $ from "jquery";
 
 import "../css/board.css";
 
+// 기본데이터 역순 정렬
+baseData.sort((a, b) => {
+    return Number(a.idx) === Number(b.idx)? 0 : Number(a.idx) > Number(b.idx) ? -1 : 1;
+})
+
 // 초기데이터 셋업하기
 let orgData;
 if (localStorage.getItem("universal-bdata")) orgData = JSON.parse(localStorage.getItem("universal-bdata"));
 else orgData = baseData;
 
 export function CustomerCenter2() {
+
+    if(!localStorage.getItem('universal-bdata')){
+        localStorage.setItem('universal-bdata', JSON.stringify(orgData));
+    }
+    // initData();
+
     const [bdMode, setBdMode] = useState("L");
 
     const [pgNum, setPgNum] = useState(1);
@@ -68,9 +79,6 @@ export function CustomerCenter2() {
             case "목록":
                 modeTxt = 'L';
                 break;
-            case "리스트 보기":
-                modeTxt = 'L';
-                break;
             case "글 쓰기" :
                 modeTxt = 'C';
                 break;
@@ -80,18 +88,18 @@ export function CustomerCenter2() {
             case "입력" : 
                 modeTxt = 'S';
                 break;
-            case "삭제하기" :
+            case "삭제" :
                 modeTxt = 'D';
             default :
-            modeTxt = 'R'
+                modeTxt = 'R'
         }
 
         // R모드 (읽기모드)
         if(modeTxt === 'R'){
             let cidx = $(e.target).attr('data-idx'); // a링크의 data-idx값 읽어오기
-            cData.current = orgData.find((v)=> {
-                if(Number(v.idx) === Number(cidx)) return true;
-            })
+            cData.current = orgData.find((v) => {
+                if (Number(v.idx) === Number(cidx)) return true;
+            });
             setBdMode('R');
         // L모드 (목록으로 이동)
         }else if(modeTxt === 'L'){
@@ -113,8 +121,8 @@ export function CustomerCenter2() {
             if(subEle.val().trim()==='' || contEle.val().trim()===''){
                 window.alert('제목과 내용은 필수입력입니다!');
             }else{
-                let orgTtemp = orgData; // 원본 데이터 변수할당
-                orgTtemp.some((v) => {
+                let orgTemp = orgData; // 원본 데이터 변수할당
+                orgTemp.some((v) => {
                     if(Number(cData.current.idx) === Number(v.idx)){
                         v.tit = subEle.val().trim();
                         v.cont = contEle.val().trim();
@@ -122,11 +130,25 @@ export function CustomerCenter2() {
                     }
                 });
 
-                localStorage.getItem('universal-bdata', JSON.stringify(orgTtemp));
+                localStorage.getItem('universal-bdata', JSON.stringify(orgTemp));
                 setBdMode('L');
             }
         }
         // 삭제하기 D 모드
+        else if(modeTxt==='D' && bdMode==='U'){
+            // if(window.confirm('정말로 글을 삭제하시겠습니까?')){
+            //     orgData.some((v, i) =>{
+            //             if(Number(cData.current.idx) === Number(v.idx)){
+            //                     orgData.splice(i, 1);
+            //                     return true;
+            //                 }
+            //             }
+            //             );
+            //             localStorage.setItem('universal-bdata', JSON.stringify(orgData));
+            //     console.log('삭제하기 모드');
+            // }
+            setBdMode('L');
+        };
 
     };
 
@@ -291,7 +313,7 @@ export function CustomerCenter2() {
                                         <a href="#">입력</a>
                                     </button>
                                     <button onClick={chgMode}>
-                                        <a href="#">글 삭제하기</a>
+                                        <a href="#">삭제</a>
                                     </button>
                                     <button onClick={chgMode}>
                                         <a href="#">목록</a>
