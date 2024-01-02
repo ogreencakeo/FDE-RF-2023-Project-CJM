@@ -1,8 +1,16 @@
 import { useState } from "react";
+
+// 기본 데이터 제이슨 불러오기
 import baseData from "../data/유니버설-문의2.json";
 
 // 제이쿼리
 import $ from 'jquery';
+
+
+// 초기데이터 셋업하기
+let orgData;
+if(localStorage.getItem('universal-bdata')) orgData = JSON.parse(localStorage.getItem('universal-bdata'));
+else orgData = baseData; 
 
 export function CustomerCenter2(){
     
@@ -19,9 +27,27 @@ export function CustomerCenter2(){
         let limintNum = pgNum * pgBlock;
 
         for(let i=initNum; i<limintNum; i++){
-            if(limintNum>=totNum) break;
-            tempData.push()
+            if(i>=totNum) break;
+            tempData.push(org)
         }
+
+        if(orgData.length === 0){
+            <div>
+                게시판 내용이 없습니다.
+            </div>
+        }
+
+        return tempData.map((v, i) => (
+            <div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        ))
     };
 
     return(

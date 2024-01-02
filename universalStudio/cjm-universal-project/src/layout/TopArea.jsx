@@ -18,22 +18,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // enterKey
     const enterKey = (e) => {
-        $(e.target).bind("keydown", function (e) {
-            if (e.key === "Enter" || e.keyCode === 13 || e.code ==="Enter") {
-                // console.log('e.target :', e.target);
-                let txt = $(e.target).val().trim();
-                console.log(txt);
-                if (txt !== "") {
-                    $(e.target).val("").parent().hide();
-                    goSerach(txt);
-                }
+        if (e.key === "Enter" || e.keyCode === 13 || e.code === "Enter") {
+            // console.log('e.target :', e.target);
+            let txt = $(e.target).val().trim();
+            console.log(txt);
+            if (txt !== "") {
+                $(e.target).val("").parent().hide();
+                goSerach(txt);
             }
-        });
+        }
     };
     const goPage = (e) => {
-        console.log('goPage');
-        const tg = $(e.currentTarget).siblings('#schinGnb');
-        console.log('tg', tg);
+        console.log("goPage");
+        const tg = $(e.currentTarget).siblings("#schinGnb");
+        console.log("tg", tg);
         let tgTxt = tg.val().trim();
         if (tgTxt !== "") {
             $(tg).val("").parent().hide();
@@ -72,7 +70,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     return (
         <>
             <header className="top-area">
-            <div className="logmsg">{logMsg}</div>
+                <div className="logmsg">{logMsg}</div>
                 <nav className="gnb">
                     <ul>
                         <li>
@@ -97,7 +95,12 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         ))}
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
-                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" onClick={goPage} />
+                                <FontAwesomeIcon
+                                    icon={faSearch}
+                                    className="schbtnGnb"
+                                    title="Open Search"
+                                    onClick={goPage}
+                                />
                                 <input type="text" style={{ display: "none" }} />
                                 <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>
@@ -133,7 +136,12 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                     <ul>
                         <li style={{ marginLeft: "auto" }}>
                             <div className="searchingGnb">
-                                <FontAwesomeIcon icon={faSearch} className="schbtnGnb" title="Open Search" onClick={goPage} />
+                                <FontAwesomeIcon
+                                    icon={faSearch}
+                                    className="schbtnGnb"
+                                    title="Open Search"
+                                    onClick={goPage}
+                                />
                                 <input type="text" style={{ display: "none" }} />
                                 <input id="schinGnb" type="text" placeholder="어트랙션 검색" onKeyUp={enterKey} />
                             </div>
