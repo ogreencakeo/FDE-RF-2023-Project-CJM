@@ -1,8 +1,28 @@
 .board-wrap{
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 150px auto 100px;
 }
+.board-wrap .selbx{
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    height: 40px;
+    margin: 15px auto;
+}
+#cta{
+    width: 50px;
 
+}
+#sel{
+    width: 90px;
+    font-family: 'Nanum Gothic';
+    font-size: 12px;
+    margin: 0 5px;
+}
+#stxt{
+    margin-right: 5px;
+    width: 130px;
+}
 .dtbl{
     width: 100%;  
 }
@@ -21,6 +41,8 @@
 .board-cont-wrap ul li{
     width: 18%;
     text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid gainsboro;
 }
 
 .board-cont-wrap ul li:nth-child(2){
@@ -30,7 +52,15 @@
 .dtbl ul li{
     width: 18%;
     text-align: center;
+    padding: 12px 0;
+    border-top: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
 }
 .dtbl ul li:nth-child(2){
     width: 30%;
+}
+
+.center-paging-link{
+    text-align: center;
+    margin: 15px 0;
 }

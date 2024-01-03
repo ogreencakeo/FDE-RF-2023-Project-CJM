@@ -581,28 +581,34 @@ export function CustomerCenter2() {
                     {/* 중앙 레코드 표시부분 */}
                     <div>{bindList()}</div>
                     {/* 하단 : 페이징 */}
-                    <div>{pagingLink()}</div>
+                    <div className="center-paging-link">{pagingLink()}</div>
                 </div>
             )}
             {/* 글쓰기 C모드 */}
             {bdMode === "C" && (
                 <div className="dtblview writeone">
-                    <h1>OPINION : Write</h1>
+                    <h1>글쓰기</h1>
                     <div>
                         <ul>
-                            <li>Name</li>
+                            <li>닉네임</li>
                             <li>
                                 <input type="text" className="name" size="20" readOnly value={logData.current.unm} />
                             </li>
                         </ul>
                         <ul>
-                            <li>Email</li>
+                            <li>이메일</li>
                             <li>
                                 <input type="text" className="email" size="40" readOnly value={logData.current.eml} />
                             </li>
                         </ul>
                         <ul>
-                            <li>Content</li>
+                            <li>제목</li>
+                            <li>
+                                <input type="text" className="subject" size="60" />
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>내용</li>
                             <li>
                                 <textarea className="content" cols="60" rows="10"></textarea>
                             </li>
@@ -616,19 +622,19 @@ export function CustomerCenter2() {
                     <h1>OPINION : Read </h1>
                     <div>
                         <ul>
-                            <li>Name</li>
+                            <li>닉네임</li>
                             <li>
                                 <input type="text" className="name" size="20" readOnly value={cData.current.unm} />
                             </li>
                         </ul>
                         <ul>
-                            <li>Title</li>
+                            <li>제목</li>
                             <li>
                                 <input type="text" className="subject" size="60" readOnly value={cData.current.tit} />
                             </li>
                         </ul>
                         <ul>
-                            <li>Content</li>
+                            <li>내용</li>
                             <li>
                                 <textarea
                                     className="content"
@@ -644,22 +650,22 @@ export function CustomerCenter2() {
             )}
             {bdMode === "U" && (
                 <div className="btblview updateone">
-                    <h1>OPINION : Modify</h1>
+                    <h1>수정하기</h1>
                     <div>
                         <ul>
-                            <li>Name</li>
+                            <li>닉네임</li>
                             <li>
                                 <input type="text" className="name" size="20" readOnly value={cData.current.unm} />
                             </li>
                         </ul>
                         <ul>
-                            <li>Title</li>
+                            <li>제목</li>
                             <li>
                                 <input type="text" className="subject" size="60" defaultValue={cData.current.tit} />
                             </li>
                         </ul>
                         <ul>
-                            <li>Content</li>
+                            <li>내용</li>
                             <li>
                                 <textarea
                                     className="content"

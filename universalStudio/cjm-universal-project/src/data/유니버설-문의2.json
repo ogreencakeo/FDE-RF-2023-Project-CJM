@@ -8,8 +8,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": ""
+        "cnt": "0"
     },
     {
         "idx": "1",
@@ -20,8 +19,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": ""
+        "cnt": "0"
     },
     {
         "idx": "2",
@@ -32,8 +30,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement3.jpg"
+        "cnt": "0"
     },
     {
         "idx": "3",
@@ -44,8 +41,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement3.jpg"
+        "cnt": "0"
     },
     {
         "idx": "4",
@@ -56,8 +52,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement5.jpg"
+        "cnt": "0"
     },
     {
         "idx": "5",
@@ -68,8 +63,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement6.jpg"
+        "cnt": "0"
     },
     {
         "idx": "6",
@@ -80,8 +74,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement7.jpg"
+        "cnt": "0"
     },
     {
         "idx": "7",
@@ -92,8 +85,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement8.jpg"
+        "cnt": "0"
     },
     {
         "idx": "8",
@@ -104,8 +96,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement8.jpg"
+        "cnt": "0"
     },
     {
         "idx": "9",
@@ -116,8 +107,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement10.jpg"
+        "cnt": "0"
     },
     {
         "idx": "10",
@@ -128,8 +118,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": ""
+        "cnt": "0"
     },
     {
         "idx": "11",
@@ -140,8 +129,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement12.jpg"
+        "cnt": "0"
     },
     {
         "idx": "12",
@@ -151,8 +139,7 @@
         "date": "2023-09-04",
         "uid": "admin",
         "unm": "Administrator",
-        "cnt": "0",
-        "image": "announcement/announcement13.jpg"
+        "cnt": "0"
     },
     {
         "idx": "13",
@@ -163,8 +150,7 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement14.jpg"
+        "cnt": "0"
     },
     {
         "idx": "14",
@@ -175,19 +161,402 @@
         "uid": "admin",
         "unm": "Administrator",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement15.jpg"
+        "cnt": "0"
     },
     {
         "idx": "15",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "16",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "17",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "18",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "19",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "20",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "21",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "22",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "23",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "24",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "25",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "26",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "27",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "28",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "29",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "30",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "31",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "32",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "33",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "34",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "35",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "36",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "37",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "38",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "39",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "40",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "41",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "42",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "43",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "44",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "45",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "46",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "47",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "48",
+        "tit": "게시판 글입니다.",
+        "cont": "ㅇㅇ가 작성한 글입니다.",
+        "att": "",
+        "date": "2025-01-01",
+        "uid":"admin",
+        "unm":"Administrator",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "49",
         "tit": "【happy의 글】",
-        "cont": "happy가 작성한 글입니다.",
+        "cont": "happy가 작성한 글입니다. - 1",
+        "att": "",
+        "date": "2025-01-02",
+        "uid":"happy",
+        "unm":"happyfood",
+        "pwd": "1111",
+        "cnt": "0"
+    },
+    {
+        "idx": "50",
+        "tit": "【happy의 글】",
+        "cont": "happy가 작성한 글입니다. - 2",
         "att": "",
         "date": "2025-01-03",
         "uid":"happy",
         "unm":"happyfood",
         "pwd": "1111",
-        "cnt": "0",
-        "image": "announcement/announcement15.jpg"
+        "cnt": "0"
     }
 ]
