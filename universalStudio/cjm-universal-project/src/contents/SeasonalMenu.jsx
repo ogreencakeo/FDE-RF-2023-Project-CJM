@@ -15,9 +15,15 @@ import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { Caution } from "./module/Caution";
 import { FoodInfo } from "./SeasonalCont/FoodInfo";
 import { SwiperSec } from "./pages/plugin/SwiperSec";
+import { useEffect } from "react";
 
 
 export function SeasonalMenu() {
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    }, []);
+
     return (
         <>
             

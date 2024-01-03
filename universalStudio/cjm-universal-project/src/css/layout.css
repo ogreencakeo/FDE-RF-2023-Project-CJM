@@ -1,5 +1,9 @@
 /* DC.com 전체 레이아웃 CSS */
 
+html{
+    scroll-behavior: smooth;
+}
+
 main.cont {
     /* 최소높이 상단,하단제외 채우기
     - 하단 여백이 생기는 일이 없어짐! */
@@ -17,8 +21,13 @@ main.cont {
     z-index: 999999999;
     background-color: #fff;
     font-family: 'Ubuntu Condensed', sans-serif;
+    transition: transform 0.15s ease-in, opacity 0.15s ease-in;
+    opacity: 1;
 }
-
+.top-area.hide{
+    transform: translateY(-110%);
+    opacity: 0;
+}
 .gnb {
     max-width: 1320px;
     margin: 0 auto;
@@ -362,6 +371,7 @@ ol.bmenu {
 
     .top-area {
         overflow: hidden;
+        
     }
 
     .gnb>ul>li:nth-child(1)~li:nth-child(-n+10) {

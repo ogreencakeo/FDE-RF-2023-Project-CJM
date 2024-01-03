@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -15,6 +15,23 @@ export function SwiperSec(props) {
     const selData = cartData[props.category];
     console.log("스와이프 selData :", selData);
 
+
+    useEffect(() => {
+        const linkScrollHandler = () => {
+            window.scrollTo(0, 0);
+        }
+
+        const swiperLinks = document.querySelectorAll('.swiper-link-bx');
+        swiperLinks.forEach(link => {
+            link.addEventListener('click', linkScrollHandler);
+        });
+
+        return () => {
+            swiperLinks.forEach(link => {
+                link.removeEventListener('click', linkScrollHandler);
+            });
+        }
+    }, []); // 빈 배열을 전달하여 한 번만 실행되도록 함
     return (
         <div className="swiper-sec-wrap">
             <h1 className="swiper-sec-main-tit">
@@ -43,7 +60,7 @@ export function SwiperSec(props) {
             >
                 {selData.map((v, i) => (
                     <SwiperSlide className="swiper_sec" key={i}>
-                        <Link to={props.category=='restaurant'? `/seasonalMenu/restaurant${i + 1}` : `/goods/${v.link}` }>
+                        <Link className="swiper-link-bx" to={props.category=='restaurant'? `/seasonalMenu/restaurant${i + 1}` : `/goods/${v.link}` }>
                             <li key={i}>
                                 <div className="swiper-sec-img">
                                     <img src={process.env.PUBLIC_URL+ `${v.img}`} alt={v.title} />

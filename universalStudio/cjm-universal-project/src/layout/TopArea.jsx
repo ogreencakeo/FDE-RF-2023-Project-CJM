@@ -81,14 +81,14 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
             const smenu = gnb_smenu ? gnb_smenu.nextElementSibling : null;
             const gnb_icon = e.target.children[0];
             // console.log('gnb_icon :', gnb_icon);
-            // if(gnb_icon){
-            //     gnb_icon.classList.toggle('on');
+            if(gnb_icon){
+                gnb_icon.classList.toggle('on');
 
-            // }
+            }
             if (smenu) {
                 // 다음 형제 요소 (smenu2)에 'on' 클래스를 토글
                 smenu.classList.toggle('on');
-                gnb_icon.classList.toggle('on');
+                // gnb_icon.classList.toggle('on');
                 // gnb_icon.style.transform = 'rotate(180deg)';
             }
         };
@@ -102,7 +102,35 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
     },[]);    
 
     
+    
 
+    useEffect(()=>{
+        // top-area 숨기고 사라지기 반복
+        const topArea = document.querySelector('.top-area');
+
+        if (topArea) {
+            let lastScrollTop = 0;
+
+            const handelScroll = () => {
+                const scrollTop = window.scrollY || window.pageYOffset;
+                if (scrollTop > lastScrollTop) {
+                // 아래로 스크롤할 때
+                topArea.classList.add('hide');
+                } else {
+                // 위로 스크롤할 때
+                topArea.classList.remove('hide');
+                }
+                lastScrollTop = scrollTop;
+            };
+            
+            window.addEventListener('scroll', handelScroll);
+            return()=>{
+                window.removeEventListener('scroll', handelScroll);
+            };
+        };
+    }, []);
+
+   
     return (
         <>
             <header className="top-area">
@@ -115,7 +143,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
 
                         {navMenu.map((v, i) => (
                             <li key={i}>
-                                {v.sub ? <a href="#">{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>}
+                                {v.sub ? <a href="#" onClick={(e) => e.preventDefault()}>{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>}
                                 {v.sub && (
                                     <div className="smenu">
                                         <ol>
