@@ -1,17 +1,24 @@
-import { useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 // 기본 데이터 제이슨 불러오기
 import baseData from "../data/유니버설-문의2.json";
+
+// 로컬스토리지 사용자정보
+import { initData } from "../Function/mem_fn";
+
+// 컨텍스트 API
+import { universalCon } from "./module/universalContext";
 
 // 제이쿼리
 import $ from "jquery";
 
 import "../css/board.css";
+import { useContext } from "react";
 
 // 기본데이터 역순 정렬
 baseData.sort((a, b) => {
-    return Number(a.idx) === Number(b.idx)? 0 : Number(a.idx) > Number(b.idx) ? -1 : 1;
-})
+    return Number(a.idx) === Number(b.idx) ? 0 : Number(a.idx) > Number(b.idx) ? -1 : 1;
+});
 
 // 초기데이터 셋업하기
 let orgData;
@@ -19,17 +26,31 @@ if (localStorage.getItem("universal-bdata")) orgData = JSON.parse(localStorage.g
 else orgData = baseData;
 
 export function CustomerCenter2() {
-
-    if(!localStorage.getItem('universal-bdata')){
-        localStorage.setItem('universal-bdata', JSON.stringify(orgData));
+    if (!localStorage.getItem("universal-bdata")) {
+        localStorage.setItem("universal-bdata", JSON.stringify(orgData));
     }
-    // initData();
+    initData();
+
+    const myCon = useContext(universalCon);
+    // 버튼 공개여부
+    const [btnSts, setBtnSts] = useState(false);
 
     const [bdMode, setBdMode] = useState("L");
 
     const [pgNum, setPgNum] = useState(1);
     const pgBlock = 8;
-    const totNum = baseData.length;
+    const totNum = orgData.length;
+
+    // 선택데이터 셋팅을 위한 참조변수
+    const cData = useRef(null);
+
+    // 로그인 사용자 데이터 셋팅을 위한 참조변수
+    const logData = useRef(null);
+
+    useEffect(() => {
+        if (myCon.logSts === null) setBtnSts(false);
+        if (myCon.logSts === null && bdMode === "C") setBdMode("L");
+    }, [myCon.logSts]);
 
     // 리스트
     const bindList = () => {
@@ -52,21 +73,52 @@ export function CustomerCenter2() {
                 <ul>
                     <li>{i + 1 + initNum}</li>
                     <li>
-                        <a href="#" data-idx={v.idx} onClick={chgMode}>{v.tit}</a>
+                        <a href="#" data-idx={v.idx} onClick={chgMode}>
+                            {v.tit}
+                        </a>
                         {/* <a href="#" data-idx={v.idx}>
                             {v.tit}
                         </a> */}
                     </li>
-                    <li>{v.writer}</li>
+                    <li>{v.unm}</li>
                     <li>{v.date}</li>
-                    <li></li>
+                    <li>{v.cnt}</li>
                 </ul>
             </div>
         ));
     };
 
-    // 선택데이터 셋팅을 위한 참조변수
-    const cData = useRef(null);
+    // 리스트 페이징
+    const pagingLink = () => {
+        const blockCnt = Math.floor(totNum / pgBlock);
+        const blockPad = totNum % pgBlock;
+        const limit = blockCnt + (blockPad === 0 ? 0 : 1);
+
+        let pgCode = [];
+
+        for (let i = 0; i < limit; i++) {
+            pgCode[i] = (
+                <Fragment key={i}>
+                    {pgNum - 1 == i ? (
+                        <b>{i + 1}</b>
+                    ) : (
+                        <a href="#" onClick={chgList}>
+                            {i + 1}
+                        </a>
+                    )}
+                </Fragment>
+            );
+        }
+
+        return pgCode;
+    };
+
+    // 페이지 링크 클릭시 리스트 변경
+    const chgList = (e) => {
+        e.preventDefault();
+        let currNum = e.target.innerText;
+        setPgNum(currNum);
+    };
 
     // chgMode : 게시판 옵션 모드를 변경
     const chgMode = (e) => {
@@ -75,81 +127,185 @@ export function CustomerCenter2() {
         let btxt = $(e.target).text();
         let modeTxt;
 
-        switch(btxt){
+        switch (btxt) {
             case "목록":
-                modeTxt = 'L';
+                modeTxt = "L";
                 break;
-            case "글 쓰기" :
-                modeTxt = 'C';
+            case "글 쓰기":
+                modeTxt = "C";
                 break;
-            case "수정하기" :
-                modeTxt = 'U';
+            case "수정":
+                modeTxt = "U";
                 break;
-            case "입력" : 
-                modeTxt = 'S';
+            case "입력":
+                modeTxt = "S";
                 break;
-            case "삭제" :
-                modeTxt = 'D';
-            default :
-                modeTxt = 'R'
+            case "삭제":
+                modeTxt = "D";
+            default:
+                modeTxt = "R";
         }
 
         // R모드 (읽기모드)
-        if(modeTxt === 'R'){
-            let cidx = $(e.target).attr('data-idx'); // a링크의 data-idx값 읽어오기
+        if (modeTxt === "R") {
+            let cidx = $(e.target).attr("data-idx"); // a링크의 data-idx값 읽어오기
             cData.current = orgData.find((v) => {
                 if (Number(v.idx) === Number(cidx)) return true;
             });
-            setBdMode('R');
-        // L모드 (목록으로 이동)
-        }else if(modeTxt === 'L'){
-            setBdMode('L');
+            compUsr(cData.current.uid);
+            setBdMode("R");
+            plusCnt();
+            // L모드 (목록으로 이동)
+        } else if (modeTxt === "L") {
+            setBdMode("L");
         }
         // C모드 (글쓰기)
-        else if(modeTxt === 'C'){
-            // setBdMode('C');
+        else if (modeTxt === "C") {
+            // 로그인한 사용자에게 글쓰기 버튼이 노출됨
+            logData.current = JSON.parse(myCon.logSts);
+            setBdMode("C");
+        }
+        // C모드 (로그인 사용자에게 글쓰기 모드)
+        else if (modeTxt === "S" && bdMode === "C") {
+            const subEle = $(".writeone .subject");
+            const contEle = $(".writeone .content");
+
+            if (subEle.val().trim() === "" || contEle.val().trim() === "") {
+                window.alert("제목과 내용은 필수 입력입니다!");
+            } else {
+                const addZero = (x) => (x < 10 ? "0" + x : x);
+                let today = new Date();
+                let yy = today.getFullYear();
+                let mm = today.getMonth() + 1;
+                let dd = today.getDate();
+
+                let orgTemp = orgData;
+
+                let arrIdx = orgTemp.map((v) => parseInt(v.idx));
+                let maxNum = Math.max(...arrIdx);
+
+                // 임시변수에 입력할 객체 데이터 생성
+                let temp = {
+                    idx: maxNum + 1,
+                    tit: subEle.val().trim(),
+                    cont: subEle.val().trim(),
+                    att: "",
+                    date: `${yy}-${addZero(mm)}-${addZero(dd)}`,
+                    uid: logData.current.uid,
+                    unm: logData.current.unm,
+                    cnt: "0",
+                };
+
+                orgTemp.push(temp);
+
+                localStorage.setItem("universal-bdata", JSON.stringify(orgTemp));
+
+                setBdMode("L");
+            }
         }
         // U모드 (수정모드)
-        else if(modeTxt === 'U' ){
-            setBdMode('U');
+        else if (modeTxt === "U") {
+            setBdMode("U");
         }
         // U모드 (수정모드) 입력버튼 클릭시
-        else if(modeTxt ==='S' && bdMode==='U'){
-            const subEle = $('.updateone .subject');
-            const contEle = $('.updateone .content');
+        else if (modeTxt === "S" && bdMode === "U") {
+            const subEle = $(".updateone .subject");
+            const contEle = $(".updateone .content");
 
-            if(subEle.val().trim()==='' || contEle.val().trim()===''){
-                window.alert('제목과 내용은 필수입력입니다!');
-            }else{
+            if (subEle.val().trim() === "" || contEle.val().trim() === "") {
+                window.alert("제목과 내용은 필수입력입니다!");
+            } else {
                 let orgTemp = orgData; // 원본 데이터 변수할당
                 orgTemp.some((v) => {
-                    if(Number(cData.current.idx) === Number(v.idx)){
+                    if (Number(cData.current.idx) === Number(v.idx)) {
                         v.tit = subEle.val().trim();
                         v.cont = contEle.val().trim();
                         return true;
                     }
                 });
 
-                localStorage.getItem('universal-bdata', JSON.stringify(orgTemp));
-                setBdMode('L');
+                localStorage.getItem("universal-bdata", JSON.stringify(orgTemp));
+                setBdMode("L");
             }
         }
         // 삭제하기 D 모드
-        else if(modeTxt==='D' && bdMode==='U'){
-            // if(window.confirm('정말로 글을 삭제하시겠습니까?')){
-            //     orgData.some((v, i) =>{
-            //             if(Number(cData.current.idx) === Number(v.idx)){
-            //                     orgData.splice(i, 1);
-            //                     return true;
-            //                 }
-            //             }
-            //             );
-            //             localStorage.setItem('universal-bdata', JSON.stringify(orgData));
-            //     console.log('삭제하기 모드');
-            // }
-            setBdMode('L');
-        };
+        else if (modeTxt === "D" && bdMode === "U") {
+            if (window.confirm("정말로 글을 삭제하시겠습니까?")) {
+                orgData.some((v, i) => {
+                    if (Number(cData.current.idx) === Number(v.idx)) {
+                        orgData.splice(i, 1);
+                        return true;
+                    }
+                });
+                localStorage.setItem("universal-bdata", JSON.stringify(orgData));
+            }
+            setBdMode("L");
+        }
+    };
 
+    // 사용자 비교 함수
+    const compUsr = (usr) => {
+        if (myCon.logSts !== null) {
+            const info = JSON.parse(localStorage.getItem("universal-mem-data"));
+
+            const cUser = info.find((v) => {
+                if (v.uid === usr) return true;
+            });
+
+            // 사용자 정보 조회 - 아이디로 조회함
+            if (cUser) {
+                const currUser = JSON.parse(myCon.logSts);
+                if (currUser.uid === cUser.uid) setBtnSts(true);
+                else setBtnSts(false);
+            } else {
+                setBtnSts(false);
+            }
+        } else {
+            setBtnSts(false); // 로그인 안한 상태
+        }
+    };
+
+    // 게시판 조회수 증가
+    const plusCnt = () => {
+        let isOk = true; // 처음에 통과 상태
+
+        let cidx = cData.current.idx;
+        console.log("조회수 증가체크 idx:", cidx);
+        if (!sessionStorage.getItem("universal-cnt-idx")) sessionStorage.setItem("universal-cnt-idx", "[]");
+        let cntIdx = JSON.parse(sessionStorage.getItem("universal-cnt-idx"));
+
+        // 세션스에 등록된 글번호만큼 돌다가 같은글이면 false처리
+        cntIdx.some((v) => {
+            if (Number(v) === Number(cidx)) {
+                isOk = false;
+                return true;
+            }
+        });
+        if (localStorage.getItem("universal-minfo")) {
+            let minfo = JSON.parse(localStorage.getItem("universal-minfo"));
+            let cUid = minfo.uid;
+            if (cUid === cData.current.uid) isOk = false;
+        }
+
+        // 카운트 증가하기
+        if (isOk) {
+            let data = JSON.parse(localStorage.getItem("universal-bdata"));
+            data.some((v) => {
+                if (Number(v.idx) === Number(cidx)) {
+                    v.cnt = Number(v.cnt) + 1;
+                    return true;
+                }
+            });
+
+            orgData = data;
+            localStorage.setItem("universal-bdata", JSON.stringify(data));
+        }
+
+        // 현재글 세션스에 처리하기
+        if (isOk) {
+            cntIdx.push(Number(cidx));
+            sessionStorage.setItem("universal-cnt-idx", JSON.stringify(cntIdx));
+        }
     };
 
     return (
@@ -159,13 +315,13 @@ export function CustomerCenter2() {
                     <h1 className="tit">QUESTION</h1>
                     <div className="selbx">
                         <select className="cta" id="cta">
-                            <option value="tit">Title</option>
-                            <option value="cont">Contents</option>
-                            <option value="writer">Writer</option>
+                            <option value="tit">제목</option>
+                            <option value="cont">내용</option>
+                            <option value="unm">글쓴이</option>
                         </select>
                         <select className="sel" id="sel">
-                            <option value="0">Descending</option>
-                            <option value="1">Ascending</option>
+                            <option value="0">내림차순</option>
+                            <option value="1">오름차순</option>
                         </select>
                         <input type="text" id="stxt" maxLength="50" />
                         <button className="sbtn">Search</button>
@@ -173,17 +329,17 @@ export function CustomerCenter2() {
                     {/* 리스트 테이블 박스 */}
                     <div className="dtbl" id="board">
                         <ul>
-                            <li>Number</li>
-                            <li>Title</li>
-                            <li>Writer</li>
-                            <li>Date</li>
-                            <li>Hits</li>
+                            <li>번호</li>
+                            <li>제목</li>
+                            <li>닉네임</li>
+                            <li>날짜</li>
+                            <li>조회수</li>
                         </ul>
                     </div>
                     {/* 중앙 레코드 표시부분 */}
                     <div>{bindList()}</div>
                     {/* 하단 : 페이징 */}
-                    {/* <div>{pagingLink()}</div> */}
+                    <div>{pagingLink()}</div>
                 </div>
             )}
             {/* 글쓰기 C모드 */}
@@ -194,13 +350,13 @@ export function CustomerCenter2() {
                         <ul>
                             <li>Name</li>
                             <li>
-                                <input type="text" className="name" size="20" readOnly value={cData.current.writer} />
+                                <input type="text" className="name" size="20" readOnly value={logData.current.unm} />
                             </li>
                         </ul>
                         <ul>
                             <li>Email</li>
                             <li>
-                                <input type="text" className="email" size="40" readOnly value={cData.current.eml} />
+                                <input type="text" className="email" size="40" readOnly value={logData.current.eml} />
                             </li>
                         </ul>
                         <ul>
@@ -220,7 +376,7 @@ export function CustomerCenter2() {
                         <ul>
                             <li>Name</li>
                             <li>
-                                <input type="text" className="name" size="20" readOnly value={cData.current.writer} />
+                                <input type="text" className="name" size="20" readOnly value={cData.current.unm} />
                             </li>
                         </ul>
                         <ul>
@@ -232,7 +388,13 @@ export function CustomerCenter2() {
                         <ul>
                             <li>Content</li>
                             <li>
-                                <textarea className="content" cols="60" rows="10" readOnly value={cData.current.cont}></textarea>
+                                <textarea
+                                    className="content"
+                                    cols="60"
+                                    rows="10"
+                                    readOnly
+                                    value={cData.current.cont}
+                                ></textarea>
                             </li>
                         </ul>
                     </div>
@@ -245,7 +407,7 @@ export function CustomerCenter2() {
                         <ul>
                             <li>Name</li>
                             <li>
-                                <input type="text" className="name" size="20" readOnly value={cData.current.writer} />
+                                <input type="text" className="name" size="20" readOnly value={cData.current.unm} />
                             </li>
                         </ul>
                         <ul>
@@ -257,7 +419,12 @@ export function CustomerCenter2() {
                         <ul>
                             <li>Content</li>
                             <li>
-                                <textarea className="content" cols="60" rows="10" defaultValue={cData.current.cont}></textarea>
+                                <textarea
+                                    className="content"
+                                    cols="60"
+                                    rows="10"
+                                    defaultValue={cData.current.cont}
+                                ></textarea>
                             </li>
                         </ul>
                     </div>
@@ -271,15 +438,27 @@ export function CustomerCenter2() {
                         {
                             // L모드 (리스트)
                             bdMode === 'L' && (
+                                <button onClick={chgMode}>
+                                        <a href="#">글쓰기</a>
+                                    </button>
+                            )
+                        }
+                        {
+                            // L모드 (리스트)
+                            bdMode === "L" && myCon.logSts != null && (
                                 <>
-                                    <button onClick={chgMode}><a href="#">목록</a></button>
-                                    <button onClick={chgMode}><a href="#">글쓰기</a></button>
+                                    {/* <button onClick={chgMode}>
+                                        <a href="#">목록</a>
+                                    </button> */}
+                                    <button onClick={chgMode}>
+                                        <a href="#">글쓰기</a>
+                                    </button>
                                 </>
                             )
                         }
                         {
                             // C모드 (글쓰기)
-                            bdMode === 'C' && (
+                            bdMode === "C" && (
                                 <>
                                     <button onClick={chgMode}>
                                         <a href="#">입력</a>
@@ -292,22 +471,25 @@ export function CustomerCenter2() {
                         }
                         {
                             // R모드 (읽기모드)
-                            bdMode === 'R' && (
+                            bdMode === "R" && (
                                 <>
                                     <button onClick={chgMode}>
-                                        <a href="#">목록
-                                        </a>
+                                        <a href="#">목록</a>
                                     </button>
-                                    <button onClick={chgMode}>
-                                        <a href="#">수정하기
-                                        </a>
-                                    </button>
+                                    {
+                                        // 로그인 상태일때 수정가능
+                                        btnSts && (
+                                            <button onClick={chgMode}>
+                                                <a href="#">수정</a>
+                                            </button>
+                                        )
+                                    }
                                 </>
                             )
                         }
                         {
                             // 수정모드(U)
-                            bdMode === 'U' && (
+                            bdMode === "U" && (
                                 <>
                                     <button onClick={chgMode}>
                                         <a href="#">입력</a>

@@ -33,6 +33,7 @@ export function Seaching2(props) {
 
     // 검색리스트 만들기 함수
     function schList(e) {
+        $('#sel').val('0');
         let keyword = $("#schinGnb").val();
         const newList = attractionData.filter((v) => {
             if (v.name.indexOf(keyword) != -1) return true;
