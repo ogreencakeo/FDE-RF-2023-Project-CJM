@@ -80,7 +80,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
             // 찾은 smenu_toggle 다음에 있는 형제 요소를 가져옴 (smenu2)
             const smenu = gnb_smenu ? gnb_smenu.nextElementSibling : null;
             const gnb_icon = e.target.children[0];
-            console.log('gnb_icon :', gnb_icon);
+            // console.log('gnb_icon :', gnb_icon);
             // if(gnb_icon){
             //     gnb_icon.classList.toggle('on');
 
