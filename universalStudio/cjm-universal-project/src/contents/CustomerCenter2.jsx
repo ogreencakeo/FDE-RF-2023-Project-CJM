@@ -224,6 +224,7 @@ export function CustomerCenter2() {
 
     //  기능 : 페이지 링크 클릭시 리스트변경
     const chgList = (e) => {
+        e.preventDefault();
         let currNum = e.target.innerText;
         setPgNum(currNum);
     };
