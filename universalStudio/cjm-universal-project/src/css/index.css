@@ -115,10 +115,10 @@ a {
 
 .header-main-img {
     display: block;
-    background-image:
+    /* background-image:
         linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
         linear-gradient(rgba(0, 18, 70, .5), rgba(0, 18, 70, .5)),
-        url(../../public/images/main.webp);
+        url(../../public/images/main.webp); */
     position: relative;
     background-size: cover;
     background-position: center;

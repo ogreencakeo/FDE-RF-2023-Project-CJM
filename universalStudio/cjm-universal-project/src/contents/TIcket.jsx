@@ -9,6 +9,7 @@ import "../css/ticket2.css";
 import { TicketOption } from "./module/TicketOption";
 import { UniverSalText } from "./module/UniverSalText";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
+import { MoveAgency } from "./module/MoveAgency";
 
 export function Ticket() {
     const ticket_info = [
@@ -84,6 +85,7 @@ export function Ticket() {
                         </div>
                     </div>
                 </div>
+                <MoveAgency />
                 {/* 티켓 구입 문의 */}
                 <div className="ticket-purchase-inquiry">
                     <div className="ticket-inquiry-img">

@@ -175,7 +175,24 @@ export function Main() {
 
     
     // const modalSts = useRef(true);
-    
+
+
+    // 마우스 오버시 메인이미지 변경하기
+    const [isMouseOver, setIsMouseOver] = useState(false);
+
+    const handleMouseOver = () => {
+        setIsMouseOver(true);
+    };
+
+    const handleMouseOut = () => {
+        setIsMouseOver(false);
+    };
+
+    const mainImgStyle = {
+        backgroundImage:  isMouseOver
+        ? `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(rgba(0, 18, 70, .3), rgba(0, 18, 70, .3)), url(${process.env.PUBLIC_URL}/images/main2.jpg)`
+        : `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(rgba(0, 18, 70, .5), rgba(0, 18, 70, .5)), url(${process.env.PUBLIC_URL}/images/main.webp)`,
+    };
 
     return (
         <>
@@ -223,12 +240,12 @@ export function Main() {
                         </div>
                     </div>
                 </div> */}
-                <div className="header">
+                <div className="header" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                     <div className="header-img">
                         <div className="header-img-wrap">
                             {/* Main Image */}
-                            <div className="header-main-img-wrap">
-                                <div className="header-main-img"></div>
+                            <div className="header-main-img-wrap" >
+                                <div  className="header-main-img" style={mainImgStyle}></div>
                             </div>
                             {/* Main Content */}
                             <WaveText />

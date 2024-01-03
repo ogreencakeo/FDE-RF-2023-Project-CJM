@@ -7,6 +7,7 @@ import { faUtensils, faUserShield } from "@fortawesome/free-solid-svg-icons";
 import { faCreditCard, faFileLines } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Map } from "./Map";
+import { MoveAgency } from "./MoveAgency";
 
 export function SeasonalInfo(props) {
     const selData = seasonalMenu[props.menu];
@@ -62,7 +63,7 @@ export function SeasonalInfo(props) {
                     </div>
                 </div>
             </div>
-
+            <MoveAgency />
             {/* <!-- 레스토랑 중간 컨텐츠 --> */}
             <div className="restaurant_main_content_wrap Recommended_menu_information">
                 {/* <!-- <div className="restaurant_img1 restaurant_img"></div> --> */}
