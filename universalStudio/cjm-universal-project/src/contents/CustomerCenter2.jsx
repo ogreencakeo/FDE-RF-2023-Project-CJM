@@ -110,17 +110,22 @@ export function CustomerCenter2() {
         }
 
         return tempData.map((v, i) => (
-            <tr key={i}>
-                <td>{i + 1 + initNum}</td>
-                <td>
-                    <a href="#" data-idx={v.idx} onClick={chgMode}>
-                        {v.tit}
-                    </a>
-                </td>
-                <td>{v.unm}</td>
-                <td>{v.date}</td>
-                <td>{v.cnt}</td>
-            </tr>
+            <div className="board-cont-wrap">
+                <ul>
+                    <li>{i + 1 + initNum}</li>
+                    <li>
+                        <a href="#" data-idx={v.idx} onClick={chgMode}>
+                            {v.tit}
+                        </a>
+                        {/* <a href="#" data-idx={v.idx}>
+                            {v.tit}
+                        </a> */}
+                    </li>
+                    <li>{v.unm}</li>
+                    <li>{v.date}</li>
+                    <li>{v.cnt}</li>
+                </ul>
+            </div>
         ));
     };
 
@@ -253,19 +258,19 @@ export function CustomerCenter2() {
         let modeTxt;
 
         switch (btxt) {
-            case "List":
+            case "목록":
                 modeTxt = "L";
                 break;
-            case "Write":
+            case "글쓰기":
                 modeTxt = "C";
                 break;
-            case "Modify":
+            case "수정":
                 modeTxt = "U";
                 break;
-            case "Submit":
+            case "입력":
                 modeTxt = "S";
                 break;
-            case "Delete":
+            case "삭제":
                 modeTxt = "D";
                 break;
             default:
