@@ -75,22 +75,22 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
 
 
     useEffect(() => {
-       
         const handleGnbClick = (e) => {
             const gnb_smenu = e.target.closest('.smenu_toggle');
+            const gnb_icon = e.target.closest('.arrow-icon')
             // 찾은 smenu_toggle 다음에 있는 형제 요소를 가져옴 (smenu2)
             const smenu = gnb_smenu ? gnb_smenu.nextElementSibling : null;
 
             if (smenu) {
                 // 다음 형제 요소 (smenu2)에 'on' 클래스를 토글
                 smenu.classList.toggle('on');
+                // gnb_icon.classList.toggle('on');
             }
         };
         
         document.addEventListener('click', handleGnbClick);
         
         return () => {
-            // Cleanup: Remove the event listener when the component unmounts
             document.removeEventListener('click', handleGnbClick);
             
         };
@@ -110,7 +110,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
 
                         {navMenu.map((v, i) => (
                             <li key={i}>
-                                {v.sub ? <h1>{v.txt}</h1> : <Link to={v.link}>{v.txt}</Link>}
+                                {v.sub ? <a href="#">{v.txt}<span className="arrow-icon">▼</span></a> : <Link to={v.link}>{v.txt}</Link>}
                                 {v.sub && (
                                     <div className="smenu">
                                         <ol>

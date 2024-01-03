@@ -82,10 +82,10 @@ export function NoticeModal() {
                         ©Gosho Aoyama/1996,2024 Shogakukan,YTV,TMS
                         TM & © Universal Studios. All rights reserved.</span>
                 </div>
-            </div>
-            <div className="modal-btn-bx">
-                <button>X</button>
-                <button onClick={handleClose}>하루동안 닫기</button>
+                <div className="modal-btn-bx">
+                    <button>X</button>
+                    <button onClick={handleClose}>하루동안 닫기</button>
+                </div>
             </div>
         </div>
     );

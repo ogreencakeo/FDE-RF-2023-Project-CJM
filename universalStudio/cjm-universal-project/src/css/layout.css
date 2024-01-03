@@ -323,6 +323,23 @@ ol.bmenu {
     display: block;
 }
 
+/* .gnb2>ul>li:nth-child(3)>a::after,
+.gnb2>ul>li:nth-child(4)>a::after{
+    content: '▼';
+    display: inline-block;
+    font-size: 12px;
+    text-indent: 5px;
+    transform: translateY(-3px);
+}
+.gnb2>ul>li:nth-child(3)>a::after.on,
+.gnb2>ul>li:nth-child(4)>a::after.on{
+    transform: rotate(180deg);
+} */
+
+.gnb-icon{
+    transform: rotate(180deg);
+}
+
 @media screen and (max-width:1320px) {
     body {
         padding-top: 65px;
