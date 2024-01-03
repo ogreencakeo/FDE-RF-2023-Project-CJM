@@ -77,14 +77,15 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
     useEffect(() => {
         const handleGnbClick = (e) => {
             const gnb_smenu = e.target.closest('.smenu_toggle');
-            const gnb_icon = e.target.closest('.arrow-icon')
+            const gnb_icon = e.target.querySelector('.arrow-icon');
+            console.log('gnb_icon :', gnb_icon);
             // 찾은 smenu_toggle 다음에 있는 형제 요소를 가져옴 (smenu2)
             const smenu = gnb_smenu ? gnb_smenu.nextElementSibling : null;
 
             if (smenu) {
                 // 다음 형제 요소 (smenu2)에 'on' 클래스를 토글
                 smenu.classList.toggle('on');
-                // gnb_icon.classList.toggle('on');
+                gnb_icon.classList.toggle('on');
             }
         };
         
@@ -110,7 +111,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
 
                         {navMenu.map((v, i) => (
                             <li key={i}>
-                                {v.sub ? <a href="#">{v.txt}<span className="arrow-icon">▼</span></a> : <Link to={v.link}>{v.txt}</Link>}
+                                {v.sub ? <a href="#">{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>}
                                 {v.sub && (
                                     <div className="smenu">
                                         <ol>
@@ -182,7 +183,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
                         </li>
                         {navMenu.map((v, i) => (
                             <li key={i}>
-                                {v.sub ? <a className="smenu_toggle" href="#">{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>}
+                                {v.sub ? <a className="smenu_toggle" href="#">{v.txt}<span className="arrow-icon">▼</span></a> : <Link to={v.link}>{v.txt}</Link>}
                                 {v.sub && (
                                     <div className="smenu2">
                                         <ol>

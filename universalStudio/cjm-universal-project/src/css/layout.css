@@ -335,9 +335,15 @@ ol.bmenu {
 .gnb2>ul>li:nth-child(4)>a::after.on{
     transform: rotate(180deg);
 } */
-
-.gnb-icon{
+.arrow-icon{
+    display: inline-block;
+    font-size: 15px;
+    text-indent: 5px;
+    /* transform: translateY(-35px); */
+}
+.arrow-icon.on{
     transform: rotate(180deg);
+    display: inline-block;
 }
 
 @media screen and (max-width:1320px) {
