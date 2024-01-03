@@ -1,14 +1,9 @@
-import { createElement, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../css/loading.css';
 
 export function Loading() {
     const loadingTxt = 'LOADING';
-    // const loadImg = [
-    //     '/images/loading/1.png',
-    //     '/images/loading/2.png',
-    //     '/images/loading/3.png',
-    //     '/images/loading/4.png',
-    // ];
+
 
     const [progress, setProgress] = useState(0);
 
