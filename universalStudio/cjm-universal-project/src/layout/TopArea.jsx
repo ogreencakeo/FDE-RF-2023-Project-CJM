@@ -77,15 +77,19 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
     useEffect(() => {
         const handleGnbClick = (e) => {
             const gnb_smenu = e.target.closest('.smenu_toggle');
-            const gnb_icon = e.target.querySelector('.arrow-icon');
-            console.log('gnb_icon :', gnb_icon);
             // 찾은 smenu_toggle 다음에 있는 형제 요소를 가져옴 (smenu2)
             const smenu = gnb_smenu ? gnb_smenu.nextElementSibling : null;
+            const gnb_icon = e.target.children[0];
+            console.log('gnb_icon :', gnb_icon);
+            // if(gnb_icon){
+            //     gnb_icon.classList.toggle('on');
 
+            // }
             if (smenu) {
                 // 다음 형제 요소 (smenu2)에 'on' 클래스를 토글
                 smenu.classList.toggle('on');
                 gnb_icon.classList.toggle('on');
+                // gnb_icon.style.transform = 'rotate(180deg)';
             }
         };
         

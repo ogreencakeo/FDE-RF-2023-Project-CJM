@@ -340,6 +340,7 @@ ol.bmenu {
     font-size: 15px;
     text-indent: 5px;
     /* transform: translateY(-35px); */
+    transform: rotate(0deg);
 }
 .arrow-icon.on{
     transform: rotate(180deg);
