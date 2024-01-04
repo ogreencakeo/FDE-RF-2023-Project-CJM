@@ -15,7 +15,7 @@ export function NoticeModal() {
         if (closeButton) {
             closeButton.addEventListener('click', () => {
                 handleModalClose();
-                setModalOpen(false);
+                // setModalOpen(false);
                 const currentTime = new Date().getTime();
                 localStorage.setItem("lastClosedTime", currentTime.toString());
             });
@@ -36,11 +36,11 @@ export function NoticeModal() {
         }
     }, []);
 
-    const handleClose = () => {
-        const currentTime = new Date().getTime();
-        localStorage.setItem("lastClosedTime", currentTime.toString());
-        console.log('handleClose executed');
-    };
+    // const handleClose = () => {
+    //     const currentTime = new Date().getTime();
+    //     localStorage.setItem("lastClosedTime", currentTime.toString());
+    //     console.log('handleClose executed');
+    // };
 
 
     return (
@@ -82,7 +82,8 @@ export function NoticeModal() {
                 </div>
                 <div className="modal-btn-bx">
                     <button>X</button>
-                    <button onClick={handleClose}>하루동안 닫기</button>
+                    {/* <button onClick={handleClose}>하루동안 닫기</button> */}
+                    <button>하루동안 닫기</button>
                 </div>
             </div>
         </div>
