@@ -64,3 +64,47 @@
     text-align: center;
     margin: 15px 0;
 }
+
+/* 읽기 모드 */
+.readone>*, body>div>*{
+    /* border: 1px solid red; */
+}
+.readone{
+    margin: 150px auto 100px;
+    max-width: 680px;
+}
+.readone>div{
+    padding: 15px 10px;
+}
+
+.readone ul{
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.readone ul li{
+    font-family: 'Jua';
+    font-size: 1.5rem;
+    /* border: 1px solid red; */
+}
+
+.readone ul li:first-child{
+    width: 15%;
+    text-align: end;
+    margin-right: 10px;
+}
+.readone ul li:last-child{
+    width: 80%;
+}
+
+.readone ul li:last-child input{
+    width: 90%;
+}
+.readone ul li:last-child textarea{
+    width: 90%;
+}
+.readone input{
+    border: 0;
+}
