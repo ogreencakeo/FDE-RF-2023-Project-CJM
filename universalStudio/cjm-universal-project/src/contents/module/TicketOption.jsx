@@ -245,7 +245,11 @@ export function TicketOption() {
                                 <h2>수량 : {v.quantity}</h2>
                                 <h2>가격 : ₩ {(v.price * v.quantity).toLocaleString()}</h2>
                             </div>
+                            {/*
+                            
                             <button className="shoppingCart" onClick={() => useCart(idx)}>
+                            */}
+                            <button className="shoppingCart">
                                 담기
                             </button>
                         </div>
