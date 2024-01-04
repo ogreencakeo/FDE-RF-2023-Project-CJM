@@ -194,6 +194,19 @@ export function Main() {
         : `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(rgba(0, 18, 70, .5), rgba(0, 18, 70, .5)), url(${process.env.PUBLIC_URL}/images/main.webp)`,
     };
 
+    // 이벤트 마우스 오버시 사진 체인지
+    const [mainEvent, setMainEvent] = useState(true);
+
+    // const eventMoveFn = (v, i) => {
+    //     setMainEvent(process.env.PUBLIC_URL + `/images/event/${v.img}`)
+    // };
+
+    // const eventOutfn = (v, i) => {
+    //     setMainEvent(process.env.PUBLIC_URL + `/images/event/${v.img2}`)
+    // }
+
+
+
     return (
         <>
             <div>
@@ -450,12 +463,19 @@ export function Main() {
             {/* 이벤트 */}
             <div className="main-upcomingEv-wrap">
                 <h1><nav className="hover-move-wrap"><a href="#" className="hover-move-bx" onClick={(e) => e.preventDefault()}><span data-hover='Upcoming Event'>Upcoming Event</span></a></nav></h1>
-                <div className="main-upcomingEv">
+                <div className="main-upcomingEv" >
                     {
                         eventData.map((v, i) =>
-                            <div className="main-upcomingEv-bx" key={i}>
+                            <div className="main-upcomingEv-bx" key={i} 
+                            onMouseOver={()=>setMainEvent(i)} 
+                            onMouseOut={()=>setMainEvent(true)}>
                                 <div className="upcomingEv-img-bx">
-                                    <img src={process.env.PUBLIC_URL + `/images/event/${v.img}`} alt="이벤트사진" />
+                                    {
+                                        mainEvent===i? 
+                                        <img src={process.env.PUBLIC_URL + `/images/event/${v.img}`} alt="이벤트사진" /> :
+                                        <img src={process.env.PUBLIC_URL + `/images/event/${v.img2}`} alt="이벤트사진" /> 
+                                    }
+                                    
                                 </div>
                                 <div className="main-upcomingEv-cont">
                                     <div><a href="#" onClick={(e) => e.preventDefault()}><span data-hover={v.name}>{v.name}</span></a></div>

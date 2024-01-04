@@ -69,7 +69,9 @@
     z-index: 9999;
     cursor: pointer;
     display: none;
+    
 }
+
 /* 카트박스 사이드 이동상태 */
 #mycart.on {
     position: fixed;
@@ -81,7 +83,9 @@
     padding: 15px;
     transition: 0.4s ease-in 2s;
     border: 3px solid #555;
+    
 }
+
 
 /* 원본 이미지 크기 */
 #mycart h1 {

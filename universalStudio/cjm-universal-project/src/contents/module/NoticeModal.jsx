@@ -13,7 +13,7 @@ export function NoticeModal() {
 
     const handleModalClose = () => {
       modalWrap.style.display = "none";
-      console.log("hi");
+      // console.log("hi");
     };
 
     if (localStorage.getItem("lastClosedTime")) {
@@ -22,12 +22,8 @@ export function NoticeModal() {
         10
       );
       const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
-      // const twentyFourHoursAgo = new Date().getTime() + 5000;
 
-      // 테스트용
-    //   lastClosedTime = lastClosedTime + twentyFourHoursAgo;
-
-      console.log(lastClosedTime, ">", twentyFourHoursAgo);
+      // console.log(lastClosedTime, ">", twentyFourHoursAgo);
 
       if (lastClosedTime > twentyFourHoursAgo) {
         setModalOpen(true);
@@ -39,7 +35,6 @@ export function NoticeModal() {
     if (closeButton) {
       closeButton.addEventListener("click", () => {
         handleModalClose();
-        // setModalOpen(false);
         const currentTime = new Date().getTime();
         localStorage.setItem("lastClosedTime", currentTime.toString());
       });

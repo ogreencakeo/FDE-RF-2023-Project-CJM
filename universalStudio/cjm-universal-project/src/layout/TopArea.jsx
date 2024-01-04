@@ -18,18 +18,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // 컨텍스트 API
 import { universalCon } from "../contents/module/universalContext";
 
-
-
-export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
+export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // enterKey
     const enterKey = (e) => {
         if (e.key === "Enter" || e.keyCode === 13 || e.code === "Enter") {
-            console.log('e.target :', e.target);
+            console.log("e.target :", e.target);
             let txt = $(e.target).val().trim();
-            console.log('enterKey txt :', txt);
+            console.log("enterKey txt :", txt);
             if (txt !== "") {
                 $(e.target).val("").parent().hide();
-                console.log('go');
+                console.log("go");
                 goSerach(txt);
             }
         }
@@ -73,40 +71,34 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
         // window.scrollTo(0, 0);
     }); // useEffect
 
-
     useEffect(() => {
         const handleGnbClick = (e) => {
-            const gnb_smenu = e.target.closest('.smenu_toggle');
+            const gnb_smenu = e.target.closest(".smenu_toggle");
             // 찾은 smenu_toggle 다음에 있는 형제 요소를 가져옴 (smenu2)
             const smenu = gnb_smenu ? gnb_smenu.nextElementSibling : null;
             const gnb_icon = e.target.children[0];
             // console.log('gnb_icon :', gnb_icon);
-            if(gnb_icon){
-                gnb_icon.classList.toggle('on');
-
+            if (gnb_icon) {
+                gnb_icon.classList.toggle("on");
             }
             if (smenu) {
                 // 다음 형제 요소 (smenu2)에 'on' 클래스를 토글
-                smenu.classList.toggle('on');
+                smenu.classList.toggle("on");
                 // gnb_icon.classList.toggle('on');
                 // gnb_icon.style.transform = 'rotate(180deg)';
             }
         };
-        
-        document.addEventListener('click', handleGnbClick);
-        
+
+        document.addEventListener("click", handleGnbClick);
+
         return () => {
-            document.removeEventListener('click', handleGnbClick);
-            
+            document.removeEventListener("click", handleGnbClick);
         };
-    },[]);    
+    }, []);
 
-    
-    
-
-    useEffect(()=>{
+    useEffect(() => {
         // top-area 숨기고 사라지기 반복
-        const topArea = document.querySelector('.top-area');
+        const topArea = document.querySelector(".top-area");
 
         if (topArea) {
             let lastScrollTop = 0;
@@ -114,23 +106,42 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
             const handelScroll = () => {
                 const scrollTop = window.scrollY || window.pageYOffset;
                 if (scrollTop > lastScrollTop) {
-                // 아래로 스크롤할 때
-                topArea.classList.add('hide');
+                    // 아래로 스크롤할 때
+                    topArea.classList.add("hide");
                 } else {
-                // 위로 스크롤할 때
-                topArea.classList.remove('hide');
+                    // 위로 스크롤할 때
+                    topArea.classList.remove("hide");
                 }
                 lastScrollTop = scrollTop;
             };
-            
-            window.addEventListener('scroll', handelScroll);
-            return()=>{
-                window.removeEventListener('scroll', handelScroll);
+
+            window.addEventListener("scroll", handelScroll);
+            return () => {
+                window.removeEventListener("scroll", handelScroll);
             };
+        }
+    }, []);
+
+    useEffect(() => {
+        const hambBtnFn = () => {
+            console.log("hi");
+            const top_area = document.querySelector(".top-area");
+            const a = top_area.nextElementSibling;
+            console.log("a", a);
+            const isOn = a.classList.contains("on");
+            console.log("isOn", isOn);
+        };
+
+        const hamBtn = document.querySelector(".hambtn");
+        if (hamBtn) {
+            hamBtn.addEventListener("click", hambBtnFn);
+        }
+
+        return () => {
+            hamBtn.removeEventListener('click', hambBtnFn);
         };
     }, []);
 
-   
     return (
         <>
             <header className="top-area">
@@ -143,7 +154,13 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
 
                         {navMenu.map((v, i) => (
                             <li key={i}>
-                                {v.sub ? <a href="#" onClick={(e) => e.preventDefault()}>{v.txt}</a> : <Link to={v.link}>{v.txt}</Link>}
+                                {v.sub ? (
+                                    <a href="#" onClick={(e) => e.preventDefault()}>
+                                        {v.txt}
+                                    </a>
+                                ) : (
+                                    <Link to={v.link}>{v.txt}</Link>
+                                )}
                                 {v.sub && (
                                     <div className="smenu">
                                         <ol>
@@ -215,7 +232,14 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut, }) => {
                         </li>
                         {navMenu.map((v, i) => (
                             <li key={i}>
-                                {v.sub ? <a className="smenu_toggle" href="#">{v.txt}<span className="arrow-icon">▼</span></a> : <Link to={v.link}>{v.txt}</Link>}
+                                {v.sub ? (
+                                    <a className="smenu_toggle" href="#">
+                                        {v.txt}
+                                        <span className="arrow-icon">▼</span>
+                                    </a>
+                                ) : (
+                                    <Link to={v.link}>{v.txt}</Link>
+                                )}
                                 {v.sub && (
                                     <div className="smenu2">
                                         <ol>
