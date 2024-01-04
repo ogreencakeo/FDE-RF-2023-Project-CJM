@@ -157,7 +157,7 @@ export function TicketOption() {
                 localD.push(selData1);
                 localStorage.setItem("universal-cart", JSON.stringify(localD));
                 myCon.setTransData(localD);
-                // myCon.setCsts(1);
+                myCon.setCsts(1);
                 $('#mycart')
                     .removeClass('on')
                     .delay(1000)
@@ -247,9 +247,9 @@ export function TicketOption() {
                             </div>
                             {/*
                             
-                            <button className="shoppingCart" onClick={() => useCart(idx)}>
-                            */}
                             <button className="shoppingCart">
+                        */}
+                        <button className="shoppingCart" onClick={() => useCart(idx)}>
                                 담기
                             </button>
                         </div>

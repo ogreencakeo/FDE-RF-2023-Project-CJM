@@ -1,5 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 
+import '../../css/noticeModal.css';
+
 export function NoticeModal() {
   const [isModalOpen, setModalOpen] = useState(true);
 
@@ -20,6 +22,7 @@ export function NoticeModal() {
         10
       );
       const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
+      // const twentyFourHoursAgo = new Date().getTime() + 5000;
 
       // 테스트용
     //   lastClosedTime = lastClosedTime + twentyFourHoursAgo;
@@ -47,6 +50,21 @@ export function NoticeModal() {
 
     console.log(333);
   });
+
+  useEffect(()=>{
+
+    const closeBtnFn = () => {
+      document.querySelector('.notice-modal-wrap').classList.add('close');
+    };
+
+    const closeBtn = document.querySelector('.closeBtn');
+    if(closeBtn){
+      closeBtn.addEventListener('click', closeBtnFn);
+    }
+    return(()=>{
+      closeBtn.removeEventListener('click',closeBtnFn )
+    })
+  })
 
   // const handleClose = () => {
   //     const currentTime = new Date().getTime();
@@ -104,7 +122,7 @@ export function NoticeModal() {
           </span>
         </div>
         <div className="modal-btn-bx">
-          <button>X</button>
+          <button className="closeBtn">X</button>
           {/* <button onClick={handleClose}>하루동안 닫기</button> */}
           <button>하루동안 닫기</button>
         </div>
