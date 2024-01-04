@@ -101,10 +101,12 @@
 
 .readone ul li:last-child input{
     width: 90%;
+    font-size: 1.2rem;
 }
 .readone ul li:last-child textarea{
     width: 90%;
+    font-size: 1.2rem;
 }
-.readone input{
+.readone input, .readone textarea{
     border: 0;
 }
