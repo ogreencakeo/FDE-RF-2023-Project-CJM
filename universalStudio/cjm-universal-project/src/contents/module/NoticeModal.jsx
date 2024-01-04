@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function NoticeModal() {
-    const [isModalOpen, setModalOpen] = useState(false);
+    const [isModalOpen, setModalOpen] = useState(true);
 
     useEffect(() => {
         const modalWrap = document.querySelector('.notice-modal-wrap');
@@ -24,8 +24,6 @@ export function NoticeModal() {
             };
         }
 
-        // 여기서 모달을 열어줍니다.
-        modalWrap.style.display = 'block';
 
         const lastClosedTime = parseInt(localStorage.getItem("lastClosedTime"), 10);
         if (lastClosedTime) {
@@ -34,9 +32,9 @@ export function NoticeModal() {
                 setModalOpen(true);
             }
         } else {
-            setModalOpen(true);
+            setModalOpen(false);
         }
-    }, []); // 빈 배열을 전달하여 최초 마운트 시에만 실행되도록 설정
+    }, []);
 
     const handleClose = () => {
         const currentTime = new Date().getTime();
@@ -46,7 +44,7 @@ export function NoticeModal() {
 
 
     return (
-        <div className={`notice-modal-wrap ${isModalOpen ? 'close' : ''}`}>
+        <div className={`notice-modal-wrap ${isModalOpen ? '' : 'close'}`}>
             <div className="notice-modal">
                 <div>
                     <h3>
