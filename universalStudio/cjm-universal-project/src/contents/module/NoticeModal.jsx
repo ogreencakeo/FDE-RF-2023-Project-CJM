@@ -26,7 +26,7 @@ export function NoticeModal() {
 
 
         const lastClosedTime = parseInt(localStorage.getItem("lastClosedTime"), 10);
-        if (lastClosedTime) {
+        if (localStorage.getItem("lastClosedTime")) {
             const twentyFourHoursAgo = new Date().getTime() - 24 * 60 * 60 * 1000;
             if (lastClosedTime > twentyFourHoursAgo) {
                 setModalOpen(true);
