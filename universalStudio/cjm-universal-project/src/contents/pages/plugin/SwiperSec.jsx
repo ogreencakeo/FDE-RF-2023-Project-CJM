@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -14,6 +14,8 @@ import { Link } from "react-router-dom";
 export function SwiperSec(props) {
     const selData = cartData[props.category];
     console.log("스와이프 selData :", selData);
+
+    const [moveMainImg, setMoveMainImg] = useState(true);
 
 
     useEffect(() => {
@@ -60,10 +62,15 @@ export function SwiperSec(props) {
             >
                 {selData.map((v, i) => (
                     <SwiperSlide className="swiper_sec" key={i}>
-                        <Link className="swiper-link-bx" to={props.category=='restaurant'? `/seasonalMenu/restaurant${i + 1}` : `/goods/${v.link}` }>
+                        <Link className="swiper-link-bx" to={props.category=='restaurant'? `/seasonalMenu/restaurant${i + 1}` : `/goods/${v.link}` }
+                        onMouseMove={()=>setMoveMainImg(i)} onMouseOut={()=>setMoveMainImg(true)}>
                             <li key={i}>
                                 <div className="swiper-sec-img">
-                                    <img src={process.env.PUBLIC_URL+ `${v.img}`} alt={v.title} />
+                                    {
+                                        moveMainImg===i ? 
+                                        <img src={process.env.PUBLIC_URL+ `${v.logo}`} alt={v.title} /> :
+                                        <img src={process.env.PUBLIC_URL+ `${v.img}`} alt={v.title} /> 
+                                    }
                                 </div>
                                 <h2 className="swipe_sec_cat">{v.category}</h2>
                                 <h2 className="swipe_sec_tit">{v.title}</h2>

@@ -5,8 +5,12 @@ import { Map } from "./module/Map";
 
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { Caution } from "./module/Caution";
+import { useEffect } from "react";
 
 export function Detail() {
+    useEffect(()=>{
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }, []);
     const loc = useLocation();
     const name = loc.state.name;
     const img = loc.state.img;

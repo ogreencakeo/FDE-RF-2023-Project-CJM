@@ -1,4 +1,4 @@
-import React, { memo, useContext, useEffect, useRef } from "react";
+import React, { memo, useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 // 제이쿼리
@@ -41,6 +41,9 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             $(tg).val("").parent().hide();
             goSerach(tgTxt);
         }
+        // 페이지 이동 후 스크롤을 최상단으로 이동
+        // window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo(0, 0);
     };
     // showSerach
     const showSerach = (e) => {
@@ -68,36 +71,23 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         $(".gnb2 a[href!='#']").on("click", () => {
             $(".top-show-nav").slideUp().removeClass("on");
         });
-        // window.scrollTo(0, 0);
     }); // useEffect
 
+
+    // 모바일 버튼
+    const [subMenuStates, setSubMenuStates] = useState({});
+    const toggleSubMenu = (index) => {
+        setSubMenuStates((prevStates) => ({
+            ...prevStates,
+            [index]: !prevStates[index]
+        }));
+        // 페이지 이동 후 스크롤을 최상단으로 이동
+        // window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+
+    // top-area 숨기고 사라지기 반복
     useEffect(() => {
-        const handleGnbClick = (e) => {
-            const gnb_smenu = e.target.closest(".smenu_toggle");
-            // 찾은 smenu_toggle 다음에 있는 형제 요소를 가져옴 (smenu2)
-            const smenu = gnb_smenu ? gnb_smenu.nextElementSibling : null;
-            const gnb_icon = e.target.children[0];
-            // console.log('gnb_icon :', gnb_icon);
-            if (gnb_icon) {
-                gnb_icon.classList.toggle("on");
-            }
-            if (smenu) {
-                // 다음 형제 요소 (smenu2)에 'on' 클래스를 토글
-                smenu.classList.toggle("on");
-                // gnb_icon.classList.toggle('on');
-                // gnb_icon.style.transform = 'rotate(180deg)';
-            }
-        };
-
-        document.addEventListener("click", handleGnbClick);
-
-        return () => {
-            document.removeEventListener("click", handleGnbClick);
-        };
-    }, []);
-
-    useEffect(() => {
-        // top-area 숨기고 사라지기 반복
         const topArea = document.querySelector(".top-area");
 
         if (topArea) {
@@ -105,11 +95,13 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
 
             const handelScroll = () => {
                 const scrollTop = window.scrollY || window.pageYOffset;
-                if (scrollTop > lastScrollTop) {
-                    // 아래로 스크롤할 때
+                const windowWidth = window.innerWidth;
+
+                // windowWidth가 920px 이상이고, 스크롤을 아래로 내릴 때 hide 클래스 추가
+                if (windowWidth >= 920 && scrollTop > lastScrollTop) {
                     topArea.classList.add("hide");
                 } else {
-                    // 위로 스크롤할 때
+                    // 위로 스크롤할 때 또는 화면 너비가 920px 미만일 때 hide 클래스 제거
                     topArea.classList.remove("hide");
                 }
                 lastScrollTop = scrollTop;
@@ -122,26 +114,26 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         }
     }, []);
 
+    // useEffect 내에서 스크롤 이동 로직 추가
     useEffect(() => {
-        const hambBtnFn = () => {
-            console.log("hi");
-            const top_area = document.querySelector(".top-area");
-            const a = top_area.nextElementSibling;
-            console.log("a", a);
-            const isOn = a.classList.contains("on");
-            console.log("isOn", isOn);
+        const handleLinkClick = () => {
+            // 링크나 smenu를 클릭할 때 스크롤을 최상단으로 이동
+            window.scroll({ top: 0, behavior: 'smooth' });
         };
 
-        const hamBtn = document.querySelector(".hambtn");
-        if (hamBtn) {
-            hamBtn.addEventListener("click", hambBtnFn);
-        }
+        // 모든 링크에 클릭 이벤트 리스너 추가
+        const links = document.querySelectorAll(".gnb a, .smenu_toggle");
+        links.forEach((link) => {
+            link.addEventListener("click", handleLinkClick);
+        });
 
+        // 컴포넌트가 언마운트될 때 클릭 이벤트 리스너 제거
         return () => {
-            hamBtn.removeEventListener('click', hambBtnFn);
+            links.forEach((link) => {
+                link.removeEventListener("click", handleLinkClick);
+            });
         };
     }, []);
-
     return (
         <>
             <header className="top-area">
@@ -233,19 +225,20 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         {navMenu.map((v, i) => (
                             <li key={i}>
                                 {v.sub ? (
-                                    <a className="smenu_toggle" href="#">
+                                    <a className="smenu_toggle" href="#" onClick={() => toggleSubMenu(i)}>
                                         {v.txt}
-                                        <span className="arrow-icon">▼</span>
+                                        <span className="arrow-icon">{subMenuStates[i] ? '▲' : '▼'}</span>
                                     </a>
                                 ) : (
                                     <Link to={v.link}>{v.txt}</Link>
                                 )}
+
                                 {v.sub && (
-                                    <div className="smenu2">
+                                    <div className={subMenuStates[i] ? "smenu2 on" : "smenu2"}>
                                         <ol>
-                                            {v.sub.map((v, i) => (
-                                                <li key={i}>
-                                                    <Link to={v.link}>{v.txt}</Link>
+                                            {v.sub.map((subItem, subIndex) => (
+                                                <li key={subIndex}>
+                                                    <Link to={subItem.link}>{subItem.txt}</Link>
                                                 </li>
                                             ))}
                                         </ol>

@@ -88,19 +88,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
             });
     }, []);
 
-
-    // 마우스 오버시 장박구니 opacity 1 주기
-    const [mouseOpa, setMouseOpa] = useState(1);
-
-    const mouseOpaFn = () => {
-        setMouseOpa(1);
-    }
-    const mouseOpaClose = () => {
-        setMouseOpa(0.5);
-    }
-
-
-
     const showList = () => {
         $("#cartlist").animate({ right: "0" }, 600);
     };
@@ -293,10 +280,8 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                     </tbody>
                 </table>
             </section>
-            <div id="mycart" style={{opacity : mouseOpa}}
-            onClick={showList} 
-            onMouseOver={mouseOpaFn} 
-            onMouseOut={mouseOpaClose}>
+            <div id="mycart" 
+            onClick={showList} >
                 <h1>
                     <FontAwesomeIcon icon={faBasketShopping} />
                 </h1>

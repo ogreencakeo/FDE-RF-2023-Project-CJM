@@ -118,7 +118,6 @@ export function NoticeModal() {
         </div>
         <div className="modal-btn-bx">
           <button className="closeBtn">X</button>
-          {/* <button onClick={handleClose}>하루동안 닫기</button> */}
           <button>하루동안 닫기</button>
         </div>
       </div>

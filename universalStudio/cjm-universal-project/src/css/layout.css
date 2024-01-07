@@ -28,6 +28,17 @@ main.cont {
     transform: translateY(-110%);
     opacity: 0;
 }
+.top-area.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999999;
+    transform: translateY(0);
+     /* 적절한 z-index 값으로 조정하세요 */
+    /* 추가적인 스타일 지정 */
+}
+
 .gnb {
     max-width: 1320px;
     margin: 0 auto;
@@ -368,11 +379,14 @@ ol.bmenu {
         /* top: 50%; */
         /* transform: translate(0, -50%); */
     }
-
+    
     .top-area {
         overflow: hidden;
         
     }
+    
+}
+@media screen and (max-width:920px) {
 
     .gnb>ul>li:nth-child(1)~li:nth-child(-n+10) {
         display: none;
@@ -382,8 +396,8 @@ ol.bmenu {
     .hambtn {
         display: block;
     }
-}
 
+}
 @media screen and (max-width:550px) {
     .gnb2 li {
         font-size: 1.5rem;

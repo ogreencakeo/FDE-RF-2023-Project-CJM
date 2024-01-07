@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { attractionData } from "../data/attraction/attractionData";
 
 // css
@@ -20,6 +20,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export function AreaType() {
+    
     const loc = useLocation();
     let keyword;
 

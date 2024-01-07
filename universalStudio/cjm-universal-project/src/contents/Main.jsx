@@ -45,6 +45,7 @@ import { Area } from "../contents/module/Area.jsx";
 import { MoveAgency } from "./module/MoveAgency.jsx";
 import { universalCon } from "./module/universalContext.jsx";
 import { NoticeModal } from "./module/NoticeModal.jsx";
+import { CookieGame } from "./module/CookieGame.jsx";
 
 export function Main() {
     useEffect(() => {
@@ -173,9 +174,6 @@ export function Main() {
         makeHashTag(); // makeHashTag 함수를 호출하여 초기 설정
     }, []);
 
-    
-    // const modalSts = useRef(true);
-
 
     // 마우스 오버시 메인이미지 변경하기
     const [isMouseOver, setIsMouseOver] = useState(false);
@@ -189,76 +187,139 @@ export function Main() {
     };
 
     const mainImgStyle = {
-        backgroundImage:  isMouseOver
-        ? `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(rgba(0, 18, 70, .3), rgba(0, 18, 70, .3)), url(${process.env.PUBLIC_URL}/images/main2.jpg)`
-        : `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(rgba(0, 18, 70, .5), rgba(0, 18, 70, .5)), url(${process.env.PUBLIC_URL}/images/main.webp)`,
+        backgroundImage: isMouseOver
+            ? `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(rgba(0, 18, 70, .3), rgba(0, 18, 70, .3)), url(${process.env.PUBLIC_URL}/images/main2.jpg)`
+            : `linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(rgba(0, 18, 70, .5), rgba(0, 18, 70, .5)), url(${process.env.PUBLIC_URL}/images/main.webp)`,
     };
 
     // 이벤트 마우스 오버시 사진 체인지
     const [mainEvent, setMainEvent] = useState(true);
 
-    // const eventMoveFn = (v, i) => {
-    //     setMainEvent(process.env.PUBLIC_URL + `/images/event/${v.img}`)
-    // };
 
-    // const eventOutfn = (v, i) => {
-    //     setMainEvent(process.env.PUBLIC_URL + `/images/event/${v.img2}`)
-    // }
+    // 모달창
+    const [isModalOpen, setModalOpen] = useState(true);
 
+    useLayoutEffect(() => {
+        const modalWrap = document.querySelector(".notice-modal-wrap");
+        const closeButton = document.querySelector(
+            ".modal-btn-bx button:last-child"
+        );
 
+        const handleModalClose = () => {
+            modalWrap.style.display = "none";
+            // console.log("hi");
+        };
+
+        if (localStorage.getItem("lastClosedTime")) {
+            let lastClosedTime = parseInt(
+                localStorage.getItem("lastClosedTime"),
+                10
+            );
+            const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
+
+            // console.log(lastClosedTime, ">", twentyFourHoursAgo);
+
+            if (lastClosedTime > twentyFourHoursAgo) {
+                setModalOpen(true);
+            } else {
+                setModalOpen(false);
+            }
+        }
+
+        if (closeButton) {
+            closeButton.addEventListener("click", () => {
+                handleModalClose();
+                const currentTime = new Date().getTime();
+                localStorage.setItem("lastClosedTime", currentTime.toString());
+            });
+            return () => {
+                closeButton.removeEventListener("click", handleModalClose);
+            };
+        }
+
+        console.log(333);
+    });
+
+    useEffect(() => {
+
+        const closeBtnFn = () => {
+            document.querySelector('.notice-modal-wrap').classList.add('close');
+        };
+
+        const closeBtn = document.querySelector('.closeBtn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeBtnFn);
+        }
+        return (() => {
+            closeBtn.removeEventListener('click', closeBtnFn)
+        })
+    })
 
     return (
         <>
             <div>
                 {/* 모달창 */}
-                <NoticeModal />
-                {/* <div className="notice-modal-wrap">
+                {/* <NoticeModal /> */}
+                <div className={`notice-modal-wrap ${isModalOpen ? "" : "close"}`}>
                     <div className="notice-modal">
-                        <div className="modal-btn-bx">
-                            <button>X</button>
-                        </div>
                         <div>
                             <h3>
-                                ※ 본 웹사이트는 유니버설 스튜디오의 공식 웹사이트가 아니며, 상업적인 목적이 아닌 개인적인 포트폴리오 제작을 위해 만들어졌습니다. 사용된 모든 콘텐츠는 원본 창작자의 권리를 존중하며 출처를 명시하여 사용하였습니다.
-                            </h3><br />
-                            <h4> 유니버설 스튜디오 재팬의 공식 웹 사이트 주소<br /><a href="https://www.usj.co.jp/web/ko/kr" target="_blank">https://www.usj.co.jp/web/ko/kr</a></h4><br />
+                                ※ 본 웹사이트는 유니버설 스튜디오의 공식 웹사이트가 아니며, 상업적인
+                                목적이 아닌 개인적인 포트폴리오 제작을 위해 만들어졌습니다. 사용된
+                                모든 콘텐츠는 원본 창작자의 권리를 존중하며 출처를 명시하여
+                                사용하였습니다.
+                            </h3>
+                            <br />
+                            <h4>
+                                {" "}
+                                유니버설 스튜디오 재팬의 공식 웹 사이트 주소
+                                <br />
+                                <a href="https://www.usj.co.jp/web/ko/kr" target="_blank">
+                                    https://www.usj.co.jp/web/ko/kr
+                                </a>
+                            </h4>
+                            <br />
                             <h4>저작권과 상표</h4>
-                            <span>WIZARDING WORLD and all related trademarks, characters, names, and indicia are © & ™ Warner Bros. Entertainment Inc. Publishing Rights © JKR. (s23)
-                                Minions and all related elements and indicia TM & © 2023 Universal Studios. All rights reserved.
-                                © Nintend
-                                BEETLEJUICE and all related characters and elements © & ™ Warner Bros. Entertainment Inc. (s23)
-                                TM & © 2023 Sesame Workshop
-                                © 2023 Peanuts Worldwide LLC
-                                © 2023 SANRIO CO., LTD.　APPROVAL NO.EJ6031502
-                                Shrek © 2023 DreamWorks Animation LLC. All Rights Reserved.
-                                © 2023 MARVEL
-                                © Walter Lantz Productions LLC
-                                TM & © Universal Studios & Amblin Entertainment
-                                TM & © Universal Studios.
-                                © 2023 UNIVERSAL STUDIOS
-                                © TOMY　　「トランスフォーマー」、「TRANSFORMERS」 は株式会社タカラトミーの登録商標です。
-                                TRANSFORMERS and all related characters are trademarks of Hasbro and are used with permission. © 2023  Hasbro. All Rights Reserved. Licensed by Hasbro.
-                                Curious George ®, created by Margret and H.A. Rey, is copyrighted and trademarked by HarperCollins Publishing Company and used under license. Licensed by Universal Studios Licensing, Inc. All rights reserved.
-                                ©2023 Pokémon. ©1995-2023 Nintendo/Creatures Inc. /GAME FREAK inc.
-                                ©KADOKAWA
-                                ©KoyoharuGotoge/ SHUEISHA, Aniplex, ufotable
-                                © SISYU
-                                Detective Conan by Gosho Aoyama (published in Shogakukan’s Weekly Shonen Sunday magazine)
-                                © 2024 GOSHO AOYAMA/DETECTIVE CONAN COMMITTEE
-                                © SCRAP All Rights Reserved.
-                                © K. Horikoshi / Shueisha, My Hero Academia Project
-                                ©CAPCOM CO., LTD. ALL RIGHTS RESERVED.
-                                ©Gosho Aoyama/1996,2024 Shogakukan,YTV,TMS
-                                TM & © Universal Studios. All rights reserved.</span>
+                            <span>
+                                WIZARDING WORLD and all related trademarks, characters, names, and
+                                indicia are © & ™ Warner Bros. Entertainment Inc. Publishing Rights
+                                © JKR. (s23) Minions and all related elements and indicia TM & ©
+                                2023 Universal Studios. All rights reserved. © Nintend BEETLEJUICE
+                                and all related characters and elements © & ™ Warner Bros.
+                                Entertainment Inc. (s23) TM & © 2023 Sesame Workshop © 2023 Peanuts
+                                Worldwide LLC © 2023 SANRIO CO., LTD.　APPROVAL NO.EJ6031502 Shrek ©
+                                2023 DreamWorks Animation LLC. All Rights Reserved. © 2023 MARVEL ©
+                                Walter Lantz Productions LLC TM & © Universal Studios & Amblin
+                                Entertainment TM & © Universal Studios. © 2023 UNIVERSAL STUDIOS ©
+                                TOMY　　「トランスフォーマー」、「TRANSFORMERS」
+                                は株式会社タカラトミーの登録商標です。 TRANSFORMERS and all related
+                                characters are trademarks of Hasbro and are used with permission. ©
+                                2023 Hasbro. All Rights Reserved. Licensed by Hasbro. Curious George
+                                ®, created by Margret and H.A. Rey, is copyrighted and trademarked
+                                by HarperCollins Publishing Company and used under license. Licensed
+                                by Universal Studios Licensing, Inc. All rights reserved. ©2023
+                                Pokémon. ©1995-2023 Nintendo/Creatures Inc. /GAME FREAK inc.
+                                ©KADOKAWA ©KoyoharuGotoge/ SHUEISHA, Aniplex, ufotable © SISYU
+                                Detective Conan by Gosho Aoyama (published in Shogakukan’s Weekly
+                                Shonen Sunday magazine) © 2024 GOSHO AOYAMA/DETECTIVE CONAN
+                                COMMITTEE © SCRAP All Rights Reserved. © K. Horikoshi / Shueisha, My
+                                Hero Academia Project ©CAPCOM CO., LTD. ALL RIGHTS RESERVED. ©Gosho
+                                Aoyama/1996,2024 Shogakukan,YTV,TMS TM & © Universal Studios. All
+                                rights reserved.
+                            </span>
+                        </div>
+                        <div className="modal-btn-bx">
+                            <button className="closeBtn">X</button>
+                            <button>하루동안 닫기</button>
                         </div>
                     </div>
-                </div> */}
+                </div>
                 <div className="header" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                     <div className="header-img">
                         <div className="header-img-wrap">
                             {/* Main Image */}
                             <div className="header-main-img-wrap" >
-                                <div  className="header-main-img" style={mainImgStyle}></div>
+                                <div className="header-main-img" style={mainImgStyle}></div>
                             </div>
                             {/* Main Content */}
                             <WaveText />
@@ -449,6 +510,7 @@ export function Main() {
                     <Area />
                 </div>
             </div>
+            <CookieGame />
             {/* 아이 사진 */}
             <div className="main-footer-character">
                 <div className="character-star">
@@ -466,16 +528,16 @@ export function Main() {
                 <div className="main-upcomingEv" >
                     {
                         eventData.map((v, i) =>
-                            <div className="main-upcomingEv-bx" key={i} 
-                            onMouseOver={()=>setMainEvent(i)} 
-                            onMouseOut={()=>setMainEvent(true)}>
+                            <div className="main-upcomingEv-bx" key={i}
+                                onMouseOver={() => setMainEvent(i)}
+                                onMouseOut={() => setMainEvent(true)}>
                                 <div className="upcomingEv-img-bx">
                                     {
-                                        mainEvent===i? 
-                                        <img src={process.env.PUBLIC_URL + `/images/event/${v.img}`} alt="이벤트사진" /> :
-                                        <img src={process.env.PUBLIC_URL + `/images/event/${v.img2}`} alt="이벤트사진" /> 
+                                        mainEvent === i ?
+                                            <img src={process.env.PUBLIC_URL + `/images/event/${v.img}`} alt="이벤트사진" /> :
+                                            <img src={process.env.PUBLIC_URL + `/images/event/${v.img2}`} alt="이벤트사진" />
                                     }
-                                    
+
                                 </div>
                                 <div className="main-upcomingEv-cont">
                                     <div><a href="#" onClick={(e) => e.preventDefault()}><span data-hover={v.name}>{v.name}</span></a></div>
