@@ -12,7 +12,7 @@ import { Logo } from "../contents/module/Logo";
 
 // 폰트어썸
 // 폰트어썸 불러오기
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // 컨텍스트 API
@@ -114,62 +114,44 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         }
     }, []);
 
-    // useEffect(() => {
-    //     // 항상 클릭 이벤트 활성화
-    //     const clickFn = () => {
-    //         window.scrollTo(0, 0);
-    //     };  
+    useEffect(()=>{
+        const topMark = document.querySelector('.top-mark');
+        const clickFn = () => {
+            window.scroll(0, 0);
+        };
+        topMark.addEventListener('click', clickFn);
 
-    //     const scrollToTop = () => {
-            
-    //     };
+        return()=>topMark.removeEventListener('click', clickFn);
+    }, []);
 
-    //     const topMark = document.querySelector('.top-mark');
-
-    //     if(topMark){
-    //         const scrollTop = window.scrollY || window.pageYOffset;
-    //         if (scrollTop > 3500) {
-    //             topMark.style.display = 'block';
-    //             window.addEventListener('scroll', scrollToTop);
-    //             window.addEventListener('click', clickFn);
-    //         } else {
-    //             topMark.style.display = 'none';
-    //             window.addEventListener('scroll', scrollToTop);
-    //             window.removeEventListener('click', clickFn);
-    //         }
-    //     }
-        
-    //     // window.addEventListener('scroll', scrollToTop);
-        
-    //     return () => {
-    //         window.removeEventListener('scroll', scrollToTop);
-    //         // window.removeEventListener('click', clickFn);
-    //     }
-    // }, []);
     useEffect(() => {
         const topMark = document.querySelector('.top-mark');
-    
-        const handleResize = () => {
-            const windowHeight = window.innerHeight;
-            
-            if (windowHeight > 3500) {
+
+        // const clickFn = () => {
+        //     window.scroll(0, 0);
+        // };
+
+        const handleScroll = () => {
+            const winDirec = window.scrollY || window.pageYOffset;
+            if (winDirec > 3500) {
                 topMark.style.display = 'block';
             } else {
                 topMark.style.display = 'none';
             }
         };
-    
-        // 초기에 한번 실행
-        handleResize();
-    
-        // 윈도우 크기가 변경될 때마다 실행
-        window.addEventListener('resize', handleResize);
-    
+
+        window.addEventListener('scroll', handleScroll);
+        // topMark.addEventListener('click', clickFn);
+
         return () => {
-            // 이벤트 리스너 제거
-            window.removeEventListener('resize', handleResize);
-        };
+            window.removeEventListener('scroll', handleScroll);
+            // topMark.removeEventListener('click', clickFn);
+        }
     }, []);
+
+    
+
+    
     
     
 
@@ -266,7 +248,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                                 {v.sub ? (
                                     <a className="smenu_toggle" href="#" onClick={() => toggleSubMenu(i)}>
                                         {v.txt}
-                                        <span className="arrow-icon">{subMenuStates[i] ? '▲' : '▼'}</span>
+                                        <span className="arrow-icon">{subMenuStates[i] ? '-' : '+'}</span>
                                     </a>
                                 ) : (
                                     <Link to={v.link}>{v.txt}</Link>
@@ -310,7 +292,10 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                 </nav>
             </div>
             <div className="top-mark">
-                <span>TOP</span>
+                    <h3>
+                        <FontAwesomeIcon icon={faCaretUp} /><br/>
+                        TOP
+                    </h3>
             </div>
         </>
     );

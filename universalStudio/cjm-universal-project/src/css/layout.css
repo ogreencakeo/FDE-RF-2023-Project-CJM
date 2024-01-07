@@ -276,12 +276,9 @@ ol.bmenu {
     text-align: start;
 }
 
-.gnb2 li:nth-child(3) .smenu2 a::before,
-.gnb2 li:nth-child(4) .smenu2 a::before {
-    content: '>';
-    display: inline-block;
-    /* margin-right: 5px; */
-
+.arrow-icon{
+    margin: 0 5px;
+    font-size: 1.2rem;
 }
 
 .gnb2 .searchingGnb {
@@ -343,29 +340,6 @@ ol.bmenu {
     display: block;
 }
 
-/* .gnb2>ul>li:nth-child(3)>a::after,
-.gnb2>ul>li:nth-child(4)>a::after{
-    content: '▼';
-    display: inline-block;
-    font-size: 12px;
-    text-indent: 5px;
-    transform: translateY(-3px);
-}
-.gnb2>ul>li:nth-child(3)>a::after.on,
-.gnb2>ul>li:nth-child(4)>a::after.on{
-    transform: rotate(180deg);
-} */
-.arrow-icon{
-    display: inline-block;
-    font-size: 15px;
-    text-indent: 5px;
-    /* transform: translateY(-35px); */
-    transform: rotate(0deg);
-}
-.arrow-icon.on{
-    transform: rotate(180deg);
-    display: inline-block;
-}
 
 .top-mark{
     position: fixed;
@@ -377,17 +351,19 @@ ol.bmenu {
     /* background-color: #007aff; */
     border-radius: 50%;
     border: 2px solid #000;
-    background-color: rgba(237, 224, 224, 0.575);
+    background-color: #007aff;
+    color: #fff;
     cursor: pointer;
     display: none;
 }
-.top-mark span{
+.top-mark>h3{
+    text-align: center;
     position: absolute;
-    display: inline-block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 @media screen and (max-width:1320px) {
     body {

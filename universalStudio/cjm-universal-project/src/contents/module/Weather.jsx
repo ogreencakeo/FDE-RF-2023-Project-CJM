@@ -9,7 +9,7 @@ class Weather extends Component {
     }
 
     componentDidMount() {
-        const cityName = 'Tokyo';
+        const cityName = 'Osaka';
         const apiKey = 'ba08801b982da401f3647f4759a9effa';
         const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
 

@@ -29,21 +29,21 @@ export default function App() {
     window.scrollTo(0, 0);
   });
 
-  // useEffect(() => {
-  //   // 비동기 작업이 끝나면 로딩 상태 변경
-  //   const fetchData = async () => {
-  //     await new Promise(resolve => setTimeout(resolve, 4700));
-  //     setLoading(false);
-  //   };
+  useEffect(() => {
+    // 비동기 작업이 끝나면 로딩 상태 변경
+    const fetchData = async () => {
+      await new Promise(resolve => setTimeout(resolve, 4700));
+      setLoading(false);
+    };
 
-  //   fetchData();
+    fetchData();
 
-  // }, []);
+  }, []);
 
-  // if (loading) {
-  //   // 로딩 중일 때 Loading 컴포넌트 렌더링
-  //   return <Loading />;
-  // }
+  if (loading) {
+    // 로딩 중일 때 Loading 컴포넌트 렌더링
+    return <Loading />;
+  }
 
 
   return (

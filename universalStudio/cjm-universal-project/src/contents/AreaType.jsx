@@ -44,25 +44,11 @@ export function AreaType() {
         });
     };
 
-    // 페이징
-    const pgBlock = 9;
-    const [pgNum, setPgNum] = useState(1);
-
-    const cntData = attractionData.length;
 
     const makeList = () => {
-        // const tempData = [];
-
-        // let initNum = (pgNum - 1) * pgBlock;
-        // let limitNum = pgNum * pgBlock;
 
         const filterData = attractionData.filter((v) => selectedCat.includes(v.areatype));
         
-        // for (let i = initNum; i < limitNum; i++) {
-        //     if (i >= cntData) break;
-        //     tempData.push(filterData[i]);
-        //     console.log('tempData :', tempData);
-        // }
         return filterData.map((v, i) => (
             <div className="area-type-bx" key={i}>
                 <Link
@@ -93,35 +79,6 @@ export function AreaType() {
         ));
     };
 
-    const pagingLink = () => {
-        const blockCnt = Math.floor(cntData / pgBlock);
-        const blockPad = cntData % pgBlock;
-        const limit = blockCnt + (blockPad === 0 ? 0 : 1);
-        let pgCode = [];
-
-        for (let i = 0; i < limit; i++) {
-            pgCode[i] = (
-                <Fragment key={i}>
-                    {pgNum - 1 === i ? (
-                        <b>{i + 1}</b>
-                    ) : (
-                        <a href="#" onClick={chgList}>
-                            {i + 1}
-                        </a>
-                    )}
-
-                    {i < limit - 1 ? " | " : ""}
-                </Fragment>
-            );
-        }
-        return pgCode;
-    };
-
-    const chgList = (e) => {
-        e.preventDefault();
-        let currNum = e.target.innerText;
-        setPgNum(currNum);
-    }
     return (
         <>
             <GoodsSwiper cats="area" />
@@ -197,7 +154,6 @@ export function AreaType() {
                 </nav>
             </div>
             <div className="area-type-wrap">{makeList()}</div>
-            {/* <div style={{width:'100px', height:'50px'}}>{pagingLink()}</div> */}
             <UniverSalText />
         </>
     );
