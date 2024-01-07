@@ -43,7 +43,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         }
         // 페이지 이동 후 스크롤을 최상단으로 이동
         // window.scrollTo({ top: 0, behavior: 'smooth' });
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
     };
     // showSerach
     const showSerach = (e) => {
@@ -114,26 +114,65 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         }
     }, []);
 
-    // useEffect 내에서 스크롤 이동 로직 추가
+    // useEffect(() => {
+    //     // 항상 클릭 이벤트 활성화
+    //     const clickFn = () => {
+    //         window.scrollTo(0, 0);
+    //     };  
+
+    //     const scrollToTop = () => {
+            
+    //     };
+
+    //     const topMark = document.querySelector('.top-mark');
+
+    //     if(topMark){
+    //         const scrollTop = window.scrollY || window.pageYOffset;
+    //         if (scrollTop > 3500) {
+    //             topMark.style.display = 'block';
+    //             window.addEventListener('scroll', scrollToTop);
+    //             window.addEventListener('click', clickFn);
+    //         } else {
+    //             topMark.style.display = 'none';
+    //             window.addEventListener('scroll', scrollToTop);
+    //             window.removeEventListener('click', clickFn);
+    //         }
+    //     }
+        
+    //     // window.addEventListener('scroll', scrollToTop);
+        
+    //     return () => {
+    //         window.removeEventListener('scroll', scrollToTop);
+    //         // window.removeEventListener('click', clickFn);
+    //     }
+    // }, []);
     useEffect(() => {
-        const handleLinkClick = () => {
-            // 링크나 smenu를 클릭할 때 스크롤을 최상단으로 이동
-            window.scroll({ top: 0, behavior: 'smooth' });
+        const topMark = document.querySelector('.top-mark');
+    
+        const handleResize = () => {
+            const windowHeight = window.innerHeight;
+            
+            if (windowHeight > 3500) {
+                topMark.style.display = 'block';
+            } else {
+                topMark.style.display = 'none';
+            }
         };
-
-        // 모든 링크에 클릭 이벤트 리스너 추가
-        const links = document.querySelectorAll(".gnb a, .smenu_toggle");
-        links.forEach((link) => {
-            link.addEventListener("click", handleLinkClick);
-        });
-
-        // 컴포넌트가 언마운트될 때 클릭 이벤트 리스너 제거
+    
+        // 초기에 한번 실행
+        handleResize();
+    
+        // 윈도우 크기가 변경될 때마다 실행
+        window.addEventListener('resize', handleResize);
+    
         return () => {
-            links.forEach((link) => {
-                link.removeEventListener("click", handleLinkClick);
-            });
+            // 이벤트 리스너 제거
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
+    
+    
+
     return (
         <>
             <header className="top-area">
@@ -269,6 +308,9 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                         </div>
                     </ul>
                 </nav>
+            </div>
+            <div className="top-mark">
+                <span>TOP</span>
             </div>
         </>
     );

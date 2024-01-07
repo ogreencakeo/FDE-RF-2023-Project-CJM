@@ -7,6 +7,9 @@ import { UniverSalText } from "./module/UniverSalText.jsx";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 
 export function Hotel() {
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    }, []);
     
     const [hotelBtn, setHotelBtn] = useState('official_hotel');
     const [selData, SetSelData] = useState(hotelData[hotelBtn]);

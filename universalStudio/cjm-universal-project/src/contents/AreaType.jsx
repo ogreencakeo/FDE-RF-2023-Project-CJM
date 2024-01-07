@@ -20,6 +20,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export function AreaType() {
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    }, []);
     
     const loc = useLocation();
     let keyword;

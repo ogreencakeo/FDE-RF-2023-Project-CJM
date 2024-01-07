@@ -1,14 +1,11 @@
 .loadpage-page>div{
-    /* display: flex; */
-
     height: 50vh;
     width: 80vw;
     text-align: center;
     top: 20%;
     left: 50%;
     position: fixed;
-    transform: translateX(-50%)
-    /* border: 1px solid red; */
+    transform: translateX(-50%);
 }
 
 .loading-text {
@@ -58,6 +55,7 @@
     border-radius: 5px;
     margin-top: 20px;
     overflow: hidden;
+    margin-bottom: 15px;
 }
   
 .progress {

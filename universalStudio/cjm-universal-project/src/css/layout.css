@@ -367,6 +367,28 @@ ol.bmenu {
     display: inline-block;
 }
 
+.top-mark{
+    position: fixed;
+    bottom: 50px;
+    right: 1%;
+    z-index: 999;
+    width: 75px;
+    height: 75px;
+    /* background-color: #007aff; */
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: rgba(237, 224, 224, 0.575);
+    cursor: pointer;
+    display: none;
+}
+.top-mark span{
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width:1320px) {
     body {
         padding-top: 65px;

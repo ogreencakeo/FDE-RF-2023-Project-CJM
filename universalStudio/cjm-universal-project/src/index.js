@@ -32,7 +32,7 @@ export default function App() {
   // useEffect(() => {
   //   // 비동기 작업이 끝나면 로딩 상태 변경
   //   const fetchData = async () => {
-  //     await new Promise(resolve => setTimeout(resolve, 3500));
+  //     await new Promise(resolve => setTimeout(resolve, 4700));
   //     setLoading(false);
   //   };
 

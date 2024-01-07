@@ -19,6 +19,7 @@ import { useEffect } from "react";
 
 
 export function SeasonalMenu() {
+    
 
     useEffect(()=>{
         window.scrollTo(0,0)

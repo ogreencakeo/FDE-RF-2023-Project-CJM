@@ -48,6 +48,9 @@ import { NoticeModal } from "./module/NoticeModal.jsx";
 import { CookieGame } from "./module/CookieGame.jsx";
 
 export function Main() {
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    }, []);
     useEffect(() => {
         const mainImgStage = document.querySelector(".header-main-img-wrap");
         setTimeout(() => {
@@ -510,7 +513,7 @@ export function Main() {
                     <Area />
                 </div>
             </div>
-            <CookieGame />
+            {/* <CookieGame /> */}
             {/* 아이 사진 */}
             <div className="main-footer-character">
                 <div className="character-star">

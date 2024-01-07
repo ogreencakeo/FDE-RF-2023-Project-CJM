@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import "../css/login.css";
 import { Seaching2 } from "./module/Seaching2";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { initData } from "../Function/mem_fn";
 import { universalCon } from "./module/universalContext";
 export function Login() {
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    }, []);
 
     // 컨텍스트 API 사용
     const myCon = useContext(universalCon);

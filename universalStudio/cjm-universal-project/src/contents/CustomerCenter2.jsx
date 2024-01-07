@@ -25,6 +25,10 @@ if (localStorage.getItem("universal-bdata")) orgData = JSON.parse(localStorage.g
 else orgData = baseData;
 
 export function CustomerCenter2() {
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    }, []);
+
     if (!localStorage.getItem("universal-bdata")) {
         localStorage.setItem("universal-bdata", JSON.stringify(orgData));
     }

@@ -6,24 +6,56 @@ export function Loading() {
 
 
     const [progress, setProgress] = useState(0);
+    const [txt, setTxt] = useState(0);
 
     
     useEffect(() => {
         const progressBarInterval = setInterval(() => {
+            // setTxt((idx)=>{
+            //     idx++;
+            //     if(idx>100){
+            //         idx = 100;
+            //     }
+            //     return idx;
+            // })
             setProgress((prevProgress) => {
-                const newProgress = (prevProgress + 1) % 101;
+                // const newProgress = (prevProgress + 1) % 101;
 
-                // 로딩이 완료되면 interval 정리
-                if (newProgress === 100) {
-                    clearInterval(progressBarInterval);
+                prevProgress++;
+                if(prevProgress>100){
+                    prevProgress = 100;
                 }
 
-                return newProgress;
+
+                // 로딩이 완료되면 interval 정리
+                // if (prevProgress === 100) {
+                //     clearInterval(progressBarInterval);
+                // }
+
+                return prevProgress;
             });
-        }, 3000 / 100); 
+            
+        }, 4200 / 100); 
+        
 
         return () => clearInterval(progressBarInterval);
     }, []);
+    // useEffect(()=>{
+    //     const timeInterval = setInterval(()=>{
+    //         setTxt((idx)=>{
+    //             idx++;
+    //             if(idx>100){
+    //                 idx = 100;
+    //             }
+    //             return idx;
+    //         })
+    
+    //         return() => clearInterval(timeInterval);
+    //     }, 3400/100);
+    // }, []);
+
+
+
 
     const makeCode = () => {
         return loadingTxt.split('').map((v, i) => (
@@ -47,6 +79,12 @@ export function Loading() {
                 <div className="progress-bar">
                     <div className="progress" style={{ width: `${progress}%` }}></div>
                 </div>
+                {/* 퍼센티지 */}
+                <h3 style={
+                    {
+                        color: progress >80 ? 'red' : 'black',
+                    }
+                }>{progress} %</h3>
             </div>
         </div>
     );
