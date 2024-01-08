@@ -21,7 +21,7 @@ export function Loading() {
                 return prevProgress;
             });
             
-        }, 4200 / 100); 
+        }, 3200 / 100); 
         
 
         return () => clearInterval(progressBarInterval);
