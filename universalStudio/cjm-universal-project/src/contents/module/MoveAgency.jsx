@@ -15,12 +15,6 @@ export function MoveAgency() {
 
     
     const makeScroll = () => {
-        // return agencyData.map((v, i) =>
-        //     <li key={i}>
-        //         <img src={process.env.PUBLIC_URL+`${v}`} alt="agency" />
-        //     </li>
-        // )
-
 
         const temp = [];
             for(let i=0; i<8; i++){

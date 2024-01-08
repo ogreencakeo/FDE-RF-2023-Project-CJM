@@ -6,31 +6,17 @@ export function Loading() {
 
 
     const [progress, setProgress] = useState(0);
-    const [txt, setTxt] = useState(0);
 
     
     useEffect(() => {
         const progressBarInterval = setInterval(() => {
-            // setTxt((idx)=>{
-            //     idx++;
-            //     if(idx>100){
-            //         idx = 100;
-            //     }
-            //     return idx;
-            // })
             setProgress((prevProgress) => {
-                // const newProgress = (prevProgress + 1) % 101;
 
                 prevProgress++;
                 if(prevProgress>100){
                     prevProgress = 100;
                 }
 
-
-                // 로딩이 완료되면 interval 정리
-                // if (prevProgress === 100) {
-                //     clearInterval(progressBarInterval);
-                // }
 
                 return prevProgress;
             });
@@ -40,20 +26,6 @@ export function Loading() {
 
         return () => clearInterval(progressBarInterval);
     }, []);
-    // useEffect(()=>{
-    //     const timeInterval = setInterval(()=>{
-    //         setTxt((idx)=>{
-    //             idx++;
-    //             if(idx>100){
-    //                 idx = 100;
-    //             }
-    //             return idx;
-    //         })
-    
-    //         return() => clearInterval(timeInterval);
-    //     }, 3400/100);
-    // }, []);
-
 
 
 

@@ -74,7 +74,7 @@
 /* 게시판 */
 .dtblview{
     max-width: 600px;
-    margin: 0 auto;
+    margin: 150px auto 0;
 }
 
 .dtblview>div{
@@ -115,14 +115,13 @@
 }
 .btngrp{
     text-align: center;
-    margin-bottom: 50px;
 }
 .btngrp button{
     padding: 10px 15px;
     background-color: #3144cc;
     border: 0;
     border-radius: 5px;
-    margin: 0 3px;
+    margin: 0 3px 50px;
     cursor: pointer;
 }
 

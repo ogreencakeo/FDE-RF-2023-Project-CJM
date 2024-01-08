@@ -203,6 +203,7 @@ export function Main() {
     const [isModalOpen, setModalOpen] = useState(true);
 
     useLayoutEffect(() => {
+        console.log("useEffect executed", isModalOpen);
         const modalWrap = document.querySelector(".notice-modal-wrap");
         const closeButton = document.querySelector(
             ".modal-btn-bx button:last-child"
@@ -218,15 +219,23 @@ export function Main() {
                 localStorage.getItem("lastClosedTime"),
                 10
             );
-            const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
+            // const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
+            // const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
+            // const twentyFourHoursAgo = new Date().getTime() + 1 * 60 * 1000;
+            const twentyFourHoursAgo = new Date().getTime() - 1 * 60 * 3 * 1000;
 
-            // console.log(lastClosedTime, ">", twentyFourHoursAgo);
+            console.log(lastClosedTime, twentyFourHoursAgo);
 
-            if (lastClosedTime > twentyFourHoursAgo) {
+            if (lastClosedTime < twentyFourHoursAgo) {
                 setModalOpen(true);
             } else {
                 setModalOpen(false);
             }
+            // if (lastClosedTime > twentyFourHoursAgo) {
+            //     setModalOpen(true);
+            // } else {
+            //     setModalOpen(false);
+            // }
         }
 
         if (closeButton) {
@@ -241,7 +250,7 @@ export function Main() {
         }
 
         console.log(333);
-    });
+    }, [isModalOpen]);
 
     useEffect(() => {
 

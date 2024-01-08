@@ -1,7 +1,7 @@
 /* 전체 회원가입 페이지 랩핑 박스 */
 .join-the-membership-wrap {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 100px auto 60px;
     padding: 50px;
 
 }
