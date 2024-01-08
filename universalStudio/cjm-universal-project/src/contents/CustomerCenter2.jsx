@@ -622,8 +622,8 @@ export function CustomerCenter2() {
             )}
             {/* 읽기 R모드 */}
             {bdMode === "R" && (
-                <div className="btblview readone">
-                    <h1>OPINION : Read </h1>
+                <div className="dtblview readone">
+                    <h1>Read </h1>
                     <div>
                         <ul>
                             <li>닉네임</li>
@@ -653,8 +653,8 @@ export function CustomerCenter2() {
                 </div>
             )}
             {bdMode === "U" && (
-                <div className="btblview updateone">
-                    <h1>수정하기</h1>
+                <div className="dtblview updateone">
+                    <h1>Modify</h1>
                     <div>
                         <ul>
                             <li>닉네임</li>
