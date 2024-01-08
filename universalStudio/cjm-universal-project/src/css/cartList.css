@@ -4,7 +4,7 @@
 #cartlist {
     position: fixed;
     top: 0px;
-    right: -100%;
+    right: -101.5%;
     width: 90vw;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.93);
@@ -201,5 +201,32 @@
     }
     .cfn h2 {
         font-size: 1.2rem;
+    }
+}
+@media screen and (max-width : 460px) {
+    #cartlist{
+        /* display: none; */
+    }
+    #mycart.on h1{
+        font-size: 1.8rem;
+    }
+    #mycart .cntBx{
+        font-size: 1rem;
+    }
+    #mycart.on{
+        left: calc(100% - 60px);
+    }
+}
+
+@media screen and (max-width : 400px) {
+
+    #mycart.on h1{
+        font-size: 1.5rem;
+    }
+    #mycart .cntBx{
+        font-size: 0.85rem;
+    }
+    #mycart.on {
+        left: calc(100% - 50px);
     }
 }

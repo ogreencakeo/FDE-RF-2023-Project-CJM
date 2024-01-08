@@ -94,7 +94,7 @@ export const CartList = memo(({ selData, tprice, flag }) => {
 
     const hideList = (e) => {
         e.preventDefault();
-        $("#cartlist").animate({ right: "-100%" }, 600);
+        $("#cartlist").animate({ right: "-101.5%" }, 600);
     };
 
     const chgNum = (e) => {

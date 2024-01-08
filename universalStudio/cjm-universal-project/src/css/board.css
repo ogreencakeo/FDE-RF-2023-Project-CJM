@@ -48,6 +48,12 @@
 .board-cont-wrap ul li:nth-child(2){
     width: 30%;
 }
+.board-cont-wrap ul li:nth-child(2),
+.board-cont-wrap ul li:nth-child(3){
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .dtbl ul li{
     width: 18%;
@@ -88,6 +94,7 @@
     font-family: 'Jua';
     font-size: 1.5rem;
     /* border: 1px solid red; */
+    
 }
 
 .readone ul li:first-child{
@@ -109,4 +116,46 @@
 }
 .readone input, .readone textarea{
     border: 0;
+}
+
+.btngrp{
+    padding: 10px 15px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width : 920px) {
+    .board-wrap{
+        margin: 50px auto 100px;
+    }
+    .readone {
+        margin: 50px auto;
+    }
+    
+}
+
+
+@media screen and (max-width : 410px) {
+    .dtbl ul li{
+        font-size: 0.7rem;
+    }
+    .dtbl ul li:first-child{
+        text-align: left;
+        text-indent: 10px;
+    }
+    .board-cont-wrap ul li{
+        font-size: 0.7rem;
+        width: 10%;
+    }
+    .board-cont-wrap ul li:nth-child(2){
+        width: 40%;
+    }
+    .board-cont-wrap ul li:nth-child(3),
+    .board-cont-wrap ul li:nth-child(4){
+        width: 20%;
+    }
+}
+@media screen and (max-width : 365px) {
+    #stxt{
+        width: 108px;
+    }
 }

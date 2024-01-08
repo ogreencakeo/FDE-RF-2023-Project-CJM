@@ -545,6 +545,7 @@ a {
 
 .has-tag-div{
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* 열기구 사진 */
@@ -1484,6 +1485,9 @@ a {
     .map-wrapper-model iframe {
         width: 280px;
         height: 250px;
+    }
+    .main-video-cont h1{
+        width: 45%;
     }
 }
 @media screen and (max-width:414px){

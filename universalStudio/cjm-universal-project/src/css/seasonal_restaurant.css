@@ -7,7 +7,7 @@
 
 .seasonal_restaurant_bx {
     /* flex-wrap: wrap; */
-    margin: 30px auto;
+    margin: 0 auto 30px;
 }
 
 .restaurant_total_main_img {
@@ -119,7 +119,7 @@
 
 /* 레스토랑 빌딩 이미지 */
 .restaurant_building_img {
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 /* 레스토랑 1~9 이미지 */
@@ -422,6 +422,21 @@
     }
 }
 
+@media screen and (max-width : 710px) {
+    .restaurant_pickup_info {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width : 650px) {
+    .restaurant_method table tr td:nth-child(2){
+        width: 100px;
+    }
+    .restaurant_method tr td{
+        font-size: 1rem;
+    }
+}
+
 @media screen and (max-width : 600px) {
     body>* {
         overflow-x: hidden;
@@ -442,13 +457,6 @@
 
 }
 
-@media screen and (max-width : 710px) {
-    .restaurant_pickup_info {
-        margin: 0;
-    }
-}
-
-
 @media screen and (max-width : 500px) {
     .restaurant_explanation {
         padding: 20px;
@@ -466,10 +474,6 @@
         font-size: 1.6rem;
     }
 
-    .restaurant_method tr td {
-        padding: 5px;
-        font-size: 1rem;
-    }
 
     .Recommended_menu_information {
         margin: 10px;
@@ -483,16 +487,27 @@
         font-size: 2rem;
         padding: 15px;
     }
-    .swipe_sec_tit{
+
+    .swipe_sec_tit {
         font-size: 1.6rem !important;
     }
-    .swipe_sec_cat{
+
+    .swipe_sec_cat {
         font-size: 1.2rem;
     }
-    .map_bx{
+
+    .map_bx {
         padding: 0 !important;
     }
-    .map_logo{
+
+    .map_logo {
         width: 50px;
+    }
+
+    .restaurant_method table tr td:nth-child(2) {
+        width: 65px;
+    }
+    .restaurant_method tr td {
+        font-size: 0.9rem;
     }
 }

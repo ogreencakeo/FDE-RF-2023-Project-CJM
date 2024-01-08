@@ -137,10 +137,10 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 10;
     background-color: rgba(0, 0, 0, 0.742);
     display: none;
     cursor: pointer;
+    z-index: 999999;
 }
 
 .img-model-box{
@@ -153,7 +153,7 @@
     background-color: #fff;
     padding: 30px 20px 20px;
     border-radius: 20px;
-
+   
 }
 
 

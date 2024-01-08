@@ -408,4 +408,14 @@ ol.bmenu {
     .smenu2>ol>li {
         font-size: 0.95rem !important;
     }
+
+    .top-mark{
+        width: 60px;
+        height: 60px;
+    }
+
+    .top-mark>h3{
+        font-size: 0.95rem;
+    }
+    
 }
