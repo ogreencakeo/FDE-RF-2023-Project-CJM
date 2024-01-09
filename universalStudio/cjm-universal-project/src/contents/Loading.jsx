@@ -42,7 +42,7 @@ export function Loading() {
             <div>
                 <div className='loadpage-img-bx'>
                     {/* 이미지를 상태에 따라 렌더링 */}
-                    <img src={process.env.PUBLIC_URL + '/images/loading/1.png'} alt="Loading" />
+                    <img src={process.env.PUBLIC_URL + '/images/loading/1.png'} />
                 </div>
                 <h1 className="loading-text">
                     {makeCode()}
