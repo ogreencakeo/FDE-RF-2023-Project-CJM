@@ -348,7 +348,6 @@ ol.bmenu {
     z-index: 999;
     width: 75px;
     height: 75px;
-    /* background-color: #007aff; */
     border-radius: 50%;
     border: 2px solid #000;
     background-color: #007aff;
@@ -374,8 +373,6 @@ ol.bmenu {
 @media screen and (max-width:1024px) {
     .logmsg{
         right: 5%;
-        /* top: 50%; */
-        /* transform: translate(0, -50%); */
     }
     
     .top-area {
@@ -418,4 +415,11 @@ ol.bmenu {
         font-size: 0.95rem;
     }
     
+}
+
+@media screen and (max-width:450px) {
+    .logmsg{
+        right: 50%;
+        font-size: 1rem;
+    }
 }
