@@ -184,12 +184,24 @@ export function CustomerCenter2() {
                     ""
                 ) : (
                     <Fragment key={-1}>
+                        <a 
+                            href="#"
+                            style={{ marginRight : '5px'}}
+                            title="맨앞으로"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                goPaging(1, false)
+                            }}>
+                                ≪
+                        </a>
                         <a
                             href="#"
                             onClick={(e) => {
                                 e.preventDefault();
-                                goPaging(-1);
+                                goPaging(-1, true);
                             }}
+                            style={{ marginRight: "5px" }}
+                            title="앞으로"
                         >
                             ◀
                         </a>
@@ -209,10 +221,21 @@ export function CustomerCenter2() {
                             href="#"
                             onClick={(e) => {
                                 e.preventDefault();
-                                goPaging(1);
+                                goPaging(1, true);
                             }}
                         >
                             ▶
+                        </a>
+                        <a
+                            href="#"
+                            style={{ marginLeft: "10px" }}
+                            title="맨뒤으로"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                goPaging(pgLimit, false);
+                            }}
+                        >
+                            ≫
                         </a>
                     </Fragment>
                 )
@@ -221,8 +244,13 @@ export function CustomerCenter2() {
 
         return pgCode;
     };
-    const goPaging = (dir) => {
-        const newPgPgNum = pgPgNum.current + dir;
+    const goPaging = (dir, opt) => {
+        // dir 이동방향 오른쪽 1, 왼쪽 -1
+        let newPgPgNum;
+
+        if(opt) newPgPgNum = pgPgNum.current + dir;
+        else newPgPgNum = dir; 
+
         let newPgNum = (newPgPgNum - 1) * pgPgBlock + 1;
 
         // 페이징의 페이징번호 업데이트
@@ -557,8 +585,8 @@ export function CustomerCenter2() {
                                 setForce(Math.random());
                             }}
                         >
-                            <option value="0">내림차순</option>
-                            <option value="1">오름차순</option>
+                            <option value="0">Z-A</option>
+                            <option value="1">A-Z</option>
                         </select>
                         <input
                             type="text"

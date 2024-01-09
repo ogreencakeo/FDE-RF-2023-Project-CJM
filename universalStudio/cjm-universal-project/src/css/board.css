@@ -14,7 +14,7 @@
 
 }
 #sel{
-    width: 90px;
+    width: 55px;
     font-family: 'Nanum Gothic';
     font-size: 12px;
     margin: 0 5px;
@@ -175,6 +175,6 @@
 }
 @media screen and (max-width : 365px) {
     #stxt{
-        width: 108px;
+        width: 128px;
     }
 }
