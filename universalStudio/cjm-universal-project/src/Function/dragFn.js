@@ -23,10 +23,12 @@ export function dragFn() {
     $(window).resize(() => {
         winW = updataWin();
 
-        firstPoint = winW / 3;
+        // firstPoint = winW / 3;
+        firstPoint = winW/10;
         console.log("업데이트 한계값:", firstPoint);
 
-        lastPoint = target.width() - (winW / 3) * 2;
+        // lastPoint = target.width() - (winW / 3) * 2;
+        lastPoint = target.width() - (winW / 10) * 9;
         console.log("마지막 한계값:", lastPoint);
 
         target.css({
@@ -35,10 +37,12 @@ export function dragFn() {
     });
     if (winW < 500) target.css({ transition: TRS_TIME_MOB });
 
-    let firstPoint = winW / 3;
+    // let firstPoint = winW / 3;
+    let firstPoint = winW / 10;
     console.log("첫번째 한계값:", firstPoint);
 
-    let lastPoint = target.width() - (winW / 3) * 2;
+    // let lastPoint = target.width() - (winW / 3) * 2;
+    let lastPoint = target.width() - (winW / 10) * 9;
     console.log("마지막 한계값:", lastPoint);
 
     $(".pick-up-wrap").on("mousedown mouseup mousemove", () => {

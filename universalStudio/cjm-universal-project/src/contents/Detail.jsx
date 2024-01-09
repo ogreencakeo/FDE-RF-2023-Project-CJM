@@ -5,19 +5,19 @@ import { Map } from "./module/Map";
 
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { Caution } from "./module/Caution";
-import { Fragment, useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faQuoteLeft, faQuoteRight, faParachuteBox, faCrown, faPersonBreastfeeding,
-    faHourglassHalf, faFileLines, faTicketSimple, faPersonArrowUpFromLine, faPeopleGroup
-} from "@fortawesome/free-solid-svg-icons";
+import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import { universalCon } from "./module/universalContext";
 
 export function Detail() {
     useEffect(() => {
-        window.scroll({ top: 0, behavior: 'smooth' });
+        window.scroll({ top: 0, behavior: "smooth" });
     }, []);
+
+    const myCon = useContext(universalCon);
 
     const loc = useLocation();
     const name = loc.state.name;
@@ -39,31 +39,6 @@ export function Detail() {
         return temp;
     };
 
-    
-
-    const attFont = [
-        <FontAwesomeIcon icon={faParachuteBox} />,
-        <FontAwesomeIcon icon={faCrown} />,
-        <FontAwesomeIcon icon={faPersonBreastfeeding} />,
-        <FontAwesomeIcon icon={faHourglassHalf} />,
-        <FontAwesomeIcon icon={faFileLines} />,
-        <FontAwesomeIcon icon={faTicketSimple} />,
-        <FontAwesomeIcon icon={faPersonArrowUpFromLine} />,
-        <FontAwesomeIcon icon={faPeopleGroup} />
-    ];
-
-    const chaSapn = [
-        '어트랙션 특징',
-        '유니버설 VIP 익스피리언스',
-        '보호자 동승 시',
-        '소요 시간',
-        '어트랙션 이용 기준',
-        '익스프레스 패스 사용 가능',
-        '신장 제한',
-        '정원'
-    ];
-   
-
     return (
         <div className="attraction-detail-wrap">
             <div className="attraction-detail-bx">
@@ -81,19 +56,26 @@ export function Detail() {
                     <div className="attraction-logo-img">
                         <img src={process.env.PUBLIC_URL + `${logo}`} alt="로고이미지" />
                     </div>
-                    <h2><FontAwesomeIcon icon={faQuoteLeft} /></h2>
+                    <h2>
+                        <FontAwesomeIcon icon={faQuoteLeft} />
+                    </h2>
                     <p>
                         {/* {desc} */}
                         {desc.indexOf("^") == -1 ? desc : makeCode(desc)}
                     </p>
-                    <h2><FontAwesomeIcon icon={faQuoteRight} /></h2>
+                    <h2>
+                        <FontAwesomeIcon icon={faQuoteRight} />
+                    </h2>
                     <div className="attraction-detail-main-img">
                         <img src={process.env.PUBLIC_URL + `${img}`} alt="어트랙션 사진" />
                     </div>
                     <Map cat="attraction" mapi={mapLocal} shop_location="어트랙션" />
                 </div>
             </div>
-            <Caution caution='attractionCaution' />
+            <Caution caution="attractionCaution" />
+            <div className="goto-attraction">
+                <button onClick={() => myCon.chgPage("/areaType", {})}>어트랙션 페이지로 이동하기</button>
+            </div>
             <ImgMoveSlide imgMove="logo" />
         </div>
     );

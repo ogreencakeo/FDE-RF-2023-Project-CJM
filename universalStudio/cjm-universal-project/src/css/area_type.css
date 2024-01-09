@@ -149,6 +149,9 @@
 .area-type-cont h2{
     font-size: 1.3rem;
     font-family: 'Gugi';
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* 체크박스 */

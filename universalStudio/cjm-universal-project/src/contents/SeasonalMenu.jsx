@@ -17,10 +17,7 @@ import { FoodInfo } from "./SeasonalCont/FoodInfo";
 import { SwiperSec } from "./pages/plugin/SwiperSec";
 import { useEffect } from "react";
 
-
 export function SeasonalMenu() {
-    
-
     useEffect(()=>{
         window.scrollTo(0,0)
     }, []);
@@ -40,7 +37,6 @@ export function SeasonalMenu() {
                 <Route path="restaurant8" element={<Restaurant8 />} />
             </Routes>
             <SwiperSec category='restaurant' />
-            {/* <UniverReInfo category="food" /> */}
             <FoodInfo />
             <Caution caution='restaurantCaution' />
             <ImgMoveSlide imgMove="seasonal" />

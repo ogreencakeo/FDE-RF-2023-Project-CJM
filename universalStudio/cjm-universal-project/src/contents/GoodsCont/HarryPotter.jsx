@@ -3,7 +3,11 @@ import { goods } from "../../data/goods/goodsData";
 import { GoodsSwiper } from "../pages/plugin/Swiper";
 import { GoodsAd } from "./GoodsAd";
 import { Map } from "../module/Map";
+import { useEffect } from "react";
 export function HarryPotter(){
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    }, []);
     return(
         <>
             <GoodsAd ad='harryPotter' bg_color = '#30738a'/>

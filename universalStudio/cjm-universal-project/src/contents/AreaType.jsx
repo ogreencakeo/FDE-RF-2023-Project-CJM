@@ -62,7 +62,7 @@ export function AreaType() {
                         logo: v.logo,
                     }}
                 >
-                    <div className="area-type-img">
+                    <div className="area-type-img" title={v.name}>
                         <img src={process.env.PUBLIC_URL + `${v.img}`} alt={v.name} />
                         <h2>
                             <FontAwesomeIcon icon={faCirclePlus} />

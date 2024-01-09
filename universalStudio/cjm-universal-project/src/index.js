@@ -17,33 +17,32 @@ import { SchPage } from './contents/SchPage.jsx';
 import './css/common.css';
 import { Hotel } from './contents/Hotel.jsx';
 import { Login } from './contents/Login.jsx';
-import { Seaching2 } from './contents/module/Seaching2.jsx';
 import { AreaType } from './contents/AreaType.jsx';
 import { CustomerCenter2 } from './contents/CustomerCenter2.jsx';
 import { Loading } from './contents/Loading.jsx';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
 
-  useEffect(() => {
-    // 비동기 작업이 끝나면 로딩 상태 변경
-    const fetchData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 4000));
-      setLoading(false);
-    };
+  // useEffect(() => {
+  //   // 비동기 작업이 끝나면 로딩 상태 변경
+  //   const fetchData = async () => {
+  //     await new Promise(resolve => setTimeout(resolve, 4000));
+  //     setLoading(false);
+  //   };
 
-    fetchData();
+  //   fetchData();
 
-  }, []);
+  // }, []);
 
-  if (loading) {
-    // 로딩 중일 때 Loading 컴포넌트 렌더링
-    return <Loading />;
-  }
+  // if (loading) {
+  //   // 로딩 중일 때 Loading 컴포넌트 렌더링
+  //   return <Loading />;
+  // }
 
 
   return (
@@ -56,10 +55,8 @@ export default function App() {
           <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
           <Route path='goods/*' element={<Goods />} />
           <Route path='ticket' element={<Ticket />} />
-          {/* <Route path='customerCenter' element={<CustomerCenter />} /> */}
           <Route path='customerCenter' element={<CustomerCenter2 />} />
           <Route path='hotel' element={<Hotel />} />
-          {/* <Route path='area' element={<Seaching2 />} /> */}
           <Route path='schpage' element={<SchPage />} />
           <Route path='detail' element={<Detail />} />
           <Route path='member' element={<Member />} />

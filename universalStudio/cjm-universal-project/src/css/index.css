@@ -1306,10 +1306,10 @@ a {
 
     }
     .character-erath{
-        margin: 20px 0;
+        margin: 28.5px 0 15px;
     }
     .main-video{
-        margin: 90px 0 120px;
+        margin: 85px 0 120px;
     }
 
     .page2{
@@ -1364,6 +1364,31 @@ a {
     }
     .footer-right>img:last-child{
         width: 8vw;
+    }
+    .pick-up-img-box {
+        width: 250px;
+    }
+    .pick1 h2 {
+        font-size: 1.3rem;
+    }
+    .pick2 {
+        font-size: 5.5rem;
+    }
+    .pick2 p {
+        margin-top: 15px;
+        font-size: 1.2rem;
+    }
+    .pick-up-wrap {
+        height: 290px;
+    }
+    .pick-up {
+        min-height: 420px;
+    }   
+    .pick-up-wrap {
+        min-height: 350px;
+    }
+    .character-erath>img{
+        width: 125px;
     }
 
 }

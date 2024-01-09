@@ -44,15 +44,17 @@
     }
     .block{
         margin-bottom: 10px;
+        height: 250px;
     }
     
 }
 
 @media screen and (max-width:500px) {
     .universal-move-logo-span ul li{
-        width: 135px;
-        margin-top: 10px;
+        width: 165px;
+        margin-top: 0px;
     }
+
     .block{
         margin-bottom: 0;
         height: 150px;

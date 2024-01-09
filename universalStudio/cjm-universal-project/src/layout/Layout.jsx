@@ -16,9 +16,6 @@ export function Layout() {
     const [logSts, setLogSts] = useState(localStorage.getItem("universal-minfo"));
     // 로그인 환영 메시지 상태변수
     const [logMsg, setLogMsg] = useState(null);
-    // 모달창 상태변수
-    // const [modalSts, setModalSts] = useState(false);
-    const modalSts = useRef(false);
 
     const logOut = useCallback(() => {
         localStorage.removeItem("universal-minfo");
@@ -53,13 +50,11 @@ export function Layout() {
     // let transVal;
 
     if(localStorage.getItem('universal-cart')){
-        // let transVal = JSON.parse(localStorage.getItem('universal-cart'));
         transVal = JSON.parse(localStorage.getItem('universal-cart'));
         if(transVal.length !== 0) stsVal = 1;
     }
     
     const [transData, setTransData] = useState(transVal); // 로컬스 변환값 변수
-    // const [transData, setTransData] = useState([]); // 로컬스 변환값 변수
     const [csts, setCsts] = useState(stsVal);
 
     useEffect(()=>{
@@ -72,16 +67,12 @@ export function Layout() {
     }, []);
 
     return (
-        // <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg }}>
         <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag, setCsts }}>
-        {/* // <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag }}> */}
-        {/* // <universalCon.Provider value={{ chgPage, logSts, setLogSts, setLogMsg, transData, setTransData, flag }}> */}
             <TopArea chgPageFn={chgPage} logSts={logSts} logMsg={logMsg} logOut={logOut} />
             <MainArea />
             <FooterArea />
             {/* 카트리스트 */}
             {csts && <CartList selData={transData} flag={flag} />}
-            {/* <CartList selData={transData} flag={flag} /> */}
         </universalCon.Provider>
     );
 }

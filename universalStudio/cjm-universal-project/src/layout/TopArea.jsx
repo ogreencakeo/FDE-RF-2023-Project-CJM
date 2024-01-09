@@ -15,8 +15,6 @@ import { Logo } from "../contents/module/Logo";
 import { faSearch, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// 컨텍스트 API
-import { universalCon } from "../contents/module/universalContext";
 
 export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     // enterKey
@@ -41,9 +39,6 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             $(tg).val("").parent().hide();
             goSerach(tgTxt);
         }
-        // 페이지 이동 후 스크롤을 최상단으로 이동
-        // window.scrollTo({ top: 0, behavior: 'smooth' });
-        // window.scrollTo(0, 0);
     };
     // showSerach
     const showSerach = (e) => {
@@ -52,10 +47,6 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
         $("#schinGnb").focus();
         let txt = $("#schinGnb").val().trim();
         console.log(txt);
-        // if (txt !== "") {
-        //     $(e.target).val("").parent().hide();
-        //     goSerach(txt);
-        // }
     };
 
     const goSerach = (txt) => {
@@ -81,8 +72,7 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             ...prevStates,
             [index]: !prevStates[index]
         }));
-        // 페이지 이동 후 스크롤을 최상단으로 이동
-        // window.scrollTo({ top: 0, behavior: 'smooth' });
+
     };
 
 
@@ -127,13 +117,9 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
     useEffect(() => {
         const topMark = document.querySelector('.top-mark');
 
-        // const clickFn = () => {
-        //     window.scroll(0, 0);
-        // };
-
         const handleScroll = () => {
             const winDirec = window.scrollY || window.pageYOffset;
-            if (winDirec > 3500) {
+            if (winDirec > 3000) {
                 topMark.style.display = 'block';
             } else {
                 topMark.style.display = 'none';

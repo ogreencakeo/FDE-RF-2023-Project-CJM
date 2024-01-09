@@ -5,8 +5,12 @@ import { GoodsAd } from "./GoodsAd";
 // 데이터
 import { goods } from "../../data/goods/goodsData";
 import { Map } from "../module/Map";
+import { useEffect } from "react";
 
 export function Minion() {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    }, []);
     return (
         <>
             <GoodsAd ad="minion" bg_color="#fac505" />

@@ -32,7 +32,6 @@ export function Goods() {
     useEffect(()=>{
         window.scrollTo(0,0);
     }, []);
-    // const goodsmove = moveImgData["goods"];
     return (
         <>
             <div className="goods_wrap">

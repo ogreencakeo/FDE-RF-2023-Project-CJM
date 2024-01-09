@@ -125,6 +125,9 @@
     .member-bx table{
         padding: 20px;
     }
+    .join-the-membership-wrap{
+        margin: 50px auto;
+    }
 }
 
 @media screen and (max-width : 450px) {
@@ -144,5 +147,14 @@
         font-size: 0.95rem;
         width: 350px;
         text-align: start;
+    }
+    .member-bx p strong {
+        display: block;
+        margin: 5px auto 0;
+    }
+}
+@media screen and (max-width : 400px) {
+    .login-bx {
+        padding: 0 !important;
     }
 }

@@ -16,12 +16,8 @@ import {
     faCircleMinus,
 } from "@fortawesome/free-solid-svg-icons";
 
-//정규식함수(숫자 세자리마다 콤마해주는 기능)
-function addComma(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
 
-export const CartList = memo(({ selData, tprice, flag }) => {
+export const CartList = memo(({ selData, flag }) => {
     // console.log(selData);
 
     const pgBlock = 5;
@@ -38,7 +34,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
     // 전체 데이터 개수
     const cntData = cartData.length;
     console.log('cntDat', cntData)
-  
 
     // 삭제함수
     const deleteItem = (e) => {
@@ -161,7 +156,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                 {/* <td>{v.수량}</td> */}
                 <td>{addComma(v.가격)}원</td>
                 <td>{addComma(v.가격 * v.수량)}원</td>
-                {/* <td>{addComma(v.ginfo[3])}원</td> */}
                 {/* 상품 수량 */}
                 <td className="cnt-part">
                     <div>
@@ -180,9 +174,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                                     </h3>
                                 </button>
                             </b>
-                            {/* <button className="btn-insert" onClick={goResult} data-idx={v.번호}>
-                                반영
-                            </button> */}
                             
                         </span>
                     </div>
@@ -252,12 +243,9 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                     <tbody>
                         <tr>
                             <th>상품</th>
-                            {/* <th>번호</th> */}
                             <th>사진</th>
-                            {/* <th>수량</th> */}
                             <th>단가</th>
                             <th>합계</th>
-                            {/* <th>삭제</th> */}
                             <th>수량</th>
                             <th>삭제</th>
                         </tr>
@@ -265,7 +253,6 @@ export const CartList = memo(({ selData, tprice, flag }) => {
                         {bindList()}
                         <tr>
                             <td colSpan={6}>
-                                {/* <h1 className="ticket-total-price">총가격 : ₩ {tprice}원 </h1> */}
                                 <h1 className="ticket-total-price">총가격 : ₩ {addComma(totalPriceFn())}원 </h1>
                             </td>
                         </tr>

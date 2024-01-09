@@ -219,10 +219,8 @@ export function Main() {
                 localStorage.getItem("lastClosedTime"),
                 10
             );
-            // const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
-            // const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
-            // const twentyFourHoursAgo = new Date().getTime() + 1 * 60 * 1000;
-            const twentyFourHoursAgo = new Date().getTime() - 1 * 60 * 5 * 1000;
+            // const twentyFourHoursAgo = new Date().getTime() - 24 * 60 * 60 * 1000;
+            const twentyFourHoursAgo = new Date().getTime() - 1 * 60 * 30 * 1000;
 
             console.log(lastClosedTime, twentyFourHoursAgo);
 
@@ -231,11 +229,6 @@ export function Main() {
             } else {
                 setModalOpen(false);
             }
-            // if (lastClosedTime > twentyFourHoursAgo) {
-            //     setModalOpen(true);
-            // } else {
-            //     setModalOpen(false);
-            // }
         }
 
         if (closeButton) {
@@ -270,8 +263,6 @@ export function Main() {
     return (
         <>
             <div>
-                {/* 모달창 */}
-                {/* <NoticeModal /> */}
                 <div className={`notice-modal-wrap ${isModalOpen ? "" : "close"}`}>
                     <div className="notice-modal">
                         <div>
@@ -322,7 +313,7 @@ export function Main() {
                         </div>
                         <div className="modal-btn-bx">
                             <button className="closeBtn">X</button>
-                            <button>5분동안 닫기</button>
+                            <button>30분동안 닫기</button>
                         </div>
                     </div>
                 </div>
@@ -460,7 +451,6 @@ export function Main() {
                 <div className="main-video">
                     {/* 동영상 짤막한 내용 */}
                     <div className="main-video-cont">
-                        {/* <h1>#특별한 #재미있는 #신나는 #멋진</h1> */}
                         <div className="has-tag-div">
                             {selectedHashTags.map((v, i) => (
                                 <h1 className="has_tag" key={i}>{v}</h1>
