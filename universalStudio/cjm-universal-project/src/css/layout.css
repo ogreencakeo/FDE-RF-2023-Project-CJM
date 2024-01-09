@@ -419,7 +419,12 @@ ol.bmenu {
 
 @media screen and (max-width:450px) {
     .logmsg{
-        right: 50%;
+        right: 45%;
         font-size: 1rem;
+    }
+    .nav-logo{
+        margin-top: 0.5px;
+        width: 100px;
+        padding-left: 5px;
     }
 }
