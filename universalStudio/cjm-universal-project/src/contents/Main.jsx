@@ -328,7 +328,7 @@ export function Main() {
                             <WaveText />
                             <div className="universal_link">
                                 {/* <button onClick={() => universalMapFn()}>GO TO MAP</button> */}
-                                <a href="https://ogreencakeo.github.io/ogreencakeo-react-pj/최지민(유니버설스튜디오).pdf">PDF 자료</a>
+                                <a href="https://ogreencakeo.github.io/ogreencakeo-react-pj/최지민(유니버설스튜디오).pdf" target="_blank">PDF 자료</a>
                             </div>
                         </div>
                     </div>
