@@ -47,7 +47,6 @@ export function Layout() {
     const flag = useRef(true);
     let stsVal = 0;
     let transVal = null;
-    // let transVal;
 
     if(localStorage.getItem('universal-cart')){
         transVal = JSON.parse(localStorage.getItem('universal-cart'));

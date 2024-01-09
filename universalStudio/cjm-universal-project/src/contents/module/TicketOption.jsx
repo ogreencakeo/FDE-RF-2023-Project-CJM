@@ -143,11 +143,8 @@ export function TicketOption() {
         const quantity = option[idx]["quantity"];
         if (quantity > 0) {
             console.log("quantity", quantity, ", idx :", idx);
-            // const selData = option[idx];
             const selData = option[idx];
-            // const temp = {'수량' : selData.quantity, '가격' : selData.price,  '이름' : selData.txt, '번호' : selData.idx, "항목" : selData.option,}
             const selData1 = {'수량' : selData.quantity, '가격' : selData.price,  '이름' : selData.txt, '번호' : selData.idx, "항목" : selData.option,}
-            // console.log("temp :", temp);
             console.log("selData :", selData);
 
             let localD;
@@ -211,18 +208,6 @@ export function TicketOption() {
     //     }
     // }, [])
 
-    const [totalPrice, setTotalPrice] = useState(0);
-
-    // 전체 가격 계산
-    const totalPriceFn = () => {
-        const newPrice = option.reduce((total, option) => (total + option.quantity * option.price), 0);
-        // setTotalPrice(newPrice);
-        return newPrice;
-    };
-
-
-    const ticket_opt = ["[1일권 Low Price (A시즌)]", "[1일권 Middle Price (B시즌)]", "[1일권 High Price (C시즌)]"];
-
     return (
         <>
             <div className="ticket-suboption-wrap">
@@ -245,10 +230,6 @@ export function TicketOption() {
                                 <h2>수량 : {v.quantity}</h2>
                                 <h2>가격 : ₩ {(v.price * v.quantity).toLocaleString()}</h2>
                             </div>
-                            {/*
-                            
-                            <button className="shoppingCart">
-                        */}
                         <button className="shoppingCart" onClick={() => useCart(idx)}>
                                 담기
                             </button>

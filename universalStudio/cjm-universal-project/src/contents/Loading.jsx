@@ -16,13 +16,10 @@ export function Loading() {
                 if(prevProgress>100){
                     prevProgress = 100;
                 }
-
-
                 return prevProgress;
             });
             
         }, 3200 / 100); 
-        
 
         return () => clearInterval(progressBarInterval);
     }, []);
