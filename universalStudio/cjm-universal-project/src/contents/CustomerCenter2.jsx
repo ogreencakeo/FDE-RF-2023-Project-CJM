@@ -651,7 +651,7 @@ export function CustomerCenter2() {
             {/* 읽기 R모드 */}
             {bdMode === "R" && (
                 <div className="dtblview readone">
-                    <h1>Read </h1>
+                    <h1>게시판 </h1>
                     <div>
                         <ul>
                             <li>닉네임</li>
@@ -668,13 +668,9 @@ export function CustomerCenter2() {
                         <ul>
                             <li>내용</li>
                             <li>
-                                <textarea
-                                    className="content"
-                                    cols="60"
-                                    rows="10"
-                                    readOnly
-                                    value={cData.current.cont}
-                                ></textarea>
+                                <div>
+                                    {cData.current.cont}
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -682,7 +678,7 @@ export function CustomerCenter2() {
             )}
             {bdMode === "U" && (
                 <div className="dtblview updateone">
-                    <h1>Modify</h1>
+                    <h1>수정하기</h1>
                     <div>
                         <ul>
                             <li>닉네임</li>

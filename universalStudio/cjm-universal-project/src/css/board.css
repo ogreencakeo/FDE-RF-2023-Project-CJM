@@ -83,7 +83,9 @@
     box-sizing: border-box;
     margin: 25px auto;
 }
-
+.dtblview>h1{
+    font-family: 'Gugi';
+}
 .dtblview ul{
     display: flex;
 }
@@ -109,9 +111,11 @@
     border: 1.5px solid #000;
     box-sizing: border-box;
 }
-.readone input, .readone textarea{
-    border: 1px solid #555;
-    box-sizing: border-box;
+.readone input, .readone ul div{
+    border: 0 !important;
+}
+.readone ul div{
+    font-size: 0.9rem;
 }
 .btngrp{
     text-align: center;
@@ -137,7 +141,9 @@
     .readone {
         margin: 50px auto;
     }
-    
+    .dtblview{
+        margin: 40px auto 50px;
+    }
 }
 
 
