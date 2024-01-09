@@ -129,16 +129,16 @@ export function Main() {
     };
 
     // 지도 보이기
-    const universalMapFn = () => {
-        const universal_main_map = $(".map-wrapper-model");
+    // const universalMapFn = () => {
+    //     const universal_main_map = $(".map-wrapper-model");
 
-        const cbtn = $(".cbtn");
+    //     const cbtn = $(".cbtn");
 
-        universal_main_map.fadeIn(300);
-        cbtn.click(() => {
-            universal_main_map.fadeOut(300);
-        })
-    };
+    //     universal_main_map.fadeIn(300);
+    //     cbtn.click(() => {
+    //         universal_main_map.fadeOut(300);
+    //     })
+    // };
 
     // prevent
 
@@ -311,9 +311,6 @@ export function Main() {
                                 rights reserved.
                             </span>
                         </div>
-                        <div>
-                            <a href="https://ogreencakeo.github.io/ogreencakeo-react-pj/최지민(유니버설스튜디오).pdf">PDF 자료</a>
-                        </div>
                         <div className="modal-btn-bx">
                             <button className="closeBtn">X</button>
                             <button>30분동안 닫기</button>
@@ -330,7 +327,8 @@ export function Main() {
                             {/* Main Content */}
                             <WaveText />
                             <div className="universal_link">
-                                <button onClick={() => universalMapFn()}>GO TO MAP</button>
+                                {/* <button onClick={() => universalMapFn()}>GO TO MAP</button> */}
+                                <a href="https://ogreencakeo.github.io/ogreencakeo-react-pj/최지민(유니버설스튜디오).pdf">PDF 자료</a>
                             </div>
                         </div>
                     </div>
