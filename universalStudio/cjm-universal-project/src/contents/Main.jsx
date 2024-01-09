@@ -222,7 +222,7 @@ export function Main() {
             // const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
             // const twentyFourHoursAgo = new Date().getTime() + 24 * 60 * 60 * 1000;
             // const twentyFourHoursAgo = new Date().getTime() + 1 * 60 * 1000;
-            const twentyFourHoursAgo = new Date().getTime() - 1 * 60 * 3 * 1000;
+            const twentyFourHoursAgo = new Date().getTime() - 1 * 60 * 5 * 1000;
 
             console.log(lastClosedTime, twentyFourHoursAgo);
 
@@ -322,7 +322,7 @@ export function Main() {
                         </div>
                         <div className="modal-btn-bx">
                             <button className="closeBtn">X</button>
-                            <button>3분동안 닫기</button>
+                            <button>5분동안 닫기</button>
                         </div>
                     </div>
                 </div>
