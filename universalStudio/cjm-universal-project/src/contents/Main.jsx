@@ -311,6 +311,9 @@ export function Main() {
                                 rights reserved.
                             </span>
                         </div>
+                        <div>
+                            <a href="https://ogreencakeo.github.io/ogreencakeo-react-pj/최지민(유니버설스튜디오).pdf">PDF 자료</a>
+                        </div>
                         <div className="modal-btn-bx">
                             <button className="closeBtn">X</button>
                             <button>30분동안 닫기</button>
