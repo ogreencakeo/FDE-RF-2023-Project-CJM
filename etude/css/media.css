@@ -1,3 +1,19 @@
+@media screen and (max-width:1222px) {
+    .sub-wrap>div {
+        width: 85%;
+        margin: 0 auto;
+    }
+    /* .sub-wrap>div:first-child{ */
+    .sub-wrap>div:first-child{
+        margin-top: 50px;
+    }
+    .sub-l-img>img{
+        height: auto;
+    }
+    .sub-main-bx1{
+        margin: 100px auto 0px;
+    }
+}
 @media screen and (max-width:1150px) {
     .sns-bx1 {
         width: 30%;
@@ -87,10 +103,10 @@
         padding: 20px;
     }
 
-    .sub-wrap>div {
+    /* .sub-wrap>div {
         flex-basis: 85%;
         margin: 0 auto;
-    }
+    } */
 
     .sub-main-bx1 {
         margin: 20px auto;

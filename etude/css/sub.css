@@ -124,12 +124,12 @@ li::marker {
 }
 /* 서브-left */
 .sub-l-img{
-    max-width: 100%;
+    width: 100%;
     position: sticky;
     top: 0;
 }
 .sub-l-img>img{
-    max-width: 100%;
+    width: 100%;
     /* aspect-ratio: 1/1; */
     object-fit: cover;
     height: 100vh;
