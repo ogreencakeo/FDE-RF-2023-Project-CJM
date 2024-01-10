@@ -133,6 +133,56 @@ li::marker {
     /* aspect-ratio: 1/1; */
     object-fit: cover;
     height: 100vh;
+    position: relative;
+}
+.sub-l-sub-img{
+    position: absolute;
+}
+.sub-l-sub-img>img{
+    position: absolute;
+    width: 100px;
+    aspect-ratio: 1/1;
+    border: 2px solid #555;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.sub-l-sub-img>img.click{
+    border: 2.5px solid #000;
+    box-sizing: border-box;
+}
+.sub-l-sub-img-wrap{
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.55);
+    bottom: 0;
+}
+.sub-l-sub-img{
+    position: absolute;
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sub-l-sub-img>img:first-child{
+    left: 0;
+    /* left: 25px; */
+}
+.sub-l-sub-img>img:nth-child(2){
+    left: calc(25% - 25px);
+    left: 25%;
+}
+.sub-l-sub-img>img:nth-child(3){
+    left: 50%;
+    /* left: calc(50% + 30px); */
+}
+.sub-l-sub-img>img:last-child{
+    left: 75%;
+    /* left: calc(75% + 50px); */
 }
 
 /* 서브-right */

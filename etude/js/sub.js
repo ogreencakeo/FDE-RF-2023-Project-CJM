@@ -48,6 +48,23 @@ document.querySelector(".close-btn").onclick = function () {
     document.querySelector(".sub-btn-bx").style.display = "block";
 };
 
+// 서브 - 서브 사진 클릭시 해당 사진 보이기
+const subImg = document.querySelector('.sub-l-img');
+
+const subSubImg = document.querySelectorAll('.sub-l-sub-img img');
+
+const changeSubImg = (event) => {
+    const clickedSubImg = event.target;
+    subImg.querySelector('img').src = clickedSubImg.src;
+    subSubImg.forEach(ele => ele.classList.remove('click'));
+    clickedSubImg.classList.add('click');
+    
+};
+
+subSubImg.forEach((ele)=>{
+    ele.addEventListener('click', changeSubImg);
+});
+
 // 서브 - 상세페이지
 const detailPage = document.querySelector(".sub-explanation-bx1");
 
