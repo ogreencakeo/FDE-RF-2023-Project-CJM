@@ -96,7 +96,7 @@ body > *, div > *{
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .sub-option-wrap>span{
@@ -107,6 +107,7 @@ body > *, div > *{
     color: rgb(227 210 210);
     font-size: 1rem;
     font-weight: 600;
+    margin-right: 20px;
 }
 
 /* 틴트옵션 */
@@ -194,9 +195,12 @@ body > *, div > *{
 .sub-btn-bx{
     max-width: 100%;
     position: sticky;
-    top: 0;
+    top: 100px;
     padding: 10px 0;
-    background-color: #fff;
+    background-color: #000;
+    /* border-top: 1px solid #555; */
+    /* border-bottom: 1px solid #555; */
+
 }
 .sub-btn-bx ul{
     display: flex;
@@ -206,6 +210,9 @@ body > *, div > *{
     width: 33%;
     
     text-align: center;
+}
+.sub-btn-bx ul li a{
+    color: #fff;
 }
 
 /* 서브 상세페이지 */
@@ -241,6 +248,7 @@ body > *, div > *{
     font-size: 1.1rem;
     border-radius: 5px;
     border: 1px solid gray;
+    background-color: #fff;
 
 }
 
@@ -284,8 +292,9 @@ body > *, div > *{
 
 /* 진성품 상품 정보 버튼 */
 
-.redBtn{
-    color: red;
+.subBtn.redBtn{
+    font-weight: 800;
+    color: pink;
 }
 
 /* 추천제품 */

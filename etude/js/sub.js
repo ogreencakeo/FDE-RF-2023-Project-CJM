@@ -7,7 +7,11 @@ const navList = document.querySelector(".nav-wrap ul");
 let temp = [];
 for (let i = 0; i < navData.length; i++) {
     temp[i] = `
-        <li>${navData[i]}</li>
+        <li>
+            <a href="#">
+                ${navData[i]}
+            </a>
+        </li>
     `;
 }
 navList.innerHTML += temp.join("");
@@ -103,16 +107,24 @@ productInfo.map((v, i) => {
 subBx2Wrap.innerHTML += temp.join("");
 
 // 서브 - 진성품, 상품정보 - 클릭시 색상 변경
-const subBtn = document.querySelectorAll(".sub-btn-bx a");
+const subBtn = document.querySelectorAll(".subBtn");
 console.log("subBtn : ", subBtn);
 
-subBtn.forEach((ele) => {
-    window.addEventListener("click", () => {
-        console.log("hihih");
-        subBtn.forEach((x) => x.classList.remove('redBtn'));
-        ele.classList.add("redBtn");
-    });
-});
+const colorChange = (event) => {
+    const clickedElement = event.target;
+
+    // 클릭된 요소가 subBtn에 포함된 것인지 확인
+    if (Array.from(subBtn).includes(clickedElement)) {
+        console.log('hi')
+        // 클릭된 요소에 "redBtn" 클래스를 추가하고 나머지 요소들에서는 제거
+        subBtn.forEach((x) => x.classList.remove("redBtn"));
+        clickedElement.classList.add("redBtn");
+    }
+}
+
+window.addEventListener("click", colorChange);
+
+
 
 // 추천제품
 const recommended_bx = document.querySelector(".recommended-bx-wrap");

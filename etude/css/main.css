@@ -16,6 +16,7 @@
     transform: translateY(0);
     opacity: 1;
     transition: .4s ease-in;
+    border-bottom: 1px solid #555;
 }
 .nav-wrap>ul{
     display: flex;
