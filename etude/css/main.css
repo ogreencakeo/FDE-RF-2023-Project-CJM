@@ -60,6 +60,7 @@
 }
 
 .main1Img{
+    cursor: pointer;
     max-width: 100%;
 }
 .main1Img>img{
@@ -266,7 +267,7 @@
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     overflow: hidden;
-    
+    cursor: pointer;
 }
 .main4Bx-img>img{
     aspect-ratio: 1/1;
@@ -339,6 +340,7 @@
 
 .whats-img{
     overflow: hidden;
+    cursor: pointer;
 }
 
 .whats-img img{

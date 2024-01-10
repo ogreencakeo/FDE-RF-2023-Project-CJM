@@ -3,18 +3,18 @@ window.onload = function () {
 };
 
 // nav
-const navList = document.querySelector(".nav-wrap ul");
-let temp = [];
-for (let i = 0; i < navData.length; i++) {
-    temp[i] = `
-        <li>
-            <a href="#">
-                ${navData[i]}
-            </a>
-        </li>
-    `;
-}
-navList.innerHTML += temp.join("");
+// const navList = document.querySelector(".nav-wrap ul");
+// let temp = [];
+// for (let i = 0; i < navData.length; i++) {
+//     temp[i] = `
+//         <li>
+//             <a href="#">
+//                 ${navData[i]}
+//             </a>
+//         </li>
+//     `;
+// }
+// navList.innerHTML += temp.join("");
 
 // tint
 const tintBx = document.querySelector(".sub-option-bx-wrap");
@@ -153,3 +153,34 @@ const restoreProductFn = (idx) => {
     const imgEle = document.getElementById(`product-img-${idx}`);
     imgEle.src = recommendedData[idx].img;
 };
+
+
+// 햄버거 nav
+
+const hambtnNav = document.querySelector(".hambtn-wrap");
+temp = [];
+for (let i = 0; i < navData.length; i++) {
+    temp[i] = `
+        <li>
+            <a href="#">
+                ${navData[i]}
+            </a>
+        </li>
+    `;
+}
+hambtnNav.innerHTML += temp.join("");
+hambtnNav.innerHTML += "<img src='../image/logo.png' alt='로고이미지' onClick='location.href=\"./index.html\"' >";
+// 햄버거 토글
+const hamBnt = document.querySelector('.hambtn button');
+
+console.log(hamBnt);
+const showNav = () => {
+    // event.stopPropagation();
+    if(hamBnt){
+        console.log('hihi');
+        hambtnNav.classList.toggle('on');
+        hamBnt.classList.toggle('click');
+    }
+};
+
+hamBnt.addEventListener('click', showNav);

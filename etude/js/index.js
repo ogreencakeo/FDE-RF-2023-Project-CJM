@@ -81,7 +81,7 @@ const main1RandomResult = selectedData.map(
     (v) =>
         `
         <div class='main1Bx'>
-            <div class='main1Img'>
+            <div class='main1Img' onClick="location.href='./sub.html'">
                 <img src=${v.img} alt='메인이미지' />
             </div>
             <section>
@@ -134,7 +134,7 @@ temp = [];
 main4Data.map((v, i) => {
     temp[i] = `
         <div class='main4Bx'>
-            <div class='main4Bx-img' onmouseover="changeImgFn(${i})" onmouseout="restoreImgFn(${i})">
+            <div class='main4Bx-img' onmouseover="changeImgFn(${i})" onmouseout="restoreImgFn(${i})" onClick="location.href='./sub.html'">
                 <img src=${v.img} alt='main4 이미지' id='image${i}' />
             </div>
             <section>
@@ -197,7 +197,7 @@ whatsData.forEach((v, i) => {
     // 각 상품에 대한 HTML 내용 생성
     const content = `
             <div class='whats-swpie-bx'>
-                <div  class="whats-img" onmouseover='changeImgFn2(${i})' onmouseout='restoreImgFn2(${i})'>
+                <div  class="whats-img" onmouseover='changeImgFn2(${i})' onmouseout='restoreImgFn2(${i})' onClick="location.href='./sub.html'">
                     <img src="${v.img}" alt="${v.txt}" id='whatsImg${i}'>
                 </div>
                 <div class="whats-content">

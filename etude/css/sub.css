@@ -8,6 +8,109 @@ body > *, div > *{
     /* border: 1px solid red; */
     box-sizing: border-box;
 }
+/* 햄버거 버튼 */
+.hambtn-wrap{
+    width: 100%;
+}
+.hambtn-wrap img{
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+}
+.hambtn{
+    width: 50%;
+    height: 40px;
+    padding: 5px 0;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+}
+.hambtn button{
+    display:block;
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+.hambtn button span{
+    width: 40px;
+    height: 8px;
+    background-color: #000;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hambtn button span:first-child{
+    top: 0;
+    position: absolute;
+    transition: .2s ease-out;
+}
+.hambtn button span:nth-child(2){
+    left: 35%;
+    top: calc(50% - 4px);
+    position: absolute;
+    transition: .2s ease-out;
+}
+.hambtn button span:last-child{
+    bottom: 0%;
+    position: absolute;
+    transition: .2s ease-out;
+}
+.hambtn button:hover span:nth-child(2){
+    left: 50%;
+}
+/* 햄버거버튼 - 클릭시 네브 보임 */
+.hambtn-wrap{
+    max-width: 320px;
+    height: 500px;
+    position: fixed;
+    top: 0;
+    right: -110%;
+    /* right: 0; */
+    margin-top: 50px;
+    background-color: #fff;
+    z-index: 10;
+    transition: .4s ease-out;
+    border-bottom-left-radius: 15px;
+}
+.hambtn-wrap.on{
+    right: 0;
+}
+.hambtn-wrap li{
+    margin-top: 30px;
+    text-align: center;
+}
+.hambtn-wrap li a{
+    font-family: 'Gugi';
+    font-size: 1.2rem;
+}
+li::marker {
+    display: none;
+  }
+/* 햄버거버튼 클릭시 */
+.hambtn button.click span:nth-child(2){
+    display: none;
+}
+.hambtn button.click span:first-child{
+    transform: rotate(-45deg);
+    top: calc(50% - 4px);
+    left: 4px;
+}
+.hambtn button.click span:last-child{
+    transform: rotate(45deg);
+    top: calc(50% - 4px);
+    left: 4px;
+}
+.hambtn-wrap img{
+    cursor: pointer;
+}
 /* 서브 */
 .sub-wrap{
     max-width: 100%;
@@ -140,6 +243,7 @@ body > *, div > *{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.466);
     display: none;
+    z-index: 11;
 }
 .modal-content{
     top: 50%;
@@ -150,6 +254,9 @@ body > *, div > *{
     transform: translate(-50%, -50%);
     background-color: #fff;
     border-radius: 20px;
+    border: 3px solid #000;
+    box-sizing: border-box;
+    z-index: 20;
 }
 .modal-content>div:first-of-type{
     width: 100%;
@@ -181,7 +288,7 @@ body > *, div > *{
 }
 .modal-tint-img img{
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1.3/1;
 }
 .modal-content h1{
     font-size: 1.6rem;
@@ -195,7 +302,7 @@ body > *, div > *{
 .sub-btn-bx{
     max-width: 100%;
     position: sticky;
-    top: 100px;
+    top: 50px;
     padding: 10px 0;
     background-color: #000;
     /* border-top: 1px solid #555; */
@@ -249,7 +356,7 @@ body > *, div > *{
     border-radius: 5px;
     border: 1px solid gray;
     background-color: #fff;
-
+    cursor: pointer;
 }
 
 .sub-explanation-bx1.on{
