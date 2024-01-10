@@ -283,7 +283,8 @@ body > *, div > *{
 }
 
 /* 진성품 상품 정보 버튼 */
-.subBtn .redBtn{
+
+.redBtn{
     color: red;
 }
 
