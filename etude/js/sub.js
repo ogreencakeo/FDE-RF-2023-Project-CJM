@@ -2,7 +2,7 @@ window.onload = function() {
     window.scrollTo(0, 0);
 };
 
-
+// nav
 const navList = document.querySelector('.nav-wrap ul');
 let temp = [];
 for (let i = 0; i < navData.length; i++) {
@@ -103,6 +103,18 @@ productInfo.map((v, i) => {
 });
 
 subBx2Wrap.innerHTML += temp.join('');
+
+// 서브 - 진성품, 상품정보 - 클릭시 색상 변경
+const subBtn = document.querySelectorAll('.sub-btn-bx li a');
+console.log('subBtn : ', subBtn);
+
+subBtn.forEach(ele => {
+    window.addEventListener(ele, 'click', function(){
+        console.log('hihih');
+        subBtn.forEach(x => x.classList.remove('redBtn'));
+        ele.classList.remove('redBtn');
+    });
+});
 
 
 // 추천제품

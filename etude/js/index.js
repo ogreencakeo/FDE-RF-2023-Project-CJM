@@ -1,8 +1,9 @@
-window.onload = function() {
+window.onload = function () {
     window.scrollTo(0, 0);
 };
 
-const navList = document.querySelector('.nav-wrap ul');
+// 네비 리스트
+const navList = document.querySelector(".nav-wrap ul");
 let temp = [];
 for (let i = 0; i < navData.length; i++) {
     temp[i] = `
@@ -11,13 +12,31 @@ for (let i = 0; i < navData.length; i++) {
                 ${navData[i]}
             </a>
         </li>
-    `
+    `;
 }
-navList.innerHTML += temp.join('');
+navList.innerHTML += temp.join("");
 
+// 네비 스크롤 내리시 hide 처리하기
+let lastPosiont = 0;
+const nav = document.querySelector(".nav-wrap");
+
+const handleSroll = () => {
+    let scrollPostion = window.scrollY || window.pageYOffset;
+    console.log(scrollPostion);
+    if (scrollPostion > lastPosiont) {
+        nav.classList.add("hide");
+        console.log("hi");
+    } else {
+        nav.classList.remove("hide");
+    }
+    lastPosiont = scrollPostion;
+    window.addEventListener("scroll", handleSroll);
+};
+
+window.addEventListener("scroll", handleSroll);
 
 // head Swpier
-const swiperContainer = new Swiper('.header-swiper-container', {
+const swiperContainer = new Swiper(".header-swiper-container", {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
@@ -30,10 +49,10 @@ const swiperContainer = new Swiper('.header-swiper-container', {
 });
 
 for (let i = 0; i < mainBanImg.length; i++) {
-    const swiperSlide = document.createElement('div');
-    swiperSlide.classList.add('swiper-slide');
+    const swiperSlide = document.createElement("div");
+    swiperSlide.classList.add("swiper-slide");
 
-    const imgElement = document.createElement('img');
+    const imgElement = document.createElement("img");
     imgElement.src = mainBanImg[i];
 
     swiperSlide.appendChild(imgElement);
@@ -42,25 +61,25 @@ for (let i = 0; i < mainBanImg.length; i++) {
 
 swiperContainer.update(); // Swiper 업데이트
 
-
-
 // main1
 
-const shuffledData = main1Data.sort(()=> Math.random() - 0.5);
+const shuffledData = main1Data.sort(() => Math.random() - 0.5);
 const unipueImg = new Set();
-const selectedData = shuffledData.filter(v => {
-    if(!unipueImg.has(v.img)){
-        unipueImg.add(v.img);
-        return true;
-    }
-    return false;
-}).slice(0, 5);
+const selectedData = shuffledData
+    .filter((v) => {
+        if (!unipueImg.has(v.img)) {
+            unipueImg.add(v.img);
+            return true;
+        }
+        return false;
+    })
+    .slice(0, 5);
 
-const main1Bx = document.querySelector('.main1-wrap');
+const main1Bx = document.querySelector(".main1-wrap");
 
-
-const main1RandomResult = selectedData.map((v) =>
-    `
+const main1RandomResult = selectedData.map(
+    (v) =>
+        `
         <div class='main1Bx'>
             <div class='main1Img'>
                 <img src=${v.img} alt='메인이미지' />
@@ -74,27 +93,22 @@ const main1RandomResult = selectedData.map((v) =>
     `
 );
 
-
-main1Bx.innerHTML += main1RandomResult.join('');
+main1Bx.innerHTML += main1RandomResult.join("");
 
 // main2
-const main2Img = [
-    "../image/main/main2/img1.jpg",
-    "../image/main/main2/img2.jpg",
-    "../image/main/main2/img3.jpg",
-];
+const main2Img = ["../image/main/main2/img1.jpg", "../image/main/main2/img2.jpg", "../image/main/main2/img3.jpg"];
 
-const main_img_bx  = document.querySelector('.main-img-bx');
-const main_img = document.createElement('img');
-main_img.classList.add('main-img');
+const main_img_bx = document.querySelector(".main-img-bx");
+const main_img = document.createElement("img");
+main_img.classList.add("main-img");
 
-const randomImg = Math.floor(Math.random()*3);
-main_img.setAttribute('src', main2Img[randomImg]);
+const randomImg = Math.floor(Math.random() * 3);
+main_img.setAttribute("src", main2Img[randomImg]);
 
 main_img_bx.appendChild(main_img);
 
 // main3
-const main3Bx = document.querySelector('.main3-wrap');
+const main3Bx = document.querySelector(".main3-wrap");
 temp = [];
 
 main3Data.map((v, i) => {
@@ -109,13 +123,12 @@ main3Data.map((v, i) => {
             </div>
         </div>
     `;
-})
+});
 
-main3Bx.innerHTML += temp.join('');
-
+main3Bx.innerHTML += temp.join("");
 
 // main4
-const main4Bx = document.querySelector('.main4-img-l');
+const main4Bx = document.querySelector(".main4-img-l");
 
 temp = [];
 main4Data.map((v, i) => {
@@ -130,37 +143,37 @@ main4Data.map((v, i) => {
                 <h2>${v.price}</h3>
             </section>
         </div>
-    `
+    `;
 });
 
-main4Bx.innerHTML += temp.join('');
+main4Bx.innerHTML += temp.join("");
 
 const changeImgFn = (index) => {
     const img = document.getElementById(`image${index}`);
-    img.src = `../image/main/main4/${index+1}-2.jpg`;
-}
+    img.src = `../image/main/main4/${index + 1}-2.jpg`;
+};
 
 const restoreImgFn = (index) => {
     const img = document.getElementById(`image${index}`);
     img.src = main4Data[index].img;
-}
+};
 
 // giftBx
 
-const giftBx = document.querySelector('.gift-bx-wrap');
+const giftBx = document.querySelector(".gift-bx-wrap");
 temp = [];
-for(let i=0; i<giftBxData.length; i++){
+for (let i = 0; i < giftBxData.length; i++) {
     temp[i] = `
         <div class='gift-bx'>
             <img src=${giftBxData[i]} alt='선물이미지' />
         </div>
-    `
+    `;
 }
 
-giftBx.innerHTML += temp.join('');
+giftBx.innerHTML += temp.join("");
 
 // whats new Swiper
-const swiperContainer2 = new Swiper('.whats-new-swipe-container', {
+const swiperContainer2 = new Swiper(".whats-new-swipe-container", {
     slidesPerView: 4,
     spaceBetween: 10,
     pagination: {
@@ -173,13 +186,13 @@ const swiperContainer2 = new Swiper('.whats-new-swipe-container', {
 });
 
 // Swiper의 wrapper 요소 가져오기
-const swiperWrapper = document.querySelector('.whats-new-swipe-container .swiper-wrapper');
+const swiperWrapper = document.querySelector(".whats-new-swipe-container .swiper-wrapper");
 
 // 각 상품에 대해 반복
 whatsData.forEach((v, i) => {
     // Swiper 슬라이드 요소 생성
-    const slide = document.createElement('div');
-    slide.classList.add('swiper-slide');
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide");
 
     // 각 상품에 대한 HTML 내용 생성
     const content = `
@@ -204,7 +217,7 @@ whatsData.forEach((v, i) => {
 
 const changeImgFn2 = (idx) => {
     const img = document.getElementById(`whatsImg${idx}`);
-    img.src = `../image/main/whatsNew/${idx+1}-2.jpg`;
+    img.src = `../image/main/whatsNew/${idx + 1}-2.jpg`;
 };
 
 const restoreImgFn2 = (idx) => {
@@ -215,9 +228,8 @@ const restoreImgFn2 = (idx) => {
 // 슬라이드 추가 후 Swiper 업데이트
 swiperContainer2.update();
 
-
 // 미디어 쿼리
-const mediaQuery = window.matchMedia('(max-width: 767px)');
+const mediaQuery = window.matchMedia("(max-width: 767px)");
 
 // 미디어 쿼리 변경 사항 감지
 function handleMediaQueryChange(event) {
@@ -241,9 +253,8 @@ handleMediaQueryChange(mediaQuery);
 // 미디어 쿼리 변경 시 이벤트 리스너 등록
 mediaQuery.addListener(handleMediaQueryChange);
 
-
 // sns 스와이퍼
-const swiperContainer3 = new Swiper('.sns-bx2-swipe-container', {
+const swiperContainer3 = new Swiper(".sns-bx2-swipe-container", {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
@@ -254,17 +265,17 @@ const swiperContainer3 = new Swiper('.sns-bx2-swipe-container', {
         },
     },
     autoplay: {
-        delay: 2500, 
-        disableOnInteraction: false, 
+        delay: 2500,
+        disableOnInteraction: false,
     },
-    loop : 'true'
+    loop: "true",
 });
 
 for (let i = 0; i < snsData.length; i++) {
-    const swiperSlide3 = document.createElement('div');
-    swiperSlide3.classList.add('swiper-slide');
+    const swiperSlide3 = document.createElement("div");
+    swiperSlide3.classList.add("swiper-slide");
 
-    const imgElement3 = document.createElement('img');
+    const imgElement3 = document.createElement("img");
     imgElement3.src = snsData[i];
 
     swiperSlide3.appendChild(imgElement3);
@@ -273,9 +284,8 @@ for (let i = 0; i < snsData.length; i++) {
 
 swiperContainer3.update(); // Swiper 업데이트
 
-
 // news-event Swiper
-const swiperContainer4 = new Swiper('.news-event-swipe-container', {
+const swiperContainer4 = new Swiper(".news-event-swipe-container", {
     slidesPerView: 4,
     spaceBetween: 10,
     pagination: {
@@ -286,19 +296,19 @@ const swiperContainer4 = new Swiper('.news-event-swipe-container', {
         },
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 
 // Swiper의 wrapper 요소 가져오기
-const swiperWrapper4 = document.querySelector('.news-event-swipe-container .swiper-wrapper');
+const swiperWrapper4 = document.querySelector(".news-event-swipe-container .swiper-wrapper");
 
 // 각 상품에 대해 반복
 newsEventData.forEach((item, index) => {
     // Swiper 슬라이드 요소 생성
-    const slide4 = document.createElement('div');
-    slide4.classList.add('swiper-slide');
+    const slide4 = document.createElement("div");
+    slide4.classList.add("swiper-slide");
 
     // 각 상품에 대한 HTML 내용 생성
     const content4 = `
@@ -318,7 +328,7 @@ newsEventData.forEach((item, index) => {
 swiperContainer4.update();
 
 // // 미디어 쿼리
-const mediaQuery2 = window.matchMedia('(max-width: 767px)');
+const mediaQuery2 = window.matchMedia("(max-width: 767px)");
 function handleMediaQueryChange2(event) {
     if (event.matches) {
         // 작은 화면에 대한 옵션
@@ -326,7 +336,7 @@ function handleMediaQueryChange2(event) {
         swiperContainer4.params.spaceBetween = 5;
     } else {
         // 큰 화면에 대한 옵션
-        swiperContainer4.params.slidesPerView = 4; 
+        swiperContainer4.params.slidesPerView = 4;
         swiperContainer4.params.spaceBetween = 10;
     }
 
@@ -339,4 +349,3 @@ handleMediaQueryChange2(mediaQuery2);
 
 // 미디어 쿼리 변경 시 이벤트 리스너 등록
 mediaQuery2.addListener(handleMediaQueryChange2);
-

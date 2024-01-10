@@ -10,7 +10,7 @@ body > *, div > *{
 }
 /* 서브 */
 .sub-wrap{
-    max-width: 1380px;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -280,6 +280,11 @@ body > *, div > *{
 
 .info2-7 p{
     margin: 15px auto;
+}
+
+/* 진성품 상품 정보 버튼 */
+.subBtn .redBtn{
+    color: red;
 }
 
 /* 추천제품 */

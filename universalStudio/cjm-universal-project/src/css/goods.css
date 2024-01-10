@@ -55,9 +55,9 @@
     padding: 5px;
 }
 .goods_store{
-    white-space: nowrap;
+    /* white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
 }
 .goods_store{
     display: block;
@@ -267,7 +267,7 @@
         justify-content: center;
     }
     .goods_bx{
-        width: 95%;
+        flex-basis: 95%;
         margin: 10px 10px;
     }
     .goods_caution_img{
