@@ -1,15 +1,35 @@
 
 /* header */
 /* header - nav */
+.header{
+    width: 100%;
+}
 .nav-wrap{
     position: fixed;
-    top: 3%;
-    left: 5%;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* top: 3%;
+    left: 5%; */
     z-index: 999;
     display: flex;
 }
 .nav-wrap>ul{
     display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.nav-wrap>ul>li{
+    padding-right: 30px;
+}
+.nav-wrap>ul>li>a{
+    font-family: 'Gugi';
+    font-size: 1.2rem;
+}
+
+.logo{
+    margin-left: 50px;
+    cursor: pointer;
 }
 
 /* main */

@@ -6,7 +6,11 @@ const navList = document.querySelector('.nav-wrap ul');
 let temp = [];
 for (let i = 0; i < navData.length; i++) {
     temp[i] = `
-        <li>${navData[i]}</li>
+        <li>
+            <a href="#">
+                ${navData[i]}
+            </a>
+        </li>
     `
 }
 navList.innerHTML += temp.join('');
