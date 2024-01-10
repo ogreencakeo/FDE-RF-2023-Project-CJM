@@ -21,10 +21,13 @@
 .nav-wrap>ul{
     display: flex;
     align-items: center;
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    width: 100%;
 }
 .nav-wrap>ul>li{
     padding-right: 30px;
+    flex: 1;
+    text-align: center;
 }
 .nav-wrap>ul>li>a{
     font-family: 'Gugi';
@@ -37,7 +40,7 @@
 }
 
 .logo{
-    margin-left: 50px;
+    margin-left: 30px;
     cursor: pointer;
 }
 
