@@ -81,7 +81,7 @@ export function Main() {
         // 일정 간격으로 페이지 2 배경색 변경
         const backgroundColorInterval = setInterval(() => {
             changeBackgroundColor();
-        }, 1000); // 1000밀리초(5초) 간격으로 변경, 원하는 시간으로 조절
+        }, 1000); 
 
 
 
@@ -96,7 +96,6 @@ export function Main() {
     // 사진 클릭 회전
     // 박스별 회전 상태를 저장하는 배열
     const [boxRotations, setBoxRotations] = useState(Array(pickUpData.length).fill(false));
-    // const rotateAni = () => setClickAniFn((prev) => !prev);
     const rotateAni = (index) => {
         setBoxRotations((prevRotations) => {
             const newRotations = [...prevRotations];
@@ -127,22 +126,6 @@ export function Main() {
         }
         return lightTemp;
     };
-
-    // 지도 보이기
-    // const universalMapFn = () => {
-    //     const universal_main_map = $(".map-wrapper-model");
-
-    //     const cbtn = $(".cbtn");
-
-    //     universal_main_map.fadeIn(300);
-    //     cbtn.click(() => {
-    //         universal_main_map.fadeOut(300);
-    //     })
-    // };
-
-    // prevent
-
-
 
 
     // 랜덤 비디오hash tag 
@@ -215,12 +198,10 @@ export function Main() {
         };
 
         if (localStorage.getItem("lastClosedTime")) {
-            let lastClosedTime = parseInt(
-                localStorage.getItem("lastClosedTime"),
-                10
-            );
-            // const twentyFourHoursAgo = new Date().getTime() - 24 * 60 * 60 * 1000;
-            const twentyFourHoursAgo = new Date().getTime() - 1 * 60 * 30 * 1000;
+            let lastClosedTime = 
+                parseInt(localStorage.getItem("lastClosedTime"),10);
+            const twentyFourHoursAgo = new Date().getTime() - 24 * 60 * 60 * 1000;
+            // const twentyFourHoursAgo = new Date().getTime() - 1 * 60 * 30 * 1000;
 
             console.log(lastClosedTime, twentyFourHoursAgo);
 
@@ -242,7 +223,6 @@ export function Main() {
             };
         }
 
-        console.log(333);
     }, [isModalOpen]);
 
     useEffect(() => {

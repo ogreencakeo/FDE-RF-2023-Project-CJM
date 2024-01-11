@@ -18,11 +18,14 @@ export function Layout() {
     const [logMsg, setLogMsg] = useState(null);
 
     const logOut = useCallback(() => {
-        localStorage.removeItem("universal-minfo");
-        setLogSts(null);
-        setLogMsg(null);
-        alert("로그아웃 되었습니다!");
-        chgPage("/", {});
+        if(window.confirm('로그아웃 하시겠습니까?')){
+            localStorage.removeItem("universal-minfo");
+            setLogSts(null);
+            setLogMsg(null);
+            alert("로그아웃 되었습니다!");
+            chgPage("/", {});
+        }
+        
     }, []);
 
     useLayoutEffect(() => {

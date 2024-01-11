@@ -70,11 +70,12 @@ export function Member() {
             });
 
             if(isOk){
-                setIdMsg(msgId[0]);
+                setIdMsg(msgId[2]);
                 setUserIdError(false);
             }
             
         }else{
+            setIdMsg(msgId[0]);
             setUserIdError(true);
         }
         setUserId(e.target.value);
@@ -196,6 +197,7 @@ export function Member() {
                                                     fontSize : '10px'
                                                 }}>
                                                     {msgId[2]}
+                                                    {/* {msgId} */}
                                                 </small>
                                             </div>
                                         )

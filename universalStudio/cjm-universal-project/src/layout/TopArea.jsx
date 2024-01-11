@@ -134,13 +134,6 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
             // topMark.removeEventListener('click', clickFn);
         }
     }, []);
-
-    
-
-    
-    
-    
-
     return (
         <>
             <header className="top-area">
