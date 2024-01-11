@@ -35,6 +35,21 @@ const handleSroll = () => {
 
 window.addEventListener("scroll", handleSroll);
 
+// 스크롤시 Top 버튼 생기게 하기 
+const scrollBtn = document.querySelector('.scroll-btn button');
+
+
+const scrollTopFn = () => {
+    if(scrollBtn){
+        const scrollPostion = window.screenY || window.pageYOffset;
+        if(scrollPostion > 2000){
+            
+        }
+    }
+};
+
+window.addEventListener('scroll', scrollTopFn);
+
 // head Swpier
 const swiperContainer = new Swiper(".header-swiper-container", {
     slidesPerView: 1,

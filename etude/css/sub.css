@@ -299,7 +299,7 @@ li::marker {
     top: 50%;
     left: 50%;
     width: 45vw;
-    height: 85vh;
+    height: 75vh;
     position: absolute;
     transform: translate(-50%, -50%);
     background-color: #fff;
@@ -332,7 +332,7 @@ li::marker {
     border: 0;
 }
 .modal-tint-img{
-    max-width: 450px;
+    max-width: 80%;
     margin: 0 auto;
     margin-bottom: 10px;
 }

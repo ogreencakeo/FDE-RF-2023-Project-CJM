@@ -1,4 +1,34 @@
 
+/* 스크롤 버튼 */
+.scroll-btn{
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    z-index: 9;
+}
+.scroll-btn button{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border: 2px solid salmon;
+    border-radius: 50%;
+}
+.scroll-btn button h1{
+    color: salmon;
+    font-size: 2.5rem;
+}
+.scroll-btn button p{
+    color: salmon;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+.scroll-btn{
+    
+}
 /* header */
 /* header - nav */
 .header{
