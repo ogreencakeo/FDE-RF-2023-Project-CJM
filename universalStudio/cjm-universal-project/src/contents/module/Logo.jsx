@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useLayoutEffect } from 'react';
 import '../../css/logo.css';
 import { universalCon } from './universalContext';
 // 제이쿼리
@@ -8,12 +8,12 @@ export function Logo(){
     const myCon = useContext(universalCon);
 
     
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         const logoSrollTo = ()=>{
             const topShowNav = document.querySelector('.top-show-nav');
             console.log('hidsfds');
-            myCon.chgPage('/', {});
             window.scrollTo(0,0);
+            myCon.chgPage('/', {});
             if(topShowNav){
                 // topShowNav.classList.remove('on');
                 // topShowNav.classList
