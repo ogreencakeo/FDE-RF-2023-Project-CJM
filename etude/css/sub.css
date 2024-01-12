@@ -352,7 +352,8 @@ li::marker {
 .sub-btn-bx{
     max-width: 100%;
     position: sticky;
-    top: 50px;
+    /* top: 50px; */
+    top: 0;
     padding: 10px 0;
     background-color: #000;
     /* border-top: 1px solid #555; */

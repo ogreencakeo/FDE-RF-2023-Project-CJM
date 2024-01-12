@@ -132,24 +132,26 @@ let btnScrollY;
 const subBtn = document.querySelectorAll(".subBtn");
 console.log("subBtn : ", subBtn);
 
+const subBtn1 = document.querySelector('#sub-bx1').getBoundingClientRect().top; // 진성품
+const subBtn2 = document.querySelector('#sub-bx2').getBoundingClientRect().top; // 상품정보
+const subBtn3 = document.querySelector('#recommended-product').getBoundingClientRect().top; // 추천제품
 
 // 서브 - 진성품, 상품정보, 추천제품 스크롤시 색상 변경
 const goExplanationArea = () => {
     if(stsClick) return;
-    const subBtn1 = document.querySelector('#sub-bx1').getBoundingClientRect().top; // 진성품
-    const subBtn2 = document.querySelector('#sub-bx2').getBoundingClientRect().top; // 상품정보
-    const subBtn3 = document.querySelector('#recommended-product').getBoundingClientRect().top; // 추천제품
-    btnScrollY = window.scrollY || window.pageYOffset;
+    btnScrollY = window.scrollY 
     if(btnScrollY >= subBtn1 && btnScrollY < subBtn2){
         subBtn.forEach((ele) => ele.classList.remove('redBtn'));
         subBtn[0].classList.add('redBtn');
-        console.log('hi')
-    }else if(btnScrollY>= subBtn2 && btnScrollY < subBtn3){
+        console.log('hi1');
+    }else if(btnScrollY >= subBtn2 && btnScrollY < subBtn3){
         subBtn.forEach((ele) => ele.classList.remove('redBtn'));
         subBtn[1].classList.add('redBtn');
+        console.log('hi2');
     }else if(btnScrollY >= subBtn3){
         subBtn.forEach((ele) => ele.classList.remove('redBtn'));
         subBtn[2].classList.add('redBtn');
+        console.log('hi3');
     }
 };
 
@@ -160,6 +162,7 @@ window.addEventListener('wheel', ()=>{stsClick=0});
 const colorChange = (event) => {
     stsClick = 1;
     const clickedElement = event.target;
+    event.preventDeafault();
 
     // 클릭된 요소가 subBtn에 포함된 것인지 확인
     if (Array.from(subBtn).includes(clickedElement)) {
