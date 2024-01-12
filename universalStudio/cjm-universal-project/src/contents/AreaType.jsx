@@ -20,16 +20,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-
-import "../css/swiper.css";
-
-
-
 export function AreaType() {
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
