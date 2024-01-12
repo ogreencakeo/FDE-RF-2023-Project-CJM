@@ -40,7 +40,7 @@ console.log('scrollBtn :', scrollBtn);
 
 
 const topBtnShow = () => {
-    const scrollPostion = window.screenY || window.pageYOffset;
+    const scrollPostion = window.scrollY || window.pageYOffset;
     if(scrollBtn){
         if(scrollPostion > 2000){
             scrollBtn.style.display = 'block';

@@ -16,7 +16,7 @@ window.onload = function () {
 // }
 // navList.innerHTML += temp.join("");
 
-// tint
+// 틴트 모달창
 const tintBx = document.querySelector(".sub-option-bx-wrap");
 
 temp = [];
@@ -48,7 +48,7 @@ document.querySelector(".close-btn").onclick = function () {
     document.querySelector(".sub-btn-bx").style.display = "block";
 };
 
-// 서브 - 서브 사진 클릭시 해당 사진 보이기
+// 서브 - 왼쪽 하단 서브 사진 클릭시 해당 사진 보이기
 const subImg = document.querySelector('.sub-l-img');
 
 const subSubImg = document.querySelectorAll('.sub-l-sub-img img');
@@ -76,7 +76,7 @@ for (let i = 0; i < explanData.length; i++) {
 }
 detailPage.innerHTML += temp.join("");
 
-// 서브 페이지 버튼 클릭시
+// 서브 페이지 더보기 / 닫기 버튼 클릭시
 const subBx1Btn = document.querySelector(".sub-bx1-btn button");
 const subBx1Wrap = document.querySelector(".sub-explanation-bx1");
 
@@ -123,24 +123,54 @@ productInfo.map((v, i) => {
 
 subBx2Wrap.innerHTML += temp.join("");
 
-// 서브 - 진성품, 상품정보 - 클릭시 색상 변경
+
+
+// 현재 클릭 상태 (0-사용안함, 1- 사용함)
+let stsClick = 0; 
+let btnScrollY;
+
 const subBtn = document.querySelectorAll(".subBtn");
 console.log("subBtn : ", subBtn);
 
+
+// 서브 - 진성품, 상품정보, 추천제품 스크롤시 색상 변경
+const goExplanationArea = () => {
+    if(stsClick) return;
+    const subBtn1 = document.querySelector('#sub-bx1').getBoundingClientRect().top; // 진성품
+    const subBtn2 = document.querySelector('#sub-bx2').getBoundingClientRect().top; // 상품정보
+    const subBtn3 = document.querySelector('#recommended-product').getBoundingClientRect().top; // 추천제품
+    btnScrollY = window.scrollY || window.pageYOffset;
+    if(btnScrollY >= subBtn1 && btnScrollY < subBtn2){
+        subBtn.forEach((ele) => ele.classList.remove('redBtn'));
+        subBtn[0].classList.add('redBtn');
+        console.log('hi')
+    }else if(btnScrollY>= subBtn2 && btnScrollY < subBtn3){
+        subBtn.forEach((ele) => ele.classList.remove('redBtn'));
+        subBtn[1].classList.add('redBtn');
+    }else if(btnScrollY >= subBtn3){
+        subBtn.forEach((ele) => ele.classList.remove('redBtn'));
+        subBtn[2].classList.add('redBtn');
+    }
+};
+
+window.addEventListener('scroll', goExplanationArea);
+window.addEventListener('wheel', ()=>{stsClick=0});
+
+// 서브 - 진성품, 상품정보, 추천제품 - 클릭시 색상 변경
 const colorChange = (event) => {
+    stsClick = 1;
     const clickedElement = event.target;
 
     // 클릭된 요소가 subBtn에 포함된 것인지 확인
     if (Array.from(subBtn).includes(clickedElement)) {
         console.log('hi')
         // 클릭된 요소에 "redBtn" 클래스를 추가하고 나머지 요소들에서는 제거
-        subBtn.forEach((x) => x.classList.remove("redBtn"));
+        subBtn.forEach((x) => {x.classList.remove("redBtn")});
         clickedElement.classList.add("redBtn");
     }
 }
 
 window.addEventListener("click", colorChange);
-
 
 
 // 추천제품
