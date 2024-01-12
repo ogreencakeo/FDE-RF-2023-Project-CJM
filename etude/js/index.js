@@ -30,25 +30,36 @@ const handleSroll = () => {
         nav.classList.remove("hide");
     }
     lastPosiont = scrollPostion;
-    window.addEventListener("scroll", handleSroll);
 };
 
 window.addEventListener("scroll", handleSroll);
 
 // 스크롤시 Top 버튼 생기게 하기 
-const scrollBtn = document.querySelector('.scroll-btn button');
+const scrollBtn = document.querySelector('.scroll-btn');
+console.log('scrollBtn :', scrollBtn);
 
 
-const scrollTopFn = () => {
+const topBtnShow = () => {
+    const scrollPostion = window.screenY || window.pageYOffset;
     if(scrollBtn){
-        const scrollPostion = window.screenY || window.pageYOffset;
         if(scrollPostion > 2000){
-            
+            scrollBtn.style.display = 'block';
+        }else{
+            scrollBtn.style.display = 'none';
         }
     }
+
+    // return(()=> {window.removeEventListener('scroll', topBtnShow)});
 };
 
-window.addEventListener('scroll', scrollTopFn);
+window.addEventListener('scroll', topBtnShow);
+
+// Top 버튼 클릭시 위로 올라가게 하기
+const topBtnScroll = () => {
+    window.scrollTo(0, 0);
+};
+
+scrollBtn.addEventListener('click', topBtnScroll);
 
 // head Swpier
 const swiperContainer = new Swiper(".header-swiper-container", {
