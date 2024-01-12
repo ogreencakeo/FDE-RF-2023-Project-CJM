@@ -19,7 +19,7 @@ export function Loading() {
                 return prevProgress;
             });
             
-        }, 3200 / 100); 
+        }, 3000 / 100); 
 
         return () => clearInterval(progressBarInterval);
     }, []);

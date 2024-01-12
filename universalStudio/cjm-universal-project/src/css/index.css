@@ -227,6 +227,7 @@ a {
     transition: .4s ease-out;
     box-sizing: border-box;
     border: 6px solid #193175;
+    font-family:'Jua';
 }
 
 .universal_link button {
@@ -1211,6 +1212,13 @@ a {
     .hover-move-bx{
         font-size: 4.2rem;
     }
+    .header-content{
+        top: 12%;
+    }
+    .header, .header-img-wrap, .header-main-img-wrap, .header-main-img{
+        height: calc(60vh - 58px);
+    }
+
 }
 
 
@@ -1467,6 +1475,11 @@ a {
     }
     .main-video-cont h1{
         width: 45%;
+    }
+}
+@media screen and (max-width:455px){
+    .header-content {
+        top: 5%;
     }
 }
 @media screen and (max-width:414px){

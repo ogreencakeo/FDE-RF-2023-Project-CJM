@@ -595,7 +595,7 @@ export function CustomerCenter2() {
                             }}
                         />
                         <button className="sbtn" onClick={searchList}>
-                            Search
+                            검색
                         </button>
                     </div>
                     {/* 리스트 테이블 박스 */}
