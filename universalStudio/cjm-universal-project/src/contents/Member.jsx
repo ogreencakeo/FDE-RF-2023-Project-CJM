@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { universalCon } from '../contents/module/universalContext';
 
@@ -14,7 +14,7 @@ import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
 
 export function Member() {
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0);
     }, []);
 

@@ -10,10 +10,10 @@ import { TicketOption } from "./module/TicketOption";
 import { UniverSalText } from "./module/UniverSalText";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { MoveAgency } from "./module/MoveAgency";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 export function Ticket() {
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0);
     }, []);
     const ticket_info = [

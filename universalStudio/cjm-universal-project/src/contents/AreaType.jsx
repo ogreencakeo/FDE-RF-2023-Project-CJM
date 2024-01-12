@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useLayoutEffect, useState } from "react";
 import { attractionData } from "../data/attraction/attractionData";
 
 // css
@@ -20,7 +20,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export function AreaType() {
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0);
     }, []);
     

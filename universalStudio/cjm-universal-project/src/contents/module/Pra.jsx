@@ -1,10 +1,39 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { initData } from "../../Function/mem_fn";
+import { pickUpData } from "../../data/main/pickup";
 
 export function Pra(){
 
     const [logSts, setLogSts] = useState(localStorage.getItem('universal-minfo'));
     
+    const colorRef = useRef('#ccc');
+    useEffect(()=>{
+        const bgColorChange = () => {
+            const video = document.querySelector('.video');
+            bgColors = ['red', 'blue', 'yellow', 'pink'];
+            bgCorlorRandom = bgColors[Math.floor(Math.random() * bgColors.length)];
+            colorRef.current = bgCorlorRandom;
+            video.style.backgroundColor = bgCorlorRandom;
+
+        };
+        bgColorChange();
+        const bgInterval = setInterval(()=>{
+            bgColorChange();
+        }, 1000);
+
+        return(()=>clearInterval(bgInterval));
+    }, []);
+
+    const [rotateFn, setRotateFn] = useState(Array(pickUpData.length).fill(false));
+
+    const aniRotateFn = (index) => {
+        setRotateFn((v) => {
+            const newList = [...v];
+            newList[index] = !newList[index];
+            return newList
+            // ${rotateFn[i] ? 'on' : ''}
+        }); 
+    };
 
 
     const [userId, setUserId] = useState('');
@@ -55,7 +84,7 @@ export function Pra(){
 
             if(findData){
                 setUserIdError(false);
-                if(findData['pwd'] === [pwd]){
+                if(findData['pwd'] === pwd){
                     setPwdError(false);
                     localStorage.setItem('universal-minfo', JSON.stringify(findData));
                     myCon.setLogSts(localStorage.getItem('universal-minfo'))

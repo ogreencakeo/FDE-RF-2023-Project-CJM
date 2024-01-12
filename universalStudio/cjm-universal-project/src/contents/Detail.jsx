@@ -5,7 +5,7 @@ import { Map } from "./module/Map";
 
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 import { Caution } from "./module/Caution";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useLayoutEffect } from "react";
 
 // 폰트어썸
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +13,7 @@ import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { universalCon } from "./module/universalContext";
 
 export function Detail() {
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.scroll({ top: 0, behavior: "smooth" });
     }, []);
 

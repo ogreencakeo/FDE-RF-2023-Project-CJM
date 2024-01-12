@@ -48,7 +48,7 @@ import { NoticeModal } from "./module/NoticeModal.jsx";
 import { CookieGame } from "./module/CookieGame.jsx";
 
 export function Main() {
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0);
     }, []);
     useEffect(() => {

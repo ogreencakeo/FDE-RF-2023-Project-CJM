@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 
 // GoodsCont
@@ -29,7 +29,7 @@ import { Minion } from "./GoodsCont/Minion";
 // import { Banner } from './module/Banner';
 
 export function Goods() {
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0);
     }, []);
     return (

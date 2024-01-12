@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 // 기본 데이터 제이슨 불러오기
 import baseData from "../data/유니버설-문의2.json";
@@ -25,7 +25,7 @@ if (localStorage.getItem("universal-bdata")) orgData = JSON.parse(localStorage.g
 else orgData = baseData;
 
 export function CustomerCenter2() {
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0);
     }, []);
 

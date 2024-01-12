@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { SeasonalInfo } from "../module/SeasonalInfo";
 
 export function Restaurant7(){
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0)
     }, []);
     return(

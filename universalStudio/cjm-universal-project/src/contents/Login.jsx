@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import "../css/login.css";
 import { Seaching2 } from "./module/Seaching2";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { initData } from "../Function/mem_fn";
 import { universalCon } from "./module/universalContext";
 export function Login() {
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0);
     }, []);
 

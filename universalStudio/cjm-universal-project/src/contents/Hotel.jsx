@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import "../css/hotel.css";
 import { hotelData } from "../data/hotel/hotelData.js";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import { UniverSalText } from "./module/UniverSalText.jsx";
 import { ImgMoveSlide } from "./module/ImgMoveSlide";
 
 export function Hotel() {
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         window.scrollTo(0,0);
     }, []);
     
