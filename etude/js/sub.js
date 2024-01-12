@@ -139,7 +139,7 @@ const subBtn3 = document.querySelector('#recommended-product').getBoundingClient
 // 서브 - 진성품, 상품정보, 추천제품 스크롤시 색상 변경
 const goExplanationArea = () => {
     if(stsClick) return;
-    btnScrollY = window.scrollY 
+    btnScrollY = window.pageYOffset 
     if(btnScrollY > 0 && btnScrollY < subBtn2){
         subBtn.forEach((ele) => ele.classList.remove('redBtn'));
         subBtn[0].classList.add('redBtn');
@@ -162,18 +162,18 @@ window.addEventListener('wheel', ()=>{stsClick=0});
 const colorChange = (event) => {
     stsClick = 1;
     const clickedElement = event.target;
-    event.preventDeafault();
+    // event.preventDeafault();
 
     // 클릭된 요소가 subBtn에 포함된 것인지 확인
     if (Array.from(subBtn).includes(clickedElement)) {
-        console.log('hi')
+        console.log('hi click')
         // 클릭된 요소에 "redBtn" 클래스를 추가하고 나머지 요소들에서는 제거
         subBtn.forEach((x) => {x.classList.remove("redBtn")});
         clickedElement.classList.add("redBtn");
     }
 }
 
-window.addEventListener("click", colorChange);
+// window.addEventListener("click", colorChange);
 
 
 // 추천제품
