@@ -355,10 +355,8 @@ li::marker {
     /* top: 50px; */
     top: 0;
     padding: 10px 0;
-    background-color: #000;
-    /* border-top: 1px solid #555; */
-    /* border-bottom: 1px solid #555; */
-
+    /* background-color: #000; */
+    background-color: #ffffffe0;
 }
 .sub-btn-bx ul{
     display: flex;
@@ -370,7 +368,7 @@ li::marker {
     text-align: center;
 }
 .sub-btn-bx ul li a{
-    color: #fff;
+    color: #000;
 }
 
 /* 서브 상세페이지 */

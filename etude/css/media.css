@@ -177,13 +177,13 @@
 @media screen and (max-width:900px) {
     .sub-l-sub-img-wrap{
         position: static;
-        background-color: black;
+        /* background-color: black; */
     }
     .sub-l-sub-img>img {
-        border: 2px solid #555;
+        /* border: 2px solid #555; */
     }
     .sub-l-sub-img>img.click {
-        border: 2.5px solid #fff;
+        /* border: 2.5px solid #fff; */
     }
 }
 
@@ -435,6 +435,16 @@
     .sub-option-wrap>span {
         font-size: 0.85rem;
     }
+    .sub-l-sub-img {
+        width: 100%;
+    }
+    /* .sub-l-sub-img {
+        display: flex;
+    }
+    .sub-l-sub-img img{
+        display: block;
+        left: initial;
+    } */
     .footer-l-bx-1>span{
         font-size: 13px;
     }
