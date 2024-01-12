@@ -140,7 +140,7 @@ const subBtn3 = document.querySelector('#recommended-product').getBoundingClient
 const goExplanationArea = () => {
     if(stsClick) return;
     btnScrollY = window.scrollY 
-    if(btnScrollY >= subBtn1 && btnScrollY < subBtn2){
+    if(btnScrollY > 0 && btnScrollY < subBtn2){
         subBtn.forEach((ele) => ele.classList.remove('redBtn'));
         subBtn[0].classList.add('redBtn');
         console.log('hi1');
