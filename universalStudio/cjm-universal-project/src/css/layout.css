@@ -386,16 +386,11 @@ ol.bmenu {
     }
     
     .top-area {
-        overflow: hidden;
-        
+        overflow: hidden;      
     }
     
 }
-@media screen and (max-width:920px) {
 
-    
-
-}
 @media screen and (max-width:550px) {
     .gnb2 li {
         font-size: 1.5rem;

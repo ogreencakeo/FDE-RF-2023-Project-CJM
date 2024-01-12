@@ -1,13 +1,27 @@
 import { useContext, useEffect } from 'react';
 import '../../css/logo.css';
 import { universalCon } from './universalContext';
+// 제이쿼리
+import $ from "jquery";
+
 export function Logo(){
     const myCon = useContext(universalCon);
 
+    
     useEffect(()=>{
         const logoSrollTo = ()=>{
+            const topShowNav = document.querySelector('.top-show-nav');
+            console.log('hidsfds');
+            myCon.chgPage('/', {});
             window.scrollTo(0,0);
-            console.log('hi');
+            if(topShowNav){
+                // topShowNav.classList.remove('on');
+                // topShowNav.classList
+                console.log('siufhsdif');
+                $(".top-show-nav").slideUp().removeClass("on");
+            }
+            // topShowNav.style.display = 'none'
+
         }
         const logoClick = document.querySelector('.nav-logo img');
 
