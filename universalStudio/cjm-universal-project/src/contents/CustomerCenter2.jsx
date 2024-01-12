@@ -121,9 +121,6 @@ export function CustomerCenter2() {
                         <a href="#" data-idx={v.idx} onClick={chgMode}>
                             {v.tit}
                         </a>
-                        {/* <a href="#" data-idx={v.idx}>
-                            {v.tit}
-                        </a> */}
                     </li>
                     <li>{v.unm}</li>
                     <li>{v.date}</li>
@@ -219,6 +216,7 @@ export function CustomerCenter2() {
                     <Fragment key={-2}>
                         <a
                             href="#"
+                            style={{ marginLeft: "5px" }}
                             onClick={(e) => {
                                 e.preventDefault();
                                 goPaging(1, true);
@@ -228,7 +226,7 @@ export function CustomerCenter2() {
                         </a>
                         <a
                             href="#"
-                            style={{ marginLeft: "10px" }}
+                            style={{ marginLeft: "5px" }}
                             title="맨뒤으로"
                             onClick={(e) => {
                                 e.preventDefault();

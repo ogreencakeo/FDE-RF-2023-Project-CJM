@@ -19,11 +19,24 @@ import {
     faTree,
 } from "@fortawesome/free-solid-svg-icons";
 
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+
+import "../css/swiper.css";
+
+
+
 export function AreaType() {
-    useLayoutEffect(()=>{
-        window.scrollTo(0,0);
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
     }, []);
-    
+    useEffect(() => {
+    });
+
     const loc = useLocation();
     let keyword;
 
@@ -44,11 +57,9 @@ export function AreaType() {
         });
     };
 
-
     const makeList = () => {
-
         const filterData = attractionData.filter((v) => selectedCat.includes(v.areatype));
-        
+
         return filterData.map((v, i) => (
             <div className="area-type-bx" key={i}>
                 <Link
@@ -82,76 +93,78 @@ export function AreaType() {
     return (
         <>
             <GoodsSwiper cats="area" />
-            <div className="area-type-btn">
-                <nav>
-                    <ul>
-                        <li>
-                            <label htmlFor="nintendo">
-                                <FontAwesomeIcon icon={faDiceTwo} /> 닌텐도 월드
-                            </label>
-                            &nbsp;
-                            <input
-                                type="checkbox"
-                                className="chkbx"
-                                id="nintendo"
-                                defaultChecked={selectedCat.includes("nintendo")}
-                                onChange={changeList}
-                            />
-                        </li>
-                        <li>
-                            <label htmlFor="harrypotter">
-                                <FontAwesomeIcon icon={faHatWizard} /> 해리포터
-                            </label>
-                            &nbsp;
-                            <input
-                                type="checkbox"
-                                className="chkbx"
-                                id="harrypotter"
-                                defaultChecked={selectedCat.includes("harrypotter")}
-                                onChange={changeList}
-                            />
-                        </li>
-                        <li>
-                            <label htmlFor="minion">
-                                <FontAwesomeIcon icon={faParachuteBox} /> 미니언파크
-                            </label>
-                            &nbsp;
-                            <input
-                                type="checkbox"
-                                className="chkbx"
-                                id="minion"
-                                defaultChecked={selectedCat.includes("minion")}
-                                onChange={changeList}
-                            />
-                        </li>
-                        <li>
-                            <label htmlFor="wonderland">
-                                <FontAwesomeIcon icon={faDemocrat} /> 원더랜드
-                            </label>
-                            &nbsp;
-                            <input
-                                type="checkbox"
-                                className="chkbx"
-                                id="wonderland"
-                                defaultChecked={selectedCat.includes("wonderland")}
-                                onChange={changeList}
-                            />
-                        </li>
-                        <li>
-                            <label htmlFor="jurassicpark">
-                                <FontAwesomeIcon icon={faTree} /> 쥬라기공원
-                            </label>
-                            &nbsp;
-                            <input
-                                type="checkbox"
-                                className="chkbx"
-                                id="jurassicpark"
-                                defaultChecked={selectedCat.includes("jurassicpark")}
-                                onChange={changeList}
-                            />
-                        </li>
-                    </ul>
-                </nav>
+            <div className="area-type-btn-wrap">
+                <div className="area-type-btn">
+                    <nav>
+                        <ul>
+                            <li>
+                                <label htmlFor="nintendo">
+                                    <FontAwesomeIcon icon={faDiceTwo} /> 닌텐도 월드
+                                </label>
+                                &nbsp;
+                                <input
+                                    type="checkbox"
+                                    className="chkbx"
+                                    id="nintendo"
+                                    defaultChecked={selectedCat.includes("nintendo")}
+                                    onChange={changeList}
+                                />
+                            </li>
+                            <li>
+                                <label htmlFor="harrypotter">
+                                    <FontAwesomeIcon icon={faHatWizard} /> 해리포터
+                                </label>
+                                &nbsp;
+                                <input
+                                    type="checkbox"
+                                    className="chkbx"
+                                    id="harrypotter"
+                                    defaultChecked={selectedCat.includes("harrypotter")}
+                                    onChange={changeList}
+                                />
+                            </li>
+                            <li>
+                                <label htmlFor="minion">
+                                    <FontAwesomeIcon icon={faParachuteBox} /> 미니언파크
+                                </label>
+                                &nbsp;
+                                <input
+                                    type="checkbox"
+                                    className="chkbx"
+                                    id="minion"
+                                    defaultChecked={selectedCat.includes("minion")}
+                                    onChange={changeList}
+                                />
+                            </li>
+                            <li>
+                                <label htmlFor="wonderland">
+                                    <FontAwesomeIcon icon={faDemocrat} /> 원더랜드
+                                </label>
+                                &nbsp;
+                                <input
+                                    type="checkbox"
+                                    className="chkbx"
+                                    id="wonderland"
+                                    defaultChecked={selectedCat.includes("wonderland")}
+                                    onChange={changeList}
+                                />
+                            </li>
+                            <li>
+                                <label htmlFor="jurassicpark">
+                                    <FontAwesomeIcon icon={faTree} /> 쥬라기공원
+                                </label>
+                                &nbsp;
+                                <input
+                                    type="checkbox"
+                                    className="chkbx"
+                                    id="jurassicpark"
+                                    defaultChecked={selectedCat.includes("jurassicpark")}
+                                    onChange={changeList}
+                                />
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
             <div className="area-type-wrap">{makeList()}</div>
             <UniverSalText />

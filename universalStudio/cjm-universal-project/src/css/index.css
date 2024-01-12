@@ -374,49 +374,9 @@ a {
     /* height: 100vh; */
 }
 
-
-/* 메인2 */
-/* 유니버셜 스튜디오 소개 개요 */
-/* .main2{
-    width: 100%;
-}
-
-.main2>h2{
-    text-align: center;
-    font-size: 3vw;
-    padding: 20px;
-    font-family: 'Gugi', cursive;
-    background-color: #ebe3de;
-}
-.universal_explanation_index{
-    max-width: 1200px;
-    margin: 0 auto;
-    border: 8px solid #fff;
-    
-}
-.universal_explanation_wrap{
-    display: flex;
-    justify-content: space-around;
-}
-.universal_explanation_wrap>img, .universal_explanation_wrap>span{
-    display: block;
-    width: 50%;
-    height: 430px;
-} */
-/* .universal_explanation_wrap>span{
-    background-color: #fff;
-} */
-
 /* //////////////////////////////////////// */
 /* 픽업 */
 .pick-up {
-    /* width: 100%; */
-    /* background:url(../images/gingham-2227349_1920.jpg); */
-    /* background-color: rgb(251 249 246); */
-    /* background-color: ; */
-
-    /* 
-    */
     position: relative;
     min-height: 555px;
     width: 100%;
@@ -429,13 +389,7 @@ a {
 }
 
 .pick-up-wrap {
-    /* max-width: 100%; */
-    /* margin: 0 auto; */
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: start; */
-
-    /*  */
     position: absolute;
     height: 377px;
     margin: 20px;

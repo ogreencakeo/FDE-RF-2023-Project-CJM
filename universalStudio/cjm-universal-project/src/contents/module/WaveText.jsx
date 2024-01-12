@@ -11,7 +11,9 @@ const WaveText = () => {
 
         for (let x of waveText) {
             if (x === ' ') waveSpanCode += '\u00a0\u00a0';
-            else waveSpanCode += `<span style="animation-delay : ${seqNum * 0.1}s;">${x}</span>`;
+            else{
+                waveSpanCode += `<span style="animation-delay : ${seqNum * 0.1}s;">${x}</span>`;
+            }
             seqNum++;
         }
 
