@@ -147,8 +147,16 @@
         width: 45%;
         margin: 0 auto 20px;
     }
+    .main4-wrap{
+        margin-top: 80px;
+    }
 }
+@media screen and (max-width:980px) {
+    .main1-wrap {
+        padding: 10px 0 80px !important;
+    }
 
+}
 @media screen and (max-width:900px) {
     .main2-icon-bx .view-more {
         display: none;
@@ -168,6 +176,7 @@
     .sub-l-img{
         position: static;
     }
+    
 
     .footer-l-bx-2 ul li{
         flex-basis: 30%;
