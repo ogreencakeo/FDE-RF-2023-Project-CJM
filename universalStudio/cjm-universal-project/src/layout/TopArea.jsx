@@ -87,8 +87,8 @@ export const TopArea = memo(({ chgPageFn, logSts, logMsg, logOut }) => {
                 const scrollTop = window.scrollY || window.pageYOffset;
                 const windowWidth = window.innerWidth;
 
-                // windowWidth가 920px 이상이고, 스크롤을 아래로 내릴 때 hide 클래스 추가
-                if (windowWidth >= 920 && scrollTop > lastScrollTop) {
+                // windowWidth가 1033px 이상이고, 스크롤을 아래로 내릴 때 hide 클래스 추가
+                if (windowWidth >= 1033 && scrollTop > lastScrollTop) {
                     topArea.classList.add("hide");
                 } else {
                     // 위로 스크롤할 때 또는 화면 너비가 920px 미만일 때 hide 클래스 제거

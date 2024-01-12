@@ -370,6 +370,16 @@ ol.bmenu {
     }
 }
 
+@media screen and (max-width:1033px) {
+    .gnb>ul>li:nth-child(1)~li:nth-child(-n+10) {
+        display: none;
+
+    }
+
+    .hambtn {
+        display: block;
+    }
+}
 @media screen and (max-width:1024px) {
     .logmsg{
         right: 5%;
@@ -383,14 +393,7 @@ ol.bmenu {
 }
 @media screen and (max-width:920px) {
 
-    .gnb>ul>li:nth-child(1)~li:nth-child(-n+10) {
-        display: none;
-
-    }
-
-    .hambtn {
-        display: block;
-    }
+    
 
 }
 @media screen and (max-width:550px) {
