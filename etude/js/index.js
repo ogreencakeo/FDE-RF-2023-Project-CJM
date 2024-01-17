@@ -122,7 +122,11 @@ const main1RandomResult = selectedData.map(
 main1Bx.innerHTML += main1RandomResult.join("");
 
 // main2
-const main2Img = ["../image/main/main2/img1.jpg", "../image/main/main2/img2.jpg", "../image/main/main2/img3.jpg"];
+const main2Img = [
+    "../image/main/main2/img1.jpg", 
+    "../image/main/main2/img2.jpg", 
+    "../image/main/main2/img3.jpg"
+];
 
 const main_img_bx = document.querySelector(".main-img-bx");
 const main_img = document.createElement("img");

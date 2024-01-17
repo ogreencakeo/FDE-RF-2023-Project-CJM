@@ -90,6 +90,9 @@ subSubImg.forEach((ele)=>{
     ele.addEventListener('click', changeSubImg);
 });
 
+// 맨 처음 사진이 로딩될때 클릭되게 하는 부분
+subSubImg[0].click();
+
 // 서브 - 상세페이지
 const detailPage = document.querySelector(".sub-explanation-bx1");
 
@@ -168,15 +171,12 @@ const goExplanationArea = () => {
     if(btnScrollY > 0 && btnScrollY < subBtn2){
         subBtn.forEach((ele) => ele.classList.remove('redBtn'));
         subBtn[0].classList.add('redBtn');
-        console.log('hi1');
     }else if(btnScrollY >= subBtn2 && btnScrollY < subBtn3){
         subBtn.forEach((ele) => ele.classList.remove('redBtn'));
         subBtn[1].classList.add('redBtn');
-        console.log('hi2');
     }else if(btnScrollY >= subBtn3){
         subBtn.forEach((ele) => ele.classList.remove('redBtn'));
         subBtn[2].classList.add('redBtn');
-        console.log('hi3');
     }
 };
 
@@ -198,7 +198,6 @@ const colorChange = (event) => {
     }
 }
 
-// window.addEventListener("click", colorChange);
 
 
 // 추천제품
