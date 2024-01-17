@@ -476,7 +476,7 @@ html, body{
     padding: 10px 0 100px 0;
     transform: rotate(90deg) translate(50%, -50%);
     opacity: 0;
-    transition: .4s ease-in;
+    transition: .4s cubic-bezier(.17,.67,.88,.12);
 }
 .sns-bx-wrap.on{
     transform: rotate(0) translate(0%, 0%);
