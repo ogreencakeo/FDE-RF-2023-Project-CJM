@@ -375,3 +375,29 @@ handleMediaQueryChange2(mediaQuery2);
 
 // 미디어 쿼리 변경 시 이벤트 리스너 등록
 mediaQuery2.addListener(handleMediaQueryChange2);
+
+// 햄버거 nav
+const hambtnNav = document.querySelector('.hambtn-wrap');
+temp = [];
+for(let i=0; i<navData.length; i++){
+    temp[i] = `
+        <li>
+            <a href="#">
+                ${navData[i]}
+            </a>
+        </li>
+    `;
+}
+hambtnNav.innerHTML += temp.join('');
+hambtnNav.innerHTML += "<img src='../image/logo.png' alt = '로고이미지' onClick='location.href=\"./index.html\"' />";
+
+// 햄버거 토글
+const hamBnt = document.querySelector('.main-wrap .hambtn button');
+const showNav = () => {
+    if(hamBnt){
+        hambtnNav.classList.toggle('on');
+        hamBnt.classList.toggle('click');
+    }
+};
+
+hamBnt.addEventListener('click', showNav);

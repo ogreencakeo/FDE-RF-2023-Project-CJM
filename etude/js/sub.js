@@ -28,18 +28,18 @@ const topBtnScroll = () => {
 scrollBtn.addEventListener('click', topBtnScroll);
 
 // nav
-// const navList = document.querySelector(".nav-wrap ul");
-// let temp = [];
-// for (let i = 0; i < navData.length; i++) {
-//     temp[i] = `
-//         <li>
-//             <a href="#">
-//                 ${navData[i]}
-//             </a>
-//         </li>
-//     `;
-// }
-// navList.innerHTML += temp.join("");
+const navList = document.querySelector(".nav-wrap ul");
+let temp = [];
+for (let i = 0; i < navData.length; i++) {
+    temp[i] = `
+        <li>
+            <a href="#">
+                ${navData[i]}
+            </a>
+        </li>
+    `;
+}
+navList.innerHTML += temp.join("");
 
 // 틴트 모달창
 const tintBx = document.querySelector(".sub-option-bx-wrap");
@@ -244,9 +244,10 @@ for (let i = 0; i < navData.length; i++) {
     `;
 }
 hambtnNav.innerHTML += temp.join("");
-hambtnNav.innerHTML += "<img src='../image/logo.png' alt='로고이미지' onClick='location.href=\"./index.html\"' >";
+hambtnNav.innerHTML += "<img src='../image/logo.png' alt = '로고이미지' onClick='location.href=\"./index.html\"' />";
+
 // 햄버거 토글
-const hamBnt = document.querySelector('.hambtn button');
+const hamBnt = document.querySelector('.sub-wrap .hambtn button');
 
 console.log(hamBnt);
 const showNav = () => {

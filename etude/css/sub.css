@@ -8,109 +8,22 @@ body > *, div > *{
     /* border: 1px solid red; */
     box-sizing: border-box;
 }
-/* 햄버거 버튼 */
-.hambtn-wrap{
-    width: 100%;
+
+/* 서브 헤더 */
+.sub-header .nav-wrap{
+    border-bottom: 0;
+    background-color: rgba(255, 255, 255, 0);;
 }
-.hambtn-wrap img{
-    margin: 0 auto;
-    display: block;
-    margin-top: 50px;
+.sub-header .nav-wrap>ul>li{
+    flex: initial;
 }
-.hambtn{
-    width: 50%;
-    height: 40px;
-    padding: 5px 0;
-    position: fixed;
-    z-index: 10;
-    right: 0;
-    top: 0;
-    background-color: #fff;
+.sub-header .nav-wrap > ul > li > a {
+    text-shadow: 1px 1px 1px #fff;
 }
-.hambtn button{
-    display:block;
-    width: 50px;
-    height: 40px;
-    position: absolute;
-    right: 0;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-}
-.hambtn button span{
-    width: 40px;
-    height: 8px;
-    background-color: #000;
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+.sub-header .logo{
+    margin-right: 10px;
 }
 
-.hambtn button span:first-child{
-    top: 0;
-    position: absolute;
-    transition: .2s ease-out;
-}
-.hambtn button span:nth-child(2){
-    left: 35%;
-    top: calc(50% - 4px);
-    position: absolute;
-    transition: .2s ease-out;
-}
-.hambtn button span:last-child{
-    bottom: 0%;
-    position: absolute;
-    transition: .2s ease-out;
-}
-.hambtn button:hover span:nth-child(2){
-    left: 50%;
-}
-/* 햄버거버튼 - 클릭시 네브 보임 */
-.hambtn-wrap{
-    max-width: 320px;
-    height: 500px;
-    position: fixed;
-    top: 0;
-    right: -110%;
-    /* right: 0; */
-    margin-top: 50px;
-    background-color: #fff;
-    z-index: 10;
-    transition: .4s ease-out;
-    border-bottom-left-radius: 15px;
-}
-.hambtn-wrap.on{
-    right: 0;
-}
-.hambtn-wrap li{
-    margin-top: 30px;
-    text-align: center;
-}
-.hambtn-wrap li a{
-    font-family: 'Gugi';
-    font-size: 1.2rem;
-}
-li::marker {
-    display: none;
-  }
-/* 햄버거버튼 클릭시 */
-.hambtn button.click span:nth-child(2){
-    display: none;
-}
-.hambtn button.click span:first-child{
-    transform: rotate(-45deg);
-    top: calc(50% - 4px);
-    left: 4px;
-}
-.hambtn button.click span:last-child{
-    transform: rotate(45deg);
-    top: calc(50% - 4px);
-    left: 4px;
-}
-.hambtn-wrap img{
-    cursor: pointer;
-}
 /* 서브 */
 .sub-wrap{
     max-width: 100%;
@@ -338,7 +251,8 @@ li::marker {
 }
 .modal-tint-img img{
     width: 100%;
-    aspect-ratio: 1.3/1;
+    aspect-ratio: 1.8/1;
+    object-fit: cover;
 }
 .modal-content h1{
     font-size: 1.6rem;
@@ -352,11 +266,13 @@ li::marker {
 .sub-btn-bx{
     max-width: 100%;
     position: sticky;
-    /* top: 50px; */
+    /* top: 100px; */
     top: 0;
     padding: 10px 0;
     /* background-color: #000; */
     background-color: #ffffffe0;
+    z-index: 9999;
+    padding: 20px;
 }
 .sub-btn-bx ul{
     display: flex;
@@ -368,7 +284,7 @@ li::marker {
     text-align: center;
 }
 .sub-btn-bx ul li a{
-    color: #000;
+    color: #555;
 }
 
 /* 서브 상세페이지 */
@@ -450,7 +366,7 @@ li::marker {
 
 .subBtn.redBtn{
     font-weight: 800;
-    color: orangered;
+    color: #000;
 }
 
 /* 추천제품 */

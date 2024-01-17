@@ -5,9 +5,9 @@ html, body{
 }
 .scroll-btn{
     position: fixed;
-    bottom: 100px;
+    bottom: 5%;
     right: 40px;
-    width: 100px;
+    width: 100px !important;
     height: 100px;
     background-color: transparent;
     z-index: 9;
@@ -69,7 +69,7 @@ html, body{
 }
 .nav-wrap>ul>li>a{
     font-family: 'Gugi';
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .nav-wrap.hide{
@@ -568,7 +568,7 @@ html, body{
 
 /* footer */
 .footer{
-    max-width: 100%;
+    width: 100%;
     background-color: #f7f7f7;
     padding: 40px 0 20px;
 }

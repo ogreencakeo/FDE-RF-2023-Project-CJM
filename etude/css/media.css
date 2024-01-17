@@ -5,13 +5,19 @@
     }
     /* .sub-wrap>div:first-child{ */
     .sub-wrap>div:first-child{
-        margin-top: 50px;
+        /* margin-top: 50px; */
     }
     .sub-l-img>img{
         height: auto;
     }
     .sub-main-bx1{
         margin: 100px auto 0px;
+    }
+    .sub-wrap .sub-header{
+        display: none;
+    }
+    .sub-wrap .hambtn-wrap{
+        display: block;
     }
 }
 @media screen and (max-width:1150px) {
@@ -194,6 +200,14 @@
     .sub-l-sub-img>img.click {
         /* border: 2.5px solid #fff; */
     }
+
+    .main-wrap .header{
+        display: none;
+    }
+    .main-wrap .hambtn-wrap{
+        display: block;
+    }
+
 }
 
 @media screen and (max-width:800px) {
@@ -417,6 +431,20 @@
         display: block;
         margin: 0 auto;
     }
+
+    .scroll-btn{
+        right: 15px;
+    }
+    .scroll-btn{
+        width: 80px !important;
+        height: 80px;
+    }
+    .scroll-btn button h1{
+        font-size: 2rem;
+    }
+    .scroll-btn button p{
+        font-size: 1rem;
+    }
 }
 
 
@@ -447,13 +475,6 @@
     .sub-l-sub-img {
         width: 100%;
     }
-    /* .sub-l-sub-img {
-        display: flex;
-    }
-    .sub-l-sub-img img{
-        display: block;
-        left: initial;
-    } */
     .footer-l-bx-1>span{
         font-size: 13px;
     }
@@ -509,6 +530,9 @@
     }
     .gift-bx{
         flex-basis: 95%;
+    }
+    .sub-btn-bx li a{
+        font-size: 1rem;
     }
 }
 
@@ -603,6 +627,9 @@
         font-size: 1.1rem;
     }
     
+    .sub-btn-bx li a {
+        font-size: 0.85rem;
+    }
 }
 
 
@@ -634,5 +661,44 @@
     }
     .main1Bx>section>p{
         margin-bottom: 10px;
+    }
+    .scroll-btn{
+        width: 60px !important;
+        height: 60px;
+        right: 5px;
+    }
+    .scroll-btn button h1 {
+        font-size: 1.8rem;
+    }
+    .scroll-btn button p {
+        font-size: 0.85rem;
+    }
+    .sub-l-sub-img>img {
+        width: 85px;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    .icon-bx h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .sub-l-sub-img>img {
+        width: 78px;
+    }
+    .sub-btn-bx {
+        padding: 20px 0px;
+    }
+    .sub-wrap>div:last-child {
+        padding: 5px;
+    }
+    .sub-btn-bx li a {
+        margin-right: 10px;
+    }
+    .sub-btn-bx ul li {
+        width: initial;
     }
 }
