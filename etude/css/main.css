@@ -197,7 +197,17 @@ html, body{
     max-width: 100%;
     display: block;
     aspect-ratio:9/1;
+    opacity: 0;
+    transition: .6s ease-in-out;
+    transform: translateY(-140%);
     
+}
+.main-title-bx>img.on{
+    max-width: 100%;
+    display: block;
+    aspect-ratio:9/1;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* main3 */
@@ -207,6 +217,13 @@ html, body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    transition: .5s ease-in-out;
+    opacity: 0;
+    transform: translate(50%, 50%);
+}
+.main3-wrap.on{
+    opacity: 1;
+    transform: translateY(0);
 }
 .main3-bx{
     width: 24%;
@@ -222,8 +239,9 @@ html, body{
 .main3-img{
     max-width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: hidden;    
 }
+
 .main3-img img{
     max-width: 100%;
     display: block;
@@ -355,6 +373,13 @@ html, body{
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px auto 150px;
+    transform: scale(0.5);
+    transition: .5s ease-in-out;
+    opacity: 0;
+}
+.gift-bx-wrap.on{
+    transform: scale(1);
+    opacity: 1;
 }
 
 .gift-bx{
@@ -489,6 +514,13 @@ html, body{
 
 .pink-bg{
     position: relative;
+    opacity: 0;
+    transform: translateY(200%);
+    transition: 1s ease-in-out;
+}
+.pink-bg.on{
+    opacity: 1;
+    transform: translateY(0);
 }
 .pink-bg::after{
     position: absolute;
@@ -499,7 +531,10 @@ html, body{
     width: 400px;
     height: 968px;
     background: linear-gradient(180deg, #F5E2E2 0%, #faa7e6 50%, #fa6ed9 100%);
+    
 }
+
+
 
 .sns-info-bx>a{
     display: inline-block;

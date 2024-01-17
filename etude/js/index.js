@@ -137,6 +137,20 @@ main_img.setAttribute("src", main2Img[randomImg]);
 
 main_img_bx.appendChild(main_img);
 
+// main2 글자 등장
+const main2Tit = document.querySelector('.main-title-bx>img');
+
+const showTit = () => {
+    const main2TitPosition = main2Tit.getBoundingClientRect().top;
+    if(main2TitPosition < window.innerHeight){
+        main2Tit.classList.add('on')
+    }else{
+        main2Tit.classList.remove('on')
+    }
+};
+
+window.addEventListener('scroll', showTit);
+
 // main3
 const main3Bx = document.querySelector(".main3-wrap");
 temp = [];
@@ -156,6 +170,19 @@ main3Data.map((v, i) => {
 });
 
 main3Bx.innerHTML += temp.join("");
+
+const main3Img = document.querySelector('.main3-wrap');
+
+const showMain3Img = () => {
+    const main3ImgPosition = main3Img.getBoundingClientRect().top;
+    if(main3ImgPosition < window.innerHeight){
+        main3Img.classList.add('on');
+    }else{
+        main3Img.classList.remove('on');
+    }
+};
+
+window.addEventListener('scroll', showMain3Img);
 
 // main4
 const main4Bx = document.querySelector(".main4-img-l");
@@ -201,6 +228,17 @@ for (let i = 0; i < giftBxData.length; i++) {
 }
 
 giftBx.innerHTML += temp.join("");
+
+const giftBxShow = () => {
+    const giftBxPosition = giftBx.getBoundingClientRect().top;
+    if(giftBxPosition < window.innerHeight){
+        giftBx.classList.add('on');
+    }else{
+        giftBx.classList.remove('on');
+    }
+};
+
+window.addEventListener('scroll', giftBxShow);
 
 // whats new Swiper
 const swiperContainer2 = new Swiper(".whats-new-swipe-container", {
@@ -313,6 +351,19 @@ for (let i = 0; i < snsData.length; i++) {
 }
 
 swiperContainer3.update(); // Swiper 업데이트
+
+const snsBar = document.querySelector('.pink-bg');
+
+const snsBarShow = () => {
+    const snsBarPosition = snsBar.getBoundingClientRect().top;
+    if(snsBarPosition < window.innerHeight){
+        snsBar.classList.add('on');
+    }else{
+        snsBar.classList.remove('on');
+    }
+};
+
+window.addEventListener('scroll', snsBarShow);
 
 // news-event Swiper
 const swiperContainer4 = new Swiper(".news-event-swipe-container", {

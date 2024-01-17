@@ -206,7 +206,7 @@ body > *, div > *{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.466);
     display: none;
-    z-index: 11;
+    z-index: 999999;
 }
 .modal-content{
     top: 50%;
