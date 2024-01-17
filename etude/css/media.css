@@ -221,7 +221,7 @@
     }
 
     .modal-tint-img img{
-        aspect-ratio: 1.3/1;
+        aspect-ratio: 1.8/1;
         object-fit: cover;
     }
 
@@ -613,6 +613,7 @@
 @media screen and (max-width:450px) {
     .modal-content {
         width: 95vw;
+
     }
     .modal-content > div:first-of-type {
         height: 40px;
@@ -626,7 +627,9 @@
     .modal-content h2 {
         font-size: 1.1rem;
     }
-    
+    .modal-tint-img img {
+        aspect-ratio: 1.2/1;
+    }
     .sub-btn-bx li a {
         font-size: 0.85rem;
     }
@@ -683,6 +686,15 @@
     .icon-bx h1 {
         font-size: 30px;
     }
+    .sub-btn-bx {
+        padding: 20px 5px;
+    }
+    .sub-btn-bx ul li {
+        width: initial;
+    }
+    .sub-btn-bx li a {
+        margin-right: 20px;
+    }
 }
 
 @media screen and (max-width:350px) {
@@ -698,7 +710,5 @@
     .sub-btn-bx li a {
         margin-right: 10px;
     }
-    .sub-btn-bx ul li {
-        width: initial;
-    }
+    
 }
