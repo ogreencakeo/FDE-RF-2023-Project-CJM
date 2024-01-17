@@ -217,17 +217,18 @@ html, body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    transition: .5s ease-in-out;
-    opacity: 0;
-    transform: translate(50%, 50%);
+    overflow: hidden;
 }
-.main3-wrap.on{
+.main3-bx.on{
     opacity: 1;
     transform: translateY(0);
 }
 .main3-bx{
     width: 24%;
     margin: 5px;
+    transition: .5s ease-in-out;
+    opacity: 0;
+    transform: translate(50%, 50%);
 }
 .main3-bx:hover .main3-img section{
     display: block;
@@ -463,6 +464,7 @@ html, body{
 /* sns-info */
 .sns-info-wrap{
     max-width: 100%;
+    overflow: hidden;
 }
 
 .sns-bx-wrap{
@@ -472,8 +474,14 @@ html, body{
     position: relative;
     flex-wrap: wrap;
     padding: 10px 0 100px 0;
+    transform: rotate(90deg) translate(50%, -50%);
+    opacity: 0;
+    transition: .4s ease-in;
 }
-
+.sns-bx-wrap.on{
+    transform: rotate(0) translate(0%, 0%);
+    opacity: 1;
+}
 
 .sns-bx1{
     width: 35%;

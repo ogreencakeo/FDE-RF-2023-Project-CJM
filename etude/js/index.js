@@ -171,15 +171,20 @@ main3Data.map((v, i) => {
 
 main3Bx.innerHTML += temp.join("");
 
-const main3Img = document.querySelector('.main3-wrap');
+const main3Img = document.querySelectorAll('.main3-bx');
 
 const showMain3Img = () => {
-    const main3ImgPosition = main3Img.getBoundingClientRect().top;
-    if(main3ImgPosition < window.innerHeight){
-        main3Img.classList.add('on');
-    }else{
-        main3Img.classList.remove('on');
-    }
+    main3Img.forEach((v,i) => {
+        const main3ImgPosition = v.getBoundingClientRect().top;
+        if(main3ImgPosition < window.innerHeight){
+            // 0.15초 간격으로 나타나도록 setTimeout 사용
+            setTimeout(() => {
+                v.classList.add('on');
+            }, i*150);
+        }else{
+            v.classList.remove('on');
+        }
+    });
 };
 
 window.addEventListener('scroll', showMain3Img);
@@ -364,6 +369,19 @@ const snsBarShow = () => {
 };
 
 window.addEventListener('scroll', snsBarShow);
+
+const snsBxWrap = document.querySelector('.sns-bx-wrap');
+
+const snsBxWrapShow = () => {
+    const snsBxWrapPosition = snsBxWrap.getBoundingClientRect().top;
+    if(snsBxWrapPosition < window.innerHeight){
+        snsBxWrap.classList.add('on');
+    }else{
+        snsBxWrap.classList.remove('on');
+    }
+};
+
+window.addEventListener('scroll', snsBxWrapShow);
 
 // news-event Swiper
 const swiperContainer4 = new Swiper(".news-event-swipe-container", {
