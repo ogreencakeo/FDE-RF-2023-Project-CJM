@@ -48,12 +48,12 @@ export function Layout() {
 
     
     const flag = useRef(true);
-    let stsVal = 0;
+    let stsVal = false;
     let transVal = null;
 
     if(localStorage.getItem('universal-cart')){
         transVal = JSON.parse(localStorage.getItem('universal-cart'));
-        if(transVal.length !== 0) stsVal = 1;
+        if(transVal.length !== 0) stsVal = true;
     }
     
     const [transData, setTransData] = useState(transVal); // 로컬스 변환값 변수

@@ -13,7 +13,12 @@ import { universalCon } from "./module/universalContext";
 import $ from "jquery";
 
 import "../css/board.css";
+import "../css/board_file.css";
 import { useContext } from "react";
+
+// 폰트어썸
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFile } from "@fortawesome/free-regular-svg-icons";
 
 // 기본 데이터 역순정렬
 baseData.sort((a, b) => {
@@ -643,6 +648,12 @@ export function CustomerCenter2() {
                                 <textarea className="content" cols="60" rows="10"></textarea>
                             </li>
                         </ul>
+                        <ul>
+                            <li>첨부파일</li>
+                            <li>
+                                <AttachBox />
+                            </li>
+                        </ul>
                     </div>
                 </div>
             )}
@@ -791,3 +802,69 @@ export function CustomerCenter2() {
         </>
     );
 } 
+
+// 업로드 모듈을 리턴하는
+const AttachBox = () => {
+    const [isOn, setIsOn] = useState(false);
+    const [uploadedInfo, setUploadedInfo] = useState(null);
+
+    // 이벤트 처리 메서드
+    const controllDragEnter = () => setIsOn(true);
+    const controllDragLeave = () => setIsOn(false);
+    const controllDragOver = e => e.preventDefault();
+    const controllDrop = e => {
+        e.preventDefault();
+        setIsOn(false);
+        // 파일정보 읽어오기
+        const fileInfo = e.dataTransfer.files[0];
+        setFileInfo(fileInfo);
+    };
+
+    // 드롭된 파일 정보를 화면에 뿌려주는 메서드
+    const setFileInfo = (fileInfo) => {
+        const {name, size:byteSize, type} = fileInfo;
+        const size = (byteSize/(1024 * 1024)).toFixed(2) + 'mb';
+        setUploadedInfo({name, size, type});
+    };  
+    return(
+        <label className="info-view"
+            onDragEnter={controllDragEnter}
+            onDragLeave={controllDragLeave}
+            onDragOver={controllDragOver}
+            onDrop={controllDrop}
+        >
+            <input type="file" className="file" />
+            {
+                // 업로드 정보가 null이 아니면 파일정보 출력
+                uploadedInfo && <FileInfo uploadedInfo={uploadedInfo} />
+            }
+            {
+                // 업로드 정보가 null이면 안내문자 출력
+                !uploadedInfo && (
+                    <>
+                        <h1 className="file-icon">
+                            <FontAwesomeIcon icon={faFile} />
+                        </h1>
+                        <p className="info-view-msg">여기를 클릭하거나 파일을 드래그해주세요.</p>
+                        <p className="info-view-desc">파일당 최대 3MB까지 허용됩니다.</p>
+                    </>
+                )
+            }
+        </label>
+    )
+};
+
+const FileInfo = ({uploadedInfo}) => {
+    <ul className="info-view-info">
+        {console.log(Object.entries(uploadedInfo))}
+        {
+            Object.entries(uploadedInfo).map(([key, value]) => (
+                <li key={key}>
+                    <span className="info-key">{key} :</span>
+                    <span className="info-value">{value} :</span>
+                </li>
+            ))
+        }
+    </ul>
+};
+

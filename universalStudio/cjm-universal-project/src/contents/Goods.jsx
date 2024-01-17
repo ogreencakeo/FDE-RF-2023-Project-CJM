@@ -17,8 +17,6 @@ import { ImgMoveSlide } from "./module/ImgMoveSlide";
 // CSS
 import "../css/goods.css";
 
-
-
 // 스와이퍼
 import { Caution } from "./module/Caution";
 import { GoodsMain } from "./GoodsCont/GoodsMain";
