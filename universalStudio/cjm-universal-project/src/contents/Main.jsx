@@ -268,7 +268,8 @@ export function Main() {
 
         const handleScroll = () => {
             showUpcomingEv('.main-upcomingEv', 'on');
-            showPickCont('.enjoy-pick-cont', 'hover', 200);
+            showUpcomingEv('.main-video-wrap>iframe', 'on');
+            showPickCont('.page2-light span', 'spin', 200);
         };
 
         window.addEventListener('scroll', handleScroll);

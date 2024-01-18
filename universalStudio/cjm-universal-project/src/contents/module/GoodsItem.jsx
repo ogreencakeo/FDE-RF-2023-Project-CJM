@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 // 제이쿼리
 import $ from "jquery";
+import { useEffect } from "react";
 
 export function GoodsItem(props) {
     console.log("props.cat :", props.cat);
@@ -27,6 +28,28 @@ export function GoodsItem(props) {
             top_area.fadeIn(300);
         });
     };
+
+    useEffect(()=>{
+
+        const showGoodsItem = (txt) => {
+            const target = document.querySelectorAll(txt);
+            target.forEach((v, i) => {
+                const tgPosition = v.getBoundingClientRect().top;
+                if(tgPosition < window.innerHeight){
+                    v.classList.add('on');
+                }else{
+                    v.classList.remove('on');
+                }
+            });
+        }
+
+        const scrollHandle = () => {
+            showGoodsItem('.goods_img');
+        }
+
+        window.addEventListener('scroll', scrollHandle);
+        return(()=>window.removeEventListener('scroll', scrollHandle));
+    })
     return (
         <>
             <div className="goods_bx_wrap">

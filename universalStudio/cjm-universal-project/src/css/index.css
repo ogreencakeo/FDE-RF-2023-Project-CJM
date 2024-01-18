@@ -483,11 +483,22 @@ a {
     border-bottom: 5px solid black;
     box-sizing: border-box;
     flex-wrap: wrap;
+    
+}
+.main-video-wrap{
+    overflow: hidden;
 }
 .main-video-wrap>iframe {
     aspect-ratio: 16/12;
     width: 750px;
     border-radius: 20px;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: .4s ease-in;
+}
+.main-video-wrap>iframe.on{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .main-video-cont h1 {
@@ -564,16 +575,24 @@ a {
     text-align: center;
     padding: 75px;
     display: block;
+    overflow: hidden;
 }
 
 .page2-light span {
     font-size: 8em;
     display: inline-block;
     margin: 0 20px;
+    opacity: 0;
+    transform: translate(75%) rotate(180deg);
+    transition: .6s ease-in-out;
 }
 
 .page2-light span .on {
     color: #ffd43b;
+}
+.page2-light span.spin{
+    transform: translate(0) rotate(0);
+    opacity: 1;
 }
 
 .main-character1 {
@@ -609,16 +628,7 @@ a {
     padding: 25px;
     flex: 1;
     margin: 10px 20px;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: .8s ease-in-out;
-    opacity: 0;
-    transform: translate(50%) rotate(180deg);
-    
-}
-.enjoy-pick-cont.hover{
-    opacity: 1;
-    transform: translate(0) rotate(0);
+    border-radius: 20px;   
 }
 .enjoty-pick-img {
     display: block;

@@ -58,11 +58,20 @@
     padding: 20px;
 }
 
-
+.goods_img_logo{
+    overflow: hidden;
+}
 .goods_img_logo>img{
     max-width: 100%;
     aspect-ratio: 1/1;
     display: block;
+    transform: translate(-100%, 50%);
+    opacity: 0;
+    transition: .4s ease-in;
+}
+.goods_img_logo>img.on{
+    opacity: 1;
+    transform:translate(0);
 }
 
 .goods_location{

@@ -23,8 +23,7 @@ export function SeasonalMenu() {
     }, []);
 
     return (
-        <>
-            
+        <>  
             <Routes>
                 <Route element='' />
                 <Route path="restaurant1" element={<Restaurant1 />} />

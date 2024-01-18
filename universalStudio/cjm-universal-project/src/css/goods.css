@@ -38,12 +38,24 @@
 /* 굿즈 개별 -이미지박스 */
 .goods_img{
     width: 100%;
-    border-radius: 20px;
+    overflow: hidden;
+    background-color: #000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .goods_img>img{
     width: 100%;
     aspect-ratio: 1/1;
-    border-radius: 20px;
+    transform: translateY(-120%);
+    opacity: 0;
+    transition: .65s ease-in;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.goods_img.on>img{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* 굿즈 개별 - 컨텐츠 (내용) */

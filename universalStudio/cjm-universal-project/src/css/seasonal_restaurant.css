@@ -258,6 +258,13 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    opacity: 0;
+    transition: .3s ease-in;
+    transform: translateY(30%);
+}
+.menu_pickup_info_wrap.on {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* 픽업메뉴&&추천메뉴 */

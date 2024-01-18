@@ -8,11 +8,36 @@ import { faCreditCard, faFileLines } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Map } from "./Map";
 import { MoveAgency } from "./MoveAgency";
+import { useEffect } from "react";
 
 export function SeasonalInfo(props) {
     const selData = seasonalMenu[props.menu];
     const outline_color = props.color;
     console.log(selData);
+
+    useEffect(()=>{
+
+
+        const showMenu = (txt) => {
+            const menuInfo = document.querySelectorAll(txt);
+            menuInfo.forEach((v, i) => {
+                const menuInfoPosition = v.getBoundingClientRect().top;
+                if(menuInfoPosition < window.innerHeight){
+                    v.classList.add('on');
+                }else{
+                    v.classList.remove('on');
+                }
+            })
+        }
+
+        const scrollHandel = () => {
+            showMenu('.menu_pickup_info_wrap');
+        }
+
+        window.addEventListener('scroll', scrollHandel);
+        return(()=>window.removeEventListener('scroll', scrollHandel));
+    }, []);
+
     return (
         <div className="seasonal_restaurant_wrap" key={selData.idx}>
             <div className="seasonal_restaurant_bx">

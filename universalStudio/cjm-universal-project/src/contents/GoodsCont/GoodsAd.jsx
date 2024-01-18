@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { goodsAdData } from '../../data/goods/goodsAdData';
 import '../../css/goods_ad.css';
 import { Map } from '../module/Map';
 
 // 폰트어썸
-import { faFaceSmileWink, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function GoodsAd(props) {
     const selData = goodsAdData[props.ad];
     const color = props.bg_color;
+    useEffect(()=>{
+        const showGoods = (txt) => {
+            const target = document.querySelector(txt);
+            const tgPosition = target.getBoundingClientRect().top;
+            if(tgPosition < window.innerHeight){
+                target.classList.add('on');
+            }else{
+                target.classList.remove('on');
+            }
+        }
+
+        const scrollHandle = () => {
+            showGoods('.goods_img_logo img');
+        }
+
+        window.addEventListener('scroll', scrollHandle);
+        return(()=> window.removeEventListener('scroll', scrollHandle));
+    }, []);
     return (
         <>
             <div className="goods_ad_wrap">
