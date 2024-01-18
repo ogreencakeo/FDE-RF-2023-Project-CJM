@@ -169,6 +169,7 @@
     border: 0px;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 8px;
 }
 
 @media screen and (max-width: 1080px) {
