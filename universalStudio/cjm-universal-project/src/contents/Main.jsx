@@ -48,8 +48,8 @@ import { NoticeModal } from "./module/NoticeModal.jsx";
 import { CookieGame } from "./module/CookieGame.jsx";
 
 export function Main() {
-    useLayoutEffect(()=>{
-        window.scrollTo(0,0);
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0);
     }, []);
     useEffect(() => {
         const mainImgStage = document.querySelector(".header-main-img-wrap");
@@ -81,7 +81,7 @@ export function Main() {
         // 일정 간격으로 페이지 2 배경색 변경
         const backgroundColorInterval = setInterval(() => {
             changeBackgroundColor();
-        }, 1000); 
+        }, 1000);
 
         return () => {
             clearInterval(backgroundColorInterval); // 컴포넌트가 언마운트될 때 interval 정리
@@ -194,8 +194,8 @@ export function Main() {
         };
 
         if (localStorage.getItem("lastClosedTime")) {
-            let lastClosedTime = 
-                parseInt(localStorage.getItem("lastClosedTime"),10);
+            let lastClosedTime =
+                parseInt(localStorage.getItem("lastClosedTime"), 10);
             const twentyFourHoursAgo = new Date().getTime() - 24 * 60 * 60 * 1000;
             // const twentyFourHoursAgo = new Date().getTime() - 1 * 60 * 30 * 1000;
 
@@ -234,7 +234,49 @@ export function Main() {
         return (() => {
             closeBtn.removeEventListener('click', closeBtnFn)
         })
-    })
+    });
+
+
+
+    useEffect(() => {
+        const showUpcomingEv = (txt, act) => {
+            const upcomingEv = document.querySelector(txt);
+            if (upcomingEv) {
+                const upcoimgEvPosition = upcomingEv.getBoundingClientRect().top;
+                if (upcoimgEvPosition < window.innerHeight) {
+                    upcomingEv.classList.add(act);
+                } else {
+                    upcomingEv.classList.remove(act);
+                }
+            }
+        };
+
+        const showPickCont = (txt, act, delay) => {
+            const pickCont = document.querySelectorAll(txt);
+            pickCont.forEach((v, i) => {
+                setTimeout(() => {
+                    const pickContEle = v.getBoundingClientRect().top;
+                    if (pickContEle < window.innerHeight) {
+                        v.classList.add(act);
+                    } else {
+                        v.classList.remove(act);
+                    }
+                }, delay * i);
+            });
+        }
+
+
+        const handleScroll = () => {
+            showUpcomingEv('.main-upcomingEv', 'on');
+            showPickCont('.enjoy-pick-cont', 'hover', 200);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
     return (
         <>
@@ -302,12 +344,12 @@ export function Main() {
                             </div>
                             {/* Main Content */}
                             <WaveText />
-                                <a href="https://ogreencakeo.github.io/ogreencakeo-react-pj/최지민(유니버설스튜디오).pdf" target="_blank">
-                            <div className="universal_link">
-                                {/* <button onClick={() => universalMapFn()}>GO TO MAP</button> */}
-                                PDF 자료
-                            </div>
-                                </a>
+                            <a href="https://ogreencakeo.github.io/ogreencakeo-react-pj/최지민(유니버설스튜디오).pdf" target="_blank">
+                                <div className="universal_link">
+                                    {/* <button onClick={() => universalMapFn()}>GO TO MAP</button> */}
+                                    PDF 자료
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -46,6 +46,9 @@
     color: #ccc;
     cursor: pointer;
 }
+.area-type-btn label{
+    cursor: pointer;
+}
 
 /* 에어리어 박스 */
 

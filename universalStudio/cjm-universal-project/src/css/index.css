@@ -602,6 +602,7 @@ a {
     margin: 0 auto;
     max-width: 1200px;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .enjoy-pick-cont {
@@ -610,10 +611,15 @@ a {
     margin: 10px 20px;
     border-radius: 20px;
     overflow: hidden;
-    /* transform: translateY(20%); */
-    transition: .4s ease-in-out;
+    transition: .8s ease-in-out;
+    opacity: 0;
+    transform: translate(50%) rotate(180deg);
+    
 }
-
+.enjoy-pick-cont.hover{
+    opacity: 1;
+    transform: translate(0) rotate(0);
+}
 .enjoty-pick-img {
     display: block;
     width: 256px;
@@ -668,9 +674,7 @@ a {
     text-align: center;
     margin-bottom: 10px;
     font-size: 2.5em;
-    /* position: relative; */
     overflow: hidden;
-    /* display: inline-block; */
 
 }
 
@@ -679,7 +683,7 @@ a {
     color: #555;
     display: inline-block;
     position: relative;
-    transition: .4s;
+    transition: .8s;
     font-family: 'Jua';
 }
 
@@ -696,21 +700,12 @@ a {
     font-family: 'Jua';
 }
 
-/* .point-span::after {
-    content: ''; 
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-    height: 5px; 
-    background-color: yellow; 
-    margin-top: 5px;
-} */
 .enjoy-pick-cont h3 {
     font-size: 1.8em;
     text-align: center;
     margin-bottom: 30px;
     transform: translateY(60px);
-    transition: .4s ease-in-out;
+    transition: .8s ease-in-out;
 }
 
 .enjoy-pick-cont p {
@@ -718,9 +713,10 @@ a {
     text-align: center;
     line-height: 1.5;
     transform: translateY(500%);
-    transition: .4s ease-in-out;
+    transition: .8s ease-in-out;
 }
 
+/* .enjoy-pick-cont:hover { */
 .enjoy-pick-cont:hover {
     background-color: #ccc;
 }
@@ -732,6 +728,7 @@ a {
 .enjoy-pick-cont:last-child:hover {
     background-color: thistle;
 }
+
 
 .enjoy-pick-cont:hover h3 {
     transform: translateY(0);
@@ -769,13 +766,21 @@ a {
 .main-upcomingEv-wrap{
     max-width: 100%;
     margin: 150px 0;
-    padding: 20px
+    padding: 20px;
 }
+
 .main-upcomingEv{
     max-width: 1350px;
     margin: 50px auto 0;
     display: flex;
     flex-wrap: wrap;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+.main-upcomingEv.on{
+    transform: scale(1);
+    opacity: 1;
 }
 .main-upcomingEv-bx{
     width: calc((100% - 140px) /3);
