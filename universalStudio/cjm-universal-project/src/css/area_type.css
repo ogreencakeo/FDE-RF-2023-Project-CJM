@@ -157,6 +157,20 @@
     border: none;
 }
 
+/* 더보기 버튼 */
+.areaType-more-btn{
+    color: #fff;
+    background-color: blue;
+    font-family: 'Jua';
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1080px) {
     .area-type-bx {
         margin: 5px;

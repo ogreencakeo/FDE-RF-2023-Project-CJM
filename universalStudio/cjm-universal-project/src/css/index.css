@@ -1213,10 +1213,19 @@ a {
         font-size: 4.2rem;
     }
     .header-content{
-        top: 12%;
+        top: 10%;
     }
     .header, .header-img-wrap, .header-main-img-wrap, .header-main-img{
-        height: calc(60vh - 58px);
+        height: calc(80vh - 58px);
+    }
+    .header-content>span{
+        margin-top: 15px;
+    }
+    .span_wave{
+        margin-top: 30px;
+    }
+    .universal_link {
+        bottom: 5%;
     }
 
 }
@@ -1486,6 +1495,14 @@ a {
     .map-wrapper-model iframe {
         width: 250px;
         height: 200px;
+    }
+}
+@media screen and (max-width:400px){
+    .header, .header-img-wrap, .header-main-img-wrap, .header-main-img{
+        height: calc(65vh - 58px);
+    }
+    .universal_link {
+        padding: 5px;
     }
 }
 @media screen and (max-width:369px){

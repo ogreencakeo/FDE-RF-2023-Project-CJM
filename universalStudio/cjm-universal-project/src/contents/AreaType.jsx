@@ -33,6 +33,18 @@ export function AreaType() {
     if (loc.state) keyword = loc.state.keyword;
 
     const [selectedCat, setSelectedCat] = useState(["nintendo", "harrypotter", "minion", "wonderland", "jurassicpark"]);
+    // 더보기버튼
+    const [displayCount, setDisplayCount] = useState(8);
+    const [filterData, setFilterData] = useState([]);
+
+    useEffect(() => {
+        // filterData를 selectedCat에 따라 업데이트
+        const updatedFilterData = attractionData.filter((v) => selectedCat.includes(v.areatype));
+        setFilterData(updatedFilterData);
+        
+        // displayCount를 초기화
+        setDisplayCount(8);
+    }, [selectedCat, attractionData]);
 
     const changeList = (e) => {
         const cid = e.target.id;
@@ -50,7 +62,7 @@ export function AreaType() {
     const makeList = () => {
         const filterData = attractionData.filter((v) => selectedCat.includes(v.areatype));
 
-        return filterData.map((v, i) => (
+        return filterData.slice(0, displayCount).map((v, i) => (
             <div className="area-type-bx" key={i}>
                 <Link
                     to="/detail"
@@ -78,6 +90,11 @@ export function AreaType() {
                 </div>
             </div>
         ));
+    };
+
+    // 더보기 버튼
+    const handleLoadMore = () => {
+        setDisplayCount((v) => v+8); 
     };
 
     return (
@@ -157,6 +174,18 @@ export function AreaType() {
                 </div>
             </div>
             <div className="area-type-wrap">{makeList()}</div>
+            {/* 더보기 버튼 */}
+            {
+                // displayCount < attractionData.length && (
+                //     <button className="areaType-more-btn" onClick={handleLoadMore}>
+                //         더보기
+                //     </button>)
+                    displayCount < filterData.length ? (
+                        <button className="areaType-more-btn" onClick={handleLoadMore}>
+                            더보기
+                        </button>
+                    ) : null
+            }
             <UniverSalText />
         </>
     );
