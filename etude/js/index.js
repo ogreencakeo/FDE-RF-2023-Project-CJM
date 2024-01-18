@@ -87,6 +87,16 @@ for (let i = 0; i < mainBanImg.length; i++) {
 
 swiperContainer.update(); // Swiper 업데이트
 
+const etudeTit = document.querySelector('.header-swiper-container>h1');
+
+setInterval(()=>{
+    titInterval();
+},800);
+function titInterval(){
+    etudeTit.classList.toggle('on');
+}
+
+
 // main1
 
 const shuffledData = main1Data.sort(() => Math.random() - 0.5);
