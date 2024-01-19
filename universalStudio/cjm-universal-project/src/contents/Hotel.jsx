@@ -32,7 +32,9 @@ export function Hotel() {
                 <p>{data.split('^')[1]}</p>
             </>
         )
-    }
+    };
+
+
 
     return (
         <>

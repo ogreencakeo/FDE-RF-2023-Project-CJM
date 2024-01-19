@@ -4,7 +4,6 @@
 }
 .partner-hotel-bx{
     max-width: 100%;
-    /* outline: 1px solid red; */
 }
 .partner-hotel-bx ul{
     display: flex;
@@ -40,13 +39,12 @@
 
 /* 호텔 이미지 */
 .hotel-img{
-    /* max-width: 350px; */
     max-width: 380px;
-    /* outline: 1px solid red; */
     padding: 20px;
     max-width: 35%;
+    overflow: hidden;
 }
-.hotel-img img{
+.hotel-img>img{
     width: 100%;
     aspect-ratio: 1.5/1;
 }
