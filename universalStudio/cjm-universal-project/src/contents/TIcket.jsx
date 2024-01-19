@@ -58,7 +58,29 @@ export function Ticket() {
                 )
         }
         return temp;
-    }
+    };
+
+    useEffect(()=>{
+
+        const showBox = (txt) => {
+            const tg = document.querySelector(txt);
+            if(tg){
+                const tgPosition = tg.getBoundingClientRect().top;
+                if(tgPosition < window.innerHeight){
+                    tg.classList.add('on');
+                }else{
+                    tg.classList.remove('on');
+                }
+            }
+        };
+
+        const handleScroll = () => {
+            showBox('.ticket-inquiry-cont>img');
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return(()=>window.removeEventListener('scroll', handleScroll));
+    });
 
 
     return (

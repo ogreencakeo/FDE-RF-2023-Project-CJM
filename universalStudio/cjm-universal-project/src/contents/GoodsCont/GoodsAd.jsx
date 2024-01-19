@@ -22,7 +22,7 @@ export function GoodsAd(props) {
         }
 
         const scrollHandle = () => {
-            showGoods('.goods_img_logo img');
+            showGoods('.goods_img_logo>img');
         }
 
         window.addEventListener('scroll', scrollHandle);

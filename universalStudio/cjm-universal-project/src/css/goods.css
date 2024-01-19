@@ -110,16 +110,24 @@
     border: 5px dashed #000;
     box-sizing: border-box;
     align-items: center;
+    overflow: hidden;
 }
 .goods_caution_img{
     /* width: 300px; */
     width: 25%;
     text-align: center;
     padding: 10px;
+    opacity: 0;
+    transform: translateY(-110%);
+    transition: .6s ease-in;
 }
 .goods_caution_img>img{
     width: 90%;
     aspect-ratio: 1.1/1;
+}
+.goods_caution_img.on{
+    transform: translateY(0);
+    opacity: 1;
 }
 .goods_caution_content{
     /* background-color: rgba(0, 0, 0, 0.5); */

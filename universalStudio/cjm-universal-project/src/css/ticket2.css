@@ -145,12 +145,15 @@
     max-width: 1280px;
     margin: 0 auto;
     margin-top: 100px;
+    overflow: hidden;
 }
 .ticket-inquiry-img{
     max-width: 640px;
     position: relative;
     margin: 0 auto;
+    
 }
+
 .ticket-inquiry-img>img{
     display: block;
     width: 100%;
@@ -180,6 +183,15 @@
     display: block;
     margin: 0 auto;
     max-width: 210px;
+    transform: translate(100%, -100%), rotate(180deg);
+    opacity: 0;
+    transition: .6s ease-in;
+}
+
+
+.ticket-inquiry-cont>img.on{
+transform: translate(0, 0), rotate(0deg);
+opacity: 1;
 }
 
 /* 티켓 옵션 박스 A시즌~C시즌 */
