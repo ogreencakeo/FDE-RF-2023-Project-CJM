@@ -73,8 +73,12 @@ let selTemp = [];
 const makeCode = (data) => {
     data.map((v, i) => {
         selTemp[i] = `
-            <div>
+            <div class='makeup-grid-bx'>
                 <img src="${v.img}" />
+                <div class='makeup-grid-cont'>
+                    <p>${v.txt}</p>
+                    <p>${v.cont}</p>
+                </div>
             </div>
         `
     });

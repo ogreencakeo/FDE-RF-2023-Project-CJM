@@ -28,4 +28,46 @@
 .makeup-grid>div img{
     width: 100%;
     height: 100%;
+    transition: .4s ease-in;
+}
+
+.makeup-grid-bx{
+    position: relative;
+    transition: .4s ease-in;
+    overflow: hidden;
+}
+
+.makeup-grid-bx>img{
+    position: relative;
+}
+
+.makeup-grid-cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.makeup-grid-cont p{
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #fff;
+    opacity: 0;
+    transition: .4s ease-in;
+}
+.makeup-grid-cont p:first-child{
+    font-size: 1.8rem;
+    font-family: 'Gugi';
+}
+.makeup-grid-bx:hover{
+    filter: grayscale(100%);
+}
+.makeup-grid-bx:hover img{
+    transform: scale(1.1);
+}
+
+.makeup-grid-bx:hover .makeup-grid-cont p{
+    opacity: 1;
 }
