@@ -4,17 +4,20 @@ window.onload = function () {
 
 // 네비 리스트
 const navList = document.querySelector(".nav-wrap ul");
+    
 let temp = [];
-for (let i = 0; i < navData.length; i++) {
+navData.map((v, i) => {
     temp[i] = `
-        <li>
-            <a href="#">
-                ${navData[i]}
-            </a>
-        </li>
-    `;
-}
+    <li>
+    <a href=${v.link}>
+    ${v.txt}
+    </a>
+    </li>
+    `
+}).join('');
+
 navList.innerHTML += temp.join("");
+
 
 // 네비 스크롤 내리시 hide 처리하기
 let lastPosiont = 0;

@@ -1,0 +1,31 @@
+.makeup-look-main{
+    max-width: 100%;
+}
+.makeup-grid{
+    display: grid;
+    max-width: 100%;
+    /* height: 100vh; */
+    grid-template-columns: repeat(4,2fr);
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.makeup-grid:nth-child(2n) div:nth-child(3){
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.makeup-grid:nth-child(2n-1) div:first-child{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.makeup-grid>div:first-child{
+    /* grid-row: span 2;
+    grid-column: span 2; */
+}
+
+.makeup-grid>div img{
+    width: 100%;
+    height: 100%;
+}

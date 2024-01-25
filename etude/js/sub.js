@@ -30,16 +30,17 @@ scrollBtn.addEventListener('click', topBtnScroll);
 // nav
 const navList = document.querySelector(".nav-wrap ul");
 let temp = [];
-for (let i = 0; i < navData.length; i++) {
+navData.map((v, i) => {
     temp[i] = `
         <li>
-            <a href="#">
-                ${navData[i]}
+            <a href=${v.link}>
+                ${v.txt}
             </a>
         </li>
-    `;
-}
-navList.innerHTML += temp.join("");
+    `
+});
+
+navList.innerHTML += temp.join('');
 
 // 틴트 모달창
 const tintBx = document.querySelector(".sub-option-bx-wrap");

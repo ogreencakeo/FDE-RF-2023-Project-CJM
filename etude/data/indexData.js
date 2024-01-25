@@ -1,5 +1,24 @@
 const navData = [
-    "PRODUCT", "BRAND", "MAKEUP LOOK", "STORE", "FOUNDATION FACTORY"
+    {
+        txt : 'PRODUCT',
+        link : '#'
+    },
+    {
+        txt : 'BRAND',
+        link : './brand.html'
+    },
+    {
+        txt : 'MAKEUP LOOK',
+        link : './makeup_look.html'
+    },
+    {
+        txt : 'STORE',
+        link : '#'
+    },
+    {
+        txt : 'FOUNDATION FACTORY',
+        link : '#'
+    },
 ];
 
 const mainBanImg = [

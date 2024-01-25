@@ -37,7 +37,8 @@ span {
 }
 
 ol,
-ul {
+ul,
+li {
     list-style: none;
     font-family: 'Nanum Gothic', sans-serif;
 }
