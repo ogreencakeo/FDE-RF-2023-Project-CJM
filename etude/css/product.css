@@ -1,0 +1,16 @@
+/* 메인페이지 */
+.product-main-wrap{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-main-left{
+    width: 30%;
+    border: 1px solid red;
+}
+.product-main-right{
+    margin-top///: 100px;
+    width: 68%;
+    border: 1px solid red;
+}
