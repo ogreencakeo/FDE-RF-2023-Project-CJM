@@ -23,6 +23,50 @@ const navData = [
 
 
 const productData = {
+    '아이' : [
+        {
+            img : '../image/product/eye/1-1.jpg',
+            img2 : '../image/product/eye/1-2.jpg',
+            title : '모노 아이즈 1.2g~',
+            hashtag : '#데일리 #톤온톤무드',
+            price : '5000'
+        },
+        {
+            img : '../image/product/eye/2-1.jpg',
+            img2 : '../image/product/eye/2-2.jpg',
+            title : '플레이 컬러 아이즈 #럽트루 6.6g',
+            hashtag : '#무신사단독 #에뛰드X러브이즈트루',
+            price : '28000'
+        },
+        {
+            img : '../image/product/eye/3-1.jpg',
+            img2 : '../image/product/eye/3-2.jpg',
+            title : '플레이 컬러 아이즈 #더스티 캣 7.2g',
+            hashtag : '#리얼쿨톤',
+            price : '25000'
+        },
+        {
+            img : '../image/product/eye/4-1.jpg',
+            img2 : '../image/product/eye/4-2.jpg',
+            title : '오 마이 래쉬 쌩얼 카라 7ml',
+            hashtag : '#또렷한눈매',
+            price : '9000'
+        },
+        {
+            img : '../image/product/eye/5-1.jpg',
+            img2 : '../image/product/eye/5-2.jpg',
+            title : '슈퍼 슬림 프루프 펜슬 라이너 0.08g',
+            hashtag : '#1.5mm #펜슬',
+            price : '9000'
+        },
+        {
+            img : '../image/product/eye/6-1.jpg',
+            img2 : '../image/product/eye/6-2.jpg',
+            title : '베어 엣지 브로우 픽서 7g',
+            hashtag : '#눈썹결 #자연스럽게',
+            price : '10000'
+        },
+    ],
     '립' : [
         {
             img : '../image/product/lip/1-1.jpg',
@@ -113,11 +157,90 @@ const productData = {
     ],
     "헤어" : [
         {
-            img : '../image/product/face/6-1.jpg',
-            img2 : '../image/product/face/6-2.jpg',
-            title : '더블 래스팅 세럼 스킨 파운데이션 SPF27 PA++ 30g',
-            hashtag : '#24H윤기 #스킨케어효과',
-            price : '29000',
-        }
+            img : '../image/product/hair/1-1.jpg',
+            img2 : '../image/product/hair/1-2.jpg',
+            title : '헤어 스타일링 스트레이트크림 3X 200ml',
+            hashtag : '#손상없이 #편안한향',
+            price : '12000',
+        },
+        {
+            img : '../image/product/hair/2-1.jpg',
+            img2 : '../image/product/hair/2-2.jpg',
+            title : '팡팡 헤어 섀도우 3.5g',
+            hashtag : '#자연스러운 #헤어라인',
+            price : '16000',
+        },
+        {
+            img : '../image/product/hair/3-1.jpg',
+            img2 : '../image/product/hair/3-2.jpg',
+            title : '핫 스타일 크림 헤어 블리치 탈색제',
+            hashtag : '#살롱 #선명컬러',
+            price : '9000',
+        },
+        {
+            img : '../image/product/hair/4-1.jpg',
+            img2 : '../image/product/hair/4-2.jpg',
+            title : '핫 스타일 버블 헤어 컬러링',
+            hashtag : '#간편 #버블염색',
+            price : '9000',
+        },
+        {
+            img : '../image/product/hair/5-1.jpg',
+            img2 : '../image/product/hair/5-2.jpg',
+            title : '핫 스타일 크림 헤어 컬러링',
+            hashtag : '#발색UP #크림타입',
+            price : '9000',
+        },
+        {
+            img : '../image/product/hair/6-1.jpg',
+            img2 : '../image/product/hair/6-2.jpg',
+            title : '투톤 트리트먼트 헤어 컬러 150ml',
+            hashtag : '#10분완성 #윤기찰랑',
+            price : '12000',
+        },
+    ],
+    "툴" : [
+        {
+            img : '../image/product/tool/1-1.jpg',
+            img2 : '../image/product/tool/1-2.jpg',
+            title : '그림자 쉐딩+브러쉬 스페셜 세트',
+            hashtag : '#모두의쉐딩 #조효진쉐딩 #턱브러쉬',
+            price : '32000',
+        },
+        {
+            img : '../image/product/tool/2-1.jpg',
+            img2 : '../image/product/tool/2-2.jpg',
+            title : '마이뷰티툴 브러쉬 311 섀도우 블렌딩',
+            hashtag : '#삼각존 #애교살 #음영',
+            price : '6000',
+        },
+        {
+            img : '../image/product/tool/3-1.jpg',
+            img2 : '../image/product/tool/3-2.jpg',
+            title : '마이뷰티툴 브러쉬 310 섀도우 베이스',
+            hashtag : '#소프트터치 #아이홀',
+            price : '6000',
+        },
+        {
+            img : '../image/product/tool/4-1.jpg',
+            img2 : '../image/product/tool/4-2.jpg',
+            title : '그림자 쉐딩 브러쉬 3종세트',
+            hashtag : '#브러쉬3종 #턱눈코',
+            price : '20000',
+        },
+        {
+            img : '../image/product/tool/5-1.jpg',
+            img2 : '../image/product/tool/5-2.jpg',
+            title : '룩 앳 마이 아이즈 DIY 팔레트 4구',
+            hashtag : '#4구 #섀도우공용기',
+            price : '6000',
+        },
+        {
+            img : '../image/product/tool/6-1.jpg',
+            img2 : '../image/product/tool/6-2.jpg',
+            title : '그림자 쉐딩+브러쉬 3종 기획 세트',
+            hashtag : '#기획세트 #조효진쉐딩',
+            price : '44000',
+        },
     ]
 };
