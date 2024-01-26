@@ -318,7 +318,7 @@
     width: 100%;
     aspect-ratio: 1/1;
     filter: grayscale(100%);
-    transition: s ease-in;
+    transition: 1s ease-in;
 }
 .brand-div6-img>img.on{
     filter: grayscale(0%);

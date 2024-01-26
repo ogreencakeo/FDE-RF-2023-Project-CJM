@@ -110,6 +110,27 @@ const productData = {
             hashtag : '#셀러뷰리티 #수분글로잉 #오일광택',
             price : '14000',
         },
+        {
+            img : '../image/product/lip/7-1.jpg',
+            img2 : '../image/product/lip/7-2.jpg',
+            title : '진저슈가 오버나이트 립 마스크 15g',
+            hashtag : '#보습 #촉촉',
+            price : '7000',
+        },
+        {
+            img : '../image/product/lip/8-1.jpg',
+            img2 : '../image/product/lip/8-2.jpg',
+            title : '디어 달링 워터 틴트 9g',
+            hashtag : '#생기발랄 #촉촉보습',
+            price : '5000',
+        },
+        {
+            img : '../image/product/lip/9-1.jpg',
+            img2 : '../image/product/lip/9-2.jpg',
+            title : '진저슈가 멜팅 밤 #베어꾸 콜라보 2.3g',
+            hashtag : '#베어꾸 #조효진개발',
+            price : '13000',
+        },
     ],
     '페이스' : [
         {

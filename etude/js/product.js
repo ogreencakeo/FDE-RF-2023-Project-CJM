@@ -63,3 +63,51 @@ const topBtnScroll = () => {
 };
 
 scrollBtn.addEventListener('click', topBtnScroll);
+
+// 상품 결과 박스
+function showProduct(category){
+    const product = productData[category];
+    const resultBx = document.querySelector('.product-option-result');
+
+    // 결과박스 비우기
+    resultBx.innerHTML = '';
+
+    product.forEach((v)=>{
+        const productBx = document.createElement('div');
+        productBx.innerHTML = `
+            <div class='product-result-img'>
+                <img src="${v.img}"  alt = "${v.title}"/>
+            </div>
+            <div class='product-result-content'>
+                <p>${v.hashtag}</p>
+                <p>${v.title}</p>
+                <p><b>${Number(v.price).toLocaleString()}</b> 원</p>
+            </div>
+        `;
+
+        resultBx.append(productBx);
+    });
+
+    // 개수 반영
+    const categoryLength = document.querySelector('.product-length h3');
+    categoryLength.innerHTML = `총 ${product.length}개`;
+
+}
+
+// 윈도우 로딩 시 아이 버튼 클릭
+window.onload = function() {
+    document.getElementById('eyeBtn').click();
+};
+
+// 클릭시 색상변경
+const productBtn = document.querySelectorAll('.product-category-option button');
+
+productBtn.forEach((v) => {
+    v.addEventListener('click', function(){
+        productBtn.forEach((btn) => {
+            btn.classList.remove('on');
+        });
+        v.classList.add('on');
+    });
+});
+
