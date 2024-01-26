@@ -23,7 +23,7 @@ const navData = [
 
 
 const productData = {
-    '아이' : [
+    'eye' : [
         {
             img : '../image/product/eye/1-1.jpg',
             img2 : '../image/product/eye/1-2.jpg',
@@ -66,8 +66,15 @@ const productData = {
             hashtag : '#눈썹결 #자연스럽게',
             price : '10000'
         },
+        {
+            img : '../image/product/eye/7-1.jpg',
+            img2 : '../image/product/eye/7-2.jpg',
+            title : '플레이 컬러 아이즈 #셀러뷰리티 6.5g~',
+            hashtag : '#셀러뷰리티 #퍼스널컬러',
+            price : '30000'
+        },
     ],
-    '립' : [
+    'lip' : [
         {
             img : '../image/product/lip/1-1.jpg',
             img2 : '../image/product/lip/1-2.jpg',
@@ -132,7 +139,7 @@ const productData = {
             price : '13000',
         },
     ],
-    '페이스' : [
+    'face' : [
         {
             img : '../image/product/face/1-1.jpg',
             img2 : '../image/product/face/1-2.jpg',
@@ -175,8 +182,15 @@ const productData = {
             hashtag : '#24H윤기 #스킨케어효과',
             price : '29000',
         },
+        {
+            img : '../image/product/face/7-1.jpg',
+            img2 : '../image/product/face/7-2.jpg',
+            title : '헬씨 칼라민 톤업 쿠션 SPF34 PA++ 15g',
+            hashtag : '#생얼쿠션 #수분톤업',
+            price : '24000',
+        },
     ],
-    "헤어" : [
+    "hair" : [
         {
             img : '../image/product/hair/1-1.jpg',
             img2 : '../image/product/hair/1-2.jpg',
@@ -220,7 +234,7 @@ const productData = {
             price : '12000',
         },
     ],
-    "툴" : [
+    "tool" : [
         {
             img : '../image/product/tool/1-1.jpg',
             img2 : '../image/product/tool/1-2.jpg',
@@ -262,6 +276,20 @@ const productData = {
             title : '그림자 쉐딩+브러쉬 3종 기획 세트',
             hashtag : '#기획세트 #조효진쉐딩',
             price : '44000',
+        },
+        {
+            img : '../image/product/tool/7-1.jpg',
+            img2 : '../image/product/tool/7-2.jpg',
+            title : '마이뷰티툴 러블리에띠 헤어밴드',
+            hashtag : '#세안시 #에띠헤어밴드',
+            price : '8000',
+        },
+        {
+            img : '../image/product/tool/8-1.jpg',
+            img2 : '../image/product/tool/8-2.jpg',
+            title : '#컬링력극대화',
+            hashtag : '래쉬 펌 컬 픽스 뷰러',
+            price : '8000',
         },
     ]
 };

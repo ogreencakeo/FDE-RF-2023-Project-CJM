@@ -12,6 +12,25 @@ body, html, div>*{
 /* 상품 메인페이지 - 왼쪽 */
 .product-main-left{
     width: 30%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+/* 카테고리 클릭시 배경 변경 */
+.product-main-left.eye{
+    background: url(../image/product/bg/eye.jpg) no-repeat center/cover;
+}
+.product-main-left.lip{
+    background: url(../image/product/bg/lip.jpg) no-repeat center/cover;
+}
+.product-main-left.face{
+    background: url(../image/product/bg/face.jpg) no-repeat center/cover;
+}
+.product-main-left.hair{
+    background: url(../image/product/bg/hair.jpg) no-repeat center/cover;
+}
+.product-main-left.tool{
+    background: url(../image/product/bg/tool.jpg) no-repeat center/cover;
 }
 
 /* 상품 메인페이지 - 오른쪽 */
@@ -78,7 +97,7 @@ body, html, div>*{
 .product-option-result>div{
     width: 32%;
     background-color: #fafafa;
-    margin: 7px 5px;
+    margin: 7px 5px 45px;
 }
 .product-result-img{
     width: 100%;
@@ -103,4 +122,5 @@ body, html, div>*{
     border: 1px solid gray;
     padding: 5px;
     text-align: center;
+    margin: 10px 0;
 }

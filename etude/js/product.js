@@ -72,6 +72,11 @@ function showProduct(category){
     // 결과박스 비우기
     resultBx.innerHTML = '';
 
+    // 정렬 select 
+    const order = document.getElementById('priceOrder').value;
+
+    const sortFunction = 
+
     product.forEach((v)=>{
         const productBx = document.createElement('div');
         productBx.innerHTML = `
@@ -91,6 +96,24 @@ function showProduct(category){
     // 개수 반영
     const categoryLength = document.querySelector('.product-length h3');
     categoryLength.innerHTML = `총 ${product.length}개`;
+
+    // 배경색 변경
+
+    const productBg = document.querySelector('.product-main-left');
+
+    productBg.classList.remove('eye', 'lip', 'face', 'hair', 'tool')
+
+    if (category === 'eye') {
+        productBg.classList.add('eye');
+    }else if (category === 'lip'){
+        productBg.classList.add('lip');
+    }else if(category === 'face'){
+        productBg.classList.add('face');
+    }else if(category === 'hair'){
+        productBg.classList.add('hair');
+    }else if(category === 'tool'){
+        productBg.classList.add('tool');
+    }
 
 }
 
