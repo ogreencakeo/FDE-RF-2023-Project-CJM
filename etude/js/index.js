@@ -4,15 +4,15 @@ window.onload = function () {
 
 // 네비 리스트
 const navList = document.querySelector(".nav-wrap ul");
-    
+
 let temp = [];
 navData.map((v, i) => {
     temp[i] = `
-    <li>
-    <a href=${v.link}>
-    ${v.txt}
-    </a>
-    </li>
+        <li>
+            <a href=${v.link}>
+                ${v.txt}
+            </a>
+        </li>
     `
 }).join('');
 
@@ -44,10 +44,10 @@ console.log('scrollBtn :', scrollBtn);
 
 const topBtnShow = () => {
     const scrollPostion = window.scrollY || window.pageYOffset;
-    if(scrollBtn){
-        if(scrollPostion > 2000){
+    if (scrollBtn) {
+        if (scrollPostion > 2000) {
             scrollBtn.style.display = 'block';
-        }else{
+        } else {
             scrollBtn.style.display = 'none';
         }
     }
@@ -92,10 +92,10 @@ swiperContainer.update(); // Swiper 업데이트
 
 const etudeTit = document.querySelector('.header-swiper-container>h1');
 
-setInterval(()=>{
+setInterval(() => {
     titInterval();
-},800);
-function titInterval(){
+}, 800);
+function titInterval() {
     etudeTit.classList.toggle('on');
 }
 
@@ -136,8 +136,8 @@ main1Bx.innerHTML += main1RandomResult.join("");
 
 // main2
 const main2Img = [
-    "../image/main/main2/img1.jpg", 
-    "../image/main/main2/img2.jpg", 
+    "../image/main/main2/img1.jpg",
+    "../image/main/main2/img2.jpg",
     "../image/main/main2/img3.jpg"
 ];
 
@@ -155,9 +155,9 @@ const main2Tit = document.querySelector('.main-title-bx>img');
 
 const showTit = () => {
     const main2TitPosition = main2Tit.getBoundingClientRect().top;
-    if(main2TitPosition < window.innerHeight){
+    if (main2TitPosition < window.innerHeight) {
         main2Tit.classList.add('on')
-    }else{
+    } else {
         main2Tit.classList.remove('on')
     }
 };
@@ -187,14 +187,14 @@ main3Bx.innerHTML += temp.join("");
 const main3Img = document.querySelectorAll('.main3-bx');
 
 const showMain3Img = () => {
-    main3Img.forEach((v,i) => {
+    main3Img.forEach((v, i) => {
         const main3ImgPosition = v.getBoundingClientRect().top;
-        if(main3ImgPosition < window.innerHeight){
+        if (main3ImgPosition < window.innerHeight) {
             // 0.15초 간격으로 나타나도록 setTimeout 사용
             setTimeout(() => {
                 v.classList.add('on');
-            }, i*150);
-        }else{
+            }, i * 150);
+        } else {
             v.classList.remove('on');
         }
     });
@@ -249,9 +249,9 @@ giftBx.innerHTML += temp.join("");
 
 const giftBxShow = () => {
     const giftBxPosition = giftBx.getBoundingClientRect().top;
-    if(giftBxPosition < window.innerHeight){
+    if (giftBxPosition < window.innerHeight) {
         giftBx.classList.add('on');
-    }else{
+    } else {
         giftBx.classList.remove('on');
     }
 };
@@ -374,9 +374,9 @@ const snsBar = document.querySelector('.pink-bg');
 
 const snsBarShow = () => {
     const snsBarPosition = snsBar.getBoundingClientRect().top;
-    if(snsBarPosition < window.innerHeight){
+    if (snsBarPosition < window.innerHeight) {
         snsBar.classList.add('on');
-    }else{
+    } else {
         snsBar.classList.remove('on');
     }
 };
@@ -387,9 +387,9 @@ const snsBxWrap = document.querySelector('.sns-bx-wrap');
 
 const snsBxWrapShow = () => {
     const snsBxWrapPosition = snsBxWrap.getBoundingClientRect().top;
-    if(snsBxWrapPosition < window.innerHeight){
+    if (snsBxWrapPosition < window.innerHeight) {
         snsBxWrap.classList.add('on');
-    }else{
+    } else {
         snsBxWrap.classList.remove('on');
     }
 };
@@ -465,7 +465,7 @@ mediaQuery2.addListener(handleMediaQueryChange2);
 // 햄버거 nav
 const hambtnNav = document.querySelector('.hambtn-wrap');
 temp = [];
-for(let i=0; i<navData.length; i++){
+for (let i = 0; i < navData.length; i++) {
     temp[i] = `
         <li>
             <a href="#">
@@ -480,7 +480,7 @@ hambtnNav.innerHTML += "<img src='../image/logo.png' alt = '로고이미지' onC
 // 햄버거 토글
 const hamBnt = document.querySelector('.main-wrap .hambtn button');
 const showNav = () => {
-    if(hamBnt){
+    if (hamBnt) {
         hambtnNav.classList.toggle('on');
         hamBnt.classList.toggle('click');
     }

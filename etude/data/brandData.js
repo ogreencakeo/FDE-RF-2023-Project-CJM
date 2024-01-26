@@ -1,7 +1,7 @@
 const navData = [
     {
         txt : 'PRODUCT',
-        link : '#'
+        link : './product.html'
     },
     {
         txt : 'BRAND',
@@ -20,6 +20,7 @@ const navData = [
         link : '#'
     },
 ];
+
 
 const mainBlock5 = [
     {

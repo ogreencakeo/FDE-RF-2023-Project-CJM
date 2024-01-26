@@ -1,7 +1,7 @@
 const navData = [
     {
         txt : 'PRODUCT',
-        link : '#'
+        link : './product.html'
     },
     {
         txt : 'BRAND',
@@ -20,6 +20,7 @@ const navData = [
         link : '#'
     },
 ];
+
 const tintData = [
     "../image/sub/tint/1-1.jpg",
     "../image/sub/tint/2-1.jpg",

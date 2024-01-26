@@ -1,7 +1,7 @@
 const navData = [
     {
         txt : 'PRODUCT',
-        link : '#'
+        link : './product.html'
     },
     {
         txt : 'BRAND',
