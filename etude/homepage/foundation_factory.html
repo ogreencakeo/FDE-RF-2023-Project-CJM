@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>에뛰드-상품페이지</title>
+    <title>에뛰드-파운데이션팩토리페이지</title>
     <link rel="stylesheet" href="../css/common.css">
-    <script src="../data/productData.js"></script>
-    <script src="../js/product.js" defer></script>
+    <!-- 폰트어썸 아이콘CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="../data/factoryData.js"></script>
+    <script src="../js/foundation_factory.js" defer></script>
 </head>
 <body>
-    <div class="product-wrap">
+    <div class="foundation-factory-wrap">
         <!-- 헤더 -->
         <header class="header">
             <div class="nav-wrap">
@@ -36,45 +38,22 @@
             </button>
         </div>
         <!-- 메인페이지 -->
-        <div class="product-main-wrap">
-            <!-- 상품페이지 - 왼쪽 -->
-            <div class="product-main-left">
-            </div>
-            <!-- 상품페이지 - 오른쪽 -->
-            <div class="product-main-right">
-                <!-- 카테고리박스 -->
-                <div class="product-category-bx">
-                    <h1>카테고리</h1>
-                    <div class="product-category-option">
-                        <nav>
-                            <ul>
-                                <li><button id="eyeBtn" onclick="showProduct('eye')">아이</button></li>
-                                <li><button onclick="showProduct('lip')">립</button></li>
-                                <li><button onclick="showProduct('face')">페이스</button></li>
-                                <li><button onclick="showProduct('hair')">헤어</button></li>
-                                <li><button onclick="showProduct('tool')">툴</button></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <!-- 선택박스 -->
-                <div class="product-select-bx">
-                    <div class="product-length">
-                        <h3>총 개</h3>
-                    </div>
-                    <div class="product-select-option">
-                        <select class="priceOrder" name="priceOrder" id="priceOrder">
-                            <option value="sortOrder">정렬선택</option>
-                            <option value="highToLow">높은가격순</option>
-                            <option value="lowToHigh">낮은가격순</option>
-                        </select>
-                    </div>
-                </div>
-                <!-- 옵션 선택 결과 박스 -->
-                <div class="product-option-result">
+        <main>
+            <!-- 파운데이션 펙토리 상단부분 -->
+            <div class="factory-top-area">
+                <video class="elementor-video" src="https://www.etude.com/wp-content/uploads/2022/05/Foundation_PC.mp4" autoplay loop muted controlslist="nodownload" poster="https://www.etude.com/wp-content/uploads/2022/05/bg-01ff.jpg"></video>
+                <div class="factory-select-option">
+                    <button>서비스 안내</button>
+                    <button>예약하기</button>
                 </div>
             </div>
-        </div>
+            <!-- 파운데이션 펙토리 중간 부분 -->
+            <div class="factory-middle-cont">
+                <div class="customized-service-bx">
+
+                </div>
+            </div>
+        </main>
         <!-- 푸터 -->
         <footer class="footer">
             <div class="footer-l-wrap">

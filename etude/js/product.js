@@ -64,6 +64,9 @@ const topBtnScroll = () => {
 
 scrollBtn.addEventListener('click', topBtnScroll);
 
+// 정렬
+const priceOrder = document.querySelector('#priceOrder');
+
 // 상품 결과 박스
 function showProduct(category){
     const product = productData[category];
@@ -71,11 +74,6 @@ function showProduct(category){
 
     // 결과박스 비우기
     resultBx.innerHTML = '';
-
-    // 정렬 select 
-    const order = document.getElementById('priceOrder').value;
-
-    const sortFunction = 
 
     product.forEach((v)=>{
         const productBx = document.createElement('div');
@@ -115,11 +113,27 @@ function showProduct(category){
         productBg.classList.add('tool');
     }
 
+    // 정렬 함수
+    priceOrder.addEventListener('change', function(){
+        let optVal = this.value;
+        if(optVal == 'highToLow'){
+            product.sort((a, b) => (a.price == b.price) ? 0 : a.price > b.price? -1 : 1);
+        }else if(optVal == 'lowToHigh'){
+            product.sort((a, b) => (a.price == b.price) ? 0 : a.price > b.price? 1 : -1);
+        }
+
+        console.log(product);
+         // 정렬된 데이터를 화면에 반영
+        showProduct(category);
+        priceOrder.value('highToLow');
+    });
+
 }
 
 // 윈도우 로딩 시 아이 버튼 클릭
 window.onload = function() {
     document.getElementById('eyeBtn').click();
+    
 };
 
 // 클릭시 색상변경
@@ -133,4 +147,3 @@ productBtn.forEach((v) => {
         v.classList.add('on');
     });
 });
-

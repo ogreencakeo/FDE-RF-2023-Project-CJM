@@ -1,0 +1,27 @@
+/* 파운데이션 팩토리 - 상단 */
+.factory-top-area{
+    max-width: 100%;
+}
+
+.factory-top-area video{
+    width: 100%;
+}
+
+.factory-select-option{
+    width: 100%;
+    text-align: center;
+}
+
+.factory-select-option button{
+    margin: 0 10px 20px;
+    border: 0;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* 파운데이션 팩토리 - 중간 부분 */
+.factory-middle-cont{
+    max-width: 100%;
+    background-color: #ffffff;
+}

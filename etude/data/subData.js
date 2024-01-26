@@ -13,11 +13,11 @@ const navData = [
     },
     {
         txt : 'STORE',
-        link : '#'
+        link : './store.html'
     },
     {
         txt : 'FOUNDATION FACTORY',
-        link : '#'
+        link : './foundation_factory.html'
     },
 ];
 
