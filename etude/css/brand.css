@@ -3,6 +3,7 @@
     max-width: 100%;
     display: flex;
     overflow: hidden;
+    position: relative;
 }
 .brand-div1-img1{
     width: 70%;
@@ -18,7 +19,8 @@
     width: 30%;
     background-image: linear-gradient(to right, #f55d95,#f5b0ca, #fadee9);
     height: 100vh;
-    
+    position: relative;
+    overflow: hidden;
 }
 
 
@@ -27,14 +29,18 @@
     display: block;
     margin: 0 auto;
     padding: 10px;
-    transform: translateX(150%);
+    left: 150%;
+    position: absolute;
     opacity: 0;
     transition: .4s ease-out;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .brand-div1-img2>img.on{
     opacity: 1;
-    transform: translateX(0);
+    transform: translate(-50%, -50%);
+    left: 50%;
 }
 
 /* 메인블록2 */
@@ -75,6 +81,10 @@
     margin: 0 auto;
     text-align: center;
 }
+.brand-div-wrap2 li:nth-child(2) img{
+    width: 100%;
+    aspect-ratio: 7/1;
+}
 
 /* 메인블록3 */
 .brand-div-wrap3{
@@ -83,12 +93,14 @@
 }
 
 .brand-div-wrap3-bx{
-    width: 70vw;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 150px 0 200px;
     overflow: hidden;
+    border: 1px solid beige;
 }
 .brand-div-wrap3-bx>div{
     width: 45%;
@@ -104,6 +116,13 @@
     transform: translateX(0);
     opacity: 1;
 }
+.brand-div3-img1{
+    width: 100%;
+}
+.brand-div3-img1 img{
+    width: 100%;
+    aspect-ratio: 1/1.1;
+}
 .brand-div3-right{
     opacity: 0;
     transform: translateX(200%);
@@ -113,6 +132,14 @@
     transform: translateX(0);
     opacity: 1;
 }
+.brand-div3-img2{
+    width: 100%;
+}
+.brand-div3-img2>img{
+    width: 100%;
+    aspect-ratio: 1/1.1;
+}
+
 .brand-div3-right-cont h1{
     margin: 20px 0;
 }
@@ -183,7 +210,8 @@
 
 /* 메인블록5 - top */
 .brand-di5-top{
-    max-width: 80%;
+    max-width: 1280px;
+    flex-wrap: wrap;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -303,6 +331,7 @@
 /* 메인블록6 */
 .brand-div-wrap6{
     background-image: linear-gradient(to left, #f55d95,#f5b0ca, #fadee9);
+    padding-bottom: 100px;
 }
 .brand-div6-bx{
     max-width: 75vw;
@@ -336,5 +365,11 @@
 
 .brand-div6-logo{
     text-align: center;
-    padding: 100px 0 200px;
+    margin: 100px 0 200px;
+    max-width: 280px;
+    margin: 100px auto;
+}
+.brand-div6-logo>img{
+    width: 100%;
+    aspect-ratio: 2/1;
 }

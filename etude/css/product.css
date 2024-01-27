@@ -6,6 +6,7 @@ body, html, div>*{
 .product-main-wrap{
     max-width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -112,10 +113,17 @@ body, html, div>*{
 }
 .product-result-content p:first-child{
     font-family: 'Jua';
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .product-result-content p:nth-child(2){
     font-size: 1.1rem;
     padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 .product-result-content p:last-child{
     background-color: #fff;
@@ -123,4 +131,7 @@ body, html, div>*{
     padding: 5px;
     text-align: center;
     margin: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
