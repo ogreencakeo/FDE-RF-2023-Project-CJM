@@ -166,7 +166,7 @@ storeNotice.innerHTML += temp.join('');
 const storeNoticeBx = document.querySelector('.store-notice-bx');
 const modelImg = document.querySelector('.factory-model-img>img');
 const makeOwnBx = document.querySelectorAll('.make-own-bx');
-const FactorytakeTour = document.querySelector('.factory-take-tour-bx');
+const FactorytakeTour = document.querySelectorAll('.factory-take-tour-bx');
 const mapImg = document.querySelector('.factory-map-img>img');
 
 
@@ -197,11 +197,10 @@ const showBoxes = (txt) => {
 }
 
 window.addEventListener('scroll', ()=>showModelImg(storeNoticeBx));
-window.addEventListener('scroll', ()=>showModelImg(FactorytakeTour));
 window.addEventListener('scroll', ()=>showModelImg(mapImg));
 window.addEventListener('scroll', ()=>aniFn(modelImg));
 window.addEventListener('scroll', ()=>showBoxes(makeOwnBx));
-
+window.addEventListener('scroll', ()=>showBoxes(FactorytakeTour));
 
 // 햄버거 nav
 const hambtnNav = document.querySelector('.hambtn-wrap');
