@@ -238,16 +238,16 @@ const restoreProductFn = (idx) => {
 
 const hambtnNav = document.querySelector(".hambtn-wrap");
 temp = [];
-for (let i = 0; i < navData.length; i++) {
+navData.map((v, i) => {
     temp[i] = `
         <li>
-            <a href="#">
-                ${navData[i]}
+            <a href=${v.link}>
+                ${v.txt}
             </a>
         </li>
-    `;
-}
-hambtnNav.innerHTML += temp.join("");
+    `
+}).join('');
+hambtnNav.innerHTML += temp.join('');
 hambtnNav.innerHTML += "<img src='../image/logo.png' alt = '로고이미지' onClick='location.href=\"./index.html\"' />";
 
 // 햄버거 토글

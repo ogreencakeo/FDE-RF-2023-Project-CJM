@@ -71,3 +71,23 @@
 .makeup-grid-bx:hover .makeup-grid-cont p{
     opacity: 1;
 }
+
+/* 링크 페이지 */
+.link-wrap{
+    text-align: center;
+}
+
+.link-wrap button{
+    background-color: #fff;
+    font-size: 1.2rem;
+    margin: 10px 3px 15px;
+    border: 0;
+    cursor: pointer;
+}
+.link-to-btn{
+    color: grey;
+}
+.link-to-btn.on{
+    color: black;
+    font-weight: 800;
+}

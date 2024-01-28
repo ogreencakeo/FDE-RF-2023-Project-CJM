@@ -96,6 +96,19 @@ setInterval(()=>{
     facotryBannerCont.innerHTML = bannerTxt[index];
 },300);
 
+// 버튼 클릭시 색상변경
+const tgBtn = document.querySelectorAll('.factory-select-option button');
+tgBtn.forEach((v)=>{
+    v.addEventListener('click', function(){
+        tgBtn.forEach((j) => {
+            j.classList.remove('on');
+        });
+        v.classList.add('on');
+    });
+});
+
+tgBtn[0].click();
+
 // 나만의 파운데이션 만들기
 const makeOwnWrap = document.querySelector('.make-own-bx-wrap');
 temp = [];

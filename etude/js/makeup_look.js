@@ -96,7 +96,22 @@ for(let i=0; i<makeUpData.length; i++){
 
 makeupWrap.innerHTML += temp.join('');
 
+// 링크 페이지 색상변경
+const linkBtn = document.querySelectorAll('.link-to-btn');
 
+linkBtn.forEach((v) => {
+    v.addEventListener('click', function(){
+        linkBtn.forEach((j) => {
+            j.classList.remove('on');
+        })
+        v.classList.add('on');
+    });
+    
+});
+
+linkBtn[0].click();
+
+linkBtn.addEventListener('click', linkFn);
 // 햄버거 nav
 const hambtnNav = document.querySelector('.hambtn-wrap');
 temp = [];

@@ -17,7 +17,15 @@
     border: 0;
     background-color: #fff;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Jua';
+    cursor: pointer;
+    color: gray;
+}
+
+.factory-select-option button.on{
+    color: #000;
+    font-weight: 800;
 }
 
 /* 파운데이션 팩토리 - 중간 부분 */
