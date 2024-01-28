@@ -166,7 +166,7 @@ storeNotice.innerHTML += temp.join('');
 const storeNoticeBx = document.querySelector('.store-notice-bx');
 const modelImg = document.querySelector('.factory-model-img>img');
 const makeOwnBx = document.querySelectorAll('.make-own-bx');
-const FactorytakeTour = document.querySelector('.factory-take-tour');
+const FactorytakeTour = document.querySelector('.factory-take-tour-bx');
 const mapImg = document.querySelector('.factory-map-img>img');
 
 

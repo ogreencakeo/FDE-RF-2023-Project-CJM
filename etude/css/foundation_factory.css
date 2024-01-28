@@ -349,14 +349,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    opacity: 0;
-    transition: .4s ease-in-out;
-    transform: scale(0);
-}
-
-.factory-take-tour.on{
-    opacity: 1;
-    transform: scale(1);
+   
 }
 
 .factory-take-tour-bx{
@@ -366,6 +359,17 @@
 .factory-take-tour-bx img{
     width: 100%;
     aspect-ratio: 1/1.1;
+}
+
+.factory-take-tour-bx.on{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.factory-take-tour-bx{
+    opacity: 0;
+    transition: .4s ease-in-out;
+    transform: scale(0);
 }
 
 /* 팩토리 공지글 */
