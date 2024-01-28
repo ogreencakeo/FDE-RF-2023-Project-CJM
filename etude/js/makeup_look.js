@@ -94,23 +94,31 @@ for(let i=0; i<makeUpData.length; i++){
     console.log(makeUpData[i])
 }
 
-
-
-// makeUpData.map((v, i) => {
-//     const j = v[i];
-//     temp[i] = `
-//         <div class='makeup-look-grid'>
-//             <img src="${j.img}" />
-//         </div>
-//     `
-// }).join('');
-
-// makeUpData.map((v, i) => {
-//     temp[i] = `
-//         <div class='makeup-look-grid'>
-//             <img src="${v.img}" />
-//         </div>
-//     `
-// }).join('');
-
 makeupWrap.innerHTML += temp.join('');
+
+
+// 햄버거 nav
+const hambtnNav = document.querySelector('.hambtn-wrap');
+temp = [];
+navData.map((v, i) => {
+    temp[i] = `
+        <li>
+            <a href=${v.link}>
+                ${v.txt}
+            </a>
+        </li>
+    `
+}).join('');
+hambtnNav.innerHTML += temp.join('');
+hambtnNav.innerHTML += "<img src='../image/logo.png' alt = '로고이미지' onClick='location.href=\"./index.html\"' />";
+
+// 햄버거 토글
+const hamBnt = document.querySelector('.makeup-look-wrap .hambtn button');
+const showNav = () => {
+    if (hamBnt) {
+        hambtnNav.classList.toggle('on');
+        hamBnt.classList.toggle('click');
+    }
+};
+
+hamBnt.addEventListener('click', showNav);

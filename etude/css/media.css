@@ -33,6 +33,7 @@
     .sub-wrap .sub-header{
         display: none;
     }
+
     .sub-wrap .hambtn-wrap{
         display: block;
     }
@@ -295,6 +296,7 @@
     }
 }
 @media screen and (max-width:900px) {
+
     .main2-icon-bx .view-more {
         display: none;
     }
@@ -347,9 +349,58 @@
     .main-wrap .header{
         display: none;
     }
+    .main-wrap main{
+        margin-top: 50px;
+    }
+    .brand-page-wrap .header{
+        display: none;
+    }
+    .brand-page-wrap main{
+        margin-top: 50px;
+    }
+    .product-wrap .header{
+        display: none;
+    }
+    .brand-page-wrap .hambtn-wrap{
+        display: block;
+    }
+    .product-wrap .hambtn-wrap{
+        display: block;
+    }
+    .makeup-look-wrap .header{
+        display: none;
+    }
+    .makeup-look-wrap .hambtn-wrap{
+        display: block;
+    }
+    .makeup-look-wrap main{
+        margin-top: 50px;
+    }
+    .store-wrap .header{
+        display: none;
+    }
+    .store-wrap .hambtn-wrap{
+        display: block;
+    }
+    .store-wrap main{
+        margin-top: 50px;
+    }
+    .store-main-wrap{
+        padding-top: 20px;
+    }
+    .foundation-factory-wrap .header{
+        display: none;
+    }
+    .foundation-factory-wrap main{
+        margin-top: 50px;
+    }
+    .foundation-factory-wrap .hambtn-wrap{
+        display: block;
+    }
     .main-wrap .hambtn-wrap{
         display: block;
     }
+    
 
 }
 @media screen and (max-width:850px) {
@@ -361,6 +412,7 @@
     }
 }
 @media screen and (max-width:800px) {
+
     
     .store-content-bx {
         width: 90%;
@@ -392,7 +444,8 @@
 
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:755px) {
+
     .sub-main-bx2 {
         padding: 20px;
     }
@@ -401,6 +454,7 @@
         position: initial;
         height: 50vh;
         object-fit: contain;
+        margin-top: 50px;
     }
     .product-main-right{
         width: 100%;

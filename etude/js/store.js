@@ -137,3 +137,31 @@ noticeBtn.forEach((v)=>{
 });
 
 noticeBtn[0].click();
+
+
+
+// 햄버거 nav
+const hambtnNav = document.querySelector('.hambtn-wrap');
+temp = [];
+navData.map((v, i) => {
+    temp[i] = `
+        <li>
+            <a href=${v.link}>
+                ${v.txt}
+            </a>
+        </li>
+    `
+}).join('');
+hambtnNav.innerHTML += temp.join('');
+hambtnNav.innerHTML += "<img src='../image/logo.png' alt = '로고이미지' onClick='location.href=\"./index.html\"' />";
+
+// 햄버거 토글
+const hamBnt = document.querySelector('.store-wrap .hambtn button');
+const showNav = () => {
+    if (hamBnt) {
+        hambtnNav.classList.toggle('on');
+        hamBnt.classList.toggle('click');
+    }
+};
+
+hamBnt.addEventListener('click', showNav);
