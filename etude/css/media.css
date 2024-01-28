@@ -1092,6 +1092,7 @@
     }
     .main1Bx{
         flex-basis: 90%;
+        margin-bottom: 10px;
     }
     .main1Img>img{
         aspect-ratio: 1.7/1;
