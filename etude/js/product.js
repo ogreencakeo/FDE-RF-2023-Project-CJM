@@ -79,7 +79,7 @@ function showProduct(category){
         const productBx = document.createElement('div');
         productBx.innerHTML = `
             <div class='product-result-img'>
-                <img src="${v.img}"  alt = "${v.title}"/>
+                <img src="${v.img}"  alt = "${v.title}" onClick="location.href='./sub.html'" />
             </div>
             <div class='product-result-content'>
                 <p>${v.hashtag}</p>

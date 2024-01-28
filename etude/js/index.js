@@ -2,6 +2,7 @@ window.onload = function () {
     window.scrollTo(0, 0);
 };
 
+
 // 네비 리스트
 const navList = document.querySelector(".nav-wrap ul");
 

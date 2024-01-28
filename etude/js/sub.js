@@ -1,6 +1,23 @@
 window.onload = function () {
     window.scrollTo(0, 0);
 };
+// 네비 리스트
+const navList = document.querySelector(".nav-wrap ul");
+console.log(navList);
+
+let temp = [];
+
+navData.map((v, i) => {
+    temp[i] = `
+        <li>
+            <a href=${v.link}>
+                ${v.txt}
+            </a>
+        </li>
+    `
+}).join('');
+
+navList.innerHTML += temp.join("");
 
 // 스크롤시 Top 버튼 생기게 하기 
 const scrollBtn = document.querySelector('.scroll-btn');
@@ -27,20 +44,6 @@ const topBtnScroll = () => {
 
 scrollBtn.addEventListener('click', topBtnScroll);
 
-// nav
-const navList = document.querySelector(".nav-wrap ul");
-let temp = [];
-navData.map((v, i) => {
-    temp[i] = `
-        <li>
-            <a href=${v.link}>
-                ${v.txt}
-            </a>
-        </li>
-    `
-});
-
-navList.innerHTML += temp.join('');
 
 // 틴트 모달창
 const tintBx = document.querySelector(".sub-option-bx-wrap");
@@ -252,9 +255,7 @@ const hamBnt = document.querySelector('.sub-wrap .hambtn button');
 
 console.log(hamBnt);
 const showNav = () => {
-    // event.stopPropagation();
     if(hamBnt){
-        console.log('hihi');
         hambtnNav.classList.toggle('on');
         hamBnt.classList.toggle('click');
     }
