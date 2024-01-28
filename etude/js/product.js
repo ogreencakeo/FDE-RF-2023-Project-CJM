@@ -67,8 +67,10 @@ scrollBtn.addEventListener('click', topBtnScroll);
 // 정렬
 const priceOrder = document.querySelector('#priceOrder');
 
+
 // 상품 결과 박스
 function showProduct(category){
+    
     const product = productData[category];
     const resultBx = document.querySelector('.product-option-result');
 
@@ -125,7 +127,7 @@ function showProduct(category){
         console.log(product);
          // 정렬된 데이터를 화면에 반영
         showProduct(category);
-        priceOrder.value('highToLow');
+        
     });
 
 }
@@ -141,6 +143,7 @@ const productBtn = document.querySelectorAll('.product-category-option button');
 
 productBtn.forEach((v) => {
     v.addEventListener('click', function(){
+        priceOrder.value = 'sortOrder';
         productBtn.forEach((btn) => {
             btn.classList.remove('on');
         });
