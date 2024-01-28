@@ -84,7 +84,8 @@
     text-align: center;
 }
 .brand-div-wrap2 li:nth-child(2) img{
-    width: 100%;
+    /* width: 100%; */
+    max-width: 500px;
     aspect-ratio: 7/1;
 }
 

@@ -104,6 +104,7 @@ body, html, div>*{
     width: 100%;
 }
 .product-result-img>img{
+    cursor: pointer;
     width: 100%;
     aspect-ratio: 1/1;
 }
