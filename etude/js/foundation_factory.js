@@ -161,16 +161,43 @@ for(let i=0; i<factoryNoticeData.length; i++){
 
 storeNotice.innerHTML += temp.join('');
 
-// 스크롤 내릴시 공지 애니메이션
-const storeNoticeBx = document.querySelector('.store-notice-bx');
 
-const showNotice = () => {
-    const storeNoticeBxPosition = storeNoticeBx.getBoundingClientRect().top;
-    if(storeNoticeBxPosition < window.innerHeight){
-        storeNoticeBx.classList.add('on');
+// 스크롤 내릴시 애니메이션
+const storeNoticeBx = document.querySelector('.store-notice-bx');
+const modelImg = document.querySelector('.factory-model-img>img');
+const makeOwnBx = document.querySelectorAll('.make-own-bx');
+const FactorytakeTour = document.querySelector('.factory-take-tour');
+const mapImg = document.querySelector('.factory-map-img>img');
+
+
+const showModelImg = (txt) => {
+    const tgPosition = txt.getBoundingClientRect().top;
+    if(tgPosition <  window.innerHeight){
+        txt.classList.add('on');
     }else{
-        storeNoticeBx.classList.remove('on');
+        txt.classList.remove('on');
     }
 };
 
-window.addEventListener('scroll', showNotice);
+const aniFn = (txt) => {
+    setTimeout(()=>{
+        txt.classList.add('on');
+    },1000)
+};
+
+const showBoxes = (txt) => {
+    txt.forEach((v)=>{
+        const tgPosition = v.getBoundingClientRect().top;
+        if(tgPosition < window.innerHeight){
+            v.classList.add('on');
+        }else{
+            v.classList.remove('on');
+        }
+    });
+}
+
+window.addEventListener('scroll', ()=>showModelImg(storeNoticeBx));
+window.addEventListener('scroll', ()=>showModelImg(FactorytakeTour));
+window.addEventListener('scroll', ()=>showModelImg(mapImg));
+window.addEventListener('scroll', ()=>aniFn(modelImg));
+window.addEventListener('scroll', ()=>showBoxes(makeOwnBx));

@@ -1,9 +1,8 @@
-
-
 /* 스토어 - 메인 */
 .store-main-wrap{
     max-width: 100%;
     display: flex;
+    flex-wrap: wrap;
     padding-top: 150px;
     justify-content: space-evenly;
 }

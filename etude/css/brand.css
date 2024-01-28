@@ -2,6 +2,7 @@
 .brand-div-wrap1{
     max-width: 100%;
     display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
     position: relative;
 }
@@ -100,7 +101,6 @@
     justify-content: space-around;
     padding: 150px 0 200px;
     overflow: hidden;
-    border: 1px solid beige;
 }
 .brand-div-wrap3-bx>div{
     width: 45%;
@@ -285,6 +285,7 @@
     max-width: 80%;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     padding: 100px 0 150px;
     overflow: hidden;
 }
@@ -311,7 +312,7 @@
     overflow: hidden;
 }
 .brand-di5-bottom>div{
-    max-width: 50vw;
+    max-width: 800px;
     margin: 0 auto;
     padding-bottom: 70px;
 }
@@ -334,8 +335,9 @@
     padding-bottom: 100px;
 }
 .brand-div6-bx{
-    max-width: 75vw;
+    max-width: 900px;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     justify-content: space-between;
     padding-top: 100px;
