@@ -1,12 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {ImageSlider} from './ImageSlider'
+import { Layout } from './Layout';
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+
+import {Board} from './content/Board';
 
 export default function App(){
   return(
-    <>
-      < ImageSlider/>
-    </>
+    <HashRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Board />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   )
 }
 
