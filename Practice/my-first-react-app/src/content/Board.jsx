@@ -1,8 +1,97 @@
 import { useState } from "react"
 
-export function Borad(){
+import baseData from '../data/유니버설-문의2.json';
+import { useRef } from "react";
+import { Fragment } from "react";
+
+baseData.sort((a, b) => {
+    return Number(a.idx) === Number(b.idx) ? 0 : Number(a.idx) > Number(b.idx) ? -1 : 1;
+});
+
+let orgData;
+if(localStorage.getItem('pratice-bdata')) orgData = JSON.parse(localStorage.getItem('pratice-bdata'));
+else orgData = baseData;
+
+export function Board(){
 
     const [bdMode, setBdMode] = useState('L');
+
+    const pgBlock = 7;
+    const pgPgBlock = 4;
+    const totNum = orgData.length;
+
+    const [pgNum, setPgNum] = useState(1);
+    const pgPgNum = useRef(1);
+
+    const [force, setForce] = useRef(false);
+
+    const bindList = () => {
+        const tempData = [];
+        let initNum = (pgNum - 1) * pgBlock;
+        let limitNum = pgNum * pgPgBlock;
+        
+        for(let i=initNum; i< limitNum; i++){
+            if( i>= totNum ) break;
+            tempData.push(orgData[i]);
+        }
+        if(orgData.length === 0){
+            return(
+                <tr>
+                    <td colSpan={5}>There is no data.</td>
+                </tr>
+            );
+
+        }
+        return tempData.map((v, i) => (
+            <div className="board-cont-wrap">
+                <ul>
+                    <li>{i+1+initNum}</li>
+                    <li>
+                        <a href="#" data-idx={v.idx}>
+                            {v.tit}
+                        </a>
+                    </li>
+                    <li>{v.unm}</li>
+                    <li>{v.date}</li>
+                    <li>{v.cont}</li>
+                </ul>
+            </div>
+        ));
+    }
+
+    const pagingLink = () => {
+        const blockCnt = Math.floor(totNum / pgBlock);
+        const blockPad = totNum % pgBlock;
+        const limit = blockCnt + (blockPad === 0? 0 : 1);
+        
+        const pgBlockCnt = Math.floor(limit / pgPgBlock);
+        const pgBlockPad = limit / pgPgBlock;
+        const pgLimit = pgBlockCnt + (pgBlockPad === 0? 0 : 1);
+
+        let pgCode = [];
+        
+        let initNum = (pgPgNum.current - 1) * pgPgBlock;
+        let limitNum = pgPgNum.current * pgPgBlock;
+
+        for(let i=initNum; i<limitNum; i++){
+            if(i>=limit) break;
+            {
+                pgCode[i] = (
+                    <Fragment key={i}>
+                        {
+                            pgNum - 1 === i? (
+                                <b>{i+1}</b>) :
+                                (<a href="#">
+                                    {i+1}
+                                </a>
+                            )
+                        }
+                    </Fragment>
+                )
+            }
+        }
+        
+    };
 
     return(
         <>
@@ -35,8 +124,8 @@ export function Borad(){
                                 <li>조회수</li>
                             </ul>
                         </div>
-                        <div></div>
-                        <div className="center-paing-link"></div>
+                        <div>{bindList()}</div>
+                        <div className="center-paing-link">{pagingLink()}</div>
                     </div>
                 )
             }
@@ -60,6 +149,35 @@ export function Borad(){
                         </div>
                     </div>
                 )
+            }
+            {
+                <div className="dbtl btngrp">
+                    <div>
+                        <ul>
+                            {/* L모드 리스트 */}
+                            {
+                                bdMode === 'L' && (
+                                    <button>
+                                        <a href="#">글쓰기</a>
+                                    </button>
+                                )
+                            }
+                            {
+                                // 글쓰기
+                                bdMode === 'C' && (
+                                    <>
+                                        <button>
+                                            <a href="#">입력</a>
+                                        </button>
+                                        <button>
+                                            <a href="#">목록</a>
+                                        </button>
+                                    </>
+                                )
+                            }
+                        </ul>
+                    </div>
+                </div>
             }
         </>
     )

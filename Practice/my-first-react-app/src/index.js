@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import { Layout } from './Layout';
 import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 
@@ -10,12 +10,13 @@ export default function App(){
     <HashRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={<Board />} />
+          <Route path='/' element={<Board />} />
         </Route>
       </Routes>
     </HashRouter>
   )
 }
 
-const root = ReactDOM.createRoot(document.querySelector('#root'));
+
+const root = createRoot(document.querySelector('#root'));
 root.render(<App />);
