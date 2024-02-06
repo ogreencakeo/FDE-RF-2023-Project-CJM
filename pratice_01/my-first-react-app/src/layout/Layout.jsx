@@ -1,7 +1,13 @@
+import { FooterArea } from "./FooterArea";
+import { MainArea } from "./MainArea";
+import { TopArea } from "./TopArea";
+
 export function Layout(){
     return(
         <>
-            <h1>레이아웃</h1>
+            <TopArea />
+            <MainArea />
+            <FooterArea />
         </>
     )
 }
