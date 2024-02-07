@@ -1,7 +1,29 @@
 import { useState } from "react"
 import baseData from "../data/유니버설-문의2.json";
+// 제이쿼리
+import $ from "jquery";
+import "../css/board.css";
+
+baseData.sort((a, b) => {
+    return Number(a.idx) === Number(b.idx) ? 0 : Number(a.idx) > Number(b.idx) ? -1 : 1;
+});
+
+let orgData;
+if(!localStorage.getItem('pratice-bdata')) orgData = JSON.parse(localStorage.getItem('pratice-bdata'));
+else orgData = baseData;
+
 export function Board(){
     const [bdMode, setBdMode] = useState('L');
+
+    const pgBlock = 7;
+    const pgPgBlock = 4;
+    const totNum = orgData.length;
+    const [pgNum, setPgNum] = orgData.length;
+
+    const bindList = () => {
+ 
+    };
+
     return(
         <>
             {
