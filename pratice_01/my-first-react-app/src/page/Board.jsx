@@ -50,7 +50,7 @@ export function Board(){
                 <ul>
                     <li>{i + 1 + initNum}</li>
                     <li>
-                        <a href="#" data-idx={v.idx} onClick={chgMode}>
+                        <a href="#" data-idx={v.idx}>
                             {v.tit}
                         </a>
                     </li>
@@ -164,48 +164,7 @@ export function Board(){
         setPgNum(currNum);
     };
 
-    const cData = useRef(null);
-
-    const chgMode = (e) => {
-        e.preventDefault();
-
-        let btxt = $(e.target).text();
-        let modeTxt;
-
-        switch(btxt){
-            case '목록' :
-                modeTxt = 'L';
-                break;
-            case '글쓰기' :
-                modeTxt = 'C';
-                break;
-            case '수정' : 
-                modeTxt ='U';
-                break;
-            case '입력' :
-                modeTxt = 'S';
-                break;
-            case '삭제' :
-                modeTxt = 'D';
-                break;
-            default :
-                modeTxt = 'R';
-        }
-
-        if(modeTxt === 'R'){
-            let cidx = $(e.target).attr('data-idx');
-            cData.current = orgData.find((v) => {
-                if(Number(v.idx) === Number(cidx)) return true;
-            });
-
-            setBdMode('R');
-
-        }else if(modeTxt === 'L'){
-            setBdMode('L');
-        }
-
-    };
-
+    
     return(
         <>
             {
@@ -222,59 +181,11 @@ export function Board(){
                             </ul>
                         </div>
                         <div>{bindList()}</div>
-                        <div>{pagingLink()}</div>
+                        <div className="center-paging-link">{pagingLink()}</div>
                     </div>
                 )
             }
-            {
-                bdMode === 'R' && (
-                    <div className="dtblview readone">
-                        <h1>게시판</h1>
-                        <div>
-                            <ul>
-                                <li>닉네임</li>
-                                <li>
-                                    <input type="text" className="name" size="20" readOnly value={cData.current.unm} />
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>제목</li>
-                                <li>
-                                    <input type="text" className="subject" size='60' readOnly value={cData.current.tit} />
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>내용</li>
-                                <li>
-                                    <div>
-                                        {cData.current.cont}
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                )
-            }
-            <div className="dbtl btngrp">
-                <div>
-                    <ul>
-                        {
-                            bdMode === 'R' && (
-                                <>
-                                    <button onClick={chgMode}>
-                                        <a href="#">목록</a>
-                                    </button>
-                                    {
-                                        <button onClick={chgMode}>
-                                            <a href="#">수정</a>
-                                        </button>
-                                    }
-                                </>
-                            )
-                        }
-                    </ul>
-                </div>
-            </div>
+            
         </>
     )
 }
