@@ -209,3 +209,11 @@ footer div {
     color: #fff;
     margin: 5px 0;
 }
+
+footer div a{
+    color: #fff;
+}
+
+footer div a:hover{
+    color: gainsboro;
+}
