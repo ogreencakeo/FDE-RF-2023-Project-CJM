@@ -92,4 +92,7 @@
     .move-span ul li{
         font-size: 4vw;
     }
+    .introduce-bx, .project1-url-bx, .project2-url-bx {
+        width: 97%;
+    }
 }
