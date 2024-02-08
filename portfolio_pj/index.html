@@ -7,25 +7,97 @@
     <!-- 폰트어썸 아이콘CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="./index.css">
+    <script src="./js/data.js"></script>
+    <script src="./js/index.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav>
             <div class="header-nav">
                 <ul>
-                    <li><a href="#introduce">Introduce</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Education</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#project1">Project 1</a></li>
+                    <li><a href="#project2">Project 2</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="header-bg">
-            <img src="./img/bg.jpg" alt="배경이미지">
+        <div class="header-bg-wrap">
+            <div>
+                <img src="./img/star.gif" alt="별">
+            </div>
+            <div class="header-bg">
+                <img src="./img/home_bg.png" alt="배경이미지">
+            </div>
+            <div>
+                <h1>Email : magente2000@gmail.com</h1>
+                <h1>Phone : 010-5371-7075</h1>
+            </div>
         </div>
     </header>
     <main>
-        <div class="introduce-wrap" id="introduce">
-
+        <div class="introduce-wrap" id="education">
+            <div class="left"></div>
+            <div class="right">
+                <!-- <img class="introduce-bg" src="./img/introduce_bg.png" alt="소개 페이지"> -->
+                <div class="cont">
+                    <div class="introduce-cont">
+                        <h1><p class="fa-regular fa-circle-user"></p>Education</h1>
+                        <div class="cont-img">
+                            <img src="./img/my.jpg" alt="대표이미지">
+                        </div>
+                        <div class="introduce-cont-bx"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 에뛰드 하우스 -->
+        <div class="project1-wrap" id="project1">
+            <div class="left"></div>
+            <div class="right">
+                <div class="project1-bx">
+                    <h1><p class="fa-regular fa-file-code"></p> Project 1 : Etude House</h1>
+                    <h2>에뛰드 하우스 사이트 페이지 구성</h2>
+                    <div class="project1-img">
+                        <img src="./img/etude_page.png" alt="에뛰드 하우스 페이지">
+                    </div>
+                    <div class="project-cont-bx">
+                        <div class="project-bx">
+                            <h2><p class="fa-regular fa-circle-check"></p>개인 프로젝트</h2>
+                            <h2><p class="fa-regular fa-circle-check"></p>사용기술</h2>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                        <h2><p class="fa-regular fa-circle-check"></p>사용 기능 간단한 설명</h2>
+                        <div class="project-explain">
+                        </div>
+                        <div class="project1-url"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 유니버설스튜디오 -->
+        <div class="project2-wrap" id="project2">
+            <div class="left"></div>
+            <div class="right">
+                <div class="project2-bx">
+                    <h1><p class="fa-regular fa-file-code"></p> Project 2 : Universal Studio</h1>
+                    <h2>유니버설 스튜디오 사이트 페이지 구성</h2>
+                    <div class="project2-img">
+                        <img src="./img/universal_page.png" alt="유니버설 스튜디오 페이지">
+                    </div>
+                    <div class="project-cont-bx">
+                        <div class="project-bx">
+                            <h2><p class="fa-regular fa-circle-check"></p>개인 프로젝트</h2>
+                            <h2><p class="fa-regular fa-circle-check"></p>사용기술</h2>
+                            <p>HTML, CSS, JavaScript, JQuery, React</p>
+                        </div>
+                        <h2><p class="fa-regular fa-circle-check"></p>사용 기능 간단한 설명</h2>
+                        <div class="project-explain2">
+                        </div>
+                        <div class="project2-url"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
