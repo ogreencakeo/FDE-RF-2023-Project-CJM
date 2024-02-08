@@ -1,0 +1,67 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ol,
+ul,
+p,
+li
+span {
+    padding: 0;
+    margin: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #679e63ff;
+}
+
+body>*, div{
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    width: 25%;
+    background-color: gainsboro;
+}
+
+nav ul li{
+    font-size: 4.5rem;
+    
+}
+.header-nav{
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+.header-nav li{
+    line-height: 2;
+}
+.header-bg>img{
+    width: 100%;
+    aspect-ratio: 2/1.2;
+}
+
+
+/* 소개페이지 */
+.introduce-wrap{
+    height: 100vh;
+    width: 100vw;
+}
