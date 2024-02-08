@@ -278,6 +278,6 @@ footer div a:hover{
         transform: translateX(0);
     }
     to{
-        transform: translateX(-25vw);
+        transform: translateX(-35vw);
     }
 }

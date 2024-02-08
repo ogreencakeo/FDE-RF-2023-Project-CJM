@@ -81,7 +81,7 @@ const move_spans = document.querySelectorAll('.move-span');
 
 move_spans.forEach(ele => {
     let temp = [];
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 4; i++) {
         temp[i] = `
             <ul>
                 <li>CHOIJIMIN</li>

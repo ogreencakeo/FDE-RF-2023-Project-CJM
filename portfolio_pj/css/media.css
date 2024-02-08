@@ -41,6 +41,9 @@
         margin: 0 auto;
         /* padding: 10px; */
     }
+    .move-span ul li{
+        font-size: 3vw;
+    }
     
 }
 
@@ -85,5 +88,8 @@
     }
     .introduce-cont, .project1-bx, .project2-bx {
         padding-left: 10px;
+    }
+    .move-span ul li{
+        font-size: 4vw;
     }
 }
