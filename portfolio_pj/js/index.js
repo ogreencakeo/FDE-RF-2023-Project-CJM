@@ -76,6 +76,25 @@ project2UrlData.map((v, i) => {
 
 project2Url.innerHTML += temp.join('');
 
+// 움직이는 글자
+const move_spans = document.querySelectorAll('.move-span');
+
+move_spans.forEach(ele => {
+    let temp = [];
+    for (let i = 0; i < 2; i++) {
+        temp[i] = `
+            <ul>
+                <li>CHOIJIMIN</li>
+                <li>CHOIJIMIN</li>
+                <li>CHOIJIMIN</li>
+                <li>CHOIJIMIN</li>
+            </ul>
+        `;
+    }
+    ele.innerHTML += temp.join('');
+});
+
+
 // 스크롤시 색상 변경
 const headerColor = document.querySelectorAll('.header-nav li a');
 

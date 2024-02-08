@@ -247,3 +247,37 @@ footer div a:hover{
     opacity: 1; 
     transform: scale(1);
 }
+
+/* move-span */
+.move-span{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    background-color: #000;
+    margin: 25px 0 10px;
+    padding: 5px 0;
+    border-top: 3px solid #dcb508;
+    border-bottom: 3px solid #dcb508;
+}
+.move-span ul{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.move-span ul li{
+    font-size: 2vw;
+    width: 100%;
+    margin: 0 1vw;
+    animation: move-span-ani 15s linear infinite;
+    color: #fff;
+    font-family: 'Black Han Sans';
+}
+
+@keyframes move-span-ani {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-25vw);
+    }
+}
