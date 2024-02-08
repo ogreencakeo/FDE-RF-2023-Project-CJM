@@ -63,7 +63,7 @@ explain2.innerHTML += temp.join('');
 
 const project2Url = document.querySelector('.project2-url');
 temp = [];
-project1UrlData.map((v, i) => {
+project2UrlData.map((v, i) => {
     temp[i] = `
         <div class='project2-url-bx'>
             <h2><p class="fa-regular fa-circle-check"></p>${v.tit}</h2>

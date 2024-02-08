@@ -197,3 +197,15 @@ nav ul li{
     width: 100%;
     aspect-ratio: 1.5/1;
 }
+
+/* 푸터 */
+footer{
+    text-align: center;
+    background-color: #000;
+    padding: 20px;
+    margin-top: 20px;
+}
+footer div {
+    color: #fff;
+    margin: 5px 0;
+}
