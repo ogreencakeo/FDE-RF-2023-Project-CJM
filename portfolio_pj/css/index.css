@@ -93,6 +93,7 @@ nav ul li{
 .header-bg{
     max-width: 650px;
 }
+
 .header-bg>img{
     width: 100%;
     aspect-ratio: 2/1;
@@ -224,4 +225,25 @@ footer div a{
 
 footer div a:hover{
     color: gainsboro;
+}
+
+/* 스크롤 on */
+.h1-tit{
+    opacity: 0;
+    transform: translateY(200%);
+    transition: .5s ease-in-out;
+}
+.h1-tit.on{
+    opacity: 1;
+    transform: translateY(0);
+}
+.show-img{
+    opacity: 0;
+    transition: opacity .6s ease-in-out, transform .6s ease-out;
+    transition-delay: .4s;
+    transform: scale(0.5);
+}
+.show-img.on{
+    opacity: 1; 
+    transform: scale(1);
 }

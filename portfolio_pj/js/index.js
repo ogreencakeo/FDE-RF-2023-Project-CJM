@@ -143,3 +143,20 @@ updateButtonPositions();
 // 창 크기 변경에 대응하기 위한 리사이즈 이벤트 추가
 window.addEventListener('resize', updateButtonPositions);
 
+//// 스크롤 이벤트
+const header_bg = document.querySelectorAll('.h1-tit');
+const show_img = document.querySelectorAll('.show-img');
+
+const showBx = (txt) => {
+    txt.forEach((v) => {
+        const tgPosition = v.getBoundingClientRect().top;
+        if(tgPosition < window.innerHeight){
+            v.classList.add('on');
+        }else{
+            v.classList.remove('on');
+        }
+    })
+};
+
+window.addEventListener('scroll', ()=>showBx(header_bg));
+window.addEventListener('scroll', ()=>showBx(show_img));
