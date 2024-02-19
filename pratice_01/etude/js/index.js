@@ -1,86 +1,92 @@
 
-const navList = document.querySelector('.nav-wrap ul');
-
+const nav_list = document.querySelector('.nav-wrap ul');
 let temp = [];
 navData.map((v, i) => {
     temp[i] = `
         <li>
-            <a href=${v.link}>
-                ${v.txt}
-            </a>
+            <a href="${v.link}">${v.txt}</a>
         </li>
     `
 }).join('');
 
-navList.innerHTML += temp.join('');
+nav_list.innerHTML += temp.join('');
 
-const nav = document.querySelector('.nav-wrap');
+const nav_wrap = document.querySelector('.nav-wrap');
 
 let lastPosition = 0;
-
-const handleScroll = () => {
-    let scrollPostion = window.scrollY || window.pageYOffset;
-    if(scrollPostion > lastPosition){
-        nav.classList.add('hide');
-    }else{
-        nav.classList.remove('hide');
+const scrollFn = () => {
+    let scrollPosition = window.scrollY || window.pageYOffset;
+    if (scrollPosition > lastPosition) {
+        nav_wrap.classList.add('hide');
+    } else {
+        nav_wrap.classList.remove('hide');
     }
-    lastPosition = scrollPostion;
-}
+    lastPosition = scrollPosition;
+};
+window.addEventListener('scroll', scrollFn);
 
-window.addEventListener('scroll', handleScroll);
-
-const scrollBtn = document.querySelector('.scroll-btn');
-
-const scrollBtnFn = () => {
-    let btnPosition = window.scrollY || window.pageYOffset;
-    if(btnPosition > 2000){
-        scrollBtn.style.display = 'block';
-    }else{
-        scrollBtn.style.display = 'none';
+const scroll_btn = document.querySelector('.scroll-btn');
+const showBtn = () => {
+    let scrollBtnPosition = window.scrollY || window.pageYOffset;
+    if (scrollBtnPosition > 2000) {
+        scroll_btn.style.display = 'block';
+    } else {
+        scroll_btn.style.display = 'none';
     }
 };
-
-window.addEventListener('scroll', scrollBtnFn);
+window.addEventListener('scroll', showBtn);
 
 const goTopFn = () => {
-    window.scrollTo(0,0);
-};
-
-scrollBtn.addEventListener('click', goTopFn);
-
-const swiperContainer = new Swiper('.header-swiper-container', {
-    slidesPerView : 1,
-    spaceBetween : 10,
-    pagination : {
-        el :"swiper-pagination",
-        clickable : true,
-        renderBullet : function(index, className){
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-    },
-});
-
-for(let i=0; i<mainBanImg.length; i++){
-    const swiperSlide = document.createElement('div');
-    swiperSlide.classList.add('swiper-slide');
-
-    const imgElement = document.createElement('img');
-    imgElement.src = mainBanImg[i];
-
-    swiperSlide.appendChild(imgElement);
-    swiperContainer.appendSlide(swiperSlide);
+    window.scrollTo(0, 0);
 }
 
-swiperContainer.update();
+scroll_btn.addEventListener('click', goTopFn);
 
-const etudeTit = document.querySelector('.header-swiper-container>h1');
+const shuffledData = main1Data.sort(()=>Math.random() - 0.5);
+const unipueImg = new Set();
 
-setInterval(()=>{
-    titInterval();
-}, 800);
+const selectedData = shuffledData.filter((v) => {
+    if(!unipueImg.has(v.img)){
+        unipueImg.has(v.img);
+        return true;
+    }
+    return false;
+}).slice(0, 5);
 
-function titInterval(){
-    etudeTit.classList.toggle('on');
-}
+const main1Bx = document.querySelector('.main1-wrap');
+
+const main1RandomResult = selectedData.map((v) => 
+    `
+    <div class='main1Bx'>
+        <div class='main1Img' onClick="location.href='./sub.html'">
+            <img src=${v.img} alt='메인이미지' />
+        </div>
+        <section>
+            <p style='background: linear-gradient(to right, ${v.color}, #f74d52, yellow);' class='fas ${v.font}'>&nbsp;${v.cat}</p>
+            <p>${v.txt}</p>
+            <h2>${v.cont}</h2>
+        </section>
+    </div>
+    `
+);
+
+main1Bx.innerHTML += main1RandomResult.join('');
+
+// main2
+const main2Img = [
+    "../image/main/main2/img1.jpg",
+    "../image/main/main2/img2.jpg",
+    "../image/main/main2/img3.jpg"
+];
+
+const main_img_bx = document.querySelector('.main-img-bx');
+const main_img = document.createElement('img');
+main_img.classList.add('main-img');
+
+const randomImg = Math.floor(Math.random() * 3);
+main_img.setAttribute('src', main2Img[randomImg]);
+
+main_img_bx.appendChild(main_img);
+
+
 
