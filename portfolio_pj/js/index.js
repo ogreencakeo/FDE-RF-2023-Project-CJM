@@ -13,8 +13,8 @@ introduceData.map((v, i) => {
                     <a href='./result.pdf' target='_blank'><i class="fa-solid fa-link"></i> 논문내용</a>`
                 ) : v.tit === 'Git' ? (
                     `
-                        <a href='https://github.com/ogreencakeo/FED-RF-2023-CJM' target='_blank'><i class="fa-solid fa-link"></i>HTML, CSS, JavaScript, jQuery, React</a><br />
-                        <a href='https://github.com/ogreencakeo/Flutter-PJ-CJM' target='_blank'><i class="fa-solid fa-link"></i>Flutter</a><br />
+                        <a href='https://github.com/ogreencakeo/FED-RF-2023-CJM' target='_blank'><i class="fa-solid fa-link"></i> HTML, CSS, JavaScript, jQuery, React</a><br />
+                        <a href='https://github.com/ogreencakeo/Flutter-PJ-CJM' target='_blank'><i class="fa-solid fa-link"></i> Flutter</a><br />
                     `
                 ): (v.txt)
             }</p>
