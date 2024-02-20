@@ -16,6 +16,10 @@ const introduceData = [
         txt : '그린컴퓨터아카데미 수료 : 프론트엔드(React, PHP), 플러터(Flutter)활용 웹&앱개발 양성과정',
     },
     {
+        tit : 'Git',
+        txt : '',
+    },
+    {
         tit : '기술스택',
         txt : 'HTML, CSS, JavaScript, JQuery, React, Python, R',
     },
