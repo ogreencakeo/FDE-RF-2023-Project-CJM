@@ -1,7 +1,7 @@
 export function FooterArea(){
     return(
         <>
-            <h1>하단부분</h1>
+            <h1>하단입니다.</h1>
         </>
     )
 }

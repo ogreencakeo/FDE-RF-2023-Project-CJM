@@ -1,7 +1,7 @@
 export function TopArea(){
     return(
         <>
-            <h1>상단부분</h1>
+            <h1>상단부분입니다.</h1>
         </>
     )
 }

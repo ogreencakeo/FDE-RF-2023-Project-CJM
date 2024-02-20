@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {Layout} from './layout/Layout';
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
-import { Board } from './page/Board';
+import { HashRouter, Route, Routes } from "react-router-dom";
 
+import { Layout } from './layout/Layout';
+import { Board } from './page/Board';
 
 export default function App(){
   return(
@@ -18,5 +18,4 @@ export default function App(){
 }
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
-
-root.render(<App />)
+root.render(<App />);
