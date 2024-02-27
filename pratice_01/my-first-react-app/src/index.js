@@ -9,6 +9,7 @@ import { SeasonalMenu } from './page/SeasonalMenu';
 
 // CSS 불러오기
 import './css/common.css';
+import { Member } from './page/Member';
 
 export default function App(){
   return(
@@ -19,6 +20,7 @@ export default function App(){
           <Route path='areaType' element={<AreaType />} />
           <Route path='seasonalMenu/*' element={<SeasonalMenu />} />
 
+          <Route path='member' element={<Member />} />
         </Route>
       </Routes>
     </HashRouter>
