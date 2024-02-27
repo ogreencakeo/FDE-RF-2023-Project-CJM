@@ -12,7 +12,6 @@ import { useState } from 'react';
 import { clearData, initData} from '../Function/mem_fn.js';
 
 export function Member(){
-
     const [userId, setUserId] = useState('');
     const [pwd, setPwd] = useState('');
     const [chkPwd, setChkPwd] = useState('');
@@ -62,74 +61,88 @@ export function Member(){
                 setUserIdError(false);
             }
 
+
         }else{
             setIdMsg(msgId[0]);
             setUserIdError(true);
         }
+
         setUserId(e.target.value);
     };
 
     const changePwd = (e) => {
         const valid = /^.*(?=^.{5,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
-        if(valid.test(e.target.value))setPwdError(false);
+        if(valid.test(e.target.value)) setPwdError(false);
         else setPwdError(true);
 
         setPwd(e.target.value);
     };
 
+    const changeChkPwd = (e) => {
+
+    };
 
     return(
-        <div className="join-the-membership-wrap">
-            <div className="member-bx">
-                <h1><FontAwesomeIcon icon={faUserGroup} /></h1>
-                <h2>회원가입</h2>
-                <form action="process.php" method='post'>
-                    <table>
-                        <tr>
-                            <td><label>아이디</label></td>
-                            <td>
-                                <input type="text" maxLength='20' placeholder='아이디를 입력해주세요' onChange={changeUserId} value={userId} />
-                                {
-                                    userIdError && (
-                                        <div className="msg" 
-                                        style={{
-                                            color:'red',
-                                            fontSize : '10px'
-                                        }}>{idMsg}</div>
-                                    )
-                                }
-                                {
-                                    !userIdError && userId && (
-                                        <div className="msg"
-                                        style={{
-                                            color : 'green',
-                                            fontSize : '10px'
-                                        }}>
-                                            {msgId[2]}
-                                        </div>
-                                    )
-                                }
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><label>비밀번호</label></td>
-                            <td>
-                                <input type="password" maxLength='20' placeholder='비밀번호를 입력해주세요' value={pwd} onChange={changePwd} />
-                                {
-                                    pwdError && (
-                                        <div className="msg">
-                                            <small style={{
+        <>
+            <div className="join-the-membership-wrap">
+                <div className="member-bx">
+                    <h1><FontAwesomeIcon icon={faUserGroup} /></h1>
+                    <h2>회원가입</h2>
+                    <form action="process.php" method='post'>
+                        <table>
+                            <tr>
+                                <td><label>아이디</label></td>
+                                <td>
+                                    <input type="text" maxLength='20' placeholder='아이디를 입력해주세요' onChange={changeUserId} value={userId} />
+                                    {
+                                        userIdError && (
+                                            <div className="msg"
+                                            style={{
                                                 color : 'red',
                                                 fontSize : '10px'
-                                            }}>{msgEtc.pwd}</small>
-                                        </div>
-                                    )
-                                }
-                            </td>
-                        </tr>
-                    </table>
-                </form>
+                                            }}>
+                                                {idMsg}
+                                            </div>
+                                        )
+                                    }
+                                    {
+                                        !userIdError && userId && (
+                                            <div className="msg"
+                                            style={{
+                                                color : 'green',
+                                                fontSize : '10px'
+                                            }}>
+                                                {msgId[2]}
+                                            </div>
+                                        )
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>비밀번호</label></td>
+                                <td>
+                                    <input type="password" maxLength='20' placeholder="비밀번호를 입력해주세요" value={pwd} onChange={changePwd} />
+                                    {
+                                        pwdError && (
+                                            <div className="msg" 
+                                            style={{
+                                                color : 'red',
+                                                fontSize : '10px'
+                                            }}>{msgEtc.pwd}</div>
+                                        )
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>비밀번호 확인</label></td>
+                                <td>
+                                    <input type="password" maxLength='20' placeholder='비밀번호를 다시 입력해주세요' value={chkPwd} onChange={changeChkPwd} />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
             </div>
-        </div>
+        </>
     )
 }
