@@ -1,6 +1,6 @@
-import { TopArea } from "./TopArea";
-import { MainArea } from "./MainArea";
 import { FooterArea } from "./FooterArea";
+import { MainArea } from "./MainArea";
+import { TopArea } from "./TopArea";
 
 export function Layout(){
     return(
